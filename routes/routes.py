@@ -28,6 +28,7 @@ def login():
         username = form.username.data
         password = form.password.data
 
+        # Configuração do LDAP
         ldap_host = current_app.config['LDAP_HOST']
         if not ldap_host:
             flash('O servidor LDAP não está configurado.', 'danger')
@@ -37,18 +38,24 @@ def login():
         DOMAIN = 'emiteli.com.br'
         user_with_domain = f"{DOMAIN}\\{username}"
 
+        # Autenticação no servidor LDAP
         conn = Connection(server, user=user_with_domain, password=password, authentication=NTLM)
 
         if conn.bind():  # Tentativa de autenticar via LDAP
-            # Aqui você deve buscar o usuário no banco de dados
-            user = User.query.filter_by(username=username).first()  # Verifica se o usuário existe no banco de dados
+            # Verifica se o banco de dados já tem as tabelas criadas
+            with current_app.app_context():
+                db.create_all()  # Garante que o banco de dados e as tabelas sejam criados
+
+            # Busca o usuário no banco de dados
+            user = User.query.filter_by(username=username).first()  
             if not user:
-                # Se o usuário não existir, você pode criar um novo registro (opcional)
+                # Se o usuário não existir, cria um novo registro no banco de dados
                 user = User(username=username)
                 db.session.add(user)  # Adiciona o novo usuário à sessão
                 db.session.commit()  # Salva as alterações
 
-            login_user(user)  # Logando o usuário
+            # Faz o login do usuário
+            login_user(user)
             flash('Login bem-sucedido!', 'success')
             return redirect(url_for('routes.listar_ativos'))  # Redireciona para a lista de ativos
         else:
