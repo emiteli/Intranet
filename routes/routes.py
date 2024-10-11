@@ -28,7 +28,6 @@ def login():
         username = form.username.data
         password = form.password.data
 
-        # Configuração do LDAP
         ldap_host = current_app.config['LDAP_HOST']
         if not ldap_host:
             flash('O servidor LDAP não está configurado.', 'danger')
@@ -38,22 +37,18 @@ def login():
         DOMAIN = 'emiteli.com.br'
         user_with_domain = f"{DOMAIN}\\{username}"
 
-        # Autenticação no servidor LDAP
         conn = Connection(server, user=user_with_domain, password=password, authentication=NTLM)
 
         if conn.bind():  # Tentativa de autenticar via LDAP
-            # Verifica se o banco de dados já tem as tabelas criadas
-            with current_app.app_context():
-                db.create_all()  # Garante que o banco de dados e as tabelas sejam criados
-
-            # Busca o usuário no banco de dados
-            user = User.query.filter_by(username=username).first()  
+            # Aqui você pode buscar ou criar o usuário no banco de dados, se necessário
+            user = User.query.filter_by(username=username).first()  # Verificando se o usuário existe no banco de dados
             if not user:
-                # Se o usuário não existir, cria um novo registro no banco de dados
+                # Se o usuário não existir no banco de dados, você pode criar um novo registro
                 user = User(username=username)
                 db.session.add(user)  # Adiciona o novo usuário à sessão
                 db.session.commit()  # Salva as alterações
-            login_user(user)
+
+            login_user(user)  # Logando o usuário
             flash('Login bem-sucedido!', 'success')
             return redirect(url_for('routes.listar_ativos'))  # Redireciona para a lista de ativos
         else:
@@ -62,11 +57,10 @@ def login():
     return render_template('login.html', form=form)
 
 @routes.route('/logout')
+@login_required
 def logout():
     logout_user()
-    flash('Você foi desconectado com sucesso.', 'success')
     return redirect(url_for('routes.login'))
-
 
 @routes.route('/listar_ativos', methods=['GET', 'POST'])
 @login_required

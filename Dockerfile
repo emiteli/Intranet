@@ -18,5 +18,5 @@ EXPOSE 5000
 ENV FLASK_APP=app.py
 ENV FLASK_ENV=development
 
-# Comando para dar um tempo para o banco de dados inicializar e em seguida rodar as migrações e o servidor Flask
-CMD ["sh", "-c", "sleep 10 && flask db upgrade && flask run --host=0.0.0.0"]
+# Comando para rodar o servidor Flask
+CMD ["flask", "run", "--host=0.0.0.0"]
