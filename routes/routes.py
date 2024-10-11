@@ -40,14 +40,15 @@ def login():
         conn = Connection(server, user=user_with_domain, password=password, authentication=NTLM)
 
         if conn.bind():  # Tentativa de autenticar via LDAP
-            # Aqui você pode realizar outras operações se necessário, como logar o usuário
-            login_user(username)  # Substitua por como você deseja gerenciar o login
+            user = User(username)  # Cria um objeto de usuário
+            login_user(user)  # Logando o usuário
             flash('Login bem-sucedido!', 'success')
             return redirect(url_for('routes.listar_ativos'))  # Redireciona para a lista de ativos
         else:
             flash('Falha na autenticação. Verifique suas credenciais.', 'danger')
 
     return render_template('login.html', form=form)
+
 
 
 @routes.route('/logout')
