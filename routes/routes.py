@@ -37,27 +37,18 @@ def login():
         DOMAIN = 'emiteli.com.br'
         user_with_domain = f"{DOMAIN}\\{username}"
 
-        try:
-            conn = Connection(server, user=user_with_domain, password=password, authentication=NTLM)
+        conn = Connection(server, user=user_with_domain, password=password, authentication=NTLM)
 
-            if conn.bind():  # Tentativa de autenticar via LDAP
-                user = User.query.filter_by(username=username).first()
-                if not user:
-                    user = User(username=username)
-                    db.session.add(user)
-                    db.session.commit()
-
-                login_user(user)
-                flash('Login bem-sucedido!', 'success')
-                return redirect(url_for('routes.listar_ativos'))
-            else:
-                flash('Falha na autenticação. Verifique suas credenciais.', 'danger')
-
-        except Exception as e:
-            flash(f'Ocorreu um erro ao conectar ao servidor LDAP: {str(e)}', 'danger')
-            return redirect(url_for('routes.login'))
+        if conn.bind():  # Tentativa de autenticar via LDAP
+            # Aqui você pode realizar outras operações se necessário, como logar o usuário
+            login_user(username)  # Substitua por como você deseja gerenciar o login
+            flash('Login bem-sucedido!', 'success')
+            return redirect(url_for('routes.listar_ativos'))  # Redireciona para a lista de ativos
+        else:
+            flash('Falha na autenticação. Verifique suas credenciais.', 'danger')
 
     return render_template('login.html', form=form)
+
 
 @routes.route('/logout')
 def logout():
