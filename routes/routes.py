@@ -53,8 +53,6 @@ def login():
                 user = User(username=username)
                 db.session.add(user)  # Adiciona o novo usuário à sessão
                 db.session.commit()  # Salva as alterações
-
-            # Faz o login do usuário
             login_user(user)
             flash('Login bem-sucedido!', 'success')
             return redirect(url_for('routes.listar_ativos'))  # Redireciona para a lista de ativos
