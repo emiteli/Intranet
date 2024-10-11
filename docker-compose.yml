@@ -10,7 +10,7 @@ services:
     environment:
       - FLASK_ENV=development
       - FLASK_APP=app.py  # Certifique-se de que o arquivo principal do seu aplicativo seja corretamente referenciado
-      - DATABASE_URL=mysql+pymysql://root:password@db:3306/meu_banco
+      - DATABASE_URL=mysql+pymysql://root:password@db:3306/intranet
     depends_on:
       - db
     command: >
@@ -20,14 +20,9 @@ services:
     image: mysql:8.0
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: meu_banco
-      MYSQL_USER: user  # Nome de usuário padrão para acesso
-      MYSQL_PASSWORD: user_password  # Senha para o usuário
+      MYSQL_ROOT_PASSWORD: Emiteli@123
+      MYSQL_DATABASE: intranet
     ports:
-      - "3306:3306"
+      - "3307:3306"  # Alterando para 3307
     volumes:
-      - db_data:/var/lib/mysql  # Persistência dos dados do banco
-
-volumes:
-  db_data:
+      - db_data:/var/lib/mysql
