@@ -40,7 +40,14 @@ def login():
         conn = Connection(server, user=user_with_domain, password=password, authentication=NTLM)
 
         if conn.bind():  # Tentativa de autenticar via LDAP
-            user = User(username)  # Cria um objeto de usuário
+            # Aqui você deve buscar o usuário no banco de dados
+            user = User.query.filter_by(username=username).first()  # Verifica se o usuário existe no banco de dados
+            if not user:
+                # Se o usuário não existir, você pode criar um novo registro (opcional)
+                user = User(username=username)
+                db.session.add(user)  # Adiciona o novo usuário à sessão
+                db.session.commit()  # Salva as alterações
+
             login_user(user)  # Logando o usuário
             flash('Login bem-sucedido!', 'success')
             return redirect(url_for('routes.listar_ativos'))  # Redireciona para a lista de ativos
@@ -48,8 +55,6 @@ def login():
             flash('Falha na autenticação. Verifique suas credenciais.', 'danger')
 
     return render_template('login.html', form=form)
-
-
 
 @routes.route('/logout')
 def logout():
