@@ -1,5 +1,4 @@
 version: '3'
-
 services:
   web:
     build: .
@@ -9,20 +8,21 @@ services:
       - .:/app
     environment:
       - FLASK_ENV=development
-      - FLASK_APP=app.py  # Certifique-se de que o arquivo principal do seu aplicativo seja corretamente referenciado
       - DATABASE_URL=mysql+pymysql://root:password@db:3306/intranet
     depends_on:
       - db
-    command: >
-      sh -c "flask db upgrade && flask run --host=0.0.0.0"  # Aplica migrações e inicia o servidor
+    command: flask db upgrade && flask run --host=0.0.0.0
 
   db:
     image: mysql:8.0
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: Emiteli@123
+      MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: intranet
     ports:
-      - "3307:3306"  # Alterando para 3307
+      - "3307:3306"  # Mudou para 3307, se necessário
     volumes:
-      - db_data:/var/lib/mysql
+      - db_data:/var/lib/mysql  # Acessando o volume nomeado
+
+volumes:
+  db_data:  # Declaração do volume aqui
