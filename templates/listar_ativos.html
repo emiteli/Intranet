@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <h2 class="my-4">Lista Ativo Contabilidade</h2>
+        
+        <form method="POST" class="form-inline mb-4">
+            {{ form.hidden_tag() }}
+            <div class="form-group mx-2">
+                {{ form.filial.label(class="form-label") }} 
+                {{ form.filial(class="form-control") }}
+            </div>
+            <div class="form-group mx-2">
+                {{ form.codigo_bem.label(class="form-label") }} 
+                {{ form.codigo_bem(class="form-control") }}
+            </div>
+            <div class="form-group mx-2">
+                {{ form.descricao_sintetica.label(class="form-label") }} 
+                {{ form.descricao_sintetica(class="form-control") }}
+            </div>
+            <div class="form-group mx-2">
+                {{ form.nota_fiscal.label(class="form-label") }} 
+                {{ form.nota_fiscal(class="form-control") }}
+            </div>
+            <button type="submit" class="btn btn-primary ml-2">Filtrar</button>
+        </form>
+
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Filial</th>
+                        <th>Grupo</th>
+                        <th>Classificação</th>
+                        <th>Código do Bem</th>
+                        <th>Item</th>
+                        <th>Data Aquisição</th>
+                        <th>Quantidade</th>
+                        <th>Descrição</th>
+                        <th>Placa</th>
+                        <th>Fornecedor</th>
+                        <th>Loja Fornec.</th>
+                        <th>Nota Fiscal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for ativo in ativos %}
+                    <tr>
+                        <td>{{ ativo.filial }}</td>
+                        <td>{{ ativo.grupo }}</td>
+                        <td>{{ ativo.classificacao }}</td>
+                        <td>{{ ativo.codigo_bem }}</td>
+                        <td>{{ ativo.item }}</td>
+                        <td>{{ ativo.data_aquisicao }}</td>
+                        <td>{{ ativo.quantidade }}</td>
+                        <td>{{ ativo.descricao_sintetica }}</td>
+                        <td>{{ ativo.numero_placa }}</td>
+                        <td>{{ ativo.codigo_fornecedor }}</td>
+                        <td>{{ ativo.loja_fornecedor }}</td>
+                        <td>{{ ativo.nota_fiscal }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

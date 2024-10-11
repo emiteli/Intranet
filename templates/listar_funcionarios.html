@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block title %}Listar Funcionários{% endblock %}
+
+{% block content %}
+
+<h2>Funcionários</h2>
+
+<!-- Formulário para buscar por nome -->
+<form method="GET" action="{{ url_for('routes.listar_funcionarios') }}" class="form-inline mb-4">
+    <div class="form-group mx-2">
+        <label for="nome" class="form-label">Buscar por nome</label>
+        <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite o nome" value="{{ request.args.get('nome', '') }}">
+    </div>
+    <button type="submit" class="btn btn-primary mx-2">Buscar</button>
+    <a href="{{ url_for('routes.exportar_funcionarios') }}" class="btn btn-success mt-4">Exportar Excel</a>
+</form>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Status</th>
+            <th>Departamento</th>
+            <th>Nome</th>
+            <th>Licenças</th>
+            <th>Cargo</th>
+            <th>Email</th>
+            <th>Ações</th>
+            <th>Alterar</th>
+        </tr>
+    </thead>
+    <style>
+        .table {
+            width: 100%; /* Faz a tabela ocupar toda a largura disponível */
+        }
+        
+        .table th, .table td {
+            overflow: hidden; /* Esconde o conteúdo que excede a largura da célula */
+            text-overflow: ellipsis; /* Adiciona "..." para o texto que não cabe */
+        }
+        
+        /* Ajuste de largura para colunas específicas, se necessário */
+        .table th:nth-child(1), .table td:nth-child(1) {
+            width: 10%; /* Ajusta a largura da coluna de Status */
+        }
+        
+        .table th:nth-child(2), .table td:nth-child(2) {
+            width: 10%; /* Ajusta a largura da coluna de Departamento */
+        }
+        
+        .table th:nth-child(3), .table td:nth-child(3) {
+            width: 12%; /* Ajusta a largura da coluna de Nome */
+        }
+        
+        .table th:nth-child(4), .table td:nth-child(4) {
+            width: 10%; /* Ajusta a largura da coluna de Licenças */
+        }
+        
+        .table th:nth-child(5), .table td:nth-child(5) {
+            width: 15%; /* Ajusta a largura da coluna de Cargo */
+        }
+        
+        .table th:nth-child(6), .table td:nth-child(6) {
+            width: 20%; /* Ajusta a largura da coluna de Email */
+        }
+        .table th:nth-child(7), .table td:nth-child(7) {
+            width: 30%; /* Ajusta a largura da coluna de Email */
+        }
+        </style>
+    <tbody>
+        {% for funcionario in funcionarios %}
+            <tr>
+                <td>{{ funcionario.status }}</td>
+                <td>{{ funcionario.departamento }}</td>
+                <td>{{ funcionario.nome }}</td>
+                <td>{{ funcionario.licencas }}</td>
+                <td>{{ funcionario.cargo }}</td>
+                <td>{{ funcionario.email}}</td>
+                <td>
+                    <!-- Formulário para alterar status -->
+                    <form method="POST" action="{{ url_for('routes.alterar_status', funcionario_id=funcionario.id) }}">
+                        {{ form.hidden_tag() }}  <!-- Token CSRF para segurança -->
+                        <select name="novo_status" class="form-select custom-select" required>
+                            <option value="" disabled selected>Selecione o status</option>
+                            <option value="ATIVADO" {% if funcionario.status == 'ATIVADO' %}selected{% endif %}>Ativo</option>
+                            <option value="DESATIVADO" {% if funcionario.status == 'DESATIVADO' %}selected{% endif %}>Desativado</option>
+                            <option value="FERIAS" {% if funcionario.status == 'FERIAS' %}selected{% endif %}>Férias</option>
+                        </select>
+                        <td><button type="submit" class="btn btn-primary mt-2 custom-btn">Alterar</button></td>
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

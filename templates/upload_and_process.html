@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}Upload e Exibição de Dados{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Carregar e Processar Planilha Excel</h2>
+
+    <form method="POST" enctype="multipart/form-data" action="{{ url_for('routes.upload_and_process') }}">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+            <label for="file">Escolha um arquivo Excel para upload:</label>
+            {{ form.file(class_="form-control") }}
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Fazer Upload</button>
+    </form>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }} mt-3">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <hr>
+    {% if planilhas_disponiveis %}
+        <h2 class="mt-4">Selecione uma Planilha para Processar</h2>
+        <form method="POST" action="{{ url_for('routes.upload_and_process') }}">
+            <div class="form-group">
+                <label for="planilha">Escolha a Planilha</label>
+                <select name="planilha" id="planilha" class="form-control">
+                    {% for file in planilhas_disponiveis %}
+                        <option value="{{ file }}">{{ file }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="tipo_banco">Selecione o Banco para Inserção:</label>
+                <select name="tipo_banco" id="tipo_banco" class="form-control">
+                    <option value="asset">Asset</option>
+                    <option value="funcionario">Funcionário</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary mt-3">Processar e Exibir Dados</button>
+        </form>
+    {% endif %}
+
+    <!-- Exibir dados da planilha filtrada, se houver -->
+    {% if df_filtered is not none %}
+        <h3 class="mt-5">Primeiras 5 Linhas da Planilha Selecionada</h3>
+        <pre>{{ df_filtered.head(5).to_string(index=False) }}</pre>  <!-- Exibe os dados das 5 primeiras linhas em formato de texto -->
+    {% endif %}
+</div>
+{% endblock %}
