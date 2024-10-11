@@ -37,30 +37,34 @@ def login():
         DOMAIN = 'emiteli.com.br'
         user_with_domain = f"{DOMAIN}\\{username}"
 
-        conn = Connection(server, user=user_with_domain, password=password, authentication=NTLM)
+        try:
+            conn = Connection(server, user=user_with_domain, password=password, authentication=NTLM)
 
-        if conn.bind():  # Tentativa de autenticar via LDAP
-            # Aqui você pode buscar ou criar o usuário no banco de dados, se necessário
-            user = User.query.filter_by(username=username).first()  # Verificando se o usuário existe no banco de dados
-            if not user:
-                # Se o usuário não existir no banco de dados, você pode criar um novo registro
-                user = User(username=username)
-                db.session.add(user)  # Adiciona o novo usuário à sessão
-                db.session.commit()  # Salva as alterações
+            if conn.bind():  # Tentativa de autenticar via LDAP
+                user = User.query.filter_by(username=username).first()
+                if not user:
+                    user = User(username=username)
+                    db.session.add(user)
+                    db.session.commit()
 
-            login_user(user)  # Logando o usuário
-            flash('Login bem-sucedido!', 'success')
-            return redirect(url_for('routes.listar_ativos'))  # Redireciona para a lista de ativos
-        else:
-            flash('Falha na autenticação. Verifique suas credenciais.', 'danger')
+                login_user(user)
+                flash('Login bem-sucedido!', 'success')
+                return redirect(url_for('routes.listar_ativos'))
+            else:
+                flash('Falha na autenticação. Verifique suas credenciais.', 'danger')
+
+        except Exception as e:
+            flash(f'Ocorreu um erro ao conectar ao servidor LDAP: {str(e)}', 'danger')
+            return redirect(url_for('routes.login'))
 
     return render_template('login.html', form=form)
 
 @routes.route('/logout')
-@login_required
 def logout():
     logout_user()
+    flash('Você foi desconectado com sucesso.', 'success')
     return redirect(url_for('routes.login'))
+
 
 @routes.route('/listar_ativos', methods=['GET', 'POST'])
 @login_required
