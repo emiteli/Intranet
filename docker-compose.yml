@@ -3,7 +3,7 @@ services:
   web:
     build: .
     ports:
-      - "5000:5000"
+      - "5000:5000"  # Mapeia a porta 5000 do contêiner para a porta 5000 da máquina host
     volumes:
       - .:/app
     environment:
@@ -11,18 +11,18 @@ services:
       - DATABASE_URL=mysql+pymysql://root:password@db:3306/intranet
     depends_on:
       - db
-    command: flask db upgrade && flask run --host=0.0.0.0
+    command: flask run --host=0.0.0.0 --port=5000
 
   db:
     image: mysql:8.0
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: intranet
+      MYSQL_DATABASE: mintranet
     ports:
-      - "3307:3306"  # Mudou para 3307, se necessário
+      - "3306:3306"
     volumes:
-      - db_data:/var/lib/mysql  # Acessando o volume nomeado
+      - db_data:/var/lib/mysql
 
 volumes:
-  db_data:  # Declaração do volume aqui
+  db_data:
