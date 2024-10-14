@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Configuração do Perfil{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Configuração do Perfil</h2>
+    <form method="POST" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        
+        <!-- Nome de usuário -->
+        <div class="mb-3">
+            <label for="username" class="form-label">Nome de Usuário</label>
+            {{ form.username(class="form-control") }}
+        </div>
+    
+        <!-- Upload da foto de perfil -->
+        <div class="mb-3">
+            <label for="profile_pic" class="form-label">Foto de Perfil</label>
+            {{ form.profile_pic(class="form-control") }}
+        </div>
+
+        <!-- Exibe a foto de perfil atual, se disponível -->
+        <div class="mb-3">
+            {% if current_user.profile_pic %}
+                <img src="{{ url_for('static', filename='uploads/png/' + current_user.profile_pic) }}" alt="Foto de Perfil" class="rounded-circle" width="150" height="150">
+            {% else %}
+                <img src="{{ url_for('static', filename='img/default_profile.png') }}" alt="Foto de Perfil" class="rounded-circle" width="150" height="150">
+            {% endif %}
+        </div>
+
+        <!-- Botão de envio -->
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary">Atualizar Perfil</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

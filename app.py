@@ -6,7 +6,7 @@ app.config.from_object('config.Config')
 
 db.init_app(app)
 login_manager.init_app(app)
-login_manager.login_view = 'login'  # Alterado aqui
+login_manager.login_view = 'login'
 migrate.init_app(app, db)
 
 from routes.routes import routes

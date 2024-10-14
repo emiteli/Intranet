@@ -2,32 +2,44 @@
 {% block title %}Upload e Exibição de Dados{% endblock %}
 
 {% block content %}
-<div class="container">
-    <h2>Carregar e Processar Planilha Excel</h2>
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Carregar e Processar Planilha Excel</h2>
 
-    <form method="POST" enctype="multipart/form-data" action="{{ url_for('routes.upload_and_process') }}">
+    <!-- Formulário de upload -->
+    <form method="POST" enctype="multipart/form-data" action="{{ url_for('routes.upload_and_process') }}" class="mb-4">
         {{ form.hidden_tag() }}
-        <div class="form-group">
-            <label for="file">Escolha um arquivo Excel para upload:</label>
+        <div class="mb-3">
+            <label for="file" class="form-label">Escolha um arquivo Excel para upload:</label>
             {{ form.file(class_="form-control") }}
         </div>
-        <button type="submit" class="btn btn-primary mt-3">Fazer Upload</button>
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Fazer Upload</button>
+        </div>
     </form>
 
+    <!-- Exibição de mensagens de feedback -->
     {% with messages = get_flashed_messages(with_categories=true) %}
         {% if messages %}
-            {% for category, message in messages %}
-                <div class="alert alert-{{ category }} mt-3">{{ message }}</div>
-            {% endfor %}
+            <div class="alert-container">
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }} alert-dismissible fade show mt-3" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% endfor %}
+            </div>
         {% endif %}
     {% endwith %}
 
-    <hr>
+    <!-- Separador visual -->
+    <hr class="my-4">
+
+    <!-- Seleção de planilha para processamento -->
     {% if planilhas_disponiveis %}
-        <h2 class="mt-4">Selecione uma Planilha para Processar</h2>
+        <h3 class="text-center mb-4">Selecione uma Planilha para Processar</h3>
         <form method="POST" action="{{ url_for('routes.upload_and_process') }}">
-            <div class="form-group">
-                <label for="planilha">Escolha a Planilha</label>
+            <div class="mb-3">
+                <label for="planilha" class="form-label">Escolha a Planilha:</label>
                 <select name="planilha" id="planilha" class="form-control">
                     {% for file in planilhas_disponiveis %}
                         <option value="{{ file }}">{{ file }}</option>
@@ -35,22 +47,43 @@
                 </select>
             </div>
 
-            <div class="form-group">
-                <label for="tipo_banco">Selecione o Banco para Inserção:</label>
+            <div class="mb-3">
+                <label for="tipo_banco" class="form-label">Selecione o Banco para Inserção:</label>
                 <select name="tipo_banco" id="tipo_banco" class="form-control">
-                    <option value="asset">Asset</option>
-                    <option value="funcionario">Funcionário</option>
+                    <option value="asset">Contabilidade</option>
+                    <option value="funcionario">Colaborador</option>
                 </select>
             </div>
 
-            <button type="submit" class="btn btn-primary mt-3">Processar e Exibir Dados</button>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Processar e Exibir Dados</button>
+            </div>
         </form>
     {% endif %}
 
-    <!-- Exibir dados da planilha filtrada, se houver -->
+    <!-- Exibição de dados filtrados -->
     {% if df_filtered is not none %}
-        <h3 class="mt-5">Primeiras 5 Linhas da Planilha Selecionada</h3>
-        <pre>{{ df_filtered.head(5).to_string(index=False) }}</pre>  <!-- Exibe os dados das 5 primeiras linhas em formato de texto -->
+        <h3 class="text-center mt-5">Primeiras 5 Linhas da Planilha Selecionada</h3>
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover mt-3">
+                <thead>
+                    <tr>
+                        {% for column in df_filtered.columns %}
+                        <th>{{ column }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in df_filtered.head(5).values %}
+                    <tr>
+                        {% for cell in row %}
+                        <td>{{ cell }}</td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
     {% endif %}
 </div>
 {% endblock %}

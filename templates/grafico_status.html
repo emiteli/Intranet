@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Gráfico de Status dos Funcionários{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Distribuição de Licenças Funcionários</h2>
+    
+    <div class="d-flex justify-content-center mb-4">
+        <img src="data:image/png;base64,{{ graph_url }}" alt="Gráfico de Status dos Funcionários" class="img-fluid">
+    </div>
+
+
+    <div class="d-flex justify-content-center mb-4">
+        <ul class="list-group">
+            <li class="list-group-item">ATIVO: {{ status_contagem['ATIVO'] }}</li>
+            <li class="list-group-item">DESATIVADO: {{ status_contagem['DESATIVADO'] }}</li>
+            <li class="list-group-item">FERIAS: {{ status_contagem['FERIAS'] }}</li>
+            <li class="list-group-item fw-bold">Total: {{ total_funcionarios }}</li>
+        </ul>
+    </div>
+
+    <div class="d-flex justify-content-center">
+        <a href="{{ url_for('routes.listar_funcionarios') }}" class="btn btn-outline-secondary">
+            <i class="fas fa-arrow-left"></i> Voltar
+        </a>
+    </div>
+</div>
+{% endblock %}

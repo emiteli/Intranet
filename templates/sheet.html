@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+
+{% block title %}Planilha - {{ sheet_name }}{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Exibindo Aba: {{ sheet_name }}</h2>
+
+    <!-- Navegação entre todas as abas da planilha -->
+    <ul class="nav nav-tabs mb-4">
+        <li class="nav-item">
+            <a class="nav-link {% if sheet_name == 'OFFICE' %}active{% endif %}" href="{{ url_for('routes.show_sheet', sheet_name='OFFICE') }}">
+                OFFICE
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if sheet_name == 'KASPERSKY' %}active{% endif %}" href="{{ url_for('routes.show_sheet', sheet_name='KASPERSKY') }}">
+                KASPERSKY
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if sheet_name == 'TOTVS' %}active{% endif %}" href="{{ url_for('routes.show_sheet', sheet_name='TOTVS') }}">
+                TOTVS
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if sheet_name == 'OPUS' %}active{% endif %}" href="{{ url_for('routes.show_sheet', sheet_name='OPUS') }}">
+                OPUS
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if sheet_name == 'QUALYTEAM' %}active{% endif %}" href="{{ url_for('routes.show_sheet', sheet_name='QUALYTEAM') }}">
+                QUALYTEAM
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if sheet_name == 'LASERTECH' %}active{% endif %}" href="{{ url_for('routes.show_sheet', sheet_name='LASERTECH') }}">
+                LASERTECH
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if sheet_name == 'VIVO' %}active{% endif %}" href="{{ url_for('routes.show_sheet', sheet_name='VIVO') }}">
+                VIVO
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if sheet_name == 'SENSORWEB' %}active{% endif %}" href="{{ url_for('routes.show_sheet', sheet_name='SENSORWEB') }}">
+                SENSORWEB
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if sheet_name == 'MUNDIVOX' %}active{% endif %}" href="{{ url_for('routes.show_sheet', sheet_name='MUNDIVOX') }}">
+                MUNDIVOX
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if sheet_name == 'LIGGA' %}active{% endif %}" href="{{ url_for('routes.show_sheet', sheet_name='LIGGA') }}">
+                LIGGA
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if sheet_name == 'CYBERTECH' %}active{% endif %}" href="{{ url_for('routes.show_sheet', sheet_name='CYBERTECH') }}">
+                CYBERTECH
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if sheet_name == 'QUALIINFO' %}active{% endif %}" href="{{ url_for('routes.show_sheet', sheet_name='QUALIINFO') }}">
+                QUALIINFO
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if sheet_name == 'VELOXI' %}active{% endif %}" href="{{ url_for('routes.show_sheet', sheet_name='VELOXI') }}">
+                VELOXI
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if sheet_name == 'SMS' %}active{% endif %}" href="{{ url_for('routes.show_sheet', sheet_name='SMS') }}">
+                SMS
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if sheet_name == 'CERTIFICADOS' %}active{% endif %}" href="{{ url_for('routes.show_sheet', sheet_name='CERTIFICADOS') }}">
+                CERTIFICADOS
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if sheet_name == 'INVIOLÁVEL' %}active{% endif %}" href="{{ url_for('routes.show_sheet', sheet_name='INVIOLÁVEL') }}">
+                INVIOLÁVEL
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if sheet_name == 'GOOGLE' %}active{% endif %}" href="{{ url_for('routes.show_sheet', sheet_name='GOOGLE') }}">
+                GOOGLE
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if sheet_name == 'AGENDOR' %}active{% endif %}" href="{{ url_for('routes.show_sheet', sheet_name='AGENDOR') }}">
+                AGENDOR
+            </a>
+        </li>
+    </ul>
+
+    <!-- Exibição dos dados da planilha -->
+    <div class="table-responsive">
+        {{ data|safe }}
+    </div>
+</div>
+{% endblock %}

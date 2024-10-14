@@ -1,33 +1,37 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="container">
-        <h2 class="my-4">Lista Ativo Contabilidade</h2>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Lista Ativo Contabilidade</h2>
         
-        <form method="POST" class="form-inline mb-4">
+        <!-- Filtros aprimorados -->
+        <form method="POST" class="row g-3 mb-4">
             {{ form.hidden_tag() }}
-            <div class="form-group mx-2">
+            <div class="col-md-3">
                 {{ form.filial.label(class="form-label") }} 
                 {{ form.filial(class="form-control") }}
             </div>
-            <div class="form-group mx-2">
+            <div class="col-md-3">
                 {{ form.codigo_bem.label(class="form-label") }} 
                 {{ form.codigo_bem(class="form-control") }}
             </div>
-            <div class="form-group mx-2">
+            <div class="col-md-3">
                 {{ form.descricao_sintetica.label(class="form-label") }} 
                 {{ form.descricao_sintetica(class="form-control") }}
             </div>
-            <div class="form-group mx-2">
+            <div class="col-md-3">
                 {{ form.nota_fiscal.label(class="form-label") }} 
                 {{ form.nota_fiscal(class="form-control") }}
             </div>
-            <button type="submit" class="btn btn-primary ml-2">Filtrar</button>
+            <div class="col-md-12 text-center">
+                <button type="submit" class="btn btn-primary mt-3">Filtrar</button>
+            </div>
         </form>
 
+        <!-- Tabela responsiva com estilo clean -->
         <div class="table-responsive">
-            <table class="table table-striped table-bordered">
-                <thead class="thead-dark">
+            <table class="table table-striped table-hover table-bordered">
+                <thead class="thead-dark text-center">
                     <tr>
                         <th>Filial</th>
                         <th>Grupo</th>
