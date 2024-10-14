@@ -8,56 +8,53 @@ import pandas as pd
 from werkzeug.utils import secure_filename
 from ldap3 import Server, Connection, ALL, NTLM
 import matplotlib
-matplotlib.use('Agg')  # Use o backend 'Agg' para evitar problemas com Tkinter
+matplotlib.use('Agg')  
 import matplotlib.pyplot as plt
 
 routes = Blueprint('routes', __name__)
 
 @routes.route('/grafico_status')
 def grafico_status():
-    # Contar os funcionários com base no status
+    
     status_contagem = {
         'ATIVO': Funcionario.query.filter_by(status='ATIVO').count(),
         'DESATIVADO': Funcionario.query.filter_by(status='DESATIVADO').count(),
         'FERIAS': Funcionario.query.filter_by(status='FERIAS').count()
     }
 
-    # Total de funcionários
+    
     total_funcionarios = sum(status_contagem.values())
 
-    # Gerar o gráfico de barras
     labels = list(status_contagem.keys())
     values = list(status_contagem.values())
-
     fig, ax = plt.subplots(figsize=(8, 6), dpi=100)
     
-    # Configurando o gráfico de barras
     ax.bar(labels, values, color=['#4CAF50', '#FF5722', '#FFC107'], edgecolor='black')
 
-    # Adicionar títulos e rótulos
+    
     ax.set_title('Distribuição de Status dos Funcionários', fontsize=14, weight='bold')
     ax.set_ylabel('Número de Funcionários', fontsize=12)
     ax.set_xlabel('Status', fontsize=12)
 
-    # Adicionar os valores nas barras
+    
     for i, v in enumerate(values):
         ax.text(i, v + 0.5, str(v), ha='center', fontsize=12, weight='bold')
 
-    # Salvar o gráfico em um buffer de bytes
+    
     img = io.BytesIO()
     plt.savefig(img, format='png', bbox_inches='tight')
     img.seek(0)
 
-    # Codificar a imagem em base64 para exibir no HTML
+    
     graph_url = base64.b64encode(img.getvalue()).decode()
     plt.close()
 
-    # Renderizar o template e passar as contagens de status e o gráfico
+    
     return render_template('grafico_status.html', graph_url=graph_url, status_contagem=status_contagem, total_funcionarios=total_funcionarios)
 
 
 def load_excel_sheets():
-    # Pega o caminho do UPLOAD_FOLDER definido no config.py
+    
     excel_path = os.path.join(current_app.config['UPLOAD_FOLDER'], 'ControleCusto.xlsx')
     
     print(f"Caminho da planilha: {excel_path}")
@@ -67,14 +64,14 @@ def load_excel_sheets():
     
     xls = pd.ExcelFile(excel_path)
     
-    # Listar as abas disponíveis
-    #print(f"Abas disponíveis: {xls.sheet_names}")
     
-    # Carregar as abas como DataFrames
+    
+    
+    
     sheets = {sheet_name: xls.parse(sheet_name) for sheet_name in xls.sheet_names}
     return sheets
 
-# Rota para exibir cada aba da planilha
+
 @routes.route('/sheet/<sheet_name>')
 def show_sheet(sheet_name):
     try:
@@ -87,7 +84,7 @@ def show_sheet(sheet_name):
     if df is None:
         return f"Aba '{sheet_name}' não encontrada", 404
     
-    # Converte os dados da aba para HTML
+    
     return render_template('sheet.html', data=df.to_html(classes='table table-striped'), sheet_name=sheet_name, sheets=sheets)
 
 @login_manager.user_loader
@@ -106,22 +103,22 @@ def profile():
     form = UpdateProfileForm()
 
     if form.validate_on_submit():
-        # Atualizar username
+        
         current_user.username = form.username.data
 
-        # Upload da foto de perfil
+        
         if form.profile_pic.data:
             pic_filename = secure_filename(f'{current_user.id}_{form.profile_pic.data.filename}')
             pic_path = os.path.join(current_app.config['PROFILE_PICS_FOLDER'], pic_filename)
 
-            # Verifica se o diretório "png" existe, e cria se não existir
+            
             if not os.path.exists(current_app.config['PROFILE_PICS_FOLDER']):
                 os.makedirs(current_app.config['PROFILE_PICS_FOLDER'])
 
-            # Salvando a foto de perfil no diretório "png"
+            
             form.profile_pic.data.save(pic_path)
 
-            # Atualizar o campo da foto de perfil no banco de dados
+            
             current_user.profile_pic = pic_filename
 
         db.session.commit()
@@ -207,7 +204,7 @@ def listar_ativos():
 @login_required
 def upload_and_process():
     form = UploadFileForm()
-    excel_folder = current_app.config['EXCEL_FOLDER']  # Diretório específico para arquivos Excel
+    excel_folder = current_app.config['EXCEL_FOLDER']  
     planilhas_disponiveis = os.listdir(excel_folder)
     df_filtered = None
 
@@ -215,20 +212,20 @@ def upload_and_process():
         file = form.file.data
         filename = secure_filename(file.filename)
 
-        # Verificação se o arquivo é .xls ou .xlsx
+        
         if not filename.endswith(('.xls', '.xlsx')):
             flash('Formato de arquivo inválido. Apenas arquivos .xls ou .xlsx são permitidos.', 'danger')
             return redirect(url_for('routes.upload_and_process'))
 
-        # Caminho completo onde o arquivo será salvo no diretório específico de Excel
+        
         file_path = os.path.join(excel_folder, filename)
         
-        # Salvando o arquivo
+        
         file.save(file_path)
         flash('Arquivo Excel carregado com sucesso!', 'success')
 
     if request.method == 'POST' and 'tipo_banco' in request.form:
-        # Obtenção do arquivo selecionado
+        
         selected_file = form.file.data.filename if form.file.data else request.form['planilha']
         file_path = os.path.join(excel_folder, selected_file)
         tipo_banco = request.form['tipo_banco']
@@ -238,12 +235,12 @@ def upload_and_process():
             return render_template('upload_and_process.html', form=form, planilhas_disponiveis=planilhas_disponiveis, df_filtered=df_filtered)
 
         try:
-            # Processando o arquivo Excel
+            
             df_cleaned = pd.read_excel(file_path, header=0)
             df_cleaned = df_cleaned.dropna(how='all', axis=1)
             df_cleaned = df_cleaned.where(df_cleaned.notnull(), None)
 
-            # Lógica de processamento para 'asset' e 'funcionario'
+            
             if tipo_banco == 'asset':
                 df_filtered = df_cleaned.iloc[:, [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12]]
                 df_filtered.columns = ['Filial', 'Grupo', 'Classificac.', 'Cod. do Bem', 'Item', 'Dt. Aquisição', 'Quantidade', 'Descr. Sint.', 'Num. Placa', 'Cod. Fornec.', 'Loja Fornec.', 'Nota Fiscal']
