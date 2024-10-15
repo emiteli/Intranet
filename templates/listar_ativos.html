@@ -29,9 +29,9 @@
         </form>
 
         <!-- Tabela responsiva com estilo clean -->
-        <div class="table-responsive">
-            <table class="table table-striped table-hover table-bordered">
-                <thead class="thead-dark text-center">
+        <div class="table-responsive ativos-table">
+            <table class="table table-striped">
+                <thead>
                     <tr>
                         <th>Filial</th>
                         <th>Grupo</th>
@@ -50,22 +50,22 @@
                 <tbody>
                     {% for ativo in ativos %}
                     <tr>
-                        <td>{{ ativo.filial }}</td>
-                        <td>{{ ativo.grupo }}</td>
-                        <td>{{ ativo.classificacao }}</td>
-                        <td>{{ ativo.codigo_bem }}</td>
-                        <td>{{ ativo.item }}</td>
-                        <td>{{ ativo.data_aquisicao }}</td>
-                        <td>{{ ativo.quantidade }}</td>
-                        <td>{{ ativo.descricao_sintetica }}</td>
-                        <td>{{ ativo.numero_placa }}</td>
-                        <td>{{ ativo.codigo_fornecedor }}</td>
-                        <td>{{ ativo.loja_fornecedor }}</td>
-                        <td>{{ ativo.nota_fiscal }}</td>
+                        <td data-label="Filial">{{ ativo.filial }}</td>
+                        <td data-label="Grupo">{{ ativo.grupo }}</td>
+                        <td data-label="Classificação">{{ ativo.classificacao }}</td>
+                        <td data-label="Código do Bem">{{ ativo.codigo_bem }}</td>
+                        <td data-label="Item">{{ ativo.item }}</td>
+                        <td data-label="Data Aquisição">{{ ativo.data_aquisicao }}</td>
+                        <td data-label="Quantidade">{{ ativo.quantidade }}</td>
+                        <td data-label="Descrição">{{ ativo.descricao_sintetica }}</td>
+                        <td data-label="Placa">{{ ativo.numero_placa }}</td>
+                        <td data-label="Fornecedor">{{ ativo.codigo_fornecedor }}</td>
+                        <td data-label="Loja Fornec.">{{ ativo.loja_fornecedor }}</td>
+                        <td data-label="Nota Fiscal">{{ ativo.nota_fiscal }}</td>
                     </tr>
                     {% endfor %}
                 </tbody>
             </table>
         </div>
-    </div>
+        
 {% endblock %}

@@ -11,9 +11,9 @@ class Config:
     PROFILE_PICS_FOLDER = os.path.join(UPLOAD_FOLDER, 'png')
 
     DEBUG = True
-    
+
     # Configurações do LDAP
-    LDAP_HOST = '10.0.21.1'  # Endereço do servidor LDAP
+    LDAP_HOST = '10.0.21.1'
     LDAP_BASE_DN = 'dc=emiteli,dc=com,dc=br'
     LDAP_USER_DN = 'ou=users'
     LDAP_USER_RDN = 'uid'

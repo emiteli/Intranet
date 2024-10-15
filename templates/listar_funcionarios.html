@@ -19,47 +19,45 @@
         </a>
     </div>
     
-
     <!-- Formulário de busca de funcionários por nome -->
     <form method="GET" class="mb-4 d-flex justify-content-center">
         <input type="text" name="nome" class="form-control w-50 me-2" placeholder="Pesquisar funcionário por nome..." value="{{ request.args.get('nome', '') }}">
         <button type="submit" class="btn btn-primary">Buscar</button>
     </form>
-    <div class="table-responsive">
-        <table class="table table-striped table-hover table-sm">
-            <thead class="thead-dark">
-                <tr>
-                    <th>Status</th>
-                    <th>Departamento</th>
-                    <th>Nome</th>
-                    <th>Licenças</th>
-                    <th>Cargo</th>
-                    <th>Ações</th> <!-- Coluna para ações (atualizar status) -->
-                </tr>
-            </thead>
-            <tbody>
-                {% for funcionario in funcionarios %}
-                <tr>
-                    <td>{{ funcionario.status }}</td>
-                    <td>{{ funcionario.departamento }}</td>
-                    <td>{{ funcionario.nome }}</td>
-                    <td>{{ funcionario.licencas }}</td>
-                    <td>{{ funcionario.cargo }}</td>
-                    <td>
-                        <!-- Formulário para atualizar o status -->
-                        <form method="POST" action="{{ url_for('routes.alterar_status', funcionario_id=funcionario.id) }}">
-                            {{ form.csrf_token }}
-                            <div class="input-group">
-                                {{ form.novo_status(class="form-control form-control-sm") }}
-                                <button type="submit" class="btn btn-outline-success btn-sm">Atualizar</button>
-                            </div>
-                        </form>
-                    </td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
+        <div class="table-responsive funcionarios-table">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Status</th>
+                        <th>Departamento</th>
+                        <th>Nome</th>
+                        <th>Licenças</th>
+                        <th>Cargo</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for funcionario in funcionarios %}
+                    <tr>
+                        <td data-label="Status">{{ funcionario.status }}</td>
+                        <td data-label="Departamento">{{ funcionario.departamento }}</td>
+                        <td data-label="Nome">{{ funcionario.nome }}</td>
+                        <td data-label="Licenças">{{ funcionario.licencas }}</td>
+                        <td data-label="Cargo">{{ funcionario.cargo }}</td>
+                        <td>
+                            <form method="POST" action="{{ url_for('routes.alterar_status', funcionario_id=funcionario.id) }}">
+                                {{ form.csrf_token }}
+                                <div class="input-group">
+                                    {{ form.novo_status(class="form-control form-control-sm") }}
+                                    <button type="submit" class="btn btn-outline-success btn-sm">Atualizar</button>
+                                </div>
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>    
     {% if funcionarios|length == 0 %}
     <p class="text-center text-muted mt-4">Nenhum funcionário encontrado.</p>
     {% endif %}
