@@ -10,7 +10,6 @@ class Config:
     EXCEL_FOLDER = os.path.join(UPLOAD_FOLDER, 'excel')
     PROFILE_PICS_FOLDER = os.path.join(UPLOAD_FOLDER, 'png')
 
-
     DEBUG = True
     
     # Configurações do LDAP

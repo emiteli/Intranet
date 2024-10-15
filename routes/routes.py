@@ -1,28 +1,33 @@
-from flask import Blueprint, render_template, redirect, url_for, flash, request, current_app, send_file 
+from flask import Blueprint, render_template, redirect, url_for, flash, request, current_app, send_file
 from flask_login import login_user, logout_user, login_required, current_user
-from extensions import db, login_manager 
-from models.models import User,  Asset, Funcionario
-from forms.forms import LoginForm, UploadFileForm,  FilterForm, AlterarStatusForm, UpdateProfileForm
+from extensions import db, login_manager
+from models.models import User, Asset, Funcionario
+from forms.forms import LoginForm, UploadFileForm, FilterForm, AlterarStatusForm, UpdateProfileForm
 import io, os, base64
 import pandas as pd
 from werkzeug.utils import secure_filename
 from ldap3 import Server, Connection, ALL, NTLM
 import matplotlib
-matplotlib.use('Agg')  
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+from typing import Dict, List, Union, Optional
 
 routes = Blueprint('routes', __name__)
 
+SheetDict = Dict[str, pd.DataFrame]
+
 @routes.route('/grafico_status')
-def grafico_status():
-    status_contagem = {
+def grafico_status() -> str:
+    status_contagem: Dict[str, int] = {
         'ATIVO': Funcionario.query.filter_by(status='ATIVO').count(),
         'DESATIVADO': Funcionario.query.filter_by(status='DESATIVADO').count(),
         'FERIAS': Funcionario.query.filter_by(status='FERIAS').count()
     }
-    total_funcionarios = sum(status_contagem.values())
-    labels = list(status_contagem.keys())
-    values = list(status_contagem.values())
+    total_funcionarios: int = sum(status_contagem.values())
+    
+    labels: List[str] = list(status_contagem.keys())
+    values: List[int] = list(status_contagem.values())
+    
     fig, ax = plt.subplots(figsize=(8, 6), dpi=100)
     ax.bar(labels, values, color=['#4CAF50', '#FF5722', '#FFC107'], edgecolor='black')
     ax.set_title('Distribuição de Status dos Funcionários', fontsize=14, weight='bold')
@@ -31,93 +36,109 @@ def grafico_status():
     
     for i, v in enumerate(values):
         ax.text(i, v + 0.5, str(v), ha='center', fontsize=12, weight='bold')
+    
     img = io.BytesIO()
     plt.savefig(img, format='png', bbox_inches='tight')
     img.seek(0)
-    graph_url = base64.b64encode(img.getvalue()).decode()
+    graph_url: str = base64.b64encode(img.getvalue()).decode()
     plt.close()
+    
     return render_template('grafico_status.html', graph_url=graph_url, status_contagem=status_contagem, total_funcionarios=total_funcionarios)
 
-def load_excel_sheets():
-    excel_path = os.path.join(current_app.config['UPLOAD_FOLDER'], 'ControleCusto.xlsx')
-    print(f"Caminho da planilha: {excel_path}")
+def load_excel_sheets() -> SheetDict:
+    excel_path: str = os.path.join(current_app.config['UPLOAD_FOLDER'], 'ControleCusto.xlsx')
     if not os.path.exists(excel_path):
         raise FileNotFoundError(f"Arquivo {excel_path} não encontrado.")
+    
     xls = pd.ExcelFile(excel_path)
-    sheets = {sheet_name: xls.parse(sheet_name) for sheet_name in xls.sheet_names}
+    sheets: SheetDict = {sheet_name: xls.parse(sheet_name) for sheet_name in xls.sheet_names}
+    
     return sheets
 
 @routes.route('/sheet/<sheet_name>')
-def show_sheet(sheet_name):
+def show_sheet(sheet_name: str) -> Union[str, tuple]:
     try:
-        sheets = load_excel_sheets()
+        sheets: SheetDict = load_excel_sheets()
     except FileNotFoundError as e:
         return str(e), 404
-    df = sheets.get(sheet_name)
+    
+    df: Optional[pd.DataFrame] = sheets.get(sheet_name)
     if df is None:
         return f"Aba '{sheet_name}' não encontrada", 404
+    
     return render_template('sheet.html', data=df.to_html(classes='table table-striped'), sheet_name=sheet_name, sheets=sheets)
 
 @login_manager.user_loader
-def load_user(user_id):
+def load_user(user_id: int) -> Optional[User]:
     return User.query.get(int(user_id))
 
 @routes.route('/')
-def home():
+def home() -> str:
     if current_user.is_authenticated:
         return redirect(url_for('routes.listar_ativos'))
     return redirect(url_for('routes.login'))
 
 @routes.route('/profile', methods=['GET', 'POST'])
 @login_required
-def profile():
-    form = UpdateProfileForm()
+def profile() -> str:
+    form: UpdateProfileForm = UpdateProfileForm()
     if form.validate_on_submit():
         current_user.username = form.username.data
+        
         if form.profile_pic.data:
-            pic_filename = secure_filename(f'{current_user.id}_{form.profile_pic.data.filename}')
-            pic_path = os.path.join(current_app.config['PROFILE_PICS_FOLDER'], pic_filename)
+            pic_filename: str = secure_filename(f'{current_user.id}_{form.profile_pic.data.filename}')
+            pic_path: str = os.path.join(current_app.config['PROFILE_PICS_FOLDER'], pic_filename)
+            
             if not os.path.exists(current_app.config['PROFILE_PICS_FOLDER']):
                 os.makedirs(current_app.config['PROFILE_PICS_FOLDER'])
+            
             form.profile_pic.data.save(pic_path)
             current_user.profile_pic = pic_filename
+        
         db.session.commit()
         flash('Perfil atualizado com sucesso!', 'success')
         return redirect(url_for('routes.profile'))
+    
     elif request.method == 'GET':
         form.username.data = current_user.username
+    
     return render_template('profile.html', form=form)
 
-
 @routes.route('/login', methods=['GET', 'POST'])
-def login():
-    form = LoginForm()
+def login() -> str:
+    form: LoginForm = LoginForm()
     if form.validate_on_submit():
-        username = form.username.data
-        password = form.password.data
-        ldap_host = current_app.config['LDAP_HOST']
+        username: str = form.username.data
+        password: str = form.password.data
+        ldap_host: Optional[str] = current_app.config['LDAP_HOST']
+        
         if not ldap_host:
             flash('O servidor LDAP não está configurado.', 'danger')
             return redirect(url_for('routes.login'))
+        
         server = Server(ldap_host, get_info=ALL)
         DOMAIN = 'emiteli.com.br'
         user_with_domain = f"{DOMAIN}\\{username}"
         conn = Connection(server, user=user_with_domain, password=password, authentication=NTLM)
-        if conn.bind():  
-            user = User.query.filter_by(username=username).first()  
-            if not user:  
+        
+        if conn.bind():
+            user = User.query.filter_by(username=username).first()
+            if not user:
                 user = User(username=username)
-                db.session.add(user)  
-                db.session.commit()  
-            login_user(user)  
+                db.session.add(user)
+                db.session.commit()
+            
+            login_user(user)
             flash('Login bem-sucedido!', 'success')
-            return redirect(url_for('routes.listar_ativos'))  
+            return redirect(url_for('routes.listar_ativos'))
         else:
             flash('Falha na autenticação. Verifique suas credenciais.', 'danger')
+    
     return render_template('login.html', form=form)
+
 @routes.route('/logout')
 @login_required
-def logout():
+def logout() -> str:
     logout_user()
     return redirect(url_for('routes.login'))
 
