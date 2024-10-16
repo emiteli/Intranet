@@ -170,6 +170,7 @@ def upload_and_process():
     excel_folder = current_app.config['EXCEL_FOLDER']  
     planilhas_disponiveis = os.listdir(excel_folder)
     df_filtered = None
+    
     if form.validate_on_submit():
         file = form.file.data
         filename = secure_filename(file.filename)
@@ -177,26 +178,47 @@ def upload_and_process():
         if not filename.endswith(('.xls', '.xlsx')):
             flash('Formato de arquivo inválido. Apenas arquivos .xls ou .xlsx são permitidos.', 'danger')
             return redirect(url_for('routes.upload_and_process'))
+        
         file_path = os.path.join(excel_folder, filename)
         file.save(file_path)
         flash('Arquivo Excel carregado com sucesso!', 'success')
+    
     if request.method == 'POST' and 'tipo_banco' in request.form:
         selected_file = form.file.data.filename if form.file.data else request.form['planilha']
         file_path = os.path.join(excel_folder, selected_file)
         tipo_banco = request.form['tipo_banco']
+        
         if not os.path.exists(file_path):
             flash(f'O arquivo {selected_file} não foi encontrado.', 'danger')
             return render_template('upload_and_process.html', form=form, planilhas_disponiveis=planilhas_disponiveis, df_filtered=df_filtered)
+        
         try:
             df_cleaned = pd.read_excel(file_path, header=0)
             df_cleaned = df_cleaned.dropna(how='all', axis=1)
             df_cleaned = df_cleaned.where(df_cleaned.notnull(), None)
+
             if tipo_banco == 'asset':
                 df_filtered = df_cleaned.iloc[:, [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12]]
                 df_filtered.columns = ['Filial', 'Grupo', 'Classificac.', 'Cod. do Bem', 'Item', 'Dt. Aquisição', 'Quantidade', 'Descr. Sint.', 'Num. Placa', 'Cod. Fornec.', 'Loja Fornec.', 'Nota Fiscal']
+                
                 for index, row in df_filtered.iterrows():
                     existing_asset = Asset.query.filter_by(codigo_bem=row['Cod. do Bem']).first()
-                    if not existing_asset:
+                    
+                    if existing_asset:
+                        # Atualiza o registro existente
+                        existing_asset.filial = row['Filial']
+                        existing_asset.grupo = row['Grupo']
+                        existing_asset.classificacao = row['Classificac.']
+                        existing_asset.item = row['Item']
+                        existing_asset.data_aquisicao = pd.to_datetime(row['Dt. Aquisição'], errors='coerce').date() if row['Dt. Aquisição'] else None
+                        existing_asset.quantidade = row['Quantidade']
+                        existing_asset.descricao_sintetica = row['Descr. Sint.']
+                        existing_asset.numero_placa = row['Num. Placa']
+                        existing_asset.codigo_fornecedor = row['Cod. Fornec.']
+                        existing_asset.loja_fornecedor = row['Loja Fornec.']
+                        existing_asset.nota_fiscal = row['Nota Fiscal']
+                    else:
+                        # Adiciona um novo registro se não existir
                         new_asset = Asset(
                             filial=row['Filial'],
                             grupo=row['Grupo'],
@@ -212,14 +234,26 @@ def upload_and_process():
                             nota_fiscal=row['Nota Fiscal']
                         )
                         db.session.add(new_asset)
+            
             elif tipo_banco == 'funcionario':
                 df_filtered = df_cleaned.iloc[:, [0, 1, 2, 3, 4, 5]]
                 df_filtered.columns = ['STATUS', 'DEPARTAMENTO', 'NOME', 'LICENCAS', 'CARGO', 'EMAIL']
+                
                 for index, row in df_filtered.iterrows():
                     if not row['DEPARTAMENTO'] and not row['NOME'] and not row['EMAIL']:
                         continue
+                    
                     existing_funcionario = Funcionario.query.filter_by(email=row['EMAIL']).first()
-                    if not existing_funcionario:
+                    
+                    if existing_funcionario:
+                        # Atualiza o registro existente
+                        existing_funcionario.status = row['STATUS'] if row['STATUS'] else None
+                        existing_funcionario.departamento = row['DEPARTAMENTO'] if row['DEPARTAMENTO'] else None
+                        existing_funcionario.nome = row['NOME'] if row['NOME'] else None
+                        existing_funcionario.licencas = row['LICENCAS'] if row['LICENCAS'] else None
+                        existing_funcionario.cargo = row['CARGO'] if row['CARGO'] else None
+                    else:
+                        # Adiciona um novo registro se não existir
                         new_funcionario = Funcionario(
                             status=row['STATUS'] if row['STATUS'] else None,
                             departamento=row['DEPARTAMENTO'] if row['DEPARTAMENTO'] else None,
@@ -229,12 +263,16 @@ def upload_and_process():
                             email=row['EMAIL'] if row['EMAIL'] else None
                         )
                         db.session.add(new_funcionario)
+
             db.session.commit()
-            flash('Dados foram inseridos com sucesso no banco de dados.', 'success')
+            flash('Dados foram atualizados com sucesso no banco de dados.', 'success')
+        
         except Exception as e:
             db.session.rollback()
             flash(f'Erro ao processar o arquivo: {str(e)}', 'danger')
+    
     return render_template('upload_and_process.html', form=form, planilhas_disponiveis=planilhas_disponiveis, df_filtered=df_filtered)
+
 
 @routes.route('/listar_funcionarios', methods=['GET', 'POST'])
 @login_required
