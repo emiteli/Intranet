@@ -18,32 +18,48 @@ SheetDict = Dict[str, pd.DataFrame]
 
 @routes.route('/grafico_status')
 def grafico_status() -> str:
+    # Contagem de funcionários por status
     status_contagem: Dict[str, int] = {
         'ATIVO': Funcionario.query.filter_by(status='ATIVO').count(),
         'DESATIVADO': Funcionario.query.filter_by(status='DESATIVADO').count(),
         'FERIAS': Funcionario.query.filter_by(status='FERIAS').count()
     }
+    
+    # Total de funcionários
     total_funcionarios: int = sum(status_contagem.values())
     
+    # Busca os nomes dos funcionários que estão de férias
+    funcionarios_ferias = Funcionario.query.filter_by(status='FERIAS').all()
+    nomes_ferias = [f.nome for f in funcionarios_ferias]  # Extraindo apenas os nomes
+    
+    # Preparando os dados para o gráfico
     labels: List[str] = list(status_contagem.keys())
     values: List[int] = list(status_contagem.values())
     
+    # Criando o gráfico
     fig, ax = plt.subplots(figsize=(8, 6), dpi=100)
     ax.bar(labels, values, color=['#4CAF50', '#FF5722', '#FFC107'], edgecolor='black')
     ax.set_title('Distribuição de Status dos Funcionários', fontsize=14, weight='bold')
     ax.set_ylabel('Número de Funcionários', fontsize=12)
     ax.set_xlabel('Status', fontsize=12)
     
+    # Adicionando os valores em cima das barras
     for i, v in enumerate(values):
         ax.text(i, v + 0.5, str(v), ha='center', fontsize=12, weight='bold')
     
+    # Salvando a imagem do gráfico em memória
     img = io.BytesIO()
     plt.savefig(img, format='png', bbox_inches='tight')
     img.seek(0)
     graph_url: str = base64.b64encode(img.getvalue()).decode()
     plt.close()
     
-    return render_template('grafico_status.html', graph_url=graph_url, status_contagem=status_contagem, total_funcionarios=total_funcionarios)
+    # Renderizando o template e passando a lista de funcionários de férias
+    return render_template('grafico_status.html', 
+                           graph_url=graph_url, 
+                           status_contagem=status_contagem, 
+                           total_funcionarios=total_funcionarios,
+                           funcionarios_ferias=nomes_ferias)
 
 def load_excel_sheets() -> SheetDict:
     excel_path: str = os.path.join(current_app.config['UPLOAD_FOLDER'], 'ControleCusto.xlsx')
@@ -272,7 +288,6 @@ def upload_and_process():
             flash(f'Erro ao processar o arquivo: {str(e)}', 'danger')
     
     return render_template('upload_and_process.html', form=form, planilhas_disponiveis=planilhas_disponiveis, df_filtered=df_filtered)
-
 
 @routes.route('/listar_funcionarios', methods=['GET', 'POST'])
 @login_required
