@@ -28,9 +28,12 @@ def grafico_status() -> str:
     # Total de funcionários
     total_funcionarios: int = sum(status_contagem.values())
     
-    # Busca os nomes dos funcionários que estão de férias
+    # Busca os nomes dos funcionários que estão de férias e desativados
     funcionarios_ferias = Funcionario.query.filter_by(status='FERIAS').all()
     nomes_ferias = [f.nome for f in funcionarios_ferias]  # Extraindo apenas os nomes
+
+    funcionarios_desativados = Funcionario.query.filter_by(status='DESATIVADO').all()
+    nomes_desativados = [f.nome for f in funcionarios_desativados]  # Extraindo os nomes dos desativados
     
     # Preparando os dados para o gráfico
     labels: List[str] = list(status_contagem.keys())
@@ -54,12 +57,14 @@ def grafico_status() -> str:
     graph_url: str = base64.b64encode(img.getvalue()).decode()
     plt.close()
     
-    # Renderizando o template e passando a lista de funcionários de férias
+    # Renderizando o template e passando a lista de funcionários de férias e desativados
     return render_template('grafico_status.html', 
                            graph_url=graph_url, 
                            status_contagem=status_contagem, 
                            total_funcionarios=total_funcionarios,
-                           funcionarios_ferias=nomes_ferias)
+                           funcionarios_ferias=nomes_ferias,
+                           funcionarios_desativados=nomes_desativados)
+
 
 def load_excel_sheets() -> SheetDict:
     excel_path: str = os.path.join(current_app.config['UPLOAD_FOLDER'], 'ControleCusto.xlsx')
