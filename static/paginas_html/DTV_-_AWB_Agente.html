@@ -1,0 +1,1551 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: DTV - AWB Agente</title></head>
+<body>
+<font color="orange"><h2 id="DTV">Tabela: DTV - AWB Agente</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>AWB Agente</b></td><td colspan="2"><b>DTV_FILIAL+DTV_NUMAWB+DTV_CODCIA+DTV_LOJCIA</b></td><td><b>TMSA320</b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">DTV_FILIAL+DTV_NUMAWB+DTV_DIGAWB+DTV_CODCIA+DTV_LOJCIA</td><td>No.AWB + Digito AWB + Cia Aerea + Loja Cia</td><td></td></tr>
+<tr><td>2</td><td colspan="2">DTV_FILIAL+DTV_FILORI+DTV_VIAGEM</td><td>Fil.Origem + Viagem</td><td></td></tr>
+<tr><td>3</td><td colspan="2">DTV_FILIAL+DTV_FATURA+DTV_CODCIA+DTV_LOJCIA</td><td>No. Fatura + Cia Aerea + Loja Cia</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>DTV_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Filial do Sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTV_BALCAO</td>
+<td>AWB Balcão</td>
+<td colspan="2">AWB Balcão</td>
+<td colspan="4">Indica se a AWB foi emitida no balcão da
+Cia Aerea. Caso positivo o numero da AWB
+será um número provisorio gerado
+automaticamente.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12") .And. TMSA320Vld()</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DTV_NUMAWB</td>
+<td>No.AWB</td>
+<td colspan="2">Numero da AWB</td>
+<td colspan="4">Número da AWB. Este campo alfanumérico
+identifica a AWB.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>TMSA320Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>TMSA320Whe()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/018.html">018</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DTV_DIGAWB</td>
+<td>Digito AWB</td>
+<td colspan="2">Digito da AWB</td>
+<td colspan="4">Dígito da AWB
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>TMSA320Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>TMSA320Whe()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTV_DATEMI</td>
+<td>Data Emissao</td>
+<td colspan="2">Data Emissao</td>
+<td colspan="4">Data da Emiss„o.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>dDataBase</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DTV_HOREMI</td>
+<td>Hora Emissao</td>
+<td colspan="2">Hora Emissao</td>
+<td colspan="4">Hora Emissäo.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@R 99:99                                     </td>
+<td>AtVldHora(M->DTV_HOREMI)</td>
+<td>Iif(Inclui,Left(StrTran(Time(),":",""),4),DTV->DTV_HOREMI)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DTV_FILORI</td>
+<td>Fil.Origem</td>
+<td colspan="2">Filial de Origem</td>
+<td colspan="4">Filial origem da AWB. O sistema preenche
+automaticamente este campo de acordo com
+a filial do sistema onde estamos
+emitindo a AWB.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>cFilAnt</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DTV_VIAGEM</td>
+<td>Viagem</td>
+<td colspan="2">Numero da Viagem</td>
+<td colspan="4">Viagem.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td>TMSA320Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dtq.html">DTQ</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/143.html">143</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DTV_QTDVOL</td>
+<td>Qtde.Volume</td>
+<td colspan="2">Qtd.Volume</td>
+<td colspan="4">Quantidade Volume.
+</td>
+<td>N</td>
+<td>5</td>
+<td>0</td>
+<td>99999                                        </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTV_CDRDES</td>
+<td>Cod.Reg.Des.</td>
+<td colspan="2">Cod.Regiao Destino</td>
+<td colspan="4">Código Regiäo Destino.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("DUY",,1) .And. TMSA320Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/duy.html">DUY</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dtv_cdrdes.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DTV_REGDES</td>
+<td>Reg.Destino</td>
+<td colspan="2">Reg.Destino</td>
+<td colspan="4">Regiäo Destino.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>TmsPesqRegiao("DTV_CDRDES","DTV_REGDES")</td>
+<td>Iif(Inclui,"",Posicione("DUY",1,xFilial("DUY")+DTV->DTV_CDRDES,"DUY_DESCRI"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("DUY",1,xFilial("DUY")+DTV->DTV_CDRDES,"DUY_DESCRI")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTV_PESO</td>
+<td>Peso Real</td>
+<td colspan="2">Peso Real</td>
+<td colspan="4">Peso Real.
+</td>
+<td>N</td>
+<td>11</td>
+<td>4</td>
+<td>@E 999,999.9999                              </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTV_PESOM3</td>
+<td>Peso Cubado</td>
+<td colspan="2">Peso Cubado</td>
+<td colspan="4">Peso Cubado.
+</td>
+<td>N</td>
+<td>11</td>
+<td>4</td>
+<td>@E 999,999.9999                              </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTV_VALMER</td>
+<td>Valor Merc.</td>
+<td colspan="2">Valor Mercadoria</td>
+<td colspan="4">Valor da Mercadoria. Este campo será
+preenchido automaticamente após a
+escolha da viagem.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTV_CODPRO</td>
+<td>Cod. Produto</td>
+<td colspan="2">Codigo do Produto</td>
+<td colspan="4">Código do Produto.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. ExistCpo("SB1",M->DTV_CODPRO)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sb1.html">SB1</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dtv_codpro.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/030.html">030</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTV_DESPRO</td>
+<td>Produto</td>
+<td colspan="2">Produto</td>
+<td colspan="4">Descriçäo do Produto.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/dtv_despro.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DTV_FILDES</td>
+<td>Fil.Destino</td>
+<td colspan="2">Filial de Destino</td>
+<td colspan="4">Filial de Destino relacionada a uma
+região de destino, este campo é
+preenchido automaticamente ao
+selecionarmos o código da região de
+destino.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dlb.html">DLB</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dtv_fildes.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DTV_NOMDES</td>
+<td>Nome Destino</td>
+<td colspan="2">Nome Destino</td>
+<td colspan="4">Nome da Filial Destino, este campo é
+preenchido automaticamente ao
+selecionarmos o código da região de
+destino.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui,"",TMSA320NDes(DTV->DTV_FILDES))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTV_AERORI</td>
+<td>Aeropor.Orig</td>
+<td colspan="2">Aeroporto Origem</td>
+<td colspan="4">Aeroporto Origem.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SX5","M9"+M->DTV_AERORI) .And. DTV_AERORI<>DTV_AERDES</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dd7.html">DD7</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DTV_AERDES</td>
+<td>Aeropor.Dest</td>
+<td colspan="2">Aeroporto Destino</td>
+<td colspan="4">Aeroporto Destino.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SX5","M9"+M->DTV_AERDES) .And. DTV_AERDES<>DTV_AERORI</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dd7.html">DD7</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DTV_CODCIA</td>
+<td>Cia Aerea</td>
+<td colspan="2">Codigo da Cia. Aerea</td>
+<td colspan="4">Código da Companhia Aérea, esta
+companhia é cadastrada como Fornecedor
+para posteriormente gerarmos os títulos
+de contas a pagar. Esta companhia é
+responsável pelo transporte aéreo da
+mercadoria.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SA2", M->DTV_CODCIA) .And. TMSA320Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sa2cia.html">SA2CIA</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dtv_codcia.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DTV_LOJCIA</td>
+<td>Loja Cia</td>
+<td colspan="2">Loja da Cia Aerea</td>
+<td colspan="4">Loja da companhia aérea.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SA2", M->DTV_CODCIA+M->DTV_LOJCIA) .And. TMSA320Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/dtv_lojcia.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DTV_NOMCIA</td>
+<td>Nome Cia</td>
+<td colspan="2">Nome da Cia. Aerea</td>
+<td colspan="4">Nome da companhia aérea, este campo será
+preenchido automaticamente após
+selecionamos uma companhia aérea.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIf(Inclui,"",Posicione("SA2",1,xFilial("SA2")+DTV->DTV_CODCIA+DTV->DTV_LOJCIA,"A2_NOME"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTV_TABFRE</td>
+<td>Tabela Frete</td>
+<td colspan="2">Tabela Frete</td>
+<td colspan="4">Tabela de Frete.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>TMSA320Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dvh.html">DVH</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DTV_TIPTAB</td>
+<td>Tp.Tab.Frete</td>
+<td colspan="2">Tipo Tab.Frete</td>
+<td colspan="4">Tipo da Tabela de Frete.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>TMSA320Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DTV_RETAER</td>
+<td>Retira Aero.</td>
+<td colspan="2">Retira Aeroporto ?</td>
+<td colspan="4">Retira no Aeroporto ?
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DTV_LOCENT</td>
+<td>Loc. Entrega</td>
+<td colspan="2">Local da Entrega</td>
+<td colspan="4">Local da Entrega.
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>TMSA320Whe()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTV_CODEMB</td>
+<td>Embalagem</td>
+<td colspan="2">Embalagem</td>
+<td colspan="4">Código da Embalagem.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SX5","MG"+M->DTV_CODEMB)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/mg.html">MG</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DTV_CODOBS</td>
+<td>Codigo Obs.</td>
+<td colspan="2">Codigo da Observacao</td>
+<td colspan="4">Código da observação.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTV_OBS</td>
+<td>Observacao</td>
+<td colspan="2">Observacao</td>
+<td colspan="4">Observação da AWB.
+</td>
+<td>M</td>
+<td>80</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>Iif(Inclui,"",E_MSMM(DTV->DTV_CODOBS,80))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTV_USER</td>
+<td>Cod.Usuario</td>
+<td colspan="2">Codigo do Usuario</td>
+<td colspan="4">Código do usuário do sistema que criou a
+AWB.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTV_DOCDES</td>
+<td>Doc.Despesa</td>
+<td colspan="2">No.Docto. Despesa</td>
+<td colspan="4">Número do documento de despesa.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/018.html">018</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTV_NUMORI</td>
+<td>Awb Original</td>
+<td colspan="2">Numero AWB original</td>
+<td colspan="4">Numero da AWB original.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/018.html">018</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTV_PESORI</td>
+<td>Peso Orig.</td>
+<td colspan="2">Peso original da AWB.</td>
+<td colspan="4">Peso original da AWB.
+</td>
+<td>N</td>
+<td>11</td>
+<td>4</td>
+<td>@E 999,999.9999                              </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTV_PM3ORI</td>
+<td>Peso M3 Orig</td>
+<td colspan="2">Peso M3 original da AWB.</td>
+<td colspan="4">Peso M3 original da AWB.
+</td>
+<td>N</td>
+<td>11</td>
+<td>4</td>
+<td>@E 999,999.9999                              </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTV_FATURA</td>
+<td>No. Fatura</td>
+<td colspan="2">Numero da fatura</td>
+<td colspan="4">Numero da fatura a qual a AWB pertence.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/018.html">018</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTV_VAWBLQ</td>
+<td>Vlr.AWB Liq.</td>
+<td colspan="2">Valor da AWB sem Imposto</td>
+<td colspan="4">Valor da AWB sem impostos.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTV_VCALC</td>
+<td>Frete Calc.</td>
+<td colspan="2">Freta calculado</td>
+<td colspan="4">Valor do frete calculado pelo sistema.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTV_VAWB</td>
+<td>Valor AWB</td>
+<td colspan="2">Valor da AWB</td>
+<td colspan="4">Valor da AWB.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTV_RENTAB</td>
+<td>Rentabilid.</td>
+<td colspan="2">Rentabilidade</td>
+<td colspan="4">Valor da rentabilidade calculado pelo
+sistema, com base no valor da AWB x
+valor do frete.
+</td>
+<td>N</td>
+<td>11</td>
+<td>2</td>
+<td>@E 999,999.99%                               </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTV_PICM</td>
+<td>Aliq. ICMS</td>
+<td colspan="2">Aliquota do ICMS</td>
+<td colspan="4">Aliquota de ICMS.
+</td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTV_DECRES</td>
+<td>Vr. Decresc.</td>
+<td colspan="2">Valor do decrescimo</td>
+<td colspan="4">Valor do decrescimo.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTV_STAFIN</td>
+<td>Status fin.</td>
+<td colspan="2">Status financeiro</td>
+<td colspan="4">Status Financeiro.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Faturamento em aberto;2=Faturamento bloqueado;3=Faturada;4=Sem Saldo;5=Problema Integracao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTV_OK</td>
+<td>Ok</td>
+<td colspan="2">Ok para seleção</td>
+<td colspan="4">Ok para seleção.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTV_DTLFAT</td>
+<td>Dt.Lib.Fat.</td>
+<td colspan="2">Data lib. faturamento</td>
+<td colspan="4">Data da liberação para faturamento.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTV_USLFAT</td>
+<td>Usr.Lib.Fat.</td>
+<td colspan="2">Usuario lib. faturamento</td>
+<td colspan="4">Nome do Usuario que liberou a AWB para
+faturamento.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTV_DATEFE</td>
+<td>Dt. Efetivac</td>
+<td colspan="2">Data efetivação</td>
+<td colspan="4">Data da efetivação.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTV_HOREFE</td>
+<td>Hora Efetiva</td>
+<td colspan="2">Hora da efetivação</td>
+<td colspan="4">Hora da efetivação.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@R 99:99                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTV_VALFRE</td>
+<td>Frete Rec.</td>
+<td colspan="2">Frete a Receber</td>
+<td colspan="4">Valor Frete.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTV_NUMVOO</td>
+<td>Nr. Voo</td>
+<td colspan="2">Numero do Voo</td>
+<td colspan="4">Numero do Voo.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTV_CODTRA</td>
+<td>Cod.Obs.Tran</td>
+<td colspan="2">Cod.Obs.Translado</td>
+<td colspan="4">Código observação de translado.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTV_TMPTRA</td>
+<td>Temp. Transl</td>
+<td colspan="2">Tempo de Translado</td>
+<td colspan="4">Tempo de Translado.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('01')</td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>0=Utilizado;1=Desprezado</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

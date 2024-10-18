@@ -1,0 +1,266 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: TN9 - Exames Gerais por Filial</title></head>
+<body>
+<font color="orange"><h2 id="TN9">Tabela: TN9 - Exames Gerais por Filial</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Exames Gerais por Filial</b></td><td colspan="2"><b>TN9_FILIAL+TN9_EXAME+TN9_FAIXA</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">TN9_FILIAL+TN9_EXAME+TN9_FAIXA</td><td>Exame + Faixa</td><td></td></tr>
+<tr><td>2</td><td colspan="2">TN9_FILIAL+TN9_FAIXA</td><td>Faixa</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>TN9_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Código da filial. Campo alimentado
+automaticamente pelo módulo de Medicina
+e Segurança do Trabalho com base no
+campo Filial.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TN9_EXAME</td>
+<td>Exame</td>
+<td colspan="2">Codigo do Exame</td>
+<td colspan="4">Código do Exame. Pressione a tecla [F3]
+para selecionar um Exame.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO("TM4",M->TN9_EXAME) .AND. EXISTCHAV("TN9",M->TN9_EXAME)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tm4.html">TM4</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tn9_exame.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/048.html">048</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TN9_NOMEXA</td>
+<td>Nome Exame</td>
+<td colspan="2">Nome do Exame</td>
+<td colspan="4">Nome do Exame Médico. Campo alimentado
+automaticamente pelo módulo de Medicina
+e Segurança do Trabalho com base no
+campo Exame.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If( INCLUI," " , Posicione( "TM4" , 1 , xFilial("TM4",TN9->TN9_FILIAL)+TN9->TN9_EXAME , "TM4_NOMEXA" ) )</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>IF(TM4->(DBSEEK(xFilial("TM4")+TN9->TN9_EXAME)),TM4->TM4_NOMEXA,'')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TN9_FAIXA</td>
+<td>Faixa</td>
+<td colspan="2">Numero da Faixa</td>
+<td colspan="4">Indica para o sistema qual a Faixa que
+será utilizada para cálculo da
+periodicidade dos exames no momento da
+geração da programação.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO("TMQ",M->TN9_FAIXA)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tmq.html">TMQ</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TN9_TIPOEX</td>
+<td>Tipo Exame</td>
+<td colspan="2">Tipo Exame</td>
+<td colspan="4">Indica a natureza que este exame será
+considerado.
+Podendo ser:
+1-Admissional
+2-Periodico
+3-Mudança de Função
+4-Retorno ao Trabalho
+5-Demissional
+6-Admissional/Periodico
+7-Periodico/Demissional
+8-Admissional/Periodico/Demissional
+9-Admissional/Demissional
+10-Admissional/Mudança de Função
+11-Todos
+12=Adm. / Ret.trabalho / Mud.Func. /
+Period.
+13=Admissional / Periodico / Mud.Funcao
+14=Admissional / Demissional / Periodico
+/ Mud.Funcao
+15=Admissional/Demissional/Mudança de
+Função"
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"11"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>#MDTTIPEXA()</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TN9_USERGI</td>
+<td>Log de Inclu</td>
+<td colspan="2">Log de Inclusão</td>
+<td colspan="4">Indica código criptografado do usuário
+de inclusão do registro.
+</td>
+<td>C</td>
+<td>17</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

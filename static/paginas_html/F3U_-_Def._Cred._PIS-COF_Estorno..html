@@ -1,0 +1,219 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: F3U - Def. Cred. PIS/COF Estorno.</title></head>
+<body>
+<font color="orange"><h2 id="F3U">Tabela: F3U - Def. Cred. PIS/COF Estorno.</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Def. Cred. PIS/COF Estorno.</b></td><td colspan="2"><b>F3U_FILIAL+F3U_CODCRE+F3U_CODBCC</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">F3U_FILIAL+F3U_CODCRE+F3U_CODBCC</td><td>Cod. Crédito + Código BCC</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>F3U_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Filial do sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>F3U_CODCRE</td>
+<td>Cod. Crédito</td>
+<td colspan="2">Código do Crédito</td>
+<td colspan="4">Informe o código do crédito de PIS e
+COFINS, conforme tabela 4.3.6 da Receita
+Federal.
+Os códigos de créditos informados neste
+campo serão utilizados para filtrar
+quais valores de créditos de PIS e
+COFINS serão estornados na apuração da
+EFD Contirbuição.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. (ExistCpo("SX5","ZR"+FwFldGet("F3U_CODCRE")) .AND. !ExistCpo("F3U",FwFldGet("F3U_CODCRE")))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/zr.html">ZR</a></td>
+<td><a href="/tabelas_protheus/gatilhos/f3u_codcre.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>F3U_DCC</td>
+<td>Descrição</td>
+<td colspan="2">Desc. Código de Crédito.</td>
+<td colspan="4">Descrição do código de crédito.
+</td>
+<td>C</td>
+<td>56</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIF(!INCLUI,Posicione("SX5",1,xFilial("SX5")+"ZR"+F3U->F3U_CODCRE,"X5DESCRI()"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>F3U_CODBCC</td>
+<td>Código BCC</td>
+<td colspan="2">Cod. Base Cálculo Crédito</td>
+<td colspan="4">Código da base de cálculo, conforme
+tabela 4.3.7 da Receita Federal.
+Este campo será utilizado para filtrar
+quais valores de créditos de PIS e
+COFINS poderao ser estornados na
+apuração da EFD Contribuições.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. ExistCpo("SX5","MZ"+FwFldGet("F3U_CODBCC"))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/mz.html">MZ</a></td>
+<td><a href="/tabelas_protheus/gatilhos/f3u_codbcc.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>F3U_DCBCC</td>
+<td>Descrição</td>
+<td colspan="2">Descrição Cod BCC</td>
+<td colspan="4">Descrição do codigo de base de calculo,
+conforme tabela 4.3.7.
+</td>
+<td>C</td>
+<td>56</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIF(!INCLUI,Posicione("SX5",1,xFilial("SX5")+"MZ"+F3U->F3U_CODBCC,"X5DESCRI()"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

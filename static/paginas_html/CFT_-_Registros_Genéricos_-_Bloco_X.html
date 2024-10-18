@@ -1,0 +1,397 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: CFT - Registros Genéricos - Bloco X</title></head>
+<body>
+<font color="orange"><h2 id="CFT">Tabela: CFT - Registros Genéricos - Bloco X</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Registros Genéricos - Bloco X</b></td><td colspan="2"><b>CFT_FILIAL+CFT_ID</b></td><td><b>TAFA332</b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">CFT_FILIAL+CFT_ID</td><td>ID</td><td></td></tr>
+<tr><td>2</td><td colspan="2">CFT_FILIAL+CFT_IDRECF+DTOS(CFT_PERIOD)+CFT_IDCODL</td><td>Id. Reg. ECF + Período + ID Cód Lanc</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>CFT_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Deve representar neste campo o codigo da
+filial referente ao cadastro.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CFT_ID</td>
+<td>ID</td>
+<td colspan="2">Identificador do Registro</td>
+<td colspan="4">Deve representar neste campo o código de
+identificação do registro. Este código é
+controlado internamente pelo sistema de
+forma incremental e único por filial.
+</td>
+<td>C</td>
+<td>36</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>TAFGeraID("TAF")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CFT_REGECF</td>
+<td>Registro ECF</td>
+<td colspan="2">Registro ECF</td>
+<td colspan="4">Deve representar neste campo o Código do
+registro ECF
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>XFUNVldCmp("CFU",2)</td>
+<td>Iif(!INCLUI .and. !Empty(CFT->CFT_IDRECF),Posicione("CFU",1,xFilial("CFU")+CFT->CFT_IDRECF,"CFU_CODIGO"),"")</td>
+<td><a href="/tabelas_protheus/f3/cfu.html">CFU</a></td>
+<td><a href="/tabelas_protheus/gatilhos/cft_regecf.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("CFU",1,xFilial("CFU")+CFT->CFT_IDRECF,"CFU_CODIGO")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CFT_DREGEC</td>
+<td>Desc Registr</td>
+<td colspan="2">Descrição Registro</td>
+<td colspan="4">Deve representar neste campo a descrição
+do registro do bloco X de acordo com
+tabela publicada no Sped.
+</td>
+<td>C</td>
+<td>220</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI.AND.!EMPTY(CFT->CFT_IDRECF),Posicione("CFU",1,xFilial("CFU")+CFT->CFT_IDRECF,"CFU_DESCRI"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CFT_IDRECF</td>
+<td>Id. Reg. ECF</td>
+<td colspan="2">Id. Registro ECF</td>
+<td colspan="4">Deve representar neste campo a
+identificação do registro ECF.
+</td>
+<td>C</td>
+<td>36</td>
+<td>0</td>
+<td>                                             </td>
+<td>xFunVldUni("CFT",2,M->CFT_IDRECF+DToS(FwFldGet("CFT_PERIOD"))+FwFldGet("CFT_IDCODL"),.F.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CFT_PERIOD</td>
+<td>Período</td>
+<td colspan="2">Período</td>
+<td colspan="4">Deve representar neste campo o Período
+correspondente as informações prestadas
+no registro.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>xFunVldUni("CFT",2,FwFldGet("CFT_IDRECF")+DToS(M->CFT_PERIOD)+FwFldGet("CFT_IDCODL"),.F.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CFT_CODLAN</td>
+<td>Cód Lanc</td>
+<td colspan="2">Código de Lançamento</td>
+<td colspan="4">Deve representar neste campo o código do
+lançamento, conforme tabela publicada no
+SPED.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>xFunVldCmp("CH6",2,xTafBldKey())</td>
+<td>Iif(!INCLUI .and. !Empty(CFT->CFT_IDCODL),Posicione("CH6",1,xFilial("CH6")+CFT->CFT_IDCODL,"CH6_CODIGO"),"")</td>
+<td><a href="/tabelas_protheus/f3/ch6.html">CH6</a></td>
+<td><a href="/tabelas_protheus/gatilhos/cft_codlan.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("CH6",1,xFilial("CH6")+CFT->CFT_IDCODL,"CH6_CODIGO")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CFT_DCODLA</td>
+<td>Desc Cód Lan</td>
+<td colspan="2">Descrição Cód Lançamento</td>
+<td colspan="4">Deve representar neste campo a descrição
+do código de lançamento, conforme tabela
+publicada no SPED.
+</td>
+<td>C</td>
+<td>220</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(!INCLUI .and. !Empty(CFT->CFT_IDCODL),Posicione("CH6",1,xFilial("CH6")+CFT->CFT_IDCODL,"CH6_DESCRI"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CFT_IDCODL</td>
+<td>ID Cód Lanc</td>
+<td colspan="2">ID Código de Lançamento</td>
+<td colspan="4">Deve representar neste campo o
+identificador do código do lançamento no
+e-Lalur/e-Lacs, conforme tabela
+publicada no SPED.
+</td>
+<td>C</td>
+<td>36</td>
+<td>0</td>
+<td>                                             </td>
+<td>xFunVldUni("CFT",2,FwFldGet("CFT_IDRECF")+DToS(FwFldGet("CFT_PERIOD"))+M->CFT_IDCODL,.F.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CFT_VALOR</td>
+<td>Valor</td>
+<td colspan="2">Valor</td>
+<td colspan="4">Deve representar neste campo o Valor.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CFT_STATUS</td>
+<td>Status Reg.</td>
+<td colspan="2">Status do Registro</td>
+<td colspan="4">Campo de uso interno do sistema.
+Deve representar neste campo o status do
+registro:
+(Vazio) = Registro Novo
+0 = Registro Válido (integração)
+1 = Registro invalido (integração)
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence(" 01")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Reg.V�lido;1=Reg.Inv�lido;</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/079.html">079</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

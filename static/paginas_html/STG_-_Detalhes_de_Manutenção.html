@@ -1,0 +1,733 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: STG - Detalhes de Manutenção</title></head>
+<body>
+<font color="orange"><h2 id="STG">Tabela: STG - Detalhes de Manutenção</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Detalhes de Manutenção</b></td><td colspan="2"><b>TG_FILIAL+TG_CODBEM+TG_SERVICO+TG_SEQRELA+TG_TAREFA+TG_TIPOREG+TG_CODIGO</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">TG_FILIAL+TG_CODBEM+TG_SERVICO+TG_SEQRELA+TG_TAREFA+TG_TIPOREG+TG_CODIGO</td><td>Bem + Servico + Sequencia + Tarefa + Tipo Insumo + Código</td><td></td></tr>
+<tr><td>2</td><td colspan="2">TG_FILIAL+TG_TIPOREG+TG_CODIGO+TG_CODBEM+TG_SERVICO+TG_SEQRELA+TG_TAREFA</td><td>Tipo Insumo + Código + Bem + Servico + Sequencia + Tarefa</td><td></td></tr>
+<tr><td>3</td><td colspan="2">TG_FILIAL+TG_TAREFA</td><td>Tarefa</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>TG_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Código da filial da empresa.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TG_CODBEM</td>
+<td>Bem</td>
+<td colspan="2">Codigo do Bem</td>
+<td colspan="4">Código de identificação do Bem.
+</td>
+<td>C</td>
+<td>16</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO("ST9",M->TG_CODBEM)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TG_SERVICO</td>
+<td>Servico</td>
+<td colspan="2">Codigo do Servico</td>
+<td colspan="4">Código do serviço a ser efetuado na
+manutenção do Bem.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO("ST4",M->TG_SERVICO)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TG_SEQRELA</td>
+<td>Sequencia</td>
+<td colspan="2">Sequencia da Manutencao</td>
+<td colspan="4">Número de sequência da manutenção
+preventiva.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>naovazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TG_TAREFA</td>
+<td>Tarefa</td>
+<td colspan="2">Tarefa do Servico</td>
+<td colspan="4">Código da tarefa a que se refere o
+consumo. Indica em que tarefa será
+utilizado o funcionário, produto,
+ferramenta ou terceiro.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>If(TRIM(M->TG_TAREFA) =='0',.T.,EXISTCPO('ST5',M->TF_CODBEM+M->TF_SERVICO+M->TF_SEQRELA+M->TG_TAREFA))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ng5.html">NG5</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TG_NOMETAR</td>
+<td>Nome Tarefa</td>
+<td colspan="2">Nome da tarefa</td>
+<td colspan="4">Nome da Tarefa. Texto para melhor
+identificação da tarefa.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>VSAY("02")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TG_TIPOREG</td>
+<td>Tipo Insumo</td>
+<td colspan="2">Tipo de Informacao</td>
+<td colspan="4">Identificação do tipo de informação do
+registro.
+M- Funcionário  (Mão-de-obra)
+P- Produto
+F- Ferramenta
+T- Terceiros
+E- Especialidade
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("MEPFT") .AND. NG120TIPO(M->TG_TIPOREG) .AND. NG120TIR()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/tg_tiporeg.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>M=Mao de Obra;E=Especialidade;P=Produto;F=Ferramenta;T=Terceiro</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TG_CODIGO</td>
+<td>Código</td>
+<td colspan="2">Codigo da Informacao</td>
+<td colspan="4">Código de identificação conforme o campo
+de identificação  de tipo, podendo ser
+código de funcionário, produto,
+especialidade, ferramenta e terceiros.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NG120CHECK()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/st0.html">ST0</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tg_codigo.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>NG120_F3()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/030.html">030</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TG_NOMECOD</td>
+<td>"Descr. Cód.</td>
+<td colspan="2">Descricao do Codigo</td>
+<td colspan="4">Descrição do insumo da tarefa.
+Relacionado ao tipo e código do insumo.
+P.Ex.: Se insumo for P (produto), neste
+campo estará contido o nome do produto.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>VSAY("01")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TG_QUANREC</td>
+<td>Quant. Rec.</td>
+<td colspan="2">Quantidade de Recurso</td>
+<td colspan="4">Quantidade de recurso. Somente é
+utilizado para Especialidade e
+Ferramenta. Expressa em unidade de
+tempo.
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td>NAOVAZIO().AND.POSITIVO()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>aCols[n,nTIPORE] $ "FE"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TG_QUANTID</td>
+<td>Quantidade</td>
+<td colspan="2">Quant. Prevista Consumo</td>
+<td colspan="4">Quantidade prevista de consumo.
+Funcionário / Terceiro / Especialidade /
+Ferramenta - Tempo de trabalho previsto
+Produto - Quantidade de consumo previsto
+</td>
+<td>N</td>
+<td>9</td>
+<td>2</td>
+<td>@E 999,999.99                                </td>
+<td>NG120QUANT()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TG_UNIDADE</td>
+<td>Unidade</td>
+<td colspan="2">Unidade de Medida Consumo</td>
+<td colspan="4">Unidade de medida a ser considerada para
+a quantidade prevista. Para ítem de
+estoque deve coincidir com a unidade do
+ítem. Para os demais insumos utilizar as
+seguintes unidades de medidas:
+M-Meses
+H-Horas
+D-Dias
+S-Semanas.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td>If(M->TG_TIPOREG = "P",M->TG_UNIDADE = SB1->B1_UM,PERTENCE("H  ")) .And. NG120QUANT()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>MNTA120WUNID()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/122.html">122</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TG_RESERVA</td>
+<td>Gera Reserva</td>
+<td colspan="2">Gera Reserva?</td>
+<td colspan="4">Informa se gera reserva do recurso
+selecionado no planejamento da
+manutenção. S- Sim   N- Não
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("SN")</td>
+<td>IF(INCLUI,"S",STG->TG_RESERVA)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>S=Sim;N=Nao</td>
+<td>M->TG_TIPOREG!="T"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TG_DESTINO</td>
+<td>Destino</td>
+<td colspan="2">Destino do Produto</td>
+<td colspan="4">Indicação do destino do produto.
+A-Atividade de apoio (Graxa, etc...),
+S-Substituição de peca,
+T-Troca - Campo utilização para itens
+estoque (P).
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>IF(M->TG_TIPOREG="P",PERTENCE("AST"),EMPTY(TG_DESTINO))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>A=Apoio;T=Troca;S=Substituicao</td>
+<td>M->TG_TIPOREG=="P"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TG_QTDGARA</td>
+<td>Quant. Gar.</td>
+<td colspan="2">Quantidade Garantia</td>
+<td colspan="4">Quantidade de tempo que o insumo
+aplicado no bem, tem de garantia.
+</td>
+<td>N</td>
+<td>9</td>
+<td>0</td>
+<td>999999999                                    </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TG_UNIGARA</td>
+<td>Unid.Garant.</td>
+<td colspan="2">Unidade de Garantia</td>
+<td colspan="4">Unidade de tempo que é obtida a duração
+da garantida. Podendo ser.:
+D-Dias
+S-Semanas
+M-Meses.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("DSM")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>D=Dias;S=Semanas;M=Meses</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TG_CONGAR</td>
+<td>Cont. Garant</td>
+<td colspan="2">Contador da Garantia</td>
+<td colspan="4">Contador da garantia.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Contador 1;2=Contador 2</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TG_SEQUENC</td>
+<td>Sequencia</td>
+<td colspan="2">Sequencia da manutencao</td>
+<td colspan="4">Número de sequência da manutenção
+preventiva.
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TG_LOCAL</td>
+<td>Almoxarifado</td>
+<td colspan="2">Codigo do Almoxarifado</td>
+<td colspan="4">Código do almoxarifado de onde foi
+obtido o insumo informado para fim de
+rastreabilidade.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO('NNR',M->TG_LOCAL)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/nnr.html">NNR</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>NG120ALMOX()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/024.html">024</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TG_FORNEC</td>
+<td>Fornecedor</td>
+<td colspan="2">Codigo do Fornecedor</td>
+<td colspan="4">Código do fornecedor da empresa. É
+complementado pelo código da loja.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TG_LOJA</td>
+<td>Loja</td>
+<td colspan="2">Codigo da Loja</td>
+<td colspan="4">Código da loja do fornecedor. Permite o
+controle individual de cada
+estabelecimento a nivel de transações.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TG_CODAEN</td>
+<td>Codigo AEN</td>
+<td colspan="2">Codigo AEN</td>
+<td colspan="4">Codigo AEN.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>fMNTAEN(M->TG_CODAEN)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>SuperGetMV( "MV_NGINTER",.F.,"N" ) == "L"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

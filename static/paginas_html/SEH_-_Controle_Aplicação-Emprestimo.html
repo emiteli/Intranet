@@ -1,0 +1,2820 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: SEH - Controle Aplicação/Emprestimo</title></head>
+<body>
+<font color="orange"><h2 id="SEH">Tabela: SEH - Controle Aplicação/Emprestimo</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Controle Aplicação/Emprestimo</b></td><td colspan="2"><b>EH_FILIAL+EH_NUMERO+EH_REVISAO</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">EH_FILIAL+EH_NUMERO+EH_REVISAO</td><td>Numero + Revisao</td><td></td></tr>
+<tr><td>2</td><td colspan="2">EH_FILIAL+EH_STATUS+EH_APLEMP</td><td>Status + Modelo</td><td></td></tr>
+<tr><td>3</td><td colspan="2">EH_FILIAL+EH_CONTRAT+EH_NUMERO</td><td>Numero Contr + Numero</td><td></td></tr>
+<tr><td>4</td><td colspan="2">EH_FILIAL+EH_BCOCONT+EH_AGECONT+EH_CTACONT+EH_CONTRAT</td><td>Banco Contr. + Agencia Cont + Conta Contr. + Numero Contr</td><td></td></tr>
+<tr><td>5</td><td colspan="2">EH_FILIAL+EH_NODIA</td><td>Seq. Diario</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>EH_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Filial do sistema
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_NUMERO</td>
+<td>Numero</td>
+<td colspan="2">Numero da Operacao</td>
+<td colspan="4">Código que identifica a operaçao finan-
+ceira.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@9                                           </td>
+<td>ExistChav("SEH") .AND. FreeForUse("SEH",M->EH_NUMERO)</td>
+<td>GetSx8Num("SEH","EH_NUMERO")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>EH_REVISAO</td>
+<td>Revisao</td>
+<td colspan="2">Numero da Revisao</td>
+<td colspan="4">Número da revisao da aplicação.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@9                                           </td>
+<td></td>
+<td>"01"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_APLEMP</td>
+<td>Modelo</td>
+<td colspan="2">Modelo da Operacao</td>
+<td colspan="4">Modelo da Operação Financeira.
+APL = Aplicação Financeira
+EMP = Emprestimo Financeiro
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("APL|EMP") .And. Fa171Nat()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>APL=Aplicacao;EMP=Emprestimo</td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>EH_TIPO</td>
+<td>Operacao</td>
+<td colspan="2">Tipo da Operacao</td>
+<td colspan="4">Tipo da Operaç„o Financeira.
+[F3] Disponivel
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Fa171Opera()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/11.html">11</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>EH_BANCO</td>
+<td>Banco</td>
+<td colspan="2">Codigo do banco</td>
+<td colspan="4">Código do Banco
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo('SA6',,,,,.F.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sa6.html">SA6</a></td>
+<td><a href="/tabelas_protheus/gatilhos/eh_banco.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/007.html">007</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>EH_AGENCIA</td>
+<td>Agencia</td>
+<td colspan="2">Agencia do banco</td>
+<td colspan="4">Código da Agencia
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/eh_agencia.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/008.html">008</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>EH_CONTA</td>
+<td>Conta Banco</td>
+<td colspan="2">Conta corrente no banco</td>
+<td colspan="4">Número da Conta Bancaria
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>existcpo("SA6",M->EH_BANCO+M->EH_AGENCIA+M->EH_CONTA)  .AND. !CCBLOCKED(M->EH_BANCO,M->EH_AGENCIA,M->EH_CONTA)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/eh_conta.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/009.html">009</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>EH_NBANCO</td>
+<td>Inst.Financ.</td>
+<td colspan="2">Instituicao Financeira</td>
+<td colspan="4">Nome da Instituiçao financeira onde a
+operaçao será realizada.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@S15!                                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_NATUREZ</td>
+<td>Natureza</td>
+<td colspan="2">Codigo da Natureza</td>
+<td colspan="4">Código da Natureza da operaçao.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>FinVldNat(.F.,M->EH_NATUREZ)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sed.html">SED</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_DATA</td>
+<td>DT Operacao</td>
+<td colspan="2">Data da operacao</td>
+<td colspan="4">Data da Operaçao Financeira.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>M->EH_DATA==ddatabase</td>
+<td>ddatabase</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>EH_TAXA</td>
+<td>Taxa Nominal</td>
+<td colspan="2">Taxa nominal da Operacao</td>
+<td colspan="4">Taxa Anual(360 dias considerados) de
+juros ou Percentual de pagamento do CDI
+Ex. CDB de 12% ao ano = 12,00
+CDI 99% do valor do CDI = 99,00
+</td>
+<td>N</td>
+<td>9</td>
+<td>5</td>
+<td>@E 999.99999                                 </td>
+<td>positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_QUOTAS</td>
+<td>Qtd.Cota/Tit</td>
+<td colspan="2">Qtd. de Cotas/Titulos</td>
+<td colspan="4">Número de Cotas/Titulos que foram
+negociados. Caso seja informado deve-se
+infor-mar o Número do Contrato. Somente
+utili-zado por aplicaçoes financeiras.
+</td>
+<td>N</td>
+<td>16</td>
+<td>8</td>
+<td>@E 9,999,999.99999999                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/eh_quotas.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>Fa171Apl()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_CONTRAT</td>
+<td>Numero Contr</td>
+<td colspan="2">Numero do Contrato</td>
+<td colspan="4">Número do Contrato de Cotas/Titulos
+fechado com o banco. Caso informado
+deve-se preencher a Quantidade de
+Cotas/Titulos.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SE9") .And. V181Contrat(m->eh_contrat)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/se9.html">SE9</a></td>
+<td><a href="/tabelas_protheus/gatilhos/eh_contrat.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>Fa171Apl()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_BCOCONT</td>
+<td>Banco Contr.</td>
+<td colspan="2">Banco do Contrato</td>
+<td colspan="4">Número do Banco cujo contrato foi
+fechado.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SE9",M->EH_CONTRAT+M->EH_BCOCONT)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sa6.html">SA6</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>Fa171Apl()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/007.html">007</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_AGECONT</td>
+<td>Agencia Cont</td>
+<td colspan="2">Agencia do Contrato</td>
+<td colspan="4">Código da agencia cujo contrato foi
+fechado
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SE9",M->EH_CONTRAT+M->EH_BCOCONT+M->EH_AGECONT)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>Fa171Apl()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/008.html">008</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_CTACONT</td>
+<td>Conta Contr.</td>
+<td colspan="2">Conta do Contrato</td>
+<td colspan="4">Número da conta bancaria no qual o
+contrato foi fechado.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SA6",M->EH_BCOCONT+M->EH_AGECONT+M->EH_CTACONT)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>Fa171Apl()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/009.html">009</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_VALOR</td>
+<td>Vlr.Operacao</td>
+<td colspan="2">Valor da Operacao</td>
+<td colspan="4">Valor Inicial da Operaç„o Financeira.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/eh_valor.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>EH_MOEDA</td>
+<td>Moeda</td>
+<td colspan="2">Moeda da Operacao</td>
+<td colspan="4">Código da Moeda para correçao cambial
+oucódigo da Moeda que contém os valores
+do CDI, ambos para aplicaçao. Para
+emprestimo corresponde a moeda em que
+o mesmo foi firmado.
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td>Positivo() .and. Fa171AtuVl(.T.)</td>
+<td>01</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/eh_moeda.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>EH_DATARES</td>
+<td>DT Resg/Pgto</td>
+<td colspan="2">Dt Resgate/Pagamento</td>
+<td colspan="4">Data Prevista para resgate. Se
+informadaindica ao sistema que caso haja
+resga-  te antes desta data o sistema
+não ira   calcular o juros e as taxas.
+Esta data  influi no fluxo de caixa.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>M->EH_DATARES>=M->EH_DATA.Or.Vazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_IMPOSTO</td>
+<td>%Outros Imp.</td>
+<td colspan="2">% Outros Impostos</td>
+<td colspan="4">Percentual de Imposto a ser exercido
+so-bre o valor do juros.
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>@E 999.99                                    </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_TAXAIRF</td>
+<td>%Imposto IRF</td>
+<td colspan="2">% IRRF</td>
+<td colspan="4">Percentual do imposto a ser exercida
+sobre o juros.
+</td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_TAXAIOF</td>
+<td>%Imposto IOF</td>
+<td colspan="2">%Imposto IOF</td>
+<td colspan="4">Percentual do imposto a ser exercido
+sobre o juros. Somente para aplicaçães
+financeiras.
+</td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>Fa171Cdi()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_TXIRSWP</td>
+<td>%IRF s/ SWAP</td>
+<td colspan="2">%Imposto de Renda s/ SWAP</td>
+<td colspan="4">Taxa de IR incidente sobre as operaçães
+de SWAP. Somente para operaçoes finan-
+ceiras.
+</td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>Fa171Apl()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_VALIOF</td>
+<td>Valor do IOF</td>
+<td colspan="2">Valor do IOF</td>
+<td colspan="4">Valor do IOF
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>Fa171Cdi()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_VALREG</td>
+<td>Vlr.Resgate</td>
+<td colspan="2">Valor Resgate/Pagamento</td>
+<td colspan="4">Valor do resgate/pagamento
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_VALIRF</td>
+<td>Valor IRF</td>
+<td colspan="2">Valor do IRF</td>
+<td colspan="4">Valor do IRf
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_VALSWAP</td>
+<td>Valor Swap</td>
+<td colspan="2">Valor Swap</td>
+<td colspan="4">Valor do Swap
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_VALISWP</td>
+<td>Vlr Ir.Swap</td>
+<td colspan="2">Vlr Ir. Swap</td>
+<td colspan="4">Valor do IR sobre swap
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_VALJUR</td>
+<td>Valor Juros</td>
+<td colspan="2">Valor do Juros</td>
+<td colspan="4">Valor dos juros
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_VALCORR</td>
+<td>Vlr.Correcao</td>
+<td colspan="2">Vlr da Correcao Monetaria</td>
+<td colspan="4">Valor da correção monetária
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_VALOUTR</td>
+<td>Vlr.Outros</td>
+<td colspan="2">Valor de Outros Impostos</td>
+<td colspan="4">Valor de outros impostos
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_VALCRED</td>
+<td>Vlr.Credito</td>
+<td colspan="2">Valor do Credito</td>
+<td colspan="4">Valor do credito
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_LA</td>
+<td>Lanc.Contab.</td>
+<td colspan="2">Lancamento Contabil</td>
+<td colspan="4">Controle de contabilização
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_SALDO</td>
+<td>Saldo</td>
+<td colspan="2">Saldo da Operacao</td>
+<td colspan="4">Saldo da Operação Financeira.
+</td>
+<td>N</td>
+<td>16</td>
+<td>6</td>
+<td>@E 999,999,999.999999                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td>.F.</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>EH_ULTAPR</td>
+<td>Ult.Apropr.</td>
+<td colspan="2">Ultima Apropriacao</td>
+<td colspan="4">Data da ultima apropriação
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_GARANTE</td>
+<td>Apl.Garant.</td>
+<td colspan="2">Aplicacao Garantida</td>
+<td colspan="4">Se Branco ou "S" indica que o valor da
+operaç„o esta garantido pela
+instituiçaofinanceiro. Somente para
+Aplicaçoes     financeiras.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("SN")</td>
+<td>"S"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>S=Sim;N=Nao</td>
+<td>M->EH_APLEMP=="APL"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_FORMULA</td>
+<td>Formula</td>
+<td colspan="2">Formula de Calculo</td>
+<td colspan="4">Formula de cálculo da Operaç„o
+Financei-ra. Caso preenchida irá
+sobrepor a do   sistema.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio().Or.ExistCpo("SM4")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sm4.html">SM4</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_STATUS</td>
+<td>Status</td>
+<td colspan="2">Status</td>
+<td colspan="4">Controle de status da
+aplicação/emprestimo, se aberta ou
+encerrada
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"A"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_VLCRUZ</td>
+<td>Valor R$</td>
+<td colspan="2">Valor em Reais</td>
+<td colspan="4">Valor em Reais da Operação Financeira
+na data de emissao da mesma.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@e 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td>.F.</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_ACUJUR</td>
+<td>Acum. Juros</td>
+<td colspan="2">Valor Acumulado do Juros</td>
+<td colspan="4">Valor Acumulado de juros do emprestimo
+financeiro. Este valor se encontra em
+moeda corrente.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@e 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>Fa171Emp()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_ACUJUR2</td>
+<td>Acum.Juros 2</td>
+<td colspan="2">Valor Acumulado do Juros2</td>
+<td colspan="4">Valor acumulado de juros nas operaçoes
+de emprestimo financeiro. Este valor
+se encontra na moeda da operaçao finan-
+ceira.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@e 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>Fa171Emp()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_ACUVCCP</td>
+<td>Acum. VC CP</td>
+<td colspan="2">Acumulado da V.Cambial CP</td>
+<td colspan="4">Valor acumulado da Variaçao cambial a
+curto prazo das operaçoes de emprestimo
+financeiro. Este valor se encontra em
+moeda corrente.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@e 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>Fa171Emp()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_ACUVCLP</td>
+<td>Acum. VC LP</td>
+<td colspan="2">Acumulado da V.Cambial LP</td>
+<td colspan="4">Valor acumulado da Variaçao Cambial a
+longo prazo das operaçoes de emprestimo
+financeiro. Este valor se encontra em
+moeda corrente.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@e 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>Fa171Emp()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_ACUVCJR</td>
+<td>Acu.VC Juros</td>
+<td colspan="2">Acumulado V.Cambial Juros</td>
+<td colspan="4">Valor acumulado da Variaçao Cambial de
+juros referente as operaçoes de empres-
+timo financeiro. Este valor se encontra
+em moeda corrente.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@e 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>Fa171Emp()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_PERCPLP</td>
+<td>%Longo/Curto</td>
+<td colspan="2">%Longo Prazo/Curto Prazo</td>
+<td colspan="4">Percentual referente ao Curto Prazo.
+Somente utilizado por operaçoes de
+emprestimo financeiro.
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>@e 999.99                                    </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>Fa171Emp()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_VALVCJR</td>
+<td>Vlr VC Juros</td>
+<td colspan="2">Valor Var.Cambial Juros</td>
+<td colspan="4">Valor variação cambial dos juros
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@e 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>Fa171Emp()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_VALVCCP</td>
+<td>Vlr VC C.Prz</td>
+<td colspan="2">Vlr Var.Cambial Curto Prz</td>
+<td colspan="4">Valor de variação cambial de aplicações
+de curto prazo
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@e 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>Fa171Emp()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_VALVCLP</td>
+<td>Vlr VC L.Prz</td>
+<td colspan="2">Vlr Var.Cambial Longo Prz</td>
+<td colspan="4">Valor da variação cambial de aplicações
+de longo prazo
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@e 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>Fa171Emp()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_VALJUR2</td>
+<td>Vlr Juros 2</td>
+<td colspan="2">Valor do Juros na 2.moeda</td>
+<td colspan="4">Valor dos juros na segunda moeda
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@e 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>Fa171Emp()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_VALREG2</td>
+<td>Vlr Resgat.2</td>
+<td colspan="2">Valor Resgate na 2.moeda</td>
+<td colspan="4">Valor do resgate na segunda moeda
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@e 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_VALGAP</td>
+<td>Vlr Gap</td>
+<td colspan="2">Valor do Gap</td>
+<td colspan="4">Valor do Gap
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@e 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_CTRSWAP</td>
+<td>Control.Swap</td>
+<td colspan="2">Controle Swap</td>
+<td colspan="4">Controle de Swap
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_IMPOSWP</td>
+<td>%Outros Imp.</td>
+<td colspan="2">% Outros Impostos</td>
+<td colspan="4">Percentual dos outros impostos no Swap
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>@E 999.99                                    </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_VIOFSWP</td>
+<td>Valor do IOF</td>
+<td colspan="2">Valor do IOF</td>
+<td colspan="4">Valor do Iof
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td>Fa171Cdi()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_SLDCOTA</td>
+<td>Saldo Cotas</td>
+<td colspan="2">Saldo das cotas</td>
+<td colspan="4">Saldo das cotas
+</td>
+<td>N</td>
+<td>16</td>
+<td>8</td>
+<td>@E 9,999,999.99999999                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>.F.</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_IRACUM</td>
+<td>IR Acumulado</td>
+<td colspan="2">Controle de IR Acumulado</td>
+<td colspan="4">Controle de IR acumulado
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_VLRCOTA</td>
+<td>Vlr. Cota</td>
+<td colspan="2">Valor da cota na aplic.</td>
+<td colspan="4">Valor da cota no dia da aplicaçao. Será
+utilizado para calcular o IR do final
+do mes, quando a aplicação for incluida
+apos o 1§ dia do mes.
+</td>
+<td>N</td>
+<td>16</td>
+<td>8</td>
+<td>@E 9,999,999.99999999                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>.F.</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_DTULTAT</td>
+<td>Ult. Atualiz</td>
+<td colspan="2">Data Ultima atualizacao</td>
+<td colspan="4">Data da ultima atualização
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>ddatabase</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td>.F.</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_TARIFA</td>
+<td>Tarifa Contr</td>
+<td colspan="2">Tarifa de contratacao</td>
+<td colspan="4">Valor da tarifa de contratação de
+emprestimos bancarios.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>Fa171Emp()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_IOFVIRT</td>
+<td>IOF Virtual</td>
+<td colspan="2">Valor do IOF Virtual</td>
+<td colspan="4">Valor de IOF virtual.
+</td>
+<td>N</td>
+<td>14</td>
+<td>4</td>
+<td>@E 999,999,999.9999                          </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>Fa171Cdi()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_DEBITO</td>
+<td>Cta Debito</td>
+<td colspan="2">Conta Debito</td>
+<td colspan="4">Conta contábil a débito que poderá ser
+utilizada para lançamento contábil.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .or. CTB105CTA()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ct1.html">CT1</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/003.html">003</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_CCD</td>
+<td>C Custo Deb</td>
+<td colspan="2">Centro de Custo Debito</td>
+<td colspan="4">Centro de Custo a débito com o qual
+poderá ser feito o lançamento contábil.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .or. CTB105CC()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ctt.html">CTT</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>CtbMovSaldo("CTT")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/004.html">004</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_ITEMD</td>
+<td>Item Debito</td>
+<td colspan="2">Item Contabil Debito</td>
+<td colspan="4">Item contábil a débito que poderá ser
+utilizado para lançamento contábil.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .or. CTB105ITEM()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ctd.html">CTD</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>CtbMovSaldo("CTD")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/005.html">005</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_CLVLDB</td>
+<td>Cl Vlr Deb</td>
+<td colspan="2">Classe Valor Debito</td>
+<td colspan="4">Classe de Valor débito que poderá ser
+utilizado para lançamento contábil.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .or. CTB105CLVL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/cth.html">CTH</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>CtbMovSaldo("CTH")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/006.html">006</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_CREDIT</td>
+<td>Cta Credito</td>
+<td colspan="2">Conta Credito</td>
+<td colspan="4">Conta contábil a crédito que poderá ser
+utilizada para lançamento contábil.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .or. CTB105CTA()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ct1.html">CT1</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/003.html">003</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_CCC</td>
+<td>C Custo Crd</td>
+<td colspan="2">Centro de Custo Credito</td>
+<td colspan="4">Centro de Custo a crédito que poderá ser
+utilizado para lançamento contábil.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .or. CTB105CC()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ctt.html">CTT</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>CtbMovSaldo("CTT")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/004.html">004</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_ITEMC</td>
+<td>Item Credito</td>
+<td colspan="2">Item Contabil Credito</td>
+<td colspan="4">Item contábil a crédito que poderá ser
+utilizado para lançamento contábil.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .or. CTB105ITEM()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ctd.html">CTD</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>CtbMovSaldo("CTD")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/005.html">005</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_CLVLCR</td>
+<td>Cl Vlr Cred</td>
+<td colspan="2">Classe Valor Credito</td>
+<td colspan="4">Classe de Valor a crédito que poderá ser
+utilizada para lançamento contábil.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .or. CTB105CLVL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/cth.html">CTH</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>CtbMovSaldo("CTH")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/006.html">006</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_ULTPGIR</td>
+<td>Dt.Ult.Pg IR</td>
+<td colspan="2">Data Ult. Pgto IRRF</td>
+<td colspan="4">Data do ultimo pagamento de IRRF.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_VLMOED</td>
+<td>Valor Moeda</td>
+<td colspan="2">Valor Moeda Empréstimo</td>
+<td colspan="4">Valor na moeda de empréstimo.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_DIACTB</td>
+<td>Cod. Diario</td>
+<td colspan="2">Cod. Diario da Contabilid</td>
+<td colspan="4">Informe o codigo de sequencial de diario
+que deve ser utilizado para este
+movimento
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>VldCodSeq()</td>
+<td>CtbRDia()</td>
+<td><a href="/tabelas_protheus/f3/cvl.html">CVL</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>CtbWDia()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_NODIA</td>
+<td>Seq. Diario</td>
+<td colspan="2">Seq. Diario Contabilidade</td>
+<td colspan="4">Codigo do sequencial do diario para a
+contabilidade
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_CLSIOF</td>
+<td>Cl CDI S/IOF</td>
+<td colspan="2">Classif CDI</td>
+<td colspan="4">Define se o CDI será:
+1- (CDCA / LCA / CRA)
+2- Outros
+Ao selecionar a opção 1 a aplicação
+ficará isenta de IOF quando for CDI,
+caso contrario, o cálculo ocorrerá
+normalmente.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=(CDCA / LCA / CRA);2=Outros</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_TPCUSTD</td>
+<td>Tipo Custd.</td>
+<td colspan="2">Tipo de Custodia</td>
+<td colspan="4">Este campo permite a escolha do órgão de
+Custódia do Ativo de Investimentos. Esse
+campo é específico para uso do SIGAPLS.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=CETIP;2=SELIC;3=CBLC;4=Fundos Dedicados;5=Outros</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_DATVENC</td>
+<td>Data Venc.</td>
+<td colspan="2">Data de Vencimento</td>
+<td colspan="4">Este campo permite informar data de
+vencimento da aplicação. Esse campo é
+específico para uso do SIGAPLS.
+Observação: Todo título deve ter uma
+data de vencimento, caso não saiba,
+informe uma data distante, ex.
+31/12/2099
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>M->EH_DATVENC > M->EH_DATA</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_TPOUTR</td>
+<td>Tp. Outros</td>
+<td colspan="2">Tipo Outros</td>
+<td colspan="4">Este campo permite preencher com o nome
+do órgão de custódia, caso não se
+enquadre em uma das opções do campo:
+EH_TPCUSTD. Esse campo é específico para
+uso do SIGAPLS.
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Empty(M->EH_TPBEM) .Or. M->EH_TPCUSTD = "5"</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_TPBEM</td>
+<td>Tipo Bem</td>
+<td colspan="2">Tipo Bem</td>
+<td colspan="4">Este campo permite informar o código do
+tipo de bem que se esta cadastrando.
+Esse campo é específico para uso do
+SIGAPLS.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. ExistCpo("SX5",If(Empty(M->EH_TPCUSTD),"GF","GE")  + M->EH_TPBEM)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/x5gegf.html">X5GEGF</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_VINCANS</td>
+<td>Vinculo ANS</td>
+<td colspan="2">Vinculo ANS</td>
+<td colspan="4">Este campo permite informar se o Ativo é
+Vinculado à ANS para as garantias de
+Provisões Técnicas. Esse campo é
+específico para uso do SIGAPLS.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=Nao � � � �</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_CCUSTO</td>
+<td>C. de Custo</td>
+<td colspan="2">Centro de Custo</td>
+<td colspan="4">Centro de Custo
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. ExistCpo('CTT')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ctt.html">CTT</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/004.html">004</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_GERPARC</td>
+<td>Gera Parcela</td>
+<td colspan="2">Gera Parcelas</td>
+<td colspan="4">Habilita campos para geração
+das parcelas do Emprestimo
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>M->EH_APLEMP == "EMP" .And. M->EH_TIPO == "EMP"</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td>M->EH_APLEMP == "EMP" .And. M->EH_TIPO == "EMP"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_ENTRADA</td>
+<td>V.Entrada</td>
+<td colspan="2">Valor da Entrada</td>
+<td colspan="4">Valor de Entrada no Empréstimo
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/eh_entrada.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>INCLUI .And. FC171VEnt()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_FINANC</td>
+<td>V.Financiado</td>
+<td colspan="2">Valor Financiado</td>
+<td colspan="4">Valor Total - Valor de Entrada, Valor
+que realmente será base para o cálculo
+do empréstimo
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>.F.</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_PRAZO</td>
+<td>Prazo</td>
+<td colspan="2">Prazo Emprestimo</td>
+<td colspan="4">Prazo em que será pago em meses.
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>@E 999                                       </td>
+<td>FC171VPAR(M->EH_PRAZO)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>INCLUI .and. FCl171Emp()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_CARENCI</td>
+<td>Carencia</td>
+<td colspan="2">Tempo de Carencia</td>
+<td colspan="4">Tempo de carência em meses
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>@E 999                                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>FCl171Emp()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_TXEFETI</td>
+<td>Taxa Efetiva</td>
+<td colspan="2">Taxa Efetiva Contrato</td>
+<td colspan="4">Taxa efetiva presente em contrato
+</td>
+<td>N</td>
+<td>9</td>
+<td>5</td>
+<td>@E 999.99999                                 </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_SPREAD</td>
+<td>V.Spread</td>
+<td colspan="2">Spread Bancario</td>
+<td colspan="4">Valor do Spread Bancário
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>FCl171Emp()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_PSPREAD</td>
+<td>% Spread</td>
+<td colspan="2">% Spread bancario</td>
+<td colspan="4">Caso o valor esteja preenchido, o % não
+precisa ser informado
+</td>
+<td>N</td>
+<td>9</td>
+<td>5</td>
+<td>@E 999.99999                                 </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>FCl171Emp()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_DESPESA</td>
+<td>Despesas</td>
+<td colspan="2">Despesas contrato</td>
+<td colspan="4">Campo valor, para preencher os gastos
+extras como Taxa de Registro de
+Contrato.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>FCl171Emp()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_DSPREAD</td>
+<td>Data Spread</td>
+<td colspan="2">Data do Spread</td>
+<td colspan="4">Data em que o movimento bancário de
+Spread deve ser incluido, incializador
+padrão data de inclusão do FINAME
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>DDATABASE</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>FCl171Emp()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_JURCAR</td>
+<td>Juros carenc</td>
+<td colspan="2">Parcela juros na carencia</td>
+<td colspan="4">Informe Sim ou Não.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td>FCl171Emp()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_AMORTIZ</td>
+<td>Amortização</td>
+<td colspan="2">Tipo de amortização</td>
+<td colspan="4">(Price ou SAC - Caso a amortização seja
+Price, será criada após a inclusão uma
+tabela de método Price, de parcelas
+constantes, caso seja por método SAC a
+amortização será constante, variando as
+parcelas)  Em Branco não gera parcela e
+segue o processo normal já presente na
+rotina.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Price;2=SAC</td>
+<td>INCLUI .and. FCl171Emp()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_VLAMORP</td>
+<td>Vl.Amort Par</td>
+<td colspan="2">Valor amortização Parcela</td>
+<td colspan="4">(Valor que será amortizado ou pago
+mensalmente conforme o tipo de
+Amortização, se Price será o valor da
+Parcela e se for SAC será o valor da
+Amortização)
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td>FC171VAm(M->EH_PRAZO)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>INCLUI .and. FCl171Emp()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EH_BASEDES</td>
+<td>Desp. Base</td>
+<td colspan="2">Considera Despesa na base</td>
+<td colspan="4">Possibilita escolher se o IOF, as taxas
+e as despesas do emprestimo serão
+somadas na base de calculo inicial para
+o calculo de juros.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

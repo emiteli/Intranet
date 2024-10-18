@@ -1,0 +1,636 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: DFE - AMORTIZACAO DE DESPESAS</title></head>
+<body>
+<font color="orange"><h2 id="DFE">Tabela: DFE - AMORTIZACAO DE DESPESAS</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>AMORTIZACAO DE DESPESAS</b></td><td colspan="2"><b>DFE_FILIAL+DFE_NUMAMZ</b></td><td><b>TMSAF35</b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">DFE_FILIAL+DFE_NUMAMZ</td><td>No.Amortiza.</td><td></td></tr>
+<tr><td>2</td><td colspan="2">DFE_FILIAL+DFE_CODDES+DFE_NUMAMZ</td><td>Cod.Despesa + No.Amortiza.</td><td></td></tr>
+<tr><td>3</td><td colspan="2">DFE_FILIAL+DTOS(DFE_DATAMZ)+DFE_NUMAMZ</td><td>Dt.Amortiza. + No.Amortiza.</td><td></td></tr>
+<tr><td>4</td><td colspan="2">DFE_FILIAL+DFE_STATUS+DFE_NUMAMZ</td><td>Status + No.Amortiza.</td><td></td></tr>
+<tr><td>5</td><td colspan="2">DFE_FILIAL+DFE_CODVEI+DFE_NUMAMZ</td><td>Cod.Veiculo + No.Amortiza.</td><td></td></tr>
+<tr><td>6</td><td colspan="2">DFE_FILIAL+DFE_IDCTMS</td><td>ID.Custo TMS</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>DFE_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DFE_NUMAMZ</td>
+<td>No.Amortiza.</td>
+<td colspan="2">No.Amortização</td>
+<td colspan="4">Número da amortização
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>TMAF35Vld()</td>
+<td>GetSxeNum('DFE', 'DFE_NUMAMZ')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DFE_DATAMZ</td>
+<td>Dt.Amortiza.</td>
+<td colspan="2">Dt.Amortiza.</td>
+<td colspan="4">Data da amortização
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>TMAF35Vld()</td>
+<td>dDataBase</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DFE_CODDES</td>
+<td>Cod.Despesa</td>
+<td colspan="2">Cod.Despesa</td>
+<td colspan="4">Código da despesa que gerou o custo
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>TMAF35Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dt7.html">DT7</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DFE_DSCDES</td>
+<td>Desc.Despesa</td>
+<td colspan="2">Desc.Despesa</td>
+<td colspan="4">Descrição da despesa que gerou o custo
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui, '', Posicione('DT7', 1, xFilial('DT7')+DFE->DFE_CODDES, 'DT7_DESCRI'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione('DT7', 1, xFilial('DT7')+DFE->DFE_CODDES, 'DT7_DESCRI')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DFE_CODVEI</td>
+<td>Cod.Veiculo</td>
+<td colspan="2">Cod.Veiculo</td>
+<td colspan="4">Código do veículo que sofreu a
+manutenção
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>TMAF35Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/da3.html">DA3</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DFE_MODVEI</td>
+<td>Modelo</td>
+<td colspan="2">Modelo do Veiculo</td>
+<td colspan="4">Modelo do veículo que sofreu a
+manutenção
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui, '', Posicione('DA3', 1, xFilial('DA3')+DFE->DFE_CODVEI, 'DA3_DESC'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione('DA3', 1, xFilial('DA3')+DFE->DFE_CODVEI, 'DA3_DESC')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DFE_SERMNT</td>
+<td>Serviço Mnt</td>
+<td colspan="2">Serviço Manutenção Ativos</td>
+<td colspan="4">Serviço de manutenção efetuado no
+veículo
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>TMAF35Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/st4.html">ST4</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DFE_NOSMNT</td>
+<td>Nome Serviço</td>
+<td colspan="2">Nome Serviço Mnt</td>
+<td colspan="4">Nome do serviço de manutenção efetuado
+no veículo
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui, '', Posicione('ST4', 1, xFilial('ST4')+DFE->DFE_SERMNT, 'T4_NOME'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione('ST4', 1, xFilial('ST4')+DFE->DFE_SERMNT, 'T4_NOME')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DFE_CODPRO</td>
+<td>Cod.Produto</td>
+<td colspan="2">Código do Produto</td>
+<td colspan="4">Código do produto utilizado na
+manutenção do veículo
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/030.html">030</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DFE_DESPRO</td>
+<td>Desc.Produto</td>
+<td colspan="2">Descrição do Produto</td>
+<td colspan="4">Descrição do produto utilizado na
+manutenção do veículo
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui, '', Posicione('SB1', 1, xFilial('SB1')+DFE->DFE_CODPRO, 'B1_DESC'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione('SB1', 1, xFilial('SB1')+DFE->DFE_CODPRO, 'B1_DESC')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DFE_TIPAMZ</td>
+<td>Tp.Amortiza.</td>
+<td colspan="2">Tipo de Amortização</td>
+<td colspan="4">Tipo de amortização a ser utilizada na
+despesa, podendo ser:
+- Mês: O valor da despesa será divido
+por mensalidades até o pagamento do
+valor total.
+- Contador: O valor da despesa será
+dividido de acordo com um contador
+especificado pelo usuário (Ex.
+Quilometragem) até o pagamento do valor
+total.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('012') .AND. TMAF35Vld()</td>
+<td>'0'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>0=N�o Utiliza;1=M�s;2=Contador</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DFE_PERAMZ</td>
+<td>Período</td>
+<td colspan="2">Período Amortização</td>
+<td colspan="4">Período de amortização. Caso o tipo de
+amortização seja selecionado como Mês,
+no período deve conter a quantidade de
+meses que vai durar a amortização. Se
+for selecionado Contador, o período é
+desconsiderado.
+</td>
+<td>N</td>
+<td>6</td>
+<td>0</td>
+<td>@E 999,999                                   </td>
+<td>TMAF35Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>TMAF35Whe('DFE_PERAMZ')</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DFE_VLRDES</td>
+<td>Vlr.Despesa</td>
+<td colspan="2">Valor da Despesa</td>
+<td colspan="4">Valor total da despesa que gerou o custo
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td>TMAF35Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DFE_VLRQTA</td>
+<td>Valor Quota</td>
+<td colspan="2">Valor da Quota</td>
+<td colspan="4">Valor da quota é o valor que deve ser
+pago á cada período da amortização
+</td>
+<td>N</td>
+<td>14</td>
+<td>4</td>
+<td>@E 999,999,999.9999                          </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DFE_VLRAMZ</td>
+<td>Vl.Amortiza.</td>
+<td colspan="2">Valor Amortizado</td>
+<td colspan="4">Valor amortizado é o valor que já foi
+pago até a presente data
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td>TMAF35Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DFE_STATUS</td>
+<td>Status</td>
+<td colspan="2">Status</td>
+<td colspan="4">Status da amortização, podendo ser :
+- Em aberto: Suas parcelas ainda estão
+sendo quitadas.
+- Encerrado: O valor total da despesa
+foi quitado.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>'1'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=Em Aberto;2=Encerrado</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DFE_CATAMZ</td>
+<td>Cat.Amortiza</td>
+<td colspan="2">Categoria Amortização</td>
+<td colspan="4">Categoria da amortização, podendo ser:
+- Manual: Amortizações que já estão
+ocorrendo e podem ser incluídas
+manualmente.
+- Automática: Amortizações originadas a
+partir do módulo de manutenção de ativos
+que são incluídas automaticamente pelo
+sistema.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>'1'</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=Manual;2=Autom�tica</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DFE_IDCTMS</td>
+<td>ID.Custo TMS</td>
+<td colspan="2">ID.Custo TMS</td>
+<td colspan="4">Identificador do cálculo do custo de
+transporte
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

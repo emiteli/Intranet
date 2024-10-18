@@ -1,0 +1,1648 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: STI - Plano de Manutenção</title></head>
+<body>
+<font color="orange"><h2 id="STI">Tabela: STI - Plano de Manutenção</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Plano de Manutenção</b></td><td colspan="2"><b>TI_FILIAL+TI_PLANO</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">TI_FILIAL+TI_PLANO</td><td>Plano</td><td></td></tr>
+<tr><td>2</td><td colspan="2">TI_FILIAL+DTOS(TI_DATAPLA)+TI_PLANO</td><td>Data Plano + Plano</td><td></td></tr>
+<tr><td>3</td><td colspan="2">TI_FILIAL+DTOS(TI_DATAINI)</td><td>Data Início</td><td></td></tr>
+<tr><td>4</td><td colspan="2">TI_FILIAL+TI_CCUSINI</td><td>C. Cus. Ini.</td><td></td></tr>
+<tr><td>5</td><td colspan="2">TI_FILIAL+TI_CCUSFIM</td><td>C. Custo Fim</td><td></td></tr>
+<tr><td>6</td><td colspan="2">TI_FILIAL+TI_CTRAINI</td><td>C. Trab. Ini</td><td></td></tr>
+<tr><td>7</td><td colspan="2">TI_FILIAL+TI_CTRAFIM</td><td>C.Trab.Fim</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>TI_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Código da filial da empresa.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TI_PLANO</td>
+<td>Plano</td>
+<td colspan="2">Numero do Plano</td>
+<td colspan="4">Número do plano de produção. É o código
+de identificação do plano, sendo que
+este código é gerado automaticamente
+pelo sistema. O plano de número 000000
+é utilizado para O.S. Corretivas e
+000001 para O.S. Manuais.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCHAV("STI",M->TI_PLANO)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TI_DATAPLA</td>
+<td>Data Plano</td>
+<td colspan="2">Data do Plano Manutencao</td>
+<td colspan="4">Data em que plano de manutenção foi
+executado.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>99/99/9999                                   </td>
+<td></td>
+<td>IF(INCLUI,DDATABASE,STI->TI_DATAPLA)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TI_DESCRIC</td>
+<td>Descrição</td>
+<td colspan="2">Descricao do Plano</td>
+<td colspan="4">Descrição suscinta do plano. Serve para
+identificação complementar do plano.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TI_DATAINI</td>
+<td>Data Início</td>
+<td colspan="2">Data Inicio do Plano</td>
+<td colspan="4">Limite inferior de seleção das
+manutenções a serem consideradas pelo
+plano. O sistema utilizará esta
+informação para a seleção dos Bens
+conforme a sua data de próxima
+manutenção.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IF(INCLUI,DDATABASE,STI->TI_DATAINI)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TI_DATAFIM</td>
+<td>Data Fim</td>
+<td colspan="2">Data Fim do Plano</td>
+<td colspan="4">Limite superior de data de manutenção
+do plano. Os Bens com data de próxima
+manutenção entre a data inicio do plano
+e a data fim, serão considerados para o
+plano.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>VALDATA(M->TI_DATAINI,M->TI_DATAFIM,"DATAINVALI")</td>
+<td>IF(INCLUI,DDATABASE,STI->TI_DATAFIM)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TI_ESTRUTU</td>
+<td>Estrutura</td>
+<td colspan="2">Planejar Por Estrutura</td>
+<td colspan="4">Indica se o planejamento será efetuado
+para a estrutura do bem.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("NS") .AND. MNTA330E()</td>
+<td>IF(INCLUI,"N",STI->TI_ESTRUTU)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>N=Nao;S=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TI_CCUSINI</td>
+<td>C. Cus. Ini.</td>
+<td colspan="2">Centro de Custo Inicio</td>
+<td colspan="4">Limite inferior de seleção dos Bens para
+o plano conforme o centro de custos em
+que esta locado. Para selecionar todos
+os centros de custos, deixar este campo
+em branco.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>M->TI_CCUSINI = SPACE(Len(STI->TI_CCUSINI)) .OR. CTB105CC()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ctt.html">CTT</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ti_ccusini.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>!lEstrut</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/004.html">004</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TI_NOMCINI</td>
+<td>Nome C.C.Ini</td>
+<td colspan="2">Nome do C.Custo Inicio</td>
+<td colspan="4">Nome do Centro de Custos inicio.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>SI3->(VDISP(STI->TI_CCUSINI,"I3_DESC"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TI_CCUSFIM</td>
+<td>C. Custo Fim</td>
+<td colspan="2">Centro de Custo Fim</td>
+<td colspan="4">Limite superior de seleção dos Bens por
+centro de custo em que esta locado.
+Para selecionar Bens de todos os centros
+de custos, preencher este campo com
+ZZZZZZZZZ.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>(M->TI_CCUSFIM = REPLICATE("Z",Len(STI->TI_CCUSFIM)) .Or. CTB105CC()) .And. M->TI_CCUSFIM >= M->TI_CCUSINI</td>
+<td>IF(INCLUI,REPLICATE("Z",Len(STI->TI_CCUSFIM)),STI->TI_CCUSFIM)</td>
+<td><a href="/tabelas_protheus/f3/ctt.html">CTT</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ti_ccusfim.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>!lEstrut</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/004.html">004</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TI_NOMCFIM</td>
+<td>Nome C.C.Fim</td>
+<td colspan="2">Nome do C.Custo Fim</td>
+<td colspan="4">Nome do Centro de Custos fim.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>SI3->(VDISP(STI->TI_CCUSFIM,"I3_DESC"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TI_CTRAINI</td>
+<td>C. Trab. Ini</td>
+<td colspan="2">Centro de Trabalho Inicio</td>
+<td colspan="4">Limite inferior de seleção dos bens para
+o plano, conforme o centro de trabalho a
+que o bem pertence. Para selecionae
+todos os centros de trabalho, deixe este
+campo em branco.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>M->TI_CTRAINI = SPACE(Len(STI->TI_CTRAINI)) .OR. EXISTCPO("SHB",M->TI_CTRAINI)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/shb.html">SHB</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ti_ctraini.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>!lEstrut</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TI_NOMRINI</td>
+<td>Descrição</td>
+<td colspan="2">Nome do C.Trabalho Inicio</td>
+<td colspan="4">Nome do Centro de Trabalho inicio.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>SHB->(VDISP(STI->TI_CTRAINI,"HB_NOME"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TI_CTRAFIM</td>
+<td>C.Trab.Fim</td>
+<td colspan="2">Centro de Trabalho Fim</td>
+<td colspan="4">Limite superior de seleção dos bens para
+o plano conforme o centro de trabalho a
+que pertence. Para selecionar bens de
+todos os centros de trabalho, preencha
+este campo com ZZZZZZ.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>(M->TI_CTRAFIM = REPLICATE("Z",Len(STI->TI_CTRAFIM)) .OR. EXISTCPO("SHB",M->TI_CTRAFIM)) .AND. M->TI_CTRAFIM >= M->TI_CTRAINI</td>
+<td>IF(INCLUI,REPLICATE("Z",Len(STI->TI_CTRAFIM)),STI->TI_CTRAFIM)</td>
+<td><a href="/tabelas_protheus/f3/shb.html">SHB</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ti_ctrafim.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>!lEstrut</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TI_NOMRFIM</td>
+<td>Descrição</td>
+<td colspan="2">Nome do C.Trabalho Fim</td>
+<td colspan="4">Nome do Centro de Trabalho fim.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>SHB->(VDISP(STI->TI_CTRAFIM,"HB_NOME"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TI_SERVINI</td>
+<td>Serv. Início</td>
+<td colspan="2">Servico Inicio</td>
+<td colspan="4">Limite inferior de seleção dos Bens para
+o plano, conforme o código de serviço de
+manutenção. Para selecionar todos os
+serviços, deixar este campo em branco.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>M->TI_SERVINI = SPACE(Len(STI->TI_SERVINI)) .OR. EXISTCPO("ST4",M->TI_SERVINI)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/st4.html">ST4</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ti_servini.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>!lEstrut</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TI_NOMSINI</td>
+<td>Nome Serv.</td>
+<td colspan="2">Nome do Servico Inicio</td>
+<td colspan="4">Nome do Serviço inicio.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>ST4->(VDISP(STI->TI_SERVINI,"T4_NOME"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TI_SERVFIM</td>
+<td>Serviço Fim</td>
+<td colspan="2">Servico Fim</td>
+<td colspan="4">Limite superior de seleção dos bens para
+o plano, conforme o seu código de
+serviço de manutenção. Para selecionar
+todos os serviços, preencha este campo
+com ZZZZZZ.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>(M->TI_SERVFIM = REPLICATE("Z",Len(STI->TI_SERVFIM)).OR. EXISTCPO("ST4",M->TI_SERVFIM)).AND. M->TI_SERVFIM >= M->TI_SERVINI</td>
+<td>IF(INCLUI,REPLICATE("Z",Len(STI->TI_SERVFIM)),STI->TI_SERVFIM)</td>
+<td><a href="/tabelas_protheus/f3/st4.html">ST4</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ti_servfim.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>!lEstrut</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TI_NOMSFIM</td>
+<td>Nome Serv.</td>
+<td colspan="2">Nome do Servico Fim</td>
+<td colspan="4">Nome do Serviço fim.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>ST4->(VDISP(STI->TI_SERVFIM,"T4_NOME"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TI_AREAINI</td>
+<td>Área Início</td>
+<td colspan="2">Codigo da Area Inicio</td>
+<td colspan="4">Limite inferior de seleção dos Bens para
+o plano conforme o código de área de
+manutenção do Bem. Para selecionar todas
+as áreas, deixar este campo em branco.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>M->TI_AREAINI = SPACE(Len(STI->TI_AREAINI)) .OR. EXISTCPO("STD",M->TI_AREAINI)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/std.html">STD</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ti_areaini.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>lLUBRIF .And. !lEstrut</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TI_NOMAINI</td>
+<td>Nome Área</td>
+<td colspan="2">Nome da Area Inicio</td>
+<td colspan="4">Nome da área inicio.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>STD->(VDISP(STI->TI_AREAINI,"TD_NOME"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td>lLUBRIF</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TI_AREAFIM</td>
+<td>Área Fim</td>
+<td colspan="2">Codigo da Area Fim</td>
+<td colspan="4">Limite superior de seleção dos Bens para
+o plano, conforme o código de área de
+manutenção. Para selecionar Bens de
+todas as áreas, preencha este campo com
+ZZZZZZ.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>(M->TI_AREAFIM = REPLICATE("Z",Len(STI->TI_AREAFIM)) .OR. EXISTCPO("STD",M->TI_AREAFIM)) .AND. M->TI_AREAFIM >= M->TI_AREAINI</td>
+<td>IF(INCLUI,REPLICATE("Z",Len(STI->TI_AREAFIM)),STI->TI_AREAFIM)</td>
+<td><a href="/tabelas_protheus/f3/std.html">STD</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ti_areafim.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>lLUBRIF .And. !lEstrut</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TI_NOMAFIM</td>
+<td>Nome Área</td>
+<td colspan="2">Nome da Area Fim</td>
+<td colspan="4">Nome da área fim.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>STD->(VDISP(STI->TI_AREAFIM,"TD_NOME"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td>lLUBRIF</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TI_TIPOINI</td>
+<td>Tipo Início</td>
+<td colspan="2">Codigo do Tipo Inicio</td>
+<td colspan="4">Limite inferior de seleção dos bens para
+o plano conforme o código de tipo de
+manutenção. Para selecionar bens de
+todos os tipos, deixe este campo em
+branco.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>M->TI_TIPOINI = SPACE(Len(STI->TI_TIPOINI)) .OR. EXISTCPO("STE",M->TI_TIPOINI)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ste.html">STE</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ti_tipoini.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>lLUBRIF .And. !lEstrut</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TI_NOMTINI</td>
+<td>Nome Tipo</td>
+<td colspan="2">Nome do Tipo Inicio</td>
+<td colspan="4">Nome do Tipo fim.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>STE->(VDISP(STI->TI_TIPOINI,"TE_NOME"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td>lLUBRIF</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TI_TIPOFIM</td>
+<td>Tipo Fim</td>
+<td colspan="2">Codigo do Tipo Fim</td>
+<td colspan="4">Limite superiorse seleção dos bens para
+o plano conforme o código do tipo de
+manutenção. Para selecionar bens de
+todos os tipos, preencha este campo com
+ZZZ.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>(M->TI_TIPOFIM = REPLICATE("Z",Len(STI->TI_TIPOFIM)) .OR. EXISTCPO("STE",M->TI_TIPOFIM)) .AND. M->TI_TIPOFIM >= M->TI_TIPOINI</td>
+<td>IF(INCLUI,REPLICATE("Z",Len(STI->TI_TIPOFIM)),STI->TI_TIPOFIM)</td>
+<td><a href="/tabelas_protheus/f3/ste.html">STE</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ti_tipofim.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>lLUBRIF .And. !lEstrut</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TI_NOMTFIM</td>
+<td>Nome Tipo</td>
+<td colspan="2">Nome do Tipo Fim</td>
+<td colspan="4">Nome do Tipo fim.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>STE->(VDISP(STI->TI_TIPOFIM,"TE_NOME"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td>lLUBRIF</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TI_FAMIINI</td>
+<td>Famil. Inic.</td>
+<td colspan="2">Codigo da Familia Inicio</td>
+<td colspan="4">Limite inferior de seleção dos bens para
+o plano comforme a familia a que
+pertence o bem. Para selecionar bens de
+todas as familias, deixe este campo em
+branco.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>M->TI_FAMIINI = SPACE(Len(STI->TI_FAMIINI)).OR. EXISTCPO("ST6",M->TI_FAMIINI)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/st6.html">ST6</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ti_famiini.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>!lEstrut</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TI_NOMFINI</td>
+<td>Nome Família</td>
+<td colspan="2">Nome da Familia Inicio</td>
+<td colspan="4">Nome da Familia inicio.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>ST6->(VDISP(STI->TI_FAMIINI,"T6_NOME"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TI_FAMIFIM</td>
+<td>Família Fim</td>
+<td colspan="2">Codigo da Familia Fim</td>
+<td colspan="4">Limite superior de seleção dos bens para
+o plano, conforme a família a que o bem
+pertence. Para selecionar bens  de todas
+as famílias, preencha este campo com
+ZZZZZZ.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>(M->TI_FAMIFIM = REPLICATE("Z",Len(STI->TI_FAMIFIM)) .OR. EXISTCPO("ST6",M->TI_FAMIFIM)) .AND. M->TI_FAMIFIM >= M->TI_FAMIINI</td>
+<td>IF(INCLUI,REPLICATE("Z",Len(STI->TI_FAMIFIM)),STI->TI_FAMIFIM)</td>
+<td><a href="/tabelas_protheus/f3/st6.html">ST6</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ti_famifim.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>!lEstrut</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TI_NOMFFIM</td>
+<td>Nome Família</td>
+<td colspan="2">Nome da Familia Fim</td>
+<td colspan="4">Nome da Familia fim.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>ST6->(VDISP(STI->TI_FAMIFIM,"T6_NOME"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TI_BEMINI</td>
+<td>Bem Início</td>
+<td colspan="2">Limite Inferior de Bem</td>
+<td colspan="4">Limite inferior de seleção de bem para o
+plano de manutenção. Se for selecionar
+todos, deixar este campo em branco.
+</td>
+<td>C</td>
+<td>16</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>MNTA330BE()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/st9.html">ST9</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ti_bemini.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>MNT330WHEN( 'TI_BEMINI' )</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TI_NOMBINI</td>
+<td>Nome Bem</td>
+<td colspan="2">Nome do Bem Inicio</td>
+<td colspan="4">Nome do Bem inicio.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>ST9->(VDISP(STI->TI_BEMINI,"T9_NOME"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TI_BEMFIM</td>
+<td>Bem Fim</td>
+<td colspan="2">Limite Superior de Bem</td>
+<td colspan="4">Limite superior de seleção de Bens para
+o plano de manutenção, por código de
+Bem. Para selecionar todos os Bens,
+preencher este campo com ZZZZZZ.
+</td>
+<td>C</td>
+<td>16</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>(M->TI_BEMFIM = REPLICATE("Z",Len(STI->TI_BEMFIM)) .OR. EXISTCPO("ST9",M->TI_BEMFIM))  .AND. M->TI_BEMFIM >=M->TI_BEMINI</td>
+<td>IF(INCLUI,REPLICATE("Z",Len(STI->TI_BEMFIM)),STI->TI_BEMFIM)</td>
+<td><a href="/tabelas_protheus/f3/st9.html">ST9</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ti_bemfim.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>MNT330WHEN( 'TI_BEMFIM' )</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TI_NOMBFIM</td>
+<td>Nome Bem Fim</td>
+<td colspan="2">Nome do Bem Fim</td>
+<td colspan="4">Nome do Bem fim.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>ST9->(VDISP(STI->TI_BEMFIM,"T9_NOME"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TI_TIPMODI</td>
+<td>De Tipo Mod.</td>
+<td colspan="2">De Tipo do Modelo</td>
+<td colspan="4">Código do tipo de modelo início.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>M->TI_TIPMODI = SPACE(Len(STI->TI_TIPMODI)) .OR. EXISTCPO('TQR',M->TI_TIPMODI)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tqr.html">TQR</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ti_tipmodi.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>!lEstrut</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TI_DESMODI</td>
+<td>Descrição</td>
+<td colspan="2">Descricao De Tipo Modelo</td>
+<td colspan="4">Código do tipo do modelo início.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>TQR->(VDISP(STI->TI_TIPMODI,"TQR_DESMOD"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td>!lEstrut</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TI_TIPMODF</td>
+<td>Até Tip.</td>
+<td colspan="2">Ate Tipo do Modelo</td>
+<td colspan="4">Código do tipo de modelo fim.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>(M->TI_TIPMODF = REPLICATE('Z',Len(STI->TI_TIPMODF)) .OR. EXISTCPO('TQR',M->TI_TIPMODF)) .AND. M->TI_TIPMODF >= M->TI_TIPMODI</td>
+<td>IF(INCLUI,REPLICATE('Z',Len(STI->TI_TIPMODF)),STI->TI_TIPMODF)</td>
+<td><a href="/tabelas_protheus/f3/tqr.html">TQR</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ti_tipmodf.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>!lEstrut</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TI_DESMODF</td>
+<td>Descrição</td>
+<td colspan="2">Descricao Ate Tipo Modelo</td>
+<td colspan="4">Código do tipo modelo fim.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>TQR->(VDISP(STI->TI_TIPMODF,"TQR_DESMOD"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td>!lEstrut</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TI_BLOQITE</td>
+<td>Bloq. Item</td>
+<td colspan="2">Indicacao Bloqueio Item</td>
+<td colspan="4">Indica se o plano de manutenção deverá
+gerar bloqueio de itens de estoque. Esta
+indicação prevalece sobre aquela
+informada na manutenção. S-Sim  N-Não.
+Este é um campo virtual.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("SN")</td>
+<td>IF(INCLUI,"S",STI->TI_BLOQITE)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td>S=Sim;N=N�o</td>
+<td>lLUBRIF</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TI_BLOQFUN</td>
+<td>Bloq. Func.</td>
+<td colspan="2">Indica Bloqueio Funcionar</td>
+<td colspan="4">Indica se o plano de manutenção deverá
+gerar bloqueio de funcionário. Esta
+indicação prevalece sobre aquela
+informada na manutenção. S-Sim  N-Não.
+Este é um campo virtual.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("SN")</td>
+<td>IF(INCLUI,"S",STI->TI_BLOQFUN)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td>S=Sim;N=N�o</td>
+<td>lLUBRIF</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TI_BLOQFER</td>
+<td>Bloq. Fer.</td>
+<td colspan="2">Indica Bloqueio Ferramen.</td>
+<td colspan="4">Indica se o plano de manutenção deverá
+gerar bloqueio de ferramenta. Esta
+indicação prevalece sobre aquela
+informada na manutenção. S- Sim  N- Não.
+Este é um campo virtual.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("SN")</td>
+<td>IF(INCLUI,"S",STI->TI_BLOQFER)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td>S=Sim;N=N�o</td>
+<td>lLUBRIF</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TI_ATRASAD</td>
+<td>Conside Atr.</td>
+<td colspan="2">Considera Manut. Atrasada</td>
+<td colspan="4">Indica se o plano deverá considerar
+manutenções atrasadas.
+S- Considera atrasadas
+N- Considera somente manutençöes que
+devam ser feitas no limite de data
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("SN")</td>
+<td>IF(INCLUI,"S",STI->TI_ATRASAD)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>S=Sim;N=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TI_SITUACA</td>
+<td>Situação</td>
+<td colspan="2">Situacao do Plano</td>
+<td colspan="4">Código da situação do plano.
+L-Liberado
+P-Pendente
+C-Cancelado
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("CLP")</td>
+<td>IF(INCLUI,"P",STI->TI_SITUACA)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td>C=Cancelado ;L=Liberado;P=Pendente</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TI_TERMINO</td>
+<td>Terminado</td>
+<td colspan="2">Indicacao de Termino</td>
+<td colspan="4">Código de indicação da plano quanto ao
+seu termino.
+N- Não terminado
+S- Terminado
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("NS")</td>
+<td>IF(INCLUI,"N",STI->TI_TERMINO)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td>N=N�o;S=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TI_USUARIO</td>
+<td>Usu. Resp.</td>
+<td colspan="2">Usuario Responsavel Plano</td>
+<td colspan="4">Código de identificação do usuário
+responsável pelo plano. O sistema gera
+automaticamente esta informação.
+</td>
+<td>C</td>
+<td>25</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>cUsername</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TI_TIPOMDO</td>
+<td>Aloca. M-D-O</td>
+<td colspan="2">Tipo de Alocacao M-D-O</td>
+<td colspan="4">Indica qual o tipo de alocação de mão de
+obra deverá ser considerada pelo plano.
+E-Aloca especialidade para mao-de-obra,
+F-Aloca funcionário para mão-de-obra.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("FE")</td>
+<td>MNT330TPMDO()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>F=Funcionario;E=Especialidade</td>
+<td>lLUBRIF</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TI_LUBRIFI</td>
+<td>Plano Lubrif</td>
+<td colspan="2">Plano Lubrificacao      ?</td>
+<td colspan="4">Indica se o plano é de lubrificação.
+S= Sim
+N= Não
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("SN")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td>S=Sim;N=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TI_TIPACOM</td>
+<td>Tipo Acomp.</td>
+<td colspan="2">Tipo do Acompanhamento</td>
+<td colspan="4">Identifica por qual tipo de
+acompanhamento da manutenção se quer
+gerar o plano.
+Podendo ser por:
+1=Tempo
+2=Contador
+3=Tempo/Contador
+4=Produção
+5=Contador Fixo
+6=Segundo Contador
+7=Todos
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("1234567")</td>
+<td>IF(INCLUI,"7",STI->TI_TIPACOM)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Tempo;2=Contador;3=Tempo / Contador;4=Producao;5=Contador Fixo;6=Segundo Contador;7=Todos</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TI_TOLEPER</td>
+<td>% Tolerância</td>
+<td colspan="2">% Tolerancia Manutencao</td>
+<td colspan="4">Indica o percentual de tolerância para o
+deslocamento da data de Início de uma
+manutenção quando não houver
+disponibilidade de mão de obra. Este
+percentual será aplicado sobre o tempo
+ou incremento do contador.
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td>Positivo(M->TI_TOLEPER)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>STX</td>
+<td colspan="2">TI_PLANO</td>
+<td colspan="2">TX_PLANO</td>
+</tr>
+<tr>
+<td>TTY</td>
+<td colspan="2">TI_PLANO</td>
+<td colspan="2">TTY_PLANO</td>
+</tr>
+<tr>
+<td>TRC</td>
+<td colspan="2">TI_PLANO</td>
+<td colspan="2">TRC_PLANO</td>
+</tr>
+<tr>
+<td>TPZ</td>
+<td colspan="2">TI_PLANO</td>
+<td colspan="2">TPZ_PLANO</td>
+</tr>
+<tr>
+<td>STU</td>
+<td colspan="2">TI_PLANO</td>
+<td colspan="2">TU_PLANO</td>
+</tr>
+<tr>
+<td>TPW</td>
+<td colspan="2">TI_PLANO</td>
+<td colspan="2">TPW_PLANO</td>
+</tr>
+<tr>
+<td>STN</td>
+<td colspan="2">TI_PLANO</td>
+<td colspan="2">TN_PLANO</td>
+</tr>
+<tr>
+<td>STK</td>
+<td colspan="2">TI_PLANO</td>
+<td colspan="2">TK_PLANO</td>
+</tr>
+<tr>
+<td>TPP</td>
+<td colspan="2">TI_PLANO</td>
+<td colspan="2">TPP_PLANO</td>
+</tr>
+<tr>
+<td>TQE</td>
+<td colspan="2">TI_PLANO</td>
+<td colspan="2">TQE_PLANO</td>
+</tr>
+<tr>
+<td>TR9</td>
+<td colspan="2">TI_PLANO</td>
+<td colspan="2">TR9_PLANO</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

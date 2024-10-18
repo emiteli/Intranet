@@ -1,0 +1,380 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: TK3 - EPC'S X FASES DA OBRA</title></head>
+<body>
+<font color="orange"><h2 id="TK3">Tabela: TK3 - EPC'S X FASES DA OBRA</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>EPC'S X FASES DA OBRA</b></td><td colspan="2"><b>TK3_FILIAL+TK3_CC+TK3_FASE+TK3_SUBFAS+TK3_CODEPC</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">TK3_FILIAL+TK3_CC+TK3_FASE+TK3_SUBFAS+TK3_CODEPC</td><td>Obra + Fase da Obra + Sub-fase + Código EPC</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>TK3_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Filial do Sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TK3_CC</td>
+<td>Obra</td>
+<td colspan="2">Obra</td>
+<td colspan="4">Codigo do Centro de Custo que
+corresponde a obra. Utilizar as teclas
+[ENTER]+[F3] para pesquisar.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("CTT",M->TK3_CC)</td>
+<td>If(!lCodObra,cTLL_CC,"")</td>
+<td><a href="/tabelas_protheus/f3/ctt.html">CTT</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>lCodObra</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/004.html">004</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TK3_NOMECC</td>
+<td>Nome da Obra</td>
+<td colspan="2">Nome da Obra</td>
+<td colspan="4">Nome da Obra.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Posicione("TLL",1,xFilial("TLL")+M->TK3_CC,"TLL_NOMECC")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("TLL",1,xFilial("TLL")+TK3->TK3_CC,"TLL_NOMECC")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TK3_FASE</td>
+<td>Fase da Obra</td>
+<td colspan="2">Fase da Obra</td>
+<td colspan="4">Codigo da fase da obra.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("TLZ",M->TK3_FASE)</td>
+<td>If(!lCodObra,cTLM_FASE,"")</td>
+<td><a href="/tabelas_protheus/f3/tlz.html">TLZ</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>lCodObra</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TK3_NOMFAS</td>
+<td>Nome Fase</td>
+<td colspan="2">Nome Fase</td>
+<td colspan="4">Descricao da fase da obra.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Posicione("TLZ",1,xFilial("TLZ")+M->TK3_FASE,"TLZ_DESCRI")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("TLZ",1,xFilial("TLZ")+TK3->TK3_FASE,"TLZ_DESCRI")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TK3_SUBFAS</td>
+<td>Sub-fase</td>
+<td colspan="2">Sub-fase</td>
+<td colspan="4">Codigo da sub-fase da obra.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("TLZ",M->TK3_SUBFAS)</td>
+<td>If(!lCodObra,cTLM_SUBFASE,"")</td>
+<td><a href="/tabelas_protheus/f3/tlz.html">TLZ</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>lCodObra</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TK3_DESSUB</td>
+<td>Nom Sub-Fase</td>
+<td colspan="2">Nom Sub-Fase</td>
+<td colspan="4">Descricao da sub-fase da obra.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Posicione("TLZ",1,xFilial("TLZ")+M->TK3_SUBFAS,"TLZ_DESCRI")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("TLZ",1,xFilial("TLZ")+TK3->TK3_SUBFAS,"TLZ_DESCRI")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TK3_CODEPC</td>
+<td>Código EPC</td>
+<td colspan="2">Código EPC</td>
+<td colspan="4">Codigo do equipamento de proteção
+coletiva. Utilizar as teclas
+[ENTER]+[F3] para pesquisar.
+</td>
+<td>C</td>
+<td>16</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>MDT730MEMO(M->TK3_CODEPC)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/st9epc.html">ST9EPC</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tk3_codepc.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TK3_DESCRI</td>
+<td>Descricao</td>
+<td colspan="2">Descricao</td>
+<td colspan="4">Descricao do equipamento.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Posicione("ST9",1,xFilial("ST9")+TK3->TK3_CODEPC,"T9_NOME")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("ST9",1,xFilial("ST9")+TK3->TK3_CODEPC,"T9_NOME")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TK3_OBSERV</td>
+<td>Observacao</td>
+<td colspan="2">Observacao</td>
+<td colspan="4">Detalhar informações sobre o EPC na fase
+da obra.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TK3_MEMO1</td>
+<td>Observacao</td>
+<td colspan="2">Observacao</td>
+<td colspan="4">Detalhar informações sobre o EPC na fase
+da obra.
+</td>
+<td>M</td>
+<td>80</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(INCLUI,"",MSMM(TK3->TK3_OBSERV,80))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

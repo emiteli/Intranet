@@ -1,0 +1,1531 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: GUS - CONTAS CONTABEIS X FILIAIS</title></head>
+<body>
+<font color="orange"><h2 id="GUS">Tabela: GUS - CONTAS CONTABEIS X FILIAIS</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>CONTAS CONTABEIS X FILIAIS</b></td><td colspan="2"><b>GUS_FILIAL+GUS_FILCTB</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">GUS_FILIAL+GUS_FILCTB</td><td>Filial</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>GUS_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_FILCTB</td>
+<td>Filial</td>
+<td colspan="2">Filial Provis\Contab</td>
+<td colspan="4">Código da filial cujas contas associadas
+serão consideradas na contabilização do
+frete (provisao e realizacao).
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td>ExistChav("GUS") .And. GFEA91FIL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GUS_CTTRIC</td>
+<td>ICMS Recup</td>
+<td colspan="2">Conta Prov ICMS Recuperar</td>
+<td colspan="4">Conta contábil transitória de ICMS.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GFEA91REL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/guecd.html">GUECD</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gus_cttric.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>SuperGetMv("MV_PROVCON",.F.,"4") $ " 4"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/056.html">056</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_DSCTTI</td>
+<td>Desc Conta</td>
+<td colspan="2">Descricao da Conta</td>
+<td colspan="4">Descrição da conta contábil.
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("GUE",1,XFILIAL("GUE")+GUS->GUS_CTTRIC,"GUE_TITULO")," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_CCTRIC</td>
+<td>CC ICMS Rcup</td>
+<td colspan="2">C Custo Prov ICMS Recup</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GFEA91REL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/guhcd.html">GUHCD</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gus_cctric.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>SuperGetMv("MV_PROVCON",.F.,"4") $ " 4"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/057.html">057</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_DCCTIC</td>
+<td>Desc CCusto</td>
+<td colspan="2">Descricao Centro de Custo</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("GUH",1,XFILIAL("GUH")+GUS->GUS_CCTRIC,"GUH_DESC")," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_CTTRPI</td>
+<td>PIS Recup</td>
+<td colspan="2">Conta Prov PIS Recuperar</td>
+<td colspan="4">Conta contábil transitória de PIS.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GFEA91REL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/guecd.html">GUECD</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gus_cttrpi.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>SuperGetMv("MV_PROVCON",.F.,"4") $ " 4"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/056.html">056</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_DSCTTP</td>
+<td>Desc Conta</td>
+<td colspan="2">Descricao da Conta</td>
+<td colspan="4">Descrição da conta contábil.
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("GUE",1,XFILIAL("GUE")+GUS->GUS_CTTRPI,"GUE_TITULO")," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_CCTRPI</td>
+<td>CC PIS Recup</td>
+<td colspan="2">C Custo Prov PIS Recup</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GFEA91REL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/guhcd.html">GUHCD</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gus_cctrpi.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>SuperGetMv("MV_PROVCON",.F.,"4") $ " 4"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/057.html">057</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_DCCTPI</td>
+<td>Desc CCusto</td>
+<td colspan="2">Descricao Centro de Custo</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("GUH",1,XFILIAL("GUH")+GUS->GUS_CCTRPI,"GUH_DESC")," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_CTTRCO</td>
+<td>COFINS Recup</td>
+<td colspan="2">Conta Prov COFINS Recup</td>
+<td colspan="4">Conta contábil transitória de COFINS.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GFEA91REL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/guecd.html">GUECD</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gus_cttrco.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>SuperGetMv("MV_PROVCON",.F.,"4") $ " 4"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/056.html">056</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_DSCTTC</td>
+<td>Desc Conta</td>
+<td colspan="2">Descricao da Conta</td>
+<td colspan="4">Descrição da conta contábil.
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("GUE",1,XFILIAL("GUE")+GUS->GUS_CTTRCO,"GUE_TITULO")," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_CCTRCO</td>
+<td>CC COFINS Rc</td>
+<td colspan="2">C Custo Prov COFINS Recup</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GFEA91REL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/guhcd.html">GUHCD</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gus_cctrco.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>SuperGetMv("MV_PROVCON",.F.,"4") $ " 4"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/057.html">057</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_DCCTCO</td>
+<td>Desc CCusto</td>
+<td colspan="2">Descricao Centro de Custo</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("GUH",1,XFILIAL("GUH")+GUS->GUS_CCTRCO,"GUH_DESC")," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_CTICMS</td>
+<td>ICMS Recup</td>
+<td colspan="2">Conta ICMS a Recuperar</td>
+<td colspan="4">Conta contábil para débito de ICMS.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GFEA91REL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/guecd.html">GUECD</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gus_cticms.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/056.html">056</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_DSCTIC</td>
+<td>Desc Conta</td>
+<td colspan="2">Descricao da Conta</td>
+<td colspan="4">Descrição da conta contábil.
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("GUE",1,XFILIAL("GUE")+GUS->GUS_CTICMS,"GUE_TITULO")," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_CCICMS</td>
+<td>CC ICMS Rcup</td>
+<td colspan="2">C Custo ICMS a Recuperar</td>
+<td colspan="4">Informe o centro de custo
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GFEA91REL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/guhcd.html">GUHCD</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gus_ccicms.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/057.html">057</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_DSCCIC</td>
+<td>Desc CCusto</td>
+<td colspan="2">Descricao Centro de Custo</td>
+<td colspan="4">Descricao do centro de custo
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("GUH",1,XFILIAL("GUH")+GUS->GUS_CCICMS,"GUH_DESC")," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_CTPIS</td>
+<td>PIS Recup</td>
+<td colspan="2">Conta PIS a Recuperar</td>
+<td colspan="4">Conta contábil para débito de PIS.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GFEA91REL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/guecd.html">GUECD</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gus_ctpis.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/056.html">056</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_DSCTPI</td>
+<td>Desc Conta</td>
+<td colspan="2">Descricao da Conta</td>
+<td colspan="4">Descrição da conta contábil.
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("GUE",1,XFILIAL("GUE")+GUS->GUS_CTPIS,"GUE_TITULO")," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_CCPIS</td>
+<td>CC PIS Recup</td>
+<td colspan="2">C Custo PIS a Recuperar</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GFEA91REL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/guhcd.html">GUHCD</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gus_ccpis.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/057.html">057</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_DSCCPI</td>
+<td>Desc CCusto</td>
+<td colspan="2">Descricao Centro de Custo</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("GUH",1,XFILIAL("GUH")+GUS->GUS_CCPIS,"GUH_DESC")," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_CTCOFI</td>
+<td>COFINS Recup</td>
+<td colspan="2">Conta COFINS a Recuperar</td>
+<td colspan="4">Conta contábil para débito de COFINS.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GFEA91REL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/guecd.html">GUECD</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gus_ctcofi.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/056.html">056</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_DSCOFI</td>
+<td>Desc Conta</td>
+<td colspan="2">Descricao da Conta</td>
+<td colspan="4">Descrição da conta contábil.
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("GUE",1,XFILIAL("GUE")+GUS->GUS_CTCOFI,"GUE_TITULO")," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_CCCOFI</td>
+<td>CC COFINS Rc</td>
+<td colspan="2">C Custo COFINS Recuperar</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GFEA91REL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/guhcd.html">GUHCD</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gus_cccofi.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/057.html">057</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_DSCCCO</td>
+<td>Desc CCusto</td>
+<td colspan="2">Descricao Centro de Custo</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("GUH",1,XFILIAL("GUH")+GUS->GUS_CCCOFI,"GUH_DESC")," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_CTPROV</td>
+<td>Provisao</td>
+<td colspan="2">Conta Provisao</td>
+<td colspan="4">Conta contábil para crédito de provisão
+de frete.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GFEA91REL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/guecd.html">GUECD</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gus_ctprov.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/056.html">056</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_DSCTPR</td>
+<td>Descricao</td>
+<td colspan="2">Descricao da Conta</td>
+<td colspan="4">Descrição da conta contábil.
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("GUE",1,XFILIAL("GUE")+GUS->GUS_CTPROV,"GUE_TITULO")," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_CCCTPR</td>
+<td>CC Cta Prov</td>
+<td colspan="2">Centro Custo Conta Provis</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GFEA91REL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/guhcd.html">GUHCD</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/057.html">057</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_CTFRET</td>
+<td>Transit Forn</td>
+<td colspan="2">Conta Frete Transitória</td>
+<td colspan="4">Conta contábil para crédito de frete a
+pagar.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GFEA91REL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/guecd.html">GUECD</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gus_ctfret.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/056.html">056</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_DSCTFR</td>
+<td>Desc Conta</td>
+<td colspan="2">Descricao da Conta</td>
+<td colspan="4">Descrição da conta contábil.
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("GUE",1,XFILIAL("GUE")+GUS->GUS_CTFRET,"GUE_TITULO")," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_CCFRET</td>
+<td>CC Transit</td>
+<td colspan="2">Centro de Custo Transit</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GFEA91REL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/guhcd.html">GUHCD</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gus_ccfret.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/057.html">057</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_DSCCFR</td>
+<td>Desc CCusto</td>
+<td colspan="2">Descricao Centro de Custo</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("GUH",1,XFILIAL("GUH")+GUS->GUS_CCFRET,"GUH_DESC")," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_CTISS</td>
+<td>ISS</td>
+<td colspan="2">Conta ISS</td>
+<td colspan="4">Conta contábil para crédito de ISS.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GFEA91REL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/guecd.html">GUECD</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gus_ctiss.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/056.html">056</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_DSCTIS</td>
+<td>Descricao</td>
+<td colspan="2">Descricao da Conta</td>
+<td colspan="4">Descrição da conta contábil.
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("GUE",1,XFILIAL("GUE")+GUS->GUS_CTISS,"GUE_TITULO")," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_CCISS</td>
+<td>C Custo ISS</td>
+<td colspan="2">Centro de custo ISS</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GFEA91REL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/guhcd.html">GUHCD</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gus_cciss.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/057.html">057</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_DSCCIS</td>
+<td>Descricao CC</td>
+<td colspan="2">Descricao Centro de Custo</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("GUH",1,XFILIAL("GUH")+GUS->GUS_CCISS,"GUH_DESC")," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_CTINSS</td>
+<td>INSS</td>
+<td colspan="2">Conta INSS</td>
+<td colspan="4">Conta contábil para crédito de INSS.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GFEA91REL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/guecd.html">GUECD</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gus_ctinss.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/056.html">056</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_DSCTIN</td>
+<td>Descricao</td>
+<td colspan="2">Descricao da Conta</td>
+<td colspan="4">Descrição da conta contábil.
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("GUE",1,XFILIAL("GUE")+GUS->GUS_CTINSS,"GUE_TITULO")," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_CCINSS</td>
+<td>C C INSS</td>
+<td colspan="2">Centro de Custo INSS</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GFEA91REL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/guhcd.html">GUHCD</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gus_ccinss.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/057.html">057</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_DSCCIN</td>
+<td>Descricao CC</td>
+<td colspan="2">Descricao Centro de Custo</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("GUH",1,XFILIAL("GUH")+GUS->GUS_CCINSS,"GUH_DESC")," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_CTSEST</td>
+<td>SEST/SENAT</td>
+<td colspan="2">Conta SEST/SENAT</td>
+<td colspan="4">Conta contábil para crédito de
+SEST/SENAT.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GFEA91REL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/guecd.html">GUECD</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gus_ctsest.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/056.html">056</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_DSCTSE</td>
+<td>Descricao</td>
+<td colspan="2">Descricao da Conta</td>
+<td colspan="4">Descrição da conta contábil.
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("GUE",1,XFILIAL("GUE")+GUS->GUS_CTSEST,"GUE_TITULO")," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_CCSEST</td>
+<td>CC SEST/SENA</td>
+<td colspan="2">Centro Custo SEST/SENAT</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GFEA91REL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/guhcd.html">GUHCD</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gus_ccsest.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/057.html">057</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_DSCCSE</td>
+<td>Descricao CC</td>
+<td colspan="2">Descricao Centro de Custo</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("GUH",1,XFILIAL("GUH")+GUS->GUS_CCSEST,"GUH_DESC")," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_CTIRRF</td>
+<td>IRRF</td>
+<td colspan="2">Conta IRRF</td>
+<td colspan="4">Conta contábil para crédito de IRRF.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GFEA91REL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/guecd.html">GUECD</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gus_ctirrf.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/056.html">056</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_DSCTIR</td>
+<td>Descricao</td>
+<td colspan="2">Descricao da Conta</td>
+<td colspan="4">Descrição da conta contábil.
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("GUE",1,XFILIAL("GUE")+GUS->GUS_CTIRRF,"GUE_TITULO")," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_CCIRRF</td>
+<td>C C IRRF</td>
+<td colspan="2">Centro de Custo IRRF</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GFEA91REL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/guhcd.html">GUHCD</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gus_ccirrf.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/057.html">057</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_DSCCIR</td>
+<td>Descricao CC</td>
+<td colspan="2">Descricao Centro de Custo</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("GUH",1,XFILIAL("GUH")+GUS->GUS_CCIRRF,"GUH_DESC")," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_CTTRIN</td>
+<td>Trans INSS</td>
+<td colspan="2">Conta Transitoria INSS</td>
+<td colspan="4">Conta contábil transitória de INSS.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GFEA91REL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/guecd.html">GUECD</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gus_cttrin.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/056.html">056</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_DSCTRI</td>
+<td>Descricao</td>
+<td colspan="2">Descricao da Conta</td>
+<td colspan="4">Descrição da conta contábil.
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("GUE",1,XFILIAL("GUE")+GUS->GUS_CTTRIN,"GUE_TITULO")," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_CCTRIN</td>
+<td>CC Tran INSS</td>
+<td colspan="2">Centro Custo Trans INSS</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GFEA91REL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/guhcd.html">GUHCD</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gus_cctrin.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/057.html">057</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GUS_DCCTIN</td>
+<td>Descricao CC</td>
+<td colspan="2">Descricao Centro de Custo</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("GUH",1,XFILIAL("GUH")+GUS->GUS_CCTRIN,"GUH_DESC")," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

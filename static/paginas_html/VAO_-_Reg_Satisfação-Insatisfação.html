@@ -1,0 +1,1568 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: VAO - Reg Satisfação/Insatisfação</title></head>
+<body>
+<font color="orange"><h2 id="VAO">Tabela: VAO - Reg Satisfação/Insatisfação</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Reg Satisfação/Insatisfação</b></td><td colspan="2"><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">VAO_FILIAL+VAO_CODCLI+VAO_LOJCLI+DTOS(VAO_DATREC)</td><td>Cliente + Loja + Dt Registro</td><td></td></tr>
+<tr><td>2</td><td colspan="2">VAO_FILIAL+DTOS(VAO_DATREC)+VAO_CODCLI+VAO_LOJCLI</td><td>Dt Registro + Cliente + Loja</td><td></td></tr>
+<tr><td>3</td><td colspan="2">VAO_FILIAL+VAO_RECLDE+VAO_SEQUEN</td><td>Reclam de: + Sequencial</td><td></td></tr>
+<tr><td>4</td><td colspan="2">VAO_FILIAL+VAO_SEQUEN</td><td>Sequencial</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>VAO_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Informe o código da Filial.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_CODCLI</td>
+<td>Cliente</td>
+<td colspan="2">Codigo do Cliente</td>
+<td colspan="4">Informe o código do cliente.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>FG_Seek("SA1","M->VAO_CODCLI",1,.f.,)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/vsa.html">VSA</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VAO_LOJCLI</td>
+<td>Loja</td>
+<td colspan="2">Loja do Cliente</td>
+<td colspan="4">Informe a loja do cliente.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>FG_Seek("SA1","M->VAO_CODCLI+M->VAO_LOJCLI",1,.f.,"VAO_NOMCLI","A1_NREDUZ")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VAO_NOMCLI</td>
+<td>Nome Cliente</td>
+<td colspan="2">Nome do Cliente</td>
+<td colspan="4">Informe o nome do Cliente.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!S30                                        </td>
+<td></td>
+<td>if(!Inclui,Posicione("SA1",1,xFilial("SA1")+VAO->VAO_CODCLI+VAO->VAO_LOJCLI,"A1_NOME"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("SA1",1,xFilial("SA1")+VAO->VAO_CODCLI+VAO->VAO_LOJCLI,"A1_NOME")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_DATREC</td>
+<td>Dt Registro</td>
+<td colspan="2">Data Registro</td>
+<td colspan="4">Informe a data de reclamação.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>M->VAO_DATREC <= dDataBase</td>
+<td>IF(INCLUI,DDATABASE,VAO->VAO_DATREC)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VAO_HORREC</td>
+<td>Hr Registro</td>
+<td colspan="2">Hora Registro</td>
+<td colspan="4">Informe aqui a hora do registro.
+</td>
+<td>N</td>
+<td>4</td>
+<td>0</td>
+<td>@R 99:99                                     </td>
+<td></td>
+<td>val(substr(time(),1,2)+substr(time(),4,2))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_USUREC</td>
+<td>Usuario Reg</td>
+<td colspan="2">Usuario Registro</td>
+<td colspan="4">Informe o usuario da reclamação.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@6                                           </td>
+<td>UsrExist(M->VAO_USUREC) .and. (M->VAO_DESREC:=UsrRetName(M->VAO_USUREC))</td>
+<td>IF(INCLUI,__CUSERID,VAO->VAO_USUREC)</td>
+<td><a href="/tabelas_protheus/f3/usr.html">USR</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VAO_DESREC</td>
+<td>Nome</td>
+<td colspan="2">Nome do Usuario</td>
+<td colspan="4">Informe o nome do usuário.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!S20                                        </td>
+<td></td>
+<td>If(Inclui,UsrRetName(__CUSERID),UsrRetName(VAO->VAO_USUREC))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>UsrRetName(VAO->VAO_USUREC)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_DEPART</td>
+<td>Departamento</td>
+<td colspan="2">Departamento Reclamacao</td>
+<td colspan="4">Informe o departamento da  reclamação
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>FG_Seek("VAP","M->VAO_DEPART",1,.f.,"VAO_DESDEP","VAP_DESDEP") .and. VCM610011_UsuarioResp()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/vap.html">VAP</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>VCM600VAL("OK")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VAO_DESDEP</td>
+<td>Descricao</td>
+<td colspan="2">Nome do Departamento</td>
+<td colspan="4">Informe o nome do Departamento.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!S20                                        </td>
+<td></td>
+<td>if(!Inclui,Posicione("VAP",1,xFilial("VAP")+VAO->VAO_DEPART,"VAP_DESDEP"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("VAP",1,xFilial("VAP")+VAO->VAO_DEPART,"VAP_DESDEP")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_USURES</td>
+<td>Usuario Resp</td>
+<td colspan="2">Usuario Responsavel</td>
+<td colspan="4">Informe o usuario responsavel.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@6                                           </td>
+<td>UsrExist(M->VAO_USURES) .and. (M->VAO_DESRES:=UsrRetName(M->VAO_USURES))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/usr.html">USR</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>VCM600VAL("OK")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VAO_DESRES</td>
+<td>Nome</td>
+<td colspan="2">Nome do Usuario</td>
+<td colspan="4">Informe o nome do usuário.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!S20                                        </td>
+<td></td>
+<td>If(Inclui,UsrRetName(__CUSERID),UsrRetName(VAO->VAO_USURES))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>UsrRetName(VAO->VAO_USURES)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_DATPRO</td>
+<td>Prorrog Resp</td>
+<td colspan="2">Data Prorrogacao Resposta</td>
+<td colspan="4">Informe a data da prorrogação da
+resposta.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>VCM600VAL("PRO")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>VCM600VAL("DTP")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_DATENC</td>
+<td>Dt Encerram</td>
+<td colspan="2">Data Encerramento</td>
+<td colspan="4">Informe a data de encerramento.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>VCM600VAL("ENC")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>VCM600VAL("DTP")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_HORENC</td>
+<td>Hr Encerram</td>
+<td colspan="2">Hora Encerramento</td>
+<td colspan="4">Informe aqui a hora do encerramento.
+</td>
+<td>N</td>
+<td>4</td>
+<td>0</td>
+<td>@R 99:99                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_TIPREC</td>
+<td>Tp Registro</td>
+<td colspan="2">Tipo de Registro</td>
+<td colspan="4">Informe o tipo de reclamaçao
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>FG_Seek("VAQ","M->VAO_TIPREC",1,.f.,"VAO_DESTIP","VAQ_DESTIP")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/vaq.html">VAQ</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>VCM600VAL("OK")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VAO_DESTIP</td>
+<td>Descricao</td>
+<td colspan="2">Descricao do Tipo</td>
+<td colspan="4">Informe o nome do tiop de reclamação.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!S20                                        </td>
+<td></td>
+<td>if(!Inclui,Posicione("VAQ",1,xFilial("VAQ")+VAO->VAO_TIPREC,"VAQ_DESTIP"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("VAQ",1,xFilial("VAQ")+VAO->VAO_TIPREC,"VAQ_DESTIP")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_SITUAC</td>
+<td>Situacao</td>
+<td colspan="2">Situacao</td>
+<td colspan="4">Informe a situação da reclamação.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!S1                                         </td>
+<td>PERTENCE("012")</td>
+<td>If(Inclui,"0",VAO->VAO_SITUAC)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>0=Aberto;1=Prorrogado;2=Encerrado</td>
+<td>.f.</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_RECLAM</td>
+<td>Observacao</td>
+<td colspan="2">Observacao</td>
+<td colspan="4">Informe a reclamação do cliente.
+</td>
+<td>M</td>
+<td>47</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>E_MSMM(VAO->VAO_RECLAO,47)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VAO_RECLAO</td>
+<td>OCO-MEMO</td>
+<td colspan="2">OCO-MEMO</td>
+<td colspan="4">Informe a reclamação do cliente.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!S6                                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_SEQUEN</td>
+<td>Sequencial</td>
+<td colspan="2">Sequencial</td>
+<td colspan="4">Informe aqui o sequencial.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,GetSXENum("VAO","VAO_SEQUEN"),VAO->VAO_SEQUEN)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_RECLDE</td>
+<td>Reclam de:</td>
+<td colspan="2">Reclamacao de:</td>
+<td colspan="4">Informe aqui qual a reclamação.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("1234")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Assist.Tecnica;2=Pecas;3=Vendas;4=Administracao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_TIPORI</td>
+<td>Tp.Origem</td>
+<td colspan="2">Tp.Origem</td>
+<td colspan="4">Informe o tipo de origem:
+1=Atendimento Veiculos
+2=OS de Oficina
+3=Pecas Balcao
+4=CEV
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("1234")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Atendimento Veiculos;2=OS de Oficina;3=Pecas Balcao;4=CEV</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_FILORI</td>
+<td>Fil.Origem</td>
+<td colspan="2">Fil.Origem</td>
+<td colspan="4">Informe a Filial.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_ORIGEM</td>
+<td>Origem</td>
+<td colspan="2">Origem</td>
+<td colspan="4">Informe a origem. Nro do Atendimento
+ou Nro da OS ou Nro do Orcamento.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_TIPTEM</td>
+<td>Tipo Tempo</td>
+<td colspan="2">Tipo de Tempo</td>
+<td colspan="4">Informe o tipo de tempo.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .or. VCM600VAL("TIPTEM")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/vo4voi.html">VO4VOI</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>M->VAO_TIPORI="2"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_DTRECL</td>
+<td>Dt.Reclamaca</td>
+<td colspan="2">Data da Reclamacao</td>
+<td colspan="4">Informe aqui a reclamação.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_HRRECL</td>
+<td>Hr.Reclamaca</td>
+<td colspan="2">Hora da Reclamacao</td>
+<td colspan="4">Informe aqui a hora da reclamação.
+</td>
+<td>N</td>
+<td>4</td>
+<td>0</td>
+<td>@R 99:99                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_CMPASS</td>
+<td>Compromiss</td>
+<td colspan="2">Compromisso Assumido</td>
+<td colspan="4">Informe aqui o compromisso assumido.
+</td>
+<td>M</td>
+<td>70</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_DTCASS</td>
+<td>Dt Comprom</td>
+<td colspan="2">Data do Compromisso Assum</td>
+<td colspan="4">Informe aqui a data do compromisso
+assumido.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_HRCASS</td>
+<td>Hr Comprom</td>
+<td colspan="2">Hora do Compromisso Assum</td>
+<td colspan="4">Informe aqui a hora do compromisso
+assumido.
+</td>
+<td>N</td>
+<td>4</td>
+<td>0</td>
+<td>@R 99:99                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_AGESER</td>
+<td>Agend.Servic</td>
+<td colspan="2">Agendamento de Servico</td>
+<td colspan="4">Informe aqui se e um agendamento de
+serviço.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("01")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>0=Nao;1=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_CONAGE</td>
+<td>Consultor Ag</td>
+<td colspan="2">Consultor do Agendamento</td>
+<td colspan="4">Informe aqui o Consultor do Agendamento.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>!!!!!!                                       </td>
+<td>FG_SEEK("VAI","M->VAO_CONAGE",1,.F.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/vai1.html">VAI1</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_DATAGE</td>
+<td>Dt Agenda</td>
+<td colspan="2">Data do Agendamento</td>
+<td colspan="4">Informe aqui a data do Agendamento.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_HORAGE</td>
+<td>Hr Agendamto</td>
+<td colspan="2">Hora do Agendamento</td>
+<td colspan="4">Informe aqui a hora do Agendamento.
+</td>
+<td>N</td>
+<td>4</td>
+<td>0</td>
+<td>@R 99:99                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_CORESP</td>
+<td>Correcao</td>
+<td colspan="2">Correcao Especifica</td>
+<td colspan="4">Informe aqui a correcao especifica.
+</td>
+<td>M</td>
+<td>70</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_DTCESP</td>
+<td>DtCorrecao</td>
+<td colspan="2">Data da Correcao Especifi</td>
+<td colspan="4">Informe aqui a data correção especifica.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_HRCESP</td>
+<td>HrCorrecao</td>
+<td colspan="2">Hora da Correcao Especifi</td>
+<td colspan="4">Informe aqui a hora correção especifica.
+</td>
+<td>N</td>
+<td>4</td>
+<td>0</td>
+<td>@R 99:99                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_CAUPRB</td>
+<td>Causa Prob</td>
+<td colspan="2">Causa do Problema</td>
+<td colspan="4">Informe aqui a causa do problema.
+</td>
+<td>M</td>
+<td>70</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_DTCPRB</td>
+<td>Dt Causa</td>
+<td colspan="2">Data da Causa do Problema</td>
+<td colspan="4">Informe aqui a data da causa do
+problema.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_HRCPRB</td>
+<td>Hr Causa</td>
+<td colspan="2">Hora da Causa do Problema</td>
+<td colspan="4">Informe aqui a hora da causa do
+problema.
+</td>
+<td>N</td>
+<td>4</td>
+<td>0</td>
+<td>@R 99:99                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_SRVGER</td>
+<td>Srvc Gerais</td>
+<td colspan="2">Servicos Gerais</td>
+<td colspan="4">Informe o valor de Servicos Gerais.
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>M->VAO_TIPORI="2"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_TPOSVG</td>
+<td>Tempo GO</td>
+<td colspan="2">Tempo GO</td>
+<td colspan="4">Informe o tempo GO.
+</td>
+<td>N</td>
+<td>4</td>
+<td>0</td>
+<td>@R 99:99                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>M->VAO_TIPORI="2"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_SRVCAR</td>
+<td>Srvc Carroc</td>
+<td colspan="2">Servicos Carroceria</td>
+<td colspan="4">Informe o valor de Servicos Carroceria.
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>M->VAO_TIPORI="2"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_TPOSRC</td>
+<td>Tempo GO</td>
+<td colspan="2">Tempo GO</td>
+<td colspan="4">Informe o tempo GO.
+</td>
+<td>N</td>
+<td>4</td>
+<td>0</td>
+<td>@R 99:99                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>M->VAO_TIPORI="2"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_CODPRO</td>
+<td>Cd.Produtivo</td>
+<td colspan="2">Codigo do Produtivo</td>
+<td colspan="4">Informe o codigo do Produtivo.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .or. VCM600VAL("CODPRO")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/vo4vai.html">VO4VAI</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>M->VAO_TIPORI="2"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_CONFOR</td>
+<td>Conforme</td>
+<td colspan="2">Conforme</td>
+<td colspan="4">Informe aqui se está conforme.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("01")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Nao;1=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_APOCOR</td>
+<td>Pos Correc</td>
+<td colspan="2">Contato Pos Correcao</td>
+<td colspan="4">Informe aqui o contato pós correção.
+</td>
+<td>M</td>
+<td>70</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_DTACOR</td>
+<td>Dt PosCorr</td>
+<td colspan="2">Data do Contato Pos Corre</td>
+<td colspan="4">Informe aqui a data contato pós
+correção.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_HRACOR</td>
+<td>Hr PosCorr</td>
+<td colspan="2">Hora do Contato Pos Corre</td>
+<td colspan="4">Informe aqui a hora contato pós
+correção.
+</td>
+<td>N</td>
+<td>4</td>
+<td>0</td>
+<td>@R 99:99                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_UUID</td>
+<td>UUID</td>
+<td colspan="2">Id unico universal</td>
+<td colspan="4">ID unico criado para integracoes.
+</td>
+<td>C</td>
+<td>36</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>FWUUIDV4(.t.)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>.f.</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_DATINC</td>
+<td>Dt Inclusao</td>
+<td colspan="2">Data Inclusao Registro</td>
+<td colspan="4">Data em que o registro foi inserido no
+banco.
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>FGX_Timestamp()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>.f.</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAO_DATALT</td>
+<td>Dt Alteracao</td>
+<td colspan="2">Data Alteracao Registro</td>
+<td colspan="4">Data em que o registro foi alterado no
+banco.
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>FGX_Timestamp()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>.f.</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

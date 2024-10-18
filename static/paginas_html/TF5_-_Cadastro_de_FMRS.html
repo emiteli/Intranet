@@ -1,0 +1,598 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: TF5 - Cadastro de FMRS</title></head>
+<body>
+<font color="orange"><h2 id="TF5">Tabela: TF5 - Cadastro de FMRS</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Cadastro de FMRS</b></td><td colspan="2"><b>TF5_FILIAL+TF5_CODFMR</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">TF5_FILIAL+TF5_CODFMR</td><td>Cód. FMR</td><td></td></tr>
+<tr><td>2</td><td colspan="2">TF5_FILIAL+TF5_DEPTO+TF5_CODPNT+TF5_CODRES+TF5_STATUS</td><td>Departamento + Ponto Coleta + Resíduo + Status</td><td></td></tr>
+<tr><td>3</td><td colspan="2">TF5_FILIAL+TF5_CODRES+TF5_DEPTO+TF5_STATUS</td><td>Resíduo + Departamento + Status</td><td></td></tr>
+<tr><td>4</td><td colspan="2">TF5_FILIAL+TF5_STATUS+TF5_CODRES</td><td>Status + Resíduo</td><td></td></tr>
+<tr><td>5</td><td colspan="2">TF5_FILIAL+DTOS(TF5_DATA)+TF5_CODRES+TF5_STATUS</td><td>Data + Resíduo + Status</td><td></td></tr>
+<tr><td>6</td><td colspan="2">TF5_FILIAL+TF5_CODOCO</td><td>Ocorrência</td><td></td></tr>
+<tr><td>7</td><td colspan="2">TF5_FILIAL+TF5_FNC</td><td>Cód. FNC</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>TF5_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Código da Filial do Sistema
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF5_CODFMR</td>
+<td>Cód. FMR</td>
+<td colspan="2">Código da FMR</td>
+<td colspan="4">Código da Ficha de Movimentação de
+Resíduos.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistChav("TF5",M->TF5_CODFMR) .and. FreeForUse("TF5")</td>
+<td>IF(INCLUI,GETSXENUM("TF5","TF5_CODFMR"),TF5->TF5_CODFMR)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TF5_DATA</td>
+<td>Data</td>
+<td colspan="2">Data da FMR</td>
+<td colspan="4">Informe a data de geração da Ficha de
+Movimentação de Resíduos.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IF(INCLUI,dDataBase,TF5->A8_DATA)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TF5_DEPTO</td>
+<td>Departamento</td>
+<td colspan="2">Departamento da FMR</td>
+<td colspan="4">Informe o código do Departamento na
+Estrutura Organizacional. Tecla [F3]
+Disponível.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/tf5_depto.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TF5_DESDEP</td>
+<td>Desc. Depto.</td>
+<td colspan="2">Desc. do Departamento</td>
+<td colspan="4">Descrição do Departamento da Estrutura
+Organizacional.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>NGSEEK("TAF",TF5->TF5_DEPTO,8,"TAF->TAF_NOMNIV")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>NGSEEK("TAF",TF5->TF5_DEPTO,8,"TAF->TAF_NOMNIV")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF5_CODPNT</td>
+<td>Ponto Coleta</td>
+<td colspan="2">Código do Ponto</td>
+<td colspan="4">Informe o código do ponto de coleta.
+Tecla [F3] Disponível.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("TF7",M->TF5_DEPTO+M->TF5_CODPNT)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tf7.html">TF7</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tf5_codpnt.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>!Empty(M->TF5_DEPTO)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TF5_DESCRI</td>
+<td>Desc. Ponto</td>
+<td colspan="2">Desc. do Ponto</td>
+<td colspan="4">Descrição do ponto de coleta.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>TF7->(VDISP(TF5->TF5_DEPTO+TF5->TF5_CODPNT,"TF7->TF7_DESCRI"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>TF7->(VDISP(TF5->TF5_DEPTO+TF5->TF5_CODPNT,"TF7->TF7_DESCRI"))</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF5_CODRES</td>
+<td>Resíduo</td>
+<td colspan="2">Código do Resíduo</td>
+<td colspan="4">Informe o código do Resíduo gerado.
+Tecla [F3] Disponível.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/tf5_codres.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TF5_DESCRE</td>
+<td>Desc. Resid.</td>
+<td colspan="2">Desc. de Residuo</td>
+<td colspan="4">Descrição do Resíduo gerado.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>SB1->(VDISP(M->TF5_CODRES,"SB1->B1_DESC"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>SB1->(VDISP(TF5->TF5_CODRES,"SB1->B1_DESC"))</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF5_RESPON</td>
+<td>Responsável</td>
+<td colspan="2">Responsável pela FMR"</td>
+<td colspan="4">Login do usuário que fez a inclusão da
+Ficha de Movimentação de Resóduos.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IF(INCLUI,Substr(cUsuario,7,13),TF5->TF5_RESPON)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TF5_NOMRES</td>
+<td>Nome Resp.</td>
+<td colspan="2">Nome do Responsável</td>
+<td colspan="4">ome do usuário que fez a inclusão da
+Ficha de Movimentação de Resóduos.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>SG510NMR(M->TF5_RESPON)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>SG510NMR(TF5->TF5_RESPON)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TF5_ORDPRO</td>
+<td>Ord. Produçã</td>
+<td colspan="2">Ordem de Produção</td>
+<td colspan="4">Informe o código da Ordem de Produção
+relacionada a geração do Resíduo. Tecla
+[F3] Disponível.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SC2",M->TF5_ORDPRO)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF5_OBSERV</td>
+<td>Observação</td>
+<td colspan="2">Observação</td>
+<td colspan="4">Informe observações pertinentes a Ficha
+de Movimentação de Resíduos.
+</td>
+<td>M</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF5_STATUS</td>
+<td>Status</td>
+<td colspan="2">Status da FMR</td>
+<td colspan="4">Informe o Status referente a Ficha de
+Movimentação de Resíduos. 1=Ponto de
+Coleta;2=Area de Pesagem;3=Armazem;4=Não
+Conforme;5=Cancelada;6=Reaberta;
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("1234567") .and. SG510VAL()</td>
+<td>If(Inclui,"1",TF5->TF5_STATUS)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Ponto de Coleta;2=Area de Pesagem;3=Armazem;4=N�o Conforme;5=Cancelada;6=Reaberta</td>
+<td>!lFabrica .and. Altera</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TF5_LIBRES</td>
+<td>Lib. Restric</td>
+<td colspan="2">Lib. C/ Restrições?</td>
+<td colspan="4">Verifica se libera a Ficha de
+Movimentação de Resíduos mesmo com Não
+conformidades. 1=Sim;2=Não
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>If(M->TF5_STATUS=="4",Pertence("12"),)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td>!lFabrica .and. M->TF5_STATUS == "4"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF5_DESCNC</td>
+<td>Descrição NC</td>
+<td colspan="2">Desc. Não Conformidade</td>
+<td colspan="4">Informe observações pertinentes a não
+conformdiade encontrada Ficha de
+Movimentação de Resíduos.
+</td>
+<td>M</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>!lFabrica .and. M->TF5_STATUS == "4"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF5_FNC</td>
+<td>Cód. FNC</td>
+<td colspan="2">Código FNC</td>
+<td colspan="4">Código da Ficha de Não Conformidade
+gerada pela Ficha de Movimentação de
+Resóduos.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF5_CODOCO</td>
+<td>Ocorrência</td>
+<td colspan="2">Código Ocorrência</td>
+<td colspan="4">Código da Ocorrência de Resíduos gerada
+pela Ficha de Movimentação de Resíduos.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

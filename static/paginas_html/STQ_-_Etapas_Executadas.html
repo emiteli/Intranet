@@ -1,0 +1,486 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: STQ - Etapas Executadas</title></head>
+<body>
+<font color="orange"><h2 id="STQ">Tabela: STQ - Etapas Executadas</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Etapas Executadas</b></td><td colspan="2"><b>TQ_FILIAL+TQ_ORDEM+TQ_PLANO+TQ_TAREFA+TQ_ETAPA+TQ_SEQTARE</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">TQ_FILIAL+TQ_ORDEM+TQ_PLANO+TQ_TAREFA+TQ_ETAPA+TQ_SEQTARE</td><td>Ordem + Plano + Tarefa + Etapa + Seq. Tarefa</td><td></td></tr>
+<tr><td>2</td><td colspan="2">TQ_FILIAL+TQ_ETAPA+TQ_TAREFA</td><td>Etapa + Tarefa</td><td></td></tr>
+<tr><td>3</td><td colspan="2">TQ_FILIAL+TQ_ORDEM+TQ_PLANO+TQ_TAREFA+TQ_SEQETA+TQ_ETAPA</td><td>Ordem + Plano + Tarefa + Seq. Etapa + Etapa</td><td></td></tr>
+<tr><td>4</td><td colspan="2">TQ_FILIAL+TQ_TAREFA</td><td>Tarefa</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>TQ_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Código da filial da empresa.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TQ_ORDEM</td>
+<td>Ordem</td>
+<td colspan="2">Ordem de Servico</td>
+<td colspan="4">Número da Ordem de Serviço da O.S. de
+manutenção a que se refere o controle de
+etapa executada.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TQ_PLANO</td>
+<td>Plano</td>
+<td colspan="2">Plano de Manutencao</td>
+<td colspan="4">Número do plano de manutenção do da O.S.
+a que se refere o controle de etapa
+executada.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO("STJ",M->TQ_ORDEM + M->TQ_PLANO)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TQ_TAREFA</td>
+<td>Tarefa</td>
+<td colspan="2">Tarefa da Manutencao</td>
+<td colspan="4">Código da tarefa da O.S. a que se refere
+o controle de etapa executada.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>MNTA410VLD()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/st5.html">ST5</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>NGF3TAR("TQ_TAREFA")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TQ_NOMTARE</td>
+<td>Nome Tarefa</td>
+<td colspan="2">Nome da Tarefa</td>
+<td colspan="4">Nome da tarefa da manutenção da etapa.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>VSAY("10")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>INIBRW2("STJ",STQ->TQ_TAREFA)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TQ_ETAPA</td>
+<td>Etapa</td>
+<td colspan="2">Codigo da Etapa da Tarefa</td>
+<td colspan="4">Código da etapa executada da O.S. de
+manutenção.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NGSTQETA(M->TQ_ETAPA)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/mnttar.html">MNTTAR</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TQ_NOMSITU</td>
+<td>Tipo Etapa</td>
+<td colspan="2">Tipo da Etapa</td>
+<td colspan="4">Tipo da etapa, se executada ou
+planejada.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(EMPTY(STQ->TQ_OK),"PLAN","EXEC")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>IF(EMPTY(STQ->TQ_OK),"PLAN","EXEC")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TQ_NOMETAP</td>
+<td>Descr. Etapa</td>
+<td colspan="2">Descricao da Etapa</td>
+<td colspan="4">Nome da etapa da manutenção.
+</td>
+<td>C</td>
+<td>150</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>TPA->(VDISP(STQ->TQ_ETAPA,"TPA_DESCRI"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>IF(TPA->(DBSEEK(XFILIAL("TPA")+STQ->TQ_ETAPA)),TPA->TPA_DESCRI," ")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TQ_OK</td>
+<td>Situacao</td>
+<td colspan="2">Situacao da Etapa</td>
+<td colspan="4">Situação da etapa.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TQ_CODFUNC</td>
+<td>Matricula</td>
+<td colspan="2">Matricula do Funcionário</td>
+<td colspan="4">Código do funcionário que executou a
+etapa.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO("ST1",M->TQ_CODFUNC)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/st1.html">ST1</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/121.html">121</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TQ_OPCOES</td>
+<td>Tipo Opcao</td>
+<td colspan="2">Tipo de opcoes de reposta</td>
+<td colspan="4">Indica o número de opções na Etapa.
+Utilizar '0' - Nenhuma, '1' - Exclusiva
+ou '2' - Múltiplas
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('012')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>0=Nenhuma;1=Exclusiva;2=M�ltiplas</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TQ_SEQETA</td>
+<td>Seq. Etapa</td>
+<td colspan="2">Sequencia da Etapa</td>
+<td colspan="4">Indica a sequência de ordenação do
+código da etapa.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>MNT420SEQE()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TQ_SEQTARE</td>
+<td>Seq. Tarefa</td>
+<td colspan="2">Sequencia da Tarefa</td>
+<td colspan="4">Sequência da tarefa.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TQ_OBSERVA</td>
+<td>Observação</td>
+<td colspan="2">Observação da Etapa</td>
+<td colspan="4">Observaçao da Etapa
+</td>
+<td>M</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>TPQ</td>
+<td colspan="2">TQ_ORDEM+TQ_PLANO+TQ_TAREFA+TQ_ETAPA</td>
+<td colspan="2">TPQ_ORDEM+TPQ_PLANO+TPQ_TAREFA+TPQ_ETAPA</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

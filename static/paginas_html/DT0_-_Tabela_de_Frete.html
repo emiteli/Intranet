@@ -1,0 +1,527 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: DT0 - Tabela de Frete</title></head>
+<body>
+<font color="orange"><h2 id="DT0">Tabela: DT0 - Tabela de Frete</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Tabela de Frete</b></td><td colspan="2"><b>DT0_FILIAL+DT0_TABFRE+DT0_TIPTAB+DT0_CDRORI+DT0_CDRDES+DT0_CODPRO</b></td><td><b>TMSA010</b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">DT0_FILIAL+DT0_TABFRE+DT0_TIPTAB+DT0_CDRORI+DT0_CDRDES+DT0_CODPRO</td><td>Tab.Frete + Tipo + Cod.Reg.Ori. + Cod.Reg.Des. + Produto</td><td></td></tr>
+<tr><td>2</td><td colspan="2">DT0_FILIAL+DT0_CDRORI+DT0_CDRDES+DT0_TABFRE+DT0_TIPTAB+DT0_CODPRO</td><td>Cod.Reg.Ori. + Cod.Reg.Des. + Tab.Frete + Tipo + Produto</td><td></td></tr>
+<tr><td>3</td><td colspan="2">DT0_FILIAL+DT0_CDRDES</td><td>Cod.Reg.Des.</td><td></td></tr>
+<tr><td>4</td><td colspan="2">DT0_FILIAL+DT0_CATTAB+DT0_TABFRE+DT0_TIPTAB+DT0_CDRORI+DT0_CDRDES+DT0_CODPRO</td><td>Categ.Tabela + Tab.Frete + Tipo + Cod.Reg.Ori. + Cod.Reg.Des. + Produt</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>DT0_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Filial do Sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DT0_TABFRE</td>
+<td>Tab.Frete</td>
+<td colspan="2">Tab.Frete</td>
+<td colspan="4">Neste campo é informado um código
+alfa-numérico que passará  a
+identificar  a tabela de frete em todo o
+sistema. Não é permitido incluir a mesma
+tabela de frete, tipo, origem e destino
+mais de uma vez. Nem excluir uma tabela
+com conhecimento já calculado com ela se
+o parâmetro "MV_CONTHIS" estiver com
+conteúdo igual .T..
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("DTL",M->DT0_TABFRE+AllTrim(M->DT0_TIPTAB))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DT0_TIPTAB</td>
+<td>Tipo</td>
+<td colspan="2">Tipo</td>
+<td colspan="4">Tipo da tabela de frete selecionada.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SX5","M5"+M->DT0_TIPTAB) .And. ExistCpo("DTL",M->DT0_TABFRE+M->DT0_TIPTAB)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/m5.html">M5</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DT0_DESTIP</td>
+<td>Desc. Tipo</td>
+<td colspan="2">Descricao Tipo da Tabela</td>
+<td colspan="4">Descrição do tipo da tabela de frete.
+Será preenchido automaticamente após a
+digitação do tipo da tabela de frete.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Tabela("M5",DT0->DT0_TIPTAB,.F.)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Tabela("M5",DT0->DT0_TIPTAB,.F.)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DT0_DESTAB</td>
+<td>Descricao</td>
+<td colspan="2">Descricao Tabela de Frete</td>
+<td colspan="4">Descricao da tabela de frete.
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIF(Inclui,'',Posicione('DTL',1,xFilial('DTL')+DT0->DT0_TABFRE+DT0->DT0_TIPTAB,'DTL_DESCRI'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione('DTL',1,xFilial('DTL')+DT0->DT0_TABFRE+DT0->DT0_TIPTAB,'DTL_DESCRI')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DT0_CDRORI</td>
+<td>Cod.Reg.Ori.</td>
+<td colspan="2">Cod.Regiao Origem</td>
+<td colspan="4">Código da região origem da Tabela de
+Frete. Este código será considerado para
+o cálculo dos valores de frete.
+Esta informação em conjunto com a região
+de destino, específica os trechos de
+possíveis viagens e seus respectivos
+valores de frete. É obrigatório que esta
+região esteja definida como região de
+origem no cadastro de complemento de
+regiões.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("DUY",M->DT0_CDRORI,1) .And. TMSA010Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/duy.html">DUY</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dt0_cdrori.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DT0_REGORI</td>
+<td>Reg.Origem</td>
+<td colspan="2">Reg.Origem</td>
+<td colspan="4">Descrição da região origem.
+Será preenchido automaticamente após a
+digitação do código da região.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui,"",Posicione("DUY",1,xFilial("DUY")+DT0->DT0_CDRORI,"DUY_DESCRI"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("DUY",1,xFilial("DUY")+DT0->DT0_CDRORI,"DUY_DESCRI")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DT0_CDRDES</td>
+<td>Cod.Reg.Des.</td>
+<td colspan="2">Cod.Regiao Destino</td>
+<td colspan="4">Código da região destino da Tabela.
+Este Código será considerado para o
+cálculo dos valores de frete.
+Esta informação em conjunto com a região
+de origem, especifica os trechos de
+possíveis viagens e seus respectivos
+valores de frete. É obrigatório que esta
+região esteja definida como região de
+destino no cadastro de complemento de
+regiões.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("DUY",M->DT0_CDRDES,1) .And. TMSA010Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/duy.html">DUY</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dt0_cdrdes.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DT0_REGDES</td>
+<td>Reg.Destino</td>
+<td colspan="2">Reg.Destino</td>
+<td colspan="4">Descrição da região destino. Será
+preenchido automaticamente após a
+digitação do código da região.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui,"",Posicione("DUY",1,xFilial("DUY")+DT0->DT0_CDRDES,"DUY_DESCRI"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("DUY",1,xFilial("DUY")+DT0->DT0_CDRDES,"DUY_DESCRI")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DT0_TABTAR</td>
+<td>Tab.Tarifa</td>
+<td colspan="2">Tabela Tarifa</td>
+<td colspan="4">Código da tabela de tarifas; Se este
+campo for informado, os componentes da
+Tabela,serão preenchidos automaticamente
+com os dados dos componentes da tabela
+de tarifas informada.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>TmsA010Tar()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dtf.html">DTF</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DT0_CODPRO</td>
+<td>Produto</td>
+<td colspan="2">Produto</td>
+<td colspan="4">Código do produto associado à tabela de
+frete.Caso não seja informado, indica
+que os valores da tabela serão aplicados
+para todos os produtos.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Tmsa010Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sb1.html">SB1</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dt0_codpro.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>TMSA010Whe()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/030.html">030</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DT0_DESPRO</td>
+<td>Desc.Produto</td>
+<td colspan="2">Descricao Produto</td>
+<td colspan="4">Descrição do produto utilizado na
+tabela.
+Será preenchido automaticamente
+após a digitação do código do produto.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",Posicione("SB1",1,xFilial("SB1")+DT0->DT0_CODPRO,"B1_DESC"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("SB1",1,xFilial("SB1")+DT0->DT0_CODPRO,"B1_DESC")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DT0_CATTAB</td>
+<td>Categ.Tabela</td>
+<td colspan="2">Categoria da Tabela</td>
+<td colspan="4">Categoria da Tabela de Frete; Identifica
+qual a Categoria da Tabela: 'Frete a
+Receber' ou 'Frete a Pagar'.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Frete a Receber;2=Frete a Pagar</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DT0_MOEDA</td>
+<td>Moeda</td>
+<td colspan="2">Moeda</td>
+<td colspan="4">Identifica qual a moeda utilizada pela
+tabela de frete.
+Poderá ser uma das 5 moedas válidas no
+sistema, conforme o cadastro de moedas.
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>DT1</td>
+<td colspan="2">DT0_TABFRE+DT0_TIPTAB+DT0_CDRORI+DT0_CDRDES+DT0_CODPRO</td>
+<td colspan="2">DT1_TABFRE+DT1_TIPTAB+DT1_CDRORI+DT1_CDRDES+DT1_CODPRO</td>
+</tr>
+<tr>
+<td>DTK</td>
+<td colspan="2">DT0_TABFRE+DT0_TIPTAB+DT0_CDRORI+DT0_CDRDES+DT0_CODPRO</td>
+<td colspan="2">DTK_TABFRE+DTK_TIPTAB+DTK_CDRORI+DTK_CDRDES+DTK_CODPRO</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

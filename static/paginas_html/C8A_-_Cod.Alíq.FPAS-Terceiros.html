@@ -1,0 +1,359 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: C8A - Cod.Alíq.FPAS/Terceiros</title></head>
+<body>
+<font color="orange"><h2 id="C8A">Tabela: C8A - Cod.Alíq.FPAS/Terceiros</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Cod.Alíq.FPAS/Terceiros</b></td><td colspan="2"><b>C8A_FILIAL+C8A_ID</b></td><td><b>TAFA215</b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">C8A_FILIAL+C8A_ID</td><td>ID</td><td></td></tr>
+<tr><td>2</td><td colspan="2">C8A_FILIAL+C8A_CDFPAS+C8A_CODTER+DTOS(C8A_VALIDA)</td><td>Cod.FPAS + Cod.Terceiro + Data Vigenc.</td><td></td></tr>
+<tr><td>3</td><td colspan="2">C8A_FILIAL+C8A_SITCTB</td><td>Sit.Contrib.</td><td></td></tr>
+<tr><td>4</td><td colspan="2">C8A_FILIAL+C8A_CODTER+C8A_CDFPAS</td><td>Cod.Terceiro + Cod.FPAS</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>C8A_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Deve representar neste campo o código da
+Filial.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C8A_ID</td>
+<td>ID</td>
+<td colspan="2">Identificado Registro</td>
+<td colspan="4">Deve representar o código de
+identificação do registro. Este código é
+controlado internamente pelo sistema de
+forma incremental e único por filial.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>GetSx8Num("C8A","C8A_ID")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C8A_CDFPAS</td>
+<td>Cod.FPAS</td>
+<td colspan="2">Cod.FPAS</td>
+<td colspan="4">Deve representar neste campo a
+Identificação do código de FPAS conforme
+determina a legislação.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>XFUNVldUni("C8A",2, M->C8A_CDFPAS+FWFLDGET("C8A_CODTER")+DTOS(FWFLDGET("C8A_VALIDA")))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>C8A_SITCTB</td>
+<td>Sit.Contrib.</td>
+<td colspan="2">Situação do Contribuinte</td>
+<td colspan="4">Deve representar neste campo a Situação
+do  Contribuinte conforme determina a
+legislação.
+</td>
+<td>C</td>
+<td>220</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>C8A_CODTER</td>
+<td>Cod.Terceiro</td>
+<td colspan="2">Cod. De Terceiros</td>
+<td colspan="4">Deve representar neste campo o código de
+Terceiros, conforme tabela 4, já
+considerando a existência de eventuais
+convênios para recolhimento direto.
+Exemplo: Se o contribuinte está
+enquadrado com FPAS 507, cujo código
+cheio de Terceiros é 0079,
+se possuir convênio com Senai deve
+informar o código 0075.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>XFUNVldUni("C8A",2, FWFLDGET("C8A_CDFPAS")+M->C8A_CODTER+DTOS(FWFLDGET("C8A_VALIDA")))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>C8A_ALIQ</td>
+<td>Al.Fpas/Terc</td>
+<td colspan="2">Alíquota FPAS/Terc</td>
+<td colspan="4">Deve representar neste campo a Alíquota
+do FPAS/Terceiros.
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>@E 999.99                                    </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C8A_VALIDA</td>
+<td>Data Vigenc.</td>
+<td colspan="2">Dt.Vigência do Registro</td>
+<td colspan="4">Deve representar a data de vigência dos
+Códigos e Alíquotas de Fpas/Terceiros.
+Data em branco identifica código vigente
+no momento.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>XFUNVldUni("C8A",2, FWFLDGET("C8A_CDFPAS")+FWFLDGET("C8A_CODTER")+DTOS(M->C8A_VALIDA))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>LE1</td>
+<td colspan="2">C8A_ID</td>
+<td colspan="2">LE1_IDCODT</td>
+</tr>
+<tr>
+<td>T0E</td>
+<td colspan="2">C8A_ID</td>
+<td colspan="2">T0E_CODTER</td>
+</tr>
+<tr>
+<td>CR4</td>
+<td colspan="2">C8A_ID</td>
+<td colspan="2">CR4_FPAS</td>
+</tr>
+<tr>
+<td>C91</td>
+<td colspan="2">C8A_ID</td>
+<td colspan="2">C91_FPASSI</td>
+</tr>
+<tr>
+<td>C99</td>
+<td colspan="2">C8A_ID</td>
+<td colspan="2">C99_FPAS</td>
+</tr>
+<tr>
+<td>T2Y</td>
+<td colspan="2">C8A_ID</td>
+<td colspan="2">T2Y_FPAS</td>
+</tr>
+<tr>
+<td>CR2</td>
+<td colspan="2">C8A_ID</td>
+<td colspan="2">CR2_FPAS</td>
+</tr>
+<tr>
+<td>C92</td>
+<td colspan="2">C8A_ID</td>
+<td colspan="2">C92_CDFPAS</td>
+</tr>
+<tr>
+<td>T03</td>
+<td colspan="2">C8A_ID</td>
+<td colspan="2">T03_FPAS</td>
+</tr>
+<tr>
+<td>T2X</td>
+<td colspan="2">C8A_ID</td>
+<td colspan="2">T2X_FPAS</td>
+</tr>
+<tr>
+<td>C99</td>
+<td colspan="2">C8A_ID</td>
+<td colspan="2">C99_CODTER</td>
+</tr>
+<tr>
+<td>T1X</td>
+<td colspan="2">C8A_ID</td>
+<td colspan="2">T1X_FPAS</td>
+</tr>
+<tr>
+<td>T1X</td>
+<td colspan="2">C8A_ID</td>
+<td colspan="2">T1X_CODTER</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

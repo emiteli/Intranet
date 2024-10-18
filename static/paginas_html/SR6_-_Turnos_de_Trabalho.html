@@ -1,0 +1,1586 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: SR6 - Turnos de Trabalho</title></head>
+<body>
+<font color="orange"><h2 id="SR6">Tabela: SR6 - Turnos de Trabalho</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Turnos de Trabalho</b></td><td colspan="2"><b>R6_FILIAL+R6_TURNO</b></td><td><b>GPEA080</b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">R6_FILIAL+R6_TURNO</td><td>Turno</td><td></td></tr>
+<tr><td>2</td><td colspan="2">R6_FILIAL+R6_DESC</td><td>Descricao</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="6" align="center"><b><i>Abas(SXA)</i></b></td></tr><tr><td><b>XA_ALIAS</b></td><td><b>XA_ORDEM</b></td><td colspan="2"><b>XA_DESCRIC</b></td><td><b>XA_AGRUP</b></td><td><b>XA_TIPO</b></td></tr><tr><td><b>SR6</b></td><td><b>1</b></td><td colspan="2"><b>Gerais</b></td><td><b></b></td><td><b></b></td></tr><tr><td><b>SR6</b></td><td><b>2</b></td><td colspan="2"><b>Informacoes Folha</b></td><td><b></b></td><td><b></b></td></tr><tr><td><b>SR6</b></td><td><b>3</b></td><td colspan="2"><b>Informacoes Ponto</b></td><td><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>R6_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td>CposInitWhen()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R6_TURNO</td>
+<td>Turno</td>
+<td colspan="2">Turno de Trabalho</td>
+<td colspan="4">Informe o código identificador do turno
+de trabalho.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .and. ExistChav("SR6") .and. CposInitWhen() .and. FreeForUse("SR6",M->R6_TURNO)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td>#R6_TURNO  <>'   '</td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>R6_DESC</td>
+<td>Descricao</td>
+<td colspan="2">Descricao</td>
+<td colspan="4">Informe descrição do turno de trabalho.
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!S30                                        </td>
+<td>NaoVazio() .and. CposInitWhen()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td>#R6_DESC   <>'                                                  '</td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>R6_HRNORMA</td>
+<td>Hrs. Normais</td>
+<td colspan="2">Horas Normais</td>
+<td colspan="4">Informe o número de horas trabalhadas
+pelos funcionários do turno do mês
+corrente.
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>@E 999.99                                    </td>
+<td>POSITIVO() .and. CposInitWhen()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R6_HRDESC</td>
+<td>Hrs.Descanso</td>
+<td colspan="2">Horas Descanso</td>
+<td colspan="4">Informe o número de horas de descanso a
+que os  funcionários do turno terão
+direito no  mês corrente.
+</td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td>POSITIVO() .and. CposInitWhen()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R6_DIAVTRA</td>
+<td>D.Vale Tran.</td>
+<td colspan="2">Dias para Vale Transporte</td>
+<td colspan="4">Informe o número de dias em que o
+funcionário   utiliza vale transporte.
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td>CposInitWhen() .AND. POSITIVO()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R6_DDIFVTR</td>
+<td>D.Dif.V.Tran</td>
+<td colspan="2">Dias Dif. Vale Transporte</td>
+<td colspan="4">Informe o número de dias respectivos a
+alteração de valor do vale transporte.
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td>CposInitWhen() .AND. POSITIVO()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R6_DIAUTEI</td>
+<td>D.Uteis V.T.</td>
+<td colspan="2">Dias Uteis p/V.Transporte</td>
+<td colspan="4">Informe o Número de Dias de Uteis de
+Vale       Transporte do Funcionário.
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td>CposInitWhen() .AND. POSITIVO()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R6_HORMENO</td>
+<td>Horas Antes</td>
+<td colspan="2">Horas Permitidas Antes</td>
+<td colspan="4"></td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td>VldHora(M->R6_HORMENO) .and. CposInitWhen() .AND. POSITIVO()</td>
+<td>Val( GetMv("MV_HORMENO") )</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>R6_HORMAIS</td>
+<td>Horas Depois</td>
+<td colspan="2">Horas Permitidas Depois</td>
+<td colspan="4">Preencher este campo com o número de
+horas que, se somado ao horário de Saída
+da Tabela, estabelece um limite para a
+Saída do Funcionário.
+</td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td>VldHora(M->R6_HORMAIS) .and. CposInitWhen() .AND. POSITIVO()</td>
+<td>Val( GetMv("MV_HORMAIS") )</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>R6_REFEINI</td>
+<td>Refeit.Inic.</td>
+<td colspan="2">Inicio Horário Refeitório</td>
+<td colspan="4">Preencher o campo com o horário inicial
+a ser considerado para desconto de
+Refeições. Apontamentos de Refeitório
+anteriores a este horário não serão
+transferidos para a Folha de Pagamento.
+</td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td>VldHora(M->R6_REFEINI) .and. CposInitWhen()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R6_REFEFIM</td>
+<td>Refeit.Fim</td>
+<td colspan="2">Final Horário Refeitório</td>
+<td colspan="4">Preencher o campo com o horário final a
+ser considerado para desconto de
+refeitório. Apontamentos de Refeitório
+com horário superior a este não serão
+transferidos para a Folha de Pagamento.
+</td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td>VldHora(M->R6_REFEFIM) .and. CposInitWhen()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R6_ASFOLGA</td>
+<td>1a.F.Folga</td>
+<td colspan="2">1a.Falta gera Folga(DSR)</td>
+<td colspan="4">Apontar DSR para a 1a.Falta da Semana.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("SN ") .and. CposInitWhen()</td>
+<td>"N"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>S=Sim;N=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R6_NONAHOR</td>
+<td>Nona Hora</td>
+<td colspan="2">Gerar Nona Hora</td>
+<td colspan="4">Informe:
+"S" para que o sistema aponte
+automaticamente a Nona Hora;
+"N"- para que sistema não aponte
+automaticamente a Nora Hora.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("SN ") .and. CposInitWhen()</td>
+<td>"N"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>S=Sim;N=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R6_TPEXT</td>
+<td>Tp.He Normal</td>
+<td colspan="2">Tipo de Hora Extra Normal</td>
+<td colspan="4">Código do Tipo de Hora Extra Diurna a
+ser considerado no Apontamento quando
+for gerado DSR Automático.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>CposInitWhen()</td>
+<td>'1'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Normal;2=D.S.R.;3=Compensada;4=Feriado;5=Not.Normal;6=Not.D.S.R.;7=Not.Compensada;8=Not.Feriado</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R6_TPEXTN</td>
+<td>Tp.He Not.</td>
+<td colspan="2">Tipo de Hora Ext Noturna</td>
+<td colspan="4">Código do Tipo de Hora Extra Noturna a
+ser considerado no Apontamento quando
+for gerado DSR Automático.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>CposInitWhen()</td>
+<td>"5"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Normal;2=D.S.R.;3=Compensada;4=Feriado;5=Not.Normal;6=Not.D.S.R.;7=Not.Compensada;8=Not.Feriado</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R6_APODFER</td>
+<td>Ap.Marc.Fer.</td>
+<td colspan="2">Aponta Funcion. em Ferias</td>
+<td colspan="4">Indica se o Apontamento das Marcaçöes
+será feito quando funcionário estiver em
+Situação de Férias. Conteúdo Padrão
+carregado à partir do parâmetro
+MV_APODFER
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("SN") .and. CposInitWhen()</td>
+<td>GetMv("MV_APODFER")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>S=Sim;N=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R6_TPEXFER</td>
+<td>Tip.H.E. Fer</td>
+<td colspan="2">Tp de H. E. Normal Ferias</td>
+<td colspan="4">Tipo de Horas Extras Normais a ser
+considerado para funcionários em Férias.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>CposInitWhen()</td>
+<td>SubStr(GetMv("MV_TPEXFER"),3,1)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Normal;2=D.S.R.;3=Compensada;4=Feriado;5=Not.Normal;6=Not.D.S.R.;7=Not.Compensada;8=Not.Feriado</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R6_TPEXFEN</td>
+<td>Tp.H.E.Fer.N</td>
+<td colspan="2">Tp. de H.E.Noturna Ferias</td>
+<td colspan="4">Tipo de Horas Extras Noturnas a ser
+considerado para funcionários em Férias.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>CposInitWhen()</td>
+<td>SubStr(GetMV("MV_TPEXFER") ,1,1)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Normal;2=D.S.R.;3=Compensada;4=Feriado;5=Not.Normal;6=Not.D.S.R.;7=Not.Compensada;8=Not.Feriado</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R6_INIHNOT</td>
+<td>Ini Hora Not</td>
+<td colspan="2">Inicio da Hora Noturna</td>
+<td colspan="4">Início do Horário Noturno Ex. 22.00
+Conteúdo padrão carregado à partir do
+parâmetro MV_INIHNOT.
+</td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td>VldHora(M->R6_INIHNOT) .and. CposInitWhen() .AND. POSITIVO()</td>
+<td>GetMV("MV_INIHNOT")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R6_FIMHNOT</td>
+<td>Fim Hora Not</td>
+<td colspan="2">Fim da Hora Noturna</td>
+<td colspan="4">Final  do Horário Noturno Ex. 05.00
+Conteúdo padrão carregado à partir do
+parâmetro MV_FIMHNOT.
+</td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td>VldHora(M->R6_FIMHNOT) .and. CposInitWhen()</td>
+<td>GetMv("MV_FIMHNOT")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R6_MINHNOT</td>
+<td>Min Hora Not</td>
+<td colspan="2">Minutos da Hora Noturna</td>
+<td colspan="4">Quantidade de Minutos da Hora Noturna
+Ex. 52.50. Conteúdo padrão carregado à
+partir do parâmetro MV_MINHNOT.
+</td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td>NaoVazio() .and. CposInitWhen() .AND. POSITIVO()</td>
+<td>GetMv("MV_MINHNOT")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>R6_ACRENOT</td>
+<td>Apenas Ac.No</td>
+<td colspan="2">Apenas Acrescimo Noturno</td>
+<td colspan="4">Define se o Adicional Noturno sobre
+Horas Normais e Sobre Horas Extras será
+Gerado apenas pelo acréscimo de Horas
+Noturnas. O Conteúdo Padrão deste campo
+será carregado à partir do parâmetro
+MV_ACRENOT.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("SN") .and. CposInitWhen()</td>
+<td>"N"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>S=Sim;N=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R6_EXTNOT</td>
+<td>Hr.Not.p/H.E</td>
+<td colspan="2">Cons.Hr.Not. Para H.Extra</td>
+<td colspan="4">Aponta Hora Extra Noturna utilizando o
+conteúdo dos  Minutos de hora noturna.
+Conteúdo padrão inicializado à partir do
+parâmetro MV_EXTNOT.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("SN") .and. CposInitWhen()</td>
+<td>GetMv("MV_EXTNOT")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>S=Sim;N=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R6_HNOTFAL</td>
+<td>Con.AdNFalt</td>
+<td colspan="2">Considera Ad. N. p/ Falta</td>
+<td colspan="4">Este campo irá definir se para a
+Apuração das Faltas deverá ser
+considerada a Hora Noturna.
+O Conteúdo padrão deste campo é
+carregado à partir do parâmetro
+MV_HNOTFAL
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("SN") .and. CposInitWhen()</td>
+<td>GetMv("MV_HNOTFAL")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>S=Sim;N=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R6_HNOTSAI</td>
+<td>Con AdN.S.An</td>
+<td colspan="2">Considera Ad.N. p/Sai.Ant</td>
+<td colspan="4">Este campo irá definir se para a
+Apuração das Saídas Antecipadas ou No
+Expediente deverá ser considerada a Hora
+Noturna.
+O Conteúdo padrão deste campo é
+carregado à partir do parâmetro
+MV_HNOTSAI
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("SN") .and. CposInitWhen()</td>
+<td>GetMv("MV_HNOTSAI")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>S=Sim;N=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R6_HNOTATR</td>
+<td>Con.Adn.Atra</td>
+<td colspan="2">Considera Ad. N. p/Atraso</td>
+<td colspan="4">Este campo irá definir se para a
+Apuração dos Atrasos deverá ser
+considerada a Hora Noturna.
+O Conteúdo padrão deste campo é
+carregado à partir do parâmetro
+MV_HNOTATR
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("SN") .and. CposInitWhen()</td>
+<td>GetMv("MV_HNOTATR")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>S=Sim;N=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R6_APTPMAR</td>
+<td>Apon.Tip.Mar</td>
+<td colspan="2">Apontam. p/ Tipo de Marc.</td>
+<td colspan="4">Gravar os Apontamentos de Acordo com o
+Tipo de Marcação. "1E" , "1S" , "2E" ,
+"2S",... .
+O conteúdo padrão deste campo será
+carregado à partir do parâmetro
+MV_APTPMAR.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("SN") .and. CposInitWhen()</td>
+<td>GetMv("MV_APTPMAR")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>S=Sim;N=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R6_AUTOSAI</td>
+<td>Mc.Aut.D.Ntr</td>
+<td colspan="2">Marca. Autom. Dia Nao Tra</td>
+<td colspan="4">Define a geração automática das
+marcações de Intervalo para Dias Não
+trabalhados. Conteúdo padrão carregado à
+partir do parâmetro MV_AUTOSAI.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>CposInitWhen()</td>
+<td>GetMv("MV_AUTOSAI")</td>
+<td><a href="/tabelas_protheus/f3/sr6f3.html">SR6F3</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>.T.</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R6_HNOTTAB</td>
+<td>Con.H.N.Tab.</td>
+<td colspan="2">Cons. Hr.Not.Tab.Horario</td>
+<td colspan="4">Indica se na Totalização das Horas na
+Tabela de Horário Padrão irá considerar
+a Hora Noturna Reduzida.
+Conteúdo padrão carregado à partir do
+parâmetro MV_HNOTTAB
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("SN") .and. CposInitWhen()</td>
+<td>GetMv("MV_HNOTTAB")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>S=Sim;N=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R6_HNOTTBI</td>
+<td>Con.H.N.Tb.I</td>
+<td colspan="2">Cons.Hr.Not.Interv.Tab.Hr</td>
+<td colspan="4">Indica se na Totalização das Horas de
+Intervalo da Tabela de Horário Padrão
+irá considerar a Hora Noturna.
+Conteúdo padrão inicializado à partir do
+parâmetro MV_HNOTTBI
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("SN") .and. CposInitWhen()</td>
+<td>GetMV("MV_HNOTTBI")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>S=Sim;N=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R6_HRINTER</td>
+<td>Hr.Inter.Jor</td>
+<td colspan="2">Horas de Inter Jornada</td>
+<td colspan="4">Informar o número de Horas que devem ser
+Considerado para Descanso Entre Duas
+Jornadas de  Trabalho na apuração de
+Horas Extras Inter-Jornada.
+Conteúdo padrão carregado à partir do
+parâmetro MV_HRINTER.
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>@E 999.99                                    </td>
+<td>VldHora( M->R6_HRINTER) .and. CposInitWhen() .AND. POSITIVO()</td>
+<td>GetMv("MV_HRINTER")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R6_HEINTER</td>
+<td>Tp.He.Int.Jo</td>
+<td colspan="2">Tipo H.E. p/Inter Jornada</td>
+<td colspan="4">Informar o Tipo de Hora Extra a ser
+Considerado na apuração das Horas Extras
+Inter-Jornada. Esse campo depende o
+Preenchimento do campo R6_HRINTER e será
+desconsiderado caso exista Evento com o
+Identificador de Ponto "029A".
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>CposInitWhen()</td>
+<td>GetMv("MV_HEINTER")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Normal;2=D.S.R.;3=Compensada;4=Feriado;5=Not.Normal;6=Not.D.S.R.;7=Not.Compensada;8=Not.Feriado</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R6_INTERNT</td>
+<td>Tp.Dia In.Jo</td>
+<td colspan="2">Tipo Dia p/Inter Jornada</td>
+<td colspan="4">Informe os Tipos de Dias Para os quais
+deverão ser apontadas Horas Extras
+Inter-Jornadas.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>CposInitWhen()</td>
+<td>GetMv("MV_INTERNT")</td>
+<td><a href="/tabelas_protheus/f3/sr6f31.html">SR6F31</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>.T.</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R6_REVEZAM</td>
+<td>Reg.Revezam.</td>
+<td colspan="2">Regime Revezamento</td>
+<td colspan="4">Regime de revezamento de trabalho, para
+trabalhos em turnos ou escala.
+Especificar tempo trabalhado e tempo de
+descanso. Ex: 24 X 72 horas.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R6_TNOOPC</td>
+<td>Turno Opc.</td>
+<td colspan="2">Turno Opcional</td>
+<td colspan="4">Define um turno opcional (horário
+alternativo) ao turno padrão do
+trabalhador.  Quando esse campo estiver
+preenchido e o parâmetro MV_TNOOPC
+possuir conteúdo igual a "S", os
+horários previstos para um trabalhador
+será identificado entre os horários do
+dia, informados na Tabela de Horário
+Padrão do turno  opcional indicado.
+O  horário alternativo será identificado
+conforme aquele cuja a primeira marcação
+do dia mais se aproxima da entrada dos
+horários possíveis. Os horários
+possíveis são composto pelos horários
+informados para o dia de cada uma das
+semanas do turno alternativo informado.
+Por exemplo: se o trabalhador pode
+realizar um horário na segunda-feira
+entre 3 horários possíveis para esse
+dia, será necessário informar um turno
+alternativo que possua 3 semanas
+(seqüências) e horários em todas as
+segundas-feiras.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .or. ( ExistCpo("SR6") .and. CposInitWhen() )</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sr6.html">SR6</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R6_IDACREN</td>
+<td>Id.Acre.Not.</td>
+<td colspan="2">Identifica o Acresc. Not.</td>
+<td colspan="4">Informe se o Acréscimo Noturno será
+demonstrado em evento específico. Os
+minutos referentes ao acréscimo são
+apurados em evento associado ao
+identicador do ponto "037A  -  Acréscimo
+Noturno Autorizado".
+Para ativar esse procedimento o campo
+"Apenas Ac.No" deverá ser configurado
+para "S".
+Considere um trabalhador que realizou
+horas das 22:00 as 05:00. Tem-se:
+Horas noturnas: 08:00
+Adicional noturno: 08:00
+Com a ativação do destaque do acréscimo
+noturno em evento específico, resulta
+em:
+Horas noturnas: 07:00
+Acréscimo noturno: 01:00
+Adicional noturno: 08:00
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("SN") .and. CposInitWhen()</td>
+<td>"N"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>S=Sim;N=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R6_AUTOHEF</td>
+<td>Aut.HE.Fer.</td>
+<td colspan="2">Autoriza HE Ferias</td>
+<td colspan="4">Autoriza Horas Extras para trabalhadores
+em férias.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R6_MCIMPJC</td>
+<td>Mc.Imp.JC.</td>
+<td colspan="2">Trata Marc.Imp. p/ J.C.</td>
+<td colspan="4">Em jornadas contínuas, determina que a
+quantidade de marcações ímpar de um dia
+seja complementada com a próxima
+marcação de entrada (geralmente a do dia
+seguinte). Por exemplo, para jornadas
+contínuas 24 X 24 quando o trabalhador
+realiza horas extras de tal forma que a
+última marcação ultrapassa o limite do
+dia, essa marcação passa a ser
+considerada a marcação de entrada do dia
+seguinte, ficando o dia anterior com
+marcações em quantidade ímpar. Com a
+configuração desse campo, pode-se
+determinar que a última marcação seja
+considerada de fato como a saída da
+jornada.
+Conteúdo:
+1 - Não aplica ajuste;
+2 - Aplica o ajuste.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Nao Aplica;2=Aplica Ajuste</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R6_RHEXP</td>
+<td>Contr.Exp.RH</td>
+<td colspan="2">Controle de Exportação RH</td>
+<td colspan="4">Neste campo é armazenado a data da
+exportação para o aplicativo Totvs
+Controle de Acesso.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R6_TPJORN</td>
+<td>Tp Jornada</td>
+<td colspan="2">Tipo Jornada de Trabalho</td>
+<td colspan="4">Informe Tipo de Jornada.
+Uso eSocial.
+Opções disponíveis:
+00=Descontinuado
+01=Horário diário e folga fixos
+02=12 x 36
+03=horário diário fixo e folga variável
+09=Demais tipos de jornada
+Em caso de preenchimento da opção for 09
+deve ser preenchido o campo R6_DTPJOR
+(descrição jornada).
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@9                                           </td>
+<td>VAZIO() .OR. Pertence('  0001020309')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>00=Descontinuado;01=Hor�rio di�rio e folga fixos;02=12 x 36;03=hor�rio di�rio fixo e folga vari�vel;09=Demais tipos de jornada;</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R6_DTPJOR</td>
+<td>Desc.Tp.Jorn</td>
+<td colspan="2">Descrição Jornada eSocial</td>
+<td colspan="4">Informe a descrição do Tipo de Jornada.
+Uso eSocial.
+Regra: O preenchimento deste campo será
+obrigatório se o Tipo de Jornada for
+igual a 09.
+</td>
+<td>C</td>
+<td>100</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R6_ABINTJ</td>
+<td>Mot Abon Int</td>
+<td colspan="2">Motivo Abono Interjornada</td>
+<td colspan="4">Código do Motivo de abono com o qual
+atrasos após a InterJornada deverão ser
+abonados
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sp6.html">SP6</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>TDV</td>
+<td colspan="2">R6_TURNO</td>
+<td colspan="2">TDV_TURNO</td>
+</tr>
+<tr>
+<td>ABO</td>
+<td colspan="2">R6_TURNO</td>
+<td colspan="2">ABO_TURNO</td>
+</tr>
+<tr>
+<td>TXI</td>
+<td colspan="2">R6_TURNO</td>
+<td colspan="2">TXI_TURNO</td>
+</tr>
+<tr>
+<td>TW1</td>
+<td colspan="2">R6_TURNO</td>
+<td colspan="2">TW1_TURNO</td>
+</tr>
+<tr>
+<td>TDX</td>
+<td colspan="2">R6_TURNO</td>
+<td colspan="2">TDX_TURNO</td>
+</tr>
+<tr>
+<td>SPG</td>
+<td colspan="2">R6_TURNO</td>
+<td colspan="2">PG_TURNO</td>
+</tr>
+<tr>
+<td>SPJ</td>
+<td colspan="2">R6_TURNO</td>
+<td colspan="2">PJ_TURNO</td>
+</tr>
+<tr>
+<td>SRA</td>
+<td colspan="2">R6_TURNO</td>
+<td colspan="2">RA_TNOTRAB</td>
+</tr>
+<tr>
+<td>SP2</td>
+<td colspan="2">R6_TURNO</td>
+<td colspan="2">P2_TURNO</td>
+</tr>
+<tr>
+<td>SPF</td>
+<td colspan="2">R6_TURNO</td>
+<td colspan="2">PF_TURNODE</td>
+</tr>
+<tr>
+<td>SPF</td>
+<td colspan="2">R6_TURNO</td>
+<td colspan="2">PF_TURNOPA</td>
+</tr>
+<tr>
+<td>SP4</td>
+<td colspan="2">R6_TURNO</td>
+<td colspan="2">P4_TURNO</td>
+</tr>
+<tr>
+<td>RF6</td>
+<td colspan="2">R6_TURNO</td>
+<td colspan="2">RF6_TURNO</td>
+</tr>
+<tr>
+<td>SR6</td>
+<td colspan="2">R6_TURNO</td>
+<td colspan="2">R6_TNOOPC</td>
+</tr>
+<tr>
+<td>RCF</td>
+<td colspan="2">R6_TURNO</td>
+<td colspan="2">RCF_TNOTRA</td>
+</tr>
+<tr>
+<td>TGZ</td>
+<td colspan="2">R6_TURNO</td>
+<td colspan="2">TGZ_TURNO</td>
+</tr>
+<tr>
+<td>TX8</td>
+<td colspan="2">R6_TURNO</td>
+<td colspan="2">TX8_TURNO</td>
+</tr>
+<tr>
+<td>SV7</td>
+<td colspan="2">R6_TURNO</td>
+<td colspan="2">V7_TURNO</td>
+</tr>
+<tr>
+<td>TWN</td>
+<td colspan="2">R6_TURNO</td>
+<td colspan="2">TWN_TURNO</td>
+</tr>
+<tr>
+<td>AA1</td>
+<td colspan="2">R6_TURNO</td>
+<td colspan="2">AA1_TURNO</td>
+</tr>
+<tr>
+<td>SP8</td>
+<td colspan="2">R6_TURNO</td>
+<td colspan="2">P8_TURNO</td>
+</tr>
+<tr>
+<td>RF2</td>
+<td colspan="2">R6_TURNO</td>
+<td colspan="2">RF2_TURNO</td>
+</tr>
+<tr>
+<td>TFF</td>
+<td colspan="2">R6_TURNO</td>
+<td colspan="2">TFF_TURNO</td>
+</tr>
+<tr>
+<td>TGY</td>
+<td colspan="2">R6_TURNO</td>
+<td colspan="2">TGY_TURNO</td>
+</tr>
+<tr>
+<td>SK6</td>
+<td colspan="2">R6_TURNO</td>
+<td colspan="2">K6_TURNO</td>
+</tr>
+<tr>
+<td>SPD</td>
+<td colspan="2">R6_TURNO</td>
+<td colspan="2">PD_TURNO</td>
+</tr>
+<tr>
+<td>TMV</td>
+<td colspan="2">R6_TURNO</td>
+<td colspan="2">TMV_TNOTRA</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

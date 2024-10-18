@@ -1,0 +1,904 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: DE0 - EDI - Cabeçalho de Layout</title></head>
+<body>
+<font color="orange"><h2 id="DE0">Tabela: DE0 - EDI - Cabeçalho de Layout</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>EDI - Cabeçalho de Layout</b></td><td colspan="2"><b></b></td><td><b>TMSAE20</b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">DE0_FILIAL+DE0_CODLAY+DE0_CODREG</td><td>Cod. Layout + Cod.Registro</td><td></td></tr>
+<tr><td>2</td><td colspan="2">DE0_FILIAL+DE0_CODLAY+DE0_IDTREG</td><td>Cod. Layout + Identif.Reg</td><td></td></tr>
+<tr><td>3</td><td colspan="2">DE0_FILIAL+DE0_CODREG</td><td>Cod.Registro</td><td></td></tr>
+<tr><td>4</td><td colspan="2">DE0_FILIAL+DE0_CODLAY+DE0_CODRCP</td><td>Cod. Layout + Reg. Complem</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>DE0_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Filial do Sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE0_CODLAY</td>
+<td>Cod. Layout</td>
+<td colspan="2">Codigo do layout</td>
+<td colspan="4">Este campo trata do código para
+representar a estrutura que será usada
+no layout.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("DE9") .AND. ExistChav("DE0",M->DE0_CODLAY+M->DE0_CODREG,1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/de0.html">DE0</a></td>
+<td><a href="/tabelas_protheus/gatilhos/de0_codlay.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>Inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DE0_DSCLAY</td>
+<td>Desc. Layout</td>
+<td colspan="2">Descricao do Layout</td>
+<td colspan="4">Este campo é preenchido automaticamente
+pelo sistema com a descrição do layout
+informada no cadastro de layout.
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!Inclui,Posicione("DE9",1,xFilial("DE9")+DE9->DE9_CODLAY,"DE9_DSCLAY"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("DE9",1,xFilial("DE9")+DE0->DE0_CODLAY,"DE9_DSCLAY")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DE0_CODREG</td>
+<td>Cod.Registro</td>
+<td colspan="2">Codigo do Registro</td>
+<td colspan="4">Código usado para representar o nome do
+registro deste layout.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("DE3") .AND. ExistChav("DE0",M->DE0_CODLAY+M->DE0_CODREG,1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/de3.html">DE3</a></td>
+<td><a href="/tabelas_protheus/gatilhos/de0_codreg.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>Inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DE0_DSCREG</td>
+<td>Desc. Regist</td>
+<td colspan="2">Descricao do Registro</td>
+<td colspan="4">Este campo é preenchido automaticamente
+pelo sistema com a descrição do registro
+informada no cadastro de registros.
+</td>
+<td>C</td>
+<td>80</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!Inclui,Posicione("DE3",1,xFilial("DE3")+DE0->DE0_CODREG,"DE3_DSCREG"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("DE3",1,xFilial("DE3")+DE0->DE0_CODREG,"DE3_DSCREG")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DE0_STATUS</td>
+<td>Status</td>
+<td colspan="2">Status</td>
+<td colspan="4">Este campo é preenchido automaticamente
+pelo sistema com a descrição do layout
+informada no cadastro de layout
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Ativo;2=Inativo</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DE0_TAMREG</td>
+<td>Tamanho Reg.</td>
+<td colspan="2">Tamanho do Registro</td>
+<td colspan="4">Informe o tamanho total do registro.
+</td>
+<td>N</td>
+<td>4</td>
+<td>0</td>
+<td>9999                                         </td>
+<td>M->DE0_TAMREG > 0</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DE0_IDTREG</td>
+<td>Identif.Reg</td>
+<td colspan="2">Identificador do Registro</td>
+<td colspan="4">Informe a identificação do registro,
+normalmente é utilizado o próprio código
+do registro, podendo também ser
+utilizado como prioridade na geração do
+arquivo, sempre do menor para o maior.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DE0_CODRCP</td>
+<td>Reg. Complem</td>
+<td colspan="2">Complemento de Registro</td>
+<td colspan="4">Informe o código do registro dependente
+do registro atual (Filho).
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Empty(M->DE0_CODRCP) .Or. ExistCpo("DE3")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/de3.html">DE3</a></td>
+<td><a href="/tabelas_protheus/gatilhos/de0_codrcp.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE0_DSCRCP</td>
+<td>Desc. Compl.</td>
+<td colspan="2">Descricao do Reg Compl.</td>
+<td colspan="4">Este campo é preenchido automaticamente
+pelo sistema com a descrição do registro
+informada no cadastro de registros.
+</td>
+<td>C</td>
+<td>80</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!Inclui,Posicione("DE3",1,xFilial("DE3")+DE0->DE0_CODRCP,"DE3_DSCREG"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE0_OCOREG</td>
+<td>Ocorren Reg.</td>
+<td colspan="2">Numero de Ocorrencias</td>
+<td colspan="4">Informe o número de ocorrências máxima
+que o registro pode aparecer na geração
+do arquivo, informe 0 (Zero) para
+“indeterminado”.
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE0_ALIAS</td>
+<td>Alias</td>
+<td colspan="2">Alias do Arquivo</td>
+<td colspan="4">Informe o nome do arquivo Microsiga
+para o registro, utilizado na
+atualização dos dados na geração do
+arquivo.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/de7.html">DE7</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE0_POSICI</td>
+<td>Posiciona</td>
+<td colspan="2">Posiciona Arquivo</td>
+<td colspan="4">Informe Sim para posicionar num
+determinado ponto do Arquivo Microsiga,
+configurado através do campo Posic Ordem
+e Posic Chave, ou Não para começar a
+atualização a partir do primeiro
+registro do arquivo Microsiga.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE0_POSORD</td>
+<td>Posic Ordem</td>
+<td colspan="2">Posiciona na Ordem</td>
+<td colspan="4">Informe a ordem utilizada para o
+posicionamento do arquivo Microsiga,
+quando o campo Posiciona estiver
+preenchido com Sim.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>TMSAE20SIX()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE0_POSCHV</td>
+<td>Posic Chave</td>
+<td colspan="2">Posiciona na Chave</td>
+<td colspan="4">Informe a chave de pesquisa utilizada
+para o posicionamento do arquivo
+Microsiga, quando o campo Posiciona
+estiver preenchido com Sim.
+</td>
+<td>C</td>
+<td>254</td>
+<td>0</td>
+<td>@!]                                          </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE0_COND</td>
+<td>Condicao</td>
+<td colspan="2">Condicao da Geracao</td>
+<td colspan="4">Informe a condição utilizada na
+atualização do registro, onde, será
+efetuada a atualização dos dados
+enquanto a condição for verdadeira.
+</td>
+<td>C</td>
+<td>254</td>
+<td>0</td>
+<td>@S70                                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE0_VALID</td>
+<td>Validacao</td>
+<td colspan="2">Validacao do Registro</td>
+<td colspan="4">Informe a validação para a geração dos
+dados, para cada registro do arquivo
+Microsiga será verificado se os dados
+estão de acordo com a validação, somente
+serão atualizados os registros validos.
+</td>
+<td>C</td>
+<td>254</td>
+<td>0</td>
+<td>@S70                                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE0_NOMARQ</td>
+<td>Nome Arquivo</td>
+<td colspan="2">Nome do Arquivo</td>
+<td colspan="4">Informe o nome do arquivo quando
+utilizado quebra de nome de arquivo por
+registro, por exemplo,  cada registro do
+layout tem um nome diferente:
+</td>
+<td>C</td>
+<td>121</td>
+<td>0</td>
+<td>@S70                                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE0_CTRTAM</td>
+<td>Controla Tam</td>
+<td colspan="2">Controla Tamanho</td>
+<td colspan="4">Define se deverá controlar o tamanho do
+item de layout, quando informado “Não” o
+tamanho do campo será somente
+informativo.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DE0_QUERY</td>
+<td>Query</td>
+<td colspan="2">Query</td>
+<td colspan="4">Neste campo é possível escrever uma
+query, que será utilizada no
+Configurador do EDI.
+</td>
+<td>M</td>
+<td>80</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>If(!Inclui,MSMM(DE0->DE0_CODQRY),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE0_CODQRY</td>
+<td>Cod. Qry.</td>
+<td colspan="2">Código Query</td>
+<td colspan="4">Código da Query.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE0_CODRC2</td>
+<td>Reg. Comp. 2</td>
+<td colspan="2">Complemento de Registro 2</td>
+<td colspan="4">Informe o Complemento do Registro 2.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .OR. EXISTCPO("DE3")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/de3.html">DE3</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE0_CODRC3</td>
+<td>Reg. Comp. 3</td>
+<td colspan="2">Complemento de Registro 3</td>
+<td colspan="4">Informe o Complemento do Registro 3.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .OR. EXISTCPO("DE3")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/de3.html">DE3</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE0_CTRESP</td>
+<td>Controla esp</td>
+<td colspan="2">Controla Espaços</td>
+<td colspan="4">Controla Espaço na geração do arquivo
+txt. 1=Sim(O arquivo é gerado sem
+espaços) 2=Não(O arquivo é gerado com
+espaços)
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('12')</td>
+<td>'1'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE0_CODRC4</td>
+<td>Reg. Comp. 4</td>
+<td colspan="2">Complemento de Registro 4</td>
+<td colspan="4">Informe o Complemento do Registro 4.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .OR. EXISTCPO("DE3")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/de3.html">DE3</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE0_CODRC5</td>
+<td>Reg. Comp. 5</td>
+<td colspan="2">Complemento de Registro 5</td>
+<td colspan="4">Informe o Complemento do Registro 5.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .OR. EXISTCPO("DE3")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/de3.html">DE3</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE0_CODRC6</td>
+<td>Reg. Comp. 6</td>
+<td colspan="2">Complemento de Registro 6</td>
+<td colspan="4">Complemento de Registro 6
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .OR. EXISTCPO("DE3")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/de3.html">DE3</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE0_CODCR6</td>
+<td>Reg. Comp. 6</td>
+<td colspan="2">Complemento de Registro 6</td>
+<td colspan="4">Informe o Complemento do Registro 5.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .OR. EXISTCPO("DE3")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/de3.html">DE3</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

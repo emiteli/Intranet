@@ -1,0 +1,699 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: RCK - Conta Corrente Valores Futuros</title></head>
+<body>
+<font color="orange"><h2 id="RCK">Tabela: RCK - Conta Corrente Valores Futuros</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Conta Corrente Valores Futuros</b></td><td colspan="2"><b>RCK_FILIAL+RCK_MAT+RCK_PD+RCK_PER+RCK_NUMID+STR(RCK_SEQUEN,5)</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">RCK_FILIAL+RCK_MAT+RCK_PD+DTOS(RCK_DTPAGO)</td><td>Matricula + Codigo Verba + Dt.Pagamento</td><td></td></tr>
+<tr><td>2</td><td colspan="2">RCK_FILIAL+RCK_MAT+RCK_NUMID+STR(RCK_SEQUEN)</td><td>Matricula + Num. Identif + Sequencia</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>RCK_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Informe o codigo da filial
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/xm0.html">XM0</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>gp415ChkAlt()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RCK_MAT</td>
+<td>Matricula</td>
+<td colspan="2">Matricula</td>
+<td colspan="4">Informe a matricula do funcionario
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sra.html">SRA</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>gp415ChkAlt()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/121.html">121</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RCK_PD</td>
+<td>Codigo Verba</td>
+<td colspan="2">Codigo Verba</td>
+<td colspan="4">Informe o codigo da verba
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>fNoLancPD() .and. ADescPd("RCK_DESCPD") .and. Gpa415ValPd()</td>
+<td>gp415Inic("RK_PD")</td>
+<td><a href="/tabelas_protheus/f3/srv.html">SRV</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td>gp415ChkAlt()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RCK_DESCPD</td>
+<td>Descricao</td>
+<td colspan="2">Descricao</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>gp415Inic("RK_DESCPD")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td>gp415ChkAlt()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RCK_DESC</td>
+<td>Desc. Inform</td>
+<td colspan="2">Descritivo Informado</td>
+<td colspan="4">Informe a descricao informativa
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>gp415ChkAlt()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RCK_STATUS</td>
+<td>Situacäo</td>
+<td colspan="2">Situacäo</td>
+<td colspan="4">Informe qual a situação
+1=Solicitado;2=Ativo;3=Pagamento;4=Suspe
+nso;5=Excluido
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>gp415Inic("RK_STATUS")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/rck_status.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Solicitado;2=Ativo;3=Pagamento;4=Suspenso;5=Excluido</td>
+<td>gp415ChkAlt()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RCK_POSTO</td>
+<td>Codigo Posto</td>
+<td colspan="2">Codigo Posto</td>
+<td colspan="4">Informe o codigo do Posto
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/rcl.html">RCL</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>gp415ChkAlt()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RCK_PARCPG</td>
+<td>Nr.Parc.Paga</td>
+<td colspan="2">Numero de Parcelas Pagas</td>
+<td colspan="4">Informe o nro. de Parcelas pagas
+</td>
+<td>N</td>
+<td>4</td>
+<td>0</td>
+<td>9999                                         </td>
+<td></td>
+<td>gp415NParcInic("RCK_PARCPG")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/rck_parcpg.html">S</td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td>gp415ChkAlt()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RCK_QTDEPG</td>
+<td>Qtde. Paga</td>
+<td colspan="2">Quantidade Paga</td>
+<td colspan="4">qtde parcelas Pagas
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td>1</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>gp415ChkAlt()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RCK_VLPAGO</td>
+<td>Valor Pago</td>
+<td colspan="2">Valor Pago</td>
+<td colspan="4">Informe o valor a ser pago
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td>gp415Inic("RK_VALORPA")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>gp415ChkAlt()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RCK_DTPAGO</td>
+<td>Dt.Pagamento</td>
+<td colspan="2">Data Pagamento</td>
+<td colspan="4">Informe a data de Pagto
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>MsDate()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>gp415ChkAlt()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RCK_PDJURO</td>
+<td>Verba Juros</td>
+<td colspan="2">Cod. Verba de Juros</td>
+<td colspan="4">Informe qual a verba para totalizar os
+juros
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .or. ( ExistCpo("SRV") .and. Gpa415ValPd() )</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RCK_PXVCTO</td>
+<td>Dt.Prox.Vcto</td>
+<td colspan="2">Data Proximo Vencimento</td>
+<td colspan="4">Informe qual o proximo vencimento
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>gp415Inic("RK_DTVENC")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>gp415ChkAlt()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RCK_PER</td>
+<td>Cod. Periodo</td>
+<td colspan="2">Codigo Periodo</td>
+<td colspan="4">Informe o Codigo do Periodo
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/rch.html">RCH</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>gp415ChkAlt()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RCK_REFERE</td>
+<td>Ref. Lcto.</td>
+<td colspan="2">Ref. Lcto.</td>
+<td colspan="4">Informe a referencia
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>gp415ChkAlt()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RCK_NUMPAG</td>
+<td>Num. Pagto</td>
+<td colspan="2">Num. Pagto</td>
+<td colspan="4">Informe o nro. do pagamento
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>gp415ChkAlt()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RCK_CALCUL</td>
+<td>Tipo Folha</td>
+<td colspan="2">Tipo Folha de Pagamento</td>
+<td colspan="4">Informe o codigo do Roteiro
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>                                             </td>
+<td>ExistCpo("SRY", M->RCK_CALCUL)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sry.html">SRY</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>gp415ChkAlt()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RCK_USUARI</td>
+<td>Usuario</td>
+<td colspan="2">Usuario</td>
+<td colspan="4">Informe o codigo do Usuario
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>UsrRetName(RetCodUsr())</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td>gp415ChkAlt()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RCK_DTALTE</td>
+<td>Dt Alteracao</td>
+<td colspan="2">Data da alteracao</td>
+<td colspan="4">Informe a data da alteração.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>MsDate()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td>gp415ChkAlt()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RCK_SEQUEN</td>
+<td>Sequencia</td>
+<td colspan="2">Sequencia</td>
+<td colspan="4">Informe qual a sequencia
+</td>
+<td>N</td>
+<td>5</td>
+<td>0</td>
+<td>99999                                        </td>
+<td></td>
+<td>gp415SeqInic()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>gp415ChkAlt()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RCK_NUMID</td>
+<td>Num. Identif</td>
+<td colspan="2">Numero de Identificacao</td>
+<td colspan="4">Informe o numero de identificação
+</td>
+<td>C</td>
+<td>26</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td>gp415ChkAlt()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/129.html">129</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RCK_PROCES</td>
+<td>Cod.Processo</td>
+<td colspan="2">Codigo do Processo</td>
+<td colspan="4">Informar o código do processo
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>SRA->RA_PROCES</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>SRV</td>
+<td colspan="2">RCK_PDJURO</td>
+<td colspan="2">RV_COD</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

@@ -1,0 +1,825 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: N72 - Gestão de Remessa</title></head>
+<body>
+<font color="orange"><h2 id="N72">Tabela: N72 - Gestão de Remessa</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Gestão de Remessa</b></td><td colspan="2"><b>N72_FILIAL+N72_SAFRA+N72_CODREM</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">N72_FILIAL+N72_SAFRA+N72_CODREM</td><td>Safra + Cod.Remessa</td><td></td></tr>
+<tr><td>2</td><td colspan="2">N72_FILIAL+N72_CODREM</td><td>Cod.Remessa</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="6" align="center"><b><i>Abas(SXA)</i></b></td></tr><tr><td><b>XA_ALIAS</b></td><td><b>XA_ORDEM</b></td><td colspan="2"><b>XA_DESCRIC</b></td><td><b>XA_AGRUP</b></td><td><b>XA_TIPO</b></td></tr><tr><td><b>N72</b></td><td><b>1</b></td><td colspan="2"><b>Dados da Remessa</b></td><td><b>1</b></td><td><b>2</b></td></tr><tr><td><b>N72</b></td><td><b>2</b></td><td colspan="2"><b>Dados do Transporte</b></td><td><b>2</b></td><td><b>2</b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>N72_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Filial do Sistema
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N72_SAFRA</td>
+<td>Safra</td>
+<td colspan="2">Código da Safra</td>
+<td colspan="4">Código da Safra.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo('NJU', M->N72_SAFRA, 1)  .AND. UBAA030SAF()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/nju.html">NJU</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>N72_CODREM</td>
+<td>Cod.Remessa</td>
+<td colspan="2">Código da Remessa</td>
+<td colspan="4">Código da Remessa
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>GetSxeNum('N72', 'N72_CODREM')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>N72_TIPO</td>
+<td>Tipo.Classif</td>
+<td colspan="2">Tipo de Classificação</td>
+<td colspan="4">Tipo de Classificação
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('12')</td>
+<td>'1'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Visual;2=HVI</td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>N72_CODCLI</td>
+<td>Cod.Cliente</td>
+<td colspan="2">Código do Cliente</td>
+<td colspan="4">Código do Cliente
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>UBAA030VCL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sa1.html">SA1</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>N72_LOJCLI</td>
+<td>Loja</td>
+<td colspan="2">Loja</td>
+<td colspan="4">Loja do Cliente.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>UBAA030VLJ()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>UBAA030WNM()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>N72_NOMCLI</td>
+<td>Nome</td>
+<td colspan="2">Nome</td>
+<td colspan="4">Nome do cliente ou fornecedor da remessa
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N72_CODBAR</td>
+<td>Cod.Barras</td>
+<td colspan="2">Código de Barras</td>
+<td colspan="4">Código de Barras
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>N72_NOMUSR</td>
+<td>Nom.Usuário</td>
+<td colspan="2">Nome do Usuário</td>
+<td colspan="4">Nome do Usuário.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>UsrRetName(RetCodUsr())</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>N72_DATA</td>
+<td>Data.Remessa</td>
+<td colspan="2">Data da Remessa</td>
+<td colspan="4">Data da Remessa.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>dDatabase</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>N72_HORA</td>
+<td>Hora.Remessa</td>
+<td colspan="2">Hora da Remessa</td>
+<td colspan="4">Hora da Remessa.
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>@! 99:99:99                                  </td>
+<td></td>
+<td>Time()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>N72_PEDREM</td>
+<td>Ped. Rem.</td>
+<td colspan="2">Pedio Remessa</td>
+<td colspan="4">Pedido Remessa.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N72_DOCREM</td>
+<td>Doc. Rem.</td>
+<td colspan="2">Documento Remessa</td>
+<td colspan="4">Documento Remessa.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N72_SERREM</td>
+<td>Série Rem.</td>
+<td colspan="2">Série Remessa</td>
+<td colspan="4">Série Remessa.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N72_DATENV</td>
+<td>Data Env.</td>
+<td colspan="2">Data Envio</td>
+<td colspan="4">Data Envio
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N72_HORENV</td>
+<td>Hora Env.</td>
+<td colspan="2">Hora Envio</td>
+<td colspan="4">Hora Envio
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>@! 99:99:99                                  </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N72_CODCON</td>
+<td>Conhec.Trans</td>
+<td colspan="2">Conhecimento Transporte</td>
+<td colspan="4">Conhecimento do Transporte.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>N72_CODPLA</td>
+<td>Placa</td>
+<td colspan="2">Placa do Veículo</td>
+<td colspan="4">Placa do Veículo.
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>@R XXX-9999                                  </td>
+<td>Vazio().Or.ExistCpo('DA3', M->N72_CODPLA, 3)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/da302.html">DA302</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>N72_CODTRA</td>
+<td>Cod.Transp</td>
+<td colspan="2">Código da Transportadora</td>
+<td colspan="4">Código da Transportadora.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio().Or.ExistCpo('SA4', M->N72_CODTRA, 1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sa4.html">SA4</a></td>
+<td><a href="/tabelas_protheus/gatilhos/n72_codtra.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>N72_NOMTRA</td>
+<td>Nome.Transp</td>
+<td colspan="2">Nome da Transportadora</td>
+<td colspan="4">Nome da Transportadora.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI, POSICIONE('SA4', 1, XFILIAL('SA4')+N72->N72_CODTRA, 'A4_NOME'), ' ')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE('SA4', 1, XFILIAL('SA4') + N72->N72_CODTRA, 'A4_NOME')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>N72_CODMOT</td>
+<td>Cod.Motoris</td>
+<td colspan="2">Código do Motorista</td>
+<td colspan="4">Código do Motorista.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio().Or.ExistCpo('DA4', M->N72_CODMOT, 1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/da4.html">DA4</a></td>
+<td><a href="/tabelas_protheus/gatilhos/n72_codmot.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>N72_NOMMOT</td>
+<td>Nome.Motoris</td>
+<td colspan="2">Nome do Motorista</td>
+<td colspan="4">Nome do Motorista.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI, POSICIONE('DA4', 1, XFILIAL('DA4') + N72->N72_CODMOT, 'DA4_NOME'), ' ')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE('DA4', 1, XFILIAL('DA4') + N72->N72_CODMOT, 'DA4_NOME')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>N72_OBSERV</td>
+<td>Observacão</td>
+<td colspan="2">Observação da Remessa</td>
+<td colspan="4">Observações da Remessa.
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>N72_STATUS</td>
+<td>Status</td>
+<td colspan="2">Status da remessa</td>
+<td colspan="4">Status da Remessa.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12345")</td>
+<td>'1'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=Iniciado; 2=Enviada; 3=Entregue; 4=Entregue Parcial; 5=Cancelado</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N72_TPDOC</td>
+<td>Tipo Doc.</td>
+<td colspan="2">Tipo do Documento</td>
+<td colspan="4">Tipo do documento
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N72_DATATU</td>
+<td>Data Atu.</td>
+<td colspan="2">Data da atualização</td>
+<td colspan="4">Data da atualização da remessa
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N72_HORATU</td>
+<td>Hora Atu.</td>
+<td colspan="2">Hora da atualização</td>
+<td colspan="4">Hora da atualização da remessa
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>@! 99:99:99                                  </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

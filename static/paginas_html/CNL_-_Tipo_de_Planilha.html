@@ -1,0 +1,715 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: CNL - Tipo de Planilha</title></head>
+<body>
+<font color="orange"><h2 id="CNL">Tabela: CNL - Tipo de Planilha</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Tipo de Planilha</b></td><td colspan="2"><b>CNL_FILIAL+CNL_CODIGO</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">CNL_FILIAL+CNL_CODIGO</td><td>Codigo</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>CNL_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Código da filial do sistema
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNL_CODIGO</td>
+<td>Codigo</td>
+<td colspan="2">Cod. do Tipo de Planilha</td>
+<td colspan="4">Código do tipo de planilha
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistChav("CNL")</td>
+<td>GetSX8Num("CNL","CNL_CODIGO")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CNL_DESCRI</td>
+<td>Descricao</td>
+<td colspan="2">Descr. Tipo de Planilha</td>
+<td colspan="4">Descrição
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CNL_MEDEVE</td>
+<td>Med Eventual</td>
+<td colspan="2">Medição Eventual</td>
+<td colspan="4">Identifica planilhas sem previsão de
+medições.
+0=Respeita o que foi informado no Tipo
+de Contrato.
+1=Sim.
+2=Não.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("0123") .AND. Cn230GtPlan("CNL_MEDEVE",FwFldGet("CNL_MEDEVE"))</td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Conforme Contrato;1=Sim;2=N�o;3=Recorrente</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNL_CTRFIX</td>
+<td>Plan. Fixa</td>
+<td colspan="2">Planilha Fixa</td>
+<td colspan="4">Informa se o contrato possui planilha
+(fixo), ou se os produtos/serviços serão
+informados no momento da medição
+(flexível)
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("0123") .AND. Cn230GtPlan("CNL_CTRFIX",FwFldGet("CNL_CTRFIX"))</td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Conforme Contrato;1=Sim;2=N�o;3=Semi-Fixo</td>
+<td>FwFldGet('CNL_MEDEVE')=='1'</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNL_TPSFIX</td>
+<td>Semi-Fixo</td>
+<td colspan="2">Tipo de Semi-fixo</td>
+<td colspan="4">Indica a forma de agrupamento da
+Planilha num Contrato Semi-fixo. Por
+produto: será possível selecionar o
+produto e indicar o valor de cada um de
+forma individual; Por agrupador: Não
+será possível selecionar nenhum item na
+Planilha e, sim, os Agrupadores que são
+do tipo: Tipo de Produto, Grupo de
+Produto e Categoria do Produto
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("012")</td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Conforme Contrato;1=Por Produto;2=Por Agrupador</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNL_PLSERV</td>
+<td>Serviço</td>
+<td colspan="2">Planilha de Serviços</td>
+<td colspan="4">Define se planilha será utilizada para
+itens considerados como serviço.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('12')</td>
+<td>'2'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td>Cn230VlServ()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNL_MEDAUT</td>
+<td>Med. Automat</td>
+<td colspan="2">Medição Automática</td>
+<td colspan="4">Informa se a planilha é medida
+automaticamente através de um JOB ou
+manualmente através da rotina Medições
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("012")  .AND. Cn230GtPlan("CNL_MEDAUT",FwFldGet("CNL_MEDAUT"))</td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Conforme Contrato;1=Sim;2=N�o</td>
+<td>FwFldGet("CNL_MEDAUT") == "2"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNL_VLRPRV</td>
+<td>Previsao Fin</td>
+<td colspan="2">Previsão Financeira</td>
+<td colspan="4">Informa se a planilha flexível deverá
+ter um valor estipulando as
+movimentações gerais, ou se o contrato
+será em aberto.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("012")</td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Conforme Contrato;1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNL_CROFIS</td>
+<td>Cronog. Fis.</td>
+<td colspan="2">Cronograma Físico</td>
+<td colspan="4">Informa se a planilha terá controle
+físico das parcelas.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("012")  .AND. Cn230GtPlan("CNL_CROFIS",FwFldGet("CNL_CROFIS"))</td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Conforme Contrato;1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNL_CROCTB</td>
+<td>Cronog. Cont</td>
+<td colspan="2">Cronograma Contabil</td>
+<td colspan="4">Informa se a planilha possui controle
+contábil
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("012")  .AND. Cn230GtPlan("CNL_CROCTB",FwFldGet("CNL_CROCTB"))</td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Conforme Contrato;1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNL_TPLMT</td>
+<td>Tp. Limite</td>
+<td colspan="2">Tipo do Limite</td>
+<td colspan="4">Informa o tipo do percentual de limite
+da medição. Se "Financeiro", considera o
+valor total da medição, se "Fisico",
+considera as quantidades dos itens da
+medição, contra o cronograma físico da
+planilha
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("012")  .AND. Cn230GtPlan("CNL_TPLMT" ,FwFldGet("CNL_TPLMT" ))</td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Conforme Contrato;1=Financeiro;2=F�sico</td>
+<td>FwFldGet('CNL_MEDEVE')=='1'</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNL_LMTMED</td>
+<td>Limite Med.</td>
+<td colspan="2">Limite de Medição</td>
+<td colspan="4">Informa o percentual limite das medições
+além do previsto em cronograma
+</td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>FwFldGet("CNL_MEDAUT") == "1"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNL_TPMULT</td>
+<td>Multa/Bonif.</td>
+<td colspan="2">Aplica. das Multas/Bonif.</td>
+<td colspan="4">Informa em qual momento serão aplicadas
+as multas da planilha.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("012")</td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Conforme Contrato;1=Recebimento;2=Medi��o</td>
+<td>FwFldGet('CNL_CTRFIX')== '2'</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNL_MULMAN</td>
+<td>Mult. Manual</td>
+<td colspan="2">Multas / bonific. manuais</td>
+<td colspan="4">Indica a permissão de uso do recurso de
+multas e bonificacoes inseridos
+manualmente.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("01234")</td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Conforme Contrato;1=N�o Permite;2=Multas;3=Bonifica��o;4=Ambos</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNL_CRALM</td>
+<td>Realinha Med</td>
+<td colspan="2">Realinha Medição</td>
+<td colspan="4">Indicará se ao processar revisões de
+realinhamento as medições não entregues
+deverão ser realinhadas atualizando os
+pedidos conforme valor realinhado.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("012")</td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Conforme Contrato;1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNL_NIVAGR</td>
+<td>Niv Agrup</td>
+<td colspan="2">Nível do Agrupador</td>
+<td colspan="4">Nível do agrupador gerencial
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/agrniv.html">AGRNIV</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNL_ALCMED</td>
+<td>Alc. Medição</td>
+<td colspan="2">Alçadas da Medição</td>
+<td colspan="4">Informa à quais alçadas de aprovação de
+medição a planilha está sujeita.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('0123')</td>
+<td>'0'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Todas;1=Documento;2=Ent. Contabil;3=Sem Al�adas</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNL_LMTAVS</td>
+<td>Perc Aviso</td>
+<td colspan="2">Percentual de Aviso</td>
+<td colspan="4">Informa o percentual de aviso para
+emissão do alerta referente ao saldo da
+planilha
+</td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNL_CREAJM</td>
+<td>Reajusta Med</td>
+<td colspan="2">Reajusta Medição</td>
+<td colspan="4">Indicará se ao processar revisões de
+reajuste as medições não entregues
+deverão ser reajustadas atualizando os
+pedidos conforme valor reajustado.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("012")</td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Conforme Contrato;1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNL_CODAGR</td>
+<td>Cod Agrup</td>
+<td colspan="2">Código do Agrupador</td>
+<td colspan="4">Código do agrupador gerencial
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO("AOL")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/aol.html">AOL</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>CNA</td>
+<td colspan="2">CNL_CODIGO</td>
+<td colspan="2">CNA_TIPPLA</td>
+</tr>
+<tr>
+<td>GY0</td>
+<td colspan="2">CNL_CODIGO</td>
+<td colspan="2">GY0_TIPPLA</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

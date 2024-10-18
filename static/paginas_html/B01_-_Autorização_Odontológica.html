@@ -1,0 +1,1932 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: B01 - Autorização Odontológica</title></head>
+<body>
+<font color="orange"><h2 id="B01">Tabela: B01 - Autorização Odontológica</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Autorização Odontológica</b></td><td colspan="2"><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">B01_FILIAL</td><td>Filial</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="6" align="center"><b><i>Abas(SXA)</i></b></td></tr><tr><td><b>XA_ALIAS</b></td><td><b>XA_ORDEM</b></td><td colspan="2"><b>XA_DESCRIC</b></td><td><b>XA_AGRUP</b></td><td><b>XA_TIPO</b></td></tr><tr><td><b>B01</b></td><td><b>1</b></td><td colspan="2"><b>Dados</b></td><td><b></b></td><td><b></b></td></tr><tr><td><b>B01</b></td><td><b>2</b></td><td colspan="2"><b>Compatibiliza��o</b></td><td><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>B01_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Filial do Sistema
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/be4b01.html">BE4B01</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_TIPADM</td>
+<td>Tp Admissao</td>
+<td colspan="2">Tipo de Admissao</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@C                                           </td>
+<td>BDR->(ExistCpo("BDR",PLSINTPAD()+M->B01_TIPADM,1))</td>
+<td>getNewPar("MV_PLSTPAD","1")</td>
+<td><a href="/tabelas_protheus/f3/btapls.html">BTAPLS</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B01_DESADM</td>
+<td>Descricao</td>
+<td colspan="2">Descricao</td>
+<td colspan="4">Descricao
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@C                                           </td>
+<td></td>
+<td>Posicione("BDR",1,xFilial("BDR")+If(Inclui,PLSINTPAD()+GetNewPar("MV_PLSTPAD","1"),BEA->(BEA_OPEMOV+BEA_TIPADM)),"BDR_DESCRI")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_TIPPAC</td>
+<td>Tp. Paciente</td>
+<td colspan="2">Tipo Paciente</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>If(Empty(M->B01_TIPPAC),.T.,BGY->(ExistCpo("BGY",PLSINTPAD()+M->B01_TIPPAC,1)))</td>
+<td>If(Inclui,GetNewPar("MV_PLSTPAA","05"),BEA->BEA_TIPPAC)</td>
+<td><a href="/tabelas_protheus/f3/bgypls.html">BGYPLS</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B01_DESPAC</td>
+<td>Descricao</td>
+<td colspan="2">Descricao</td>
+<td colspan="4">Descricao
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@C                                           </td>
+<td></td>
+<td>Posicione("BGY",1,xFilial("BGY")+If(Inclui,PLSINTPAD()+GetNewPar("MV_PLSTPAA","05"),BEA->(BEA_OPEMOV+BEA_TIPPAC)),"BGY_DESCRI")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_NUMLIB</td>
+<td>N Liberacao.</td>
+<td colspan="2">Numero da Autorizacao</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>18</td>
+<td>0</td>
+<td>@R !.!!!-!!!!.!!-!!!!!!!!                    </td>
+<td>If(Empty(M->B01_NUMLIB),.T.,PLAODOLIB(M->B01_NUMLIB,M->B01_DATPRO))</td>
+<td>If(Inclui,"",BEA->(BEA_OPEMOV+BEA_ANOAUT+BEA_MESAUT+BEA_NUMAUT))</td>
+<td><a href="/tabelas_protheus/f3/b98pls.html">B98PLS</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>'INCLUI'</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_NUMAUT</td>
+<td>N Autorizac.</td>
+<td colspan="2">Numero da Autorizacao</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>18</td>
+<td>0</td>
+<td>@R !.!!!-!!!!.!!-!!!!!!!!                    </td>
+<td></td>
+<td>If(Inclui,"",BEA->(BEA_OPEMOV+BEA_ANOAUT+BEA_MESAUT+BEA_NUMAUT))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_DATPRO</td>
+<td>Data Proced.</td>
+<td colspan="2">Data Proced.</td>
+<td colspan="4"></td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>@D                                           </td>
+<td>If(Empty(M->B01_DATPRO),.T.,PLSA090DAT())</td>
+<td>IF(Inclui,dDataBase,BEA->BEA_DATPRO)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B01_HORPRO</td>
+<td>Hora Proced.</td>
+<td colspan="2">Hora Proced.</td>
+<td colspan="4">hora do procedimento
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@R !!:!!:!!                                  </td>
+<td></td>
+<td>IF(Inclui,StrTran(Time(),":",""),BEA->BEA_HORPRO)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B01_USUARI</td>
+<td>Matricula</td>
+<td colspan="2">Matricula</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>17</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>If(Empty(M->B01_USUARI),.T.,PLSA090USR(M->B01_USUARI,M->B01_DATPRO,M->B01_HORPRO,"B01",,,,,,,,,,,,,,,,,,,.T.))</td>
+<td>If(Inclui,"",BEA->(BEA_OPEUSR+BEA_CODEMP+BEA_MATRIC+BEA_TIPREG+BEA_DIGITO))</td>
+<td><a href="/tabelas_protheus/f3/by2pls.html">BY2PLS</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>Empty(M->B01_NUMLIB)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B01_MATANT</td>
+<td>Matr Antiga</td>
+<td colspan="2">Matricula Antiga</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>17</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",BA1->BA1_MATANT)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_NOMUSR</td>
+<td>Usuario</td>
+<td colspan="2">Usuario</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>70</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",BEA->BEA_NOMUSR)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/034.html">034</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_TIPUSR</td>
+<td>Tipo Usr.</td>
+<td colspan="2">Tipo Usuario</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",BEA->BEA_TIPUSR)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td>01=Eventual;02=Repasse;99=Usuario Local</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_OPERDA</td>
+<td>Operad. RDA</td>
+<td colspan="2">Operad. RDA</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@R !.!!!                                     </td>
+<td>If(Empty(M->B01_OPERDA),.T.,PLA090VR2o())</td>
+<td>If(Inclui,PLSINTPAD(RETCODUSR()),BEA->BEA_OPERDA)</td>
+<td><a href="/tabelas_protheus/f3/b89pls.html">B89PLS</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B01_CODRDA</td>
+<td>Cd Cred/Coop</td>
+<td colspan="2">Cod. Credenc</td>
+<td colspan="4">Código de identificação da Rede de
+Atendimento (prestador de serviços).
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>If(Empty(M->B01_CODRDA),.T.,PLA090VRDo())</td>
+<td>IF(Inclui,"",BEA->BEA_CODRDA)</td>
+<td><a href="/tabelas_protheus/f3/bbnpls.html">BBNPLS</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B01_NOMRDA</td>
+<td>Nm.Cred/Coop</td>
+<td colspan="2">credenciado</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",BEA->BEA_NOMRDA)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_TIPPRE</td>
+<td>Tipo da RDA</td>
+<td colspan="2">Tipo da RDA</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>If(Empty(M->B01_TIPPRE),.T.,BAG->(ExistCpo("BAG")))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/b42pls.html">B42PLS</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>PLSA090WH1()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_CODLOC</td>
+<td>Localidade</td>
+<td colspan="2">Localidade</td>
+<td colspan="4">Código do Local de Atendimento do
+Credenciado.
+Tecle <F3> para consultar os códigos
+válidos.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@R !!!.!!!                                   </td>
+<td>If(Empty(M->B01_CODRDA),.T.,PLSA090LOC(M->B01_OPERDA,M->B01_CODRDA,M->B01_CODLOC,M->B01_DATPRO,"B01"))</td>
+<td>IF(Inclui,"",BEA->(BEA_CODLOC+BEA_LOCAL))</td>
+<td><a href="/tabelas_protheus/f3/b9fpls.html">B9FPLS</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B01_DESLOC</td>
+<td>Descr. Local</td>
+<td colspan="2">Descricao local</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",BEA->BEA_DESLOC)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_ENDLOC</td>
+<td>End. Local</td>
+<td colspan="2">Endereco Local</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>100</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",BEA->BEA_ENDLOC)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_CODESP</td>
+<td>Cod. Espec.</td>
+<td colspan="2">Codigo Especialidade</td>
+<td colspan="4">Código da especialidade de acordo com o
+cadastro de especialidades médicas.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>If(Empty(M->B01_CODESP),.T.,PLSA090ESP(M->B01_OPERDA,M->B01_CODRDA,M->B01_CODLOC,M->B01_CODESP,M->B01_DATPRO,"B01"))</td>
+<td>If(Inclui,"",BEA->BEA_CODESP)</td>
+<td><a href="/tabelas_protheus/f3/b9gpls.html">B9GPLS</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_DESESP</td>
+<td>Descr.Espec.</td>
+<td colspan="2">Descricao Especialidade</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",BEA->BEA_DESESP)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_CID</td>
+<td>CID</td>
+<td colspan="2">CID</td>
+<td colspan="4">Código do cadastro internacional de
+doenças a que se refere tal
+cadastro/movimentação.
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>If(Empty(M->B01_CID),.T.,BA9->(ExistCpo("BA9",M->B01_CID,1)))</td>
+<td>If(Inclui,"",BEA->BEA_CID)</td>
+<td><a href="/tabelas_protheus/f3/ba9pls.html">BA9PLS</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_SIGLA</td>
+<td>Sigla C.R.</td>
+<td colspan="2">Conselho Sol</td>
+<td colspan="4">Sigla do Conselho Regional do
+Especialista.
+</td>
+<td>C</td>
+<td>7</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>If(Empty(M->B01_SIGLA),.T.,ExistCpo("BAH",M->B01_SIGLA))</td>
+<td>GetNewPar("MV_PLSIGLA","CRM")</td>
+<td><a href="/tabelas_protheus/f3/b53pls.html">B53PLS</a></td>
+<td><a href="/tabelas_protheus/gatilhos/b01_sigla.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_ESTSOL</td>
+<td>UF Solic.</td>
+<td colspan="2">Est. Solicitante</td>
+<td colspan="4">Sigla do Estado do prestador
+solicitante.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>If(Empty(M->B01_ESTSOL),.T.,SX5->(ExistCpo("SX5","12"+M->B01_ESTSOL,1)))</td>
+<td>If(Inclui,GETMV("MV_PLSESPD"),BEA->BEA_ESTSOL)</td>
+<td><a href="/tabelas_protheus/f3/12.html">12</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_OPESOL</td>
+<td>Operad. Sol.</td>
+<td colspan="2">Operadora Solicitante</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@R !.!!!                                     </td>
+<td>If(Empty(M->B01_OPESOL),.T.,BA0->(ExistCpo("BA0",M->B01_OPESOL,1)))</td>
+<td>If(Inclui,PLSINTPAD(),BEA->BEA_OPESOL)</td>
+<td><a href="/tabelas_protheus/f3/b89pls.html">B89PLS</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_REGSOL</td>
+<td>C.R. Solic.</td>
+<td colspan="2">C.R Solicita</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@R !!!!!!!!!!!!!!!                           </td>
+<td>If(Empty(M->B01_REGSOL),.T.,PLSA090SOL())</td>
+<td>If(Inclui,"",BEA->BEA_REGSOL)</td>
+<td><a href="/tabelas_protheus/f3/btypls.html">BTYPLS</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_NOMSOL</td>
+<td>Solicitante</td>
+<td colspan="2">Solicitante</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",BEA->BEA_NOMSOL)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_OPEEXE</td>
+<td>Operad. Exec</td>
+<td colspan="2">Operadora Executante</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@R !.!!!                                     </td>
+<td>If(Empty(M->B01_OPESOL),.T.,BA0->(ExistCpo("BA0",M->B01_OPESOL,1)))</td>
+<td>If(Inclui,PLSINTPAD(),BEA->BEA_OPEEXE)</td>
+<td><a href="/tabelas_protheus/f3/b89pls.html">B89PLS</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_REGEXE</td>
+<td>C.R. Execut.</td>
+<td colspan="2">C.R Executante</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@R !!!!!!!!!!!!!!!                           </td>
+<td>PLSA090EXE()</td>
+<td>If(Inclui,"",BEA->BEA_REGEXE)</td>
+<td><a href="/tabelas_protheus/f3/btypls.html">BTYPLS</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_NOMEXE</td>
+<td>Executante</td>
+<td colspan="2">Executante</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",BEA->BEA_NOMEXE)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_CDPFSO</td>
+<td>Cd.Prf.Solic</td>
+<td colspan="2">Cd.Prf.Soli</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",BEA->BEA_CDPFSO)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_CDPFRE</td>
+<td>Cd.Prf.Exec.</td>
+<td colspan="2">Cd.Prf.Resp.</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",BEA->BEA_CDPFRE)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_ESTEXE</td>
+<td>UF execut.</td>
+<td colspan="2">Est. Executante</td>
+<td colspan="4">Sigla do Estado do prestador executante.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>If(Empty(M->B01_ESTEXE),.T.,SX5->(ExistCpo("SX5","12"+M->B01_ESTEXE,1)))</td>
+<td>If(Inclui,GETMV("MV_PLSESPD"),BEA->BEA_ESTEXE)</td>
+<td><a href="/tabelas_protheus/f3/12.html">12</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_MATUSA</td>
+<td>Matr Usada</td>
+<td colspan="2">Matricula Usada no Movto</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",BEA->BEA_MATUSA)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td>1=Matricula Principal;2=Matricula Antiga</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_ANOPAG</td>
+<td>Ano Pagto</td>
+<td colspan="2">Ano Pagto</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",BEA->BEA_ANOPAG)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_MESPAG</td>
+<td>Mes Pagto</td>
+<td colspan="2">Mes Pagto</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",BEA->BEA_MESPAG)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_NUMIMP</td>
+<td>Nr. Impresso</td>
+<td colspan="2">Numero do Impresso</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>( Vazio() ) .Or. ( plszero() .And. PLSVLDNIMP(M->B01_NUMIMP) )</td>
+<td>If(Inclui,"",BEA->BEA_NUMIMP)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_GUIORI</td>
+<td>Guia Orig.</td>
+<td colspan="2">Guia Original</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>32</td>
+<td>0</td>
+<td>@R !!!!.!!!!.!!!!!!!!.!!!!!!!!               </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_MSG01</td>
+<td>Mensagem 1</td>
+<td colspan="2">Mensagem 1</td>
+<td colspan="4">Mensagem 1.
+</td>
+<td>C</td>
+<td>80</td>
+<td>0</td>
+<td>@C                                           </td>
+<td></td>
+<td>If(Inclui,"",BEA->BEA_MSG01)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_MSG02</td>
+<td>Mensagem 2</td>
+<td colspan="2">Mensagem 2</td>
+<td colspan="4">Mensagem 2.
+</td>
+<td>C</td>
+<td>80</td>
+<td>0</td>
+<td>@C                                           </td>
+<td></td>
+<td>If(Inclui,"",BEA->BEA_MSG02)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_MSG03</td>
+<td>Mensagem 3</td>
+<td colspan="2">Mensagem 3</td>
+<td colspan="4">Mensagem 3.
+</td>
+<td>C</td>
+<td>80</td>
+<td>0</td>
+<td>@C                                           </td>
+<td></td>
+<td>If(Inclui,"",BEA->BEA_MSG03)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_SIGEXE</td>
+<td>Sigla Exec.</td>
+<td colspan="2">Sigla Executante</td>
+<td colspan="4">Sigla do Conselho Regional do
+Especialista Executante.
+</td>
+<td>C</td>
+<td>7</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>If(Empty(M->B01_SIGEXE),.T.,ExistCpo("BAH",M->B01_SIGEXE))</td>
+<td>IF(Inclui,GETMV("MV_PLSIGLA"),BEA->BEA_SIGLA)</td>
+<td><a href="/tabelas_protheus/f3/b53pls.html">B53PLS</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_GUIACO</td>
+<td>Guia Comp.</td>
+<td colspan="2">Guia Comprada?</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"0",BEA->BEA_GUIACO)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td>1=Sim;0=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_QUACOB</td>
+<td>Quando Cobr.</td>
+<td colspan="2">Quando Cobrar?</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",BEA->BEA_QUACOB)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=No Ato;2=Na Fatura</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_CODCLI</td>
+<td>Cod.Cliente</td>
+<td colspan="2">Codigo do Cliente</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",BEA->BEA_CODCLI)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_LOJA</td>
+<td>Loja</td>
+<td colspan="2">Loja do Cliente</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",BEA->BEA_LOJA)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_SENHA</td>
+<td>Senha</td>
+<td colspan="2">Senha</td>
+<td colspan="4">Informar senha
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(inclui,"",BEA->BEA_SENHA)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_NRAOPE</td>
+<td>Nr Aut Oper.</td>
+<td colspan="2">Numero Aut. Operadora</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(inclui,"",BEA->BEA_NRAOPE)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_NRAEMP</td>
+<td>Nr Aut Empr.</td>
+<td colspan="2">Numero Aut. Empresa</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(inclui,"",BEA->BEA_NRAEMP)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_AUDITO</td>
+<td>Auditoria?</td>
+<td colspan="2">Enviado a Auditoria?</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"0",BEA->BEA_AUDITO)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td>1=Sim;0=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_LOCREQ</td>
+<td>Loc.Requisic</td>
+<td colspan="2">Local da Requisicao</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",BEA->BEA_LOCREQ)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Consultorio;2=Pronto Atendimento;3=Hospital;4=Medicina/Odonto. do Trabalho;5=Medico/Dentista na Empresa;6=Transcricao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_NRLBOR</td>
+<td>Nr. Lib. Or?</td>
+<td colspan="2">Numero Lib. Original</td>
+<td colspan="4">Numero da Liberação Original. 'Ex. Uma
+autorização gerada por uma liberação
+</td>
+<td>C</td>
+<td>18</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",BEA->BEA_NRLBOR)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_PAGATO</td>
+<td>Pagto Ato?</td>
+<td colspan="2">Pagamento no Ato?</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"0",BEA->BEA_PAGATO)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td>1=Sim;0=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_DPTETA</td>
+<td>Data Termino</td>
+<td colspan="2">Data Prev. Term Tratament</td>
+<td colspan="4">Informe neste campo a data de previsão
+do término do tratamento odontológico.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_SCDPER</td>
+<td>Sinais Perio</td>
+<td colspan="2">Sinais Clínico Doença Per</td>
+<td colspan="4">Este campo é para informar o indicador
+de sinais clínicos aparentes de doenças
+periodontais no tratamento odontológico.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td>0=N�o;1=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_ALTMOL</td>
+<td>Alter Tecido</td>
+<td colspan="2">Alter Tecidos Moles</td>
+<td colspan="4">Este campo é para informar se houve
+alteração dos tecidos moles aparentes
+(Sim ou Não) no tratamento odontológico.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td>0=N�o;1=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_TIPATO</td>
+<td>Tipo Atend</td>
+<td colspan="2">Tipo Atendimento Odonto</td>
+<td colspan="4">Informe o tipo de atendimento conforme
+definição da ANS/TISS.
+1 - Tratamento Odontológico   2 - Exame
+Radiológico   3 - Ortodontia   4 -
+Urgência/Emergência    5 - Auditoria
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td>1=Tratamento Odontol�gico;2=Exame Radiol�gico;3=Ortodontia;4=Urg�ncia/ Emerg�ncia;5=Auditoria</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_TIPFAT</td>
+<td>Tp Faturamen</td>
+<td colspan="2">Tipo Faturamento</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("TP")</td>
+<td>"T"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td>T=Total;P=Parcial</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_DATSOL</td>
+<td>Data Solicit</td>
+<td colspan="2">Data Solicitação</td>
+<td colspan="4">Data Solicitacao
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>Iif(Inclui,dDataBase,BEA->BEA_DATSOL)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_GUIJUR</td>
+<td>Guia Jurid ?</td>
+<td colspan="2">É uma Guia Juridica ?</td>
+<td colspan="4">Informe se é uma Guia Juridica?
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PLSGUIJUR("B01_GUIJUR")</td>
+<td>If(Inclui,"",BEA->BEA_GUIJUR)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td>0=N�o;1=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_NUMPRO</td>
+<td>Num Processo</td>
+<td colspan="2">Numero do Processo</td>
+<td colspan="4">Informe o Numero do processo
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",BEA->BEA_NUMPRO)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_GUIPRI</td>
+<td>Nr Guia Prin</td>
+<td colspan="2">Numero da Guia Principal</td>
+<td colspan="4">Informe o Numero da Guia Principal do
+Beneficiário
+</td>
+<td>C</td>
+<td>18</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIF(INCLUI,"",BEA->BEA_GUIPRI)</td>
+<td><a href="/tabelas_protheus/f3/be4b01.html">BE4B01</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_PROATE</td>
+<td>Protocolo</td>
+<td colspan="2">Protocolo de Atendimento</td>
+<td colspan="4">Protocolo de atendimento do paciente.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",BEA->BEA_PROATE)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_CANTIS</td>
+<td>Canc.TISS</td>
+<td colspan="2">Cod. Cancelamento TISS</td>
+<td colspan="4">Informe o código do motivo de
+cancelamento da TISS.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>BEA->BEA_CANTIS</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_VALSEN</td>
+<td>Valid Senha</td>
+<td colspan="2">Validade Senha</td>
+<td colspan="4">Este campo é preenchido com a soma da
+data base do Sistema e o conteúdo do
+parâmetro MV_PLPRZLB, sendo que, pode
+ser alterado caso necessário.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IIf(Inclui,dDatabase+GetNewPar("MV_PLPRZLB",30),BEA->BEA_VALSEN)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B01_CANEDI</td>
+<td>Canc.TISS</td>
+<td colspan="2">Cod. Cancelamento TISS</td>
+<td colspan="4">Informe o código do motivo de
+cancelamento da TISS.
+</td>
+<td>C</td>
+<td>250</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>BEA->BEA_CANEDI</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

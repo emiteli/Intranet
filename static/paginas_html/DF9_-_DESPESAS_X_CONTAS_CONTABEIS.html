@@ -1,0 +1,485 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: DF9 - DESPESAS X CONTAS CONTABEIS</title></head>
+<body>
+<font color="orange"><h2 id="DF9">Tabela: DF9 - DESPESAS X CONTAS CONTABEIS</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>DESPESAS X CONTAS CONTABEIS</b></td><td colspan="2"><b>DF9_FILIAL+DF9_CODDES</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">DF9_FILIAL+DF9_CODDES</td><td>Cod. Despesa</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>DF9_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DF9_CODDES</td>
+<td>Cod. Despesa</td>
+<td colspan="2">Codigo da Despesa</td>
+<td colspan="4">Código da despesa que gerou o custo de
+transporte
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>TMSAF20Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dt7.html">DT7</a></td>
+<td><a href="/tabelas_protheus/gatilhos/df9_coddes.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DF9_DSCDES</td>
+<td>Descr. Desp.</td>
+<td colspan="2">Descricao da Despesa</td>
+<td colspan="4">Descrição da despesa que gerou o custo
+de transporte
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If( !INCLUI, Posicione( 'DT7', 1, xFilial( 'DT7' ) + DF9->DF9_CODDES, 'DT7_DESCRI' ), '' )</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione( 'DT7', 1, xFilial( 'DT7' ) + DF9->DF9_CODDES, 'DT7_DESCRI' )</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DF9_SRTCUS</td>
+<td>Serv.Tran.Ct</td>
+<td colspan="2">Servico de Transp. Custo</td>
+<td colspan="4">Neste campo serão determinados os
+serviços de transporte dos documentos
+que receberão o rateio da somatória das
+contas contábeis relacionadas à despesa.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DF9_TPTCUS</td>
+<td>Tipo Tran.Ct</td>
+<td colspan="2">Tipo de Transporte</td>
+<td colspan="4">Neste campo serão determinados os tipos
+de transporte dos documentos que
+receberão o rateio da somatória das
+contas contábeis relacionadas à despesa.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DF9_RATEIO</td>
+<td>Rateio</td>
+<td colspan="2">Rateio para Custo</td>
+<td colspan="4">Neste campo terão as opções das
+possíveis formas de rateio para a
+distribuição do custo da despesa
+relacionada, que poderão ser:
+- Específico: o usuário determina o tipo
+de rateio;
+- Qtde. Docto: o valor da despesa é
+dividido pela quantidade de documentos
+apontados;
+- Peso: o valor da despesa é dividido
+pelo peso da mercadoria;
+- Volume: o valor da despesa é dividido
+pelo volume da mercadoria;
+- Valor da Mercadoria: o valor da
+despesa é dividido pelo valor da
+mercadoria;
+- Peso Cubado: o valor da despesa é
+dividido pelo peso cubado da mercadoria;
+- Faturamento: o valor da despesa é
+dividido pelo faturamento;
+- % Despesas x Receitas: o valor da
+despesa é dividido pela receita.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>!                                            </td>
+<td>Pertence( '01234567' ) .And. TMSAF20Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Espec�fico;1=Qtde. Docto;2=Peso;3=Volume;4=Valor Merc.;5=Peso Cubado;6=Faturamento;7=% Despesas x Receitas</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DF9_DOCCUS</td>
+<td>Docto.Transp</td>
+<td colspan="2">Doctos. Transp. p/ Custo</td>
+<td colspan="4">Documentos de transporte para apuracao
+de custo
+</td>
+<td>C</td>
+<td>36</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DF9_TIPCAR</td>
+<td>Tipo Carga</td>
+<td colspan="2">Tipo de Carga</td>
+<td colspan="4">Tipo da carga que será pesquisada.
+- Direta: Serão consideradas as cargas
+com peso superior a 10.000 Kg com um
+único remetente e destinatário.
+- Fracionada: Serão consideradas cargas
+com peso inferior a 10.000 Kg.
+Verificar o parametro MV_CARGIR para
+definir os pesos para cargas Diretas e
+Fracionadas
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence( '012' )</td>
+<td>'0'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Nao Utiliza;1=Direta;2=Fracionada</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DF9_CAREXP</td>
+<td>Carga Exped.</td>
+<td colspan="2">Carga Expedida</td>
+<td colspan="4">Identifica os documentos originados na
+filial
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence('12' )</td>
+<td>'2'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DF9_CARREC</td>
+<td>Carga Receb.</td>
+<td colspan="2">Carga Recebida</td>
+<td colspan="4">Identifica os documentos recebidos de
+outras filiais com destino final na
+filial recebedora
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence( '12' )</td>
+<td>'2'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DF9_CARREP</td>
+<td>Carga Reproc</td>
+<td colspan="2">Carga Reprocessada</td>
+<td colspan="4">Identifica os documentos recebidos de
+outras filiais e que irao seguir em
+outras viagens
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence( '12' ) .And. TMSAF20Vld()</td>
+<td>'2'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DF9_FAIXA</td>
+<td>Faixas em</td>
+<td colspan="2">Faixas em</td>
+<td colspan="4">Neste campo terá a informação das faixas
+em que o rateio irá ocorrer:
+- Qtde. Docto: o valor da despesa é
+dividido pela quantidade de documentos
+apontados.
+- Peso: o valor da despesa é dividido
+pelo peso da mercadoria.
+- Volume: o valor da despesa é dividido
+pelo volume da mercadoria.
+- Valor da Mercadoria: o valor da
+despesa é dividido pelo valor da
+mercadoria.
+- Peso Cubado: o valor da despesa é
+dividido pelo peso cubado da mercadoria.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence( '012345' )</td>
+<td>'0'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Nao utiliza;1=Qtde. Docto.;2=Peso;3=Volume;4=Valor Merc.;5=Peso Cubado</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DF9_PERREP</td>
+<td>Perc. Reproc</td>
+<td colspan="2">Percentual de Reprocesso</td>
+<td colspan="4">Percentual de Reprocesso
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>@E 999.99                                    </td>
+<td>Positivo()</td>
+<td>0</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>M->DF9_CARREP == '1'</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

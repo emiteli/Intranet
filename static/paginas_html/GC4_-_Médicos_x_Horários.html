@@ -1,0 +1,320 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: GC4 - Médicos x Horários</title></head>
+<body>
+<font color="orange"><h2 id="GC4">Tabela: GC4 - Médicos x Horários</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Médicos x Horários</b></td><td colspan="2"><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">GC4_FILIAL+GC4_CODCRM+GC4_DIASEM+GC4_HORINI</td><td>CRM Medico + Dia semana + Hora Inicial</td><td></td></tr>
+<tr><td>2</td><td colspan="2">GC4_FILIAL+GC4_CODCRM+GC4_DIASEM+GC4_TIPO</td><td>CRM Medico + Dia semana + Tipo</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>GC4_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Código que identifica a filial da
+empresa usuária do sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GC4_CODCRM</td>
+<td>CRM Medico</td>
+<td colspan="2">CRM do Medico</td>
+<td colspan="4">Informa o código do CRM do profissional.
+</td>
+<td>C</td>
+<td>7</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>HS_SeekRet("SRA","M->GC4_CODCRM",11,.F.,"GC4_NOMMED","RA_NOME")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gbj.html">GBJ</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GC4_NOMMED</td>
+<td>Nome Medico</td>
+<td colspan="2">Nome do medico</td>
+<td colspan="4">Informa o nome do profissional.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>POSICIONE("SRA",11,XFILIAL("GC4")+IIF(INCLUI, M->GC4_CODCRM, GC4->GC4_CODCRM),"RA_NOME")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("SRA",11,XFILIAL("GC4")+GC4->GC4_CODCRM,"RA_NOME")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GC4_DIASEM</td>
+<td>Dia semana</td>
+<td colspan="2">Dia da semana</td>
+<td colspan="4">Informa o dia da semana.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Domingo;1=Segunda-feira;2=Terca-feira;3=Quarta-feira;4=Quinta-feira;5=Sexta-feira;6=Sabado</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GC4_HORINI</td>
+<td>Hora Inicial</td>
+<td colspan="2">Hora inicial</td>
+<td colspan="4">Informa a Hora inicial do profissional.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td>HTOM(M->GC4_HORINI) < 1440 .AND. IF(Empty(M->GC4_HORFIN),.T.,HTOM(M->GC4_HORINI) < HTOM(M->GC4_HORFIN))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GC4_HORFIN</td>
+<td>Hora final</td>
+<td colspan="2">Hora final</td>
+<td colspan="4">Informa a Hora final do profissional.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td>HTOM(M->GC4_HORFIN) < 1440 .AND. IF(Empty(M->GC4_HORINI),.T.,HTOM(M->GC4_HORFIN) > HTOM(M->GC4_HORINI))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GC4_TIPO</td>
+<td>Tipo</td>
+<td colspan="2">Tipo</td>
+<td colspan="4">Informa o tipo de horário (0=Horário
+Bloqueado, 1=Horário Liberado)
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Horario bloqueado;1=Horario liberado</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GC4_CODESP</td>
+<td>Cod.Espec.</td>
+<td colspan="2">Codigo Especialidade</td>
+<td colspan="4">Codigo da Especialidade do Medico
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>HS_SeekRet("GFR","M->GC4_CODESP",1,.f.,"GC4_NOMESP","GFR_DSESPE",,,.t.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gfr001.html">GFR001</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GC4_NOMESP</td>
+<td>Descr Espec</td>
+<td colspan="2">Descricao Especialidade</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!Inclui,Posicione("GFR",1,xFilial("GFR")+GC4->GC4_CODESP,"GFR_DSESPE"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("GFR",1,xFilial("GFR")+GC2->GC2_CODESP,"GFR_DSESPE")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

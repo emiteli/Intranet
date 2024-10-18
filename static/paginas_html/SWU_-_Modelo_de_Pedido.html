@@ -1,0 +1,800 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: SWU - Modelo de Pedido</title></head>
+<body>
+<font color="orange"><h2 id="SWU">Tabela: SWU - Modelo de Pedido</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Modelo de Pedido</b></td><td colspan="2"><b></b></td><td><b>EICWU100</b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">WU_FILIAL+WU_COD</td><td>Cod. Modelo</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>WU_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Filial do Sistema
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>WU_COD</td>
+<td>Cod. Modelo</td>
+<td colspan="2">Codigo do Modelo</td>
+<td colspan="4">Cod. Modelo de PO
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .AND. ExistChav("SWU",M->WU_COD)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>WU_DESCR</td>
+<td>Descricao</td>
+<td colspan="2">Descricao</td>
+<td colspan="4">Nome do modelo de PO
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@S17                                         </td>
+<td>NaoVazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>WU__CC</td>
+<td>Unid.Requis.</td>
+<td colspan="2">Unidade Requisitante</td>
+<td colspan="4">Unidade Requisitante
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .AND. ExistCpo("SY3",M->WU__CC)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sy3.html">SY3</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/084.html">084</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>WU_COMPRA</td>
+<td>Comprador</td>
+<td colspan="2">Comprador</td>
+<td colspan="4">Comprador padrão p/ a integração
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .AND. ExistCpo("SY1",M->WU_COMPRA)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sy1.html">SY1</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>WU__POLE</td>
+<td>Local</td>
+<td colspan="2">Local de Entrega</td>
+<td colspan="4">Local de Entrega
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .AND. ExistCpo("SY2",M->WU__POLE)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sy2.html">SY2</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>WU_DIAS_NE</td>
+<td>Dias Entrega</td>
+<td colspan="2">Dias para Entrega</td>
+<td colspan="4">Dias a serem somados para a data de
+entrega na integração
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>WU_DIAS_EM</td>
+<td>Dias Embarq.</td>
+<td colspan="2">Dias de Embarque</td>
+<td colspan="4">Qtde. de dias a ser somado p/ a  data
+deembarque no PO
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>WU_IMPORT</td>
+<td>Importador</td>
+<td colspan="2">Importador</td>
+<td colspan="4">Código padrão de importador para a
+integração de pedidos
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .AND. ExistCpo("SYT",M->WU_IMPORT)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/syt.html">SYT</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>WU_CONSIG</td>
+<td>Consignatar.</td>
+<td colspan="2">Consignatario</td>
+<td colspan="4">Cod. consig. padrão p/ integração
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .OR. ExistCpo("SYT",M->WU_CONSIG)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/syt.html">SYT</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>WU_FABR</td>
+<td>Fabricante</td>
+<td colspan="2">Fabricante</td>
+<td colspan="4">Código padrão do fabricante para os
+itens integrados em P.O.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .AND. ExistCpo("SA2",M->WU_FABR)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sa2a.html">SA2A</a></td>
+<td><a href="/tabelas_protheus/gatilhos/wu_fabr.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>WU_FABLOJ</td>
+<td>Loja Fa.</td>
+<td colspan="2">Loja Fa.</td>
+<td colspan="4">Informe a Loja.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>If(!Empty(M->WU_FABLOJ),ExistCpo("SA2",M->WU_FABR+M->WU_FABLOJ),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>WU_FORN</td>
+<td>Fornecedor</td>
+<td colspan="2">Fornecedor</td>
+<td colspan="4">Fornecedor padrão p/ integração
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .AND. ExistCpo("SA2",M->WU_FORN)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sa2a.html">SA2A</a></td>
+<td><a href="/tabelas_protheus/gatilhos/wu_forn.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>WU_FORLOJ</td>
+<td>Loja Fo.</td>
+<td colspan="2">Loja Fo.</td>
+<td colspan="4">Informe a Loja.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>If(!Empty(M->WU_FORLOJ),ExistCpo("SA2",M->WU_FORN+M->WU_FORLOJ),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>WU_AGENTE</td>
+<td>Agente</td>
+<td colspan="2">Agente</td>
+<td colspan="4">Agente embarcador, default para a
+integração
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .AND. ExistCpo("SY4",M->WU_AGENTE)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ag1.html">AG1</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>WU_FORWARD</td>
+<td>Forwarder</td>
+<td colspan="2">Forwarder</td>
+<td colspan="4">Forwarder default para a integração
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .OR. ExistCpo("SY4",M->WU_FORWARD)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ag1.html">AG1</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>WU_TIPO_EM</td>
+<td>Via Transp.</td>
+<td colspan="2">Via de Transporte</td>
+<td colspan="4">Via de transporte padrão p/ integração
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .AND. ExistCpo("SYQ",M->WU_TIPO_EM)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/syq.html">SYQ</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>WU_ORIGEM</td>
+<td>Origem</td>
+<td colspan="2">Origem</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .AND. ExistCpo("SYR",M->WU_TIPO_EM+M->WU_ORIGEM)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/eor.html">EOR</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>WU_DEST</td>
+<td>Destino</td>
+<td colspan="2">Destino</td>
+<td colspan="4">Sigla do destino padrão p/ integração
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .AND. ExistCpo("SYR",M->WU_TIPO_EM+M->WU_ORIGEM+M->WU_DEST)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/edf.html">EDF</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>WU_FREPPCC</td>
+<td>Tipo Frete</td>
+<td colspan="2">Tipo de Frete (PP/CC)</td>
+<td colspan="4">Informe se o frete é prepaid ou collect
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .AND. Pertence("PP,CC")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>CC=Collect;PP=Prepaid</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>WU_COND_PA</td>
+<td>Cond. Pagto</td>
+<td colspan="2">Condicao de Pagamento</td>
+<td colspan="4">Cod. de cond. pagto padrão p/ integração
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .AND. ExistCpo("SY6",M->WU_COND_PA)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sy6.html">SY6</a></td>
+<td><a href="/tabelas_protheus/gatilhos/wu_cond_pa.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>WU_DIAS_PA</td>
+<td>Nr. Dias</td>
+<td colspan="2">Dias de Pagto</td>
+<td colspan="4">Dias de pagamento padrão para a
+integração
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td>NaoVazio() .AND. ExistCpo("SY6",M->WU_COND_PA+STR(M->WU_DIAS_PA,3,0))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>WU_MOEDA</td>
+<td>Moeda</td>
+<td colspan="2">Moeda</td>
+<td colspan="4">Sigla de moeda padrão p/ integração
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .AND. ExistCpo("SYF",M->WU_MOEDA)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/syf.html">SYF</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>WU_OBS</td>
+<td>Observacao</td>
+<td colspan="2">Observacao</td>
+<td colspan="4">Observação
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>WU_VM_OBS</td>
+<td>Observacoes</td>
+<td colspan="2">Observacoes</td>
+<td colspan="4">Observações
+</td>
+<td>M</td>
+<td>60</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IF(!INCLUI,E_MSMM(SWU->WU_OBS,60),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>WU_TIPOSI</td>
+<td>Classific.</td>
+<td colspan="2">Classificacao</td>
+<td colspan="4">Tipo de classificação para a integração
+padrão
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .AND. SI400VldCl(M->WU_TIPOSI)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/y1.html">Y1</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

@@ -1,0 +1,576 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: TM1 - Medicamentos</title></head>
+<body>
+<font color="orange"><h2 id="TM1">Tabela: TM1 - Medicamentos</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Medicamentos</b></td><td colspan="2"><b>TM1_FILIAL+TM1_CODMED</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">TM1_FILIAL+TM1_CODMED</td><td>Medicamento</td><td></td></tr>
+<tr><td>2</td><td colspan="2">TM1_FILIAL+TM1_NOMEDI</td><td>Nome</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>TM1_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">FILIAL DO SISTEMA</td>
+<td colspan="4">Código da filial da empresa.Campo
+alimentado automaticamente pelo módulo
+de Medicima e Segurança do Trabalho com
+base no campo filial.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TM1_CODMED</td>
+<td>Medicamento</td>
+<td colspan="2">Codigo do Medicamento</td>
+<td colspan="4">Código do medicamento.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCHAV("TM1",M->TM1_CODMED)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TM1_NOMEDI</td>
+<td>Nome</td>
+<td colspan="2">Nome do Medicamento</td>
+<td colspan="4">Nome do medicamento.
+</td>
+<td>C</td>
+<td>35</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NAOVAZIO()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>MDT010WHEN("TM1_NOMEDI")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TM1_QTINVE</td>
+<td>Qtd. Invent.</td>
+<td colspan="2">Quantidade no Inventario</td>
+<td colspan="4">Quantidade do medicamento em estoque na
+data do inventário. Campo alimentado
+automaticamente pelo módulo de Medicina
+e Segurança no Trabalho com base na
+movimentação do estoque.
+</td>
+<td>N</td>
+<td>9</td>
+<td>2</td>
+<td>@E 999,999.99                                </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TM1_QTATUA</td>
+<td>Quant. Atual</td>
+<td colspan="2">Quantidade atual em estoq</td>
+<td colspan="4">Quantidade atual em estoque. Campo
+alimentado automaticamente pelo módulo
+de Medicina e Segurança no Trabalho com
+base na movimentação do estoque.
+</td>
+<td>N</td>
+<td>9</td>
+<td>2</td>
+<td>@E 999,999.99                                </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TM1_UNIDAD</td>
+<td>Unid. Medida</td>
+<td colspan="2">Unidade de Medida</td>
+<td colspan="4">Código da unidade de medida do
+medicamento. Observa a quantidade que
+deverá ser armazenada com base na mesma
+unidade de medida que o remédio é
+fornecido ao paciente. Pressione as
+teclas [Enter]+[F3] para selecionar uma
+unidade.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO("SX5","62"+M->TM1_UNIDAD)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/62.html">62</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tm1_unidad.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TM1_DESUNI</td>
+<td>Descr. Unid.</td>
+<td colspan="2">Descricao Unidade Medida</td>
+<td colspan="4">Descrição da Unidade de Medida. Campo
+alimentado automaticamente pelo módulo
+de Medicina e Segurança do Trabalho com
+base no campo descrição da unidade.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>SX5->(VDISP("62"+TM1->TM1_UNIDAD,"X5_DESCRI"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TM1_INDEST</td>
+<td>Cont. Estoq.</td>
+<td colspan="2">Controla Estoque</td>
+<td colspan="4">Indica se o estoque do medicamento
+deverá ser controlado.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF (INCLUI,"2",TM1->TM1_INDEST)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TM1_QTMINI</td>
+<td>Quant. Min.</td>
+<td colspan="2">Quantidade Minima Estoq.</td>
+<td colspan="4">Quantidade mínima que deve ter em
+estoque.
+</td>
+<td>N</td>
+<td>9</td>
+<td>2</td>
+<td>@E 999,999.99                                </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TM1_DTINVE</td>
+<td>Dt. Invent.</td>
+<td colspan="2">Data do Inventario</td>
+<td colspan="4">Data em que foi efetuado o levantamento
+para determinar a quantidade em estoque.
+Campo alimentado automaticamente pelo
+módulo de Medicina e Segurança do
+Trabalho com base no campo data do
+inventário.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TM1_INDUSO</td>
+<td>Tipo Uso</td>
+<td colspan="2">Indica Tipo de Uso</td>
+<td colspan="4">Indica o tipo de uso do Medicamento:
+1 = Interno
+2 = Externo
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF (INCLUI,"1",TM1->TM1_INDUSO)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Interno;2=Externo</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TM1_DESUSO</td>
+<td>Indicacao</td>
+<td colspan="2">Indicacao de Uso</td>
+<td colspan="4">Descrição da indicação de uso do
+Medicamento.
+</td>
+<td>C</td>
+<td>80</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TM1_CONIND</td>
+<td>Contra Ind.</td>
+<td colspan="2">Contra Indicacao</td>
+<td colspan="4">Descrição da contra indicação de uso
+do Medicamento.
+</td>
+<td>C</td>
+<td>80</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TM1_DTVALI</td>
+<td>Data Valid.</td>
+<td colspan="2">Dt. Validade Medicamento</td>
+<td colspan="4">Data de validade do medicamento.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>MDT010VLD(M->TM1_DTVALI)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TM1_INDAMB</td>
+<td>Med. Ambul.</td>
+<td colspan="2">Medicamento Ambulatorio</td>
+<td colspan="4">Indica se o medicamento pertence ao
+ambulatório. Opções: 1=Sim ou 2=Não.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@1                                           </td>
+<td>NaoVazio()</td>
+<td>IF (INCLUI,"2",TM1->TM1_INDAMB)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TM1_USERGI</td>
+<td>Log de Inclu</td>
+<td colspan="2">Log de Inclusão</td>
+<td colspan="4">Indica código criptografado do usuário
+de inclusão do registro.
+</td>
+<td>C</td>
+<td>17</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>TY3</td>
+<td colspan="2">TM1_CODMED</td>
+<td colspan="2">TY3_CODMED</td>
+</tr>
+<tr>
+<td>TL5</td>
+<td colspan="2">TM1_CODMED</td>
+<td colspan="2">TL5_CODMED</td>
+</tr>
+<tr>
+<td>TM3</td>
+<td colspan="2">TM1_CODMED</td>
+<td colspan="2">TM3_CODMED</td>
+</tr>
+<tr>
+<td>TM2</td>
+<td colspan="2">TM1_CODMED</td>
+<td colspan="2">TM2_CODMED</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

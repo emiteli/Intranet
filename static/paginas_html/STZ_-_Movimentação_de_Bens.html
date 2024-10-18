@@ -1,0 +1,716 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: STZ - Movimentação de Bens</title></head>
+<body>
+<font color="orange"><h2 id="STZ">Tabela: STZ - Movimentação de Bens</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Movimentação de Bens</b></td><td colspan="2"><b>TZ_FILIAL+TZ_CODBEM+DTOS(TZ_DATAMOV)+TZ_TIPOMOV+TZ_HORAENT</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">TZ_FILIAL+TZ_CODBEM+TZ_TIPOMOV</td><td>Bem + Tipo Movto.</td><td></td></tr>
+<tr><td>2</td><td colspan="2">TZ_FILIAL+TZ_CODBEM+DTOS(TZ_DATAMOV)+TZ_TIPOMOV+TZ_HORAENT</td><td>Bem + Data Movto. + Tipo Movto. + Hora Implant</td><td></td></tr>
+<tr><td>3</td><td colspan="2">TZ_FILIAL+TZ_BEMPAI+TZ_LOCALIZ+DTOS(TZ_DATAMOV)</td><td>Bem Pai + Localizacao + Data Movto.</td><td></td></tr>
+<tr><td>4</td><td colspan="2">TZ_FILIAL+TZ_BEMPAI+DTOS(TZ_DATAMOV)+TZ_HORACO1</td><td>Bem Pai + Data Movto. + Hora cont. 1</td><td></td></tr>
+<tr><td>5</td><td colspan="2">TZ_FILIAL+TZ_BEMPAI+TZ_CODBEM+DTOS(TZ_DATAMOV)+TZ_HORAENT</td><td>Bem Pai + Bem + Data Movto. + Hora Implant</td><td>S</td></tr>
+<tr><td>6</td><td colspan="2">TZ_FILIAL+TZ_BEMPAI+TZ_CODBEM+DTOS(TZ_DATASAI)+TZ_HORASAI</td><td>Bem Pai + Bem + Data Saida + Hora Saida</td><td>S</td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>TZ_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Codigo da Filial</td>
+<td colspan="4">Código da filial da empresa.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TZ_CODBEM</td>
+<td>Bem</td>
+<td colspan="2">Codigo do Bem</td>
+<td colspan="4">Código do Bem movimentado.
+</td>
+<td>C</td>
+<td>16</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("ST9",M->TZ_CODBEM)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/st9.html">ST9</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TZ_BEMPAI</td>
+<td>Bem Pai</td>
+<td colspan="2">Codigo do Bem Pai</td>
+<td colspan="4">Código do Bem pai do Bem da
+movimentação.
+</td>
+<td>C</td>
+<td>16</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("STC",M->TZ_BEMPAI)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/stc.html">STC</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TZ_LOCALIZ</td>
+<td>Localizacao</td>
+<td colspan="2">Localizacao no estrutura</td>
+<td colspan="4">Código de localização original.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>MNT98VLOC()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tps.html">TPS</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>aCols[n][1] = "E"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TZ_DATAMOV</td>
+<td>Data Movto.</td>
+<td colspan="2">Data da Movimentacao</td>
+<td colspan="4">Data em que ocorreu a movimentação do
+Bem para outro Centro de Custo.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>99/99/9999                                   </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TZ_POSCONT</td>
+<td>Cont. Entr.</td>
+<td colspan="2">Contador na Entrada</td>
+<td colspan="4">Posição do contador 1.
+</td>
+<td>N</td>
+<td>9</td>
+<td>0</td>
+<td>@E 999,999,999                               </td>
+<td></td>
+<td>MNTCONRELA("TZ_POSCONT")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>MNTCONWHEN("TZ_POSCONT")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TZ_TIPOMOV</td>
+<td>Tipo Movto.</td>
+<td colspan="2">Tipo de Movimentacao</td>
+<td colspan="4">Tipo da movimentação efetuada na
+estrutura.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE ("ES")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>E=Entrada;S=Saida</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TZ_DATASAI</td>
+<td>Data Saida</td>
+<td colspan="2">Data de saida</td>
+<td colspan="4">Data em que ocorreu a saida da posição
+original.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>99/99/9999                                   </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TZ_CONTSAI</td>
+<td>Cont. Saida</td>
+<td colspan="2">Contador da Saida</td>
+<td colspan="4">Posição de saida do contador 1.
+</td>
+<td>N</td>
+<td>9</td>
+<td>0</td>
+<td>@E 999,999,999                               </td>
+<td></td>
+<td>MNTCONRELA("TZ_CONTSAI")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>MNTCONWHEN("TZ_CONTSAI")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TZ_CAUSA</td>
+<td>Causa Remoc.</td>
+<td colspan="2">Causa da remocao</td>
+<td colspan="4">Código da causa da movimentação do Bem.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("ST8", M->TZ_CAUSA) .And. MNT125VOC(,.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/stn.html">STN</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tz_causa.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>aCols[n][1] = "S"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TZ_NOMCAUS</td>
+<td>Nome Causa</td>
+<td colspan="2">Nome da Causa da Remocao</td>
+<td colspan="4">Nome da causa da movimentação do Bem.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>NGSEEK("ST8",STZ->TZ_CAUSA,1,"T8_NOME")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TZ_CONTSA2</td>
+<td>2ºContad.Sai</td>
+<td colspan="2">Contador na Saida</td>
+<td colspan="4">Posição de saida do contador 2.
+</td>
+<td>N</td>
+<td>9</td>
+<td>0</td>
+<td>@E 999,999,999                               </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TZ_POSCON2</td>
+<td>Cont.Entrada</td>
+<td colspan="2">Contador na Entrada</td>
+<td colspan="4">Posição do contador 2.
+</td>
+<td>N</td>
+<td>9</td>
+<td>0</td>
+<td>@E 999,999,999                               </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TZ_HORACO1</td>
+<td>Hora cont. 1</td>
+<td colspan="2">Hora leitura cont. 1</td>
+<td colspan="4">Hora de leitura do contador 1.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td></td>
+<td>If(INCLUI,TIME(),STZ->TZ_HORAC01)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TZ_HORACO2</td>
+<td>Hora cont. 2</td>
+<td colspan="2">Hora leitura cont. 2</td>
+<td colspan="4">Hora de leitura do contador 2.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td></td>
+<td>If(INCLUI,TIME(),STZ->TZ_HORACO2)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TZ_TEMCONT</td>
+<td>Controle Com</td>
+<td colspan="2">Controle do Componente</td>
+<td colspan="4">Controlado por tipo de contador. Pode
+ser:
+S-Tem contador próprio
+N-Não é controlado por contador
+P-Controlado pelo Bem Pai
+I-Controlado pelo Pai imediato
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("SNPI")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>S=Tem contador proprio;N=Nao e controlado por contador;P=Controlado pelo bem pai;I=Controlado pelo pai imediato</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TZ_HORASAI</td>
+<td>Hora Saida</td>
+<td colspan="2">Hora Saida da Estrutura</td>
+<td colspan="4">Hora de saida do Bem na estrutura.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TZ_HORAENT</td>
+<td>Hora Implant</td>
+<td colspan="2">Hora Implantacao Estrutu.</td>
+<td colspan="4">Hora de implantacao do Bem na estrutura.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TZ_TEMCPAI</td>
+<td>Controle Pai</td>
+<td colspan="2">Controle do Pai</td>
+<td colspan="4">Tipo de controle de contador do
+componente. Podendo ser:
+S- Tem contador;
+N- Não é controlado por contador;
+P- Controlado pelo pai da estrutura;
+I- Controlado pelo pai imediato.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('SNPI')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>S=Tem Contador Proprio;N=Nao e Controlado por Contador;P=Controlado pelo Pai da Estrutura;I=Controlado Pelo Pai Imediato</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TZ_ORDEM</td>
+<td>Numero O.S.</td>
+<td colspan="2">Numero Ordem de Servico</td>
+<td colspan="4">Informe o número da Ordem de Serviço.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TZ_PLANO</td>
+<td>Numero do Pl</td>
+<td colspan="2">Numero do Plano</td>
+<td colspan="4">Informe o código do Plano de Manutenção.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TZ_USUARIO</td>
+<td>Usuario</td>
+<td colspan="2">Usuario da Movimentacao</td>
+<td colspan="4">Usuário responsável pela movimentação do
+pneu.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>ST8</td>
+<td colspan="2">TZ_CAUSA</td>
+<td colspan="2">T8_CODOCOR</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

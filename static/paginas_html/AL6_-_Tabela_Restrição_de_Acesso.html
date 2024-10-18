@@ -1,0 +1,407 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: AL6 - Tabela Restrição de Acesso</title></head>
+<body>
+<font color="orange"><h2 id="AL6">Tabela: AL6 - Tabela Restrição de Acesso</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Tabela Restrição de Acesso</b></td><td colspan="2"><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">AL6_FILIAL+AL6_ENTIDA</td><td>Entidade</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>AL6_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do sistema</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AL6_ENTIDA</td>
+<td>Entidade</td>
+<td colspan="2">Entidade</td>
+<td colspan="4">Entidade (tabela do sistema) que sofrera
+restricao de acesso por usuario na faixa
+informada.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistChav('AL6').AND.ExistCpo('SX2', left(M->AL6_ENTIDA,3), 1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sx21.html">SX21</a></td>
+<td><a href="/tabelas_protheus/gatilhos/al6_entida.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>AL6_NOMENT</td>
+<td>Nome Entid.</td>
+<td colspan="2">Nome Entidade</td>
+<td colspan="4">Nome da entidade que sofrera restrição
+de acesso.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>If(Inclui,'',Posicione('SX2', 1, AL6->AL6_ENTIDA, 'X2NOME()'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>If(Inclui,'',Posicione('SX2', 1, AL6->AL6_ENTIDA, 'X2NOME()'))</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AL6_CONPAD</td>
+<td>Cons.Padrao</td>
+<td colspan="2">Consulta Padrao</td>
+<td colspan="4">Consulta padrao da entidade para acesso
+pelo botao pesquisa ao informar a faixa
+inicial e final da entidade (tabela do
+sistema).
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>#Pco210Combo()</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>AL6_ATIVO</td>
+<td>Ativo</td>
+<td colspan="2">Ativo</td>
+<td colspan="4">Indica se a restricao de acesso pela
+entidade informada esta ativo ou nao.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence('12')</td>
+<td>'2'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Ativo;2=Inativo</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>AL6_CPOITE</td>
+<td>Campo It.Orc</td>
+<td colspan="2">Campo Itens Orcamentarios</td>
+<td colspan="4">Indicar o campo que sofrera restricao de
+acesso na grade de itens orcamentarios
+(sera validado).
+Exemplo:
+Entidade AL6-Classe Orcamentaria
+Neste campo devera ser digitado :
+AK2_CLASSE
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/al6_cpoite.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AL6_CPOMOV</td>
+<td>Campo Mv.Orc</td>
+<td colspan="2">Campo Movto Orcamentario</td>
+<td colspan="4">Campo informativo indicando o campo de
+referencia da tabela de movimentos com
+relacao ao item com  restricao de acesso
+na grade de itens orçamentarios.
+Exemplo:
+Entidade AL6-Classe Orcamentaria
+Neste campo devera ser digitado :
+AKD_CLASSE
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AL6_TAMANH</td>
+<td>Tamanho</td>
+<td colspan="2">Tamanho do Campo</td>
+<td colspan="4">Tamanho do campo que sofrera restricao
+de acesso, por exemplo, AK2_CLASSE o
+tamanho do campo igual a 6 (seis).
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>@E 99                                        </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>AL6_CPOENT</td>
+<td>Campo ent.</td>
+<td colspan="2">Campo Entidade</td>
+<td colspan="4">Campo informativo indicando o campo de
+referencia da tabela base.
+Exemplo:
+Entidade AKF-Operacoes Orcamentarias
+Neste campo devera ser digitado :
+AKF_CODIGO
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AL6_PLANO</td>
+<td>Plano</td>
+<td colspan="2">Plano</td>
+<td colspan="4">Digite o Plano.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AL6_UTILIZ</td>
+<td>Utilizado em</td>
+<td colspan="2">Utilizado em</td>
+<td colspan="4">Indica a finalidade da restricao de
+acesso.
+1=Itens da Planilha Orcamentaria
+(ediçao)
+2=Processamento Cubos
+(consultas/Relatorios)
+3=Visoes Gerenciais
+(consultas/Relatorios)
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('123')</td>
+<td>'1'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=Itens da Planilha;2=Processamento Cubos;3=Visoes Gerenciais</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

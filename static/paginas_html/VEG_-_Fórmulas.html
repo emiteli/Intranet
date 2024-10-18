@@ -1,0 +1,491 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: VEG - Fórmulas</title></head>
+<body>
+<font color="orange"><h2 id="VEG">Tabela: VEG - Fórmulas</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Fórmulas</b></td><td colspan="2"><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">VEG_FILIAL+VEG_CODIGO</td><td>Codigo</td><td></td></tr>
+<tr><td>2</td><td colspan="2">VEG_FILIAL+VEG_GRUFOR+VEG_CODIGO</td><td>Grp Formula + Codigo</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>VEG_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Filial do Sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VEG_CODIGO</td>
+<td>Codigo</td>
+<td colspan="2">Codigo da Formula</td>
+<td colspan="4">Código da Formula
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@E 999999                                    </td>
+<td>Val(M->VEG_CODIGO) > 0 .and. ExistChav("VEG",M->VEG_CODIGO,1,"EXIFORMUL")</td>
+<td>GetSXENum("VEG","VEG_CODIGO")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VEG_GRUFOR</td>
+<td>Grp Formula</td>
+<td colspan="2">Grupo da Formula</td>
+<td colspan="4">Grupo de  "Interesse"  da Formula
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@E 99                                        </td>
+<td>FG_STRZERO("M->VEG_GRUFOR",2,.F.).AND.EXISTCPO("SX5","VG"+M->VEG_GRUFOR)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/vg.html">VG</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VEG_DESCRI</td>
+<td>Descricao</td>
+<td colspan="2">Descricao da Formula</td>
+<td colspan="4">Descrição da Formula
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VEG_GRUPOS</td>
+<td>Grupos</td>
+<td colspan="2">Grupos da Formula</td>
+<td colspan="4">Informe aqui os grupos de produro, sobre
+os quais a fórmula deverá atuar. Se a
+opção for por todos os grupos, não
+preencha o campo.
+</td>
+<td>C</td>
+<td>100</td>
+<td>0</td>
+<td>@!S50                                        </td>
+<td>FG_VALGRUPO()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VEG_FORMUL</td>
+<td>Formula</td>
+<td colspan="2">Expressao da Formula</td>
+<td colspan="4">Expressao que o sistema executara
+ao acionar a formula. E a ação da
+formula
+</td>
+<td>C</td>
+<td>128</td>
+<td>0</td>
+<td>@!S50                                        </td>
+<td>NaoVazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VEG_OCORRE</td>
+<td>Documentacao</td>
+<td colspan="2">Documentacao da Formula</td>
+<td colspan="4">Documentação dos procedimentos da
+formula, visando possibilitar ao
+usuário, em linguagem convencional,
+entender a ação da mesma.
+</td>
+<td>M</td>
+<td>100</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!Inclui,MSMM(VEG->VEG_OCOMEM),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VEG_OCOMEM</td>
+<td>Oco-MEMO</td>
+<td colspan="2">OCO-MEMO</td>
+<td colspan="4">OCO-MEMO
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!S6                                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VEG_REQUIS</td>
+<td>Requisicao</td>
+<td colspan="2">Requisicao</td>
+<td colspan="4">informe o tipo de requisicao da formula.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>!                                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;0=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>VO3</td>
+<td colspan="2">VEG_CODIGO</td>
+<td colspan="2">VO3_FORMUL</td>
+</tr>
+<tr>
+<td>VV2</td>
+<td colspan="2">VEG_CODIGO</td>
+<td colspan="2">VV2_FORCTB</td>
+</tr>
+<tr>
+<td>VV2</td>
+<td colspan="2">VEG_CODIGO</td>
+<td colspan="2">VV2_FORCUS</td>
+</tr>
+<tr>
+<td>VS1</td>
+<td colspan="2">VEG_CODIGO</td>
+<td colspan="2">VS1_FORMUL</td>
+</tr>
+<tr>
+<td>VOI</td>
+<td colspan="2">VEG_CODIGO</td>
+<td colspan="2">VOI_VALPEC</td>
+</tr>
+<tr>
+<td>VOQ</td>
+<td colspan="2">VEG_CODIGO</td>
+<td colspan="2">VOQ_CODIGO</td>
+</tr>
+<tr>
+<td>VOQ</td>
+<td colspan="2">VEG_CODIGO</td>
+<td colspan="2">VOQ_CODIMF</td>
+</tr>
+<tr>
+<td>VV2</td>
+<td colspan="2">VEG_CODIGO</td>
+<td colspan="2">VV2_FORREV</td>
+</tr>
+<tr>
+<td>VE6</td>
+<td colspan="2">VEG_CODIGO</td>
+<td colspan="2">VE6_FORMUL</td>
+</tr>
+<tr>
+<td>VOI</td>
+<td colspan="2">VEG_CODIGO</td>
+<td colspan="2">VOI_FOREXP</td>
+</tr>
+<tr>
+<td>VVA</td>
+<td colspan="2">VEG_CODIGO</td>
+<td colspan="2">VVA_FORMUL</td>
+</tr>
+<tr>
+<td>SBM</td>
+<td colspan="2">VEG_CODIGO</td>
+<td colspan="2">BM_FORMUL</td>
+</tr>
+<tr>
+<td>VE5</td>
+<td colspan="2">VEG_CODIGO</td>
+<td colspan="2">VE5_FORVDA</td>
+</tr>
+<tr>
+<td>VE5</td>
+<td colspan="2">VEG_CODIGO</td>
+<td colspan="2">VE5_FORGAR</td>
+</tr>
+<tr>
+<td>VE5</td>
+<td colspan="2">VEG_CODIGO</td>
+<td colspan="2">VE5_FORPRP</td>
+</tr>
+<tr>
+<td>VV6</td>
+<td colspan="2">VEG_CODIGO</td>
+<td colspan="2">VV6_FORMUL</td>
+</tr>
+<tr>
+<td>VVT</td>
+<td colspan="2">VEG_CODIGO</td>
+<td colspan="2">VVT_FORMUL</td>
+</tr>
+<tr>
+<td>VEN</td>
+<td colspan="2">VEG_CODIGO</td>
+<td colspan="2">VEN_FORMUL</td>
+</tr>
+<tr>
+<td>VEB</td>
+<td colspan="2">VEG_CODIGO</td>
+<td colspan="2">VEB_FORMUL</td>
+</tr>
+<tr>
+<td>VE4</td>
+<td colspan="2">VEG_CODIGO</td>
+<td colspan="2">VE4_FDDAFD</td>
+</tr>
+<tr>
+<td>VE4</td>
+<td colspan="2">VEG_CODIGO</td>
+<td colspan="2">VE4_FOEXNF</td>
+</tr>
+<tr>
+<td>VE4</td>
+<td colspan="2">VEG_CODIGO</td>
+<td colspan="2">VE4_FOIMNF</td>
+</tr>
+<tr>
+<td>VE4</td>
+<td colspan="2">VEG_CODIGO</td>
+<td colspan="2">VE4_FORCTB</td>
+</tr>
+<tr>
+<td>VE4</td>
+<td colspan="2">VEG_CODIGO</td>
+<td colspan="2">VE4_FORCUS</td>
+</tr>
+<tr>
+<td>VE4</td>
+<td colspan="2">VEG_CODIGO</td>
+<td colspan="2">VE4_FOREXP</td>
+</tr>
+<tr>
+<td>VE4</td>
+<td colspan="2">VEG_CODIGO</td>
+<td colspan="2">VE4_FUNVGA</td>
+</tr>
+<tr>
+<td>VE4</td>
+<td colspan="2">VEG_CODIGO</td>
+<td colspan="2">VE4_FVLASS</td>
+</tr>
+<tr>
+<td>VE4</td>
+<td colspan="2">VEG_CODIGO</td>
+<td colspan="2">VE4_FVLFVD</td>
+</tr>
+<tr>
+<td>VE4</td>
+<td colspan="2">VEG_CODIGO</td>
+<td colspan="2">VE4_FVLSGV</td>
+</tr>
+<tr>
+<td>VE4</td>
+<td colspan="2">VEG_CODIGO</td>
+<td colspan="2">VE4_FVMIVD</td>
+</tr>
+<tr>
+<td>VS3</td>
+<td colspan="2">VEG_CODIGO</td>
+<td colspan="2">VS3_FORMUL</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

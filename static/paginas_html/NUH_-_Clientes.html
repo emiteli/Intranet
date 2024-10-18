@@ -1,0 +1,2058 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: NUH - Clientes</title></head>
+<body>
+<font color="orange"><h2 id="NUH">Tabela: NUH - Clientes</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Clientes</b></td><td colspan="2"><b>NUH_FILIAL+NUH_COD+NUH_LOJA</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">NUH_FILIAL+NUH_COD+NUH_LOJA</td><td>Cód cliente + Cód loja</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>NUH_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Filial
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_COD</td>
+<td>Cód cliente</td>
+<td colspan="2">Código do cliente</td>
+<td colspan="4">Código do Cliente
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>IIF(Empty(M->NUH_CLOJA),.T.,ExistChav("NUH",M->NUH_COD+M->NUH_CLOJA,,"EXISTCLI")).AND.ExistCpo('SA1',M->A1_COD+M->A1_LOJA,1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NUH_LOJA</td>
+<td>Cód loja</td>
+<td colspan="2">Código da loja</td>
+<td colspan="4">Código da Loja
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistChav("NUH",M->NUH_COD+M->NUH_CLOJA,,"EXISTCLI").AND.ExistCpo('SA1',M->A1_COD+M->A1_LOJA,1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NUH_PERFIL</td>
+<td>Perfil</td>
+<td colspan="2">Perfil do cliente</td>
+<td colspan="4">Perfil do cliente
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("12")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Cliente/Pagador;2=Somente pagador</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NUH_SIGLA</td>
+<td>Sócio Resp.</td>
+<td colspan="2">Sigla Sócio responsável</td>
+<td colspan="4">Sigla do Sócio responsável pelo
+faturamento.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>                                             </td>
+<td>Vazio().Or.(ExistCpo('RD0',FWFLDGET('NUH_SIGLA'),9).And.JURRD0('NUHMASTER','NUH_SIGLA','3',.T.))</td>
+<td>IF(!INCLUI,POSICIONE('RD0',1,XFILIAL('RD0')+NUH->NUH_CPART,'RD0_SIGLA'),'')</td>
+<td><a href="/tabelas_protheus/f3/rd0rev.html">RD0REV</a></td>
+<td><a href="/tabelas_protheus/gatilhos/nuh_sigla.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione('RD0',1,xFilial('RD0')+NUH->NUH_CPART,'RD0_SIGLA')</td>
+<td><a href="/tabelas_protheus/grupocampo/073.html">073</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_CPART</td>
+<td>Cód Sócio</td>
+<td colspan="2">Código do Sócio</td>
+<td colspan="4">Código do Sócio responsável pelo
+faturamento.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td>Vazio().Or.Iif(JurIsRest(),(ExistCpo('RD0',FWFLDGET('NUH_CPART'),1).And.JURRD0('NUHMASTER','NUH_CPART','3')),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/rd0rev.html">RD0REV</a></td>
+<td><a href="/tabelas_protheus/gatilhos/nuh_cpart.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_DPART</td>
+<td>Nome Sócio</td>
+<td colspan="2">Nome do Sócio</td>
+<td colspan="4">Nome do Sócio responsável pelo
+faturamento.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IF(!INCLUI,Posicione("RD0",1,xFilial("RD0")+NUH->NUH_CPART,"RD0_NOME"),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>GETADVFVAL('RD0','RD0_NOME',  xFilial('RD0')+NUH->NUH_CPART)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_AJNV</td>
+<td>Cria casos</td>
+<td colspan="2">Cria novos casos?</td>
+<td colspan="4">Permitir a criação de novos Assuntos
+Jurídicos?
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("12")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NUH_DSPDIS</td>
+<td>Desp discri</td>
+<td colspan="2">Despesas Discriminadas</td>
+<td colspan="4">Mostra as despesas discriminadas no
+relatório?
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("12")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NUH_EMFAT</td>
+<td>Envia e-mail</td>
+<td colspan="2">Envia faturas por e-mail?</td>
+<td colspan="4">Envia fatura por e-mail onde:
+1=Envia todo tipo de fatura
+2=Não envia
+3=Envia somente se houver valor de
+honorários
+4=Envia somente se houver valor de
+despesas
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("1234")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim(Ambos);2=Nao;3=Honor�rios;4=Despesas</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NUH_AGRUPA</td>
+<td>Agrupa Email</td>
+<td colspan="2">Agrupa E-mails Cliente?</td>
+<td colspan="4">Indica se os e-mails de faturas do
+cliente deverão ser agrupados,
+considerando o e-mail de envio, o tipo
+(Minuta ou Fatura) e o idioma da carta
+de cobrança.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NUH_CEMAIL</td>
+<td>E-Mail Cópia</td>
+<td colspan="2">E-Mail Cópia</td>
+<td colspan="4">Cópia de E-mail
+</td>
+<td>C</td>
+<td>100</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_CESCR</td>
+<td>Cód esc orig</td>
+<td colspan="2">Cód escritório originador</td>
+<td colspan="4">Código do Escritório Originador
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>                                             </td>
+<td>ExistCpo('NS7',M->NUH_CESCR,1).OR.Vazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ns7nuh.html">NS7NUH</a></td>
+<td><a href="/tabelas_protheus/gatilhos/nuh_cescr.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/098.html">098</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_DESCR</td>
+<td>Des esc orig</td>
+<td colspan="2">Des escritorio originador</td>
+<td colspan="4">Descrição do Escritório Originador
+</td>
+<td>C</td>
+<td>100</td>
+<td>0</td>
+<td>@S30                                         </td>
+<td></td>
+<td>IF(!INCLUI,Posicione("NS7",1,xFilial("NS7")+NUH->NUH_CESCR,"NS7_NOME"),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>GETADVFVAL('NS7','NS7_NOME',  xFilial('NS7')+NUH->NUH_CESCR)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_CESCR2</td>
+<td>Cód esc fatu</td>
+<td colspan="2">Código escritório faturar</td>
+<td colspan="4">Código do Escritório a Faturar
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>                                             </td>
+<td>Vazio().Or.(ExistCpo('NS7',M->NUH_CESCR2,1).AND.JAVLDCAMPO('NUHMASTER','NUH_CESCR2','NS7','NS7_EMITEF','1'))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ns7.html">NS7</a></td>
+<td><a href="/tabelas_protheus/gatilhos/nuh_cescr2.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/098.html">098</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_DESCR2</td>
+<td>Des esc fatu</td>
+<td colspan="2">Descrição do escritório</td>
+<td colspan="4">Descrição do Escritório
+</td>
+<td>C</td>
+<td>100</td>
+<td>0</td>
+<td>@S30                                         </td>
+<td></td>
+<td>IF(!INCLUI,Posicione("NS7",1,xFilial("NS7")+NUH->NUH_CESCR2,"NS7_NOME"),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>GETADVFVAL('NS7','NS7_NOME',  xFilial('NS7')+NUH->NUH_CESCR2)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_CMOE</td>
+<td>Cód moeda</td>
+<td colspan="2">Código da moeda</td>
+<td colspan="4">Código da Moeda
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td>(ExistCpo('CTO',M->NUH_CMOE,1).AND.(JAVLDCAMPO('NUHMASTER', 'NUH_CMOE', 'CTO', 'CTO_BLOQ', '2' ))).OR.Vazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/jurcto.html">JURCTO</a></td>
+<td><a href="/tabelas_protheus/gatilhos/nuh_cmoe.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_DMOE</td>
+<td>Símb moeda</td>
+<td colspan="2">Descrição da moeda</td>
+<td colspan="4">Descrição da Moeda
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IF(!INCLUI,Posicione("CTO",1,xFilial("CTO")+NUH->NUH_CMOE,"CTO_SIMB"),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("CTO",1,xFilial("CTO")+NUH->NUH_CMOE,"CTO_SIMB")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_FPAGTO</td>
+<td>Forma de Pag</td>
+<td colspan="2">Forma de Pagamento</td>
+<td colspan="4">Forma de Pagamento das Faturas (1 -
+Depósito Bancário / 2 - Boleto)
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("12")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Deposito Bancario;2=Boleto</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NUH_CBANCO</td>
+<td>Cód banco</td>
+<td colspan="2">Código do banco</td>
+<td colspan="4">Número do Banco para Faturamento
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio().Or.JurVldSA6('1')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sa6jur.html">SA6JUR</a></td>
+<td><a href="/tabelas_protheus/gatilhos/nuh_cbanco.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>JurWhenSA6()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/007.html">007</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_CAGENC</td>
+<td>Cód agência</td>
+<td colspan="2">Código da agência</td>
+<td colspan="4">Número da Agência para Faturamento
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio().Or.JurVldSA6('2')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/nuh_cagenc.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>JurWhenSA6()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/008.html">008</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_CCONTA</td>
+<td>Cód cont fat</td>
+<td colspan="2">Código Conta a Faturar</td>
+<td colspan="4">Número da Conta Corrente para
+Faturamento
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio().Or.JurVldSA6('3')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/nuh_cconta.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>JurWhenSA6()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/009.html">009</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_DBANCO</td>
+<td>Nome Banco</td>
+<td colspan="2">Nome do Banco</td>
+<td colspan="4">Nome do Banco para Faturamento
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("SA6",1,XFILIAL("SA6")+NUH->NUH_CBANCO+NUH->NUH_CAGENC+NUH->NUH_CCONTA,"A6_NOME"),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("SA6",1,XFILIAL("SA6")+NUH->NUH_CBANCO+NUH->NUH_CAGENC,"A6_NOME")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_DAGENC</td>
+<td>Nome Agência</td>
+<td colspan="2">Nome da Agência</td>
+<td colspan="4">Nome da Agência para Faturamento
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("SA6",1,XFILIAL("SA6")+NUH->NUH_CBANCO+NUH->NUH_CAGENC+M->NUH_CCONTA,"A6_NOMEAGE"),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>JurSA6(NUH->NUH_CBANCO,NUH->NUH_CAGENC,NUH->NUH_CCONTA,"A6_NOMEAGE")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_CIDIO</td>
+<td>Cód Idio rel</td>
+<td colspan="2">Código Idioma relatório</td>
+<td colspan="4">Código do Idioma do Relatório
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td>ExistCpo('NR1',M->NUH_CIDIO,1).OR.Vazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/nr1.html">NR1</a></td>
+<td><a href="/tabelas_protheus/gatilhos/nuh_cidio.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/099.html">099</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_DIDIO</td>
+<td>Des Idio rel</td>
+<td colspan="2">desc Idioma relatório</td>
+<td colspan="4">Descrição do Idioma do Relatório
+</td>
+<td>C</td>
+<td>100</td>
+<td>0</td>
+<td>@S30                                         </td>
+<td></td>
+<td>IF(!INCLUI,Posicione("NR1",1,xFilial("NR1")+NUH->NUH_CIDIO,"NR1_DESC"),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("NR1",1,xFilial("NR1")+NUH->NUH_CIDIO,"NR1_DESC")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_CIDIO2</td>
+<td>Cód Idi car</td>
+<td colspan="2">Cód Idioma carta cob</td>
+<td colspan="4">Código do Idioma da Carta de Cobrança
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td>ExistCpo('NR1',M->NUH_CIDIO2,1).OR.Vazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/nr1.html">NR1</a></td>
+<td><a href="/tabelas_protheus/gatilhos/nuh_cidio2.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/099.html">099</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_DIDIO2</td>
+<td>Des Idio car</td>
+<td colspan="2">Des Idioma carta cob</td>
+<td colspan="4">Descrição do Idioma da Carta de Cobrança
+</td>
+<td>C</td>
+<td>100</td>
+<td>0</td>
+<td>@S30                                         </td>
+<td></td>
+<td>IF(!INCLUI,Posicione("NR1",1,xFilial("NR1")+NUH->NUH_CIDIO2,"NR1_DESC"),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("NR1",1,xFilial("NR1")+NUH->NUH_CIDIO2,"NR1_DESC")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_UNIREL</td>
+<td>Unifica Rel?</td>
+<td colspan="2">Unifica Relatório?</td>
+<td colspan="4">Define se aglutina documentos na emissão
+de fatura.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("123")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=N�o Unifica;2=Unifica Carta + Relat�rio;3=Unifica Carta + Relat�rio + Boleto</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_CRELAT</td>
+<td>Cód relat</td>
+<td colspan="2">Código do relatório</td>
+<td colspan="4">Código do Relatório
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>                                             </td>
+<td>(ExistCpo('NRJ',M->NUH_CRELAT,1).AND.JA148NRJ('NUHMASTER','NUH_CRELAT')).OR.Vazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/nrjnuh.html">NRJNUH</a></td>
+<td><a href="/tabelas_protheus/gatilhos/nuh_crelat.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/110.html">110</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_DRELAT</td>
+<td>Des relat</td>
+<td colspan="2">Descrição do relatório</td>
+<td colspan="4">Descrição do Relatório
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@S30                                         </td>
+<td></td>
+<td>IF(!INCLUI,Posicione("NRJ",1,xFilial("NRJ")+NUH->NUH_CRELAT,"NRJ_DESC"),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("NRJ",1,xFilial("NRJ")+NUH->NUH_CRELAT,"NRJ_DESC")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_CCARTA</td>
+<td>Cód carta</td>
+<td colspan="2">Cód relat carta cob</td>
+<td colspan="4">Código do Relatório da Carta de Cobrança
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>                                             </td>
+<td>ExistCpo('NRG',M->NUH_CCARTA,1).OR.Vazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/nrg.html">NRG</a></td>
+<td><a href="/tabelas_protheus/gatilhos/nuh_ccarta.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/111.html">111</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_DCARTA</td>
+<td>Des carta</td>
+<td colspan="2">Desc carta cobrança</td>
+<td colspan="4">Descrição da Carta de Cobrança
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@S30                                         </td>
+<td></td>
+<td>IF(!INCLUI,Posicione("NRG",1,xFilial("NRG")+NUH->NUH_CCARTA,"NRG_DESC"),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("NRG",1,xFilial("NRG")+NUH->NUH_CCARTA,"NRG_DESC")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_CTABH</td>
+<td>Cód tab hon</td>
+<td colspan="2">Código tabela honorários</td>
+<td colspan="4">Código da Tabela de Honorários
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>                                             </td>
+<td>(ExistCpo('NRF',M->NUH_CTABH,1).AND.(JAVLDCAMPO('NUHMASTER','NUH_CTABH','NRF','NRF_ATIVO','1'))).OR.Vazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/nrf.html">NRF</a></td>
+<td><a href="/tabelas_protheus/gatilhos/nuh_ctabh.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/100.html">100</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_DTABH</td>
+<td>Des tab hon</td>
+<td colspan="2">Desc tabela honorários</td>
+<td colspan="4">Descrição da Tabela de Honorários
+</td>
+<td>C</td>
+<td>100</td>
+<td>0</td>
+<td>@S30                                         </td>
+<td></td>
+<td>IF(!INCLUI,Posicione("NRF",1,xFilial("NRF")+NUH->NUH_CTABH,"NRF_DESC"),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("NRF",1,xFilial("NRF")+NUH->NUH_CTABH,"NRF_DESC")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_SITCAD</td>
+<td>Sit Cadastro</td>
+<td colspan="2">Situacao do Cadastro</td>
+<td colspan="4">Situação do Cadastro (Provisório /
+Definitivo)
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Provisorio;2=Definitivo</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NUH_SITCLI</td>
+<td>Sit Cliente</td>
+<td colspan="2">Situacao do Cliente</td>
+<td colspan="4">Situação do Cliente (Potencial /
+Efetivo)
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Potencial;2=Efetivo</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NUH_DTEFT</td>
+<td>Data efetiv</td>
+<td colspan="2">Data efetivação cadastro</td>
+<td colspan="4">Data de Efetivação do Cadastro
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_ATIVO</td>
+<td>Ativo?</td>
+<td colspan="2">Ativo?</td>
+<td colspan="4">Incica se o cadastro está ativo
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("12")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/nuh_ativo.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NUH_DTENC</td>
+<td>Data encerra</td>
+<td colspan="2">Data de encerramento</td>
+<td colspan="4">Data de Encerramento
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_UTEBIL</td>
+<td>Utili Ebill</td>
+<td colspan="2">Utiliza Ebilling?</td>
+<td colspan="4">Utiliza Eletronic Billing?
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("12").AND.JA148VLDCP("NUH_UTEBIL")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NUH_CEMP</td>
+<td>Cód em Ebill</td>
+<td colspan="2">Cód empresa e-Billing</td>
+<td colspan="4">Código da Empresa de Eletronic Billing
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>                                             </td>
+<td>ExistCpo('NRX',M->NUH_CEMP,1).OR.Vazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/nrx.html">NRX</a></td>
+<td><a href="/tabelas_protheus/gatilhos/nuh_cemp.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>M->NUH_UTEBIL=='1'</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_DEMP</td>
+<td>Des em Ebill</td>
+<td colspan="2">Desc empresa e-Billing</td>
+<td colspan="4">Descrição da Empresa de Eletronic
+Billing
+</td>
+<td>C</td>
+<td>100</td>
+<td>0</td>
+<td>@S30                                         </td>
+<td>ExistCpo('NRX',M->NUH_CEMP,1).OR.Vazio()</td>
+<td>IF(!INCLUI,Posicione("NRX",1,xFilial("NRX")+NUH->NUH_CEMP,"NRX_DESC"),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("NRX",1,xFilial("NRX")+NUH->NUH_CEMP,"NRX_DESC")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_CLIEBI</td>
+<td>Cliente Ebil</td>
+<td colspan="2">Cliente E-Billing</td>
+<td colspan="4">Cliente E-Billing
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_ENDI</td>
+<td>End Internac</td>
+<td colspan="2">Endereço Internacional</td>
+<td colspan="4">Endereço Internacional utiliza na carta
+de cobrança do faturamento de serviços
+</td>
+<td>M</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_DIAVEN</td>
+<td>Dia Venc</td>
+<td colspan="2">Dia Vencimento Faturas</td>
+<td colspan="4">Dia de Vencimento do Cliente
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>@E 99                                        </td>
+<td>J148VLDCP("NUH_DIAVEN")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_DIAEMI</td>
+<td>Dia Máx Emi</td>
+<td colspan="2">Dia Máx Emissão Faturas</td>
+<td colspan="4">Dia Máximo para emissão das faturas
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>@E 99                                        </td>
+<td>J148VLDCP("NUH_DIAEMI")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_CASAUT</td>
+<td>Cas Aut</td>
+<td colspan="2">Abertura Automatica Caso</td>
+<td colspan="4">Indica se será criado casos
+automaticamente pelo SIGAJURI
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_CGRPEM</td>
+<td>Cód Grp Emp</td>
+<td colspan="2">Codigo Grupo Empresa</td>
+<td colspan="4">Código do Grupo de Empresa
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td>ExistCpo('NST',M->NUH_CGRPEM,1).OR.Vazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/nst.html">NST</a></td>
+<td><a href="/tabelas_protheus/gatilhos/nuh_cgrpem.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_DGRPEM</td>
+<td>Desc Grp Emp</td>
+<td colspan="2">Descricao Grupo Empresa</td>
+<td colspan="4">Descrição do grupo de empresa
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IF(!INCLUI,Posicione("NST",1,xFilial("NST")+NUH->NUH_CGRPEM,"NST_DESC"),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("NST",1,xFilial("NST")+NUH->NUH_CGRPEM,"NST_DESC")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_OBSCAD</td>
+<td>Obs Cadastro</td>
+<td colspan="2">Observação Cadastro</td>
+<td colspan="4">Observação de Cadastro
+</td>
+<td>M</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_OBSFAT</td>
+<td>Obs Fatu</td>
+<td colspan="2">Observação Faturamento</td>
+<td colspan="4">Observação de Faturamento
+</td>
+<td>M</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/nuh_obsfat.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_NIRE</td>
+<td>NIRE</td>
+<td colspan="2">NIRE</td>
+<td colspan="4">Numero de Identificacao do registro da
+empresa na junta comercial.
+</td>
+<td>C</td>
+<td>11</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_NIF</td>
+<td>Código NIF</td>
+<td colspan="2">Num. de Ident. Fiscal</td>
+<td colspan="4">Número de identificação Fiscal
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@9                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_MOTNIF</td>
+<td>Motivo NIF</td>
+<td colspan="2">Motivo não preench. NIF</td>
+<td colspan="4">Motivo de não preenchimento do número da
+identificação fiscal (NIF)
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Vazio().Or.Pertence("12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Dispensado do NIF;2=Pa�s n�o exige NIF</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NUH_TPNIF</td>
+<td>Tipo NIF</td>
+<td colspan="2">Tipo Vínculo Emissor NIF</td>
+<td colspan="4">Tipo do vinculo emissor (NIF)
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Vazio().Or.Pertence("1234")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=N�o h� vincula��o;2=Filial;3=Controlada;4=Outros</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NUH_EMITNF</td>
+<td>Emit NF Dsp?</td>
+<td colspan="2">Emite NF de Despesas?</td>
+<td colspan="4">Indica se para este cliente deve ser
+emitida Nota Fiscal de Despesas (1=Sim,
+2=Não).
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_TXADM</td>
+<td>% Tx Adm</td>
+<td colspan="2">% Taxa Administrativa</td>
+<td colspan="4">% Taxa Administrativa
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>@E 999.99                                    </td>
+<td>FwFldGet("NUH_TXADM") <= 100.And.Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NUH_GROSUP</td>
+<td>% Gross Up</td>
+<td colspan="2">% Gross Up</td>
+<td colspan="4">% Gloss Up
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>@E 999.99                                    </td>
+<td>FwFldGet("NUH_GROSUP") <= 100.And.Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_JUSTAP</td>
+<td>Just. Aprov?</td>
+<td colspan="2">Justificativa aprovação?</td>
+<td colspan="4">Determina se será exigido o
+preenchimento de justificativa durante a
+aprovação de despesas (tarifador) do
+cliente.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence(" 12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_CODLD</td>
+<td>Cód Lanc LD</td>
+<td colspan="2">Código lançamento no LD</td>
+<td colspan="4">Código do lançamento no Legal Desk.
+</td>
+<td>C</td>
+<td>36</td>
+<td>0</td>
+<td>                                             </td>
+<td>Vazio().Or.JurVldCdLD()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_CORFAT</td>
+<td>Env Correios</td>
+<td colspan="2">Envia fatura correios</td>
+<td colspan="4">Envia fatura por correios onde:
+1=Envia todo o tipo de fatura
+2=Não envia
+3=Envia somente se houver valor de
+honorários
+4=Envia somente se houver valor de
+despesas
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("1234")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim(Ambos);2=N�o;3=Honor�rios;4=Despesas</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NUH_TXPERM</td>
+<td>Taxa Perman.</td>
+<td colspan="2">Taxa Permanencia Diaria</td>
+<td colspan="4">Taxa de permanência diária dos títulos
+gerados quando esse cliente for o
+pagador de uma fatura.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_PJUROS</td>
+<td>Porc Juros</td>
+<td colspan="2">Porcentual Juros Diários</td>
+<td colspan="4">Porcentual de juros diário dos títulos
+gerados quando esse cliente for o
+pagador de uma fatura.
+</td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_DESFIN</td>
+<td>Desc Financ.</td>
+<td colspan="2">Desconto Financeiro</td>
+<td colspan="4">Desconto financeiro dos títulos gerados
+quando esse cliente for o pagador de uma
+fatura.
+</td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_DIADES</td>
+<td>Dias p/ Desc</td>
+<td colspan="2">Dias para Desconto</td>
+<td colspan="4">Dias para Desconto dos títulos gerados
+quando esse cliente for o pagador de uma
+fatura.
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>@E 99                                        </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_TPDESC</td>
+<td>Tipo Descont</td>
+<td colspan="2">Tipo do Desconto</td>
+<td colspan="4">Tipo do desconto dos títulos gerados
+quando esse cliente for o pagador de uma
+fatura.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("12")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Fixo;2=Proporcional</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_TPFECH</td>
+<td>Tipo Fecham.</td>
+<td colspan="2">Tipo de Fechamento</td>
+<td colspan="4">Tipo de fechamento.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>                                             </td>
+<td>Vazio() .Or. ExistCpo("OHU",FWFldGet("NUH_TPFECH"))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ohu.html">OHU</a></td>
+<td><a href="/tabelas_protheus/gatilhos/nuh_tpfech.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NUH_DESFEC</td>
+<td>Des. Fecham.</td>
+<td colspan="2">Desc. do Fechamento</td>
+<td colspan="4">Descrição do tipo de fechamento.
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>Posicione("OHU",1,xFilial("OHU")+NUH->NUH_TPFECH,"OHU_DESCRI")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>NXA</td>
+<td colspan="2">NUH_COD+NUH_LOJA</td>
+<td colspan="2">NXA_CCLIEN+NXA_CLOJA</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

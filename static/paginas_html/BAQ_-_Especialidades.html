@@ -1,0 +1,968 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: BAQ - Especialidades</title></head>
+<body>
+<font color="orange"><h2 id="BAQ">Tabela: BAQ - Especialidades</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Especialidades</b></td><td colspan="2"><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">BAQ_FILIAL+BAQ_CODINT+BAQ_CODESP</td><td>Cd Operadora + Codigo</td><td></td></tr>
+<tr><td>2</td><td colspan="2">BAQ_FILIAL+BAQ_DESCRI</td><td>Descr.Espec.</td><td></td></tr>
+<tr><td>3</td><td colspan="2">BAQ_FILIAL+BAQ_CODINT+BAQ_CODANT</td><td>Cd Operadora + Esp Antiga</td><td></td></tr>
+<tr><td>4</td><td colspan="2">BAQ_FILIAL+BAQ_CODINT+BAQ_CBOS</td><td>Cd Operadora + CBO-S</td><td></td></tr>
+<tr><td>5</td><td colspan="2">BAQ_FILIAL+BAQ_INTERC</td><td>Codigo EDI</td><td></td></tr>
+<tr><td>6</td><td colspan="2">BAQ_FILIAL+BAQ_CBOS</td><td>CBO-S</td><td></td></tr>
+<tr><td>7</td><td colspan="2">BAQ_FILIAL+BAQ_CODESP</td><td>Codigo</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>BAQ_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/baq_filial.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BAQ_CODINT</td>
+<td>Cd Operadora</td>
+<td colspan="2">Codigo Operadora</td>
+<td colspan="4">Indica o código da Instituição de Saúde,
+para a qual, serão válidas as
+informações abaixo cadastradas.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@R !.!!!                                     </td>
+<td>ExistCpo('BA0') .And. PLSVLDINT(M->BAQ_CODINT)</td>
+<td>PLSINTPAD(RETCODUSR())</td>
+<td><a href="/tabelas_protheus/f3/b89pls.html">B89PLS</a></td>
+<td><a href="/tabelas_protheus/gatilhos/baq_codint.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>BAQ_CODESP</td>
+<td>Codigo</td>
+<td colspan="2">Codigo</td>
+<td colspan="4">Código da especialidade medica.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistChav("BAQ",M->BAQ_CODINT+M->BAQ_CODESP,1)</td>
+<td>PLSA370CD(M->BAQ_CODINT)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>BAQ_DESCRI</td>
+<td>Descr.Espec.</td>
+<td colspan="2">Descricao da especialidad</td>
+<td colspan="4">Descrição da especialidade medica.
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>BAQ_VALCH</td>
+<td>U.S.</td>
+<td colspan="2">Unidade de Saude</td>
+<td colspan="4">Qual o valor da Unidade de Serviço que
+será utilizada para cálculo da
+valorização do evento quando executado
+por esta especialidade médica.
+</td>
+<td>N</td>
+<td>16</td>
+<td>4</td>
+<td>@E 99,999,999,999.9999                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BAQ_CODPAD</td>
+<td>Tp. Tab.Pad.</td>
+<td colspan="2">Cod. Tipo Tabela</td>
+<td colspan="4">Código do Tipo de Tabela que será
+utilizada neste registro de
+Especialidade Médica.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("BR4")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/b41pls.html">B41PLS</a></td>
+<td><a href="/tabelas_protheus/gatilhos/baq_codpad.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BAQ_DESPAD</td>
+<td>Descr. Tipo</td>
+<td colspan="2">Des. Tipo Tabela</td>
+<td colspan="4">Este campo será alimentado
+automaticamente com a descrição do Tipo
+de Tabela Padrão selecionada no campo
+anterior.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",Posicione("BR4",1,xFilial("BR4")+BAQ->BAQ_CODPAD,"BR4_DESCRI"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("BR4",1,xFilial("BR4")+BAQ->BAQ_CODPAD,"BR4_DESCRI")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BAQ_CODPSA</td>
+<td>Cod.Tab.Pad.</td>
+<td colspan="2">Cod. Tabela Padrao</td>
+<td colspan="4">Código principal do procedimento
+correspondente à Especialidade Médica de
+acordo com a Tabela Padrão que será
+utilizada neste registro de
+Especialidades Médicas.
+</td>
+<td>C</td>
+<td>16</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. PlsSeek("BR8",1,M->BAQ_CODPAD+M->BAQ_CODPSA,"M->BAQ_DESPSA","BR8_DESCRI")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/baapls.html">BAAPLS</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BAQ_DESPSA</td>
+<td>Descr. Tb Pd</td>
+<td colspan="2">Des. Tabela Padrao</td>
+<td colspan="4">Descrição do  procedimento
+digitado no campo  BAQ_CODPSA
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",Posicione("BR8",1,xFilial("BR8")+BAQ->BAQ_CODPAD+BAQ->BAQ_CODPSA,"BR8_DESCRI"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("BR8",1,xFilial("BR8")+BAQ->BAQ_CODPAD+BAQ->BAQ_CODPSA,"BR8_DESCRI")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BAQ_IDAMIN</td>
+<td>Idade Minima</td>
+<td colspan="2">Idade Minima</td>
+<td colspan="4">Qual a idade mínima necessária para que
+esta especialidade possa Solicitar e/ou
+Executar este grupo de Procedimentos.
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BAQ_IDAMAX</td>
+<td>Idade Maxima</td>
+<td colspan="2">Idade Maxima</td>
+<td colspan="4">Qual a idade máxima necessária para que
+esta Especialidade Médica possa
+Solicitar e/ou executar este grupo de
+procedimentos.
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td>M->BAQ_IDAMAX >= M->BAQ_IDAMIN</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BAQ_SEXO</td>
+<td>Sexo</td>
+<td colspan="2">Sexo</td>
+<td colspan="4">Este evento poderá ser realizado
+exclusivamente por pessoas do sexo
+Masculino, Feminino ou nao haverá
+restrição quanto ao gênero.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Masculino;2=Feminino;3=Ambos</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BAQ_INTERC</td>
+<td>Codigo EDI</td>
+<td colspan="2">Codigo para EDI</td>
+<td colspan="4">Código da Especialidade Médica de acordo
+com a tabela de Intercâmbio entre
+Operadoras.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/bulpls.html">BULPLS</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BAQ_CODANT</td>
+<td>Esp Antiga</td>
+<td colspan="2">Codigo Especialidade Ant</td>
+<td colspan="4">Indica o código da especialidade no
+sistema anterior ao PLS.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistChav("BAQ",M->BAQ_CODINT+M->BAQ_CODANT,3)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BAQ_ESPSIP</td>
+<td>Espec SIP</td>
+<td colspan="2">Especilidade p/ SIP</td>
+<td colspan="4">Campo fora de uso
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>vazio() .or. existcpo("SX5","BN"+M->BAQ_ESPSIP)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BAQ_CBOS</td>
+<td>CBO-S</td>
+<td colspan="2">Código CBO-S</td>
+<td colspan="4">Informe o código da Classificação
+Brasileira de Ocupações.
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/plsb0x.html">PLSB0X</a></td>
+<td><a href="/tabelas_protheus/gatilhos/baq_cbos.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BAQ_DESCBO</td>
+<td>DESCBO-S</td>
+<td colspan="2">Descrição CBO-S</td>
+<td colspan="4">Descrição do CBOs (Classificação
+Brasileira de Ocupações)
+</td>
+<td>C</td>
+<td>70</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BAQ_ESPSP2</td>
+<td>Classif. SIP</td>
+<td colspan="2">Classif. SIP</td>
+<td colspan="4">Codigo da classificação do procedimento
+na ANS. Utilizado pela rotina do SIP.
+</td>
+<td>C</td>
+<td>7</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>vazio().or. ExistCpo("BF0",GetNewPar("MV_PLGRSIP","0001")+M->BAQ_ESPSP2)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/bf0sip.html">BF0SIP</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BAQ_REFIGH</td>
+<td>Ref. Cod GH</td>
+<td colspan="2">Ref. Cod.Especiali no HSP</td>
+<td colspan="4">Este campo referencia ao Codigo da
+Especialidade cadastrado no modulo
+Gestão Hospitalar para a Integração
+entre as Tabelas de Especialidades
+entre  os Modulos .
+Tecla F3 disponivel para consulta de
+Codigos de Especialidade cadastrados
+no Gestão Hospitalar
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gfr001.html">GFR001</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BAQ_BANDA</td>
+<td>Banda</td>
+<td colspan="2">Banda</td>
+<td colspan="4">Informar o valor da Banda
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BAQ_UCO</td>
+<td>UCO</td>
+<td colspan="2">UCO</td>
+<td colspan="4">Informar o valor do Uco
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BAQ_AOINT</td>
+<td>Integrado ?</td>
+<td colspan="2">Integrado com GRC?</td>
+<td colspan="4">Indica se o registro já foi integrado
+com o GRC.(S-SIM/N-NÃO)
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BAQ_ACAO</td>
+<td>Acao integra</td>
+<td colspan="2">Acao realizada na integ</td>
+<td colspan="4">Ação realizada no registro
+(3-create/4-update/5-remove)
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BAQ_DTINT</td>
+<td>Dt Integra</td>
+<td colspan="2">Data da integracao</td>
+<td colspan="4">Data e hora em que ocorreu a '
+integração do registro com o GRC.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BAQ_CODTIS</td>
+<td>Vinc Cd Tiss</td>
+<td colspan="2">Vinculo Codigo Tiss</td>
+<td colspan="4">Codigo da TISS
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>PLSGETVINC("BTU_CDTERM", "BAQ", .F., "24")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BAQ_ESPCFM</td>
+<td>Cd. Esp. CFM</td>
+<td colspan="2">Cd. Especialidade CFM</td>
+<td colspan="4">Código da especialidade equivalente reco
+nhecida pelo CFM
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@R 999                                       </td>
+<td>EXISTCPO("BXW",M->BAQ_ESPCFM,1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/plsbxy.html">PLSBXY</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BAQ_DESTIS</td>
+<td>Desc Vinc Cd</td>
+<td colspan="2">Descrição Vinculo TISS</td>
+<td colspan="4">Descriçao da terminologia da TISS
+</td>
+<td>C</td>
+<td>100</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BAQ_ANIVER</td>
+<td>Data Anivers</td>
+<td colspan="2">Data de Aniversário</td>
+<td colspan="4">Informe a data de aniversário da
+especialidade.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BAQ_SEREXI</td>
+<td>Fora de Uso</td>
+<td colspan="2">Serv.Exist.</td>
+<td colspan="4">Código do serviço existente no prestador
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>@E 999                                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/plsb5v.html">PLSB5V</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>BBO</td>
+<td colspan="2">BAQ_CODESP</td>
+<td colspan="2">BBO_CODESP</td>
+</tr>
+<tr>
+<td>BAX</td>
+<td colspan="2">BAQ_CODESP</td>
+<td colspan="2">BAX_CODESP</td>
+</tr>
+<tr>
+<td>BPM</td>
+<td colspan="2">BAQ_CODESP</td>
+<td colspan="2">BPM_CODESP</td>
+</tr>
+<tr>
+<td>BD5</td>
+<td colspan="2">BAQ_CBOS</td>
+<td colspan="2">BD5_CBOS</td>
+</tr>
+<tr>
+<td>B9J</td>
+<td colspan="2">BAQ_CODESP</td>
+<td colspan="2">B9J_ESPECI</td>
+</tr>
+<tr>
+<td>B9Q</td>
+<td colspan="2">BAQ_CODESP</td>
+<td colspan="2">B9Q_CODESP</td>
+</tr>
+<tr>
+<td>B9E</td>
+<td colspan="2">BAQ_CODESP</td>
+<td colspan="2">B9E_ESPECI</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

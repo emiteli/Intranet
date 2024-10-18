@@ -1,0 +1,614 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: BF8 - Tabelas de Honorários</title></head>
+<body>
+<font color="orange"><h2 id="BF8">Tabela: BF8 - Tabelas de Honorários</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Tabelas de Honorários</b></td><td colspan="2"><b>BF8_FILIAL+BF8_CODINT+BF8_CODIGO</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">BF8_FILIAL+BF8_CODINT+BF8_CODIGO</td><td>Operadora + Codigo</td><td></td></tr>
+<tr><td>2</td><td colspan="2">BF8_FILIAL+BF8_CODPAD+BF8_CODINT+BF8_CODIGO</td><td>Tp.Pad.Saude + Operadora + Codigo</td><td></td></tr>
+<tr><td>3</td><td colspan="2">BF8_FILIAL+BF8_CODIGO</td><td>Codigo</td><td></td></tr>
+<tr><td>4</td><td colspan="2">BF8_FILIAL+BF8_TABTIS</td><td>Cd TabTISS</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>BF8_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Filial do Sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BF8_CODINT</td>
+<td>Operadora</td>
+<td colspan="2">Operadora</td>
+<td colspan="4">Indica o código da Instituição de
+Saúde,para a qual, serão válidas as
+informações abaixo cadastradas.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@R !.!!!                                     </td>
+<td>ExistCpo('BA0') .And. PLSVLDINT(M->BF8_CODINT)</td>
+<td>PLSINTPAD(RETCODUSR())</td>
+<td><a href="/tabelas_protheus/f3/b89pls.html">B89PLS</a></td>
+<td><a href="/tabelas_protheus/gatilhos/bf8_codint.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>BF8_CODIGO</td>
+<td>Codigo</td>
+<td colspan="2">Codigo</td>
+<td colspan="4">Sera gerado pelo sistema uma sequência
+automatica para registrar os códigos das
+Tabelas de Honorários que a Operadora de
+Saúde utilizara para a valorização de
+seus procedimentos.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>PLBF8VLC(M->BF8_CODINT)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>BF8_DESCM</td>
+<td>Descricao</td>
+<td colspan="2">Descricao</td>
+<td colspan="4">Informe a descrição da tabela de
+honorário
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>BF8_CODPAD</td>
+<td>Tp.Pad.Saude</td>
+<td colspan="2">Cod Tipo Padrao Saude</td>
+<td colspan="4">Código do Tipo de Tabela Padrão de Saúde
+que será utilizado neste registro de
+Tabela de Honorário.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("BR4",M->BF8_CODPAD,1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/b41pls.html">B41PLS</a></td>
+<td><a href="/tabelas_protheus/gatilhos/bf8_codpad.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>IIF(INCLUI, .T., .F.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>BF8_DESPAD</td>
+<td>Desc.Tp.Pad.</td>
+<td colspan="2">Descr. Tipo Padrao</td>
+<td colspan="4">Este campo será alimentado
+automaticamente com a descrição
+referente ao Tipo de Tabela Padrão de
+Saúde selecionado  no campo anterior.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",Posicione("BR4",1,xFilial("BR4")+BF8->BF8_CODPAD,"BR4_DESCRI"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("BR4",1,xFilial("BR4")+BF8->BF8_CODPAD,"BR4_DESCRI")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BF8_SEGMEN</td>
+<td>Segmento</td>
+<td colspan="2">Segmento da Conta</td>
+<td colspan="4">Segmento da Conta
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>!!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>BF8_DIGITO</td>
+<td>Digito/Seg.</td>
+<td colspan="2">Digitos do Segmento</td>
+<td colspan="4">Digitos do Segmento
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>!!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>BF8_DESC</td>
+<td>Descr. Seg.</td>
+<td colspan="2">Descricao do Segmento</td>
+<td colspan="4">Descricao do Segmento
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BF8_SEPARA</td>
+<td>Separador</td>
+<td colspan="2">Caracter de Separacao</td>
+<td colspan="4">Caracter de Separacao
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>!                                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>BF8_ESPTPD</td>
+<td>Esp Tab Pad</td>
+<td colspan="2">Esp Tab Padrao</td>
+<td colspan="4">Informe se estes códigos serão
+refletidos (incluidos) na tabela padrão.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>0=Nao;1=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>BF8_TPPROC</td>
+<td>Tipo Proced</td>
+<td colspan="2">Tipo de Procedimento</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("0123456789")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>0=Procedimento;1=Material;2=Medicamento;3=Taxas;4=Di�rias;5=�rtese/Pr�tese;6=Pacote;7=Gases Medicinais;8=Alugu�is;9=Outros</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BF8_TABCON</td>
+<td>Tab. Conver.</td>
+<td colspan="2">Tabela de Conversao</td>
+<td colspan="4">Infome a tabela de conversão utilizada
+para esta tabela de honorário
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BF8_CODATI</td>
+<td>Cod Hr Esp</td>
+<td colspan="2">Codigo Hora Especial</td>
+<td colspan="4">Codigo Hora Especial
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("BAR",M->BF8_CODATI,3)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/barhe.html">BARHE</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BF8_DESATI</td>
+<td>Desc Hr Esp</td>
+<td colspan="2">Desc Codigo Hora Especial</td>
+<td colspan="4">Descrição do Codigo Hora Especial
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BF8_TABTIS</td>
+<td>Cd TabTISS</td>
+<td colspan="2">Cód. Tabela TISS</td>
+<td colspan="4">Código da tabela para o TISS.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>B23</td>
+<td colspan="2">BF8_CODIGO</td>
+<td colspan="2">B23_CODTDE</td>
+</tr>
+<tr>
+<td>BA0</td>
+<td colspan="2">BF8_CODIGO</td>
+<td colspan="2">BA0_TBRFRE</td>
+</tr>
+<tr>
+<td>B7D</td>
+<td colspan="2">BF8_CODPAD</td>
+<td colspan="2">B7D_CODPAD</td>
+</tr>
+<tr>
+<td>B7T</td>
+<td colspan="2">BF8_CODIGO</td>
+<td colspan="2">B7T_TABREE</td>
+</tr>
+<tr>
+<td>B6F</td>
+<td colspan="2">BF8_CODIGO</td>
+<td colspan="2">B6F_CODTDE</td>
+</tr>
+<tr>
+<td>B6F</td>
+<td colspan="2">BF8_CODIGO</td>
+<td colspan="2">B6F_TDEPRO</td>
+</tr>
+<tr>
+<td>BE9</td>
+<td colspan="2">BF8_CODIGO</td>
+<td colspan="2">BE9_CODTAB</td>
+</tr>
+<tr>
+<td>BOF</td>
+<td colspan="2">BF8_CODPAD</td>
+<td colspan="2">BOF_CODTAB</td>
+</tr>
+<tr>
+<td>BMB</td>
+<td colspan="2">BF8_CODIGO</td>
+<td colspan="2">BMB_CODTAB</td>
+</tr>
+<tr>
+<td>BYZ</td>
+<td colspan="2">BF8_CODIGO</td>
+<td colspan="2">BYZ_CODTDE</td>
+</tr>
+<tr>
+<td>B0E</td>
+<td colspan="2">BF8_CODIGO</td>
+<td colspan="2">B0E_CODTAB</td>
+</tr>
+<tr>
+<td>BC0</td>
+<td colspan="2">BF8_CODIGO</td>
+<td colspan="2">BC0_CODTAB</td>
+</tr>
+<tr>
+<td>B6G</td>
+<td colspan="2">BF8_CODIGO</td>
+<td colspan="2">B6G_CODTDE</td>
+</tr>
+<tr>
+<td>B6G</td>
+<td colspan="2">BF8_CODIGO</td>
+<td colspan="2">B6G_TDEPRO</td>
+</tr>
+<tr>
+<td>BA3</td>
+<td colspan="2">BF8_CODIGO</td>
+<td colspan="2">BA3_CODTDE</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

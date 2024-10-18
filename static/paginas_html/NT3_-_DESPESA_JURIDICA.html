@@ -1,0 +1,996 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: NT3 - DESPESA JURIDICA</title></head>
+<body>
+<font color="orange"><h2 id="NT3">Tabela: NT3 - DESPESA JURIDICA</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>DESPESA JURIDICA</b></td><td colspan="2"><b>NT3_FILIAL+NT3_CAJURI+NT3_COD</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">NT3_FILIAL+NT3_CAJURI+NT3_COD</td><td>Cod Assunto + Codigo</td><td></td></tr>
+<tr><td>2</td><td colspan="2">NT3_FILIAL+NT3_COD</td><td>Codigo</td><td></td></tr>
+<tr><td>3</td><td colspan="2">NT3_FILIAL+NT3_CTPDES</td><td>Cód Tipo</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>NT3_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Descrição de Filial do Sistema
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NT3_CAJURI</td>
+<td>Cod Assunto</td>
+<td colspan="2">Cod Assunto Juridico</td>
+<td colspan="4">Descrição de Cod Assunto Juridico
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td>ExistCpo('NSZ',M->NT3_CAJURI,1).And.JurValTpAs(M->NT3_CAJURI)</td>
+<td>JA099CAJUR()</td>
+<td><a href="/tabelas_protheus/f3/nszrst.html">NSZRST</a></td>
+<td><a href="/tabelas_protheus/gatilhos/nt3_cajuri.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>JA099HABCJ()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/035.html">035</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NT3_FILDES</td>
+<td>Fil. Destino</td>
+<td colspan="2">Filial de Destino</td>
+<td colspan="4">Campo de filial origem do registro.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sm0emp.html">SM0EMP</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>Iif(ALTERA,JA099Opc(),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NT3_COD</td>
+<td>Codigo</td>
+<td colspan="2">Codigo</td>
+<td colspan="4">Descrição de Codigo
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td>ExistChav('NT3',M->NT3_COD,2)</td>
+<td>GetSXENum("NT3","NT3_COD")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NT3_CTPDES</td>
+<td>Cód Tipo</td>
+<td colspan="2">Código Tipo</td>
+<td colspan="4">Descrição de Codigo Tipo
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>                                             </td>
+<td>ExistCpo('NSR',M->NT3_CTPDES,1).And.JurVldRest('NSR',M->NT3_CTPDES)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/nsr.html">NSR</a></td>
+<td><a href="/tabelas_protheus/gatilhos/nt3_ctpdes.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>JurLAltera('NT3') .And.  Iif(ALTERA,JA099Opc(),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NT3_DTPDES</td>
+<td>Tipo</td>
+<td colspan="2">Descricao Tipo</td>
+<td colspan="4">Descrição de Descricao Tipo
+</td>
+<td>C</td>
+<td>100</td>
+<td>0</td>
+<td>@S50                                         </td>
+<td></td>
+<td>IF(!INCLUI,Posicione("NSR",1,xFilial("NSR")+NT3->NT3_CTPDES,"NSR_DESC"),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("NSR",1,xFilial("NSR")+NT3->NT3_CTPDES,"NSR_DESC")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NT3_DATA</td>
+<td>Data</td>
+<td colspan="2">Data</td>
+<td colspan="4">Descrição de Data
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>VAZIO().OR. VlDtMoeda({M->NT3_DATA, M->NT3_CMOEDA})</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/nt3_data.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>JurLAltera('NT3') .And.  Iif(ALTERA,JA099Opc(),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NT3_CMOEDA</td>
+<td>Cod Moeda</td>
+<td colspan="2">Codigo da Moeda</td>
+<td colspan="4">Descrição de Codigo da Moeda
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td>VAZIO() .OR. JAVLDCAMPO('NT3MASTER', 'NT3_CMOEDA', 'CTO', 'CTO_BLOQ', '2', {M->NT3_DATA, M->NT3_CMOEDA} )</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/jurcto.html">JURCTO</a></td>
+<td><a href="/tabelas_protheus/gatilhos/nt3_cmoeda.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>JurLAltera('NT3') .And.  Iif(ALTERA,JA099Opc(),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NT3_DMOEDA</td>
+<td>Simbolo</td>
+<td colspan="2">Simbolo da Moeda</td>
+<td colspan="4">Descrição de Simbolo da Moeda
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE('CTO',1,XFILIAL('CTO')+NT3->NT3_CMOEDA,'CTO_SIMB'),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE('CTO',1,XFILIAL('CTO')+NT3->NT3_CMOEDA,'CTO_SIMB')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NT3_VALOR</td>
+<td>Valor</td>
+<td colspan="2">Valor</td>
+<td colspan="4">Descrição de Valor
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/nt3_valor.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>JurLAltera('NT3') .And.  Iif(ALTERA,JA099Opc(),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NT3_DTFIN</td>
+<td>Data Financ</td>
+<td colspan="2">Data Financeiro</td>
+<td colspan="4">Descrição de Data Financeiro
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>Iif(ALTERA,JA099Opc(),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NT3_SALDO</td>
+<td>Saldo</td>
+<td colspan="2">Saldo</td>
+<td colspan="4">Descrição de Saldo
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td></td>
+<td>IF(!INCLUI,JURSOMA( 'NT3_VALOR', 'NT3', NT3->NT3_CAJURI,NT3->NT3_COD," ",NT3->NT3_VALOR),0)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NT3_DESC</td>
+<td>Descricao</td>
+<td colspan="2">Descricao</td>
+<td colspan="4">Descrição de Descricao
+</td>
+<td>M</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NT3_CCLIEN</td>
+<td>Cliente</td>
+<td colspan="2">Cliente</td>
+<td colspan="4">Descrição de Cliente
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!EMPTY(M->NT3_CAJURI),POSICIONE('NSZ',1,XFILIAL('NSZ')+M->NT3_CAJURI,'NSZ_CCLIEN'),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione('NSZ',1,xFilial('NSZ')+NT3->NT3_CAJURI,'NSZ_CCLIEN')</td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NT3_LCLIEN</td>
+<td>Loja</td>
+<td colspan="2">Loja</td>
+<td colspan="4">Descrição de Loja
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!EMPTY(M->NT3_CAJURI),POSICIONE('NSZ',1,XFILIAL('NSZ')+M->NT3_CAJURI,'NSZ_LCLIEN'),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione('NSZ',1,xFilial('NSZ')+NT3->NT3_CAJURI,'NSZ_LCLIEN')</td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NT3_DCLIEN</td>
+<td>Razao Social</td>
+<td colspan="2">Razao Social</td>
+<td colspan="4">Descrição de Razao Social
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IF(!EMPTY(M->NT3_CAJURI),POSICIONE('SA1',1,XFILIAL('SA1')+M->NT3_CCLIEN+M->NT3_LCLIEN,'A1_NOME'),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione('SA1',1,xFilial('SA1')+NSZ->NSZ_CCLIEN+NSZ->NSZ_LCLIEN,'A1_NOME')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NT3_NUMCAS</td>
+<td>Num Caso</td>
+<td colspan="2">Numero do Caso</td>
+<td colspan="4">Descrição de Numero do Caso
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IF(!EMPTY(M->NT3_CAJURI),POSICIONE('NSZ',1,XFILIAL('NSZ')+M->NT3_CAJURI,'NSZ_NUMCAS'),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione('NSZ',1,xFilial('NSZ')+NT3->NT3_CAJURI,'NSZ_NUMCAS')</td>
+<td><a href="/tabelas_protheus/grupocampo/036.html">036</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NT3_DCASO</td>
+<td>Titulo Caso</td>
+<td colspan="2">Titulo do Caso</td>
+<td colspan="4">Descrição de Titulo do Caso
+</td>
+<td>C</td>
+<td>200</td>
+<td>0</td>
+<td>@S95                                         </td>
+<td></td>
+<td>JA095TICAS('NT3_CAJURI','NT3_CCLIEN','NT3_LCLIEN','NT3_NUMCAS')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>JA095CASO()</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NT3_PATIVO</td>
+<td>Polo Ativo</td>
+<td colspan="2">Polo Ativo Principal</td>
+<td colspan="4">Descrição de Polo Ativo Principal
+</td>
+<td>C</td>
+<td>100</td>
+<td>0</td>
+<td>@S50                                         </td>
+<td></td>
+<td>IF(!EMPTY(M->NT3_CAJURI),POSICIONE('NT9',3,XFILIAL('NT9')+M->NT3_CAJURI+'1'+'1','NT9_NOME'),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione('NT9',3,xFilial('NT9')+NT3->NT3_CAJURI+'1'+'1','NT9_NOME')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NT3_PPASSI</td>
+<td>Polo Passivo</td>
+<td colspan="2">Polo Passivo Principal</td>
+<td colspan="4">Descrição de Polo Passivo Principal
+</td>
+<td>C</td>
+<td>100</td>
+<td>0</td>
+<td>@S50                                         </td>
+<td></td>
+<td>IF(!EMPTY(M->NT3_CAJURI),POSICIONE('NT9',3,XFILIAL('NT9')+M->NT3_CAJURI+'2'+'1','NT9_NOME'),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione('NT9',3,xFilial('NT9')+NT3->NT3_CAJURI+'2'+'1','NT9_NOME')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NT3_DSITUA</td>
+<td>Situacao</td>
+<td colspan="2">Situacao do Processo</td>
+<td colspan="4">Descrição de Situacao do Processo
+</td>
+<td>C</td>
+<td>12</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IF(!EMPTY(M->NT3_CAJURI),JURA095SIT(POSICIONE('NSZ',1,XFILIAL('NSZ')+M->NT3_CAJURI,'NSZ_SITUAC')),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>JURA095SIT(Posicione('NSZ',1,xFilial('NSZ')+NT3->NT3_CAJURI,'NSZ_SITUAC'))</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NT3_NUMPRO</td>
+<td>Num Processo</td>
+<td colspan="2">Numero do Processo</td>
+<td colspan="4">Descrição de Numero do Processo
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IF(!EMPTY(M->NT3_CAJURI),POSICIONE('NUQ',2,XFILIAL('NUQ')+M->NT3_CAJURI+'1','NUQ_NUMPRO'),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione('NUQ',2,xFilial('NUQ')+NT3->NT3_CAJURI+'1','NUQ_NUMPRO')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NT3_DTDIST</td>
+<td>Data Distrib</td>
+<td colspan="2">Data de Distribuicao</td>
+<td colspan="4">Descrição de Data de Distribuicao
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IF(!EMPTY(M->NT3_CAJURI),POSICIONE('NUQ',2,XFILIAL('NUQ')+M->NT3_CAJURI+'1','NUQ_DTDIST'),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE('NUQ',2,XFILIAL('NUQ')+NT3->NT3_CAJURI+'1','NUQ_DTDIST')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NT3_PREFIX</td>
+<td>Prefixo Tit</td>
+<td colspan="2">Prefixo Titulo a Pagar</td>
+<td colspan="4">Prefixo a ser usado na geração do titulo
+a pagar quando não é usado controle de
+alçada
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>JurLAltera('NT3') .And.  Iif(ALTERA,JA099Opc(),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NT3_CNATUT</td>
+<td>Natureza</td>
+<td colspan="2">Código da Natureza</td>
+<td colspan="4">Código da natureza de operação.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td>J98ValNat( .T. , M->NT3_FILDES) .OR. Vazio()</td>
+<td>JA099NatuTit()</td>
+<td><a href="/tabelas_protheus/f3/sednt3.html">SEDNT3</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>JurLAltera('NT3') .And.  Iif(ALTERA,JA099Opc(),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NT3_CTIPOT</td>
+<td>Tipo Titulo</td>
+<td colspan="2">Codigo do tipo de titulo</td>
+<td colspan="4">Codigo do tipo de titulo
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>                                             </td>
+<td>ExistCpo("SX5","05"+M->NT3_CTIPOT) .Or. Vazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/05.html">05</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>JurLAltera('NT3') .And.  Iif(ALTERA,JA099Opc(),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NT3_CFORNT</td>
+<td>Fornecedor</td>
+<td colspan="2">Código do fornecedor</td>
+<td colspan="4">Código do fornecedor
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .OR. J98FORVAL('NT3')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/fornt3.html">FORNT3</a></td>
+<td><a href="/tabelas_protheus/gatilhos/nt3_cfornt.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>JurLAltera('NT3') .And.  Iif(ALTERA,JA099Opc(),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NT3_LFORNT</td>
+<td>Loja</td>
+<td colspan="2">Loja do fornecedor</td>
+<td colspan="4">Loja do fornecedor
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .OR. J98FORVAL('NT3')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/nt3_lfornt.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>JurLAltera('NT3') .And.  Iif(ALTERA,JA099Opc(),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NT3_NOMEFT</td>
+<td>Nome fornec</td>
+<td colspan="2">Nome do fornecedor</td>
+<td colspan="4">Nome do fornecedor
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE('SA2',1,XFILIAL('SA2')+NT3->NT3_CFORNT+NT3->NT3_LFORNT, 'A2_NOME'),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td>JurLAltera('NT3')</td>
+<td>POSICIONE('SA2',1,XFILIAL('SA2')+NT3->NT3_CFORNT+NT3->NT3_LFORNT,'A2_NOME')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NT3_CONDPG</td>
+<td>Cond Pgto</td>
+<td colspan="2">Código condição de pgto</td>
+<td colspan="4">Código da condição de pagamento.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>                                             </td>
+<td>Vazio() .OR. J98COPVAL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/se4nt3.html">SE4NT3</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>JurLAltera('NT3') .And.  Iif(ALTERA,JA099Opc(),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NT3_PRODUT</td>
+<td>Produto</td>
+<td colspan="2">Código do Produto</td>
+<td colspan="4">Código do Produto
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .OR. J99PROVAL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sb1.html">SB1</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>JurLAltera('NT3') .And.  Iif(ALTERA,JA099Opc(),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/030.html">030</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NT3_CRATEI</td>
+<td>Cód. Rateio</td>
+<td colspan="2">Código Rateio Financeiro</td>
+<td colspan="4">Código do rateio contabil que será
+utilizado na geração do titulo a pagar.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td>Vazio() .Or. ExistCpo("CTJ", FwFldGet("NT3_CRATEI"))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ctj.html">CTJ</a></td>
+<td><a href="/tabelas_protheus/gatilhos/nt3_cratei.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>Iif(ALTERA,JA099Opc(),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NT3_DRATEI</td>
+<td>Desc. Rateio</td>
+<td colspan="2">Descrição do Rateio</td>
+<td colspan="4">Descrição do rateio utilizado para gerar
+o titulo a pagar no financeiro.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IIF(!INCLUI, JurGetDados("CTJ", 1, xFilial("CTJ") + NT3->NT3_CRATEI, "CTJ_DESC"), "")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>JurGetDados("CTJ", 1, xFilial("CTJ") + NT3->NT3_CRATEI, "CTJ_DESC")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

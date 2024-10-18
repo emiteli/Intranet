@@ -1,0 +1,325 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: DTH - Destino de Cálculo</title></head>
+<body>
+<font color="orange"><h2 id="DTH">Tabela: DTH - Destino de Cálculo</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Destino de Cálculo</b></td><td colspan="2"><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">DTH_FILIAL+DTH_CLIDEV+DTH_LOJDEV+DTH_CDRDES</td><td>Devedor + Loja Devedor + Cod.Reg.Des.</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>DTH_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Filial do Sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTH_CLIDEV</td>
+<td>Devedor</td>
+<td colspan="2">Devedor</td>
+<td colspan="4">Informe o Código do Cliente Devedor.
+Pode ser informado o Código do Cliente
+Genérico.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SA1",M->DTH_CLIDEV+AllTrim(M->DTH_LOJDEV))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sa1.html">SA1</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dth_clidev.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DTH_LOJDEV</td>
+<td>Loja Devedor</td>
+<td colspan="2">Loja do Devedor</td>
+<td colspan="4">Loja do Cliente Devedor.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SA1",M->DTH_CLIDEV+M->DTH_LOJDEV)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/dth_lojdev.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DTH_NOMDEV</td>
+<td>Nome Devedor</td>
+<td colspan="2">Nome do Devedor</td>
+<td colspan="4">Nome do Cliente Devedor.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui,"",Posicione("SA1",1,xFilial("SA1")+DTH->DTH_CLIDEV+DTH->DTH_LOJDEV,"A1_NOME"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("SA1",1,xFilial("SA1")+DTH->DTH_CLIDEV+DTH->DTH_LOJDEV,"A1_NOME")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTH_CDRDES</td>
+<td>Cod.Reg.Des.</td>
+<td colspan="2">Cod. Regiao Destino</td>
+<td colspan="4">Informe o Código da Região Destino da
+mercadoria Transportada.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("DUY",NIL,1) .And. TmsA090Vld() .And. TmsTipReg(M->DTH_CDRDES,"2")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/duy.html">DUY</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dth_cdrdes.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DTH_REGDES</td>
+<td>Reg.Destino</td>
+<td colspan="2">Reg. Destino</td>
+<td colspan="4">Descrição da Região de Destino.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>TmsPesqRegiao("DTH_CDRDES","DTH_REGDES")</td>
+<td>Iif(Inclui,"",Posicione("DUY",1,xFilial("DUY")+DTH->DTH_CDRDES,"DUY_DESCRI"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("DUY",1,xFilial("DUY")+DTH->DTH_CDRDES,"DUY_DESCRI")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTH_CDRCAL</td>
+<td>Cod.Reg.Cal.</td>
+<td colspan="2">Cod. Regiao Calculo</td>
+<td colspan="4">Informe a Região de Calculo do Frete que
+deverá ser considerada, quando o
+Transportador prestar serviço para o
+Devedor e Região Destino informados.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("DUY",NIL,1) .And. TmsA090Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/duy.html">DUY</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dth_cdrcal.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DTH_REGCAL</td>
+<td>Reg.Calculo</td>
+<td colspan="2">Reg. Calculo</td>
+<td colspan="4">Descrição da Região de Calculo.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>TmsPesqRegiao("DTH_CDRCAL","DTH_REGCAL")</td>
+<td>Iif(Inclui,"",Posicione("DUY",1,xFilial("DUY")+DTH->DTH_CDRCAL,"DUY_DESCRI"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("DUY",1,xFilial("DUY")+DTH->DTH_CDRCAL,"DUY_DESCRI")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTH_ATIVO</td>
+<td>Ativo</td>
+<td colspan="2">Destino Calculo Ativo ?</td>
+<td colspan="4">Informe se a região de Calculo está
+ativa ou não.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

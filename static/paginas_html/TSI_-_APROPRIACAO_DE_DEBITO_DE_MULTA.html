@@ -1,0 +1,628 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: TSI - APROPRIACAO DE DEBITO DE MULTA</title></head>
+<body>
+<font color="orange"><h2 id="TSI">Tabela: TSI - APROPRIACAO DE DEBITO DE MULTA</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>APROPRIACAO DE DEBITO DE MULTA</b></td><td colspan="2"><b>TSI_FILIAL+TSI_MULTA</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">TSI_FILIAL+TSI_MULTA</td><td>Multa</td><td></td></tr>
+<tr><td>2</td><td colspan="2">TSI_FILIAL+TSI_MULTA+DTOS(TSI_DTABER)</td><td>Multa + Dt.Abertura</td><td></td></tr>
+<tr><td>3</td><td colspan="2">TSI_FILIAL+TSI_CODMOT</td><td>Motorista</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>TSI_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Código da filial da empresa.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TSI_MULTA</td>
+<td>Multa</td>
+<td colspan="2">Codigo da Multa</td>
+<td colspan="4">Código da Multa
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@R! 999/99/99                                </td>
+<td>EXISTCPO('TRX',M->TSI_MULTA) .And. EXISTCHAV('TSI',M->TSI_MULTA)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/trx.html">TRX</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tsi_multa.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>Inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TSI_LOCAL</td>
+<td>Local Infr.</td>
+<td colspan="2">Local da Multa</td>
+<td colspan="4">Local da Multa
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>TRX->(VDISP(TSI->TSI_MULTA,'TRX_LOCAL'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Substr(IF(TRX->(DBSEEK(xFILIAL('TRX')+TSI->TSI_MULTA)),TRX->TRX_LOCAL,''),1,80)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TSI_DTINFR</td>
+<td>Dt.Infração</td>
+<td colspan="2">Data da Infracao</td>
+<td colspan="4">Data da Infração
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>If(!Inclui,TRX->(VDISP(TSI->TSI_MULTA,'TRX_DTINFR')),STOD('  /  /  '))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>IF(TRX->(DBSEEK(xFILIAL('TRX')+TSI->TSI_MULTA)),TRX->TRX_DTINFR,'')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TSI_RHINFR</td>
+<td>Hr.Infracão</td>
+<td colspan="2">Hora da Infracao</td>
+<td colspan="4">Hora da Infração
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td></td>
+<td>TRX->(VDISP(TSI->TSI_MULTA,'TRX_RHINFR'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>IF(TRX->(DBSEEK(xFILIAL('TRX')+TSI->TSI_MULTA)),TRX->TRX_RHINFR,'')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TSI_DTABER</td>
+<td>Dt.Abertura</td>
+<td colspan="2">Data da Abertura</td>
+<td colspan="4">Data da Abertura
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>VALDT(M->TSI_DTABER) .AND. IF(!Empty(M->TSI_DTABER),M->TSI_DTABER >= M->TSI_DTINFR,.t.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TSI_NUMAPD</td>
+<td>Num. da APD</td>
+<td colspan="2">Numero da APD</td>
+<td colspan="4">Número da APD
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>GetSxeNum('TSI','TSI_NUMAPD')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>.F.</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TSI_CODINF</td>
+<td>Infração</td>
+<td colspan="2">Codigo da Infracao</td>
+<td colspan="4">Código da Infração
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO('TSH',M->TSI_CODINF)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tsh.html">TSH</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tsi_codinf.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TSI_ARTIGO</td>
+<td>Artigo</td>
+<td colspan="2">Artigo Legislacao</td>
+<td colspan="4">Artigo da Legislação
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>TSH->(VDISP(TSI->TSI_CODINF,'TSH_ARTIGO'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>IF(TSH->(DBSEEK(xFILIAL('TSH')+TSI->TSI_CODINF)),TSH->TSH_ARTIGO,'')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TSI_CODMOT</td>
+<td>Motorista</td>
+<td colspan="2">Codigo do Motorista</td>
+<td colspan="4">Código do Motorista
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO('DA4',M->TSI_CODMOT)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/da4.html">DA4</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tsi_codmot.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TSI_NOMMOT</td>
+<td>Nome Motoris</td>
+<td colspan="2">Nome do Motorista</td>
+<td colspan="4">Nome do Motorista
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>DA4->(VDISP(TSI->TSI_CODMOT,'DA4_NOME'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>IF(DA4->(DBSEEK(xFILIAL('DA4')+TSI->TSI_CODMOT)),DA4->DA4_NOME,'')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TSI_VIAGEM</td>
+<td>Viagem</td>
+<td colspan="2">Viagem</td>
+<td colspan="4">Código da Viagem
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td>EXISTCPO('DTQ',M->TSI_VIAGEM)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dtq.html">DTQ</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/143.html">143</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TSI_CODBEM</td>
+<td>Veículo</td>
+<td colspan="2">Codigo do Bem</td>
+<td colspan="4">Código do Bem
+</td>
+<td>C</td>
+<td>16</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO('ST9',M->TSI_CODBEM)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/st9.html">ST9</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tsi_codbem.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TSI_NOMBEM</td>
+<td>Descrição</td>
+<td colspan="2">Nome do Bem</td>
+<td colspan="4">Nome do Bem
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>ST9->(VDISP(TSI->TSI_CODBEM,'T9_NOME'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>IF(ST9->(DBSEEK(xFILIAL('ST9')+TSI->TSI_CODBEM)),ST9->T9_NOME,'')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TSI_PLACA</td>
+<td>Placa Veícu.</td>
+<td colspan="2">Numero da Placa</td>
+<td colspan="4">Número da Placa
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>ST9->(VDISP(TSI->TSI_CODBEM,'T9_PLACA'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>IF(ST9->(DBSEEK(xFILIAL('ST9')+TSI->TSI_CODBEM)),ST9->T9_PLACA,'')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TSI_MATRES</td>
+<td>Responsável</td>
+<td colspan="2">Matricula do Responsavel</td>
+<td colspan="4">Matrícula do Responsável
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO('SRA',M->TSI_MATRES)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sra.html">SRA</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tsi_matres.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/121.html">121</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TSI_NOMRES</td>
+<td>Nome</td>
+<td colspan="2">Nome do Responsavel</td>
+<td colspan="4">Nome do Responsável
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>SRA->(VDISP(TSI->TSI_MATRES,'RA_NOME'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>IF(SRA->(DBSEEK(xFILIAL('SRA')+TSI->TSI_MARTES)),SRA->RA_NOME,'')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TSI_VALAPD</td>
+<td>Valor APD</td>
+<td colspan="2">Valor APD</td>
+<td colspan="4">Valor da APD
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TSI_DTCONC</td>
+<td>Enc. APD</td>
+<td colspan="2">Data Conclusao APD</td>
+<td colspan="4">Data de Conclusão da APD
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>99/99/9999                                   </td>
+<td>VALDT(M->TSI_DTCONC) .AND. IF((!Empty(M->TSI_DTABER) .AND. !Empty(M->TSI_DTCONC)),M->TSI_DTABER <= M->TSI_DTCONC,.t.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TSI_DESOBS</td>
+<td>Observação</td>
+<td colspan="2">Observacao da Multa</td>
+<td colspan="4">Observação da Multa
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

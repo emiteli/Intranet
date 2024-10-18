@@ -1,0 +1,476 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: SFC - Amarração Tes x Impostos</title></head>
+<body>
+<font color="orange"><h2 id="SFC">Tabela: SFC - Amarração Tes x Impostos</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Amarração Tes x Impostos</b></td><td colspan="2"><b>FC_FILIAL+FC_TES+FC_SEQ+FC_IMPOSTO</b></td><td><b>MATA080</b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">FC_FILIAL+FC_TES+FC_SEQ+FC_IMPOSTO</td><td>Cod. do TES + Sequencia + Cod. Imposto</td><td></td></tr>
+<tr><td>2</td><td colspan="2">FC_FILIAL+FC_TES+FC_IMPOSTO</td><td>Cod. do TES + Cod. Imposto</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>FC_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Código que identifica a filial da
+empre-sa usuário do sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>FC_TES</td>
+<td>Cod. do TES</td>
+<td colspan="2">Codigo da Entrada ou Said</td>
+<td colspan="4">Tipo de entrada ou saída do ítem, este
+tipo pode ser:
+Entrada - Códigos menor ou igual a 500
+Saída   - Códigos maior que 500
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@9                                           </td>
+<td>existcpo("SF4",M->FA_TES) .and.  if(!empty(M->FA_IMPOSTO),existchav("SFA",M->FA_TES+M->FA_IMPOSTO),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>FC_SEQ</td>
+<td>Sequencia</td>
+<td colspan="2">Sequencia de Calculo</td>
+<td colspan="4">Sequencia de cálculo do imposto.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>FC_IMPOSTO</td>
+<td>Cod. Imposto</td>
+<td colspan="2">Codigo Imposto a Calcular</td>
+<td colspan="4">Código do imposto calculado.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SFB")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sfb.html">SFB</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>FC_INCDUPL</td>
+<td>Soma na Dupl</td>
+<td colspan="2">Soma na Duplicata ?</td>
+<td colspan="4">Soma ou subtrai o valor do imposto ao
+título gerado no financeiro.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>!                                            </td>
+<td>pertence("123")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Somar;2=Subtrair;3=Indiferente</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>FC_INCNOTA</td>
+<td>Soma Tot Not</td>
+<td colspan="2">Soma no Total da Nota ?</td>
+<td colspan="4">Soma ou subtrai valor do imposto ao
+valor da notafiscal.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>!                                            </td>
+<td>pertence("123")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Somar;2=Subtrair;3=Indiferente</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>FC_CREDITA</td>
+<td>Soma custo</td>
+<td colspan="2">Soma imposto no custo ?</td>
+<td colspan="4">Indicar se o valor do imposto será
+somado, subtraido, ou não terá
+incidencia no custo
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>!                                            </td>
+<td>pertence("123")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Somar;2=Subtrair;3=Indiferente</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>FC_INCIMP</td>
+<td>Inc. Imposto</td>
+<td colspan="2">Incide qual imposto calc?</td>
+<td colspan="4">Indica qual imposto de sequencia
+anterior será somado à base de cálculo
+deste imposto.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SFB")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sfb.html">SFB</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>FC_BASE</td>
+<td>Base Reduzid</td>
+<td colspan="2">Base Reduzida de Calculo</td>
+<td colspan="4">Base reduzida para cálculo do imposto.
+</td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td>positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>FC_CALCULO</td>
+<td>Calc.sobre</td>
+<td colspan="2">Calcula Imposto sobre?</td>
+<td colspan="4">Indica se o imposto será cálculado
+sobreos itens (I) ou o total (T) da
+nota.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>!                                            </td>
+<td>pertence("IT")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>I=itens da NF;T=Total da NF</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>FC_LIQUIDO</td>
+<td>Calc. S/Liq.</td>
+<td colspan="2">Calc. sobre valor liquido</td>
+<td colspan="4">Indica se o imposto será calculado pelo
+valor líquido da nota.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>!                                            </td>
+<td>pertence("SN")</td>
+<td>"N"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>S=Sim;N=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>FC_AGRBASE</td>
+<td>Agreg. Base</td>
+<td colspan="2">Agreg. Base</td>
+<td colspan="4">Informe o mesmo grupo para todos os
+impostos que devem ser agrupados (suas
+bases) para o calculo (esta configuração
+deverá ser utilizada para o calculo de
+varios impostos incluidos para um item)
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Grupo 1;2=Grupo 2; 3=Grupo 3;4=Grupo 4</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>FC_PROV</td>
+<td>Provincia</td>
+<td colspan="2">Provincia</td>
+<td colspan="4">Informe o estado
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>(Vazio() .Or. (ExistCpo("SX5","12"+M->FC_PROV)))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/12.html">12</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>FC_IDHIST</td>
+<td>ID Hist.</td>
+<td colspan="2">ID Hist.</td>
+<td colspan="4">ID Hist.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

@@ -1,0 +1,691 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: SF5 - Tipos de Movimentação</title></head>
+<body>
+<font color="orange"><h2 id="SF5">Tabela: SF5 - Tipos de Movimentação</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Tipos de Movimentação</b></td><td colspan="2"><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">F5_FILIAL+F5_CODIGO</td><td>Codigo TM</td><td></td></tr>
+<tr><td>2</td><td colspan="2">F5_FILIAL+F5_MOVTANQ+F5_TIPO</td><td>T.Mov.Tanque + Tipo de TM</td><td></td></tr>
+<tr><td>3</td><td colspan="2">F5_FILIAL+F5_COPSIMP</td><td>Cod Op. SIMP</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="6" align="center"><b><i>Abas(SXA)</i></b></td></tr><tr><td><b>XA_ALIAS</b></td><td><b>XA_ORDEM</b></td><td colspan="2"><b>XA_DESCRIC</b></td><td><b>XA_AGRUP</b></td><td><b>XA_TIPO</b></td></tr><tr><td><b>SF5</b></td><td><b>1</b></td><td colspan="2"><b>Cadastrais</b></td><td><b></b></td><td><b></b></td></tr><tr><td><b>SF5</b></td><td><b>2</b></td><td colspan="2"><b>Ativo Fixo</b></td><td><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>F5_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Código que identifica a filial da
+empre-sa usuária do sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>F5_CODIGO</td>
+<td>Codigo TM</td>
+<td colspan="2">Codigo da Movimentacao</td>
+<td colspan="4">Código do tipo de movimentação, este
+tipo pode ser:
+(E) - Entrada - Códigos < ou = 500
+(S) - Saída   - Códigos > 500
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@9                                           </td>
+<td>ExistChav("SF5").And.A230Tipo() .AND. Freeforuse("SF5") .And. EstVldStr()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>F5_TIPO</td>
+<td>Tipo de TM</td>
+<td colspan="2">Tipo de Tipo de Movimento</td>
+<td colspan="4">Tipo de movimentação para transaçöes
+doestoque, sendo:
+(R) - Requisição - Códigos > que 500
+(D) - Devolução  - Códigos < ou = 500
+(P) - Produção   - Códigos < ou = 500
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>!                                            </td>
+<td>Pertence("DPR").And.A230Tipo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>P=Producao;R=Requisicao;D=Devolucao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>F5_TEXTO</td>
+<td>Descricao</td>
+<td colspan="2">Descricao da Movimentacao</td>
+<td colspan="4">Descrição do tipo da movimentação.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Texto()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>F5_APROPR</td>
+<td>Aprop.Indir</td>
+<td colspan="2">Apropria indireto diretam</td>
+<td colspan="4">Define como este TM ira tratar Produtos
+com Apropriacao Indireta:
+- Sim: DESATIVA a Apropriacao Indireta
+do Produto.
+- Nao: ATIVA a Apropriacao Indireta do
+Produto.
+Dica:
+Produto COM Apropriacao Indireta
+movimentado com T.M. COM Apropriacao
+Indireta = O sistema ira agir como se o
+produto NAO utilizasse Apropriacao
+Indireta.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>!                                            </td>
+<td>pertence("SN")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>S=Sim;N=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>F5_ATUEMP</td>
+<td>Atu.Empenho</td>
+<td colspan="2">Atualiza o empenho</td>
+<td colspan="4">Definição da atualização do empenho.
+"S"para  atualizar  empenho, caso
+contrário"N" (Não).
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>!                                            </td>
+<td>pertence("SN")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>S=Sim;N=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>F5_TRANMOD</td>
+<td>Transf.MOD.</td>
+<td colspan="2">Transfere somente a MOD ?</td>
+<td colspan="4">Definição de transferência da
+mão-de-o-bra do empenho para  o  real.
+"S"  paratransferir a mão-de-obra, caso
+contrário"N", pois ela será apontada.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>!                                            </td>
+<td>pertence("SN")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>S=Sim;N=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>F5_VAL</td>
+<td>Valorizado</td>
+<td colspan="2">Movimento Valorizado</td>
+<td colspan="4">Este campo identifica se o custo de uma
+movimentação será digitado pelo usuário
+em tempo de movimento. Este Campo só é
+válido para Requisiçöes/Devoluçöes.
+Deve ser preenchido com (S)im ou (N)ão .
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>pertence("SN")</td>
+<td>"N"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>S=Sim;N=Nao</td>
+<td>M->F5_GERAATF == '2'</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>F5_ENVCQPR</td>
+<td>Envia p/CQ</td>
+<td colspan="2">Envia produção para C.Q.?</td>
+<td colspan="4">Parametriza o Envio das Produçöes ao
+CQ.Este campo só será utilizado em Tipos
+de Movimentação "P" (Produção).
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>pertence("SN")</td>
+<td>"N"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>S=Sim;N=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>F5_LIBPVPR</td>
+<td>Libera PV</td>
+<td colspan="2">Libera PV amarrado a OP ?</td>
+<td colspan="4">Campo considerado somente se o tipo do
+movimento for produção.Indica se a
+produção deve liberar o PV  amarrado a
+OP. Sim ou Não.
+Obs:Só é aplicado quando o produto não
+possui controle de endereçamento.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>pertence("SN")</td>
+<td>"N"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>S=Sim;N=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>F5_QTDZERO</td>
+<td>Qtd Zero</td>
+<td colspan="2">Qtd zerada no mov. valor?</td>
+<td colspan="4">Indica se um movimento do tipo
+valorizado pode ser digitado com
+quantidade zero ou não. Utilizado
+somente em movimentos do tipo requisição
+ou devolução.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@9                                           </td>
+<td>Pertence("12") .And. If(M->F5_VAL$" N".And.&(ReadVar())=="1",(Help(" ",1,"QTD_ZERO"),.F.),.T.)</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>F5_COPSIMP</td>
+<td>Cod Op. SIMP</td>
+<td colspan="2">Codigo da Oper. SIMP</td>
+<td colspan="4">Codigo da Oper. SIMP
+</td>
+<td>C</td>
+<td>7</td>
+<td>0</td>
+<td>9999999                                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/d3c.html">D3C</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>F5_MOVTANQ</td>
+<td>T.Mov.Tanque</td>
+<td colspan="2">Tipo de Mov. Tanque</td>
+<td colspan="4">Tipo de Mov. Tanque
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>AP=Apuracao;BO=Fat_posterior;DE=Descarga;EQ=Equalizacao;PR=Provisorio;TR=Transferencia;GC=Producao automatica</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>F5_AGREGCU</td>
+<td>Custeia OP</td>
+<td colspan="2">Custeia OP com prd contr</td>
+<td colspan="4">Indica se o tipo de movimento interno
+utilizado na operação deve valorizar a
+ordem de produção relacionada com os
+produtos que permitem controle de
+custeio (B1_AGREGCU = "SIM").
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12 ")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=Nao;</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>F5_CODLAN</td>
+<td>Cod.Cat83</td>
+<td colspan="2">Código Lcto Cat83</td>
+<td colspan="4">Código do Lançamento padrão para CAT83
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. ExistCpo('CDZ')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/cdz.html">CDZ</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>F5_GERAATF</td>
+<td>Gera Ativo?</td>
+<td colspan="2">Gera Ativo?</td>
+<td colspan="4">Campo que informa se o tipo de
+movimentação informado irá gerar
+transposição de estoque para o ativo
+fixo.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence('12')</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td>M->F5_VAL=='N'</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>F5_TEATF</td>
+<td>Tipo Entrada</td>
+<td colspan="2">Tipo de Entrada da Nota</td>
+<td colspan="4">Tipo de entrada utilizada para gerar
+ativo fixo.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@9                                           </td>
+<td>ExistCpo('SF4') .And.MaAvalTes('E',M->F5_TEATF) .And. A230VldTES()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sf4.html">SF4</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>F5_CUSTATF</td>
+<td>Cust Med Ati</td>
+<td colspan="2">Consid.Custo Medio Ativo</td>
+<td colspan="4">Considera Custo Médio ao Gerar Ativo
+Fixo.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('12')</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=Nao</td>
+<td>M->F5_GERAATF == '1'</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>DXF</td>
+<td colspan="2">F5_CODIGO</td>
+<td colspan="2">DXF_TM</td>
+</tr>
+<tr>
+<td>CLR</td>
+<td colspan="2">F5_CODIGO</td>
+<td colspan="2">CLR_TPRD</td>
+</tr>
+<tr>
+<td>SDB</td>
+<td colspan="2">F5_CODIGO</td>
+<td colspan="2">DB_TM</td>
+</tr>
+<tr>
+<td>TFT</td>
+<td colspan="2">F5_CODIGO</td>
+<td colspan="2">TFT_TM</td>
+</tr>
+<tr>
+<td>SD3</td>
+<td colspan="2">F5_CODIGO</td>
+<td colspan="2">D3_TM</td>
+</tr>
+<tr>
+<td>AE8</td>
+<td colspan="2">F5_CODIGO</td>
+<td colspan="2">AE8_TMPAD</td>
+</tr>
+<tr>
+<td>DXC</td>
+<td colspan="2">F5_CODIGO</td>
+<td colspan="2">DXC_TM</td>
+</tr>
+<tr>
+<td>CLZ</td>
+<td colspan="2">F5_CODIGO</td>
+<td colspan="2">CLZ_TM</td>
+</tr>
+<tr>
+<td>SGP</td>
+<td colspan="2">F5_CODIGO</td>
+<td colspan="2">GP_TM</td>
+</tr>
+<tr>
+<td>TFS</td>
+<td colspan="2">F5_CODIGO</td>
+<td colspan="2">TFS_TM</td>
+</tr>
+<tr>
+<td>TXC</td>
+<td colspan="2">F5_CODIGO</td>
+<td colspan="2">TXC_TMDEV</td>
+</tr>
+<tr>
+<td>TXC</td>
+<td colspan="2">F5_CODIGO</td>
+<td colspan="2">TXC_TMREQ</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

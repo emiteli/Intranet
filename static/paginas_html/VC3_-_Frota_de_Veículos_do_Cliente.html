@@ -1,0 +1,1024 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: VC3 - Frota de Veículos do Cliente</title></head>
+<body>
+<font color="orange"><h2 id="VC3">Tabela: VC3 - Frota de Veículos do Cliente</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Frota de Veículos do Cliente</b></td><td colspan="2"><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">VC3_FILIAL+VC3_CODCLI+VC3_LOJA+VC3_CODMAR+VC3_MODVEI+VC3_CHASSI+VC3_FABMOD</td><td>Cliente + Loja + Marca + Mod Veiculo + Chassi + Ano Fabr/Mod</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>VC3_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Filial
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td>NAOVAZIO() .and. FG_ANOMOD("VV1_FABMOD")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VC3_CODCLI</td>
+<td>Cliente</td>
+<td colspan="2">Codigo do Cliente</td>
+<td colspan="4">Código do Cliente
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>FG_Seek("SA1","M->VC3_CODCLI",1,.f.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/vsa.html">VSA</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VC3_LOJA</td>
+<td>Loja</td>
+<td colspan="2">Loja do Cliente</td>
+<td colspan="4">Loja do Cliente
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>FG_Seek("SA1","M->VC3_CODCLI+M->VC3_LOJA",1,.f.,"VC3_NOMCLI","A1_NOME")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VC3_NOMCLI</td>
+<td>Nome</td>
+<td colspan="2">Nome do Cliente</td>
+<td colspan="4">Nome do Cliente
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!S20                                        </td>
+<td></td>
+<td>VCA5800021_RelacaoNomeCliente()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("SA1",1,xFilial("SA1")+VC3->VC3_CODCLI+VC3->VC3_LOJA,"A1_NREDUZ")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VC3_CODMAR</td>
+<td>Marca</td>
+<td colspan="2">Codigo da Marca</td>
+<td colspan="4">Código da Marca
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!S3                                         </td>
+<td>Vazio() .OR. If(FG_VALIDA(,"VE1TM->VC3_CODMAR*","M->VC3_DESMAR:=VE1->VE1_DESMAR"),.t.,.t.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ve1.html">VE1</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VC3_DESMAR</td>
+<td>Descricao</td>
+<td colspan="2">Descricao da Marca</td>
+<td colspan="4">Descrição da Marca
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!S20                                        </td>
+<td></td>
+<td>if(!Inclui,Posicione("VE1",1,xFilial("VE1")+VC3->VC3_CODMAR,"VE1_DESMAR"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("VE1",1,xFilial("VE1")+VC3->VC3_CODMAR,"VE1_DESMAR")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VC3_MODVEI</td>
+<td>Mod Veiculo</td>
+<td colspan="2">Modelo do Veiculo</td>
+<td colspan="4">Modelo do Veiculo
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Empty(M->VC3_CODMAR) .OR. If(FG_VALIDA(,"VV2TM->VC3_CODMAR+VC3_MODVEI*","M->VC3_DESMOD:=VV2->VV2_DESMOD",.F.),.t.,.t.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/mc3.html">MC3</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VC3_DESMOD</td>
+<td>Descricao</td>
+<td colspan="2">Descricao do Modelo</td>
+<td colspan="4">Descrição do Modelo
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!S30                                        </td>
+<td></td>
+<td>if(!Inclui,Posicione("VV2",1,xFilial("VV2")+VC3->VC3_CODMAR+VC3->VC3_MODVEI,"VV2_DESMOD"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("VV2",1,xFilial("VV2")+VC3->VC3_CODMAR+VC3->VC3_MODVEI,"VV2_DESMOD")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VC3_FABMOD</td>
+<td>Ano Fabr/Mod</td>
+<td colspan="2">Ano Fabricacao / Modelo</td>
+<td colspan="4">Ano Fabricação / Modelo
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>@R 9999/9999                                 </td>
+<td>NAOVAZIO() .and. FG_ANOMOD("VC3_FABMOD")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VC3_QTDFRO</td>
+<td>Qtd Frota</td>
+<td colspan="2">Qtde de Veiculos da Frota</td>
+<td colspan="4">Qtde de Veiculos deste Modelo/Ano na
+Frota
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>@E 999                                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VC3_AQUNOS</td>
+<td>Aquisic Conc</td>
+<td colspan="2">Aquisicao em Nossa Conces</td>
+<td colspan="4">O Veiculo foi adquirido em Nossa Con-
+cessionaria
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>!                                            </td>
+<td>Pertence("01")</td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>0=Nao;1=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VC3_DATAQU</td>
+<td>Dt Aquisicao</td>
+<td colspan="2">Data da Aquisicao</td>
+<td colspan="4">Data da Aquisição
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VC3_DATVEN</td>
+<td>Data Venda</td>
+<td colspan="2">Data da Venda</td>
+<td colspan="4">Data da venda.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>ctod("  /  /  ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VC3_PROVEI</td>
+<td>Proced. Veic</td>
+<td colspan="2">Procedencia do Veiculo</td>
+<td colspan="4">Procedencia do Veiculo
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!S2                                         </td>
+<td>PERTENCE("01")</td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>0=Nacional;1=Importado</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VC3_CHASSI</td>
+<td>Chassi</td>
+<td colspan="2">Chassi do Veiculo</td>
+<td colspan="4">Chassi do veiculo.
+</td>
+<td>C</td>
+<td>25</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/vv1.html">VV1</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VC3_TIPO</td>
+<td>Tipo</td>
+<td colspan="2">Tipo Veiculo/Equipamento</td>
+<td colspan="4">Tipo de veiculo.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>9                                            </td>
+<td>Pertence("012")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Veiculo;0=Equipamento;2=Outros</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VC3_CODOPE</td>
+<td>Cod.Operacao</td>
+<td colspan="2">Codigo da Operacao</td>
+<td colspan="4">Codigo da operacao.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td>FG_SEEK("VCI","M->VC3_CODOPE",1,.f.,"VC3_DESOPE","VCI_DESOPE")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/vci.html">VCI</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VC3_DESOPE</td>
+<td>Desc.Operac</td>
+<td colspan="2">Descricao Operacao</td>
+<td colspan="4">Informe a descricao da operacao da frota
+de veiculos do cliente.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!Inclui,Posicione("VCI",1,xFilial("VCI")+VC3->VC3_CODOPE,"VCI_DESOPE"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("VCI",1,xFilial("VCI")+VC3->VC3_CODOPE,"VCI_DESOPE")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VC3_TERPAG</td>
+<td>Mes/Ano TPag</td>
+<td colspan="2">Mes/Ano Termino do Pagto</td>
+<td colspan="4">Mes/Ano do termino do pagamento.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@R 99/9999                                   </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VC3_KMMES</td>
+<td>KmRodadaMes</td>
+<td colspan="2">Kilometragem Rodada Mes</td>
+<td colspan="4">Kilometragem rodada no mes.
+</td>
+<td>N</td>
+<td>6</td>
+<td>0</td>
+<td>@E 999,999                                   </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VC3_KMLIT</td>
+<td>Km/Litro</td>
+<td colspan="2">Km por Litro</td>
+<td colspan="4">Km por litro.
+</td>
+<td>N</td>
+<td>4</td>
+<td>1</td>
+<td>@E 99.9                                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VC3_SITUAC</td>
+<td>Situação</td>
+<td colspan="2">Situação</td>
+<td colspan="4">Informe aqui a situação da frota.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("01")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>0=Livre;1=Onerado</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VC3_DATATU</td>
+<td>Dt Atualiza</td>
+<td colspan="2">Data de Atualizacao</td>
+<td colspan="4">Neste campo e gravado a data de
+atualizacao de frota.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VC3_VALMER</td>
+<td>V Mercadoria</td>
+<td colspan="2">Valor da Mercadoria</td>
+<td colspan="4">Informe aqui o valor da mercadoria.
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VC3_VALAQU</td>
+<td>Vlr Aquisica</td>
+<td colspan="2">Valor de Aquisicao</td>
+<td colspan="4">Informe aqui o valor de aquisição.
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VC3_ESTGER</td>
+<td>Estado geral</td>
+<td colspan="2">Estado geral</td>
+<td colspan="4">Informe aqui o estado geral.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>0=Bom;1=Medio;2=Ruim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VC3_FINANC</td>
+<td>Financiado</td>
+<td colspan="2">Financiado</td>
+<td colspan="4">Informe aqui se é financiado.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>pertence("01")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;0=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VC3_FORNEC</td>
+<td>Fornecedor</td>
+<td colspan="2">Fornecedor</td>
+<td colspan="4">Informe aqui o nome do fornecedor.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VC3_PERPAR</td>
+<td>% Parceria</td>
+<td colspan="2">% Parceria</td>
+<td colspan="4">Informe aqui o percentual da parceria.
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>@E 999.99                                    </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VC3_PLAVEI</td>
+<td>Placa Veicul</td>
+<td colspan="2">Placa Veiculo</td>
+<td colspan="4">Informe aqui a placa do veiculo.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@R! AAA-!!!!!!!                              </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VC3_LOGALT</td>
+<td>Log Alter</td>
+<td colspan="2">Log de Alteracao</td>
+<td colspan="4">Informe aqui o Log de Alteração.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VC3_UUID</td>
+<td>UUID</td>
+<td colspan="2">Id unico universal</td>
+<td colspan="4">ID unico criado para integracoes.
+</td>
+<td>C</td>
+<td>36</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>FWUUIDV4(.t.)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>.f.</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VC3_DATINC</td>
+<td>Dt Inclusao</td>
+<td colspan="2">Data Inclusao Registro</td>
+<td colspan="4">Data em que o registro foi inserido no
+banco.
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>FGX_Timestamp()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>.f.</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VC3_DATALT</td>
+<td>Dt Alteracao</td>
+<td colspan="2">Data Alteracao Registro</td>
+<td colspan="4">Data em que o registro foi alterado no
+banco.
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>FGX_Timestamp()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>.f.</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

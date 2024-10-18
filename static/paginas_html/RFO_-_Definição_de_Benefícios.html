@@ -1,0 +1,415 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: RFO - Definição de Benefícios</title></head>
+<body>
+<font color="orange"><h2 id="RFO">Tabela: RFO - Definição de Benefícios</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Definição de Benefícios</b></td><td colspan="2"><b>RFO_FILIAL+RFO_TPVALE+RFO_CODIGO</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">RFO_FILIAL+RFO_TPVALE+RFO_CODIGO</td><td>Tipo + Cód. Benef.</td><td></td></tr>
+<tr><td>2</td><td colspan="2">RFO_FILIAL+RFO_TPVALE+RFO_DESCR+RFO_CODIGO</td><td>Tipo + Descrição + Cód. Benef.</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>RFO_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Informe a filial.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sm0.html">SM0</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RFO_TPVALE</td>
+<td>Tipo</td>
+<td colspan="2">Tipo</td>
+<td colspan="4">Informe o tipo de benefício:
+1 = Vale Refeição
+2 = Vale Alimentação
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>9                                            </td>
+<td>Pertence("12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Vale Refei��o;2=Vale Alimenta��o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RFO_CODIGO</td>
+<td>Cód. Benef.</td>
+<td colspan="2">Código do Beneficio</td>
+<td colspan="4">Informe o código do vale.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .And. Iif(FunName()=="GPEA012", AtuCpoDet1(), AtuCpoDet2())</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RFO_DESCR</td>
+<td>Descrição</td>
+<td colspan="2">Descrição do Beneficio</td>
+<td colspan="4">Informe a descrição do beneficio.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RFO_VALOR</td>
+<td>Valor</td>
+<td colspan="2">Valor do Beneficio</td>
+<td colspan="4">Informe o valor do beneficio.
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RFO_PERC</td>
+<td>Perc. Desc.</td>
+<td colspan="2">Percentual de Desconto</td>
+<td colspan="4">Informe o percentual de desconto.
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>@E 999.99                                    </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RFO_TETO</td>
+<td>Teto Desc.</td>
+<td colspan="2">Teto de Desconto</td>
+<td colspan="4">Informe o teto de desconto do benefício.
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RFO_DIAFIX</td>
+<td>Dias Fixos</td>
+<td colspan="2">Dias Fixos</td>
+<td colspan="4">Informe a quantidade de dias fixos que
+serão utilizados no cálculo do
+benefício. Caso este campo seja
+informado, o cálculo do beneficio não
+será efetuado com base na quantidade de
+dias do mês.
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RFO_TPBEN</td>
+<td>Tipo Benef.</td>
+<td colspan="2">Tipo de Beneficio</td>
+<td colspan="4">Informe o tipo do beneficio, conforme
+tabela auxiliar "S011 - Tipos de
+Beneficios".
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .And. ValidRcc("S011", M->RFO_TPBEN, 1,2) .And. Iif(FunName()=="GPEA012", AtuCpoDet1(), AtuCpoDet2())</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/s11bra.html">S11BRA</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RFO_BNFFOR</td>
+<td>Cod.Bnf.For.</td>
+<td colspan="2">Cod. Benefício no Fornec.</td>
+<td colspan="4">Código relacionado do beneficio,
+informado pelo fornecedor do serviço.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RFO_CONTRA</td>
+<td>Ref.Contrato</td>
+<td colspan="2">Referente a Contrato</td>
+<td colspan="4">Neste campo deverá ser informado se o
+vale que está sendo cadastrado é
+referente a um contrato de prestação de
+serviços do módulo de Gestão de
+Serviços.
+Para vales referentes a contratos serão
+feitas diversas consistências para
+impedir que o valor do contrato de
+prestação de serviços seja alterado
+indevidamente.
+1 - Sim;
+2 - Não.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>9                                            </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>SRA</td>
+<td colspan="2">RFO_CODIGO</td>
+<td colspan="2">RA_VALEALI</td>
+</tr>
+<tr>
+<td>SRA</td>
+<td colspan="2">RFO_CODIGO</td>
+<td colspan="2">RA_VALEREF</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

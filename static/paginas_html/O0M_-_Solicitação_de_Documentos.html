@@ -1,0 +1,391 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: O0M - Solicitação de Documentos</title></head>
+<body>
+<font color="orange"><h2 id="O0M">Tabela: O0M - Solicitação de Documentos</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Solicitação de Documentos</b></td><td colspan="2"><b>O0M_FILIAL+O0M_COD</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">O0M_FILIAL+O0M_COD</td><td>Cód Solicita</td><td></td></tr>
+<tr><td>2</td><td colspan="2">O0M_FILIAL+O0M_CAJURI</td><td>Cód Ass Jur</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>O0M_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Filial do Sistema
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>O0M_COD</td>
+<td>Cód Solicita</td>
+<td colspan="2">Código da Solicitação</td>
+<td colspan="4">Código da Solicitação de Documentos
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td>ExistChav('O0M',M->O0M_COD,1)</td>
+<td>GetSXENum("O0M","O0M_COD")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>O0M_CAJURI</td>
+<td>Cód Ass Jur</td>
+<td colspan="2">Código Assunto Juridico</td>
+<td colspan="4">Assunto Jurídico vinculado à solicitação
+de documentos
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td>(ExistCpo('NSZ',M->O0M_CAJURI,1).And.JurValTpAs(M->O0M_CAJURI) .and. J162VTPAS('6'))</td>
+<td>JA254CAJUR()</td>
+<td><a href="/tabelas_protheus/f3/nszrst.html">NSZRST</a></td>
+<td><a href="/tabelas_protheus/gatilhos/o0m_cajuri.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>JA254HABCJ()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>O0M_DTSOLI</td>
+<td>Data Solicit</td>
+<td colspan="2">Data Solicitação</td>
+<td colspan="4">Data da Solicitação
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>DATE()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>O0M_USRSOL</td>
+<td>Usu Inclusão</td>
+<td colspan="2">Usuário de inclusão</td>
+<td colspan="4">Usuário da Solicitação
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>USRRETNAME(__CUSERID)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>O0M_CUSRSL</td>
+<td>Cód Usr Soli</td>
+<td colspan="2">Código Usuário Solicitaçã</td>
+<td colspan="4">Código do Usuário da Solicitação
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>__CUSERID</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td>__CUSERID</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>O0M_PRZSOL</td>
+<td>Prazo Solici</td>
+<td colspan="2">Data Prazo Solicitação</td>
+<td colspan="4">Prazo de Atendimento da Solicitação
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>O0M_CENVOL</td>
+<td>Cod Envolv</td>
+<td colspan="2">Cod Envolvido</td>
+<td colspan="4">Relaciona Envolvido aos documentos
+solicitados
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td>(ExistCpo('NT9',M->O0M_CENVOL,1).AND.JAVLDNT9(FwFldGet('O0M_CENVOL'), FwFldGet('O0M_CAJURI') )).OR.Vazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/nt9o0m.html">NT9O0M</a></td>
+<td><a href="/tabelas_protheus/gatilhos/o0m_cenvol.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>O0M_DENVOL</td>
+<td>Envolvido</td>
+<td colspan="2">Envolvido</td>
+<td colspan="4">Descrição do Envolvido
+</td>
+<td>C</td>
+<td>100</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IF(!INCLUI,Posicione("NT9",1,xFilial("NT9")+O0M->O0M_CENVOL,"NT9_NOME"),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("NT9",1,xFilial("NT9")+O0M->O0M_CENVOL,"NT9_NOME")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>O0M_NUMCAS</td>
+<td>Núm Caso</td>
+<td colspan="2">Código Caso</td>
+<td colspan="4">Numero do Caso
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IF(!EMPTY(M->O0M_CAJURI),POSICIONE('NSZ',1,XFILIAL('NSZ')+M->O0M_CAJURI,'NSZ_NUMCAS'),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione('NSZ',1,xFilial('NSZ')+O0M->O0M_CAJURI,'NSZ_NUMCAS')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>O0M_OBS</td>
+<td>Observação</td>
+<td colspan="2">Observação da Solicitação</td>
+<td colspan="4">Observação da Solicitação
+</td>
+<td>M</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>O0N</td>
+<td colspan="2">O0M_COD</td>
+<td colspan="2">O0N_CSLDOC</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

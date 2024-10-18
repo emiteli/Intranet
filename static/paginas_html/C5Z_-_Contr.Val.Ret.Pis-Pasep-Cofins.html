@@ -1,0 +1,462 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: C5Z - Contr.Val.Ret.Pis/Pasep/Cofins</title></head>
+<body>
+<font color="orange"><h2 id="C5Z">Tabela: C5Z - Contr.Val.Ret.Pis/Pasep/Cofins</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Contr.Val.Ret.Pis/Pasep/Cofins</b></td><td colspan="2"><b>C5Z_FILIAL+C5Z_ID</b></td><td><b>TAFA087</b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">C5Z_FILIAL+C5Z_TPTRIB+DTOS(C5Z_PERIOD)+C5Z_INDNAT+C5Z_PERRET</td><td>Tipo Tributo + Data Movto + Ind.Nat.Ret + Per.Rec.Ret</td><td></td></tr>
+<tr><td>2</td><td colspan="2">C5Z_FILIAL+C5Z_INDNAT+C5Z_PERRET</td><td>Ind.Nat.Ret + Per.Rec.Ret</td><td></td></tr>
+<tr><td>3</td><td colspan="2">C5Z_FILIAL+C5Z_ID</td><td>ID</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>C5Z_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Informar o Código da Filial
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C5Z_ID</td>
+<td>ID</td>
+<td colspan="2">Identificador Registro</td>
+<td colspan="4">Deve representar o código de
+identificação do registro. Este código é
+controlado internamente pelo sistema de
+forma incremental e único por filial.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>GetSx8Num("C5Z","C5Z_ID")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C5Z_TPTRIB</td>
+<td>Tipo Tributo</td>
+<td colspan="2">Tipo do Tributo</td>
+<td colspan="4">Deve representar um tipo de tributo
+válido para este registro. As opções
+são:
+1=PIS/Pasep;
+2=Cofins;
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('12').And.XFUNVld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=PIS/Pasep;2=Cofins;</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>C5Z_PERIOD</td>
+<td>Data Movto</td>
+<td colspan="2">Data do Movimento Decl.</td>
+<td colspan="4">Deve representar a data em que está
+sendo declarado as informações
+pertinentes a este movimento.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>XFUNVld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>C5Z_INDNAT</td>
+<td>Ind.Nat.Ret</td>
+<td colspan="2">Ind.Nat.Retenção</td>
+<td colspan="4">Deve representar neste campo o Indicador
+de Natureza da Retenção na Fonte,
+conforme cadastro com as informações
+válidas pré-definidas de acordo com o
+EFD Contribuições.
+A informação deste campo corresponde á
+um código de identificação conforme
+respectivo cadastro.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>XFUNVldCmp("C1Q",3).And.XFUNVld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/c1q.html">C1Q</a></td>
+<td><a href="/tabelas_protheus/gatilhos/c5z_indnat.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>C5Z_DINDNA</td>
+<td>Des.Nat.Ret</td>
+<td colspan="2">Des.Nat.Retenção</td>
+<td colspan="4">Deve representar neste campo a descrição
+do Indicador de Natureza da Retenção na
+Fonte
+</td>
+<td>C</td>
+<td>220</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI.AND.!EMPTY(C5Z->C5Z_INDNAT),POSICIONE("C1Q",3,xFilial("C1Q")+C5Z->C5Z_INDNAT, "C1Q_CODIGO+' - '+C1Q_DESCRI"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C5Z_PERRET</td>
+<td>Per.Rec.Ret</td>
+<td colspan="2">Per.Receb e Retenção</td>
+<td colspan="4">Deve representar neste campo o Período
+do Recebimento e da Retenção
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@R  99/9999                                  </td>
+<td>XFUNVld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>C5Z_VLRRET</td>
+<td>Vlr.Tot.Ret</td>
+<td colspan="2">Valor Total Retenção</td>
+<td colspan="4">Deve representar neste campo o valor
+total da retenção efetivamente sofrida
+referente à natureza e o período
+informado.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>C5Z_VLRRTD</td>
+<td>Vlr.Ret.Ded</td>
+<td colspan="2">Valor Ret. Deduzida</td>
+<td colspan="4">Deve representar neste campo o valor da
+retenção deduzida da contribuição devida
+no período da escrituração e em períodos
+anteriores. O valor deverá ser informado
+de forma acumulada, ou seja, o valor
+descontado no atual período de apuração
+deverá ser somado àqueles deduzidos em
+períodos anteriores ao da atual
+escrituração (mesmo que a dedução tenha
+sido informada em DACON, anterior à
+entrega da EFD Contribuições).
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>C5Z_VLRRES</td>
+<td>Vl.Ret.PRest</td>
+<td colspan="2">Valor Ret. Ped. Rest.</td>
+<td colspan="4">Deve representar neste campo o valor da
+retenção utilizada mediante pedido de
+restituição. O valor deverá ser
+informado de forma acumulada, ou seja, o
+valor utilizado mediante pedido de
+restituição no atual período de apuração
+deverá ser somado àqueles
+transmitidos/pleiteados em períodos
+anteriores ao da atual escrituração.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>C5Z_VLRRDC</td>
+<td>Vl.Ret.DComp</td>
+<td colspan="2">Valor Ret. Dec.Comp.</td>
+<td colspan="4">Deve representar neste campo o valor da
+retenção utilizada mediante declaração
+de compensação. O valor deverá ser
+informado de forma acumulada, ou seja, o
+valor utilizado mediante declaração de
+compensação no atual período de apuração
+deverá ser somado àqueles
+transmitidos/pleiteados em períodos
+anteriores ao da atual escrituração.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>C5Z_STATUS</td>
+<td>Status Reg.</td>
+<td colspan="2">Status do registro</td>
+<td colspan="4">Campo de uso interno do sistema.
+Deve representar neste campo o status do
+registro:
+(Vazio) = Registro Novo
+0 = Registro Válido (integração)
+1 = Registro invalido (integração)
+2 = Registro transmitido
+3 = Registro transmitido com
+inconsistência(s)
+4 = Registro transmitido válido
+9 = Em Processamento
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence(" 012349")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Reg.V�lido;1=Reg.Inv�lido;2=Reg.Transmitido;3=Reg.Transmitido com inconsist�ncia;4=Reg.Transmitido v�lido;9=Em Processamento</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/079.html">079</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

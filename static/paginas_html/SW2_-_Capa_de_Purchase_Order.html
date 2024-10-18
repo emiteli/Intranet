@@ -1,0 +1,3684 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: SW2 - Capa de Purchase Order</title></head>
+<body>
+<font color="orange"><h2 id="SW2">Tabela: SW2 - Capa de Purchase Order</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Capa de Purchase Order</b></td><td colspan="2"><b>W2_FILIAL+W2_PO_NUM</b></td><td><b>EICPO400</b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">W2_FILIAL+W2_PO_NUM</td><td>No. P.O.</td><td></td></tr>
+<tr><td>2</td><td colspan="2">W2_FILIAL+W2_FORN+W2_FORLOJ+DTOS(W2_PO_DT)</td><td>Cod.Forneced + Loja + Data P.O.</td><td></td></tr>
+<tr><td>3</td><td colspan="2">W2_FILIAL+W2_COND_PA+W2_PO_NUM</td><td>Cond. Pagto + No. P.O.</td><td></td></tr>
+<tr><td>4</td><td colspan="2">W2_FILIAL+DTOS(W2_PO_DT)</td><td>Data P.O.</td><td></td></tr>
+<tr><td>5</td><td colspan="2">W2_FILIAL+DTOS(W2_ENV_ORI)</td><td>Envio Orient</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="6" align="center"><b><i>Abas(SXA)</i></b></td></tr><tr><td><b>XA_ALIAS</b></td><td><b>XA_ORDEM</b></td><td colspan="2"><b>XA_DESCRIC</b></td><td><b>XA_AGRUP</b></td><td><b>XA_TIPO</b></td></tr><tr><td><b>SW2</b></td><td><b>1</b></td><td colspan="2"><b>Cadastrais</b></td><td><b></b></td><td><b></b></td></tr><tr><td><b>SW2</b></td><td><b>2</b></td><td colspan="2"><b>Transporte</b></td><td><b></b></td><td><b></b></td></tr><tr><td><b>SW2</b></td><td><b>3</b></td><td colspan="2"><b>Financeiro</b></td><td><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>W2_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Filial do Sistema
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_PO_NUM</td>
+<td>No. P.O.</td>
+<td colspan="2">No. P.O.</td>
+<td colspan="4">Informe o número deste pedido de compra
+(purchase order).
+Para ativar a numeração automática do
+PO, utilize o parâmetro MV_NRPO, via
+"Configurador".
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistChav("SW2",M->W2_PO_NUM)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>GetMV("MV_NRPO")#'S'</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/148.html">148</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>W2_PO_DT</td>
+<td>Data P.O.</td>
+<td colspan="2">Data P.O.</td>
+<td colspan="4">Informe a data de criação deste pedido
+de compra (PO).
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>@D                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>W2_NR_ALTE</td>
+<td>No.Alteracao</td>
+<td colspan="2">No.Alteracao</td>
+<td colspan="4">Informe o número da alteração deste PO,
+se houver.
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td>PO420VAL("W2_NR_ALTE")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_IMPCO</td>
+<td>Import C.O?</td>
+<td colspan="2">Importação conta Ordem ?</td>
+<td colspan="4">Informe se é importação por Conta e
+Ordem.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('12') .AND. PO420VAL("W2_IMPCO")</td>
+<td>'2'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=Nao</td>
+<td>PO400WHEN('W2_IMPCO')</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_DT_ALTE</td>
+<td>Dt Alteracao</td>
+<td colspan="2">Dt.Alteracao</td>
+<td colspan="4">Informe a data de alteração do PO, se
+houver.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>@D                                           </td>
+<td>PO420VAL("W2_DT_ALTE")</td>
+<td>CTOD("")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_FORN</td>
+<td>Cod.Forneced</td>
+<td colspan="2">Fornecedor</td>
+<td colspan="4">Digite o código do fornecedor para este
+PO, ou tecle F3 para visualizar o
+cadastro de fornecedores / fabricantes.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo('SA2', M->W2_FORN+If(Empty(EicRetLoja('M', 'W2_FORLOJ')),'',M->W2_FORLOJ)) .And. PO420VAL('W2_FORN')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/vv6a.html">VV6A</a></td>
+<td><a href="/tabelas_protheus/gatilhos/w2_forn.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>W2_FORLOJ</td>
+<td>Loja</td>
+<td colspan="2">Loja</td>
+<td colspan="4">Informe a Loja.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PO420VAL("W2_FORLOJ")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/w2_forloj.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>W2_FORNDES</td>
+<td>Fornecedor</td>
+<td colspan="2">Nome do Fornecedor</td>
+<td colspan="4">Nome fantasia do fornecedor informado no
+campo "Cod. Forneced", conforme cadastro
+de "Fornecedores".
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>AvField('W2_FORN+W2_FORLOJ','A2_NREDUZ')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>AvField('W2_FORN+W2_FORLOJ','A2_NREDUZ',,.T.)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_CLIENTE</td>
+<td>Cod. Cliente</td>
+<td colspan="2">Codigo do Cliente</td>
+<td colspan="4">Informe o código do cliente.
+Caso o PO possua vários clientes, deixe
+este campo em branco, pois só é possível
+registrar um único cliente por pedido.
+O conteúdo informado neste campo será
+utilizado em estatísticas futuras.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .OR. ExistCpo("SA1",M->W2_CLIENTE)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/qpw.html">QPW</a></td>
+<td><a href="/tabelas_protheus/gatilhos/w2_cliente.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_CLILOJ</td>
+<td>Loja</td>
+<td colspan="2">Loja</td>
+<td colspan="4">Informe a Loja.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PO420VAL("W2_CLILOJ")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/w2_cliloj.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_CLINOME</td>
+<td>Cliente</td>
+<td colspan="2">Nome do Cliente</td>
+<td colspan="4">Nome fantasia do cliente, cadastrado
+para o código informado no campo "Cod.
+Cliente",  conforme cadastro de
+"Clientes".
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>AVFIELD('W2_CLIENTE+W2_CLILOJ','A1_NREDUZ')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>AvField('W2_CLIENTE+W2_CLILOJ','A1_NREDUZ',,.T.)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_FOB_TOT</td>
+<td>FOB</td>
+<td colspan="2">FOB</td>
+<td colspan="4">Valor FOB total na moeda de negociação
+do P.O.
+</td>
+<td>N</td>
+<td>15</td>
+<td>4</td>
+<td>@E 9,999,999,999.9999                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_INLAND</td>
+<td>Inland</td>
+<td colspan="2">Inland</td>
+<td colspan="4">Informe o valor referente às despesas de
+transporte interno no país exportador.
+</td>
+<td>N</td>
+<td>15</td>
+<td>2</td>
+<td>@E 999,999,999,999.99                        </td>
+<td>PO420VAL('W2_INLAND')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/w2_inland.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>PO400When('W2_INLAND')</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_DESCONT</td>
+<td>Desconto</td>
+<td colspan="2">Desconto</td>
+<td colspan="4">Informe o valor do desconto recebido
+para este P.O., se houver.
+</td>
+<td>N</td>
+<td>15</td>
+<td>2</td>
+<td>@E 999,999,999,999.99                        </td>
+<td>PO420VAL('W2_DESCONT')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/w2_descont.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>PO400When('W2_DESCONT')</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_PACKING</td>
+<td>Packing</td>
+<td colspan="2">Packing</td>
+<td colspan="4">Informe o valor das despesas com
+embalagem das mercadorias a serem
+importadas.
+</td>
+<td>N</td>
+<td>15</td>
+<td>2</td>
+<td>@E 999,999,999,999.99                        </td>
+<td>PO420VAL('W2_PACKING')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/w2_packing.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>PO400When('W2_PACKING')</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_OUT_DES</td>
+<td>Outras Desp.</td>
+<td colspan="2">Outras Despesas</td>
+<td colspan="4">Informe o valor referente a outras
+despesas deste P.O.
+</td>
+<td>N</td>
+<td>15</td>
+<td>2</td>
+<td>@E 999,999,999,999.99                        </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/w2_out_des.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_FOB_GER</td>
+<td>Total do PO</td>
+<td colspan="2">FOB Total</td>
+<td colspan="4">Valor FOB Total (FOB + Inland + Packing
+- Desconto + Int'l Freight).
+</td>
+<td>N</td>
+<td>15</td>
+<td>2</td>
+<td>@E 999,999,999,999.99                        </td>
+<td></td>
+<td>PO400REL('TOTAL')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>PO400REL('TOTAL')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_DT_IMP</td>
+<td>Dt Import.</td>
+<td colspan="2">Dt Import.</td>
+<td colspan="4">Informe a data de encaminhamento da
+solicitação de importação (S.I.) ao
+departamento de importação.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>@D                                           </td>
+<td></td>
+<td>CTOD("")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2__NR_COT</td>
+<td>No. Cotacao</td>
+<td colspan="2">No. Cotacao</td>
+<td colspan="4">Informe o número da cotação, caso o
+pedido esteja sendo criado com base em
+uma cotação.
+Este campo será somente informativo para
+o processo.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PO420VAL("W2__NR_COT")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/swr.html">SWR</a></td>
+<td><a href="/tabelas_protheus/gatilhos/w2__nr_cot.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2__DT_COT</td>
+<td>Data Cotacao</td>
+<td colspan="2">Data Cotacao</td>
+<td colspan="4">Informe a data de cotação, caso o pedido
+esteja sendo feito com base em uma
+cotação.
+Este campo será somente informativo para
+o processo.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>@D                                           </td>
+<td></td>
+<td>CTOD("")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_NR_PRO</td>
+<td>No. Proforma</td>
+<td colspan="2">No. Proforma</td>
+<td colspan="4">Informe o número da Proforma Invoice,
+caso o pedido seja amparado por uma
+fatura deste tipo.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>!(EYZ->(DbSeek(xFilial('EYZ')+SW2->W2_PO_NUM)))</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/148.html">148</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_DT_PRO</td>
+<td>Dt Proforma</td>
+<td colspan="2">Dt Proforma</td>
+<td colspan="4">Informe a data da Proforma Invoice, se
+houver.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>CTOD("")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>!(EYZ->(DbSeek(xFilial('EYZ')+SW2->W2_PO_NUM)))</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_AGENTE</td>
+<td>Cod. Agente</td>
+<td colspan="2">Agente</td>
+<td colspan="4">Informe o código do agente de transporte
+ou tecle F3 para visualizar a tabela de
+"Agentes Embarcadores".
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SY4",M->W2_AGENTE)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sy4.html">SY4</a></td>
+<td><a href="/tabelas_protheus/gatilhos/w2_agente.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>W2_AGENTEN</td>
+<td>Agente</td>
+<td colspan="2">Nome do Agente</td>
+<td colspan="4">Razão Social do agente de transporte
+cadastrado para o código informado no
+campo "Cod. Agente", conforme tabela de
+"Agentes Embarcadores".
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>E_Field("W2_AGENTE","Y4_NOME")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>E_Field("W2_AGENTE","Y4_NOME",,.T.)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_FORWARD</td>
+<td>Cod Forward.</td>
+<td colspan="2">Forwarder</td>
+<td colspan="4">Informe o código do freight forwarder,
+fornecedor de frete, conforme cadastrado
+em "Tabelas" -> "Agentes de Transporte".
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .OR. ExistCpo("SY4",M->W2_FORWARD)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sy4.html">SY4</a></td>
+<td><a href="/tabelas_protheus/gatilhos/w2_forward.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_FORWARN</td>
+<td>Forwarder</td>
+<td colspan="2">Nome do Forwarder</td>
+<td colspan="4">Nome do freight forwarder (fornecedor de
+frete) relacionado ao código informado
+no campo "Cod Forward", conforme tabela
+de "Agentes Embarcadores".
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>E_Field("W2_FORWARD","Y4_NOME")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>E_Field("W2_FORWARD","Y4_NOME",,.T.)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_TIPO_EM</td>
+<td>Via Transp.</td>
+<td colspan="2">Via Transp.</td>
+<td colspan="4">Informe o código da via de transporte,
+conforme cadastro de "Vias de
+Transporte".
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SYQ",M->W2_TIPO_EM)  .AND. PO420Val("COMP_VIA")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/syq.html">SYQ</a></td>
+<td><a href="/tabelas_protheus/gatilhos/w2_tipo_em.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>W2_TIPO_DE</td>
+<td>Descr.da Via</td>
+<td colspan="2">Descricao Via Transporte</td>
+<td colspan="4">Descrição da via de transporte
+relacionada ao código informado no campo
+"Via Transp.", conforme cadastro de
+"Vias de Transporte".
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>E_Field("W2_TIPO_EM","YQ_DESCR")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>E_Field("W2_TIPO_EM","YQ_DESCR",,.T.)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_ORIGEM</td>
+<td>Origem</td>
+<td colspan="2">Origem</td>
+<td colspan="4">Informe uma sigla de porto, aeroporto ou
+fronteira de origem, cadastrada para a
+via de transporte selecionada.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SYR",M->W2_TIPO_EM+M->W2_ORIGEM)  .AND. PO420Val("COMP_ORIG")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/eod.html">EOD</a></td>
+<td><a href="/tabelas_protheus/gatilhos/w2_origem.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>W2_DEST</td>
+<td>Destino</td>
+<td colspan="2">Destino</td>
+<td colspan="4">Informe uma sigla de porto, aeroporto ou
+fronteira, cadastrada como destino para
+a origem selecionada, conforme cadastro
+de "Vias de Transporte".
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SYR",M->W2_TIPO_EM+M->W2_ORIGEM+M->W2_DEST)  .AND. PO420Val("COMP_DEST")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ede.html">EDE</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>W2_FREINC</td>
+<td>Frete Incl.</td>
+<td colspan="2">Frete Incluso</td>
+<td colspan="4">Informe aqui se o frete esta incluso (
+Sim ou Não )
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12") .AND. PO420VAL('W2_FRETEIN')</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/w2_freinc.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=Nao</td>
+<td>PO400When('W2_FREINC')</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_FRETEIN</td>
+<td>Int'l Freigh</td>
+<td colspan="2">Int'l Freigh</td>
+<td colspan="4">Informe o valor do frete internacional
+para este P.O.
+</td>
+<td>N</td>
+<td>15</td>
+<td>2</td>
+<td>@E 999,999,999,999.99                        </td>
+<td>PO420VAL("W2_FRETEINT")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/w2_fretein.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>PO400When('W2_FRETEIN')</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_FREPPCC</td>
+<td>Tipo Frete</td>
+<td colspan="2">Tipo Frete</td>
+<td colspan="4">Informe o tipo de frete negociado.
+Por padrão, o sistema assume o tipo CC
+(Collect Free), por ser o mais utilizado
+no mercado, porém, para os casos de
+frete Pre-paid, basta selecionar a opção
+"PP".
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PO420VAL("PPCC")</td>
+<td>"CC"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>CC=Collect;PP=Prepaid</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>W2_COND_PA</td>
+<td>Cond. Pagto</td>
+<td colspan="2">Cond. Pagto</td>
+<td colspan="4">Informe o código da condição de
+pagamento negociada, conforme tabela de
+"Condições de Pagamento".
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PO420VAL("W2_COND_PA")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/y6a.html">Y6A</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>W2_DIAS_PA</td>
+<td>Dias  Pagto</td>
+<td colspan="2">Dias  Pagto</td>
+<td colspan="4">Quantidade de dias para apuração da data
+de desembolso, a contar da data do
+embarque. Essa informação está
+relacionada à condição de pagamento
+informada no campo "Cond. Pagto",
+conforme tabela de "Condições de
+Pagamento".
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td>PO420VAL("W2_DIAS_PA")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_COMPRA</td>
+<td>Cod.Comprad.</td>
+<td colspan="2">Comprador</td>
+<td colspan="4">Informe o código do comprador.
+Trata-se do responsável pela negociação
+do purchase order dentro da empresa.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SY1",M->W2_COMPRA,1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sy1.html">SY1</a></td>
+<td><a href="/tabelas_protheus/gatilhos/w2_compra.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>W2_MOEDA</td>
+<td>Moeda</td>
+<td colspan="2">Moeda</td>
+<td colspan="4">Informe a moeda negociada para o P.O.
+Será gerada uma paridade com o dólar,
+independentemente da moeda selecionada,
+de acordo com o conteúdo informado no
+campo de data de paridade, "Dt
+Paridade".
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PO420Val("W2_MOEDA")</td>
+<td>"US$"</td>
+<td><a href="/tabelas_protheus/f3/sye.html">SYE</a></td>
+<td><a href="/tabelas_protheus/gatilhos/w2_moeda.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>W2_COMPRAN</td>
+<td>Comprador</td>
+<td colspan="2">Nome do Comprador</td>
+<td colspan="4">Nome do comprador cadastrado para o
+código informado no campo
+"Cod.Comprad.", conforme tabela de
+"Compradores".
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>E_Field("W2_COMPRA","Y1_NOME")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>E_Field("W2_COMPRA","Y1_NOME",,.T.)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_PESO_B</td>
+<td>Peso Bruto</td>
+<td colspan="2">Peso Bruto</td>
+<td colspan="4">Informe o peso bruto previsto para este
+P.O.
+</td>
+<td>N</td>
+<td>13</td>
+<td>3</td>
+<td>@E 999,999,999.999                           </td>
+<td>POSITIVO()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_DT_PAR</td>
+<td>Dt Paridade</td>
+<td colspan="2">Dt Paridade</td>
+<td colspan="4">Informe a data a ser considerada para
+paridade entre o dólar e a moeda de
+negociação do P.O.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>@D                                           </td>
+<td>PO400Paridade()</td>
+<td>dDataBase</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/w2_dt_par.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>W2_PARID_U</td>
+<td>Paridade US$</td>
+<td colspan="2">Paridade US$</td>
+<td colspan="4">Paridade com o dólar americano, apurada
+pelas taxas de conversão cadastradas.
+</td>
+<td>N</td>
+<td>13</td>
+<td>6</td>
+<td>@E 999,999.999999                            </td>
+<td>Positivo()</td>
+<td>EicPo400Pari()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>W2_DESC_PD</td>
+<td>Descricao</td>
+<td colspan="2">Descricao em Portugues</td>
+<td colspan="4">Descrição em Português.
+</td>
+<td>C</td>
+<td>48</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>MSMM(RetField("SY6",1,xFilial("SY6")+W2_COND_PA+STR(W2_DIAS_PA),"Y6_DESC_P"),48)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_INCOTER</td>
+<td>Incoterm</td>
+<td colspan="2">Incoterm</td>
+<td colspan="4">Informe o código do INCOTERM considerado
+para a negociação deste pedido de
+compra.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SYJ",M->W2_INCOTER) .AND. PO420Val("W2_INCOTER")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/syj.html">SYJ</a></td>
+<td><a href="/tabelas_protheus/gatilhos/w2_incoter.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>W2_IMPORT</td>
+<td>Importador</td>
+<td colspan="2">Codigo do Importador</td>
+<td colspan="4">Informe o código do importador que
+deverá aparecer na Declaração de
+Importação (D.I.). O CNPJ do mesmo será
+impresso no Purchase Order.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PO420VAL("W2_IMPORT")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/syt.html">SYT</a></td>
+<td><a href="/tabelas_protheus/gatilhos/w2_import.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>W2_IMPNOME</td>
+<td>Importador</td>
+<td colspan="2">Nome do Importador</td>
+<td colspan="4">Nome do importador relacionado ao código
+informado no campo "Importador",
+conforme cadastro de "Importadores /
+Consignatários".
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>E_Field("W2_IMPORT","YT_NOME_RE")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>E_Field("W2_IMPORT","YT_NOME_RE",,.T.)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_CONSIG</td>
+<td>Cod.Consig.</td>
+<td colspan="2">Codigo do Consignatario</td>
+<td colspan="4">Informe o código do consignatário quando
+houver.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PO420VAL("W2_CONSIG")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/syt.html">SYT</a></td>
+<td><a href="/tabelas_protheus/gatilhos/w2_consig.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_CONNOME</td>
+<td>Consignatar.</td>
+<td colspan="2">Nome do Consignatario</td>
+<td colspan="4">Nome do consignatário cadastrado para o
+código informado no campo "Cod.Consig.",
+conforme cadastro de "Importadores /
+Consignatários".
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>E_Field("W2_CONSIG","YT_NOME_RE")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>E_Field("W2_CONSIG","YT_NOME_RE",,.T.)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_OBS</td>
+<td>Obs</td>
+<td colspan="2">Obs</td>
+<td colspan="4">Observações do PO.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_EMITIDO</td>
+<td>Emitido S/N</td>
+<td colspan="2">Emitido? S/N</td>
+<td colspan="4">Emitido? S/N para o P.O.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_DT_PC</td>
+<td>Dt Pre-Calc.</td>
+<td colspan="2">Dt.Pre-Calc.</td>
+<td colspan="4">Data do pré-cálculo.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>@D                                           </td>
+<td></td>
+<td>CTOD("")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_TAB_PC</td>
+<td>Tb.Pre-Calc.</td>
+<td colspan="2">Tb.Pre-Calc.</td>
+<td colspan="4">Informe o código da tabela que determina
+as despesas consideradas no relatório de
+pré-cálculo e nas previsões financeiras,
+quando integrado ao SIGAFIN.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio().or.ExistCpo("SWF",M->W2_TAB_PC)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/swf.html">SWF</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_STAT_PC</td>
+<td>St.Pre-Calc.</td>
+<td colspan="2">St.Pre-Calc.</td>
+<td colspan="4">Data de Pré-cálculo.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_DT_INTE</td>
+<td>Dt Integrac.</td>
+<td colspan="2">Dt.Integrac.</td>
+<td colspan="4">Data da Integração.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>@D                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_EMISCCA</td>
+<td>Dt Emis.Camb</td>
+<td colspan="2">Dt.Emis.Camb</td>
+<td colspan="4">Data da emissão do câmbio.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>@D                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_NRCCAMB</td>
+<td>No.Cont.Camb</td>
+<td colspan="2">No.Cont.Camb</td>
+<td colspan="4">Número do Contrato de Câmbio.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_RECCCAM</td>
+<td>Dt Rec. Camb</td>
+<td colspan="2">Dt.Rec. Camb</td>
+<td colspan="4">Data de Liqüidação do Câmbio.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>@D                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_BAN_REC</td>
+<td>Banco Receb.</td>
+<td colspan="2">Banco Receb.</td>
+<td colspan="4">Banco Recebedor.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_ENCARGO</td>
+<td>Encargos</td>
+<td colspan="2">Encargos</td>
+<td colspan="4">Encargos
+</td>
+<td>N</td>
+<td>15</td>
+<td>4</td>
+<td>@E 9,999,999,999.9999                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_CORRETA</td>
+<td>Corretagem</td>
+<td colspan="2">Corretagem</td>
+<td colspan="4">Corretagem.
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_CUST_TR</td>
+<td>Custo Transf</td>
+<td colspan="2">Custo Transf</td>
+<td colspan="4">Custo de Transferência.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_BANCO</td>
+<td>Banco</td>
+<td colspan="2">Banco</td>
+<td colspan="4">Banco.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/007.html">007</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_AGENCIA</td>
+<td>Agencia</td>
+<td colspan="2">Agencia</td>
+<td colspan="4">Agência.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/008.html">008</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_TX_CAM</td>
+<td>Taxa Cambio</td>
+<td colspan="2">Taxa Cambio</td>
+<td colspan="4">Taxa de Câmbio.
+</td>
+<td>N</td>
+<td>15</td>
+<td>8</td>
+<td>@E 999,999.99999999                          </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_TX_DESP</td>
+<td>Taxa Despes.</td>
+<td colspan="2">Taxa Despes.</td>
+<td colspan="4">Taxa para Despesas.
+</td>
+<td>N</td>
+<td>15</td>
+<td>8</td>
+<td>@E 999,999.99999999                          </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_TX_RESE</td>
+<td>Taxa Reserva</td>
+<td colspan="2">Taxa Reserva</td>
+<td colspan="4">Taxa de Reserva.
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_DESP_CA</td>
+<td>Desp. Cambio</td>
+<td colspan="2">Desp. Cambio</td>
+<td colspan="4">Despesas de Câmbio.
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_MOE_DES</td>
+<td>Moeda Desp.</td>
+<td colspan="2">Moeda Desp.</td>
+<td colspan="4">Moeda das Despesas.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_FOB_ANT</td>
+<td>FOB Antecip.</td>
+<td colspan="2">FOB Antecip.</td>
+<td colspan="4">FOB Antecipado
+</td>
+<td>N</td>
+<td>15</td>
+<td>2</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_LC_NUM</td>
+<td>Carta Credit</td>
+<td colspan="2">Carta Credit</td>
+<td colspan="4">Carta Crédito
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_DES_IPI</td>
+<td>Descr. Gen.</td>
+<td colspan="2">Descricao Generica</td>
+<td colspan="4">Informe uma descrição genérica para os
+itens do PO. Essa descrição será útil
+para consultas e aparecerá no relatório
+IPI (Informações do Processo de
+Importação).
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!S50                                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_OK</td>
+<td>Ok</td>
+<td colspan="2">Flag para PO's marcados</td>
+<td colspan="4">Flag para PO's marcados.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_COD_MSG</td>
+<td>Codigo Msg</td>
+<td colspan="2">Codigo da Mensagem</td>
+<td colspan="4">Selecione o código da mensagem que
+deverá aparecer no campo "REMARKS" do
+Purchase Order, ou digite a mensagem
+diretamente no campo "Observações".
+Ao teclar F3, serão exibidas todas as
+mensagens cadastradas em Tabelas ->
+Mensagens, como "Mensagem para P.O.".
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td>Vazio() .OR. EXISTCPO("SY7","1"+M->W2_COD_MSG,03)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/msg.html">MSG</a></td>
+<td><a href="/tabelas_protheus/gatilhos/w2_cod_msg.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_VM_OBS</td>
+<td>Observacoes</td>
+<td colspan="2">Observacoes</td>
+<td colspan="4">Digite aqui as observações para a
+impressão do PO.
+</td>
+<td>M</td>
+<td>60</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>MSMM(M->W2_OBS,60)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2__AB</td>
+<td>No. AB</td>
+<td colspan="2">Numero AB</td>
+<td colspan="4">Número AB.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_CONF_PE</td>
+<td>Dt Conf Ped</td>
+<td colspan="2">Data Conf. do Pedido</td>
+<td colspan="4">Informe a data de confirmação do pedido.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>@D                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_ENV_ORI</td>
+<td>Envio Orient</td>
+<td colspan="2">Data de Envio Orientador</td>
+<td colspan="4">Data de Envio Orientador
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>@D                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_ARQ</td>
+<td>Arquivo</td>
+<td colspan="2">Arquivo</td>
+<td colspan="4">Arquivo.
+</td>
+<td>C</td>
+<td>12</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_DESP</td>
+<td>Despachante</td>
+<td colspan="2">Despachante</td>
+<td colspan="4">Informe o código do despachante para
+geração de títulos, quando integrado ao
+SIGAFIN.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>(EMPTY(M->W2_DESP) .OR. ExistCpo("SY5",M->W2_DESP)) .AND. PO420VAL("W2_DESP")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/des.html">DES</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_EXPORTA</td>
+<td>Exportador</td>
+<td colspan="2">Exportador</td>
+<td colspan="4">Informe o código do exportador
+(trading), somente para os casos de
+off-shore.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>IF(!EMPTY(M->W2_EXPORTA),ExistCpo("SA2",M->W2_EXPORTA),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/exp.html">EXP</a></td>
+<td><a href="/tabelas_protheus/gatilhos/w2_exporta.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_EXPLOJ</td>
+<td>Loja</td>
+<td colspan="2">Loja</td>
+<td colspan="4">Informe a loja
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PO420VAL("W2_EXPLOJ")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/w2_exploj.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_EXPNOME</td>
+<td>Nome Export.</td>
+<td colspan="2">Nome do Exportador</td>
+<td colspan="4">Nome do exportador relacionado ao código
+informado no campo "Exportador",
+conforme cadastro de "Fornecedores".
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>AvField('W2_EXPORTA+W2_EXPLOJ','A2_NREDUZ')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>AvField('W2_EXPORTA+W2_EXPLOJ','A2_NREDUZ',,.T.)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_COND_EX</td>
+<td>Cond. Pagto</td>
+<td colspan="2">Cond. Pagto do Exportador</td>
+<td colspan="4">Informe a condição de pagamento
+negociada com a trading / exportador,
+para os casos de off-shore.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PO420VAL("W2_COND_EX",1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/y6a.html">Y6A</a></td>
+<td><a href="/tabelas_protheus/gatilhos/w2_cond_ex.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_DIAS_EX</td>
+<td>Dias  Pagto</td>
+<td colspan="2">Dias  Pagto do Exportador</td>
+<td colspan="4">Número de dias cadastrado para a
+condição de pagamento informada no campo
+"Cond. Pagto", conforme tabela de
+"Condições de Pagamento", para os casos
+de off-shore.
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td>PO420VAL("W2_DIAS_EX",1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_DESC_EX</td>
+<td>Descricao</td>
+<td colspan="2">Descricao em Portugues</td>
+<td colspan="4">Descrição em português da Condição de
+Pagamento do Exportador.
+</td>
+<td>C</td>
+<td>48</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>MSMM(RetField("SY6",1,xFilial("SY6")+W2_COND_EX+STR(W2_DIAS_EX),"Y6_DESC_P"),48)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_E_LC</td>
+<td>Carta Cred.</td>
+<td colspan="2">Carta de Credido ?</td>
+<td colspan="4">Indique se esta operação é amparada ou
+não por carta de crédito.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12 ")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>W2_COMIS</td>
+<td>Tem comissao</td>
+<td colspan="2">Tem Comissao do Agente ?</td>
+<td colspan="4">Informe se o agente é ou não recebedor
+de comissão.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12 ")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_TIP_COM</td>
+<td>Tipo comis.</td>
+<td colspan="2">Tipo de Comissao</td>
+<td colspan="4">Indique o tipo de comissão do agente,
+caso o mesmo seja recebedor de comissão.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>9                                            </td>
+<td>(Vazio() .OR. Pertence("1234 ")) .AND. PO420Val("W2_TIP_COM")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Percentual;2=Valor Fixo;3=Valor s/ Unidade;4=Outros</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_VAL_COM</td>
+<td>Valor Comis.</td>
+<td colspan="2">Valor comissao</td>
+<td colspan="4">Informe o valor da comissão do agente,
+caso o tipo de comissão informado para o
+mesmo seja "2 = Valor Fixo" ou "3 =
+Valor s/ Unidade".
+</td>
+<td>N</td>
+<td>15</td>
+<td>4</td>
+<td>@E 9,999,999,999.9999                        </td>
+<td>PO420VAL('W2_VAL_COM')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_PER_COM</td>
+<td>Percentual</td>
+<td colspan="2">Percentual Comissao</td>
+<td colspan="4">Informe o percentual de comissão do
+agente, caso o tipo de comissão
+informado para o mesmo seja "1 =
+Percentual".
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>999.99                                       </td>
+<td>PO420Val("W2_PER_COM")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_OUT_COM</td>
+<td>Outr. comis.</td>
+<td colspan="2">Outro tipo de Comissao</td>
+<td colspan="4">Informe outras comissões de agente, caso
+o tipo de comissão informado para o
+mesmo seja "4 = Outros".
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PO420Val("W2_OUT_COM")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_CONTAIN</td>
+<td>Modal. CNTR</td>
+<td colspan="2">Modalidade de Container</td>
+<td colspan="4">Indica a disposição das cargas e a
+desova dos containers.
+O conteúdo informado neste campo será
+utilizado em relatórios como Informação
+de Processo de Importação e Shipping
+Instructions.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>VAZIO() .or. Pertence("1234 ")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=House to House;2=House to Pier;3=Pier to House;4=Pier to Pier</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_COMPL_I</td>
+<td>Compl. Incot</td>
+<td colspan="2">Complemento de Incoterm</td>
+<td colspan="4">Informe o complemento do INCOTERM, se
+houver.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_REG_TRI</td>
+<td>Cod. Regime</td>
+<td colspan="2">Codigo Regime</td>
+<td colspan="4">Selecione o código do regime de
+tributação para o P.O., conforme tabela
+de "Regimes de Tributação", que pode ser
+visualizada ao pressionar a tecla F3.
+O conteúdo informado neste campo será
+utilizado para todos os itens do P.O.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .OR. ExistCpo("SJP",M->W2_REG_TRI)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sjp.html">SJP</a></td>
+<td><a href="/tabelas_protheus/gatilhos/w2_reg_tri.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_REGDESC</td>
+<td>Desc.Reg.</td>
+<td colspan="2">Desc.Reg.</td>
+<td colspan="4">Descrição do Regime de Tributação
+relacionado ao código informado no campo
+"Cod. Regime", conforme tabela de
+"Regimes Tributários".
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>PO_BUSCA("0")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>PO_BUSCA("1")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_DT_SHIP</td>
+<td>Dt. Ship.</td>
+<td colspan="2">Data Impressao do Shipp.</td>
+<td colspan="4">Data de impressão do documento "Shipping
+Instructions", que contém as instruções
+de embarque.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>@D                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_MT3</td>
+<td>Vol. Cubado</td>
+<td colspan="2">Volume Cubado</td>
+<td colspan="4">Informe o volume cubado total (altura x
+largura x comprimento), em metro cúbico,
+para o purchase order em referência.
+</td>
+<td>N</td>
+<td>8</td>
+<td>2</td>
+<td>@E 99,999.99                                 </td>
+<td>Po420Val('W2_MT3')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_CONTA20</td>
+<td>Contain. 20'</td>
+<td colspan="2">Containers de 20'</td>
+<td colspan="4">Informe a quantidade de containers de
+20' a ser utilizada para este P.O.
+O valor informado neste campo será
+utilizado para o pré-cálculo do P.O.,
+quando o mesmo for feito por quantidade
+de container. Neste caso, o valor
+calculado para o frete internacional, no
+pré-cálculo, dependerá dos valores de
+tarifas de frete lançados no cadastro de
+vias de transporte.
+</td>
+<td>N</td>
+<td>4</td>
+<td>0</td>
+<td>9999                                         </td>
+<td>Po420Val('W2_CONTA20')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_REFCLI</td>
+<td>Ref. do Cli.</td>
+<td colspan="2">Referencia do Cliente</td>
+<td colspan="4">Informe o código de referência do
+cliente para este PO.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_CONTA40</td>
+<td>Contain. 40'</td>
+<td colspan="2">Containers de 40'</td>
+<td colspan="4">Informe a quantidade de containers de
+40' a ser utilizada para este P.O.
+O valor informado neste campo será
+utilizado para o pré-cálculo do P.O.,
+quando o mesmo for feito por quantidade
+de container. Neste caso, o valor
+calculado para o frete internacional, no
+pré-cálculo, dependerá dos valores de
+tarifas de frete lançados no cadastro de
+vias de transporte.
+</td>
+<td>N</td>
+<td>4</td>
+<td>0</td>
+<td>9999                                         </td>
+<td>Po420Val('W2_CONTA40')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_INTEGRA</td>
+<td>Integracao</td>
+<td colspan="2">Reg. Veio da Integracao ?</td>
+<td colspan="4">PO veio da Integração ?
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>'N'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_CON40HC</td>
+<td>Cont. 40' hc</td>
+<td colspan="2">Containers de 40 hc</td>
+<td colspan="4">Informe a quantidade de containers de
+40' refrigerados (40'HC), a ser
+utilizada para este P.O.
+O valor informado neste campo será
+utilizado para o pré-cálculo do P.O.,
+quando o mesmo for feito por quantidade
+de container. Neste caso, o valor
+calculado para o frete internacional
+dependerá dos valores de frete lançados
+no cadastro de vias de transporte.
+</td>
+<td>N</td>
+<td>4</td>
+<td>0</td>
+<td>9999                                         </td>
+<td>Po420Val('W2_CON40HC')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_OUTROS</td>
+<td>Outros</td>
+<td colspan="2">Outros</td>
+<td colspan="4">Informe a quantidade de outros
+containers utilizados para este P.O.
+O valor informado neste campo será
+utilizado para o pré-cálculo do P.O.,
+quando o mesmo for feito por quantidade
+de container.
+Neste caso, o valor calculado para o
+frete internacional, no pré-cálculo,
+dependerá dos valores de tarifas de
+frete lançados no cadastro de vias de
+transporte.
+</td>
+<td>N</td>
+<td>4</td>
+<td>0</td>
+<td>9999                                         </td>
+<td>Po420Val('W2_OUTROS')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_POSICAO</td>
+<td>Posicao</td>
+<td colspan="2">Posicao</td>
+<td colspan="4">Posição.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>9999                                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_PROCNU</td>
+<td>Processo</td>
+<td colspan="2">Processo</td>
+<td colspan="4">Número do Processo.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>W2_PO_SIGA</td>
+<td>Ped.Compra</td>
+<td colspan="2">Pedido de compra no ERP</td>
+<td colspan="4">Número do pedido de compra no ERP com o
+qual o módulo Easy Import Control está
+integrado.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_VLMIDIA</td>
+<td>Valor Midia</td>
+<td colspan="2">Valor da Midia</td>
+<td colspan="4">Somente para os casos de importação de
+software, informe, neste campo, o valor
+unitário da mídia.
+</td>
+<td>N</td>
+<td>15</td>
+<td>5</td>
+<td>@E 999,999,999.99999                         </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_VENCDA</td>
+<td>Dt.Vencto DA</td>
+<td colspan="2">Dt. de Vencimento da DA</td>
+<td colspan="4">Informe a data de vencimento da
+Declaração de Admissão para processos
+com entreposto.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>@D                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sja.html">SJA</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>cProg="PN"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_ARMAZEM</td>
+<td>Rec.Alfandeg</td>
+<td colspan="2">Rec.Alfandeg</td>
+<td colspan="4">Informe o código do Recinto Alfandegado.
+</td>
+<td>C</td>
+<td>7</td>
+<td>0</td>
+<td>9999999                                      </td>
+<td>IF(!EMPTY(M->W2_ARMAZEM),ExistCpo("SJA",M->W2_ARMAZEM),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sja.html">SJA</a></td>
+<td><a href="/tabelas_protheus/gatilhos/w2_armazem.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_VM_ARMA</td>
+<td>Des.Rec.Alfa</td>
+<td colspan="2">Des.Rec.Alfan</td>
+<td colspan="4">Descrição do Recinto Alfandegado
+relacionado ao código informado no campo
+"Armazém".
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>E_Field("W2_ARMAZEM","JA_DESCR",,,1)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_HAWB_DA</td>
+<td>Processo DA</td>
+<td colspan="2">Processo DA</td>
+<td colspan="4">Processo DA - Original
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/148.html">148</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_CHAVEFI</td>
+<td>Chave Fin</td>
+<td colspan="2">Chave Fin</td>
+<td colspan="4">Informe a chave para acessar o
+Financeiro.
+</td>
+<td>C</td>
+<td>21</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_CONAPRO</td>
+<td>Controle Ap.</td>
+<td colspan="2">Controle de Aprovação.</td>
+<td colspan="4">Informe o controle de aprovação.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>!                                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_IMPENC</td>
+<td>Encomenda?</td>
+<td colspan="2">Importação por Encomenda?</td>
+<td colspan="4">Importação por Encomenda?
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('12')  .AND. PO420VAL("W2_IMPENC")</td>
+<td>'2'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_ID_ANU</td>
+<td>ID WF ANU</td>
+<td colspan="2">ID WorkFlow Item Anuente</td>
+<td colspan="4">ID WorkFlow para Itens Anuentes
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_ID_PRV</td>
+<td>ID WF PRV</td>
+<td colspan="2">ID WorkFlow Previsao</td>
+<td colspan="4">ID WorkFlow Previsão de Embarque
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_SIAUTO</td>
+<td>Si Auto</td>
+<td colspan="2">Si Automatica</td>
+<td colspan="4">Numero Si Automatica
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_CONTR</td>
+<td>Contrato?</td>
+<td colspan="2">Verifica se o P.O. tem co</td>
+<td colspan="4">"Verifica se a S.I. tem algum contrato
+vinculado a ela.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_RAT_POR</td>
+<td>Rateado Por</td>
+<td colspan="2">Rateado Por</td>
+<td colspan="4">Opção de rateio de despesa.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('123')</td>
+<td>'1'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Peso;2=Preco;3=Quantidade</td>
+<td>PO400When('W2_RAT_POR')</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_SEGINC</td>
+<td>Seg. Incl.</td>
+<td colspan="2">Seguro Incluso</td>
+<td colspan="4">Seguro Incluso?
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('12') .AND. PO420VAL('W2_SEGURIN')</td>
+<td>'2'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/w2_seginc.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=Nao</td>
+<td>PO400When('W2_SEGINC')</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>W2_SEGURIN</td>
+<td>Seguro</td>
+<td colspan="2">Seguro</td>
+<td colspan="4">Valor de seguro do processo.
+</td>
+<td>N</td>
+<td>15</td>
+<td>2</td>
+<td>@E 999,999,999,999.99                        </td>
+<td>PO420VAL('W2_SEGURIN')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/w2_segurin.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>PO400When('W2_SEGURIN')</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>SW3</td>
+<td colspan="2">W2_PO_NUM</td>
+<td colspan="2">W3_PO_NUM</td>
+</tr>
+<tr>
+<td>SW6</td>
+<td colspan="2">W2_PO_NUM</td>
+<td colspan="2">W6_PO_NUM</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

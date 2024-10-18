@@ -1,0 +1,977 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: GVA - TABELA DE FRETE</title></head>
+<body>
+<font color="orange"><h2 id="GVA">Tabela: GVA - TABELA DE FRETE</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>TABELA DE FRETE</b></td><td colspan="2"><b>GVA_FILIAL+GVA_CDEMIT+GVA_NRTAB</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">GVA_FILIAL+GVA_CDEMIT+GVA_NRTAB</td><td>Emitente + Tabela</td><td></td></tr>
+<tr><td>2</td><td colspan="2">GVA_FILIAL+GVA_EMIVIN+GVA_TABVIN</td><td>Emit. Base + Tabela Base</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="6" align="center"><b><i>Abas(SXA)</i></b></td></tr><tr><td><b>XA_ALIAS</b></td><td><b>XA_ORDEM</b></td><td colspan="2"><b>XA_DESCRIC</b></td><td><b>XA_AGRUP</b></td><td><b>XA_TIPO</b></td></tr><tr><td><b>GVA</b></td><td><b>1</b></td><td colspan="2"><b>Principal</b></td><td><b></b></td><td><b></b></td></tr><tr><td><b>GVA</b></td><td><b>2</b></td><td colspan="2"><b>Vinculo</b></td><td><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>GVA_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GVA_CDEMIT</td>
+<td>Emitente</td>
+<td colspan="2">Codigo Emitente</td>
+<td colspan="4">Código do emitente, transportador ou
+autônomo, ao qual está relacionada a
+tabela de frete.
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GFEExistC("GU3",,,"(GU3->GU3_TRANSP == '1' .OR. GU3->GU3_AUTON == '1') .AND. GU3->GU3_SIT == '1'")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gu3gva.html">GU3GVA</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gva_cdemit.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/052.html">052</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GVA_NMEMIT</td>
+<td>Nome</td>
+<td colspan="2">Nome do Emitente</td>
+<td colspan="4">Nome do Emitente da Tabela de Frete
+</td>
+<td>C</td>
+<td>80</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("GU3",1,XFILIAL("GU3")+GVA->GVA_CDEMIT,"GU3_NMEMIT"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("GU3",1,XFILIAL("GU3")+GVA->GVA_CDEMIT,"GU3_NMEMIT")</td>
+<td><a href="/tabelas_protheus/grupocampo/059.html">059</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GVA_NRTAB</td>
+<td>Tabela</td>
+<td colspan="2">Numero Tab. Frete</td>
+<td colspan="4">Número que identifica a tabela de frete.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td>ExistChav("GVA",M->GVA_CDEMIT+M->GVA_NRTAB)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GVA_DSTAB</td>
+<td>Descricao</td>
+<td colspan="2">Descricao da Tabela</td>
+<td colspan="4">Descrição da tabela de frete.
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .AND. Texto()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GVA_TPTAB</td>
+<td>Tipo</td>
+<td colspan="2">Tipo de Tabela</td>
+<td colspan="4">Indica se a tabela de frete é normal ou
+de vínculo.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Normal;2=Vinculo</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GVA_DTNEG</td>
+<td>Data Negoc.</td>
+<td colspan="2">Data de Negociacao</td>
+<td colspan="4">Data em que a tabela de frete foi
+negociada com o transportador.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GVA_NMCONT</td>
+<td>Contato</td>
+<td colspan="2">Nome do Contato</td>
+<td colspan="4">Nome do contato na transportadora,
+responsável pela tabela de frete.
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Texto()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GVA_NMPROF</td>
+<td>Profissional</td>
+<td colspan="2">Nome do Profissional</td>
+<td colspan="4">Nome do profissional na empresa
+responsável pela tabela de frete.
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Texto()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GVA_TPARRE</td>
+<td>Trat. Decim.</td>
+<td colspan="2">Tratamento casas decimais</td>
+<td colspan="4">Tipo de tratamento que será dados às
+casas decimais dos valores de frete, à
+partir da 3a casa.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Truncar;2=Arredondar</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GVA_DTCRIA</td>
+<td>Data Criacao</td>
+<td colspan="2">Data de Criacao da Tabela</td>
+<td colspan="4">Data em que a tabela de frete foi
+criada.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>DDATABASE</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GVA_HRCRIA</td>
+<td>Hora Criacao</td>
+<td colspan="2">Hora de Criacao da Tabela</td>
+<td colspan="4">Hora em que a tabela de frete foi
+criada.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td></td>
+<td>TIME()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GVA_USUCRI</td>
+<td>Usr Criacao</td>
+<td colspan="2">Usuario Criacao</td>
+<td colspan="4">Nome do usuário que registrou a tabela
+de frete no sistema.
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>CUSERNAME</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GVA_DTATU</td>
+<td>Data Atual.</td>
+<td colspan="2">Data de Atualizacao</td>
+<td colspan="4">Data em que a tabela de frete foi
+modificada pela última vez.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>DDATABASE</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GVA_HRATU</td>
+<td>Hora Atual.</td>
+<td colspan="2">Hora de Atualizacao</td>
+<td colspan="4">Hora em que a tabela de frete foi
+modificada pela última vez.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td></td>
+<td>TIME()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GVA_USUATU</td>
+<td>Usr Atualiz.</td>
+<td colspan="2">Usuario Atualizacao</td>
+<td colspan="4">Nome do usuário que efetuou a
+atualização da tabela de frete.
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GVA_ENVAPR</td>
+<td>Env. Aprov.</td>
+<td colspan="2">Enviada p/ Aprovacao</td>
+<td colspan="4">Indica se a tabela de frete foi enviada
+para aprovação ou não.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GVA_DTAPR</td>
+<td>Data Aprov.</td>
+<td colspan="2">Data Aprovacao</td>
+<td colspan="4">Data em que a tabela de frete foi
+aprovada.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GVA_HRAPR</td>
+<td>Hora Aprov.</td>
+<td colspan="2">Hora Aprovacao</td>
+<td colspan="4">Hora em que a tabela de frete foi
+aprovada.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GVA_USUAPR</td>
+<td>Usr. Aprov.</td>
+<td colspan="2">Usuario Aprovacao</td>
+<td colspan="4">Nome do usuário que efetuou a aprovação
+da tabela de frete.
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GVA_EMIVIN</td>
+<td>Emit. Base</td>
+<td colspan="2">Emitente Tab. Base</td>
+<td colspan="4">Emitente da tabela de frete que será a
+base para o vínculo.
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>If(Empty(M->GVA_TABVIN),Vazio() .Or. ExistCpo("GU3",M->GVA_EMIVIN),ExistCpo("GVA",M->GVA_EMIVIN+M->GVA_TABVIN))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gvabf.html">GVABF</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gva_emivin.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>M->GVA_TPTAB == "2"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/052.html">052</a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GVA_NMEMIV</td>
+<td>Nome</td>
+<td colspan="2">Nome Emit. Tab. Base</td>
+<td colspan="4">Nome do emitente da tabela base para
+vínculo.
+</td>
+<td>C</td>
+<td>80</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("GU3",1,XFILIAL("GU3")+GVA->GVA_EMIVIN,"GU3_NMEMIT"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("GU3",1,xFILIAL("GU3")+GVA->GVA_EMIVIN,"GU3_NMEMIT")</td>
+<td><a href="/tabelas_protheus/grupocampo/059.html">059</a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GVA_TABVIN</td>
+<td>Tabela Base</td>
+<td colspan="2">Numero Tabela Base</td>
+<td colspan="4">Número da tabela de frete que será
+utilizada como base para vínculo.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>M->GVA_TPTAB == "2"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GVA_SITVIN</td>
+<td>Situacao</td>
+<td colspan="2">Situacao</td>
+<td colspan="4">Indica a situação da tabela de frete
+quando esta for de vínculo.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Em negociacao;2=Liberada</td>
+<td>M->GVA_TPTAB == "2".and. GFEA61APR()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GVA_VLMULT</td>
+<td>Multiplic.</td>
+<td colspan="2">Multiplicador Frete</td>
+<td colspan="4">Valor padrão a ser multiplicado pelos
+componentes da tabela de frete quando
+tabela de vínculo.
+</td>
+<td>N</td>
+<td>15</td>
+<td>5</td>
+<td>@E 999,999,999.99999                         </td>
+<td>Positivo()</td>
+<td>1</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>M->GVA_TPTAB == "2"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GVA_VLADIC</td>
+<td>Adicional</td>
+<td colspan="2">Adicional Frete</td>
+<td colspan="4">Valor padrão a ser adicionado nos
+componentes da tabela de frete quando
+tabela de vinculo.
+</td>
+<td>N</td>
+<td>15</td>
+<td>5</td>
+<td>@E 999,999,999.99999                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>M->GVA_TPTAB == "2"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GVA_OBS</td>
+<td>Observacoes</td>
+<td colspan="2">Observacoes</td>
+<td colspan="4">Preencher com qualquer informação que
+seja relevante em relação à tabela de
+frete.
+</td>
+<td>M</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Texto()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GVA_MTVRPR</td>
+<td>Motiv Reprov</td>
+<td colspan="2">Motiv Reprov Tab Frete</td>
+<td colspan="4">Motivo Reprovação Tabela de Frete.
+</td>
+<td>M</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GVA_CPLSIT</td>
+<td>Situação CPL</td>
+<td colspan="2">Situação Cockpit Logístic</td>
+<td colspan="4">Descreve a situação da integração da
+tabela de frete
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("012345")</td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>0=N�o se aplica;1=N�o enviada;2=Enviada;3=Erro envio;4=Necessita reenvio;5=Integrada</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GVA_CPLDT</td>
+<td>Dt Ult Envio</td>
+<td colspan="2">Data Ultimo Envio</td>
+<td colspan="4">Indica a data do último envio da tabela
+de frete ao cockpit logistico
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>GV9</td>
+<td colspan="2">GVA_CDEMIT+GVA_NRTAB</td>
+<td colspan="2">GV9_CDEMIT+GV9_NRTAB</td>
+</tr>
+<tr>
+<td>GVW</td>
+<td colspan="2">GVA_NRTAB+GVA_DSTAB</td>
+<td colspan="2">GVW_NRTAB</td>
+</tr>
+<tr>
+<td>GVB</td>
+<td colspan="2">GVA_CDEMIT+GVA_NRTAB</td>
+<td colspan="2">GVB_CDEMIT+GVB_NRTAB</td>
+</tr>
+<tr>
+<td>GWG</td>
+<td colspan="2">GVA_CDEMIT+GVA_NRTAB</td>
+<td colspan="2">GWG_CDEMIT+GWG_NRTAB</td>
+</tr>
+<tr>
+<td>GVA</td>
+<td colspan="2">GVA_CDEMIT+GVA_NRTAB</td>
+<td colspan="2">GVA_EMIVIN+GVA_TABVIN</td>
+</tr>
+<tr>
+<td>GXT</td>
+<td colspan="2">GVA_NRTAB</td>
+<td colspan="2">GXT_NRTAB</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

@@ -1,0 +1,1352 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: CNA - Cabeçalho Planilhas Contratos</title></head>
+<body>
+<font color="orange"><h2 id="CNA">Tabela: CNA - Cabeçalho Planilhas Contratos</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Cabeçalho Planilhas Contratos</b></td><td colspan="2"><b>CNA_FILIAL+CNA_CONTRA+CNA_REVISA+CNA_NUMERO</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">CNA_FILIAL+CNA_CONTRA+CNA_REVISA+CNA_NUMERO</td><td>Nr Contrato + Revisao + Nr Planilha</td><td></td></tr>
+<tr><td>2</td><td colspan="2">CNA_FILIAL+CNA_CRONOG+CNA_NUMERO</td><td>Nr Cronogram + Nr Planilha</td><td></td></tr>
+<tr><td>3</td><td colspan="2">CNA_FILIAL+CNA_CONTRA+CNA_REVISA</td><td>Nr Contrato + Revisao</td><td></td></tr>
+<tr><td>4</td><td colspan="2">CNA_FILIAL+CNA_TIPPLA</td><td>Tipo</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>CNA_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Código que identifica a filial da
+empresa usuária do sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNA_CONTRA</td>
+<td>Nr Contrato</td>
+<td colspan="2">Numero do Contrato</td>
+<td colspan="4">Numero do Contrato.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("CN9") .And. CN200VldCon()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/cn9.html">CN9</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>IIf(FunName()=="CNTA200",INCLUI,!INCLUI.AND.!ALTERA)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNA_NUMERO</td>
+<td>Nr Planilha</td>
+<td colspan="2">Numero da Planilha</td>
+<td colspan="4">Número da Planilha.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistChav("CNA",FwFldGet("CNA_CONTRA")+FwFldGet("CNA_REVISA")+FwFldGet("CNA_NUMERO"))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CNA_REVISA</td>
+<td>Revisao</td>
+<td colspan="2">Revisao</td>
+<td colspan="4">Revisão.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>(Vazio().Or.ExistCpo('CN9',FwFldGet("CNA_CONTRA")+FwFldGet("CNA_REVISA"))) .And. CN200VldCon()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/123.html">123</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNA_FORNEC</td>
+<td>Fornecedor</td>
+<td colspan="2">Codigo do Fornecedor</td>
+<td colspan="4">Código do Fornecedor.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>CN300VlFor()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/cnc001.html">CNC001</a></td>
+<td><a href="/tabelas_protheus/gatilhos/cna_fornec.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>EMPTY(FwFldGet("CNA_CLIENT"))</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNA_LJFORN</td>
+<td>Loja</td>
+<td colspan="2">Loja do Fornecedor</td>
+<td colspan="4">Loja do Fornecedor.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>CN300VlFor()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>EMPTY(FwFldGet("CNA_CLIENT"))</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNA_CLIENT</td>
+<td>Cliente</td>
+<td colspan="2">Codigo do Cliente</td>
+<td colspan="4">Código do cliente do contrato
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>CN300VlCli()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/cnc001.html">CNC001</a></td>
+<td><a href="/tabelas_protheus/gatilhos/cna_client.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNA_LOJACL</td>
+<td>Lj. Cliente</td>
+<td colspan="2">Loja do Cliente</td>
+<td colspan="4">Código da loja do cliente
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>CN300VlCli()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNA_DTINI</td>
+<td>Data Inicial</td>
+<td colspan="2">Data Inicial</td>
+<td colspan="4">Data Inicial.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>CN200VldDini()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/cna_dtini.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CNA_VLTOT</td>
+<td>Valor Total</td>
+<td colspan="2">Valor Total</td>
+<td colspan="4">Valor Total.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td>CN300VlTot(xOldValue)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/cna_vltot.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNA_SALDO</td>
+<td>Saldo</td>
+<td colspan="2">Saldo da Planilha</td>
+<td colspan="4">Saldo
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNA_DTFIM</td>
+<td>Data Final</td>
+<td colspan="2">Data Final</td>
+<td colspan="4">Data Final.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>CN200VldDfim()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CNA_TIPPLA</td>
+<td>Tipo</td>
+<td colspan="2">Tipo da Planilha</td>
+<td colspan="4">Tipo da Planilha.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("CNL")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/cnl.html">CNL</a></td>
+<td><a href="/tabelas_protheus/gatilhos/cna_tippla.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CNA_DESCRI</td>
+<td>Descr. Plan.</td>
+<td colspan="2">Descrição Tipo Planilha</td>
+<td colspan="4">Descrição do tipo de planilha
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IIF(INCLUI,"",POSICIONE("CNL",1,XFILIAL("CNL")+CNA->CNA_TIPPLA,"CNL_DESCRI"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("CNL",1,XFILIAL("CNL")+CNA->CNA_TIPPLA,"CNL_DESCRI")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNA_PERIOD</td>
+<td>Un.Per.Rec.</td>
+<td colspan="2">Unid.Period.Recorrencia</td>
+<td colspan="4">Indica a periodicidade da recorrência
+medição do contrato, sendo:
+1=Dias, 2=Semanas, 3=Meses e 4= Anos.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>9                                            </td>
+<td>Pertence("1234")</td>
+<td>' '</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/cna_period.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Dias;2=Semanas;3=Meses;4=Anos</td>
+<td>CN300ENREC()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNA_PERREC</td>
+<td>Period.Recor</td>
+<td colspan="2">Periodo de Recorrencias</td>
+<td colspan="4">Indica o intervalo entre as medições de
+acordo com a Periodicidade selecionadas.
+Por ex.: Un.Per.Rec. 1=Dias e
+Period.Recor = 2, a recorrência será a
+cada 2 dias. Ex2.: Un.Per.Rec. 2=Meses e
+Period.Recor = 3, a recorrência será
+trimestral.
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>@E 999                                       </td>
+<td>Positivo()</td>
+<td>0</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/cna_perrec.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>CN300ENREC() .And. FwFldGet("CNA_PERIOD") $ "1234"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNA_QTDREC</td>
+<td>Qtd. Recorr.</td>
+<td colspan="2">Quantidade de Recorrência</td>
+<td colspan="4">Indica a quantidade de recorrências da
+planilha a serem medidas.
+</td>
+<td>N</td>
+<td>4</td>
+<td>0</td>
+<td>9999                                         </td>
+<td>FWFldGet("CNA_QTDREC") >= 0 .And. CN300VLREC(a,b,c,d)</td>
+<td>0</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/cna_qtdrec.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>CN300ENREC()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNA_DIASEM</td>
+<td>Dia Semana</td>
+<td colspan="2">Dia Preferencial Semana</td>
+<td colspan="4">Indica o dia preferencial da semana para
+geração da medição, sendo:
+1=Indiferente, 2=Dia Útil Seguinte e
+3=Dia Útil Anterior.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("123")</td>
+<td>'1'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/cna_diasem.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Indiferente;2= Dia Util Seguinte;3=Dia Util Anterior</td>
+<td>CN300ENREC()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNA_DIAMES</td>
+<td>Dia do Mês</td>
+<td colspan="2">Dia do Mês</td>
+<td colspan="4">Indica o dia de preferência para geração
+da medição.
+Se for indiferente, deixar vazio, ou
+informe o dia no intervalo de 01 a 31.
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td>FwFldGet("CNA_DIAMES") >=0 .And. FwFldGet("CNA_DIAMES") <= 31</td>
+<td>0</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/cna_diames.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>CN300ENREC()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNA_PROMED</td>
+<td>Próx. Med.</td>
+<td colspan="2">Próxima Medição</td>
+<td colspan="4">Indica a data da próxima medição a ser
+gerada.
+Calculado automaticamente pelo sistema
+pela rotina de medição.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNA_ULTMED</td>
+<td>Últ. Med.</td>
+<td colspan="2">Última Medição</td>
+<td colspan="4">Indica a data da última medição gerada.
+Gravado automaticamente pelo sistema
+pela rotina de medição.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNA_UNPERI</td>
+<td>Un.Per.Reaju</td>
+<td colspan="2">Unidade da periodicidade</td>
+<td colspan="4">Informa a unidade de periodicidade do
+reajuste.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("123")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/cna_unperi.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Dias;2=Meses;3=Anos</td>
+<td>CN300WRePl()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNA_INDICE</td>
+<td>Índice</td>
+<td colspan="2">Índice Econômico</td>
+<td colspan="4">Informa o índice da planilha
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/cn6.html">CN6</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNA_MEDEFE</td>
+<td>Med.Efetuada</td>
+<td colspan="2">Medições Efetuadas</td>
+<td colspan="4">Indica a quantidade de medições já
+efetuadas para a planilha.
+Calculado automaticamente pelo sistema
+pela rotina de medição.
+</td>
+<td>N</td>
+<td>4</td>
+<td>0</td>
+<td>9999                                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNA_PERI</td>
+<td>Period.Reaju</td>
+<td colspan="2">Periodicidade do reajuste</td>
+<td colspan="4">Informa a periodicidade do reajuste.
+</td>
+<td>N</td>
+<td>6</td>
+<td>0</td>
+<td>@E 999999                                    </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/cna_peri.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>CN300WRePl()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNA_PROPAR</td>
+<td>Prox.Parcela</td>
+<td colspan="2">Proxima Parcela</td>
+<td colspan="4">Próxima Parcela
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/011.html">011</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNA_MODORJ</td>
+<td>Modo</td>
+<td colspan="2">Modo do reajuste</td>
+<td colspan="4">Informa o modo do reajuste
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Por Compet�ncia;2=Por Data</td>
+<td>CN300WRePl()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNA_RECMED</td>
+<td>Nr.Últ. Med.</td>
+<td colspan="2">Número Última Medição Rec</td>
+<td colspan="4">Indica o número da última medição
+efetuada
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNA_PRORAT</td>
+<td>Pro Rata</td>
+<td colspan="2">Utiliza Pró Rata</td>
+<td colspan="4">Informa se a planilha utiliza pro rata
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("012")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Contrato(Padr�o);1=Sim;2=N�o</td>
+<td>CN300WRePl()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNA_DTREAJ</td>
+<td>Dt. Reajuste</td>
+<td colspan="2">Data do reajuste</td>
+<td colspan="4">Informa a data de reajuste da planilha
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNA_CRONOG</td>
+<td>Nr Cronogram</td>
+<td colspan="2">Numero do Cronograma</td>
+<td colspan="4">Número do Cronograma.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNA_PROXRJ</td>
+<td>Prox. Reajus</td>
+<td colspan="2">Data do proximo reajuste</td>
+<td colspan="4">Informa a data do próximo reajuste da
+planilha.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNA_ESPEL</td>
+<td>Nr.Plan.Espe</td>
+<td colspan="2">Numero da planilha espelh</td>
+<td colspan="4">Número da planilha espelho.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNA_FLREAJ</td>
+<td>Reajuste</td>
+<td colspan="2">Indica se reajuste</td>
+<td colspan="4">Indica se reajusta.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=Nao</td>
+<td>CN300WReCt()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CNA_DTMXMD</td>
+<td>Data Max Med</td>
+<td colspan="2">Data Maxima para Medicao</td>
+<td colspan="4">Data Máxima para Medição.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNA_CRONCT</td>
+<td>Cron.Contab.</td>
+<td colspan="2">Cod. Cronograma Contabil</td>
+<td colspan="4">Código do cronograma contábil da
+planilha
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNA_VLCOMS</td>
+<td>Vl. Base Com</td>
+<td colspan="2">Valor base da Comissao</td>
+<td colspan="4">Valor comissionado da planilha
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNA_SADIST</td>
+<td>Sld Dis F\F</td>
+<td colspan="2">Saldo a Distribuir</td>
+<td colspan="4">Indica a saldo a medir no cronograma
+financeiro.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNA_SADISC</td>
+<td>Sld Dis CB</td>
+<td colspan="2">Saldo a Distribuir CB</td>
+<td colspan="4">Indica o saldo a distribuir no
+cronograma contábil
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNA_RPGANT</td>
+<td>Pag. Ant.</td>
+<td colspan="2">Pagamento Antecipado</td>
+<td colspan="4">Pagamento Antecipado para contrato
+recorrente.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNA_DESCPL</td>
+<td>Desc Plan</td>
+<td colspan="2">Descrição da Planilha</td>
+<td colspan="4">Descrição da Planilha.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNA_CONDPG</td>
+<td>Cond. Pagto.</td>
+<td colspan="2">Condição de Pagamento</td>
+<td colspan="4">Informe a condição de pagamento
+utilizada na geração do cronograma dessa
+planilha.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SE4")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CNA_NATURE</td>
+<td>Natureza</td>
+<td colspan="2">Natureza da Planilha</td>
+<td colspan="4">Informe uma natureza a ser utilizadas
+nos títulos/pedidos gerados pelas
+medições dessa planilha.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo('SED')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>CNZ</td>
+<td colspan="2">CNA_CONTRA+CNA_REVISA+CNA_NUMERO</td>
+<td colspan="2">CNZ_CONTRA+CNZ_REVISA+CNZ_CODPLA</td>
+</tr>
+<tr>
+<td>SE1</td>
+<td colspan="2">CNA_CONTRA+CNA_REVISA+CNA_NUMERO</td>
+<td colspan="2">E1_MDCONTR+E1_MDREVIS+E1_MDPLANI</td>
+</tr>
+<tr>
+<td>CNV</td>
+<td colspan="2">CNA_CONTRA+CNA_REVISA+CNA_NUMERO</td>
+<td colspan="2">CNV_CONTRA+CNV_REVISA+CNV_PLANIL</td>
+</tr>
+<tr>
+<td>CNB</td>
+<td colspan="2">CNA_CONTRA+CNA_REVISA+CNA_NUMERO</td>
+<td colspan="2">CNB_CONTRA+CNB_REVISA+CNB_NUMERO</td>
+</tr>
+<tr>
+<td>SE2</td>
+<td colspan="2">CNA_CONTRA+CNA_REVISA+CNA_NUMERO</td>
+<td colspan="2">E2_MDCONTR+E2_MDREVIS+E2_MDPLANI</td>
+</tr>
+<tr>
+<td>CNF</td>
+<td colspan="2">CNA_CONTRA+CNA_REVISA+CNA_NUMERO</td>
+<td colspan="2">CNF_CONTRA+CNF_REVISA+CNF_NUMPLA</td>
+</tr>
+<tr>
+<td>CNS</td>
+<td colspan="2">CNA_CONTRA+CNA_REVISA+CNA_NUMERO</td>
+<td colspan="2">CNS_CONTRA+CNS_REVISA+CNS_PLANI</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

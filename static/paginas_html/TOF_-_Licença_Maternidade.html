@@ -1,0 +1,356 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: TOF - Licença Maternidade</title></head>
+<body>
+<font color="orange"><h2 id="TOF">Tabela: TOF - Licença Maternidade</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Licença Maternidade</b></td><td colspan="2"><b>TOF_FILIAL+TOF_NUMFIC+DTOS(TOF_DTULME)</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">TOF_FILIAL+TOF_NUMFIC+DTOS(TOF_DTULME)</td><td>Ficha Medica + Ult. Menstr.</td><td></td></tr>
+<tr><td>2</td><td colspan="2">TOF_FILIAL+DTOS(TOF_DTULME)+TOF_NUMFIC</td><td>Ult. Menstr. + Ficha Medica</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>TOF_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Código da filial da empresa.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TOF_NUMFIC</td>
+<td>Ficha Medica</td>
+<td colspan="2">Ficha Medica</td>
+<td colspan="4">Número da Ficha Médica da paciente que
+esta recebendo licença maternidade.
+Pressione as teclas [F3] para selecionar
+uma Ficha Médica.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>VAL920FIC(M->TOF_NUMFIC) .AND. SitFunFicha(M->TOF_NUMFIC,.t.,.t.,.t.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tm0.html">TM0</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tof_numfic.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TOF_NOMFIC</td>
+<td>Nome</td>
+<td colspan="2">Nome da Funcionaria</td>
+<td colspan="4">Nome do portador da ficha médica.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(TM0->(DBSEEK(xFILIAL("TM0")+M->TOF_NUMFIC)),TM0->TM0_NOMFIC,Space(20))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>IF(TM0->(DBSEEK(xFILIAL("TM0")+ TOF->TOF_NUMFIC)),TM0->TM0_NOMFIC," ")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TOF_DTULME</td>
+<td>Ult. Menstr.</td>
+<td colspan="2">Data Ultima Menstruacao</td>
+<td colspan="4">Data da ultima menstruação.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>MDT920DATA(M->TOF_DTULME,M->TOF_DTPART,M->TOF_DTSLIC,'TOF_DTULME')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TOF_DTPART</td>
+<td>Data Parto</td>
+<td colspan="2">Data Provavel Parto</td>
+<td colspan="4">Data provável do parto.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>MDT920DATA(M->TOF_DTULME,M->TOF_DTPART,M->TOF_DTSLIC,'TOF_DTPART')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TOF_DTSLIC</td>
+<td>Data Saida</td>
+<td colspan="2">Data Saida p/ Licenca Mat</td>
+<td colspan="4">Data de saída da paciente para licença
+maternidade.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>MDT920DATA(M->TOF_DTULME,M->TOF_DTPART,M->TOF_DTSLIC,'TOF_DTSLIC')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TOF_DTRLIC</td>
+<td>Data Retorno</td>
+<td colspan="2">Data Retorno licenca mat.</td>
+<td colspan="4">Data de retorno da licença maternidade.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>99/99/9999                                   </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TOF_USERGI</td>
+<td>Log de Inclu</td>
+<td colspan="2">Log de Inclusão</td>
+<td colspan="4">Indica código criptografado do usuário
+de inclusão do registro.
+</td>
+<td>C</td>
+<td>17</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TOF_CODAFA</td>
+<td>Cód.Ausência</td>
+<td colspan="2">Código da Ausência</td>
+<td colspan="4">Informe o código correspondente a
+ausência gerada pela Linceça
+Maternidade.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>If(!Empty(M->TOF_CODAFA),ExistCPO( 'RCM', M->TOF_CODAFA, 1 ), .T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/mdtrcm.html">MDTRCM</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tof_codafa.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TOF_DESCAF</td>
+<td>Descrição</td>
+<td colspan="2">Descrição da Ausência</td>
+<td colspan="4">Descrição do código correspondente a
+ausência gerada pela Linceça
+Maternidade.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>If(INCLUI, '' , Posicione( 'RCM' ,1,xFilial('RCM')+M->TOF_CODAFA,'RCM_DESCRI'))</td>
+<td>If(INCLUI, '' , Posicione( 'RCM' ,1,xFilial('RCM')+M->TOF_CODAFA,'RCM_DESCRI'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

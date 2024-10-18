@@ -1,0 +1,655 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: VZ5 - Cabeçalho das Ações de Vendas</title></head>
+<body>
+<font color="orange"><h2 id="VZ5">Tabela: VZ5 - Cabeçalho das Ações de Vendas</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Cabeçalho das Ações de Vendas</b></td><td colspan="2"><b>VZ5_FILIAL+VZ5_CODACV</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">VZ5_FILIAL+VZ5_CODACV</td><td>Cod. Acoes</td><td></td></tr>
+<tr><td>2</td><td colspan="2">VZ5_FILIAL+VZ5_CODMAR+VZ5_GRUMOD+VZ5_MODVEI+VZ5_CHASSI</td><td>Marca + Grupo Modelo + Modelo + Chassi</td><td></td></tr>
+<tr><td>3</td><td colspan="2">VZ5_FILIAL+DTOS(VZ5_DATFIN)</td><td>Data Final</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>VZ5_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Código que identifica a filial da
+empre-sa usuária do sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VZ5_CODACV</td>
+<td>Cod. Acoes</td>
+<td colspan="2">Codigo das acos de vendas</td>
+<td colspan="4">Código que individualiza cada uma das
+Ações de venda.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>if(Inclui,GetSXENum("VZ5","VZ5_CODACV"),VZ5->VZ5_CODACV)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VZ5_CODMAR</td>
+<td>Marca</td>
+<td colspan="2">Marca do Veiculo</td>
+<td colspan="4">Código da marca de veículo a qual esta
+ação de venda se refere.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>                                             </td>
+<td>FG_Seek("VE1","M->VZ5_CODMAR",1,.f.) .AND. (CCODMAR := M->VZ5_CODMAR)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ve1.html">VE1</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VZ5_GRUMOD</td>
+<td>Grupo Modelo</td>
+<td colspan="2">Grupo de Modelo</td>
+<td colspan="4">Informe o Grupo do Modelo   do Veiculo.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>FS_VERACAO("G") .and. FS_V290PES("1") .and. FG_Seek("VVR","M->VZ5_CODMAR+M->VZ5_GRUMOD",2,.f.,"VZ5_DESGRU","VVR_DESCRI")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/vvr.html">VVR</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VZ5_DESGRU</td>
+<td>Desc Grupo</td>
+<td colspan="2">Descricao do Grupo</td>
+<td colspan="4">Informe aqui a descricao do grupo
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>if(!Inclui,Posicione("VVR",2,xFilial("VVR")+VZ5->VZ5_CODMAR+VZ5->VZ5_GRUMOD,"VVR_DESCRI"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("VVR",2,xFilial("VVR")+VZ5->VZ5_CODMAR+VZ5->VZ5_GRUMOD,"VVR_DESCRI")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VZ5_MODVEI</td>
+<td>Modelo</td>
+<td colspan="2">Modelo do Veículo</td>
+<td colspan="4">Código do modelo de veículo a qual esta
+ação de venda se refere.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>                                             </td>
+<td>FS_V290PES("2") .and. FG_Seek("VV2","M->VZ5_CODMAR+M->VZ5_MODVEI",1,.f.,"VZ5_DESMOD","VV2_DESMOD") .AND. FS_VERACAO("M")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/vv2vz5.html">VV2VZ5</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VZ5_DESMOD</td>
+<td>Desc Modelo</td>
+<td colspan="2">Descricao do modelo</td>
+<td colspan="4">Descrição do modelo de veículo a qual
+esta ação de venda se refere.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>if(!Inclui,Posicione("VV2",1,xFilial("VV2")+VZ5->VZ5_CODMAR+VZ5->VZ5_MODVEI,"VV2_DESMOD"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("VV2",1,XFILIAL("VV2")+VZ5->VZ5_CODMAR+VZ5->VZ5_MODVEI,"VV2_DESMOD")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VZ5_CHASSI</td>
+<td>Chassi</td>
+<td colspan="2">Chassi</td>
+<td colspan="4">Informe o Chassi do veículo a qual esta
+ação de  venda se refere.
+</td>
+<td>C</td>
+<td>25</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>FG_POSVEI("M->VZ5_CHASSI",) .and. FS_V290PES("3") .and. FS_VERACAO("C")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/v1z.html">V1Z</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VZ5_ESTVEI</td>
+<td>Estado Veic</td>
+<td colspan="2">Estado do Veiculo</td>
+<td colspan="4">Informe Estado do Veiculo
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("012")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Novos;1=Usados;2=Ambos</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VZ5_OPCION</td>
+<td>Opcionais</td>
+<td colspan="2">Opcionais do modelo</td>
+<td colspan="4">Informe os opcionais do modelo de
+veículo a qual esta ação de vendas se
+refere.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@R !!!/!!!/!!!/!!!/!!!                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>Empty(M->VZ5_CHASSI)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VZ5_AUTOR</td>
+<td>Autor</td>
+<td colspan="2">Autor da campanha</td>
+<td colspan="4">Informe de que origem foi criada esta
+ação de vendas: Montadora ou
+Concessionária.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("01")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>0=Montadora;1=Concessionaria</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VZ5_FABMOD</td>
+<td>Ano Fab/Mod.</td>
+<td colspan="2">Ano Fabricacao / Modelo</td>
+<td colspan="4">Informe o Ano de fabricação/ modelo dos
+veículos a qual esta ação de vendas se
+refere.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@R 9999/9999                                 </td>
+<td>NaoVazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>Empty(M->VZ5_CHASSI)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VZ5_BONFAB</td>
+<td>Bonus Fab.</td>
+<td colspan="2">Bonus Fabrica</td>
+<td colspan="4">Informe aqui o valor de bônus concedido
+pela Fabrica
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VZ5_BONREG</td>
+<td>Bonus Reg.</td>
+<td colspan="2">Bonus Regional</td>
+<td colspan="4">Informe aqui o valor de bônus concedido
+para âmbito regional pelo autor desta
+ação de vendas.
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VZ5_BONCON</td>
+<td>Bonus Conc.</td>
+<td colspan="2">Bonus concessionaria</td>
+<td colspan="4">Informe aqui o valor de bônus concedido
+pela concessionária para esta ação de
+vendas.
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VZ5_PERGER</td>
+<td>% Gerente</td>
+<td colspan="2">Percentual do gerente</td>
+<td colspan="4">O percentual de gerente a ser agregado
+ou descontado do valor do veículo, de
+acordo com a Tabela de Preços.
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>@E 999.99                                    </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VZ5_PERDES</td>
+<td>% Desconto</td>
+<td colspan="2">Percentual de desconto</td>
+<td colspan="4">O percentual de desconto a ser calculado
+do valor do veículo, de acordo com a
+Tabela de Preços.
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>@E 999.99                                    </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VZ5_DATINI</td>
+<td>Data Inicial</td>
+<td colspan="2">Data Inicial</td>
+<td colspan="4">Informe a data inicial a ser considerada
+pela filtragem dos veículos a serem
+contemplados por esta ação de vendas.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VZ5_DATFIN</td>
+<td>Data Final</td>
+<td colspan="2">Data Final</td>
+<td colspan="4">Informe a data final a ser considerada
+pela filtragem dos veículos a serem
+contemplados por esta ação de vendas.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>M->VZ5_DATFIN >= M->VZ5_DATINI</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VZ5_DATVER</td>
+<td>Dt Verific</td>
+<td colspan="2">Dt da verificacao da acao</td>
+<td colspan="4">Selecione se as datas inicial e final
+considerarão a data de venda ou a compra
+do veículo quando realizar a filtragem.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("01")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=venda;1=compra</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

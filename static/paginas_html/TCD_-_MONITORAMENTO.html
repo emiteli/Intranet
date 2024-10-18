@@ -1,0 +1,740 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: TCD - MONITORAMENTO</title></head>
+<body>
+<font color="orange"><h2 id="TCD">Tabela: TCD - MONITORAMENTO</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>MONITORAMENTO</b></td><td colspan="2"><b>TCD_FILIAL+TCD_CODIGO+TCD_GRUPO+TCD_FONTE</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">TCD_FILIAL+TCD_CODIGO+TCD_GRUPO+TCD_FONTE</td><td>Codigo + Grupo + Fonte</td><td></td></tr>
+<tr><td>2</td><td colspan="2">TCD_FILIAL+TCD_GRUPO+TCD_FONTE</td><td>Grupo + Fonte</td><td></td></tr>
+<tr><td>3</td><td colspan="2">TCD_FILIAL+TCD_CODIGO+DTOS(TCD_DTCAD)+TCD_FONTE+TCD_ASPECT+TCD_IMPACT</td><td>Codigo + Dt. Cadastro + Fonte + Aspecto + Impacto</td><td></td></tr>
+<tr><td>4</td><td colspan="2">TCD_FILIAL+TCD_STATUS+DTOS(TCD_DTINI)+TCD_HRINI</td><td>Status + Data Início + Hora inicio</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>TCD_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Código da filial da empresa.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TCD_CODIGO</td>
+<td>Codigo</td>
+<td colspan="2">Codigo do Monitoramento</td>
+<td colspan="4">Código do Monitoramento.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistChav("TCD") .And. FreeForUse("TCD",M->TCD_CODIGO)</td>
+<td>IF(INCLUI,GETSXENUM('TCD','TCD_CODIGO'),TCD->TCD_CODIGO)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TCD_DTCAD</td>
+<td>Dt. Cadastro</td>
+<td colspan="2">Data do Cadastro</td>
+<td colspan="4"></td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>99/99/9999                                   </td>
+<td></td>
+<td>If(Inclui,DDATABASE,TCD->TCD_DTCAD)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TCD_DESCRI</td>
+<td>Descricao</td>
+<td colspan="2">Desc. do Monitoramento</td>
+<td colspan="4">Informe a descrição do monitoramento.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TCD_FONTE</td>
+<td>Fonte</td>
+<td colspan="2">Cod. da Fonte de Medicao</td>
+<td colspan="4">Informe o código da fonte de medição.
+Pressione a tecla [F3] para selecionar
+uma fonte de medição.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("TCB") .And. SG390Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tcb.html">TCB</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tcd_fonte.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>M->TCD_STATUS == '1'</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TCD_DESFON</td>
+<td>Descricao</td>
+<td colspan="2">Desc. da Fonte de Medicao</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>TCB->(VDISP(TCD->TCD_FONTE,"TCB_DESCRI"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>IF(TCB->(DBSEEK(XFILIAL("TCB")+TCD->TCD_FONTE)),TCB->TCB_DESCRI,"")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TCD_STATUS</td>
+<td>Status</td>
+<td colspan="2">Status do Monitoramento</td>
+<td colspan="4">Status em que se encontra o
+monitoramento. 1=Iniciado;2=Em
+Andamento;3=Finalizado;4=Cancelado
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("1234")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=Iniciado;2=Em Andamento;3=Finalizado;4=Cancelado</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TCD_GRUPO</td>
+<td>Grupo</td>
+<td colspan="2">Codigo do Grupo Gerador</td>
+<td colspan="4">Informe o código do grupo gerador.
+Pressione a tecla [F3] para selecionar
+um grupo gerador.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("TCA") .And. SG390Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tca.html">TCA</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tcd_grupo.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>M->TCD_STATUS == '1'</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TCD_DESGRP</td>
+<td>Desc. Grupo</td>
+<td colspan="2">Descricao do Grupo</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>TCA->(VDISP(TCD->TCD_GRUPO,"TCA_DESCRI"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>IF(TCA->(DBSEEK(XFILIAL("TCA")+TCD->TCD_GRUPO)),TCA->TCA_DESCRI,"")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TCD_ASPECT</td>
+<td>Aspecto</td>
+<td colspan="2">Codigo do Aspecto</td>
+<td colspan="4">Informe o código do aspecto relacionado
+ao monitoramento. Pressione a tecla [F3]
+para selecionar um Aspecto.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("TA4")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ta4.html">TA4</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tcd_aspect.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>M->TCD_FLAG $ '13'</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TCD_DESASP</td>
+<td>Descricao</td>
+<td colspan="2">Descricao do Aspecto</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>TA4->(VDISP(TCD->TCD_ASPECT,"TA4_DESCRI"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>IF(TA4->(DBSEEK(XFILIAL("TA4")+TCD->TCD_ASPECT)),TA4->TA4_DESCRI,"")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TCD_IMPACT</td>
+<td>Impacto</td>
+<td colspan="2">Codigo do Impacto</td>
+<td colspan="4">Informe o código do impacto relacionado
+com o monitoramento. Pressione a tecla
+[F3] para selecionar um impacto.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("TAE")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tae.html">TAE</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tcd_impact.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>M->TCD_FLAG $ '13'</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TCD_DESIMP</td>
+<td>Descricao</td>
+<td colspan="2">Descricao do Impacto</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>TAE->(VDISP(TCD->TCD_IMPACT,"TAE_DESCRI"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>IF(TAE->(DBSEEK(XFILIAL("TAE")+TCD->TCD_IMPACT)),TAE->TAE_DESCRI,"")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TCD_OBSERV</td>
+<td>Observacao</td>
+<td colspan="2">Observacao da Medicao</td>
+<td colspan="4">Informe uma observação / descrição
+detalhada do monitoramento.
+</td>
+<td>M</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TCD_DTINI</td>
+<td>Data Início</td>
+<td colspan="2">Data Início Monint.</td>
+<td colspan="4">Data em que as análises serão iniciadas.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>99/99/9999                                   </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>M->TCD_STATUS == "1"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TCD_HRINI</td>
+<td>Hora inicio</td>
+<td colspan="2">Hora Inicio Monit.</td>
+<td colspan="4">Hora em que as análises serão iniciadas.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td>NGVALHORA(M->TCD_HRINI,.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>M->TCD_STATUS == "1"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TCD_FLAG</td>
+<td>Módulo</td>
+<td colspan="2">Módulo de Criação</td>
+<td colspan="4">Indicativo se o registro é utilizado
+pelo módulo de Medicina e Segurança do
+Trabalho, Gestão Ambiental ou ambos.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>MdtValTip( M->TCD_FLAG , 'TCD' )</td>
+<td>If(nModulo==35,'2',If(nModulo==56,'1','3'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=SGA;2=MDT;3=Ambos</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TCD_TIPO</td>
+<td>Tipo</td>
+<td colspan="2">Tipo Monitoramento</td>
+<td colspan="4">Indica o tipo do monitoramento:
+1=Ambiental;
+2=QSMS;
+3=SMS;
+4=SSO.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>If(!Empty(M->TCD_TIPO),Pertence('1234'),.T.)</td>
+<td>If(nModulo == 56,'1','4')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Ambiental;2=QSMS;3=SMS;4=SSO</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TCD_CODPER</td>
+<td>Perigo</td>
+<td colspan="2">Código do Perigo</td>
+<td colspan="4">Código do perigo vinculado ao
+monitoramento.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo( 'TG1' , M->TCD_CODPER )</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tg1.html">TG1</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tcd_codper.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>M->TCD_FLAG $ '23'</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TCD_NOMPER</td>
+<td>Nome Perigo</td>
+<td colspan="2">Nome do Perigo</td>
+<td colspan="4">Nome do perigo vinculado ao
+monitoramento.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@S30                                         </td>
+<td></td>
+<td>TG1->( vDisp( TCD->TCD_CODPER , 'TG1_DESCRI' ) )</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>IF( TG1->( dbSeek( xFilial( 'TG1' ) + TCD->TCD_CODPER ) ) , TG1->TG1_DESCRI ,'')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TCD_CODDAN</td>
+<td>Dano</td>
+<td colspan="2">Código do Dano</td>
+<td colspan="4">Código do dano vinculado ao
+monitoramento.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo( 'TG8' , M->TCD_CODDAN )</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tg8.html">TG8</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tcd_coddan.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td>M->TCD_FLAG $ '23'</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TCD_DESDAN</td>
+<td>Nome Dano</td>
+<td colspan="2">Nome do Dano</td>
+<td colspan="4">Descrição do dano vinculado ao
+monitoramento.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@S30                                         </td>
+<td></td>
+<td>TG8->( vDisp( TCD->TCD_CODDAN , 'TG8_DESCRI' ) )</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>IF( TG8->( dbSeek( xFilial( 'TG8' ) + TCD->TCD_CODDAN ) ) , TG8->TG8_DESCRI ,'')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>TGI</td>
+<td colspan="2">TCD_CODIGO</td>
+<td colspan="2">TGI_CODMON</td>
+</tr>
+<tr>
+<td>TCH</td>
+<td colspan="2">TCD_CODIGO</td>
+<td colspan="2">TCH_MONIT</td>
+</tr>
+<tr>
+<td>TCF</td>
+<td colspan="2">TCD_CODIGO</td>
+<td colspan="2">TCF_CODMON</td>
+</tr>
+<tr>
+<td>TGM</td>
+<td colspan="2">TCD_CODIGO</td>
+<td colspan="2">TGM_CODMON</td>
+</tr>
+<tr>
+<td>TCE</td>
+<td colspan="2">TCD_CODIGO</td>
+<td colspan="2">TCE_CODMON</td>
+</tr>
+<tr>
+<td>TCG</td>
+<td colspan="2">TCD_CODIGO</td>
+<td colspan="2">TCG_CODMON</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

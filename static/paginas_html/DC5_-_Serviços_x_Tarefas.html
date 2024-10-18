@@ -1,0 +1,1607 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: DC5 - Serviços x Tarefas</title></head>
+<body>
+<font color="orange"><h2 id="DC5">Tabela: DC5 - Serviços x Tarefas</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Serviços x Tarefas</b></td><td colspan="2"><b>DC5_FILIAL+DC5_SERVIC+DC5_ORDEM</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">DC5_FILIAL+DC5_SERVIC+DC5_ORDEM</td><td>Cod. Servico + Ordem</td><td></td></tr>
+<tr><td>2</td><td colspan="2">DC5_FILIAL+DC5_TAREFA</td><td>Cod. Tarefa</td><td></td></tr>
+<tr><td>3</td><td colspan="2">DC5_FILIAL+DC5_FUNEXE</td><td>Funcao Exec</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>DC5_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Filial do sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC5_SERVIC</td>
+<td>Cod. Servico</td>
+<td colspan="2">Cod. Servico</td>
+<td colspan="4">Código do Servico que será responsável
+pela execuçao de uma ou mais tarefas.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SX5","L4"+M->DC5_SERVIC) .And. ExistChav("DC5",M->DC5_SERVIC)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/l4.html">L4</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dc5_servic.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/012.html">012</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DC5_DESSER</td>
+<td>Desc Servico</td>
+<td colspan="2">Descricao do servico</td>
+<td colspan="4">Descriç„o do Serviço que será executado
+e que irá disparar as tarefas.
+</td>
+<td>C</td>
+<td>55</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui,"",Tabela("L4",DC5->DC5_SERVIC,.F.))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Tabela("L4",DC5->DC5_SERVIC,.F.)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC5_TIPO</td>
+<td>Tipo Servico</td>
+<td colspan="2">Tipo de Servico</td>
+<td colspan="4">Identifica se o servico e' de Entrada,
+Saida ou Movimentação Interna.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('123')</td>
+<td>'1'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Entrada;2=Saida;3=Mov.Interna</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC5_ORDEM</td>
+<td>Ordem</td>
+<td colspan="2">Ordem</td>
+<td colspan="4">Sequencia em que as tarefas ser„o
+executadas dentro do serviço.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DC5_TAREFA</td>
+<td>Cod. Tarefa</td>
+<td colspan="2">Cod. Tarefa</td>
+<td colspan="4">Código de uma Tarefa já cadastrada que
+será responsável pela execução de uma ou
+mais Atividades.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("DC6")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dc6.html">DC6</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dc5_tarefa.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DC5_DESTAR</td>
+<td>Desc Tarefa</td>
+<td colspan="2">Descricao da Tarefa</td>
+<td colspan="4">Descriç„o da Tarefa que será executada
+eque irá disparar as Atividades.
+</td>
+<td>C</td>
+<td>55</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>StaticCall(WMSA070,GetDesField,A,B)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Tabela("L2",DC5->DC5_TAREFA,.F.)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC5_SERTMS</td>
+<td>Serv.Transp.</td>
+<td colspan="2">Servico de Transporte</td>
+<td colspan="4">Serviço de Transporte.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. TMSValField("M->DC5_SERTMS",.T.,"DC5_DESSVT")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dlc.html">DLC</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dc5_sertms.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC5_OPERAC</td>
+<td>Operacao</td>
+<td colspan="2">Operacao</td>
+<td colspan="4">Indica a operação realizada pelo
+serviço.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SX5","LY"+M->DC5_OPERAC) .And. ExistChav("DC5",M->DC5_OPERAC)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ly.html">LY</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dc5_operac.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>StaticCall(WMSA070,WhenField,A,B)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC5_DESSVT</td>
+<td>Desc.Sv.Tran</td>
+<td colspan="2">Desc.Servico Transporte</td>
+<td colspan="4">Descricao do Servico de Transporte
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!Inclui,TMSValField("DC5->DC5_SERTMS",.F.,"DC5_DESSVT"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC5_DESOPE</td>
+<td>Des Operacao</td>
+<td colspan="2">Descricao da Operacao</td>
+<td colspan="4">Descrição da operação.
+</td>
+<td>C</td>
+<td>55</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>StaticCall(WMSA070,GetDesField,A,B)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Tabela("LY",DC5->DC5_OPERAC,.F.)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC5_TIPTRA</td>
+<td>Tipo Transp.</td>
+<td colspan="2">Tipo Transporte</td>
+<td colspan="4">Tipo de Transporte.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. TMSValField("M->DC5_TIPTRA",.T.,"DC5_DESTPT")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dlc.html">DLC</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dc5_tiptra.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC5_DESTPT</td>
+<td>Desc.Tp.Tran</td>
+<td colspan="2">Desc.Tipo Transporte</td>
+<td colspan="4">Descrição do tipo de transporte
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!Inclui,TMSValField("DC5->DC5_TIPTRA",.F.,"DC5_DESTPT"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC5_CATSER</td>
+<td>Categ.Servic</td>
+<td colspan="2">Categoria do Serviço</td>
+<td colspan="4">Informe a Categoria do Serviço. O
+Serviço Operacional é utilizado como
+gerenciador das operações relacionadas
+ao transporte, o Serviço de Negociação é
+relacionado diretamente às informações
+de preço do frete.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/dc5_catser.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Negocia��o;2=Operacional</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC5_DOCTMS</td>
+<td>Docto.Transp</td>
+<td colspan="2">Documento de Transporte</td>
+<td colspan="4">Documento.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. TMSValField("M->DC5_DOCTMS",.T.,"DC5_DESDOC")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dlc.html">DLC</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>M->DC5_CATSER == "1"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC5_DESDOC</td>
+<td>Desc.Docto.</td>
+<td colspan="2">Des.Docto.de Transporte</td>
+<td colspan="4">Descricao do documento de transporte
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!Inclui,TMSValField("DC5->DC5_DOCTMS",.F.,"DC5_DESDOC"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC5_SEGPER</td>
+<td>Seg.Percurso</td>
+<td colspan="2">Segundo Percurso</td>
+<td colspan="4">Informe se este serviço é de segundo
+percurso. Chamamos de segundo percurso
+quando a transportadora não faz todo o
+trajeto da rota. Para isso é utilizado
+uma transportadora parceira que faz
+parte do percurso.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td>M->DC5_CATSER == "1"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC5_FUNEXE</td>
+<td>Funcao Exec</td>
+<td colspan="2">Funcao a ser executada</td>
+<td colspan="4">Função que será disparada durante a
+execução desta Tarefa.
+Se este campo não for preenchido o
+sistemna ira simplesmente registrar as
+Atividades anexadas a esta Tarefa.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/l6.html">L6</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dc5_funexe.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC5_TPSELE</td>
+<td>Tipo Seleção</td>
+<td colspan="2">Tipo de Seleção</td>
+<td colspan="4">Utilizado nas Tarefas de Apanhe.
+1-NORMAL: O Apanhe e' feito por ordem de
+Cliente ou Carga/Unitizador + Produto;
+2-INVERSA: O Apanhe e' feito por Ordem
+de Produto + Cliente ou
+Carga/Unitizador.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('12')</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Normal;2=Inversa</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC5_SEROPE</td>
+<td>Serv.Operac.</td>
+<td colspan="2">Serviço Operacional</td>
+<td colspan="4">Informe um serviço operacional. Através
+do serviço operacional é possível
+gerenciar as operações (tarefas)
+relacionados aos movimentos de
+transporte dentro do armazém e toda a
+atividade que ocorre durante a viagem.
+O preenchimento deste campo é
+obrigatório para serviços de categoria
+negociação.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dlk.html">DLK</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dc5_serope.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>M->DC5_CATSER == "1"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/012.html">012</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC5_DSEOPE</td>
+<td>Desc.Serv.Op</td>
+<td colspan="2">Desc.Serviço Operacional</td>
+<td colspan="4">Descrição do servico operacional
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",Tabela("L4",DC5->DC5_SEROPE,.F.))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC5_TABSEG</td>
+<td>Tab.Seguro</td>
+<td colspan="2">Tabela de Seguro</td>
+<td colspan="4">Informe a Tabela de Seguro relacionada a
+este serviço. É através deste campo que
+iremos relacionar a tabela que
+utilizaremos para determinar os valores
+do seguro para este serviço. É permitido
+preencher este campo apenas para
+serviços de categoria negociação.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/du4.html">DU4</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>M->DC5_CATSER == "1"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC5_TPTSEG</td>
+<td>Tip.Tab.Seg</td>
+<td colspan="2">Tipo Tabela de Seguro</td>
+<td colspan="4">Informe o Tipo da Tabela de Seguro
+relacionada a este serviço. Podemos
+definir o tipo da tabela
+como Rodoviário ou Aéreo. É permitido
+preencher este campo apenas para
+serviços de categoria negociação.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>M->DC5_CATSER == "1"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC5_DESC1</td>
+<td>1o.%Desc.Cot</td>
+<td colspan="2">1o.% Desc.Cotacao Frete</td>
+<td colspan="4">1o percentual do desconto da cotação do
+frete.
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>@E 999.99                                    </td>
+<td>Positivo() .And. M->DC5_DESC1 < 100</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>M->DC5_CATSER == "1"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC5_DESC2</td>
+<td>2o.%Desc.Cot</td>
+<td colspan="2">2o.% Desc.Cotacao Frete</td>
+<td colspan="4">2o percentual de desconto da cotação do
+frete.
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>@E 999.99                                    </td>
+<td>Positivo() .And. M->DC5_DESC2 < 100</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>M->DC5_CATSER == "1"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC5_DESC3</td>
+<td>3o.%Desc.Cot</td>
+<td colspan="2">3o.% Desc.Cotacao Frete</td>
+<td colspan="4">3o percentual de desconto da cotação do
+frete.
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>@E 999.99                                    </td>
+<td>Positivo() .And. M->DC5_DESC3 < 100</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>M->DC5_CATSER == "1"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC5_DESC4</td>
+<td>4o.%Desc.Cot</td>
+<td colspan="2">4o.% Desc.Cotacao Frete</td>
+<td colspan="4">4o percentual de desconto da cotação do
+frete.
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>@E 999.99                                    </td>
+<td>Positivo() .And. M->DC5_DESC4 < 100</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>M->DC5_CATSER == "1"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC5_TIPRAT</td>
+<td>Tipo Rateio</td>
+<td colspan="2">Tipo Rateio</td>
+<td colspan="4">Define o tipo de rateio utilizado no
+cálculo da cotação de frete através do
+agendamento.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("01234")</td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>0=Nao tem;1=Peso mercadoria;2=Valor mercadoria;3=Qtde Volumes;4=Qtde Doctos</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC5_TPEXEC</td>
+<td>Tipo Exec.</td>
+<td colspan="2">Tipo de Execução</td>
+<td colspan="4">Define se a execução de serviços será
+automática ou se deverá ser feita
+manualmente via "execução de serviços".
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('12')</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Manual;2=Automatico</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC5_UTSUBS</td>
+<td>Uti.SubSerie</td>
+<td colspan="2">Utiliza SubSérie</td>
+<td colspan="4">Utiliza SUBSÉRIE no conhecimento.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC5_UTISDC</td>
+<td>Série Dc.Ori</td>
+<td colspan="2">Utili. Série Dc Original</td>
+<td colspan="4">Utiliza SÉRIE do documento CTRC
+original.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>9                                            </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC5_NATURE</td>
+<td>Natureza</td>
+<td colspan="2">Codigo da Natureza</td>
+<td colspan="4">Efetua gravação de uma nova natureza,
+desconsiderando o parametro MV_1DUPNAT
+Porem deve-se configurar o parametro,
+para sua execução.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. ExistCpo("SED")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC5_BLQLOT</td>
+<td>Bloq. Saldo</td>
+<td colspan="2">Bloqueia Saldo?</td>
+<td colspan="4">Este campo se aplica apenas a serviços
+de endereçamento. Quando estiver como
+sim ao efetuar o endereçamento, o saldo
+de estoque ficará bloqueado impedindo o
+seu uso até o desbloqueio do mesmo
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC5_COFEXP</td>
+<td>Conf. Exped.</td>
+<td colspan="2">Utiliza Conf. Expedição?</td>
+<td colspan="4">Indica a utilização da conferência de
+expedição sem convocação, que deve ser
+executada posteriormente a separação.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td>StaticCall(WMSA070,WhenField,A,B)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC5_LIBPED</td>
+<td>Lib. Pedido</td>
+<td colspan="2">Liberação de Pedido</td>
+<td colspan="4">Indica em que momento deve liberar o
+pedido de venda.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("123456")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Tarefa Separacao;2=Tarefa Conferencia;3=Conferencia Expedicao;4=Liberacao Manual;5=Romaneio Embarque;6=Montagem Volume</td>
+<td>StaticCall(WMSA070,WhenField,A,B)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC5_BLQSRV</td>
+<td>Blq Servico</td>
+<td colspan="2">Bloqueia Serviço</td>
+<td colspan="4">Indica se bloqueia serviço.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC5_MNTVOL</td>
+<td>Mnt. Volume</td>
+<td colspan="2">Mnt. Volume</td>
+<td colspan="4">Indica se realiza a montagem de volume.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("012")</td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Nao Utiliza;1=Durante a Separacao;2=Posterior a Separacao</td>
+<td></td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC5_UPDEND</td>
+<td>Alt.End.Des.</td>
+<td colspan="2">Altera Endereço Destino</td>
+<td colspan="4">Indica se permite a alteração do
+endereço de destino.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC5_UPDPRD</td>
+<td>Alt.Ati.Conv</td>
+<td colspan="2">Altera Atividade Convocad</td>
+<td colspan="4">Indica se permite alterar o produto e/ou
+o lote na convocação.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("123")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=N�o permite;2=Permite sem confirma��o;3=Permite e solicita confirma��o</td>
+<td></td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC5_DISSEP</td>
+<td>Dis Sep</td>
+<td colspan="2">Distribuição Separação</td>
+<td colspan="4">Indica se realiza a distribuição de
+separação.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("0123")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td>StaticCall(WMSA070,WhenField,A,B)</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC5_MNTEXC</td>
+<td>Mt. Vol. Ex.</td>
+<td colspan="2">Montagem Volume Exclusiva</td>
+<td colspan="4">Indica se a montagem de volume é
+exclusiva por carga, por pedido ou por
+loja/cliente.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("0123")</td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=N�o;1=Por Carga/Pedido;2=Por Pedido;3=Por Loja/Cliente</td>
+<td>StaticCall(WMSA070,WhenField,A,B)</td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC5_BXESTO</td>
+<td>Bx. Est. Req</td>
+<td colspan="2">Baixa Estoque Requisição?</td>
+<td colspan="4">Indica se realiza a baixa de estoque nas
+ordens de serviço de requisição.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC5_IMPETI</td>
+<td>Sol. Imp. Et</td>
+<td colspan="2">Solicita Imp. Etiqueta?</td>
+<td colspan="4">Indica se solicita a impressão de
+etiquetas ao finalizar a montagem do
+volume.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td>StaticCall(WMSA070,WhenField,A,B)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC5_MLTATI</td>
+<td>Mult. Ativ.</td>
+<td colspan="2">Mult. Ativ.</td>
+<td colspan="4">Indica se permite multiplas atividades.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Nao Utiliza;1=Autom�tico/Norma;2=Pergunta</td>
+<td></td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>SS5</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">S5_SERVENT</td>
+</tr>
+<tr>
+<td>SS5</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">S5_SERVINT</td>
+</tr>
+<tr>
+<td>SS5</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">S5_SERVSAI</td>
+</tr>
+<tr>
+<td>SS5</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">S5_SERVEMB</td>
+</tr>
+<tr>
+<td>DA8</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">DA8_SERVIC</td>
+</tr>
+<tr>
+<td>D0Q</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">D0Q_SERVIC</td>
+</tr>
+<tr>
+<td>DF1</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">DF1_SRVCOL</td>
+</tr>
+<tr>
+<td>AAO</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">AAO_SERVIC</td>
+</tr>
+<tr>
+<td>DC3</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">DC3_REABAS</td>
+</tr>
+<tr>
+<td>DCF</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">DCF_SERVIC</td>
+</tr>
+<tr>
+<td>DLW</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">DLW_SERVIC</td>
+</tr>
+<tr>
+<td>SDB</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">DB_SERVIC</td>
+</tr>
+<tr>
+<td>DE5</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">DE5_SERVIC</td>
+</tr>
+<tr>
+<td>SD1</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">D1_SERVIC</td>
+</tr>
+<tr>
+<td>DCQ</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">DCQ_SERVIC</td>
+</tr>
+<tr>
+<td>SB5</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">B5_SERECD</td>
+</tr>
+<tr>
+<td>SB5</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">B5_SERSCD</td>
+</tr>
+<tr>
+<td>SB5</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">B5_SERVTDV</td>
+</tr>
+<tr>
+<td>SD7</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">D7_SERVIC</td>
+</tr>
+<tr>
+<td>DDC</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">DDC_SRVCOL</td>
+</tr>
+<tr>
+<td>DT5</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">DT5_SERVIC</td>
+</tr>
+<tr>
+<td>SC6</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">C6_SERVIC</td>
+</tr>
+<tr>
+<td>SC9</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">C9_SERVIC</td>
+</tr>
+<tr>
+<td>SD3</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">D3_SERVIC</td>
+</tr>
+<tr>
+<td>SB5</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">B5_SERVENT</td>
+</tr>
+<tr>
+<td>SB5</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">B5_SERVINT</td>
+</tr>
+<tr>
+<td>SB5</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">B5_SERVSAI</td>
+</tr>
+<tr>
+<td>SB5</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">B5_SERVEMB</td>
+</tr>
+<tr>
+<td>D1A</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">D1A_SEREPR</td>
+</tr>
+<tr>
+<td>SB5</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">B5_SERVREQ</td>
+</tr>
+<tr>
+<td>SB5</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">B5_SERVDEV</td>
+</tr>
+<tr>
+<td>DUA</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">DUA_SERVIC</td>
+</tr>
+<tr>
+<td>DDA</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">DDA_SERVIC</td>
+</tr>
+<tr>
+<td>DDA</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">DDA_SRVCOL</td>
+</tr>
+<tr>
+<td>DWE</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">DWE_SERVIC</td>
+</tr>
+<tr>
+<td>SD2</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">D2_SERVIC</td>
+</tr>
+<tr>
+<td>DCG</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">DCG_SERVIC</td>
+</tr>
+<tr>
+<td>DC5</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">DC5_SEROPE</td>
+</tr>
+<tr>
+<td>D12</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">D12_SERVIC</td>
+</tr>
+<tr>
+<td>DT4</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">DT4_SERVIC</td>
+</tr>
+<tr>
+<td>D0R</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">D0R_SERVIC</td>
+</tr>
+<tr>
+<td>DUX</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">DUX_SERVIC</td>
+</tr>
+<tr>
+<td>DUX</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">DUX_SRVCOL</td>
+</tr>
+<tr>
+<td>DW7</td>
+<td colspan="2">DC5_SERVIC</td>
+<td colspan="2">DW7_SERVIC</td>
+</tr>
+<tr>
+<td>DW7</td>
+<td colspan="2">DC5_FILIAL+DC5_SERVIC</td>
+<td colspan="2">DW7_FILIAL+DW7_SERVIC</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

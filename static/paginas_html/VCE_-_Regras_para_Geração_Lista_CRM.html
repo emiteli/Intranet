@@ -1,0 +1,1240 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: VCE - Regras para Geração Lista CRM</title></head>
+<body>
+<font color="orange"><h2 id="VCE">Tabela: VCE - Regras para Geração Lista CRM</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Regras para Geração Lista CRM</b></td><td colspan="2"><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">VCE_FILIAL+VCE_LISTA</td><td>Codigo</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>VCE_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Código da filial da empresa.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VCE_LISTA</td>
+<td>Codigo</td>
+<td colspan="2">Codigo da Lista</td>
+<td colspan="4">Código da Lista.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td>naovazio()</td>
+<td>IIF(INCLUI,GETSXENUM("VCE","VCE_LISTA"),VCE->VCE_LISTA)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VCE_DESC</td>
+<td>Nome Lista</td>
+<td colspan="2">Nome da Lista</td>
+<td colspan="4">Nome da lista.
+Exemplo: Prospects.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@x                                           </td>
+<td>naovazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VCE_DATA</td>
+<td>Data</td>
+<td colspan="2">Data da geracao da Lista</td>
+<td colspan="4">Data de execuss„o da lista.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>naovazio() .AND. M->VCE_DATA >= dDatabase</td>
+<td>dDataBase</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VCE_TIPO</td>
+<td>Tipo Lista</td>
+<td colspan="2">Tipo da Lista</td>
+<td colspan="4">Tipo de lista a ser gerada.
+1- Marketing.
+2- Cobrança.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>!                                            </td>
+<td>Pertence("12")</td>
+<td>IIF(INCLUI,"1","")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Marketing;2=Cobranca</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VCE_FORMA</td>
+<td>Tipo Contato</td>
+<td colspan="2">Tipo de Marketing</td>
+<td colspan="4">Modo de interaç„o  com os contatos.
+1 - Voz.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>9                                            </td>
+<td>Pertence("1")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Voz</td>
+<td></td>
+<td>Tk061DescForma(VCE->VCE_FORMA)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VCE_TELE</td>
+<td>Rotina</td>
+<td colspan="2">Rotina de Atendimento</td>
+<td colspan="4">Rotina de atendimento.
+1- Televendas.
+2- TeleMarketing.
+3- TeleCobrança.
+4- Ambos.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>9                                            </td>
+<td>Pertence("1234")</td>
+<td>IIF(INCLUI,"4",VCE->VCE_TELE)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=TeleMarketing;2=TeleVendas;3=TeleCobranca;4=Todos</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VCE_OPERAD</td>
+<td>Operador</td>
+<td colspan="2">Operador</td>
+<td colspan="4">Operador para execução da lista.
+Pressione [F3] para selecionar o
+operador que ira realizar os contatos.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td>ExistCpo("SU7",M->VCE_OPERAD)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/fu7.html">FU7</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VCE_NOPERA</td>
+<td>Nome</td>
+<td colspan="2">Nome do Operador</td>
+<td colspan="4">Descriç„o do Operador.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIf(!INCLUI,Posicione("SU7",1,xFilial("SU7")+VCE->VCE_OPERAD,"U7_NOME"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("SU7",1,xFilial("SU7")+VCE->VCE_OPERAD,"U7_NOME")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VCE_CONFIG</td>
+<td>Configuracao</td>
+<td colspan="2">Configuracao de TMK</td>
+<td colspan="4">Código da configuraç„o Telemarketing.
+(Disponível F3.)
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td>ExistCpo("SUE",M->VCE_CONFIG)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sue.html">SUE</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VCE_TIPOTE</td>
+<td>Telefone</td>
+<td colspan="2">Tipo do Telefone</td>
+<td colspan="4">Tipo do telefone.
+1 - Residencial     Comercial 2
+2 - Celular
+3 - Fax
+4 - Comercial 1
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>9                                            </td>
+<td>IIF(M->VCE_FORMA == "1",Pertence("1245"), IIF(M->VCE_FORMA == "2",Pertence("3"),Vazio()))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Residencial;2=Celular;3=Fax;4=Comercial 1;5=Comercial 2</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VCE_MALADI</td>
+<td>Arquivo</td>
+<td colspan="2">Arquivo de Mala-Direta</td>
+<td colspan="4">Nome do arquivo de mala direta, que
+seráutilizado nessa lista
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>IIF(M->VCE_FORMA == "2" .OR. M->VCE_FORMA == "3" .OR. M->VCE_FORMA == "4",Naovazio(),Vazio())</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/arq.html">ARQ</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VCE_TIPOEN</td>
+<td>Endereco</td>
+<td colspan="2">Endereço para envio</td>
+<td colspan="4">Tipo de endereço para envio.
+1 - Residencial.
+2 - Comercial.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>9                                            </td>
+<td>IIF(M->VCE_FORMA == "4",Pertence("12"),Vazio())</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Residencial;2=Comercial</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VCE_LABEL</td>
+<td>Etiqueta</td>
+<td colspan="2">Gerar Etiquetas</td>
+<td colspan="4">Habilita a geraç„o de etiquetas.
+1 - Sim
+2 - N„o
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>9                                            </td>
+<td>IIF(M->VCE_FORMA == "4",Pertence("12"),Vazio())</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VCE_ETIQUE</td>
+<td>Arq.Etiqueta</td>
+<td colspan="2">Arquivo de Etiqueta</td>
+<td colspan="4">Arquivo de Etiquetas.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>IIF(M->VCE_LABEL == "1",Naovazio(),Vazio())</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ar1.html">AR1</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VCE_CODCAM</td>
+<td>Campanha</td>
+<td colspan="2">Campanha</td>
+<td colspan="4">Código da campanha que será associada
+a essa Lista
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td>IIF(M->VCE_FORMA == "1",ExistCpo("SUO",M->VCE_CODCAM) .And. Tk310VldCamp(M->VCE_CODCAM),Vazio())</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/suo.html">SUO</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VCE_DESCCA</td>
+<td>Descricao</td>
+<td colspan="2">Descricao da Campanha</td>
+<td colspan="4">Descriç„o da campanha.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!INCLUI,Posicione("SUO",1,xFilial("SUO")+VCE->VCE_CODCAM,"UO_DESC"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VCE_SCRIPT</td>
+<td>Script</td>
+<td colspan="2">Codigo do Script</td>
+<td colspan="4">Código do script que será associado a
+lista.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td>IIF(M->VCE_FORMA == "1",ExistCpo("SUZ",M->VCE_SCRIPT),Vazio())</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/fuz.html">FUZ</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VCE_EVENTO</td>
+<td>Evento</td>
+<td colspan="2">Codigo do Evento</td>
+<td colspan="4">Código do evento que será associado a
+ta.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td>ExistCpo("ACD",M->VCE_EVENTO)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/fcd.html">FCD</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VCE_ASSUNT</td>
+<td>Assunto</td>
+<td colspan="2">Assunto do Email</td>
+<td colspan="4">Título do assunto do e-mail.
+</td>
+<td>C</td>
+<td>80</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VCE_CODMEN</td>
+<td>Codigo Msg.</td>
+<td colspan="2">Codigo da mensagem email</td>
+<td colspan="4">Código da mensagem de e-mail.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VCE_ATTACH</td>
+<td>Anexos</td>
+<td colspan="2">Anexos</td>
+<td colspan="4">Arquivos anexos que serao enviados
+juntamente com o e-mail
+</td>
+<td>C</td>
+<td>254</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VCE_FILTRO</td>
+<td>Filtro</td>
+<td colspan="2">Filtro utilizado</td>
+<td colspan="4">Filtro utilizado.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VCE_STATUS</td>
+<td>Status</td>
+<td colspan="2">Status da Lista</td>
+<td colspan="4">Status da lista.
+1 - Ativa
+2 - Encerrada
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>!                                            </td>
+<td>Pertence("12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td>1=Ativa;2=Encerrada</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VCE_CRONUM</td>
+<td>Codigo</td>
+<td colspan="2">Codigo</td>
+<td colspan="4">Código CRO
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VCE_CLIENT</td>
+<td>Cliente</td>
+<td colspan="2">Cliente</td>
+<td colspan="4">Código do Cliente no sistema.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VCE_LOJA</td>
+<td>Loja</td>
+<td colspan="2">Loja</td>
+<td colspan="4">Loja do Cliente.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VCE_NREDUZ</td>
+<td>Nome</td>
+<td colspan="2">Nome reduzido</td>
+<td colspan="4">Nome reduzido do cliente
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VCE_HORA1</td>
+<td>Inicio</td>
+<td colspan="2">Hora Inicio</td>
+<td colspan="4">Horario de Inicio
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>99:99:99                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VCE_HORA2</td>
+<td>Hora Fim</td>
+<td colspan="2">Hora Fim</td>
+<td colspan="4">Hora de conclusao
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>99:99:99                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VCE_NCONTA</td>
+<td>Nome</td>
+<td colspan="2">Nome do contato</td>
+<td colspan="4">Nome do Contato.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VCE_OCODIS</td>
+<td>Status</td>
+<td colspan="2">Codigo do status</td>
+<td colspan="4">Código do status
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VCE_NSTATU</td>
+<td>Descricao</td>
+<td colspan="2">Descricao</td>
+<td colspan="4">Informe a descrição
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VCE_NIVEL</td>
+<td>Nivel</td>
+<td colspan="2">Nivel</td>
+<td colspan="4">Nivel do Contato.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VCE_CODLIG</td>
+<td>Cod.Ligacao</td>
+<td colspan="2">Codigo da ligacao</td>
+<td colspan="4">Código da Ligação
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VCE_PROSPE</td>
+<td>Prospect</td>
+<td colspan="2">Ligacao para prospect</td>
+<td colspan="4">Ligacao para prospect
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>9                                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VCE_FAXARQ</td>
+<td>Arq. fax</td>
+<td colspan="2">Arquivo de Fax</td>
+<td colspan="4">Arquivo de Fax
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VCE_MESSAG</td>
+<td>Mensagem</td>
+<td colspan="2">Mensagem do e-mail</td>
+<td colspan="4">Informe a mensagem do e-mail
+</td>
+<td>M</td>
+<td>40</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VCE_CONTAT</td>
+<td>Contato</td>
+<td colspan="2">Contato</td>
+<td colspan="4">Código do contato do cliente no sistema.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VCE_TIP</td>
+<td>Utilizacao</td>
+<td colspan="2">Area de Utilizacao</td>
+<td colspan="4">Area de Aplicação da Regra
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>9                                            </td>
+<td>naovazio() .AND. PERTENCE("123")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VCE_REGRA</td>
+<td>Regra</td>
+<td colspan="2">Codigo Interno da Regra</td>
+<td colspan="4">Informe o codigo interno da regra.
+</td>
+<td>C</td>
+<td>100</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

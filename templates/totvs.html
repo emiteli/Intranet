@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}
+Busca de Arquivos com Sugestões
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="mb-4">Consulta de Tabela Protheus</h1>
+    <div class="input-group mb-3">
+        <input type="text" id="searchInput" class="form-control" placeholder="Digite sua busca..." aria-label="Digite sua busca">
+    </div>
+    <ul id="suggestions" class="list-group"></ul>
+    <ul id="results" class="list-group mt-3"></ul>
+</div>
+
+<!-- Script para busca com sugestões dinâmicas -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {            
+        $('#searchInput').on('input', function() {
+            let searchTerm = $('#searchInput').val();
+
+            if (searchTerm.trim() === "") {
+                $('#suggestions').empty();
+                return;
+            }
+
+            $.ajax({
+                url: '/search',
+                method: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({ search_term: searchTerm }),
+                success: function(response) {
+                    $('#suggestions').empty();
+
+                    if (response.length > 0) {
+                        response.forEach(function(file) {
+                            $('#suggestions').append(`
+                                <li class="list-group-item">
+                                    <a href="static/paginas_html/${file}" target="_blank">${file}</a>
+                                </li>
+                            `);
+                        });
+                    } else {
+                        $('#suggestions').empty();
+                    }
+                },
+                error: function(error) {
+                    console.error("Erro durante a busca:", error);
+                }
+            });
+        });
+    });
+</script>
+
+<!-- Estilos para a lista de sugestões -->
+<style>
+    #suggestions {
+        position: absolute;
+        background-color: white;
+        border: 1px solid #ddd;
+        width: 100%;
+        max-height: 700px; /* Aproximadamente 15 itens, dependendo da altura de cada item */
+        overflow-y: auto;
+        z-index: 1000;
+    }
+    #suggestions li {
+        cursor: pointer;
+        padding: 10px;
+    }
+    #suggestions li:hover {
+        background-color: #f0f0f0;
+    }
+</style>
+{% endblock %}

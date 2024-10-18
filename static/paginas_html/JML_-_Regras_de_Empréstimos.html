@@ -1,0 +1,562 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: JML - Regras de Empréstimos</title></head>
+<body>
+<font color="orange"><h2 id="JML">Tabela: JML - Regras de Empréstimos</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Regras de Empréstimos</b></td><td colspan="2"><b>JML_FILIAL+JML_TPUSR+JML_TPPUBL</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">JML_FILIAL+JML_TPUSR+JML_TPPUBL</td><td>Tipo Usuário + Tipo Public.</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>JML_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do sistema</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JML_TPUSR</td>
+<td>Tipo Usuário</td>
+<td colspan="2">Tipo de Usuário</td>
+<td colspan="4">Tipo de usuário para qual será aplicada
+a regra. Se estiver em branco será
+considerada para todos os tipos.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td>Vazio().Or.ExistCpo("JMJ",M->JML_TPUSR)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/jmj001.html">JMJ001</a></td>
+<td><a href="/tabelas_protheus/gatilhos/jml_tpusr.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JML_TUSDES</td>
+<td>Desc.Usuário</td>
+<td colspan="2">Desc.de Usuário</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>If(!Inclui,Posicione("JMJ",1,xFilial("JMJ")+M->JML_TPUSR,"JMJ->JMJ_DESCRI"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("JMJ",1,xFilial("JMJ")+JML->JML_TPUSR,"JMJ->JMJ_DESCRI")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JML_TPPUBL</td>
+<td>Tipo Public.</td>
+<td colspan="2">Tipo da Publicacao</td>
+<td colspan="4">Tipo de publicação na qual será aplicada
+a regra. Se estiver em branco esta se
+aplicará a todos os tipos.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>                                             </td>
+<td>Vazio().Or.ExistCpo("JM2",M->JML_TPPUBL)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/jm2002.html">JM2002</a></td>
+<td><a href="/tabelas_protheus/gatilhos/jml_tppubl.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JML_TPUDES</td>
+<td>Desc.Public.</td>
+<td colspan="2">Desc.da Publicacao</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>If(!Inclui,Posicione("JM2",1,xFilial("JM2")+M->JML_TPPUBL,"JM2->JM2_DESCRI"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("JM2",1,xFilial("JM2")+JML->JML_TPPUBL,"JM2->JM2_DESCRI")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JML_PRAZO</td>
+<td>Dias Empr.</td>
+<td colspan="2">Dias de Empréstimo</td>
+<td colspan="4">Quantidade máxima de dias em que o
+usuário poderá ficar com posse da
+publicação.
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JML_MAXEMP</td>
+<td>Qtd Max Empr</td>
+<td colspan="2">Qtd máxima de emprestimo</td>
+<td colspan="4">Quantidade máxima de exemplares que um
+usuário do Acervo poderá adquirir no
+atendimento.
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JML_VALOR</td>
+<td>Vlr Emprest.</td>
+<td colspan="2">Valor do Empréstimo</td>
+<td colspan="4">Valor a ser cobrado pelo empréstimo da
+publicação dentro do prazo estipulado.
+</td>
+<td>N</td>
+<td>14</td>
+<td>0</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JML_MULTA</td>
+<td>Vlr.Mult.Dia</td>
+<td colspan="2">Multa por dia de atraso</td>
+<td colspan="4">Valor da multa a ser cobrada por dia de
+atraso.
+</td>
+<td>N</td>
+<td>14</td>
+<td>0</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JML_BLQATR</td>
+<td>Dias Atraso</td>
+<td colspan="2">Dias de atraso p/bloqueio</td>
+<td colspan="4">Se o usuário do acervo exceder tal
+quantidade de dias de atraso na
+devolução da publicação será impedido de
+efetuar novos empréstimos.
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JML_BLQPRZ</td>
+<td>Dias Bloq.</td>
+<td colspan="2">Duracäo bloqueio em dias</td>
+<td colspan="4">Quantidade de dias que o usuário ficará
+impedido de efetuar novos empréstimos
+quando estiver com status bloqueado.
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JML_RESERV</td>
+<td>Dias Reserva</td>
+<td colspan="2">Validade da Reserva</td>
+<td colspan="4">Quantidade de dias em que uma publicação
+poderá permanecer reservada.
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JML_MAXRES</td>
+<td>Qtd Max Res</td>
+<td colspan="2">Qtd maxima de reservas</td>
+<td colspan="4">Quantidade máxima de exemplares que o
+usuário do acervo poderá reservar.
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JML_RESWEB</td>
+<td>Reserva Web</td>
+<td colspan="2">Permite reserva pela Web</td>
+<td colspan="4">Indica se permite efetuar reservas
+através da Internet.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("12")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JML_CODCAL</td>
+<td>Cod.Calend.</td>
+<td colspan="2">Codigo do calendario</td>
+<td colspan="4">Código do calendário a ser considerado
+para esta regra.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>                                             </td>
+<td>ExistCpo("SH7",M->JML_CODCAL)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sh7.html">SH7</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JML_CALEND</td>
+<td>Cons.Calend.</td>
+<td colspan="2">Considera calendario</td>
+<td colspan="4">Indica se considera calendário
+específico nos cálculos de entrega das
+publicações e também nos cálculos das
+possíveis multas.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JML_OBS</td>
+<td>Observacäo</td>
+<td colspan="2">Observacöes gerais</td>
+<td colspan="4">Observações gerais sobre a aplicação da
+regra.
+</td>
+<td>C</td>
+<td>80</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

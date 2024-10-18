@@ -1,0 +1,1384 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: TFI - LOCAÇÃO DE EQUIPAMENTOS</title></head>
+<body>
+<font color="orange"><h2 id="TFI">Tabela: TFI - LOCAÇÃO DE EQUIPAMENTOS</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>LOCAÇÃO DE EQUIPAMENTOS</b></td><td colspan="2"><b>TFI_FILIAL+TFI_COD</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">TFI_FILIAL+TFI_COD</td><td>Código</td><td></td></tr>
+<tr><td>2</td><td colspan="2">TFI_FILIAL+TFI_LOCAL</td><td>Local</td><td></td></tr>
+<tr><td>3</td><td colspan="2">TFI_FILIAL+TFI_CODPAI+TFI_ITEM</td><td>Loc x Propos + Item</td><td></td></tr>
+<tr><td>4</td><td colspan="2">TFI_FILIAL+TFI_PRODUT</td><td>Produto</td><td></td></tr>
+<tr><td>5</td><td colspan="2">TFI_FILIAL+TFI_SEPARA+TFI_PRODUT</td><td>Eq. Separado + Produto</td><td></td></tr>
+<tr><td>6</td><td colspan="2">TFI_FILIAL+TFI_RESERV</td><td>Cod. Reserva</td><td></td></tr>
+<tr><td>7</td><td colspan="2">TFI_FILIAL+TFI_CODTGQ+TFI_ITTGR</td><td>Código Req. + Item Req.</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>TFI_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Filial do Sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TFI_COD</td>
+<td>Código</td>
+<td colspan="2">Código da Locação de Eq.</td>
+<td colspan="4">Código da locação de Equipamentos.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .AND. ExistChav('TFI')</td>
+<td>GetSXENum('TFI','TFI_COD')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TFI_LOCAL</td>
+<td>Local</td>
+<td colspan="2">Cód. Local de Atend.</td>
+<td colspan="4">Preencher com o código do Local de
+Atendimento.
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo('ABS')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/abs.html">ABS</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/131.html">131</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TFI_ITEM</td>
+<td>Item</td>
+<td colspan="2">Número do Item do produto</td>
+<td colspan="4">Numero do Item do produto da locação de
+equipamentos.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TFI_PRODUT</td>
+<td>Produto</td>
+<td colspan="2">Código do Produto</td>
+<td colspan="4">Produto para referência da locação de
+equipamento. Necessário configuração no
+complemento de produtos (SB5).
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo('SB1') .AND. ExistCpo('SB5') .And. At740VldPrd(4, M->TFI_PRODUT)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tecprd.html">TECPRD</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tfi_produt.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/030.html">030</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TFI_DESCRI</td>
+<td>Descrição</td>
+<td colspan="2">Descrição do produto</td>
+<td colspan="4">Preencher com a Descrição do Produto.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>ATINIPADMVC("TECA740","TFI_LE",'B1_DESC','SB1',1, "XFILIAL('SB1')+TFI->TFI_PRODUT")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione( "SB1", 1, xFilial("SB1")+TFI->TFI_PRODUT, "B1_DESC" )</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TFI_UM</td>
+<td>Unidade</td>
+<td colspan="2">Unidade de Medida</td>
+<td colspan="4">Preencher com Unidade de Medida.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .OR. ExistCpo('SAH')</td>
+<td>ATINIPADMVC("TECA740","TFI_LE",'B1_UM','SB1',1, "XFILIAL('SB1')+TFI->TFI_PRODUT")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione( "SB1", 1, xFilial("SB1")+TFI->TFI_PRODUT, "B1_DESC" )</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TFI_TPCOBR</td>
+<td>Tp. Cobrança</td>
+<td colspan="2">Tp.Cobr. (Dias/Horimetro)</td>
+<td colspan="4">Unidade de medida para a cobrança do
+equipamento no contrato de locação.
+1=Dias;2=Horimetro
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Dias;2=Horimetro</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TFI_QTDVEN</td>
+<td>Quantidade</td>
+<td colspan="2">Quantidade de venda</td>
+<td colspan="4">Preencher com a quantidade de venda.
+</td>
+<td>N</td>
+<td>11</td>
+<td>0</td>
+<td>@E 99,999,999,999                            </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/tfi_qtdven.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TFI_SEPSLD</td>
+<td>Saldo Separ.</td>
+<td colspan="2">Saldo da Separação</td>
+<td colspan="4">Indica a quantidade de itens de
+locação/equipamentos que ainda precisam
+ser enviados para o cliente ou liberados
+para locação.
+</td>
+<td>N</td>
+<td>11</td>
+<td>0</td>
+<td>@E 99,999,999,999                            </td>
+<td>Positivo() .And. M->TFI_SEPSLD <= FwFldGet("TFI_QTDVEN")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TFI_PERINI</td>
+<td>Per. Inicio</td>
+<td colspan="2">Período Inicial Aloc</td>
+<td colspan="4">Preencher com Período inicial de
+Alocação.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TFI_PERFIM</td>
+<td>Per. Final</td>
+<td colspan="2">Período Final Aloc.</td>
+<td colspan="4">Preencher com período final da Alocação.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>At740WhenR()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TFI_HORAIN</td>
+<td>Hora Inicio</td>
+<td colspan="2">Hora Inicio Alocação</td>
+<td colspan="4">Preencher com a Hora Inicial da
+Alocação.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td>AtVldHora(FwFldGet("TFI_HORAIN"))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TFI_HORAFI</td>
+<td>Hora Final</td>
+<td colspan="2">Hora Final Alocação</td>
+<td colspan="4">Preencher com a Hora Final da Alocação.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td>AtVldHora(FwFldGet("TFI_HORAFI"))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TFI_TOTAL</td>
+<td>Vlr.Total</td>
+<td colspan="2">Valor Unitario na Tabela</td>
+<td colspan="4">Soma dos valores associados de cobrança
+da locação. A configuração da cobrança é
+realizada na tabela TEV – Cobrança da
+Locação.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TFI_DESCON</td>
+<td>%Desconto</td>
+<td colspan="2">Percentual de Desconto</td>
+<td colspan="4">Percentual de desconto para o item da
+locação de equipamentos.
+</td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TFI_VALDES</td>
+<td>Vlr.Desconto</td>
+<td colspan="2">Valor do Desconto</td>
+<td colspan="4">Valor do Desconto do Recurso com Base no
+Percentual Informado.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TFI_TES</td>
+<td>TES Remessa</td>
+<td colspan="2">TES de Remessa</td>
+<td colspan="4">Tipo de saída para geração da nota
+fiscal de remessa do equipamento.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SF4") .AND. M->TFI_TES > "500"</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sf4.html">SF4</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TFI_SEPARA</td>
+<td>Eq. Separado</td>
+<td colspan="2">Equipamento Separado?</td>
+<td colspan="4">Indica se o equipamento já teve a
+separação para geração do pedido de
+remessa e envio ao cliente.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TFI_CODPAI</td>
+<td>Loc x Propos</td>
+<td colspan="2">Codigo Local x Proposta</td>
+<td colspan="4">Código do item de local x proposta
+associada a locação.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .And. ExistCpo("TFL")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TFI_CONTRT</td>
+<td>Nr. Contrato</td>
+<td colspan="2">Numero do Contrato</td>
+<td colspan="4">Numero do Contrato
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TFI_CONREV</td>
+<td>Revisao</td>
+<td colspan="2">Sequencia da Revisao</td>
+<td colspan="4">Sequencia da Revisao
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/123.html">123</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TFI_RESERV</td>
+<td>Cod. Reserva</td>
+<td colspan="2">Código da Reserva</td>
+<td colspan="4">Código da reserva do equipamento.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. ExistCpo ("TEW", M->TFI_RESERV, 13)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TFI_CODSUB</td>
+<td>Cod. Subst.</td>
+<td colspan="2">Codigo Subst.</td>
+<td colspan="4">Código registro substituto
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TFI_OK</td>
+<td>Ok</td>
+<td colspan="2">Mark</td>
+<td colspan="4">Campo para markbrowse.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TFI_CODTGQ</td>
+<td>Código Req.</td>
+<td colspan="2">Código Requisição</td>
+<td colspan="4">Define qual cíodiga da requisição o item
+esta associado
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .or. ExistCpo("TGQ")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TFI_ITTGR</td>
+<td>Item Req.</td>
+<td colspan="2">Item Requisição</td>
+<td colspan="4">Indica qual a sequência do item na
+requisição.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TFI_CODATD</td>
+<td>Atendente</td>
+<td colspan="2">Atendente</td>
+<td colspan="4">Codigo do atendente
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. ExistCpo("AA1")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TFI_NOMATD</td>
+<td>Nome Atenden</td>
+<td colspan="2">Nome Atendente</td>
+<td colspan="4">Nome do atendente
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIF(INCLUI,"",POSICIONE("AA1",1,XFILIAL("AA1")+TFI->TFI_CODATD,"AA1->AA1_NOMTEC"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("AA1",1,xFilial("AA1")+TFI->TFI_CODATD,"AA1->AA1_NOMTEC")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TFI_ENCE</td>
+<td>Encerrado?</td>
+<td colspan="2">Encerrado?</td>
+<td colspan="4">Define se o item está encerrado e não
+pode mais sofrer atualização.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@9                                           </td>
+<td>Pertence("12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TFI_ENTEQP</td>
+<td>Agenda. Ent.</td>
+<td colspan="2">Agendamento da Entrega Eq</td>
+<td colspan="4">Agendamento da Entrega do Equipamento.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>At740VldAg("TFI_ENTEQP",FwFldGet("TFI_PERINI"),FwFldGet("TFI_PERFIM"),FwFldGet("TFI_ENTEQP"),FwFldGet("TFI_COLEQP")).OR.Vazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TFI_COLEQP</td>
+<td>Coleta Equip</td>
+<td colspan="2">Coleta do Equipamento</td>
+<td colspan="4">Coleta do Equipamento.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>At740VldAg("TFI_COLEQP",FwFldGet("TFI_PERINI"),FwFldGet("TFI_PERFIM"),FwFldGet("TFI_ENTEQP"),FwFldGet("TFI_COLEQP")).OR.Vazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TFI_APUMED</td>
+<td>Tp. Apuração</td>
+<td colspan="2">Tp. Apuração da Medição</td>
+<td colspan="4">Tipo de Apuração utilizada no orçamento
+de serviços, dentre os tipos abaixo:
+1=Inicio(Locação)/Fim(Locação);
+2=Agenda.(Entrega)/Coleta(Equip);
+3=Inicio(Locação)/Coleta(Equip);
+4=Agenda.(Entrega)/Fim(Locação)
+5=Dt. Nota de Remessa do
+Item./Fim(Locação)
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@9                                           </td>
+<td>!Vazio() .And. Pertence("123456") .And. At740ValAM()</td>
+<td>SuperGetMv("MV_TRVMED",," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>#TxcBox("TFI_APUMED")</td>
+<td>Empty(SuperGetMv("MV_TRVMED",," "))</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TFI_OSMONT</td>
+<td>Exige Mont?</td>
+<td colspan="2">Exige Montagem?</td>
+<td colspan="4">Define se gera ordem de serviço para
+montagem do equipamento.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@9                                           </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TFI_CONENT</td>
+<td>Confir. Entr</td>
+<td colspan="2">Confirma Entrega Equip.</td>
+<td colspan="4">Define se realiza a confirmação da data
+de entrega do equipamento, 1 = Sim e 2 =
+Não.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@9                                           </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TFI_CONCOL</td>
+<td>Conf. Coleta</td>
+<td colspan="2">Confirma Coleta Equip.</td>
+<td colspan="4">Define se realiza a confirmação da data
+de coleta do equipamento, 1 = Sim e 2 =
+Não.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@9                                           </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TFI_CHVTWO</td>
+<td>Chv Facilita</td>
+<td colspan="2">Chave do Facilitador</td>
+<td colspan="4">Campo chave para saber itens vinculados
+com o facilitador
+</td>
+<td>C</td>
+<td>21</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TFI_DTPFIM</td>
+<td>Dt. FIm Prev</td>
+<td colspan="2">Data fim parada Prevista</td>
+<td colspan="4">Data prevista de fim de parada do Bem
+para a execução da manutenção
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>TCXINIBRW("TFI_DTPFIM")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TFI_ITCNB</td>
+<td>Item CNB</td>
+<td colspan="2">Item CNB</td>
+<td colspan="4">Indica o código de referência da CNB.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TFI_CALCMD</td>
+<td>Mem. de Calc</td>
+<td colspan="2">Memória de Calculo</td>
+<td colspan="4">Memória de Cálculo da planilha de preço
+para os itens de Locação de Equipamento.
+</td>
+<td>M</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TFI_SRVEXT</td>
+<td>Serv. Extra?</td>
+<td colspan="2">Serviço Extra?</td>
+<td colspan="4">Esse campo será alterado para "Sim"
+apenas quando o item de locação de
+equipamentos for originado de um
+orçamento de serviço extra e esse
+orçamento for efetivado. Ou seja,
+enquanto esse orçamento não for
+efetivado, esse campo permanecerá como
+"Não", mesmo sendo gerado a partir de um
+orçamento de serviço extra.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TFI_PLACOD</td>
+<td>Código Plan</td>
+<td colspan="2">Codigo Planilha de Preço</td>
+<td colspan="4">Indica qual a planilha de preço foi
+utilizada para o cálculo do serviço no
+item de locação.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TFI_PLAREV</td>
+<td>Revisão Plan</td>
+<td colspan="2">Revisão Planilha de Preço</td>
+<td colspan="4">Indica qual a revisão da planilha de
+preço foi utilizada para o cálculo do
+item de locação.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@999                                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TFI_TESPED</td>
+<td>TES Pedido</td>
+<td colspan="2">TES do Pedido de Venda</td>
+<td colspan="4">Tipo de saída para geração do pedido de
+venda do equipamento.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SF4") .And. (FwFldGet("TFI_TESPED") > '500')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sf4.html">SF4</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>TEW</td>
+<td colspan="2">TFI_COD</td>
+<td colspan="2">TEW_CODEQU</td>
+</tr>
+<tr>
+<td>TFZ</td>
+<td colspan="2">TFI_COD</td>
+<td colspan="2">TFZ_CODTFI</td>
+</tr>
+<tr>
+<td>TWA</td>
+<td colspan="2">TFI_COD</td>
+<td colspan="2">TWA_CODTFI</td>
+</tr>
+<tr>
+<td>TEV</td>
+<td colspan="2">TFI_COD</td>
+<td colspan="2">TEV_CODLOC</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

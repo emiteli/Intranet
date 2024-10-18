@@ -1,0 +1,932 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: SQS - Vagas</title></head>
+<body>
+<font color="orange"><h2 id="SQS">Tabela: SQS - Vagas</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Vagas</b></td><td colspan="2"><b>QS_FILIAL+QS_VAGA</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">QS_FILIAL+QS_VAGA</td><td>Cod Vaga</td><td></td></tr>
+<tr><td>2</td><td colspan="2">QS_FILIAL+QS_AREA+QS_FUNCAO+QS_VAGA</td><td>Cod Area + Cod Funcao + Cod Vaga</td><td></td></tr>
+<tr><td>3</td><td colspan="2">QS_FILIAL+QS_CLIENTE+QS_VAGA</td><td>Cod Cliente + Cod Vaga</td><td></td></tr>
+<tr><td>4</td><td colspan="2">QS_FILIAL+QS_TIPO+QS_VAGA</td><td>Tipo + Cod Vaga</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>QS_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Neste campo deve ser digitado a Filial
+do Sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QS_VAGA</td>
+<td>Cod Vaga</td>
+<td colspan="2">Codigo da Vaga</td>
+<td colspan="4">Neste campo deve ser digitado o código
+da vaga.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .And. ExistChav("SQS",M->QS_VAGA) .And. FreeForUse("SQS",M->QS_VAGA)</td>
+<td>GetSX8Num("SQS","QS_VAGA")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td>#QS_VAGA   <>'      '</td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>QS_DESCRIC</td>
+<td>Descr. Vaga</td>
+<td colspan="2">Descricao da Vaga</td>
+<td colspan="4">Neste campo deve ser digitado a descri-
+ção da vaga.
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td>#QS_DESCRIC<>'                                                  '</td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>QS_POSTO</td>
+<td>Posto</td>
+<td colspan="2">Codigo do Posto</td>
+<td colspan="4">Deverá ser incluido o codigo do Posto
+quando integração entre o módulo
+Arquitetura Organizacional e
+Recrutamento e Seleção estiver ativada.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ORG30PVLD()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/rclrsp.html">RCLRSP</a></td>
+<td><a href="/tabelas_protheus/gatilhos/qs_posto.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>fIntOrgRsp()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>QS_FILPOST</td>
+<td>Filial Posto</td>
+<td colspan="2">Filial do Posto</td>
+<td colspan="4">Filial do cadastro de Postos.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>xFilial("RCL")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QS_AREA</td>
+<td>Cod Area</td>
+<td colspan="2">Codigo da Area</td>
+<td colspan="4">Neste campo deve ser digitado o código
+da área da vaga.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SX5","R1"+M->QS_AREA)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/r1.html">R1</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QS_CC</td>
+<td>Centro Custo</td>
+<td colspan="2">Codigo Centro Custo</td>
+<td colspan="4">Neste campo deve ser digitado o código
+do centro de custo a qual a vaga per-
+tence.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. Ctb105CC()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ctt.html">CTT</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>!fIntOrgRsp()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/004.html">004</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>QS_FUNCAO</td>
+<td>Cod Funcao</td>
+<td colspan="2">Codigo da Funcao</td>
+<td colspan="4">Neste campo deve ser digitado o código
+da função.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SRJ")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/srj.html">SRJ</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>!fIntOrgRsp()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>QS_NRVAGA</td>
+<td>Nr Vaga</td>
+<td colspan="2">Numero de Vagas</td>
+<td colspan="4">Neste campo deve ser digitado o número
+de vagas em aberto para este cargo.
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td>fChVagaIni()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>!fIntOrgRsp()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QS_CLIENTE</td>
+<td>Cod Cliente</td>
+<td colspan="2">Codigo Cliente</td>
+<td colspan="4">Neste campo deve ser digitado o código
+do cliente que esta solicitando a vaga.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QS_SOLICIT</td>
+<td>Solicitante</td>
+<td colspan="2">Solicitante</td>
+<td colspan="4">Neste campo deve ser digitado o nome do
+solicitante da vaga.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QS_PRAZO</td>
+<td>Prazo</td>
+<td colspan="2">Prazo da Vaga</td>
+<td colspan="4">Neste campo deve ser digitado os dias de
+prazo para preenchimento desta vaga.
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QS_DTABERT</td>
+<td>Dt Abertura</td>
+<td colspan="2">Dt Abertura</td>
+<td colspan="4">Neste campo deve ser digitado a data em
+que a vaga foi aberta.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>fChDtIni()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QS_DTFECH</td>
+<td>Dt Fechament</td>
+<td colspan="2">Dt Fechamento</td>
+<td colspan="4">Neste campo deve ser digitado a data em
+que a vaga foi preenchida.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>fChDtFim()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QS_VAGAFEC</td>
+<td>Nr Vaga Fech</td>
+<td colspan="2">Nr de Vagas Fechada</td>
+<td colspan="4">Neste campo deve ser digitado o número
+de vagas que foram preenchidas até o
+momento.
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td>fChVagaFim()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QS_VCUSTO</td>
+<td>Custo</td>
+<td colspan="2">Custo da Vaga</td>
+<td colspan="4">Neste campo deve ser digitado o valor do
+custo da vaga.
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QS_PROCESS</td>
+<td>Cod.Processo</td>
+<td colspan="2">Cod Processo Seletivo</td>
+<td colspan="4">Neste campo deve ser digitado o código
+do processo referente a vaga que o
+candidato ira concorrer.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sqe.html">SQE</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QS_TIPO</td>
+<td>Tipo</td>
+<td colspan="2">Tipo da Vaga</td>
+<td colspan="4">Informe o Tipo da Vaga
+1 - Int/Ext
+2 - Interna
+3 - Externa
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@9                                           </td>
+<td>Pertence("123")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Int./Ext.;2=Interna;3=Externa</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QS_TESTE</td>
+<td>Avaliação</td>
+<td colspan="2">Código da Avaliação</td>
+<td colspan="4">Código da avaliação pré-teste para
+candidatos à vaga.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. ExistCpo("SQQ")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sqq.html">SQQ</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QS_PONTOS</td>
+<td>Pontos</td>
+<td colspan="2">Pontos da Avaliação</td>
+<td colspan="4">Pontuação mínima para que o candidato
+seja considerado aprovado na avaliação.
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>@E 999.99                                    </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QS_AUTOM</td>
+<td>Rep. Autom.</td>
+<td colspan="2">Reprovação automática</td>
+<td colspan="4">Esse campo indica se reprova
+automaticamente o candidato, caso não
+atinja a pontuação mínima necessária da
+avaliação pré-teste.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QS_MSGAPV</td>
+<td>Msg. Aprov.</td>
+<td colspan="2">Cod. Msg. de aprovação</td>
+<td colspan="4">Nesse campo informamos o código da
+mensagem padrão, caso desejemos que o
+candidato receba um email quando for
+aprovado em uma avaliação pré-teste.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. ExistCpo("RDG")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/rdg.html">RDG</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QS_MSGREP</td>
+<td>Msg. Reprov.</td>
+<td colspan="2">Cod. Msg. de reprovação</td>
+<td colspan="4">Nesse campo informamos o código da
+mensagem padrão, caso desejemos que o
+candidato receba um email quando for
+reprovado em uma avaliação pré-teste e
+sua solicitação de inscrição for
+rejeitada.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. ExistCpo("RDG")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/rdg.html">RDG</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QS_REINSC</td>
+<td>Reinscrição</td>
+<td colspan="2">Permite reinscrição</td>
+<td colspan="4">Esse campo indica se permite a um
+candidato que já possua uma solicitação
+de inscrição rejeitada possa se
+reinscrever na mesma vaga.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QS_MATRESP</td>
+<td>Mat.Resp.</td>
+<td colspan="2">Matrícula do responsável</td>
+<td colspan="4">Neste campo deve ser informado a
+matrícula do responsável pela vaga.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>RSP100Val()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/srapt3.html">SRAPT3</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/121.html">121</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QS_FILRESP</td>
+<td>Fil.Resp.</td>
+<td colspan="2">Filial do Responsável</td>
+<td colspan="4">Neste campo deve ser digitado a filial
+do responsável
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QS_CODPERF</td>
+<td>Característ.</td>
+<td colspan="2">Características da Vaga</td>
+<td colspan="4">As características para a vaga são
+disponibilizadas no Portal GCH e no
+Portal do Candidato para a visualização
+dos detalhes da vaga, de acordo com a
+configuração do parâmetro MV_PERFVAG.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QS_PERFIL</td>
+<td>Característ.</td>
+<td colspan="2">Características da Vaga</td>
+<td colspan="4">As características para a vaga são
+disponibilizadas no Portal GCH e no
+Portal do Candidato para a visualização
+dos detalhes da vaga, de acordo com a
+configuração do parâmetro MV_PERFVAG.
+</td>
+<td>M</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(inclui,"",MSMM(SQS->QS_CODPERF,80,,,,,,,,"RDY"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>SQG</td>
+<td colspan="2">QS_VAGA</td>
+<td colspan="2">QG_VAGA</td>
+</tr>
+<tr>
+<td>SQE</td>
+<td colspan="2">QS_PROCESS</td>
+<td colspan="2">QE_PROCESS</td>
+</tr>
+<tr>
+<td>SQD</td>
+<td colspan="2">QS_VAGA</td>
+<td colspan="2">QD_VAGA</td>
+</tr>
+<tr>
+<td>SQR</td>
+<td colspan="2">QS_VAGA</td>
+<td colspan="2">QR_VAGA</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

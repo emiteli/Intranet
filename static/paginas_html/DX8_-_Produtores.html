@@ -1,0 +1,697 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: DX8 - Produtores</title></head>
+<body>
+<font color="orange"><h2 id="DX8">Tabela: DX8 - Produtores</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Produtores</b></td><td colspan="2"><b>DX8_FILIAL+DX8_CODIGO+DX8_LOJA</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">DX8_FILIAL+DX8_CODIGO+DX8_LOJA</td><td>Código + Loja</td><td></td></tr>
+<tr><td>2</td><td colspan="2">DX8_FILIAL+DX8_CLIENT+DX8_LJCLI</td><td>Cliente + Loja Cliente</td><td></td></tr>
+<tr><td>3</td><td colspan="2">DX8_FILIAL+DX8_FORNEC+DX8_LJFOR</td><td>Fornecedor + Loja Fornec.</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>DX8_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Filial do sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DX8_CODIGO</td>
+<td>Código</td>
+<td colspan="2">Código do Produtor</td>
+<td colspan="4">Código identificador do produtor.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistChav('DX8',M->(DX8_CODIGO+IIF(!Empty(M->DX8_LOJA),M->DX8_LOJA," ")))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DX8_LOJA</td>
+<td>Loja</td>
+<td colspan="2">Loja do Produtor</td>
+<td colspan="4">Código da loja do produtor.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistChav('DX8',M->(DX8_CODIGO+DX8_LOJA))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DX8_NOME</td>
+<td>Nome</td>
+<td colspan="2">Nome do Produtor</td>
+<td colspan="4">Nome do produtor.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DX8_NMREDU</td>
+<td>N. Reduzido</td>
+<td colspan="2">Nome Reduzido do Produtor</td>
+<td colspan="4">Nome reduzido do produtor.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DX8_END</td>
+<td>Endereço</td>
+<td colspan="2">Endereço do Produtor</td>
+<td colspan="4">Logradouro do produtor.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DX8_ENDCPL</td>
+<td>Compl. End.</td>
+<td colspan="2">Complemento do Endereço</td>
+<td colspan="4">Complemento do endereço.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DX8_BAIRRO</td>
+<td>Bairro</td>
+<td colspan="2">Bairro do Produtor</td>
+<td colspan="4">Bairro do produtor.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DX8_CEP</td>
+<td>CEP</td>
+<td colspan="2">CEP do Produtor</td>
+<td colspan="4">CEP do produtor.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DX8_EST</td>
+<td>Estado</td>
+<td colspan="2">Estado do Produtor</td>
+<td colspan="4">Estado do produtor.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo('SX5','12'+M->DX8_EST).And.IE(M->DX8_INSCR,M->DX8_EST)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/12.html">12</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/010.html">010</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DX8_COD_MU</td>
+<td>Cd.Municipio</td>
+<td colspan="2">Código do Municipio</td>
+<td colspan="4">Informe o codigo do municipio, conforme
+tabela do IBGE
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@9                                           </td>
+<td>ExistCpo("CC2",M->DX8_EST+M->DX8_COD_MU)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/cc2dx8.html">CC2DX8</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dx8_cod_mu.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DX8_MUN</td>
+<td>Município</td>
+<td colspan="2">Município do Produtor</td>
+<td colspan="4">Municipio do Produtor.
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>POSICIONE("CC2",1,xFilial("CC2")+DX8->DX8_EST+DX8->DX8_COD_MU,"CC2_MUN")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("CC2",1,xFilial("CC2")+DX8->DX8_EST+DX8->DX8_COD_MU,"CC2_MUN")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DX8_TIPENT</td>
+<td>Tip. Entid.</td>
+<td colspan="2">Tipo de Entidade</td>
+<td colspan="4">Tipo de entidade do produtor.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('FJ')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>F=Fisica;J=Juridica</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DX8_CGC</td>
+<td>CNPJ/CPF</td>
+<td colspan="2">CNPJ/CPF do Produtor</td>
+<td colspan="4">CNPJ/CPF do produtor.
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>@R 99.999.999/9999-99                        </td>
+<td>Vazio().Or.CGC(M->DX8_CGC)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DX8_INSCR</td>
+<td>Ins. Estad.</td>
+<td colspan="2">Inscrição Estadual</td>
+<td colspan="4">Inscrição Estadual do produtor.
+</td>
+<td>C</td>
+<td>18</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>IE(M->DX8_INSCR,M->DX8_EST)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DX8_FORNEC</td>
+<td>Fornecedor</td>
+<td colspan="2">Código do Fornecedor</td>
+<td colspan="4">Código identificador do fornecedor.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. ExistCpo("SA2",M->DX8_FORNEC+IIF(!Empty(M->DX8_LJFOR),M->DX8_LJFOR,""))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/for.html">FOR</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dx8_fornec.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DX8_LJFOR</td>
+<td>Loja Fornec.</td>
+<td colspan="2">Loja do Fornecedor</td>
+<td colspan="4">Código da loja identificadora.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SA2",M->(DX8_FORNEC+DX8_LJFOR))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DX8_CLIENT</td>
+<td>Cliente</td>
+<td colspan="2">Código do Cliente</td>
+<td colspan="4">Código identificador do cliente.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>IIF(Empty(M->DX8_LJCLI),ExistCpo('SA1'),ExistCpo('SA1',M->(DX8_CLIENT+DX8_LJCLI)))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sa1.html">SA1</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dx8_client.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DX8_LJCLI</td>
+<td>Loja Cliente</td>
+<td colspan="2">Loja do Cliente</td>
+<td colspan="4">Loja identificadora do cliente.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SA1",M->(DX8_CLIENT+DX8_LJCLI))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DX8_ATIVO</td>
+<td>Ativo?</td>
+<td colspan="2">Produtor Ativo?</td>
+<td colspan="4">Indica se o registro de produtor está
+ativo ou não.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>'1'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DX8_OK</td>
+<td>OK</td>
+<td colspan="2">OK</td>
+<td colspan="4">Opção markbrowse.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>DXL</td>
+<td colspan="2">DX8_CODIGO+DX8_LOJA</td>
+<td colspan="2">DXL_PRDTOR+DXL_LJPRO</td>
+</tr>
+<tr>
+<td>DXD</td>
+<td colspan="2">DX8_CODIGO+DX8_LOJA</td>
+<td colspan="2">DXD_PRDTOR+DXD_LJPRO</td>
+</tr>
+<tr>
+<td>DXI</td>
+<td colspan="2">DX8_CODIGO</td>
+<td colspan="2">DXI_PRDTOR</td>
+</tr>
+<tr>
+<td>DXJ</td>
+<td colspan="2">DX8_CODIGO+DX8_LOJA</td>
+<td colspan="2">DXJ_PRDTOR+DXJ_LJPRO</td>
+</tr>
+<tr>
+<td>NN2</td>
+<td colspan="2">DX8_CODIGO+DX8_LOJA</td>
+<td colspan="2">NN2_PRDTOR+NN2_LJPRO</td>
+</tr>
+<tr>
+<td>DXM</td>
+<td colspan="2">DX8_CODIGO+DX8_LOJA</td>
+<td colspan="2">DXM_PRDTOR+DXM_LJPRO</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

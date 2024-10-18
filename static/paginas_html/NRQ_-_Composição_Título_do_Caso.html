@@ -1,0 +1,378 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: NRQ - Composição Título do Caso</title></head>
+<body>
+<font color="orange"><h2 id="NRQ">Tabela: NRQ - Composição Título do Caso</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Composição Título do Caso</b></td><td colspan="2"><b>NRQ_FILIAL+NRQ_CTIPAS+NRQ_CAREA+NRQ_CAMPO</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">NRQ_CTIPAS+NRQ_CAREA+NRQ_CAMPO</td><td>Cod Tipo Ass + Cod Area Jur + Nome Campo</td><td></td></tr>
+<tr><td>2</td><td colspan="2">NRQ_CTIPAS+NRQ_CAREA+NRQ_POSICA</td><td>Cod Tipo Ass + Cod Area Jur + Posicao</td><td></td></tr>
+<tr><td>3</td><td colspan="2">NRQ_FILIAL+NRQ_CAREA</td><td>Cod Area Jur</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>NRQ_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Descrição de Filial do Sistema
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NRQ_CTIPAS</td>
+<td>Cod Tipo Ass</td>
+<td colspan="2">Cod Tipo Assunto Juridico</td>
+<td colspan="4">Descrição de Cod Tipo Assunto Juridico
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td>ExistCpo("SX5","JW"+M->NRQ_CTIPAS)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/jw.html">JW</a></td>
+<td><a href="/tabelas_protheus/gatilhos/nrq_ctipas.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/035.html">035</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NRQ_DTIPAS</td>
+<td>Desc Tipo As</td>
+<td colspan="2">Descricao Tipo Assunto</td>
+<td colspan="4">Descrição de Descricao Tipo Assunto
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>Tabela( "JW", FwFldGet('NRQ_CTIPAS'), .F. )</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("SX5",1,xFilial("SX5")+"JW"+NRQ->NRQ_CTIPAS,"X5_DESCRI")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NRQ_CAREA</td>
+<td>Cod Area Jur</td>
+<td colspan="2">Codigo Area Juridica</td>
+<td colspan="4">Descrição de Codigo Area Juridica
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>                                             </td>
+<td>ExistCpo('NRB',M->NRQ_CAREA,1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/nrb.html">NRB</a></td>
+<td><a href="/tabelas_protheus/gatilhos/nrq_carea.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/112.html">112</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NRQ_DAREA</td>
+<td>Desc Area</td>
+<td colspan="2">Descricao Area Juridica</td>
+<td colspan="4">Descrição de Descricao Area Juridica
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IF(!INCLUI,Posicione('NRB',1,xFilial('NRB')+NRQ->NRQ_CAREA,'NRB_DESC'),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione('NRB',1,xFilial('NRB')+NRQ->NRQ_CAREA,'NRB_DESC')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NRQ_CAMPO</td>
+<td>Nome Campo</td>
+<td colspan="2">Nome do Campo do Titulo</td>
+<td colspan="4">Descrição de Nome do Campo do Titulo
+</td>
+<td>C</td>
+<td>12</td>
+<td>0</td>
+<td>                                             </td>
+<td>JurExistSX3(M->NRQ_CAMPO).AND.ExistChav("NRQ",M->NRQ_CTIPAS+M->NRQ_CAREA+M->NRQ_CAMPO,2)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/jusx3d.html">JUSX3D</a></td>
+<td><a href="/tabelas_protheus/gatilhos/nrq_campo.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NRQ_DCAMPO</td>
+<td>Desc Campo</td>
+<td colspan="2">Descricao do Campo</td>
+<td colspan="4">Descrição de Descricao do Campo
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IIf( !Inclui, RetTitle(M->NRQ_CAMPO),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>RetTitle(NRQ->NRQ_CAMPO)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NRQ_ABREV</td>
+<td>Abreviar?</td>
+<td colspan="2">Abreviar Campo?</td>
+<td colspan="4">Descrição de Abreviar Campo?
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("12")</td>
+<td>2</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NRQ_QTDCAR</td>
+<td>Qtd Caracter</td>
+<td colspan="2">Quantidade de Caracteres</td>
+<td colspan="4">Descrição de Separador entre campos
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>FwFldGet('NRQ_ABREV') == '1'</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NRQ_SEPARA</td>
+<td>Separador</td>
+<td colspan="2">Separador entre campos</td>
+<td colspan="4">Campo para inclusão de caracteres que
+serão usados como separador entre campos
+da composição do titulo do caso.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NRQ_POSICA</td>
+<td>Posicao</td>
+<td colspan="2">Posicao do Campo</td>
+<td colspan="4">Descrição de Posicao do Campo
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@9                                           </td>
+<td>ExistChav("NRQ",M->NRQ_CTIPAS+M->NRQ_CAREA+M->NRQ_POSICA,2)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

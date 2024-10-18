@@ -1,0 +1,447 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: DTD - Prazos de Regiões</title></head>
+<body>
+<font color="orange"><h2 id="DTD">Tabela: DTD - Prazos de Regiões</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Prazos de Regiões</b></td><td colspan="2"><b></b></td><td><b>TMSA390</b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">DTD_FILIAL+DTD_CDRORI+DTD_CDRDES+DTD_TIPTRA</td><td>Cod.Reg.Ori. + Cod.Reg.Des. + Tipo Transp.</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>DTD_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Filial do Sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTD_CDRORI</td>
+<td>Cod.Reg.Ori.</td>
+<td colspan="2">Cod.Regiao Origem</td>
+<td colspan="4">Código da região origem da viagem.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("DUY",M->DTD_CDRORI,1) .And. TmsTipReg(M->DTD_CDRORI,"1")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/duy.html">DUY</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dtd_cdrori.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DTD_REGORI</td>
+<td>Reg.Origem</td>
+<td colspan="2">Reg.Origem</td>
+<td colspan="4">Descrição da Região de origem.
+Este campo será preenchido
+automaticamente pelo sistema, após
+informar o código da região de origem.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>TmsPesqRegiao("DTD_CDRORI","DTD_REGORI")</td>
+<td>Iif(Inclui,"",Posicione("DUY",1,xFilial("DUY")+DTD->DTD_CDRORI,"DUY_DESCRI"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("DUY",1,xFilial("DUY")+DTD->DTD_CDRORI,"DUY_DESCRI")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTD_CDRDES</td>
+<td>Cod.Reg.Des.</td>
+<td colspan="2">Cod.Regiao Destino</td>
+<td colspan="4">Código da região destino da viagem.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("DUY",M->DTD_CDRDES,1) .And. TmsTipReg(M->DTD_CDRDES,"2")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/duy.html">DUY</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dtd_cdrdes.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DTD_REGDES</td>
+<td>Reg.Destino</td>
+<td colspan="2">Reg.Destino</td>
+<td colspan="4">Descrição da Região de Destino.
+Este campo será preenchido
+automaticamente pelo sistema, após
+informar o código da região de destino.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>TmsPesqRegiao("DTD_CDRDES","DTD_REGDES")</td>
+<td>Iif(Inclui,"",Posicione("DUY",1,xFilial("DUY")+DTD->DTD_CDRDES,"DUY_DESCRI"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("DUY",1,xFilial("DUY")+DTD->DTD_CDRDES,"DUY_DESCRI")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTD_TIPTRA</td>
+<td>Tipo Transp.</td>
+<td colspan="2">Tipo Transporte</td>
+<td colspan="4">Código do tipo de transporte
+correspondente a esta operação. Ex.:
+Rodoviário, Aéreo, Fluvial ...
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>TMSValField("M->DTD_TIPTRA",.T.,"DTD_DESTPT")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dlc.html">DLC</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DTD_DESTPT</td>
+<td>Desc.Tp.Tran</td>
+<td colspan="2">Desc.Tipo Transporte</td>
+<td colspan="4">Descrição do Tipo de transporte.
+A informação é preenchida
+automaticamente após preenchimento do
+tipo de transporte.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!Inclui,TMSValField("DTD->DTD_TIPTRA",.F.,"DTD_DESTPT"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTD_TMEMBI</td>
+<td>Tmp.Emb. De</td>
+<td colspan="2">Tempo Embarque Inicial</td>
+<td colspan="4">Informe o tempo mínimo para embarque das
+mercadorias.
+</td>
+<td>C</td>
+<td>7</td>
+<td>0</td>
+<td>@R 99999:99                                  </td>
+<td>(Val(Right(M->DTD_TMEMBI:=STRTRAN(M->DTD_TMEMBI," ","0"),2)) <= 59) .and. !("-"$M->DTD_TMEMBI).And.TmsA390Vld()</td>
+<td>"0000000"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTD_TMEMBF</td>
+<td>Tmp.Emb. Ate</td>
+<td colspan="2">Tempo Embarque Final</td>
+<td colspan="4">Informe o tempo máximo para o embarque
+das mercadorias.
+</td>
+<td>C</td>
+<td>7</td>
+<td>0</td>
+<td>@R 99999:99                                  </td>
+<td>(Val(Right(M->DTD_TMEMBF:=STRTRAN(M->DTD_TMEMBF," ","0"),2)) <= 59) .and. !("-"$M->DTD_TMEMBF).And.TmsA390Vld()</td>
+<td>"0000000"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTD_TMTRAI</td>
+<td>Tmp.Traf.De</td>
+<td colspan="2">Tempo Trafego Inicial</td>
+<td colspan="4">Informe o tempo mínimo para o Tráfego
+entre as regiões.
+</td>
+<td>C</td>
+<td>7</td>
+<td>0</td>
+<td>@R 99999:99                                  </td>
+<td>(Val(Right(M->DTD_TMTRAI:=STRTRAN(M->DTD_TMTRAI," ","0"),2)) <= 59) .and. !("-"$M->DTD_TMTRAI).And.TmsA390Vld()</td>
+<td>"0000000"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTD_TMTRAF</td>
+<td>Tmp.Traf.Ate</td>
+<td colspan="2">Tempo Trafego Final</td>
+<td colspan="4">Informe o tempo máximo para o Tráfego
+entre as regiões.
+</td>
+<td>C</td>
+<td>7</td>
+<td>0</td>
+<td>@R 99999:99                                  </td>
+<td>(Val(Right(M->DTD_TMTRAF:=STRTRAN(M->DTD_TMTRAF," ","0"),2)) <= 59) .and. !("-"$M->DTD_TMTRAF).And.TmsA390Vld()</td>
+<td>"0000000"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTD_TMDISI</td>
+<td>Tmp.Dist.De</td>
+<td colspan="2">Tempo Distrib.Inicial</td>
+<td colspan="4">Informe o tempo mínimo para Distribuição
+das mercadorias.
+</td>
+<td>C</td>
+<td>7</td>
+<td>0</td>
+<td>@R 99999:99                                  </td>
+<td>(Val(Right(M->DTD_TMDISI:=STRTRAN(M->DTD_TMDISI," ","0"),2)) <= 59) .and. !("-"$M->DTD_TMDISI).And.TmsA390Vld()</td>
+<td>"0000000"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTD_TMDISF</td>
+<td>Tmp.Dist.Ate</td>
+<td colspan="2">Tempo Distrib.Final</td>
+<td colspan="4">Informe o tempo máximo para Distribuição
+das mercadorias.
+</td>
+<td>C</td>
+<td>7</td>
+<td>0</td>
+<td>@R 99999:99                                  </td>
+<td>(Val(Right(M->DTD_TMDISF:=STRTRAN(M->DTD_TMDISF," ","0"),2)) <= 59) .and. !("-"$M->DTD_TMDISF).And.TmsA390Vld()</td>
+<td>"0000000"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

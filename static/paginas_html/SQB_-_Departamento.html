@@ -1,0 +1,897 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: SQB - Departamento</title></head>
+<body>
+<font color="orange"><h2 id="SQB">Tabela: SQB - Departamento</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Departamento</b></td><td colspan="2"><b>QB_FILIAL+QB_DEPTO</b></td><td><b>CSAA100</b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">QB_FILIAL+QB_DEPTO+QB_DESCRIC</td><td>Departamento + Descricao</td><td></td></tr>
+<tr><td>2</td><td colspan="2">QB_FILIAL+QB_DESCRIC</td><td>Descricao</td><td></td></tr>
+<tr><td>3</td><td colspan="2">QB_FILIAL+QB_DEPTO+QB_CC</td><td>Departamento + Centro Custo</td><td></td></tr>
+<tr><td>4</td><td colspan="2">QB_FILIAL+QB_CC+QB_DEPTO</td><td>Centro Custo + Departamento</td><td></td></tr>
+<tr><td>6</td><td colspan="2">QB_FILIAL+QB_KEYINI</td><td>Chave de bus</td><td>KEYINI</td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>QB_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Neste campo deve ser digitado:
+Código que identifica a filial da
+empresa usuária do sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QB_DEPTO</td>
+<td>Departamento</td>
+<td colspan="2">Departamento</td>
+<td colspan="4">Neste campo deve ser digitado:
+Código da unidade de trabalho.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistChav("SQB") .And. FreeForUse("SQB",M->QB_DEPTO)</td>
+<td>GetSX8Num("SQB","QB_DEPTO")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/025.html">025</a></td>
+<td></td>
+<td></td>
+<td>#QB_DEPTO  <>'   '</td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>QB_DESCRIC</td>
+<td>Descricao</td>
+<td colspan="2">Descricao do Departamento</td>
+<td colspan="4">Neste campo deve ser digitado:
+Descrição da unidade de trabalho.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>naovazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td>#QB_DESCRIC<>'                    '</td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>QB_CC</td>
+<td>Centro Custo</td>
+<td colspan="2">Código do Centro de Custo</td>
+<td colspan="4">Deve ser informado o código do Centro de
+Custos.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>CTB105CC() .And. FHIST()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ctt.html">CTT</a></td>
+<td><a href="/tabelas_protheus/gatilhos/qb_cc.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/004.html">004</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>QB_DESCCC</td>
+<td>Descr.CCusto</td>
+<td colspan="2">Descr. Centro de Custo</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>iif(Inclui," ",fDesc("CTT",SQB->QB_CC,"CTT_DESC01") )</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>CCDescSQB()</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QB_REGIAO</td>
+<td>Região</td>
+<td colspan="2">Região do Departamento</td>
+<td colspan="4">Deve ser informado o código da Região.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("RBS")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/rbs.html">RBS</a></td>
+<td><a href="/tabelas_protheus/gatilhos/qb_regiao.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>QB_DESCREG</td>
+<td>Descr.Região</td>
+<td colspan="2">Descrição da Região</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",fDesc("RBS",SQB->QB_REGIAO,"RBS_DESCRI"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QB_EMPRESP</td>
+<td>Emp. Resp.</td>
+<td colspan="2">Empresa do Responsável</td>
+<td colspan="4">Informe o grupo de empresa do
+responsável.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. VldEmpCsa()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sm0mrp.html">SM0MRP</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QB_FILRESP</td>
+<td>Filial Resp.</td>
+<td colspan="2">Filial do Responsavel</td>
+<td colspan="4">Informe a filial do responsável.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td>Vazio() .or. ExistCpo("SM0", EmpSQBResp() + M->QB_FILRESP)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sm0sqb.html">SM0SQB</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QB_MATRESP</td>
+<td>Matric Resp</td>
+<td colspan="2">Matricula do Responsavel</td>
+<td colspan="4">Informe  a Matricula do responsavel
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>iif (FindFunction('VldMatResp'), VldMatResp(), .T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sradep.html">SRADEP</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/121.html">121</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QB_DEPSUP</td>
+<td>Depto Super</td>
+<td colspan="2">Departamento Superior</td>
+<td colspan="4">informe o codigo do departamento
+superior
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .or. Existcpo("SQB")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sqb.html">SQB</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/025.html">025</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QB_FILTIT</td>
+<td>Filial Tit</td>
+<td colspan="2">Filial Titular</td>
+<td colspan="4">Quando o departamento for uma
+promotoria, informe a filial do promotor
+titular.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td>Vazio() .Or. ExistCpo("SM0", cEmpAnt + M->QB_FILTIT)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sm0.html">SM0</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QB_ARELIN</td>
+<td>Ar.Lin.Neg.</td>
+<td colspan="2">Área e Linha de Negocio</td>
+<td colspan="4">Informe a Área e a Linha de Negócio.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QB_KEYINI</td>
+<td>Chave de bus</td>
+<td colspan="2">Chave de busca das solici</td>
+<td colspan="4">Campo destinado para informar a chave de
+busca das solicitações.
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QB_MATTIT</td>
+<td>Mat Titular</td>
+<td colspan="2">Matricula do Titular</td>
+<td colspan="4">Quando o departamento for uma
+promotoria, informe a matrícula do
+promotor titular.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. (ExistCpoRh("SRA", M->QB_MATTIT, 1, M->QB_FILTIT) .And. SRA->RA_CATFUNC $ "0,1")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sracat.html">SRACAT</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>(M->RA_FILIAL := M->QB_FILTIT, .T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/121.html">121</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QB_FILRSP2</td>
+<td>Fil. 2 Resp.</td>
+<td colspan="2">Filial do segundo resp.</td>
+<td colspan="4">Informa a filial do segundo responsável.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td>Vazio() .or. ExistCpo("SM0", cEmpAnt + M->QB_FILRSP2)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sm0.html">SM0</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QB_MATRSP2</td>
+<td>Matr. 2 Resp</td>
+<td colspan="2">Matricula do Responsavel</td>
+<td colspan="4">Informe o código da matrícula para o
+segundo responsável pelo departamento.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .or. ExistCpoRh("SRA",M->QB_MATRSP2,1,M->QB_FILRSP2)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sra05.html">SRA05</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/121.html">121</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QB_COMARC</td>
+<td>Comarca</td>
+<td colspan="2">Comarca</td>
+<td colspan="4">Informe o Código da Comarca.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ValComa()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/rec.html">REC</a></td>
+<td><a href="/tabelas_protheus/gatilhos/qb_comarc.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>QB_CONOME</td>
+<td>Nome Comarca</td>
+<td colspan="2">Nome da Comarca</td>
+<td colspan="4">Contem o Nome da Comarca.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(!INCLUI,Posicione("REC",1,xFilial("REC")+SQB->QB_COMARC,"REC_NOME"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("REC",1,xFilial("REC")+SQB->QB_COMARC,"REC_NOME")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QB_GRUPO</td>
+<td>Grupo</td>
+<td colspan="2">Grupo Funcional</td>
+<td colspan="4">Neste campo deve ser digitado:
+Código do grupo da unidade de
+trabalho
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td>ExistCpo("SQ0")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>TOC</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">TOC_DEPTO</td>
+</tr>
+<tr>
+<td>RGB</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">RGB_DEPTO</td>
+</tr>
+<tr>
+<td>SQG</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">QG_DEPTO</td>
+</tr>
+<tr>
+<td>SRL</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">RL_DEPTO</td>
+</tr>
+<tr>
+<td>TN0</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">TN0_DEPTO</td>
+</tr>
+<tr>
+<td>SU5</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">U5_DEPTO</td>
+</tr>
+<tr>
+<td>SPI</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">PI_DEPTO</td>
+</tr>
+<tr>
+<td>SPL</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">PL_DEPTO</td>
+</tr>
+<tr>
+<td>RI5</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">RI5_SOLRES</td>
+</tr>
+<tr>
+<td>G9Z</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">G9Z_CODDPA</td>
+</tr>
+<tr>
+<td>G9Z</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">G9Z_CODDPS</td>
+</tr>
+<tr>
+<td>GQG</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">GQG_DEPSOL</td>
+</tr>
+<tr>
+<td>SV7</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">V7_DEPTO</td>
+</tr>
+<tr>
+<td>TYA</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">TYA_DEPTO</td>
+</tr>
+<tr>
+<td>SPC</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">PC_DEPTO</td>
+</tr>
+<tr>
+<td>RA8</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">RA8_DEPTO</td>
+</tr>
+<tr>
+<td>SPB</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">PB_DEPTO</td>
+</tr>
+<tr>
+<td>SP8</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">P8_DEPTO</td>
+</tr>
+<tr>
+<td>RJ2</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">RJ2_DEPTO</td>
+</tr>
+<tr>
+<td>GII</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">GII_DEPSOL</td>
+</tr>
+<tr>
+<td>RCL</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">RCL_DEPTO</td>
+</tr>
+<tr>
+<td>RGJ</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">RGJ_DEPTO</td>
+</tr>
+<tr>
+<td>RAQ</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">RAQ_CODDEP</td>
+</tr>
+<tr>
+<td>SQB</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">QB_DEPSUP</td>
+</tr>
+<tr>
+<td>RI8</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">RI8_DEPTO</td>
+</tr>
+<tr>
+<td>RI8</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">RI8_DEPTOT</td>
+</tr>
+<tr>
+<td>RIC</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">RIC_DEPTO</td>
+</tr>
+<tr>
+<td>TI0</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">TI0_DEPTO</td>
+</tr>
+<tr>
+<td>TMY</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">TMY_NOVDEP</td>
+</tr>
+<tr>
+<td>TAF</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">TAF_DEPTO</td>
+</tr>
+<tr>
+<td>TGS</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">TGS_DPTO</td>
+</tr>
+<tr>
+<td>REY</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">REY_DEPTO</td>
+</tr>
+<tr>
+<td>SRC</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">RC_DEPTO</td>
+</tr>
+<tr>
+<td>SRD</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">RD_DEPTO</td>
+</tr>
+<tr>
+<td>RBU</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">RBU_DEPTO</td>
+</tr>
+<tr>
+<td>RC1</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">RC1_DEPTO</td>
+</tr>
+<tr>
+<td>RF7</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">RF7_DEPTO</td>
+</tr>
+<tr>
+<td>RAR</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">RAR_CODDEP</td>
+</tr>
+<tr>
+<td>GI8</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">GI8_DEPSOL</td>
+</tr>
+<tr>
+<td>TM0</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">TM0_DEPTO</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td colspan="2">QB_FILIAL+QB_DEPTO</td>
+<td colspan="2">RE_FILIAL+RE_DEPTOD</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td colspan="2">QB_FILIAL+QB_DEPTO</td>
+<td colspan="2">RE_FILIAL+RE_DEPTOP</td>
+</tr>
+<tr>
+<td>RC6</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">RC6_DEPTO</td>
+</tr>
+<tr>
+<td>RIL</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">RIL_DEPTO</td>
+</tr>
+<tr>
+<td>RBX</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">RBX_DEPTO</td>
+</tr>
+<tr>
+<td>SQ3</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">Q3_DEPTO</td>
+</tr>
+<tr>
+<td>RBT</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">RBT_DEPTO</td>
+</tr>
+<tr>
+<td>TOB</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">TOB_DEPTO</td>
+</tr>
+<tr>
+<td>SRA</td>
+<td colspan="2">QB_DEPTO</td>
+<td colspan="2">RA_DEPTO</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

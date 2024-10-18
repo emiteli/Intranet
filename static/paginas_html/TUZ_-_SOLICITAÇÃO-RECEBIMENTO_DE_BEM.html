@@ -1,0 +1,761 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: TUZ - SOLICITAÇÃO/RECEBIMENTO DE BEM</title></head>
+<body>
+<font color="orange"><h2 id="TUZ">Tabela: TUZ - SOLICITAÇÃO/RECEBIMENTO DE BEM</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>SOLICITAÇÃO/RECEBIMENTO DE BEM</b></td><td colspan="2"><b>TUZ_FILIAL+TUZ_CODIGO</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">TUZ_FILIAL+TUZ_CODIGO</td><td>Código</td><td></td></tr>
+<tr><td>2</td><td colspan="2">TUZ_FILIAL+TUZ_CODREL</td><td>Cód. Relac.</td><td></td></tr>
+<tr><td>3</td><td colspan="2">TUZ_FILIAL+TUZ_CODBEM+TUZ_EMPDES+TUZ_FILDES+DTOS(TUZ_DATATR)+TUZ_HORATR</td><td>Bem + Emp. Destino + Fil. Destino + Data Transf. + Hora Transf.</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>TUZ_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Código da Filial do Sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TUZ_CODIGO</td>
+<td>Código</td>
+<td colspan="2">Código</td>
+<td colspan="4">Código da Transferência.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistChav("TUZ",M->TUZ_CODIGO) .and. FreeForUse("TUZ")</td>
+<td>IF(INCLUI,GETSXENUM("TUZ","TUZ_CODIGO"),TUZ->TUZ_CODIGO)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TUZ_TPOPER</td>
+<td>Operação</td>
+<td colspan="2">Operação</td>
+<td colspan="4">Tipo de Operação do registro.
+1=Envio;2=Recebimento;
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>IF(INCLUI,"1",TUZ->TUZ_TPOPER)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=Envio;2=Recebimento</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TUZ_EMPORI</td>
+<td>Emp. Origem</td>
+<td colspan="2">Empresa Origem</td>
+<td colspan="4">Empresa de Origem do bem transferido.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(INCLUI,cEmpAnt,TUZ->TUZ_EMPORI)</td>
+<td><a href="/tabelas_protheus/f3/ym0.html">YM0</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TUZ_FILORI</td>
+<td>Fil. Origem</td>
+<td colspan="2">Filial Origem</td>
+<td colspan="4">Filial de Origem do bem transferido.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IF(INCLUI,cFilAnt,TUZ->TUZ_FILORI)</td>
+<td><a href="/tabelas_protheus/f3/xm0.html">XM0</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TUZ_DESORI</td>
+<td>Desc. Orig.</td>
+<td colspan="2">Descrição Origem</td>
+<td colspan="4">Descrição da Empresa/Filial de Origem do
+bem transferido.
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>MNT551REL('TUZ_DESORI')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>MNT551REL('TUZ_DESORI',.T.)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TUZ_CODBEM</td>
+<td>Bem</td>
+<td colspan="2">Bem</td>
+<td colspan="4">Código do Bem a ser transferido.
+</td>
+<td>C</td>
+<td>16</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>MNT551VAL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/st9.html">ST9</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tuz_codbem.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TUZ_DESBEM</td>
+<td>Descrição</td>
+<td colspan="2">Descrição</td>
+<td colspan="4">Descrição do Bem a ser transferido.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>MNT551REL('TUZ_DESBEM')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>MNT551REL('TUZ_DESBEM',.T.)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TUZ_EMPDES</td>
+<td>Emp. Destino</td>
+<td colspan="2">Empresa Destino</td>
+<td colspan="4">Empresa de Destino do bem transferido.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>MNT551VAL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ym0.html">YM0</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tuz_empdes.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TUZ_FILDES</td>
+<td>Fil. Destino</td>
+<td colspan="2">Filial Destino</td>
+<td colspan="4">Filial de Destino do bem transferido.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td>MNT551VAL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ngxm0.html">NGXM0</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tuz_fildes.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TUZ_DESDES</td>
+<td>Desc. Dest.</td>
+<td colspan="2">Descrição Destino</td>
+<td colspan="4">Descrição da Empresa/Filial de Destino
+do bem transferido.
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>MNT551REL('TUZ_DESDES')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>MNT551REL('TUZ_DESDES',.T.)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TUZ_DATAIN</td>
+<td>Data Envio</td>
+<td colspan="2">Data Envio</td>
+<td colspan="4">Data de Envio do bem.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>MNT551VAL()</td>
+<td>IF(INCLUI,dDatabase,TUZ->TUZ_DATAIN)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>MNT551WHEN('TUZ_DATAIN')</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TUZ_HORAIN</td>
+<td>Hora Envio</td>
+<td colspan="2">Hora Envio</td>
+<td colspan="4">Hora de Envio do bem.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td>MNT551VAL()</td>
+<td>IF(INCLUI,Substr(Time(),1,5),TUZ->TUZ_HORAIN)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>MNT551WHEN('TUZ_HORAIN')</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TUZ_STATUS</td>
+<td>Status</td>
+<td colspan="2">Status</td>
+<td colspan="4">Status da transferência.
+1=Pendente;2=Transferido;
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>IF(INCLUI,"1",TUZ->TUZ_STATUS)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=Pendente;2=Transferido</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TUZ_ORDEM</td>
+<td>Ordem Serv.</td>
+<td colspan="2">Ordem Serviço</td>
+<td colspan="4">Ordem de Serviço referente a checagem do
+bem antes da transferência.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>MNT551VAL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/stj.html">STJ</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>MNT551WHEN('TUZ_ORDEM')</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TUZ_CAUSA</td>
+<td>Causa Remoç.</td>
+<td colspan="2">Causa Remoção</td>
+<td colspan="4">Causa da transferência do bem.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>MNT551VAL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/stn.html">STN</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tuz_causa.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>MNT551WHEN('TUZ_CAUSA')</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TUZ_DESCAU</td>
+<td>Descrição</td>
+<td colspan="2">Descrição</td>
+<td colspan="4">Descrição da causa de transferência do
+bem.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>MNT551REL('TUZ_DESCAU')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>MNT551REL('TUZ_DESCAU',.T.)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TUZ_MOTSYP</td>
+<td>Motivo</td>
+<td colspan="2">Motivo</td>
+<td colspan="4">Motivo da transferência do bem.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TUZ_MOTIVO</td>
+<td>Motivo</td>
+<td colspan="2">Motivo</td>
+<td colspan="4">Motivo da transferência do bem.
+</td>
+<td>M</td>
+<td>80</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>If(INCLUI,'',MSMM(TUZ->TUZ_MOTSYP,80))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>MNT551WHEN('TUZ_MOTIVO')</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TUZ_DATATR</td>
+<td>Data Transf.</td>
+<td colspan="2">Data Transferência</td>
+<td colspan="4">Data da Transferência do bem.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TUZ_HORATR</td>
+<td>Hora Transf.</td>
+<td colspan="2">Hora Transferência</td>
+<td colspan="4">Hora da Transferência do bem.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TUZ_POSCON</td>
+<td>Contador 1</td>
+<td colspan="2">Contador 1</td>
+<td colspan="4">Posição do contador 1.
+</td>
+<td>N</td>
+<td>9</td>
+<td>0</td>
+<td>@E 999,999,999                               </td>
+<td>MNT551VAL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>MNT551WHEN('TUZ_POSCON')</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TUZ_POSCO2</td>
+<td>Contador 2</td>
+<td colspan="2">Contador 2</td>
+<td colspan="4">Posição do contador 2.
+</td>
+<td>N</td>
+<td>9</td>
+<td>0</td>
+<td>@E 999,999,999                               </td>
+<td>MNT551VAL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>MNT551WHEN('TUZ_POSCO2')</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TUZ_CODREL</td>
+<td>Cód. Relac.</td>
+<td colspan="2">Transferência Relacionada</td>
+<td colspan="4">Código do registro de Transferência na
+outra Empresa/Filial.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>TUX</td>
+<td colspan="2">TUZ_CODIGO</td>
+<td colspan="2">TUX_CODIGO</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

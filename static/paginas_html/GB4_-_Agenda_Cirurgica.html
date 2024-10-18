@@ -1,0 +1,1482 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: GB4 - Agenda Cirurgica</title></head>
+<body>
+<font color="orange"><h2 id="GB4">Tabela: GB4 - Agenda Cirurgica</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Agenda Cirurgica</b></td><td colspan="2"><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">GB4_FILIAL+GB4_SALA+DTOS(GB4_DATA)+GB4_HORINI</td><td>Codigo Sala + Data + Hora Inicial</td><td></td></tr>
+<tr><td>2</td><td colspan="2">GB4_FILIAL+GB4_CODCRM</td><td>Cirurgiao</td><td></td></tr>
+<tr><td>3</td><td colspan="2">GB4_FILIAL+GB4_REGATE</td><td>Reg.Internac</td><td></td></tr>
+<tr><td>4</td><td colspan="2">GB4_FILIAL+GB4_NOME</td><td>N.Paciente</td><td></td></tr>
+<tr><td>5</td><td colspan="2">GB4_FILIAL+GB4_CODAGD</td><td>Codigo Agend</td><td></td></tr>
+<tr><td>6</td><td colspan="2">GB4_FILIAL+GB4_GRPANE</td><td>Grupo Anest.</td><td></td></tr>
+<tr><td>7</td><td colspan="2">GB4_FILIAL+DTOS(GB4_DATA)</td><td>Data</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>GB4_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Código que identifica a filial da
+empresa usuária do sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GB4_REGATE</td>
+<td>Reg.Internac</td>
+<td colspan="2">Registro de Internacao</td>
+<td colspan="4">Informe o registo de atendimento do
+paciente.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>HspA47Ok()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/zvr.html">ZVR</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gb4_regate.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td>2</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GB4_SALA</td>
+<td>Codigo Sala</td>
+<td colspan="2">Codigo da Sala Cirurgica</td>
+<td colspan="4">Informe a sala que será realizada a
+cirurgia.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>HS_SeekRet("SX5","'GD'+M->GB4_SALA",1,.f.,"GB4_DESSAL","X5_DESCRI")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gd.html">GD</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>!lAltCir .And. !lCnfCir</td>
+<td>2</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GB4_DESSAL</td>
+<td>Sala</td>
+<td colspan="2">Descricao da Sala</td>
+<td colspan="4">Descrição da sala onde será feita a
+cirurgia.
+</td>
+<td>C</td>
+<td>45</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!Inclui,Posicione("SX5",1,xFilial("SX5")+"GD"+GB4->GB4_SALA,"X5_DESCRI"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("SX5",1,xFilial("SX5")+"GD"+GB4->GB4_SALA,"X5_DESCRI")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GB4_DATA</td>
+<td>Data</td>
+<td colspan="2">Data do Agendamento</td>
+<td colspan="4">Data do Agendamento
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>@D                                           </td>
+<td></td>
+<td>DDATABASE</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>!lAltCir .And. !lCnfCir</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GB4_HORINI</td>
+<td>Hora Inicial</td>
+<td colspan="2">Hora Inicial da Cirurgia</td>
+<td colspan="4">Informe a hora de inicio da cirurgia.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>!lAltCir .And. !lCnfCir</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GB4_HORFIN</td>
+<td>Hora Final</td>
+<td colspan="2">Hora Final da Cirurgia</td>
+<td colspan="4">Hora pra o termino da cirurgia.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>!lAltCir .And. !lCnfCir</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GB4_DTNASC</td>
+<td>Data Nasc.</td>
+<td colspan="2">Data de Nascimento</td>
+<td colspan="4">Data de Nascimento do paciente
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>@D                                           </td>
+<td>HspA47Ok()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GB4_SEXO</td>
+<td>Sexo</td>
+<td colspan="2">Sexo</td>
+<td colspan="4">Informe o Sexo do Paciente
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>IIf(!Empty(M->GB4_SEXO), Pertence("01"), .T.) .And. HspA47Ok()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>0=Masculino;1=Feminino</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GB4_IDADE</td>
+<td>Idade</td>
+<td colspan="2">Idade do Paciente</td>
+<td colspan="4">Informe a idade do paciente.
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GB4_TIPO</td>
+<td>Tipo Idade</td>
+<td colspan="2">Tipo de Idade do Paciente</td>
+<td colspan="4">Informe o tipo de idade do paciente.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("0123")</td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Anos;1=Dias;2=Meses;3=Horas</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GB4_REGGER</td>
+<td>R.G.Paciente</td>
+<td colspan="2">Regis. geral do paciente</td>
+<td colspan="4">Informe o Registro geral do paciente
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>IIf(!Empty(M->GB4_REGGER),HS_SeekRet("GBH","M->GB4_REGGER",1,.f.,"GB4_NOME","GBH_NOME"), .T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/rgp.html">RGP</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>!lCnfCir</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GB4_NOME</td>
+<td>N.Paciente</td>
+<td colspan="2">Nome do paciente</td>
+<td colspan="4">Informe o nome do paciente.
+</td>
+<td>C</td>
+<td>45</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>!lCanCir .And. EMPTY(M->GB4_REGGER)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GB4_CODPRO</td>
+<td>Cod Cirurgia</td>
+<td colspan="2">Codigo da Cirurgia</td>
+<td colspan="4">Informe o Codigo da Cirurgia
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>HS_SeekRet("GA7","M->GB4_CODPRO",1,.f.,"GB4_DESPRO","GA7_DESC")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ga7.html">GA7</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td>2</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GB4_DESPRO</td>
+<td>Cirurgia</td>
+<td colspan="2">Nome da Cirurgia</td>
+<td colspan="4">Descrição da cirurgia
+</td>
+<td>C</td>
+<td>45</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!Inclui,Posicione("GA7",1,xFilial("GA7")+GB4->GB4_CODPRO,"GA7_DESC"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("GA7",1,xFilial("GA7")+GB4->GB4_CODPRO,"GA7_DESC")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GB4_CODCRM</td>
+<td>Cirurgiao</td>
+<td colspan="2">Cirurgiao</td>
+<td colspan="4">Informe o Código do Cirurgião.
+</td>
+<td>C</td>
+<td>7</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>HS_SeekRet("SRA","M->GB4_CODCRM",11,.f.,"GB4_NOMMED","RA_NOME")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/med.html">MED</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>!lCnfCir</td>
+<td>2</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GB4_NOMMED</td>
+<td>Nome Cirurg.</td>
+<td colspan="2">Nome do Cirurgiao</td>
+<td colspan="4">Nome do cirugião.
+</td>
+<td>C</td>
+<td>45</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!Inclui,Posicione("SRA",11,XFILIAL("SRA")+GB4->GB4_CODCRM,"RA_NOME")," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("SRA",11,xFilial("SRA")+GB4->GB4_CODCRM,"RA_NOME")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GB4_GRPANE</td>
+<td>Grupo Anest.</td>
+<td colspan="2">Grupo de Anestesistas</td>
+<td colspan="4">Informe o Grupo de Anestesistas
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>HS_SeekRet("SX5","'GA'+M->GB4_GRPANE",1,.f.,"GB4_NGRPAN","X5_DESCRI")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ga.html">GA</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td>2</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GB4_NGRPAN</td>
+<td>Nome Grp.An.</td>
+<td colspan="2">Nome Grupo de Anestesitas</td>
+<td colspan="4">Nome do Grupo de Anestesitas
+</td>
+<td>C</td>
+<td>45</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!Inclui,Posicione("SX5",1,xFilial("SX5")+'GA'+GB4->GB4_GRPANE,"X5_DESCRI")," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("SX5",1,xFilial("SX5")+'GA'+GB4->GB4_GRPANE,"X5_DESCRI")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GB4_CODCON</td>
+<td>Cod Convenio</td>
+<td colspan="2">Codigo do Convenio</td>
+<td colspan="4">Informe o código do convenio.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>HS_SeekRet("GA9","M->GB4_CODCON",1,.f.,"GB4_NOMCON","GA9_NREDUZ")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ga9.html">GA9</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>!lCnfCir</td>
+<td>2</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GB4_NOMCON</td>
+<td>Convenio</td>
+<td colspan="2">Nome do Convenio</td>
+<td colspan="4">Nome do Convênio
+</td>
+<td>C</td>
+<td>45</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!Inclui,Posicione("GA9",1,xFilial("GA9")+GB4->GB4_CODCON,"GA9_NREDUZ"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("GA9",1,xFilial("GA9")+GB4->GB4_CODCON,"GA9_NREDUZ")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GB4_AGDOBS</td>
+<td>Observacao</td>
+<td colspan="2">Observacoes da Cirurgia</td>
+<td colspan="4">Observações do Agendamento
+</td>
+<td>M</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GB4_RX</td>
+<td>RX</td>
+<td colspan="2">RX</td>
+<td colspan="4">Informe se na cirugia será necessário
+Rio X (S=Sim, N=Não)
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("01")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Nao;1=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GB4_SANGUE</td>
+<td>Sangue</td>
+<td colspan="2">Sangue</td>
+<td colspan="4">Informe se será necessário sangue na
+cirurgia (S=Sim, N=Não)
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("01")</td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Nao;1=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GB4_CTI</td>
+<td>CTI</td>
+<td colspan="2">CTI</td>
+<td colspan="4">Informe se será utilizado o CTI
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("01")</td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Nao;1=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GB4_CRMAU1</td>
+<td>1o. Auxiliar</td>
+<td colspan="2">1o. Auxiliar</td>
+<td colspan="4">Informe o CRM do 1º. Auxiliar.
+</td>
+<td>C</td>
+<td>7</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>HS_SeekRet("SRA","M->GB4_CRMAU1",11,.f.,"GB4_NOMAU1","RA_NOME")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/med.html">MED</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td>2</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GB4_NOMAU1</td>
+<td>Nome 1o. Aux</td>
+<td colspan="2">Nome do 1o Auxiliar</td>
+<td colspan="4">Nome do Auxiliar
+</td>
+<td>C</td>
+<td>45</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!Inclui,Posicione("SRA",11,xFilial("SRA")+GB4->GB4_CRMAU1,"RA_NOME")," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("SRA",11,xFilial("SRA")+GB4->GB4_CRMAU1,"RA_NOME")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GB4_CRMAU2</td>
+<td>2o. Auxiliar</td>
+<td colspan="2">2o. Auxiliar</td>
+<td colspan="4">Informe o nome do 2º. Auxiliar.
+</td>
+<td>C</td>
+<td>7</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>HS_SeekRet("SRA","M->GB4_CRMAU2",11,.f.,"GB4_NOMAU2","RA_NOME")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/med.html">MED</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td>2</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GB4_NOMAU2</td>
+<td>Nome 2o. Aux</td>
+<td colspan="2">Nome do 2o Auxiliar</td>
+<td colspan="4">Nome do Auxiliar.
+</td>
+<td>C</td>
+<td>45</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!Inclui,Posicione("SRA",11,xFilial("SRA")+GB4->GB4_CRMAU2,"RA_NOME")," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("SRA",11,xFilial("SRA")+GB4->GB4_CRMAU2,"RA_NOME")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GB4_CRMAU3</td>
+<td>3o. Auxiliar</td>
+<td colspan="2">3o. Auxiliar</td>
+<td colspan="4">Informe o CRM do 3º. Auxiliar.
+</td>
+<td>C</td>
+<td>7</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>HS_SeekRet("SRA","M->GB4_CRMAU3",11,.f.,"GB4_NOMAU3","RA_NOME")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/med.html">MED</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td>2</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GB4_NOMAU3</td>
+<td>Nome 3o. Aux</td>
+<td colspan="2">Nome do 3o Auxiliar</td>
+<td colspan="4">Nome do Auxiliar.
+</td>
+<td>C</td>
+<td>45</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!Inclui,Posicione("SRA",11,xFilial("SRA")+GB4->GB4_CRMAU3,"RA_NOME")," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("SRA",11,xFilial("SRA")+GB4->GB4_CRMAU3,"RA_NOME")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GB4_CRMAU4</td>
+<td>4o. Auxiliar</td>
+<td colspan="2">4o. Auxiliar</td>
+<td colspan="4">Informe o CRM do 3º. Auxiliar.
+</td>
+<td>C</td>
+<td>7</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>HS_SeekRet("SRA","M->GB4_CRMAU4",11,.f.,"GB4_NOMAU4","RA_NOME")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/med.html">MED</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td>2</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GB4_NOMAU4</td>
+<td>Nome 4o. Aux</td>
+<td colspan="2">Nome do 4o Auxiliar</td>
+<td colspan="4">Nome do Auxiliar.
+</td>
+<td>C</td>
+<td>45</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!Inclui,Posicione("SRA",11,xFilial("SRA")+GB4->GB4_CRMAU4,"RA_NOME")," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("SRA",11,xFilial("SRA")+GB4->GB4_CRMAU4,"RA_NOME")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GB4_CRMANE</td>
+<td>Anestesista</td>
+<td colspan="2">Anestesista</td>
+<td colspan="4">Informe o CRM do Anestesista
+</td>
+<td>C</td>
+<td>7</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>HS_SeekRet("SRA","M->GB4_CRMANE",11,.f.,"GB4_NOMANE","RA_NOME")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/med.html">MED</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td>2</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GB4_NOMANE</td>
+<td>Nome Anest.</td>
+<td colspan="2">Nome do Anestesista</td>
+<td colspan="4">Nome do Anestesista
+</td>
+<td>C</td>
+<td>45</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!Inclui,Posicione("SRA",11,xFilial("SRA")+GB4->GB4_CRMANE,"RA_NOME")," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("SRA",11,xFilial("SRA")+GB4->GB4_CRMANE,"RA_NOME")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GB4_ANEST</td>
+<td>Cd.Anestesia</td>
+<td colspan="2">Codigo da Anestesia</td>
+<td colspan="4">Informe a anestesia que será utilizada
+na cirurgia.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>HS_SeekRet("SX5","'CA'+M->GB4_ANEST",1,.f.,"GB4_DESANE","X5_DESCRI")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ca.html">CA</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td>2</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GB4_DESANE</td>
+<td>Anestesia</td>
+<td colspan="2">Nome da Anestesia</td>
+<td colspan="4">Descrição da Anestesia
+</td>
+<td>C</td>
+<td>37</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!Inclui,Posicione("SX5",1,xFilial("SX5")+"CA"+GB4->GB4_ANEST,"X5_DESCRI"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("SX5",1,xFilial("SX5")+"CA"+GB4->GB4_ANEST,"X5_DESCRI")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GB4_TIPCIR</td>
+<td>Cod.Tpo Cir.</td>
+<td colspan="2">Codigo Tipo de Cirurgia</td>
+<td colspan="4">Informe o código do tipo da cirurgia que
+será realizada.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>HS_SeekRet("SX5","'CQ'+M->GB4_TIPCIR",1,.f.,"GB4_DESTPC","X5_DESCRI")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/cq.html">CQ</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td>2</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GB4_DESTPC</td>
+<td>Tpo Cirurgia</td>
+<td colspan="2">Descricao Tipo Cirurgia</td>
+<td colspan="4">Descrição do tipo de cirurgia
+</td>
+<td>C</td>
+<td>45</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!Inclui,Posicione("SX5",1,xFilial("SX5")+"CQ"+GB4->GB4_TIPCIR,"X5_DESCRI"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("SX5",1,xFilial("SX5")+"CQ"+GB4->GB4_TIPCIR,"X5_DESCRI")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GB4_PORTCI</td>
+<td>Cod. Porte</td>
+<td colspan="2">Codigo Porte de Cirurgia</td>
+<td colspan="4">Informe o porte da cirurgia.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>HS_SeekRet("SX5","'PC'+M->GB4_PORTCI",1,.f.,"GB4_DESPOR","X5_DESCRI")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/pc.html">PC</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td>2</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GB4_DESPOR</td>
+<td>Porte Cirurg</td>
+<td colspan="2">Descricao Porte Cirurgia</td>
+<td colspan="4">Descrição do porte da cirurgia
+</td>
+<td>C</td>
+<td>45</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!Inclui,Posicione("SX5",1,xFilial("SX5")+"PC"+GB4->GB4_PORTCI,"X5_DESCRI"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("SX5",1,xFilial("SX5")+"PC"+GB4->GB4_PORTCI,"X5_DESCRI")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GB4_CODAGD</td>
+<td>Codigo Agend</td>
+<td colspan="2">Codigo do agendamento</td>
+<td colspan="4">Informe o codigo do agendamento
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GB4_SLREMA</td>
+<td>Sala Remarc.</td>
+<td colspan="2">Codigo da Sala remarcada</td>
+<td colspan="4">Codigo da Sala remarcada
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>HS_SeekRet("SX5","'GD'+M->GB4_SLREMA",1,.f.,"GB4_DSREMA","X5_DESCRI")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gd.html">GD</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td>2</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GB4_DSREMA</td>
+<td>Sala</td>
+<td colspan="2">Descricao da Sala</td>
+<td colspan="4">Descrição da sala remarcada
+</td>
+<td>C</td>
+<td>45</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!Inclui,Posicione("SX5",1,xFilial("SX5")+"GD"+GB4->GB4_SLREMA,"X5_DESCRI"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("SX5",1,xFilial("SX5")+"GD"+GB4->GB4_SLREMA,"X5_DESCRI")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GB4_DTREMA</td>
+<td>Data Remarc.</td>
+<td colspan="2">Data remarcada</td>
+<td colspan="4">Data remarcada
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>@D                                           </td>
+<td></td>
+<td>DDATABASE</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GB4_HIREMA</td>
+<td>Hora Ini Rem</td>
+<td colspan="2">Hora Inicial remarcada</td>
+<td colspan="4">Hora Inicial Remarcada
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GB4_HFREMA</td>
+<td>Hora Fin Rem</td>
+<td colspan="2">Hora Final remarcada</td>
+<td colspan="4">Hora final remarcada
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GB4_STATUS</td>
+<td>Status Agend</td>
+<td colspan="2">Status do agendamento</td>
+<td colspan="4">Indica o Status do Agendamento
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("0123")</td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>0=Nao Cofirmada;1=Confirmada;2=Remarcada;3=Cancelada</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GB4_MOTIVO</td>
+<td>Motivo</td>
+<td colspan="2">Motivo Canecel/Remarcacao</td>
+<td colspan="4">Indica o Motivo do cancelamento ou
+remarcação do agendamento
+</td>
+<td>C</td>
+<td>45</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GB4_LOGARQ</td>
+<td>Log do Arq</td>
+<td colspan="2">Log do Arquivo</td>
+<td colspan="4">Grava Dados de Usuario para eventual
+consulta
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>HS_LOGARQ()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

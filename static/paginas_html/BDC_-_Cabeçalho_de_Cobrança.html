@@ -1,0 +1,1027 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: BDC - Cabeçalho de Cobrança</title></head>
+<body>
+<font color="orange"><h2 id="BDC">Tabela: BDC - Cabeçalho de Cobrança</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Cabeçalho de Cobrança</b></td><td colspan="2"><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">BDC_FILIAL+BDC_CODOPE+BDC_NUMERO</td><td>Operadora + Numero Seq.</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>BDC_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDC_CODOPE</td>
+<td>Operadora</td>
+<td colspan="2">Operadora</td>
+<td colspan="4">Indica o código da Instituição de
+Saúde,para a qual, serão válidas as
+informações abaixo cadastradas.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>(lRet := PLSVLDINT(M->BDC_CODOPE), If(lRet, (cCodInt := M->BDC_CODOPE, .T.), .F.))</td>
+<td>cCodInt := PLSINTPAD(RETCODUSR())</td>
+<td><a href="/tabelas_protheus/f3/b89pls.html">B89PLS</a></td>
+<td><a href="/tabelas_protheus/gatilhos/bdc_codope.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>BDC_DESOPE</td>
+<td>Descricao</td>
+<td colspan="2">Descricao</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>Posicione("BA0",1,xFilial("BA0")+M->BDC_CODOPE,"BA0_NOMINT")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDC_NUMERO</td>
+<td>Numero Seq.</td>
+<td colspan="2">Numero de Sequencia</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistChav("BDC",M->BDC_CODOPE+M->BDC_NUMERO,1)</td>
+<td>"AUTO"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>BDC_DATGER</td>
+<td>Data Geracao</td>
+<td colspan="2">Data Geracao</td>
+<td colspan="4"></td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>@D                                           </td>
+<td></td>
+<td>dDataBase</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>BDC_USUOPE</td>
+<td>Operador</td>
+<td colspan="2">Operador do Sistema</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>25</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>PLRETOPE()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>BDC_HORA</td>
+<td>Hora Inicial</td>
+<td colspan="2">Hora inicial</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Time()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDC_HORAF</td>
+<td>Hora final</td>
+<td colspan="2">Hora final</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Time()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDC_ANOINI</td>
+<td>Ano Inicial</td>
+<td colspan="2">Ano Inicial</td>
+<td colspan="4">Informação referente a definição do Ano
+Inicial para definição do período de
+Geração do Lote de Cobrança
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>9999                                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>BDC_MESINI</td>
+<td>Mes Inicial</td>
+<td colspan="2">Mes Inicial</td>
+<td colspan="4">Informação referente ao Mês Inicial de
+Parametrização para definição de período
+para geração de Lote de Faturamento
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td>Vazio() .or. M->BDC_MESINI >= "01" .And. M->BDC_MESINI <= "12"</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>BDC_ANOFIM</td>
+<td>Ano Final</td>
+<td colspan="2">Ano Final</td>
+<td colspan="4">Informação referente a definição do Ano
+FInal para definição do período de
+Geração do Lote de Cobrança
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>9999                                         </td>
+<td>Vazio() .or. M->BDC_ANOFIM >= M->BDC_ANOINI</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>BDC_MESFIM</td>
+<td>Mes Final</td>
+<td colspan="2">Mes Final</td>
+<td colspan="4">Informação referente ao Mês final de
+Parametrização para definição de período
+para geração de Lote de Faturamento
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td>PLS627VLD()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>BDC_EXPFIF</td>
+<td>Filtro Fam.</td>
+<td colspan="2">Filtro Arquivo Familia</td>
+<td colspan="4">Informação referente a definição de
+filtro especifico para seleção de
+familias que deverão ser consideradas
+para apuração do Valor de Cobrança
+</td>
+<td>C</td>
+<td>249</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .or. A627CTERR()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>IIF(BDC->(FieldPos('BDC_REEMB'))>0,M->BDC_REEMB<>'1',.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDC_TIPO</td>
+<td>Fis/Juridica</td>
+<td colspan="2">Juridica/Fisica ?</td>
+<td colspan="4">Informação referente a definição do Tipo
+de Contrato que será considerado para
+geração do Lote de conbrança, tendo as
+seguintes opções 1=Juridica;2=Fisica.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Juridica;2=Fisica</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDC_GRPCOB</td>
+<td>Grupo Cobran</td>
+<td colspan="2">Grupo de cobranca</td>
+<td colspan="4">Permite o agrupamento de deste nível de
+relacionamento, para emissão de cobrança
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Iif(VAZIO() .OR. BR0->(ExistCpo('BR0')),eval({||M->BDC_GRCOBV:=Space(TamSX3('BDC_GRCOBV')[1]),.T.}),.F.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/br0pls.html">BR0PLS</a></td>
+<td><a href="/tabelas_protheus/gatilhos/bdc_grpcob.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>IIF(BDC->(FieldPos('BDC_REEMB'))>0,M->BDC_REEMB<>'1',.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDC_DESGRP</td>
+<td>Descr. Grupo</td>
+<td colspan="2">Descr. Grupo de cobranca</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIF(INCLUI,"",Posicione("BR0",1,xFilial("BR0")+BDC->BDC_GRPCOB,"BR0_DESCRI"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDC_LOTREN</td>
+<td>Lote Renovac</td>
+<td colspan="2">Lote de renovacao de cont</td>
+<td colspan="4">Lote de renovacao de cont
+</td>
+<td>C</td>
+<td>12</td>
+<td>0</td>
+<td>@9                                           </td>
+<td>Vazio() .or. ExistCpo("BDE", M->(BDC_CODOPE + BDC_LOTREN),1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/bedpls.html">BEDPLS</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>IIF(BDC->(FieldPos('BDC_REEMB'))>0,M->BDC_REEMB<>'1',.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDC_CONGER</td>
+<td>Tit. Gerados</td>
+<td colspan="2">Titulos Gerados</td>
+<td colspan="4"></td>
+<td>N</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDC_CONCRI</td>
+<td>Tit. Critic.</td>
+<td colspan="2">Titulos Criticados</td>
+<td colspan="4"></td>
+<td>N</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDC_VALOR</td>
+<td>Valor Total</td>
+<td colspan="2">Valor Total</td>
+<td colspan="4">BDC_VALOR
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDC_VENINI</td>
+<td>Vencto Ini.</td>
+<td colspan="2">Vencimento Inicial</td>
+<td colspan="4">Informação referente a definição da dia
+de vencimento Inicial para definição de
+período de datas de vencimento para
+selecionar famílias no caso de geração
+de Lote para Contratos Pessoa Jurídica
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td>Entre(01,31,M->BDC_VENINI)</td>
+<td>1</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>M->BDC_TIPO=="2"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDC_DTEMIS</td>
+<td>Dt Emissao</td>
+<td colspan="2">Data de emiissão do tit</td>
+<td colspan="4">Informação referente a definição, se
+necessário, da data de emissão dos
+títulos gerados pelo Lote de Cobrança.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>@D                                           </td>
+<td></td>
+<td>dDataBase</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDC_VENFIM</td>
+<td>Vencto Final</td>
+<td colspan="2">Vencimento Final</td>
+<td colspan="4">Informação referente a definição da dia
+de vencimento final para definição de
+período de datas de vencimento para
+selecionar famílias no caso de geração
+de Lote para Contratos Pessoa Jurídica
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td>Entre(01,31,M->BDC_VENFIM)</td>
+<td>31</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>M->BDC_TIPO=="2"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDC_VENCTO</td>
+<td>Dia Vencto.</td>
+<td colspan="2">Dia Vencimento</td>
+<td colspan="4">Indica o dia para vencimento da fatura
+do cliente informado. Sempre que
+informado um cliente, em algum nível,
+será obrigatório o cadastramento de um
+dia para vencimento da fatura.
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td>Vazio() .Or. Entre(1,Day(LastDay(dDataBase)),M->BDC_VENCTO)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDC_MODPAG</td>
+<td>Modal. Cobr.</td>
+<td colspan="2">Modalidade de Pagamento</td>
+<td colspan="4">Informação referente a definição do tipo
+do Modo de Pagamento que será
+considerado para apuração de valores
+pelo Lote de Faturamento, sendo as
+opções disponíveis
+1=Pre-Pagamento;2=Custo
+Operacional;3=Ambas
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"3"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Pre-Pagamento;2=Custo Operacional;3=Ambas</td>
+<td>IIF(BDC->(FieldPos('BDC_REEMB'))>0,M->BDC_REEMB<>'1',.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDC_INTERC</td>
+<td>Intercambio</td>
+<td colspan="2">Intercambio</td>
+<td colspan="4">Informação referente a definição se o
+Lote de Cobrança irá considerar contrato
+de Intercâmbio
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>0=Nao;1=Sim</td>
+<td>IIF(BDC->(FieldPos('BDC_REEMB'))>0,M->BDC_REEMB<>'1',.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDC_AGLUTI</td>
+<td>Aglut. Lanc.</td>
+<td colspan="2">Aglutina Lanc. de Fat. ?</td>
+<td colspan="4">Informação referente a definição se
+serão aglutinados os valores de cobrança
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>0=Nao;1=Sim</td>
+<td>IIF(BDC->(FieldPos('BDC_REEMB'))>0,M->BDC_REEMB<>'1',.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDC_CARIMP</td>
+<td>Carne ?</td>
+<td colspan="2">Carne ?</td>
+<td colspan="4">Informação referente a definição de o
+lote de cobrança se refere a geração de
+Carnês onde serão considerados apenas as
+famílias com o conteúdo do campo
+"Imp.Carne?(BA3_CARIMP)" igual a 1=Sim
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>0=Nao;1=Sim</td>
+<td>IIF(BDC->(FieldPos('BDC_REEMB'))>0,M->BDC_REEMB<>'1',.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDC_FATGR</td>
+<td>FatGr</td>
+<td colspan="2">FatGr</td>
+<td colspan="4">Se o faturamento foi usando Grid ou não
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(FindFunction('PLCOGRID'),PLCOGRID(),'0')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;0=N�o</td>
+<td>IIF(BDC->(FieldPos('BDC_REEMB'))>0,M->BDC_REEMB<>'1',.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDC_GRCOBV</td>
+<td>Var. Grp Co</td>
+<td colspan="2">Varios Grp de cobrança</td>
+<td colspan="4">Varios Grupos de cobrança
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Iif( PLVLDCGR(),Eval({||M->BDC_GRPCOB := Space(TamSX3('BDC_GRPCOB')[1]),M->BDC_DESGRP:=''}) ,NIL)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/bgvpls.html">BGVPLS</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>IIF(BDC->(FieldPos('BDC_REEMB'))>0,M->BDC_REEMB<>'1',.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDC_REEMB</td>
+<td>Som. Reemb?</td>
+<td colspan="2">Somente Reembolso</td>
+<td colspan="4">Somente ira gerar guia da PEG de
+Reembolso.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/bdc_reemb.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Nao;1=Sim;2=Ambos</td>
+<td>GETNEWPAR("MV_PLSDTPG",.F.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDC_DTPREE</td>
+<td>Dt Pag Reemb</td>
+<td colspan="2">Data Pagamento Reembolso</td>
+<td colspan="4">Informe a Data Pagamento Reembolso.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>@D                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/bdc990.html">BDC990</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>M->BDC_REEMB=="1"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDC_CONSAD</td>
+<td>Cons.Adicio.</td>
+<td colspan="2">Considera Adicionais</td>
+<td colspan="4">Determina que quando estiver ativado o
+sistema incluirá os creditos e debitos
+incluidos na tabela BSQ
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("01")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>0=Nao;1=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

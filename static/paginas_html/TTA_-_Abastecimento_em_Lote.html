@@ -1,0 +1,557 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: TTA - Abastecimento em Lote</title></head>
+<body>
+<font color="orange"><h2 id="TTA">Tabela: TTA - Abastecimento em Lote</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Abastecimento em Lote</b></td><td colspan="2"><b>TTA_FILIAL+TTA_POSTO+TTA_LOJA+TTA_FOLHA</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">TTA_FILIAL+TTA_POSTO+TTA_LOJA+TTA_FOLHA</td><td>Posto + Loja + Folha</td><td></td></tr>
+<tr><td>2</td><td colspan="2">TTA_FILIAL+TTA_POSTO+TTA_LOJA+TTA_TANQUE+TTA_BOMBA+DTOS(TTA_DTABAS)+TTA_HRABAS</td><td>Posto + Loja + Tanque + Bomba + Data + Hora</td><td></td></tr>
+<tr><td>3</td><td colspan="2">TTA_FILIAL+DTOS(TTA_DTABAS)+TTA_HRABAS</td><td>Data + Hora</td><td></td></tr>
+<tr><td>4</td><td colspan="2">TTA_FILIAL+TTA_FOLHA+TTA_POSTO+TTA_LOJA</td><td>Folha + Posto + Loja</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>TTA_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Filial do sistema
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TTA_FOLHA</td>
+<td>Folha</td>
+<td colspan="2">Folha de Abastecimentos</td>
+<td colspan="4">Numero da Folha de Abastecimento.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/018.html">018</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TTA_POSTO</td>
+<td>Posto</td>
+<td colspan="2">Posto Interno</td>
+<td colspan="4">Código do posto interno. Pressione as
+teclas [Enter]+[F3] para selecionar um
+Posto Interno.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO('TQF',M->TTA_POSTO,1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ngn.html">NGN</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TTA_LOJA</td>
+<td>Loja</td>
+<td colspan="2">Codigo da Loja</td>
+<td colspan="4">Loja do posto interno.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO('TQF',M->TTA_POSTO+M->TTA_LOJA)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TTA_TANQUE</td>
+<td>Tanque</td>
+<td colspan="2">Tanque do Combustivel</td>
+<td colspan="4">Código do tanque de combustível.
+Pressione as teclas [Enter]+[F3] para
+selecionar um tanque de combustível.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo('TQI',M->TTA_POSTO+M->TTA_LOJA+M->TTA_TANQUE)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ngm.html">NGM</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/024.html">024</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TTA_BOMBA</td>
+<td>Bomba</td>
+<td colspan="2">Bomba do Combustivel</td>
+<td colspan="4">Código da bomba de combustível.
+Pressione as teclas [Enter]+[F3] para
+selecionar uma bomba de combustível.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo('TQJ',M->TTA_POSTO+M->TTA_LOJA+M->TTA_TANQUE+M->TTA_BOMBA)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tqj.html">TQJ</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TTA_DTABAS</td>
+<td>Data</td>
+<td colspan="2">Data dos Abastecimentos</td>
+<td colspan="4">Data do lançamento da folha.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>NAOVAZIO() .And. VALDT(M->TTA_DTABAS)</td>
+<td>If(Inclui,dDataBase-1,TTA->TTA_DTABAS)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TTA_HRABAS</td>
+<td>Hora</td>
+<td colspan="2">Hora dos Abastecimentos</td>
+<td colspan="4">Hora do lançamento da folha.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td>NAOVAZIO()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TTA_CONBOM</td>
+<td>Cont. Bomba</td>
+<td colspan="2">Contador da Bomba</td>
+<td colspan="4">Contador da bomba de combustível.
+</td>
+<td>N</td>
+<td>11</td>
+<td>3</td>
+<td>@E 9,999,999.999                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>IIF(FunName()=='MNTA656',lTrava656 .AND. lLub,.t.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TTA_TOTCOM</td>
+<td>Tot.Combust.</td>
+<td colspan="2">Qtd. Total Combustivel</td>
+<td colspan="4">Quantidade total de combustível da
+folha.
+</td>
+<td>N</td>
+<td>11</td>
+<td>3</td>
+<td>@E 9,999,999.999                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TTA_SERTRO</td>
+<td>Servic.Troca</td>
+<td colspan="2">Servico de Troca</td>
+<td colspan="4">Código do serviço de troca de
+lubrificante.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO("ST4",M->TTA_SERTRO)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/st4.html">ST4</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TTA_SERREP</td>
+<td>Servic.Repos</td>
+<td colspan="2">Servico de Reposicao</td>
+<td colspan="4">Código do serviço de reposição de
+lubrificante.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO("ST4",M->TTA_SERREP)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/st4.html">ST4</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TTA_TOTLUB</td>
+<td>Tot.Lubrific</td>
+<td colspan="2">Qtd. Total  Lubrificante</td>
+<td colspan="4">Quantidade total de lubrificante da
+folha.
+</td>
+<td>N</td>
+<td>10</td>
+<td>2</td>
+<td>@E 9,999,999.99                              </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TTA_RESPON</td>
+<td>Responsavel</td>
+<td colspan="2">Responsavel</td>
+<td colspan="4">Código do responsável pela inclusão da
+folha.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sra.html">SRA</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/121.html">121</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TTA_FILORI</td>
+<td>Filial Orig.</td>
+<td colspan="2">Filial Origem</td>
+<td colspan="4">Filial Origem.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TTA_ORIGEM</td>
+<td>Origem</td>
+<td colspan="2">Programa Origem</td>
+<td colspan="4">Rotina em que a folha foi gerada.
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TTA_CODCOM</td>
+<td>Combustível</td>
+<td colspan="2">Código do Combustível</td>
+<td colspan="4">Informe o código do combustível do
+abastecimento.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

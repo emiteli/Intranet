@@ -1,0 +1,281 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: FSO - TAB.HON. X LOCALIDADES</title></head>
+<body>
+<font color="orange"><h2 id="FSO">Tabela: FSO - TAB.HON. X LOCALIDADES</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>TAB.HON. X LOCALIDADES</b></td><td colspan="2"><b>FSO_FILIAL+FSO_TABELA+FSO_LOCALI</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">FSO_FILIAL+FSO_TABELA+FSO_LOCALI</td><td>Tabela + Localidade</td><td>FSO_TABELA</td></tr>
+<tr><td>2</td><td colspan="2">FSO_FILIAL+FSO_LOCALI+FSO_TABELA</td><td>Localidade + Tabela</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>FSO_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>FSO_TABELA</td>
+<td>Tabela</td>
+<td colspan="2">Tabela do Contrato</td>
+<td colspan="4">Código de identificação da tabela de
+honorários que se quer relacionar com a
+localidade.
+Teclando-se[F3] será possível consultar
+e selecionar a tabela de honorários.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO("FSY") .AND. IF(INCLUI, EXISTCHAV("FSO",M->FSO_TABELA), .T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/fsy.html">FSY</a></td>
+<td><a href="/tabelas_protheus/gatilhos/fso_tabela.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>FSO_DSCTAB</td>
+<td>Desc. Tab.</td>
+<td colspan="2">Descricäo da Tabela</td>
+<td colspan="4">Este campo será preenchido
+automaticamente com a descrição da
+tabela de honorários.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(INCLUI,"",GVA025DTAB(FSO->FSO_TABELA))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>GVA025DTAB(FSO->FSO_TABELA)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>FSO_LOCALI</td>
+<td>Localidade</td>
+<td colspan="2">Loc. do Relacionamento</td>
+<td colspan="4">Código de identificação da localidade a
+que se deseja relacionar a tabela de
+honorários.
+Teclando-se[F3] será possível consultar
+e selecionar a localidade.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO("FSE")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/fse.html">FSE</a></td>
+<td><a href="/tabelas_protheus/gatilhos/fso_locali.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>FSO_DSCLOC</td>
+<td>Desc. Local</td>
+<td colspan="2">Descricäo do Local</td>
+<td colspan="4">Este campo será preenchido
+automaticamente com a descrição da
+localidade selecionada.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(INCLUI,"",POSICIONE("FSE",1,XFILIAL("FSE")+FSO->FSO_LOCALI,"FSE_NOME"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("FSE",1,XFILIAL("FSE")+FSO->FSO_LOCALI,"FSE_NOME")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>FSO_TABLOC</td>
+<td>Tab. Loc.</td>
+<td colspan="2">Tab. utilizada para a Loc</td>
+<td colspan="4">Código de identificação da tabela de
+honorários da localidade, aquela que
+será utilizada
+para valorizar as horas.
+Teclando-se[F3] será possível consultar
+e selecionar a tabela de honorários.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO("FSY")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/fsy.html">FSY</a></td>
+<td><a href="/tabelas_protheus/gatilhos/fso_tabloc.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>FSO_DCTLOC</td>
+<td>Dsc.Tab.Loc.</td>
+<td colspan="2">Descricao Tab. Local</td>
+<td colspan="4">Este campo será preenchido
+automaticamente com a descrição da
+tabela de honorários selecionada.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(INCLUI,"",GVA025DTAB(FSO->FSO_TABLOC))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>GVA025DTAB(FSO->FSO_TABLOC)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

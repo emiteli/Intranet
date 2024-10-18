@@ -1,0 +1,606 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: TCP - Controle de Expedicao</title></head>
+<body>
+<font color="orange"><h2 id="TCP">Tabela: TCP - Controle de Expedicao</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Controle de Expedicao</b></td><td colspan="2"><b>TCP_FILIAL+TCP_CODEXP</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">TCP_FILIAL+TCP_CODEXP+TCP_CODLEG</td><td>Codigo + Requisito</td><td></td></tr>
+<tr><td>2</td><td colspan="2">TCP_FILIAL+TCP_CODRES+TCP_CODREC</td><td>Resíduo + Receptor</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>TCP_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Filial do Controle de Expedicao
+cadastrado.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TCP_CODEXP</td>
+<td>Codigo</td>
+<td colspan="2">Codigo Cont. Expedicao</td>
+<td colspan="4">Informe o código do controle de
+expedição.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistChav('TCP')</td>
+<td>IIF(INCLUI,GETSXENUM('TCP','TCP_CODEXP'),TCP->TCP_CODEXP)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TCP_CODLEG</td>
+<td>Requisito</td>
+<td colspan="2">Codigo do Requisito</td>
+<td colspan="4">Informe o código do requisito ambiental.
+</td>
+<td>C</td>
+<td>12</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo('TA0',M->TCP_CODLEG)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ta0.html">TA0</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tcp_codleg.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TCP_EMENTA</td>
+<td>Ementa</td>
+<td colspan="2">Ementa da Legislacao</td>
+<td colspan="4">Descrição da Ementa da Legislação.
+</td>
+<td>C</td>
+<td>80</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>TA0->(VDISP(TCP->TCP_CODLEG,'TA0->TA0_EMENTA'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>IF(TA0->(DBSEEK(XFILIAL('TA0')+TCP->TCP_CODLEG)),TA0->TA0_EMENTA,'')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TCP_TIPO</td>
+<td>Tipo Docto.</td>
+<td colspan="2">Tipo Documento de Expedic</td>
+<td colspan="4">Informe o Tipo de Documento de
+Expedição.
+</td>
+<td>C</td>
+<td>12</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>TA0->(VDISP(TCP->TCP_CODLEG,'TA0->TA0_TIPO'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>IF(TA0->(DBSEEK(XFILIAL('TA0')+TCP->TCP_CODLEG)),TA0->TA0_TIPO,'')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TCP_OREMIS</td>
+<td>Orgao Emiss.</td>
+<td colspan="2">Orgao Ambiental Emissor</td>
+<td colspan="4">Informe o órgão ambiental emissor.
+</td>
+<td>C</td>
+<td>12</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>TA0->(VDISP(TCP->TCP_CODLEG,'TA0->TA0_OREMIS'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>IF(TA0->(DBSEEK(XFILIAL('TA0')+TCP->TCP_CODLEG)),TA0->TA0_OREMIS,'')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TCP_EST</td>
+<td>Estado</td>
+<td colspan="2">Sigla da Federacao</td>
+<td colspan="4">Sigla da Federação correspondente do
+Requisito.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>TA0->(VDISP(TCP->TCP_CODLEG,'TA0->TA0_EST'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>IF(TA0->(DBSEEK(XFILIAL('TA0')+TCP->TCP_CODLEG)),TA0->TA0_EST,'')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TCP_DTVIGE</td>
+<td>Vigencia</td>
+<td colspan="2">Data de Vigencia</td>
+<td colspan="4">Data de vigência do Requsito.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>99/99/9999                                   </td>
+<td></td>
+<td>TA0->(VDISP(TCP->TCP_CODLEG,'DTOC(TA0->TA0_DTVIGE)'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>IF(TA0->(DBSEEK(XFILIAL('TA0')+TCP->TCP_CODLEG)),DTOC(TA0->TA0_DTVIGE),'')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TCP_DTVENC</td>
+<td>Vencimento</td>
+<td colspan="2">Data de Vencimento</td>
+<td colspan="4">Data de vencimento do Requisito.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>99/99/9999                                   </td>
+<td></td>
+<td>TA0->(VDISP(TCP->TCP_CODLEG,'DTOC(TA0->TA0_DTVENC)'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>IF(TA0->(DBSEEK(XFILIAL('TA0')+TCP->TCP_CODLEG)),DTOC(TA0->TA0_DTVENC),'')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TCP_CODRES</td>
+<td>Resíduo</td>
+<td colspan="2">Codigo do Residuo</td>
+<td colspan="4">Informe o código do Resíduo desejado ou
+pressione F3 para a escolha.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo('TAX',M->TCP_CODRES) .And. SGA420Tran()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tax.html">TAX</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tcp_codres.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>Inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/030.html">030</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TCP_NOMRES</td>
+<td>Descricao</td>
+<td colspan="2">Descricao do Residuo</td>
+<td colspan="4">Descrição do Resíduo informado.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>SB1->(VDISP(TCP->TCP_CODRES,'SB1->B1_DESC'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>IF(SB1->(DBSEEK(XFILIAL('SB1')+TCP->TCP_CODRES)),SB1->B1_DESC,'')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TCP_QUANTI</td>
+<td>Qtde. Limite</td>
+<td colspan="2">Quantidade Limite</td>
+<td colspan="4">Informe a quantidade limite.
+</td>
+<td>N</td>
+<td>9</td>
+<td>2</td>
+<td>@E 999,999.99                                </td>
+<td>Positivo() .And. SGA420VQtd()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TCP_TOTAL</td>
+<td>Total Exp.</td>
+<td colspan="2">Total Expedido</td>
+<td colspan="4">Total já expedido do Resíduo.
+</td>
+<td>N</td>
+<td>9</td>
+<td>2</td>
+<td>@E 999,999.99                                </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TCP_SALDO</td>
+<td>Saldo</td>
+<td colspan="2">Saldo Disponível</td>
+<td colspan="4">Saldo disponível para expedição.
+</td>
+<td>N</td>
+<td>9</td>
+<td>2</td>
+<td>@E 999,999.99                                </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TCP_CODREC</td>
+<td>Receptor</td>
+<td colspan="2">Código Receptor</td>
+<td colspan="4">Código do Receptor de Resíduos.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("TB5",M->TCP_CODREC) .and. SGA420Tran()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tb5.html">TB5</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>Inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TCP_DESFOR</td>
+<td>Descricao</td>
+<td colspan="2">Descricao do Fornecedor</td>
+<td colspan="4">Descrição do Fornecedor informado.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!Inclui,SG280INFD(TCP->TCP_CODREC,'NOME'),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>SG280INFD(TCP->TCP_CODREC,'NOME')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TCP_ATIVID</td>
+<td>Atividade</td>
+<td colspan="2">Atividade Industrial</td>
+<td colspan="4">nforme a atividade industrial da
+empresa.
+</td>
+<td>C</td>
+<td>25</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TCP_DOCTO</td>
+<td>Nr. Docto</td>
+<td colspan="2">Numero Documento de Exped</td>
+<td colspan="4">Informe o número do documento de
+expedição.
+</td>
+<td>N</td>
+<td>10</td>
+<td>0</td>
+<td>9999999999                                   </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TCP_FORNEC</td>
+<td>Fornecedor</td>
+<td colspan="2">Codigo do Fornecedor</td>
+<td colspan="4">Informe o código do Fornecedor.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo('SA2',M->TCP_FORNEC) .And. SGA420Tran()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sa2.html">SA2</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>Inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

@@ -1,0 +1,1687 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: DW7 - Proposta Comercial</title></head>
+<body>
+<font color="orange"><h2 id="DW7">Tabela: DW7 - Proposta Comercial</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Proposta Comercial</b></td><td colspan="2"><b></b></td><td><b>TMSAW10</b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">DW7_FILIAL+DW7_FILORI+DW7_NUMPRO</td><td>Fil.Origem + Num.Proposta</td><td></td></tr>
+<tr><td>2</td><td colspan="2">DW7_FILIAL+DW7_CODNEG+DW7_STATUS</td><td>Tipo Negoc. + Status</td><td></td></tr>
+<tr><td>3</td><td colspan="2">DW7_FILIAL+DW7_CODCLI+DW7_LOJCLI+DW7_SERVIC+DW7_STATUS</td><td>Cód.Cliente + Loja Cli. + Serviço + Status</td><td></td></tr>
+<tr><td>4</td><td colspan="2">DW7_FILIAL+DW7_FILORI+DW7_NUMPRI</td><td>Fil.Origem + Num.Pro.Pri.</td><td></td></tr>
+<tr><td>5</td><td colspan="2">DW7_FILIAL+DW7_FILORI+DW7_STATUS</td><td>Fil.Origem + Status</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>DW7_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Filial do Sistema
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_FILORI</td>
+<td>Fil.Origem</td>
+<td colspan="2">Filial de Origem</td>
+<td colspan="4">Filial Emitente da Proposta Comercial
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td>TMSValidEmp(cEmpAnt+M->DW7_FILORI)</td>
+<td>cFilAnt</td>
+<td><a href="/tabelas_protheus/f3/dlb.html">DLB</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>TMSW10WHN('DW7_FILORI')</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DW7_NUMPRO</td>
+<td>Num.Proposta</td>
+<td colspan="2">Número da Proposta</td>
+<td colspan="4">Número da Proposta Comecial
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistChav('DW7',M->DW7_NUMPRO)</td>
+<td>GETSX8NUM('DW7', 'DW7_NUMPRO',NIL,1)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_DATA</td>
+<td>Dt. Proposta</td>
+<td colspan="2">Data da Proposta</td>
+<td colspan="4">Data de Geração da Proposta Comercial
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>TMSW10VLD()</td>
+<td>DDATABASE</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DW7_PRZVLD</td>
+<td>Prazo Valid.</td>
+<td colspan="2">Prazo Validade Proposta</td>
+<td colspan="4">Prazo Validade da Proposta Comercial.
+Se, ao término da validade, esta
+Proposta não estiver com Status
+Aprovada, ela passará automaticamente
+para o Status Cancelada
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>DDATABASE + GetMv('MV_VLDPRO',.F.,30)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_TIPPRO</td>
+<td>Tipo Propost</td>
+<td colspan="2">Tipo da Proposta</td>
+<td colspan="4">Tipo de Proposta Normal ou Reajuste.
+Este campo é preenchido automaticamente
+através da opção escolhida pelo usuário.
+Se foi clicado no botão "Incluir" o Tipo
+será "Normal". Se foi clicado no botão
+"Reajuste" o Tipo será "Reajuste"
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('12')</td>
+<td>'1'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=Normal;2=Reajuste</td>
+<td>!lReajuste</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_CODNEG</td>
+<td>Tipo Negoc.</td>
+<td colspan="2">Cód. Tipo de Negociação</td>
+<td colspan="4">Código do Tipo de Negociação que estiver
+liberado para o Usuário logado no
+sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo('DW5',M->DW7_CODNEG,1) .And. TMSW10VDW5() .And. TMSW10VLD()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dw5.html">DW5</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dw7_codneg.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DW7_DESNEG</td>
+<td>Desc.Tp.Neg.</td>
+<td colspan="2">Descrição Tipo Negociação</td>
+<td colspan="4">Descrição do Código do Tipo de
+Negociação. Preenchido automaticamente
+após informar o Código do Tipo de
+Negociação
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE('DW5',1,XFILIAL('DW5')+DW7->DW7_CODNEG,'DW5_DESNEG'),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_NUMPRI</td>
+<td>Num.Pro.Pri.</td>
+<td colspan="2">Número Proposta Principal</td>
+<td colspan="4">Número Proposta Principal. Preencher com
+o número da Proposta Comercial Principal
+que foi gerada a partir de um Tipo de
+Negociação que exige uma Negociação
+Complementar.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>TMSW10Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dw7.html">DW7</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>TMSW10WHN('DW7_NUMPRI')</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_TABFRE</td>
+<td>Tab.Frete</td>
+<td colspan="2">Tabela de Frete</td>
+<td colspan="4">Tabela de Frete. Será preenchido
+automaticamente com a informação
+registrada no Tipo de Negociação
+selecionado.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_TIPTAB</td>
+<td>Tip.Tab.Fre.</td>
+<td colspan="2">Tipo Tabela de Frete</td>
+<td colspan="4">Tipo da Tabela de Frete. Será preenchido
+automaticamente com a informação
+registrada no Tipo de Negociação
+selecionado.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_TIPFRE</td>
+<td>Tipo Frete</td>
+<td colspan="2">Tipo do Frete CIF/FOB</td>
+<td colspan="4">Tipo do Frete. Será preenchido
+automaticamente com a informação
+registrada no Tipo de Negociação
+selecionado.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('123')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td>1=CIF;2=FOB;3=CIF/FOB</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_TIPTRA</td>
+<td>Tipo Transp.</td>
+<td colspan="2">Tipo Transporte</td>
+<td colspan="4">Tipo Transporte. Será preenchido
+automaticamente com a informação
+registrada no Tipo de Negociação
+selecionado.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>TMSValField('M->DW7_TIPTRA',.T.,'DW7_DESTPT')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dlc.html">DLC</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_DESTPT</td>
+<td>Desc.Tp.Tran</td>
+<td colspan="2">Desc. Tipo Transporte</td>
+<td colspan="4">Descrição do Tipo Transporte. Será
+preenchido automaticamente com a
+informação registrada no Tipo de
+Negociação selecionado.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>TMSW10Ini('DW7_DESTPT')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_CODCLI</td>
+<td>Cód.Cliente</td>
+<td colspan="2">Código do Cliente</td>
+<td colspan="4">Código do Cliente para o qual se deseja
+gerar uma Proposta Comercial
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>(Vazio() .Or. ExistCpo('SA1')) .And. TMSW10Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sa1.html">SA1</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dw7_codcli.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>TMSW10WHN('DW7_CODCLI')</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_LOJCLI</td>
+<td>Loja Cli.</td>
+<td colspan="2">Loja do Cliente</td>
+<td colspan="4">Loja do Cliente para o qual se deseja
+gerar uma Proposta Comercial
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>(Vazio() .Or. ExistCpo('SA1',M->DW7_CODCLI+M->DW7_LOJCLI)) .And. TMSW10Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/dw7_lojcli.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>TMSW10WHN('DW7_LOJCLI')</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_NOMCLI</td>
+<td>Nome Cli.</td>
+<td colspan="2">Nome do Cliente</td>
+<td colspan="4">Nome do Cliente. Preenchido
+automaticamente após informar a Loja do
+Cliente
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>TMSW10Ini('DW7_NOMCLI')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>TMSW10Ini('DW7_NOMCLI')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_SERVIC</td>
+<td>Serviço</td>
+<td colspan="2">Serviço</td>
+<td colspan="4">Serviço de Negociação que será incluído
+no Contrato do Cliente e gerado no
+Ajuste do Cliente.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>TMSW10VLD()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dlj.html">DLJ</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dw7_servic.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>TMSW10WHN('DW7_SERVIC')</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/012.html">012</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DW7_DESSER</td>
+<td>Desc.Serviço</td>
+<td colspan="2">Descrição Serviço</td>
+<td colspan="4">Descrição Serviço de Negociação.
+Preenchido automaticamente após informar
+o Serviço de Negociação.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,'',Tabela('L4',DW7->DW7_SERVIC,.F.))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Tabela('L4',DW7->DW7_SERVIC,.F.)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_CODVEN</td>
+<td>Vendedor</td>
+<td colspan="2">Código do Vendedor</td>
+<td colspan="4">Código do Vendedor responsável pelo
+Cliente ou Prospect
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo('SA3')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sa3.html">SA3</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dw7_codven.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DW7_NOMVEN</td>
+<td>Nome Vend.</td>
+<td colspan="2">Nome do Vendedor</td>
+<td colspan="4">Nome do Vendedor. Preenchido
+automaticamente após informar o Código
+do Vendedor.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(INCLUI,'',POSICIONE('SA3',1,XFILIAL('SA3')+DW7->DW7_CODVEN,'A3_NOME'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_FATMED</td>
+<td>Fat.Médio</td>
+<td colspan="2">Faturamento Médio</td>
+<td colspan="4">Faturamento Médio. Informação fornecida
+pelo Cliente ou Prospect e que será
+utilizada para identificar se os
+descontos concedidos na Proposta
+Comercial estão acima (ou não) dos
+descontos cadastrados na Política
+Comercial para este Tipo de Valor
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>TMSW10WHN('DW7_FATMED')</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DW7_VALMER</td>
+<td>Vlr.R$/KG</td>
+<td colspan="2">Vlr.R$/KG</td>
+<td colspan="4">Vlr. R$/KG. Informação fornecida pelo
+Cliente ou Prospect e que será utilizada
+para identificar se os descontos
+concedidos na Proposta Comercial estão
+acima (ou não) dos descontos cadastrados
+na Política Comercial para este Tipo de
+Valor
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DW7_COND</td>
+<td>Cond.Pagto</td>
+<td colspan="2">Condição de Pagamento</td>
+<td colspan="4">Condição de Pagamento negociada com o
+Cliente ou Prospect. Esta informação
+será comparada com aquela cadastrada no
+Tipo de Negociação utilizado nesta
+Proposta Comercial e, se diferente, o
+status da Proposta ficará como
+"pendente".
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio().Or.ExistCpo('SE4')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/se4.html">SE4</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>TMSW10WHN('DW7_COND')</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DW7_STATUS</td>
+<td>Status</td>
+<td colspan="2">Status da Proposta</td>
+<td colspan="4">Status da Proposta:
+1=Pendente (a Proposta foi gerada fora
+das regras estabelecidas na Política
+Comercial),
+2=Em aberto (a Proposta foi gerada
+dentro das regras estabelecidas na
+Política Comercial),
+3=Aprovado (a Proposta já foi aprovada),
+4=Reprovado (a Proposta foi Reprovada
+por um usuário) ,
+9=Cancelado (a Proposta foi cancelada
+automaticamente pela vigência)
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>TMSW10VLD()</td>
+<td>'2'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Pendente;2=Em Aberto;3=Aprovado;4=Reprovado;9=Cancelado</td>
+<td>TMSW10WHN('DW7_STATUS')</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_CODPRO</td>
+<td>Cód.Produto</td>
+<td colspan="2">Código do produto</td>
+<td colspan="4">Código do Produto
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. ExistCpo('SB1',M->DW7_CODPRO,1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sb1.html">SB1</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dw7_codpro.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/030.html">030</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_DESPRO</td>
+<td>Desc.Produto</td>
+<td colspan="2">Descrição do Produto</td>
+<td colspan="4">Descrição do Produto. Preenchido
+automaticamente após informar o Código
+do Produto
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,'',Posicione('SB1',1,xFilial('SB1')+DW7->DW7_CODPRO,'B1_DESC'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione('SB1',1,xFilial('SB1')+DW7->DW7_CODPRO,'B1_DESC')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_TAXEMB</td>
+<td>Taxa Embutid</td>
+<td colspan="2">Taxa embutida (S/N)</td>
+<td colspan="4">Taxa Embutida
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('12')</td>
+<td>'2'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td>TMSW10WHN('DW7_TAXEMB')</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_SEQUEN</td>
+<td>Sequen.Alt.</td>
+<td colspan="2">Sequencia de Alteração</td>
+<td colspan="4">Sequência de Alteração. A cada nova
+alteração efetuada numa Proposta
+Comercial, este campo será incrementado
+pelo sistema
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>StrZero(0,Len(DW7->DW7_SEQUEN))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_CODPEN</td>
+<td>Cód.Pendên.</td>
+<td colspan="2">Código da Pendência</td>
+<td colspan="4">Código da Pendência
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_PENDEN</td>
+<td>Pendência</td>
+<td colspan="2">Pendência</td>
+<td colspan="4">Descrição detalhada, gerada pelo
+sistema,  dos motivos pelos quais a
+Proposta Comercial foi gerada com Status
+Pendente.
+</td>
+<td>M</td>
+<td>80</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui,'',E_MSMM(DW7->DW7_CODPEN,80))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_CODREP</td>
+<td>Cód.Reprov.</td>
+<td colspan="2">Código da Reprovação</td>
+<td colspan="4">Codigo da Reprovação.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_MOTREP</td>
+<td>Mot. Reprov.</td>
+<td colspan="2">Motivo da Reprovação</td>
+<td colspan="4">Motivo da Reprovação. Descrição
+detalhada, informada pelo usuário, dos
+motivos pelos quais a Proposta Comercial
+foi gerada com Status Pendente.
+</td>
+<td>M</td>
+<td>80</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui,'',E_MSMM(DW7->DW7_CODREP,80))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_CDRORI</td>
+<td>Cód.Reg.Ori.</td>
+<td colspan="2">Código Região Origem</td>
+<td colspan="4">Código da Região de Origem definido na
+Proposta Comercial para geração de
+Ajustes do Cliente.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. ExistCpo("DUY",,1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/duy.html">DUY</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_CDRDES</td>
+<td>Cód.Reg.Des.</td>
+<td colspan="2">Código Região Destino</td>
+<td colspan="4">Código da Região de Destino definido na
+Proposta Comercial para geração de
+Ajustes do Cliente.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. ExistCpo("DUY",,1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/duy.html">DUY</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_ESTADO</td>
+<td>Estado</td>
+<td colspan="2">Estado</td>
+<td colspan="4">Estado
+</td>
+<td>C</td>
+<td>200</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_TIPPRC</td>
+<td>Tp.Proposta</td>
+<td colspan="2">Tipo da Proposta</td>
+<td colspan="4">Tipo de Proposta Comercial: Praça a
+Praça, Capital / Interior Padrão ou Só
+Capital / Interior
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_CODOBS</td>
+<td>Cód. Observ.</td>
+<td colspan="2">Código da Observação</td>
+<td colspan="4">Código da Observação
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_OBS</td>
+<td>Observação</td>
+<td colspan="2">Observação</td>
+<td colspan="4">Observação. Preenchida automaticamente
+com as Observações cadastradas no Tipo
+de Negociação utilizado. Poderá também
+ser alterado pelo usuário.
+</td>
+<td>M</td>
+<td>80</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IIf(Inclui,'',E_MSMM(DW7->DW7_CODOBS,80))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_USERDG</td>
+<td>Cod.Usu.Dig</td>
+<td colspan="2">Codigo do Usuar.Digitador</td>
+<td colspan="4">Código do Usuário que incluiu a Proposta
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>RetCodusr()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_NUSRDG</td>
+<td>Nome Usu.Dig</td>
+<td colspan="2">Nome do Usuar.Digitador</td>
+<td colspan="4">Nome do usuário que incluiu a proposta.
+Preenchido automaticamente com o Nome do
+Usuário que incluiu a Proposta
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>UsrFullName(M->DW7_USERDG)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_USER</td>
+<td>Cod.Usu.Lib.</td>
+<td colspan="2">Codigo do Usuar.Liberador</td>
+<td colspan="4">Código do Usuário que liberou a Proposta
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,RetCodUsr(),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_NOMUSR</td>
+<td>Nome Usu.Lib</td>
+<td colspan="2">Nome do Usuario Liberador</td>
+<td colspan="4">Nome do Usuário. Preenchido
+automaticamente com o Nome do Usuário
+que incluiu a Proposta
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!Inclui, UsrFullName(DW7->DW7_USER),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_PRODIG</td>
+<td>Prp.Digitada</td>
+<td colspan="2">Proposta Digitada</td>
+<td colspan="4">Indica que é uma proposta digitada, ou
+seja, as regiões origens e destino são
+informadas manualmente sem a utilização
+das regras do botão  "Selecao de
+Estado...F4"
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('12')</td>
+<td>'2'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_FATCUB</td>
+<td>Fat.Cubagem</td>
+<td colspan="2">Fat.Cubagem</td>
+<td colspan="4">Fator de cubagem
+</td>
+<td>N</td>
+<td>5</td>
+<td>0</td>
+<td>@E 99,999                                    </td>
+<td>Positivo()</td>
+<td>Val(GetMv('MV_FATCUB',,0))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>TMSW10WHN('DW7_FATCUB')</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_CODCON</td>
+<td>Contato</td>
+<td colspan="2">Contato</td>
+<td colspan="4">Código do Contato relativo ao cliente da
+proposta comercial
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>TMSW10Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/su5.html">SU5</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_NOMCON</td>
+<td>Nome Contato</td>
+<td colspan="2">Nome Contato</td>
+<td colspan="4">Nome do Contato relativo ao cliente da
+proposta comercial
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>TMSW10Vld()</td>
+<td>Iif(Inclui,'',Posicione('SU5',1,xFilial('SU5')+DW7->DW7_CODCON,'U5_CONTAT'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td>Posicione('SU5',1,xFilial('SU5')+DW7->DW7_CODCON,'U5_CONTAT')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_NUMORI</td>
+<td>Num.Pro.Ori.</td>
+<td colspan="2">Numero Proposta Original</td>
+<td colspan="4">Numero da proposta Original do Reajuste
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_USERAP</td>
+<td>Cod.Usu.Apr.</td>
+<td colspan="2">Codigo do Usuar.Aprovador</td>
+<td colspan="4">Codigo do Usuario Aprovador da Proposta
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_NOMAPR</td>
+<td>Nome Usu.Apr</td>
+<td colspan="2">Nome do Usuario Aprovador</td>
+<td colspan="4">Nome do Usuario Aprovador da Proposta
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!Inclui, UsrFullName(DW7->DW7_USERAP),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_DATAPR</td>
+<td>Dt.Apr.Prop.</td>
+<td colspan="2">Dt.Aprovacao da Proposta</td>
+<td colspan="4">Data da Aprovacao da Proposta
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_HORAPR</td>
+<td>H.Apr.Prop.</td>
+<td colspan="2">H.Aprovacao da Proposta</td>
+<td colspan="4">Hora da Aprovacao da Proposta
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@R 99:99                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_CNEGCT</td>
+<td>Cod Negociac</td>
+<td colspan="2">Código da Negociação</td>
+<td colspan="4">Informe o código da negociação do
+contrato do cliente.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Existcpo("DDB")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ddb.html">DDB</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dw7_cnegct.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>TMSAW10Whe()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/119.html">119</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DW7_DNEGCT</td>
+<td>Desc Neg Ctr</td>
+<td colspan="2">Descr Negociação Contrato</td>
+<td colspan="4">Exibe a descrição da negociação do
+contrato do cliente.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIF(INCLUI,"",POSICIONE("DDB",1,XFILIAL("DDB") + DW7->DW7_CNEGCT,"DDB_DESCRI"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

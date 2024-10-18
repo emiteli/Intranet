@@ -1,0 +1,669 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: TN3 - Fornecedores de EPI</title></head>
+<body>
+<font color="orange"><h2 id="TN3">Tabela: TN3 - Fornecedores de EPI</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Fornecedores de EPI</b></td><td colspan="2"><b>TN3_FILIAL+TN3_FORNEC+TN3_LOJA+TN3_CODEPI+TN3_NUMCAP</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">TN3_FILIAL+TN3_FORNEC+TN3_LOJA+TN3_CODEPI+TN3_NUMCAP</td><td>Fornecedor + Loja + Código + Num. C.A.</td><td></td></tr>
+<tr><td>2</td><td colspan="2">TN3_FILIAL+TN3_CODEPI</td><td>Código</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>TN3_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Código da filial da empresa. Campo
+alimentado automaticamente pelo módulo
+de Medicina e Segurança do Trabalho com
+base no campo Filial.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TN3_CODEPI</td>
+<td>Código</td>
+<td colspan="2">Codigo do Produto (EPI)</td>
+<td colspan="4">Código do EPI, este código deve existir
+na tabela de Produtos (SB1). EPI -
+Equipamento de Proteção Individual.
+Pressione as teclas [Enter]+[F3] para
+selecionar um Produto(EPI)
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>MDTProEpi(M->TN3_CODEPI,cTipo,lSX5) .AND. D620CHK(1) .And. MDT620GEN()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/mdtsb1.html">MDTSB1</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tn3_codepi.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>MDT620EPWH()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/030.html">030</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TN3_DESC</td>
+<td>Descrição</td>
+<td colspan="2">Descricao do Produto</td>
+<td colspan="4">Descrição do Produto. Campo alimentado
+automaticamente pelo módulo de Medicina
+e Segurança do Trabalho com base no
+campo Código EPI.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>SB1->(VDISP(TN3->TN3_CODEPI,"B1_DESC"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>MDT630DES()</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TN3_FORNEC</td>
+<td>Fornecedor</td>
+<td colspan="2">Cod Fornecedor Exames</td>
+<td colspan="4">Código do Fornecedor de EPI. Deve
+existir na Tabela de Fornecedores (SA2).
+Pressione as teclas [Enter]+[F3] para
+selecionar um Fornecedor.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sa2.html">SA2</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TN3_LOJA</td>
+<td>Loja</td>
+<td colspan="2">Loja do Fornecedor</td>
+<td colspan="4">Código da Loja do Fornecedor de EPI.
+Deve existir na Tabela de Fornecedores
+(SA2). Pressione as teclas [Enter]+[F3]
+para selecionar uma Loja do Fornecedor.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sa2.html">SA2</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TN3_NREDUZ</td>
+<td>N Fantasia</td>
+<td colspan="2">Nome de Fantasia Fornec</td>
+<td colspan="4">Nome reduzido do Fornecedor. Campo
+alimentado automaticamente pelo módulo
+de Medicina e Segurança do Trabalho com
+base no campo Fornecedor.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Posicione('SA2',1,xFilial('SA2')+TN3->TN3_FORNEC+TN3->TN3_LOJA,'SA2->A2_NOME')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>IF(SA2->(dBSEEK(xFILIAL("SA2")+TN3->TN3_FORNEC+TN3->TN3_LOJA)),SA2->A2_NOME,"")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TN3_GENERI</td>
+<td>Genérico ?</td>
+<td colspan="2">Produto Generico</td>
+<td colspan="4">Indica se o EPI é um EPI genérico ou não
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('12') .and. NG620TN3G()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=N�o;2=Sim</td>
+<td>MDT620EPWH()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TN3_NUMCAP</td>
+<td>Num. C.A.</td>
+<td colspan="2">Num. Certificado Aprovac.</td>
+<td colspan="4">Número do certificado de aprovação do
+Fornecedor para o EPI cadastrado.
+</td>
+<td>C</td>
+<td>12</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>D620CHK(2)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>MDT620EPWH()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TN3_DTVENC</td>
+<td>Venc. CA</td>
+<td colspan="2">Data Vencimento C.A.</td>
+<td colspan="4">Data de vencimento da certificação de
+avaliação do Fornecedor.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>MDT620EPWH()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TN3_DURABI</td>
+<td>Dias Utiliz.</td>
+<td colspan="2">Qtde Dias de Utilizacao</td>
+<td colspan="4">Durabilidade do EPI, indica a quantidade
+de dias que o EPI pode ser utilizado
+pelo funcionário. Esta informação será
+utilizada para calcular a data de
+substituição do EPI.
+</td>
+<td>N</td>
+<td>4</td>
+<td>0</td>
+<td>9999                                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TN3_INDEVO</td>
+<td>Devolução</td>
+<td colspan="2">Indica Devolucao EPI.</td>
+<td colspan="4">Indica se o EPI deverá ser devolvido
+pelo funcionário, quando da efetivação
+da troca por um novo EPI.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(INCLUI,"1",TN3->TN3_INDEVO)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td>IF(TN3->TN3_INDEVO="1","SIM","NAO")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TN3_DTAVAL</td>
+<td>Data Aval.</td>
+<td colspan="2">Data de Avaliacao</td>
+<td colspan="4">Data de avaliação do EPI, indica quando
+o EPI foi avaliado e aceito pela empresa
+com sendo um equipamento de proteção
+individual.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TN3_NUMCRF</td>
+<td>Num. CRF</td>
+<td colspan="2">Num. Certificado Fabrican</td>
+<td colspan="4">Número do certificado do fabricante.
+</td>
+<td>C</td>
+<td>12</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TN3_NUMCRI</td>
+<td>Num. Cert.</td>
+<td colspan="2">Num. Certificado Importac</td>
+<td colspan="4">Número do certificado de importação.
+</td>
+<td>C</td>
+<td>12</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TN3_DTVALI</td>
+<td>Data Valid.</td>
+<td colspan="2">Data de Validade</td>
+<td colspan="4">Informe a Data de Validade do Produto.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>STOD( SPACE( 8 ) )</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TN3_OBSAVA</td>
+<td>Observação</td>
+<td colspan="2">Obs. sobre Avaliacao EPI</td>
+<td colspan="4">Observações referentes a avaliação do
+EPI para Fornecedor.
+</td>
+<td>C</td>
+<td>80</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TN3_TIPEPI</td>
+<td>Tipo EPI</td>
+<td colspan="2">Tipo de EPI</td>
+<td colspan="4">Parte do corpo de utilização do
+equipamento de proteção individual.
+Exemplo: Mãos, Cabeça, Ouvido, entre
+outros.
+</td>
+<td>C</td>
+<td>25</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TN3_AREEPI</td>
+<td>Área</td>
+<td colspan="2">Área de Uso do EPI</td>
+<td colspan="4">Ambiente em que o EPI deve ser
+utilizado.
+</td>
+<td>C</td>
+<td>80</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TN3_PERMAN</td>
+<td>Per. Manut.</td>
+<td colspan="2">Periodicidade da Manutenc</td>
+<td colspan="4">Periodicidade (em Dias) em que o
+Equipamento de Proteção deverá passar
+por um processo de Higienização /
+Manutenção. O equipamento deverá ser
+avaliado pelos responsáveis da Segurança
+do Trabalho e devolvido ao funcionário.
+</td>
+<td>N</td>
+<td>4</td>
+<td>0</td>
+<td>9999                                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TN3_TPDURA</td>
+<td>Tipo Durab.</td>
+<td colspan="2">Tipo Durabilidade</td>
+<td colspan="4">Indica se a durabilidade do Epi é por
+dias de uso ( U = Uso ) ou corridos ( G
+= Geral ).
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>U=Uso;G=Geral</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

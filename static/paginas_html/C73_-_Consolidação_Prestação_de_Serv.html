@@ -1,0 +1,899 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: C73 - Consolidação Prestação de Serv</title></head>
+<body>
+<font color="orange"><h2 id="C73">Tabela: C73 - Consolidação Prestação de Serv</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Consolidação Prestação de Serv</b></td><td colspan="2"><b>C73_FILIAL+C73_ID+DTOS(C73_DTMOV)+C73_CODMOD+C73_UF+C73_CODMUN+C73_SER+C73_SUB+STR(C73_INDREC)+DTOS(C73_DTDINI)+DTOS(C73_DTDFIM)</b></td><td><b>TAFA207</b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">C73_FILIAL+C73_ID+DTOS(C73_DTMOV)+C73_CODMOD+C73_UF+C73_CODMUN+C73_SER+C73_SUB+STR(C73_INDREC)+DTOS(C73_DTDINI)+DTOS(C73_DTDFIM)</td><td>ID + Dt. Moviment + ID Modelo + Cód. UF + Cód. Municip + Ser. Doc.Fis</td><td></td></tr>
+<tr><td>2</td><td colspan="2">C73_FILIAL+DTOS(C73_DTMOV)+C73_CODMOD+C73_UF</td><td>Dt. Moviment + ID Modelo + Cód. UF</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>C73_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Informar o Código da Filial.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C73_ID</td>
+<td>ID</td>
+<td colspan="2">ID</td>
+<td colspan="4">Deve representar o código de
+identificação do registro. Este código é
+controlado internamente pelo sistema de
+forma incremental e único por filial.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>GetSx8Num("C73","C73_ID")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C73_DTMOV</td>
+<td>Dt. Moviment</td>
+<td colspan="2">Dt. Movimento</td>
+<td colspan="4">Deve representar neste campo a Data do
+movimento .
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>XFUNVldUni("C73",2,DTOS(M->C73_DTMOV)+FWFLDGET("C73_CODMOD")+FWFLDGET("C73_UF"))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>C73_CODMOD</td>
+<td>ID Modelo</td>
+<td colspan="2">Cod. Identificacao Modelo</td>
+<td colspan="4">Deve representar o código do modelo do
+documento fiscal. O valor informado no
+campo deve existir na tabela de
+Documentos Fiscais do ICMS, conforme
+Item 4.1.1. do Ato COTEPE/ICMS nº 09, de
+18 de abril de 2008.
+A informação deste campo corresponde á
+um código de identificação conforme
+respectivo cadastro.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>XFUNVldCMP("C01",3) .And. XFUNVldUni("C73",2,DTOS(FWFLDGET("C73_DTMOV"))+M->C73_CODMOD+FWFLDGET("C73_UF"))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/c01.html">C01</a></td>
+<td><a href="/tabelas_protheus/gatilhos/c73_codmod.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>C73_DCOMO</td>
+<td>Descr Modelo</td>
+<td colspan="2">Descrição do Modelo</td>
+<td colspan="4">Deve representar a descrição do modelo
+do documento fiscal.
+</td>
+<td>C</td>
+<td>220</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI .AND. !EMPTY(C73->C73_CODMOD),POSICIONE("C01",3, XFILIAL("C01")+ C73->C73_CODMOD,"C01_CODIGO+' - '+C01_DESCRI"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C73_UF</td>
+<td>Cód. UF</td>
+<td colspan="2">Cód. UF Origem</td>
+<td colspan="4">Deve informar a sigla da unidade da
+federação do estabelecimento.
+A informação deste campo corresponde á
+um código de identificação conforme
+respectivo cadastro.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>XFUNVldCmp("C09",3) .And. XFUNVldUni("C73",2,DTOS(FWFLDGET("C73_DTMOV"))+FWFLDGET("C73_CODMOD")+M->C73_UF)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/c09.html">C09</a></td>
+<td><a href="/tabelas_protheus/gatilhos/c73_uf.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C73_DUF</td>
+<td>Desc. UF</td>
+<td colspan="2">Desc. UF Origem</td>
+<td colspan="4">Deve representar neste campo a descrição
+da unidade da federação do
+estabelecimento.
+</td>
+<td>C</td>
+<td>220</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI.AND.!EMPTY(C73->C73_UF),POSICIONE("C09",3,xFilial("C09")+C73->C73_UF,"C09_CODIGO+' - '+C09_DESCRI"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C73_CODMUN</td>
+<td>Cód. Municip</td>
+<td colspan="2">Cód. Municipio Origem</td>
+<td colspan="4">Deve informar o código do município
+conforme tabela de municípios do IBGE
+(www.ibge.gov.br).
+Obrigatório se o PAÍS for igual a
+“01058” ou “1058”(Brasil). Se for
+exterior, informar o campo como “99999”.
+A informação deste campo corresponde á
+um código de identificação conforme
+respectivo cadastro.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>XFUNVldCmp("C07",4,FWFLDGET("C73_UF")+M->C73_CODMUN) .Or. Vazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/c07.html">C07</a></td>
+<td><a href="/tabelas_protheus/gatilhos/c73_codmun.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C73_DCODMU</td>
+<td>Des. Municip</td>
+<td colspan="2">Desc. Municipio Origem</td>
+<td colspan="4">Deve representar neste campo a descrição
+do município.
+</td>
+<td>C</td>
+<td>220</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>C73->(IF(!INCLUI.AND.!EMPTY(C73_CODMUN),POSICIONE("C07",4,xFilial("C07") +C73_UF+C73_CODMUN,"C07_CODIGO+' - '+C07_DESCRI"),""))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C73_SER</td>
+<td>Ser. Doc.Fis</td>
+<td colspan="2">Serie Doc.Fiscal</td>
+<td colspan="4">Deve representar neste campo a série do
+documento fiscal.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C73_SUB</td>
+<td>Sub.Ser. Doc</td>
+<td colspan="2">Sub.Serie Doc.Fiscal</td>
+<td colspan="4">Deve representar neste campo a Subsérie
+do documento fiscal.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C73_INDREC</td>
+<td>Ind  Tp Rece</td>
+<td colspan="2">Indica Tipo Receita</td>
+<td colspan="4">Deve representar o Indicador do tipo de
+receita:
+0- Receita própria - serviços prestados;
+1- Receita própria - cobrança de
+débitos;
+2- Receita própria - venda de serviço
+pré-pago – faturamento
+de períodos anteriores;
+3- Receita própria - venda de serviço
+pré-pago – faturamento
+no período;
+4- Outras receitas próprias de serviços
+de comunicação e
+telecomunicação;
+5- Receita própria - co-faturamento;
+6- Receita própria – serviços a faturar
+em período futuro;
+7– Outras receitas próprias de natureza
+não-cumulativa;
+8 - Outras receitas de terceiros
+9 – Outras receitas
+</td>
+<td>N</td>
+<td>1</td>
+<td>0</td>
+<td>9                                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C73_QTCONS</td>
+<td>Qtd. Doc.</td>
+<td colspan="2">Qtd. de Doc.</td>
+<td colspan="4">Deve representar neste campo a
+quantidade de documentos consolidados
+neste registro.
+</td>
+<td>N</td>
+<td>16</td>
+<td>0</td>
+<td>@E 9,999,999,999,999,999                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C73_DTDINI</td>
+<td>Dt Doc Ini.</td>
+<td colspan="2">Data Inicial do Documento</td>
+<td colspan="4">Deve representar neste campo a Data
+Inicial dos documentos consolidados no
+período.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>C73_DTDFIM</td>
+<td>Dt Doc Fim</td>
+<td colspan="2">Data Final do Documento.</td>
+<td colspan="4">Deve representar neste campo a Data
+Final dos documentos consolidados no
+período.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>C73_VLDOC</td>
+<td>Vlr Total</td>
+<td colspan="2">Vlr Total Doc.</td>
+<td colspan="4">Deve representar neste campo o Valor
+Total dos Documentos.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C73_VLDESC</td>
+<td>Val Tot Desc</td>
+<td colspan="2">Valor total do desconto</td>
+<td colspan="4">Deve representar neste campo o valor
+total do desconto.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C73_VLSERV</td>
+<td>Vlr serv.</td>
+<td colspan="2">Vlr da prest. Serviços</td>
+<td colspan="4">Deve representar neste campo o valor da
+prestação de serviço tributado pelo ICMS
+discriminado no documento fiscal.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C73_VSRVNT</td>
+<td>Vlr serv. NT</td>
+<td colspan="2">Vlr da prest. Serviços NT</td>
+<td colspan="4">Deve representar neste campo o valor da
+prestação de serviço não tributado pelo
+ICMS discriminado no documento fiscal.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C73_VLTERC</td>
+<td>Vlr de terc.</td>
+<td colspan="2">Vlr de terceiros</td>
+<td colspan="4">Deve representar neste campo o valor
+total cobrado em nome de terceiros.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C73_VLDA</td>
+<td>Vlr desp ace</td>
+<td colspan="2">Vlr da Desp. Acessórias</td>
+<td colspan="4">Deve representar neste campo o valor
+total das despesas acessórias
+discriminado no documento fiscal.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C73_BCICM</td>
+<td>Vl. BC. ICMS</td>
+<td colspan="2">Vl da base calc do ICMS</td>
+<td colspan="4">Deve representar neste campo o Valor
+acumulado da base de cálculo do ICMS.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C73_VLICMS</td>
+<td>Vlr. ICMS</td>
+<td colspan="2">Valor ICMS</td>
+<td colspan="4">Deve representar neste campo o valor do
+ICMS acumulado relativo à alíquota
+informada.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C73_VLPIS</td>
+<td>Vl. PIS</td>
+<td colspan="2">Valor acumulado PIS/PASEP</td>
+<td colspan="4">Deve representar neste campo o Valor
+acumulado do PIS/PASEP.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C73_VLCOFI</td>
+<td>Vl. COFINS</td>
+<td colspan="2">Valor acumulado COFINS</td>
+<td colspan="4">Deve representar neste campo o Valor
+acumulado COFINS.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C73_STATUS</td>
+<td>Status Reg.</td>
+<td colspan="2">Status do registro</td>
+<td colspan="4">Campo de uso interno do sistema.
+Deve representar neste campo o status do
+registro:
+(Vazio) = Registro Novo
+0 = Registro Válido (integração)
+1 = Registro invalido (integração)
+2 = Registro transmitido
+3 = Registro transmitido com
+inconsistência(s)
+4 = Registro transmitido válido
+9 = Em Processamento
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("012349")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Reg.V�lido;1=Reg.Inv�lido;2=Reg.Transmitido;3=Reg.Transmitido com inconsist�ncia;4=Reg.Transmitido v�lido;9=Em Processamento</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/079.html">079</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>C75</td>
+<td colspan="2">C73_FILIAL+C73_ID</td>
+<td colspan="2">C75_FILIAL+C75_ID</td>
+</tr>
+<tr>
+<td>C76</td>
+<td colspan="2">C73_FILIAL+C73_ID</td>
+<td colspan="2">C76_FILIAL+C76_ID</td>
+</tr>
+<tr>
+<td>C74</td>
+<td colspan="2">C73_FILIAL+C73_ID</td>
+<td colspan="2">C74_FILIAL+C74_ID</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

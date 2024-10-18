@@ -1,0 +1,2955 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: SUA - Orçamento Televendas</title></head>
+<body>
+<font color="orange"><h2 id="SUA">Tabela: SUA - Orçamento Televendas</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Orçamento Televendas</b></td><td colspan="2"><b>UA_FILIAL+UA_NUM</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">UA_FILIAL+UA_NUM</td><td>Atendimento</td><td></td></tr>
+<tr><td>2</td><td colspan="2">UA_FILIAL+UA_SERIE+UA_DOC</td><td>Serie + Nota Fiscal</td><td></td></tr>
+<tr><td>3</td><td colspan="2">UA_FILIAL+UA_VEND+DTOS(UA_EMISSAO)+UA_NUM</td><td>Vendedor + Data + Atendimento</td><td></td></tr>
+<tr><td>4</td><td colspan="2">UA_FILIAL+DTOS(UA_EMISSAO)</td><td>Data</td><td></td></tr>
+<tr><td>5</td><td colspan="2">UA_FILIAL+UA_OPERADO+DTOS(UA_EMISSAO)</td><td>Operador + Data</td><td></td></tr>
+<tr><td>6</td><td colspan="2">UA_FILIAL+UA_CLIENTE+UA_LOJA+DTOS(UA_EMISSAO)</td><td>Cliente + Loja + Data</td><td></td></tr>
+<tr><td>7</td><td colspan="2">UA_FILIAL+UA_CLIENTE+UA_LOJA+STR(UA_DIASDAT,8,0)+STR(UA_HORADAT,8,0)</td><td>Cliente + Loja + Num Dias + Num. Horas</td><td></td></tr>
+<tr><td>8</td><td colspan="2">UA_FILIAL+UA_NUMSC5</td><td>Ped SIGAFAT</td><td></td></tr>
+<tr><td>9</td><td colspan="2">UA_FILIAL+UA_CODLIG</td><td>Ocorrencia</td><td></td></tr>
+<tr><td>A</td><td colspan="2">UA_FILIAL+UA_CONTRA</td><td>Contrato</td><td></td></tr>
+<tr><td>B</td><td colspan="2">UA_FILIAL+UA_CODCONT+UA_CLIENTE+UA_LOJA</td><td>Contato + Cliente + Loja</td><td></td></tr>
+<tr><td>C</td><td colspan="2">UA_FILIAL+UA_SDOC+UA_DOC</td><td>Série Doc. + Nota Fiscal</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>UA_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Código da filial da empresa.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td>Tk310VldCamp(M->UA_CODCAMP)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_NUM</td>
+<td>Atendimento</td>
+<td colspan="2">Numero do Atendimento</td>
+<td colspan="4">Número do Orçamento.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td>NaoVazio()</td>
+<td>TkNumero("SUA","UA_NUM")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td>#UA_NUM    <>'      '</td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>UA_CLIENTE</td>
+<td>Cliente</td>
+<td colspan="2">Codigo do Cliente</td>
+<td colspan="4">Código do cliente.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .And. TkCliente() .And. Tk273DesCab() .And. Tk273Recalc(,,.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/clt.html">CLT</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ua_cliente.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>UA_LOJA</td>
+<td>Loja</td>
+<td colspan="2">Loja Cliente</td>
+<td colspan="4">Loja do cliente.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .And. TkCliente() .And. Tk273DesCab() .And. Tk273Recalc(,,.T.)</td>
+<td>IIF(INCLUI,ALLTRIM(GETMV("MV_LOJAPAD")),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>UA_DESCCLI</td>
+<td>Empresa</td>
+<td colspan="2">Nome do Cliente</td>
+<td colspan="4">Nome do Cliente ou Prospect.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIF(!INCLUI, TkDCliente(SUA->UA_CLIENTE,SUA->UA_LOJA),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>TkDCliente(SUA->UA_CLIENTE,SUA->UA_LOJA)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_CODCONT</td>
+<td>Contato</td>
+<td colspan="2">Codigo do contato</td>
+<td colspan="4">Código do contato.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>TkVldContato(IIF(lProspect,"SUS","SA1"), M->UA_CLIENTE+M->UA_LOJA)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/cnt.html">CNT</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ua_codcont.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_DESCNT</td>
+<td>Nome Contato</td>
+<td colspan="2">Nome do Contato</td>
+<td colspan="4">Descrição do contato.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("SU5",1,xFilial("SU5") + SUA->UA_CODCONT, "U5_CONTAT")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_OPERADO</td>
+<td>Operador</td>
+<td colspan="2">Codigo do Operador</td>
+<td colspan="4">Código do Operador.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td>NaoVazio() .And. ExistCpo("SU7") .And. Tk273ValOper("UA_OPERADO")</td>
+<td>IIF(INCLUI, TkOperador(),SUA->UA_OPERADO)</td>
+<td><a href="/tabelas_protheus/f3/su7.html">SU7</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ua_operado.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>UA_DESCOPE</td>
+<td>Nome</td>
+<td colspan="2">Nome do Operador</td>
+<td colspan="4">Descriç„o do Operador.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,Posicione("SU7",1,xFilial("SU7") + SUA->UA_OPERADO, "U7_NOME"),If(!Empty(M->UA_OPERADO),SU7->U7_NOME,""))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("SU7",1,xFilial("SU7") + SUA->UA_OPERADO, "U7_NOME")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>UA_CONDPG</td>
+<td>Condição</td>
+<td colspan="2">Codigo Condicao Pagamento</td>
+<td colspan="4">Código da condição de pagamento.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .OR. (ExistCPO("SE4") .AND. Tk273VCond() .AND. Tk273Recalc(,,.T.))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/se4.html">SE4</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_TABELA</td>
+<td>Tabela</td>
+<td colspan="2">Numero da Tabela de Preco</td>
+<td colspan="4">Tabela de preço utilizada sobre o
+produto.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>                                             </td>
+<td>(Vazio().OR.ExistCpo("DA0")).AND.MaVldTabPrc(M->UA_TABELA, M->UA_CONDPG) .AND. Tk273Recalc(,,.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/da0.html">DA0</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_OPER</td>
+<td>Operacao</td>
+<td colspan="2">Tipo de Operacao</td>
+<td colspan="4">Tipo de Operação:
+1 - Faturamento - (Emissão de Pedidos)
+2 - Orçamento - (Cotação, Orçamentos)
+3 - Atendimento - (Esse tipo não exige
+que todos os campos do atendimento sejam
+preenchidos)
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>!                                            </td>
+<td>Pertence("123") .AND. TK273VdJur()</td>
+<td>IIF(!INCLUI,SUA->UA_OPER,"2")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Faturamento;2=Orcamento;3=Atendimento</td>
+<td>Tk271TpOper()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td>#UA_OPER    IN ('123')</td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>UA_MIDIA</td>
+<td>Midia</td>
+<td colspan="2">Codigo da Midia</td>
+<td colspan="4">Código da midia utilizada.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/suh.html">SUH</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ua_midia.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_DESCMID</td>
+<td>Descricao</td>
+<td colspan="2">Descricao da Midia</td>
+<td colspan="4">Descriç„o da mídia.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIF(!INCLUI,Posicione("SUH",1,xFilial("SUH") + SUA->UA_MIDIA, "UH_DESC"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("SUH",1,xFilial("SUH") + SUA->UA_MIDIA, "UH_DESC")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_VEND</td>
+<td>Vendedor</td>
+<td colspan="2">Codigo do Vendedor</td>
+<td colspan="4">Código do Vendedor.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Existcpo("SA3") .And. Tk273Vendedor()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sa3.html">SA3</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ua_vend.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_DESCVEN</td>
+<td>Nome</td>
+<td colspan="2">Nome do Vendedor</td>
+<td colspan="4">Descriç„o do vendedor.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIF(!INCLUI,Posicione("SA3",1,xFilial("SA3") + SUA->UA_VEND, "A3_NOME"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_TMK</td>
+<td>Marketing</td>
+<td colspan="2">Tipo de Marketing</td>
+<td colspan="4">Tipo de contato feito para o TeleVendas
+1 = Ativo
+2 = Receptivo
+3 = Fax
+4 = Representante
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>!                                            </td>
+<td>Pertence("1234")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/ua_tmk.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Receptivo;2=Ativo;3=Fax;4=Representante</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td>#UA_TMK     IN ('1234')</td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>UA_EMISSAO</td>
+<td>Data</td>
+<td colspan="2">Data do Atendimento</td>
+<td colspan="4">Data da emiss„o do Orçamento.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>MsDate()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_CODCAMP</td>
+<td>Campanha</td>
+<td colspan="2">Codigo da Campanha</td>
+<td colspan="4">Código da campanha. Ex: 000001.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/suo.html">SUO</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ua_codcamp.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_DESCCAM</td>
+<td>Descricao</td>
+<td colspan="2">Descricao da Campanha</td>
+<td colspan="4">Descriç„o da campanha.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIF(!INCLUI,Posicione("SUO",1,xFilial("SUO") + SUA->UA_CODCAMP, "UO_DESC"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_CODLIG</td>
+<td>Ocorrencia</td>
+<td colspan="2">Codigo da Ocorrencia</td>
+<td colspan="4">Código da ocorrência da ligação.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/u9v.html">U9V</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ua_codlig.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_DESCLIG</td>
+<td>Descricao</td>
+<td colspan="2">Descricao da Ocorrencia</td>
+<td colspan="4">Descriç„o da ocorrência.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIF(!INCLUI,Posicione("SU9",1,xFilial("SU9") + SUA->UA_CODLIG, "U9_DESC"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_PROXLIG</td>
+<td>Retorno</td>
+<td colspan="2">Retorno do Atendimento</td>
+<td colspan="4">Data em que deve ser feita a próxima
+ligação.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>IIF(!EMPTY(M->UA_PROXLIG) .AND. INCLUI,(M->UA_PROXLIG >= dDataBase),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_HRPEND</td>
+<td>Horario</td>
+<td colspan="2">Horario do Retorno</td>
+<td colspan="4">Horário em que deve ser feita a próxima
+ligação.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td>Tk273HSUA()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_CODOBS</td>
+<td>Codigo OBS</td>
+<td colspan="2">Codigo da Observacao</td>
+<td colspan="4">Código do campo de observaçao.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_OBS</td>
+<td>Observacao</td>
+<td colspan="2">Observacao Televendas</td>
+<td colspan="4">Observaç„o sobre o orçamento.
+</td>
+<td>M</td>
+<td>35</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IIF(!INCLUI,MSMM(SUA->UA_CODOBS,43),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_VALICM</td>
+<td>Valor de ICM</td>
+<td colspan="2">Valor do ICMS</td>
+<td colspan="4">Valor do ICM.
+</td>
+<td>N</td>
+<td>15</td>
+<td>2</td>
+<td>@E 999,999,999,999.99                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_VALISS</td>
+<td>Valor do ISS</td>
+<td colspan="2">Valor do ISS</td>
+<td colspan="4">Valor do ISS.
+</td>
+<td>N</td>
+<td>15</td>
+<td>2</td>
+<td>@E 999,999,999,999.99                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_VALIPI</td>
+<td>Valor do IPI</td>
+<td colspan="2">Valor de IPI</td>
+<td colspan="4">Valor do IPI.
+</td>
+<td>N</td>
+<td>15</td>
+<td>2</td>
+<td>@E 999,999,999,999.99                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_FORMPG</td>
+<td>Forma Pagto</td>
+<td colspan="2">Forma de Pagamento</td>
+<td colspan="4">Código da forma de pagamento.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_FRETE</td>
+<td>Valor Frete</td>
+<td colspan="2">Frete</td>
+<td colspan="4">Valor total do Frete.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_DESPESA</td>
+<td>Despesas</td>
+<td colspan="2">Despesa</td>
+<td colspan="4">Despesas adicionais do pedido.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_COMIS</td>
+<td>Comissao</td>
+<td colspan="2">Comissao do Vendedor</td>
+<td colspan="4">Percentual da comiss„o do vendedor.
+</td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td>positivo() .or. vazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_INICIO</td>
+<td>Inicio Lig.</td>
+<td colspan="2">Inicio do atendimento</td>
+<td colspan="4">Horário de início do atendimento.
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>99:99:99                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_FIM</td>
+<td>Termino Lig.</td>
+<td colspan="2">Fim do atendimento</td>
+<td colspan="4">Horário final do atendimento.
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>99:99:99                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_CREDITO</td>
+<td>Credito</td>
+<td colspan="2">Valor do Credito</td>
+<td colspan="4">Valor do Crédito no Orçamento.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_STATUS</td>
+<td>Status</td>
+<td colspan="2">Status do Atendimento</td>
+<td colspan="4">Status do pedido:
+CAN = Cancelado
+SUP = Esperando liberaç„o
+LIB = Liberado
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>!!!                                          </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_CANC</td>
+<td>Cancelado</td>
+<td colspan="2">Atendimento Cancelado</td>
+<td colspan="4">Flag indicativa do cancelamento do
+pedi-do.
+Conteúdo: "S"=Cancelado ou
+""(Vazio)=   N„o cancelado.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>!                                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_CODCANC</td>
+<td>Cod.Cancel.</td>
+<td colspan="2">Cod.da obs.do cancelament</td>
+<td colspan="4">Código da observaç„o do cancelamento.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_OBSCANC</td>
+<td>Obs. Cancel.</td>
+<td colspan="2">Observacoes de Cancelamen</td>
+<td colspan="4">Motivo do Cancelamento.
+</td>
+<td>M</td>
+<td>35</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_ENDCOB</td>
+<td>Endereco Cob</td>
+<td colspan="2">Endereco de Cobranca</td>
+<td colspan="4">Endereço de cobrança do pedido.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_BAIRROC</td>
+<td>Bairro Cobr.</td>
+<td colspan="2">Bairro de Cobranca</td>
+<td colspan="4">Bairro de cobrança do cliente.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_ENDENT</td>
+<td>Endereco Ent</td>
+<td colspan="2">Endereco de Entrega</td>
+<td colspan="4">Endereço de entrega do pedido.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_BAIRROE</td>
+<td>Bairro Entre</td>
+<td colspan="2">Bairro de Entrega</td>
+<td colspan="4">Bairro de entrega do pedido.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_CEPC</td>
+<td>Cep Cobranca</td>
+<td colspan="2">Cep de Cobranca</td>
+<td colspan="4">Cep de cobrança do pedido.
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_CEPE</td>
+<td>Cep Entrega</td>
+<td colspan="2">Cep de Entrega</td>
+<td colspan="4">Cep de entrega do pedido.
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_ESTC</td>
+<td>Uf Cobranca</td>
+<td colspan="2">Uf de cobranca</td>
+<td colspan="4">Estado de cobrança do pedido.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/010.html">010</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_ESTE</td>
+<td>Uf Entrega</td>
+<td colspan="2">Uf de Entrega</td>
+<td colspan="4">Estado de entrega do pedido.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/010.html">010</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_MUNC</td>
+<td>Mun Cobranca</td>
+<td colspan="2">Municipio de Cobranca</td>
+<td colspan="4">Município de Cobrança do pedido.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_MUNE</td>
+<td>Mun. Entrega</td>
+<td colspan="2">Municipio de Entrega</td>
+<td colspan="4">Município de entrega do pedido.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_TRANSP</td>
+<td>Transporte</td>
+<td colspan="2">Transportadora do Pedido</td>
+<td colspan="4">Transportadora do pedido.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td>Vazio() .OR. Existcpo("SA4")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sa4.html">SA4</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_VENDTEF</td>
+<td>Venda TEF</td>
+<td colspan="2">Indica se foi venda Tef</td>
+<td colspan="4">Indica se foi feita venda via TEF.
+Se "S" Venda efetuada via TEF.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>!                                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_DATATEF</td>
+<td>Data TEF</td>
+<td colspan="2">Indica a data da tran.Tef</td>
+<td colspan="4">Indica a data da transferência TEF.
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>9999                                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_HORATEF</td>
+<td>Hora TEF</td>
+<td colspan="2">Indica a hora da tran.Tef</td>
+<td colspan="4">Indica a hora da transferência TEF.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>99:99:99                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_DOCTEF</td>
+<td>Doc TEF</td>
+<td colspan="2">Numero do Documento Tef</td>
+<td colspan="4">Número do documento de TEF.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>!                                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_AUTORIZ</td>
+<td>Autorizacao</td>
+<td colspan="2">Codigo Autorizacao Venda</td>
+<td colspan="4">Código da autorizaç„o de venda.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>!                                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_DOCCANC</td>
+<td>Cancela TEF</td>
+<td colspan="2">Numero de Cancelamento</td>
+<td colspan="4">Número do cancelamento do pedido.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>!                                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_DATCANC</td>
+<td>Data Cancel.</td>
+<td colspan="2">Data de Cancelamento</td>
+<td colspan="4">Data de cancelamento do pedido.
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>9999                                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_HORCANC</td>
+<td>Hora Cancel.</td>
+<td colspan="2">Hora de Cancelamento</td>
+<td colspan="4">Hora do cancelamento do pedido.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>99:99:99                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_INSTITU</td>
+<td>Instituicao</td>
+<td colspan="2">Codigo da Instituicao</td>
+<td colspan="4">Código da administradora financeira
+utilizada para a realizaç„o de transa
+çães TEF.
+</td>
+<td>C</td>
+<td>16</td>
+<td>0</td>
+<td>!                                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_NSUTEF</td>
+<td>Sequencia</td>
+<td colspan="2">Numero Sequencial Trans.</td>
+<td colspan="4">Número sequencial da transaç„o TEF.
+</td>
+<td>C</td>
+<td>12</td>
+<td>0</td>
+<td>!                                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_TIPCART</td>
+<td>Modalidade</td>
+<td colspan="2">Modalidade do cartao</td>
+<td colspan="4">Modalidade do cart„o de crédito.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>!                                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_CARTAO</td>
+<td>Cartao</td>
+<td colspan="2">Total em Cartao</td>
+<td colspan="4">Total pago em cart„o.
+</td>
+<td>N</td>
+<td>15</td>
+<td>2</td>
+<td>@E 999,999,999,999.99                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_NUMSL1</td>
+<td>Orc SIGALOJA</td>
+<td colspan="2">Numero do Orcamento LOJA</td>
+<td colspan="4">Número do orçamento para o SigaLoja.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_NUMSC5</td>
+<td>Ped SIGAFAT</td>
+<td colspan="2">Numero do Pedido Gerado</td>
+<td colspan="4">Número do pedido de venda gerado.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_ACRECND</td>
+<td>Acresc. Cond</td>
+<td colspan="2">Valor do Acrescimo Cond.</td>
+<td colspan="4">Valor do acréscimo da condiç„o de paga-
+mento.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_DIASDAT</td>
+<td>Num Dias</td>
+<td colspan="2">N. de dias das Ligacoes</td>
+<td colspan="4">Número de dias das Ligaçães.
+</td>
+<td>N</td>
+<td>8</td>
+<td>0</td>
+<td>99999999                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_PROSPEC</td>
+<td>Prospect</td>
+<td colspan="2">Ligacao de Prospect</td>
+<td colspan="4">Parâmetro lógico. .T. = Ligaç„o de
+Pros-pect.
+</td>
+<td>L</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_HORADAT</td>
+<td>Num. Horas</td>
+<td colspan="2">N. de horas da ligação</td>
+<td colspan="4">Número de horas da ligaç„o.
+</td>
+<td>N</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_EMISNF</td>
+<td>Emissao NF</td>
+<td colspan="2">Data Emissao NF</td>
+<td colspan="4">Data da emiss„o da Nota Fiscal.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_VALBRUT</td>
+<td>Vlr.Bruto NF</td>
+<td colspan="2">Valor Bruto da NF</td>
+<td colspan="4">Valor bruto da Nota Fiscal.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_DTLIM</td>
+<td>Dt.Validade</td>
+<td colspan="2">Data Validade Orcamento</td>
+<td colspan="4">Data de Validade do Orçamento.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>naovazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_VALMERC</td>
+<td>Vl.Mercador.</td>
+<td colspan="2">Valor das Mercadorias</td>
+<td colspan="4">Valor das Mercadorias.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_VLRLIQ</td>
+<td>Vlr.Liquido</td>
+<td colspan="2">Valor Liquido Orcamento</td>
+<td colspan="4">Valor líquido do Orçamento.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_TXDESC</td>
+<td>Vlr.Desc.Fin</td>
+<td colspan="2">Valor do Desconto Financ.</td>
+<td colspan="4">Valor de desconto negociada.
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>@E 999.99                                    </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_JUROS</td>
+<td>Juros Cond.</td>
+<td colspan="2">Taxa de Juros Negociada</td>
+<td colspan="4">Valor da taxa de juros negociada.
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>@E 999.99                                    </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_ENTRADA</td>
+<td>Vlr. Entrada</td>
+<td colspan="2">Entrada Negociada</td>
+<td colspan="4">Valor da Entrada negociada.
+</td>
+<td>N</td>
+<td>15</td>
+<td>2</td>
+<td>@E 999,999,999,999.99                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_DESCONT</td>
+<td>Vlr.Desconto</td>
+<td colspan="2">Valor Total do Desconto</td>
+<td colspan="4">Valor total do desconto.
+</td>
+<td>N</td>
+<td>10</td>
+<td>2</td>
+<td>@E 9,999,999.99                              </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_PARCELA</td>
+<td>Parcelas</td>
+<td colspan="2">Num. de Parcelas Negoc.</td>
+<td colspan="4">Número de parcelas negociadas.
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_FINANC</td>
+<td>Financiado</td>
+<td colspan="2">Total Financiado</td>
+<td colspan="4">Total financiado.
+</td>
+<td>N</td>
+<td>15</td>
+<td>2</td>
+<td>@E 999,999,999,999.99                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_ACRESCI</td>
+<td>Total Acresc</td>
+<td colspan="2">Valor total de Acrescimo</td>
+<td colspan="4">Valor total do acréscimo.
+</td>
+<td>N</td>
+<td>10</td>
+<td>2</td>
+<td>@E 999,999.99                                </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_SERIE</td>
+<td>Serie</td>
+<td colspan="2">Serie da Nota Fiscal</td>
+<td colspan="4">Série da Nota Fiscal emitida.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>!!!                                          </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/094.html">094</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_DOC</td>
+<td>Nota Fiscal</td>
+<td colspan="2">Numero da Nota Fiscal</td>
+<td colspan="4">Número da Nota Fiscal emitida.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/018.html">018</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_MOEDA</td>
+<td>Moeda</td>
+<td colspan="2">Moeda do Orcamento</td>
+<td colspan="4">Moeda que será utilizada nas transaçães
+do atendimento. Ex:1 - Dolar.
+</td>
+<td>N</td>
+<td>1</td>
+<td>0</td>
+<td>@E 9                                         </td>
+<td>M->UA_MOEDA <= ContaMoeda()</td>
+<td>1</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_TPCARGA</td>
+<td>Mapa Carreg.</td>
+<td colspan="2">Mapa de carregamento</td>
+<td colspan="4">Indica se o pedido entrara no mapa de
+carregamento do OMS. (S/N)
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>IIF(INCLUI,"2","")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Carrega;2=Nao carrega</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_PDESCAB</td>
+<td>%Indenizacao</td>
+<td colspan="2">Percentual de indenizacao</td>
+<td colspan="4">Informe o percentual de indenização a
+ser concedido na preparação do documento
+de saída. Na preparação do documento de
+saída, este percentual será aplicado
+sobre o valor da mercadoria.
+</td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td>Positivo() .AND. Tk273CalcDesc()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_TPFRETE</td>
+<td>Tipo Frete</td>
+<td colspan="2">Tipo do Frete utilizado</td>
+<td colspan="4">Informe neste campo se o valor do icms
+retido deverá ter alguma ação sobre o
+valor de origem.
+1=Sem Ação - O valor do icms retido não
+será subtraído ou somado no valor de
+origem da base de cálculo;
+2=Subtrai - O valor do icms retido será
+subtraído do valor de origem da base de
+cálculo;
+3=Soma - O valor do icms retido será
+somado no valor de origem da base de
+cálculo;
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>X                                            </td>
+<td>pertence("CFTRDS")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>C=CIF;F=FOB;T=Por conta terceiros;R=Por conta remetente;D=Por conta destinat�rio;S=Sem frete</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_DOCGER</td>
+<td>Doc a gerar</td>
+<td colspan="2">Doc. a gerar</td>
+<td colspan="4">Tipo do documento que será gerado:
+1=Factura
+2=Remito
+3=Entrega Futura
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Vazio().Or.Pertence("123")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Factura;2=Remito;3=Entrega Futura</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_DESC1</td>
+<td>Desconto 1</td>
+<td colspan="2">Desconto 1 (Cascata)</td>
+<td colspan="4"></td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td>(Positivo() .OR. Vazio()) .AND. TK273DesCab()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_DESC2</td>
+<td>Desconto 2</td>
+<td colspan="2">Desconto 2 (Cascata)</td>
+<td colspan="4"></td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td>(Positivo() .OR. Vazio()) .AND. Tk273DesCab()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_DESC3</td>
+<td>Desconto 3</td>
+<td colspan="2">Desconto 3 (Cascata)</td>
+<td colspan="4"></td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td>(Positivo() .OR. Vazio()) .AND. Tk273DesCab()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_DESC4</td>
+<td>Desconto 4</td>
+<td colspan="2">Desconto 4 (Cascata)</td>
+<td colspan="4"></td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td>(Positivo() .OR. Vazio()) .AND. Tk273DesCab()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_CONTRA</td>
+<td>Contrato</td>
+<td colspan="2">Numero Contrato Financ.</td>
+<td colspan="4">Número do Contrato do Financiamento.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_CGCCART</td>
+<td>CNPJ/Cartao</td>
+<td colspan="2">CNPJ ou Num. cartao</td>
+<td colspan="4">Informar o número do CNPJ ou do cartão.
+</td>
+<td>C</td>
+<td>16</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_FORCADA</td>
+<td>Forcada</td>
+<td colspan="2">Venda forcada</td>
+<td colspan="4">Venda Forçada
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_TIPLIB</td>
+<td>Tp Liberação</td>
+<td colspan="2">Tipo de liberação</td>
+<td colspan="4">Define o Criterio de Liberação do Pedido
+de Venda:
+1 - Libera por Itens.
+2 - Libera por Pedido de Venda.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_CLIENT</td>
+<td>Cli. Entrega</td>
+<td colspan="2">Cliente da Entrega</td>
+<td colspan="4">Horário da alteração do registro. Irá
+auxiliar no histórico de alterações.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. (TkCliente() .And. Tk273Recalc(,,.T.))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sa1.html">SA1</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>!lProspect</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_LOJAENT</td>
+<td>Loja Entrega</td>
+<td colspan="2">Loja de Entrega</td>
+<td colspan="4">Informe neste campo se o valor do icms
+desonerado deverá ter alguma ação sobre
+o valor de origem.
+1=Sem Ação - O valor do icms desonerado
+não será subtraído ou somado no valor de
+origem da base de cálculo;
+2=Subtrai - O valor do icms desonerado
+será subtraído do valor de origem da
+base de cálculo;
+3=Soma - O valor do icms desonerado será
+somado no valor de origem da base de
+cálculo;
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. (TkCliente() .And. Tk273Recalc(,,.T.))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>!lProspect</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UA_TIPOCLI</td>
+<td>Tipo Cliente</td>
+<td colspan="2">Tipo de Cliente</td>
+<td colspan="4">Tipo do Cliente.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Tk273RodImposto("NF_TPCLIFOR",M->UA_TIPOCLI)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>F=Cons.Final;L=Prod.Rural;R=Revendedor;S=Solidario;X=Exportacao/Importacao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>UA_SDOC</td>
+<td>Série Doc.</td>
+<td colspan="2">Série do Documento Fiscal</td>
+<td colspan="4">Série do Documento Fiscal
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>!!!                                          </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/095.html">095</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>SUB</td>
+<td colspan="2">UA_NUM</td>
+<td colspan="2">UB_NUM</td>
+</tr>
+<tr>
+<td>SL4</td>
+<td colspan="2">UA_NUM</td>
+<td colspan="2">L4_NUM</td>
+</tr>
+<tr>
+<td>SL1</td>
+<td colspan="2">UA_NUM</td>
+<td colspan="2">L1_NUMATEN</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

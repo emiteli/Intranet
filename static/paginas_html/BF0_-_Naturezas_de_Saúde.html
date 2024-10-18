@@ -1,0 +1,676 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: BF0 - Naturezas de Saúde</title></head>
+<body>
+<font color="orange"><h2 id="BF0">Tabela: BF0 - Naturezas de Saúde</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Naturezas de Saúde</b></td><td colspan="2"><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">BF0_FILIAL+BF0_GRUGEN+BF0_CODIGO</td><td>Gr Gerencial + Codigo</td><td></td></tr>
+<tr><td>2</td><td colspan="2">BF0_FILIAL+BF0_DESCRI</td><td>Descricao</td><td></td></tr>
+<tr><td>3</td><td colspan="2">BF0_FILIAL+BF0_GRUGEN+BF0_CODSUP+BF0_CODIGO</td><td>Gr Gerencial + Cod Superior + Codigo</td><td></td></tr>
+<tr><td>4</td><td colspan="2">BF0_FILIAL+BF0_CODIGO</td><td>Codigo</td><td></td></tr>
+<tr><td>5</td><td colspan="2">BF0_FILIAL+BF0_TPUNIM</td><td>Cod Grupo Ct</td><td>BF0TPU</td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>BF0_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BF0_GRUGEN</td>
+<td>Gr Gerencial</td>
+<td colspan="2">Grupo Gerencial</td>
+<td colspan="4">Indica o grupo gerencial a qual se
+relaciona a natureza de saúde a ser
+cadastrada.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("BSB",M->BF0_GRUGEN,1) .And. P610GCod(M->BF0_GRUGEN,M->BF0_CODSUP,@M->BF0_CODIGO)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/bsbpls.html">BSBPLS</a></td>
+<td><a href="/tabelas_protheus/gatilhos/bf0_grugen.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>BF0_DESGRU</td>
+<td>Descricao</td>
+<td colspan="2">Descricao</td>
+<td colspan="4">Descrição do Grupo Gerencial selecionado
+no campo anterior.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",Posicione("BSB",1,xFilial("BSB")+BF0->BF0_GRUGEN,"BSB_DESCRI"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BF0_CODSUP</td>
+<td>Cod Superior</td>
+<td colspan="2">Codigo Superior</td>
+<td colspan="4">Se existe algum nível acima da natureza
+a ser cadastrada, deve ser informado o
+código neste campo.
+</td>
+<td>C</td>
+<td>7</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PlsVldSup(M->BF0_CODSUP,M->BF0_GRUGEN) .And. P610GCod(M->BF0_GRUGEN,M->BF0_CODSUP,@M->BF0_CODIGO)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/bf0pls.html">BF0PLS</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BF0_CODIGO</td>
+<td>Codigo</td>
+<td colspan="2">Codigo</td>
+<td colspan="4">Codigo da Natureza de Saúde (Subdivisão
+do Grupo Gerencial).
+</td>
+<td>C</td>
+<td>7</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistChav("BF0",M->BF0_GRUGEN+M->BF0_CODIGO)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>P610IniCod()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BF0_DESCRI</td>
+<td>Descricao</td>
+<td colspan="2">Descricao</td>
+<td colspan="4">Indica a descrição referente ao código
+anteriormente informado. Esta pode
+conter caracteres alfanuméricos,
+entretanto, evite a utilização de
+números.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BF0_CLASSE</td>
+<td>Classe</td>
+<td colspan="2">Classe</td>
+<td colspan="4">Visualização do Arquivo: ANALITICO:
+Natureza que visa a representação de um
+resultado de um grupo de outras
+naturezas.
+SINTETICO: Representa a unidade ou
+"lançamentos" diretamente realizados na
+natureza de saude
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/bf0_classe.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sintetico;2=Analitico</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BF0_NIVEL</td>
+<td>Nivel</td>
+<td colspan="2">Nivel</td>
+<td colspan="4">Indica o tipo do registro. Ex.: Grupo,
+SubGrupo ou Ítem
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>IF(M->BF0_CLASSE=="1",M->BF0_NIVEL<>"3",.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Grupo;2=Sub-Grupo;3=Item</td>
+<td>M->BF0_CLASSE=="1"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BF0_TIPGUI</td>
+<td>Ref. Item</td>
+<td colspan="2">Referencia Item Sip</td>
+<td colspan="4">Relaciona o item da natureza de saúde
+com os subitens de internação do modelo
+fornecido pela RDC-85 da ANS.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>01=Interna��o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BF0_IMPRIM</td>
+<td>Imprime</td>
+<td colspan="2">Imprime Natureza de Saude</td>
+<td colspan="4">Indica se este registro deve ser
+impresso no relatório de RESUMO MENSAL
+PARA ENTREGA DO S.I.P (PLSR410).
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;0=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BF0_TPUNIM</td>
+<td>Cod Grupo Ct</td>
+<td colspan="2">Cod Grupo Contábil</td>
+<td colspan="4">Digite o codigo do grupo contábil.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td>ExistCpo('SX5','YR'+M->BF0_TPUNIM)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/yr.html">YR</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BF0_IDADE1</td>
+<td>Idade de</td>
+<td colspan="2">Idade de</td>
+<td colspan="4">Idade minima para a natureza de saude
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BF0_IDADE2</td>
+<td>Idade ate</td>
+<td colspan="2">Idade ate</td>
+<td colspan="4">Idade minima para a natureza de saude
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BF0_SEXO</td>
+<td>Sexo</td>
+<td colspan="2">Sexo</td>
+<td colspan="4">Indica a operadora responsável.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('12')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Masculino;2=Feminino</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BF0_BENEF</td>
+<td>Tot Benefic</td>
+<td colspan="2">Total beneficiario</td>
+<td colspan="4">Indica a operadora responsável.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('01')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Nao;1=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BF0_CODINF</td>
+<td>Cod. Inferio</td>
+<td colspan="2">Codigo Inferior</td>
+<td colspan="4">Indica a operadora responsável.
+</td>
+<td>C</td>
+<td>7</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BF0_DESSIP</td>
+<td>Desc.XML Sip</td>
+<td colspan="2">Desc XML sip</td>
+<td colspan="4">Descrição para ser usada na Tag do xml
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BF0_APNTRP</td>
+<td>Apres. NTRP</td>
+<td colspan="2">Apresenta na NTRP</td>
+<td colspan="4">Indica o item ira ser apresentado no
+relatório da NTRP para o produto
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence('01')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=N�o;1=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BF0_DIACAR</td>
+<td>Dia Caren</td>
+<td colspan="2">Dias de carencia</td>
+<td colspan="4">Informe os dias de carencia.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BF0_REGATE</td>
+<td>Regime Atend</td>
+<td colspan="2">Regime de atendimento</td>
+<td colspan="4">Informe o regime de atendimento:
+1=Internacao ou 2=Ambulatorial
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>pertence('12')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Internacao;2=Ambulatorial</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>BA9</td>
+<td colspan="2">BF0_CODIGO</td>
+<td colspan="2">BA9_CLASIP</td>
+</tr>
+<tr>
+<td>BCE</td>
+<td colspan="2">BF0_CODIGO</td>
+<td colspan="2">BCE_CLASIP</td>
+</tr>
+<tr>
+<td>BGQ</td>
+<td colspan="2">BF0_CODIGO</td>
+<td colspan="2">BGQ_CLASIP</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

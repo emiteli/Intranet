@@ -1,0 +1,1212 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: DXJ - Mala de Classificação</title></head>
+<body>
+<font color="orange"><h2 id="DXJ">Tabela: DXJ - Mala de Classificação</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Mala de Classificação</b></td><td colspan="2"><b>DXJ_FILIAL+DXJ_CODIGO+DXJ_TIPO</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">DXJ_FILIAL+DXJ_CODIGO+DXJ_TIPO</td><td>Código + Tipo</td><td></td></tr>
+<tr><td>2</td><td colspan="2">DXJ_FILIAL+DXJ_CODBAR</td><td>Codigo Único</td><td></td></tr>
+<tr><td>3</td><td colspan="2">DXJ_FILIAL+DXJ_SAFRA+DXJ_CODIGO+DXJ_TIPO</td><td>Safra + Código + Tipo</td><td></td></tr>
+<tr><td>4</td><td colspan="2">DXJ_FILIAL+DXJ_SAFRA+DXJ_PRDTOR+DXJ_LJPRO+DXJ_FAZ</td><td>Safra + Entidade + LJ. Entidade + Fazenda</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>DXJ_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Filial do Sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DXJ_SAFRA</td>
+<td>Safra</td>
+<td colspan="2">Código da Safra</td>
+<td colspan="4">Informe o codigo da safra para o
+romaneio de classificação.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>(Vazio() .Or. ExistCPO("NJU")) .And. A630CODBAR()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/nju.html">NJU</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/130.html">130</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DXJ_CODIGO</td>
+<td>Código</td>
+<td colspan="2">Código da Mala de Class.</td>
+<td colspan="4">Código identificador da Mala de
+Classificação
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>A630CODBAR()</td>
+<td>IIF(INCLUI .And. !(FwIsInCallStack("AGRA615")),GETSXENUM("DXJ","DXJ_CODIGO"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>Inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DXJ_TIPO</td>
+<td>Tipo</td>
+<td colspan="2">Tipo da Mala de Class.</td>
+<td colspan="4">Tipo da Mala de Classificação
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12") .And. ExistChav("DXJ",M->DXJ_CODIGO+M->DXJ_TIPO,1,"EXISTCHAV") .And. A630CODBAR()</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Visual;2=HVI</td>
+<td>Inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DXJ_PRDTOR</td>
+<td>Entidade</td>
+<td colspan="2">Código da Entidade</td>
+<td colspan="4">Código da entidade.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. ExistCpo("NJ0",M->(DXJ_PRDTOR+IIF(!Empty(M->DXJ_LJPRO),M->DXJ_LJPRO,"")))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/nj0.html">NJ0</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dxj_prdtor.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>Inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DXJ_LJPRO</td>
+<td>LJ. Entidade</td>
+<td colspan="2">Loja da Entidade</td>
+<td colspan="4">Loja da entidade.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. ExistCpo("NJ0",M->(DXJ_PRDTOR+DXJ_LJPRO))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DXJ_NMPDTR</td>
+<td>Nome Entid.</td>
+<td colspan="2">Nome da Entidade</td>
+<td colspan="4">Nome da entidade.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!INCLUI,Posicione("NJ0",1,xFilial("NJ0")+M->(DXJ_PRDTOR+DXJ_LJPRO),"NJ0_NOME"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("NJ0",1,xFilial("NJ0")+DXJ->(DXJ_PRDTOR+DXJ_LJPRO),"NJ0_NOME")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DXJ_FAZ</td>
+<td>Fazenda</td>
+<td colspan="2">Fazenda do Produtor</td>
+<td colspan="4">Fazenda de produção.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. ExistCpo("NN2",M->(DXJ_PRDTOR+DXJ_LJPRO+DXJ_FAZ),3)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/nn2dxj.html">NN2DXJ</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dxj_faz.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>Inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DXJ_NMFAZ</td>
+<td>Nome Fazenda</td>
+<td colspan="2">Nome da Fazenda</td>
+<td colspan="4">Nome da fazenda produtora.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!INCLUI,Posicione("NN2",2,xFilial("NN2")+M->DXJ_FAZ,"NN2_NOME"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("NN2",2,xFilial("NN2")+DXJ->DXJ_FAZ,"NN2_NOME")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DXJ_CODVAR</td>
+<td>Variedade</td>
+<td colspan="2">Codigo da variedade</td>
+<td colspan="4">Informe a variedade do produto para o
+bloco
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>AGRA630CPO()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/nnv.html">NNV</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DXJ_DESCVR</td>
+<td>Desc. Var.</td>
+<td colspan="2">Descricao da Variedade</td>
+<td colspan="4">Descricao da Variedade
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIF(!INCLUI,A630BRWVAR(DXJ->DXJ_SAFRA, DXJ->DXJ_CODVAR)," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>IIF(!INCLUI,A630BRWVAR(DXJ->DXJ_SAFRA, DXJ->DXJ_CODVAR), " ")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DXJ_CODUNB</td>
+<td>UN.Benef</td>
+<td colspan="2">Unidade de Beneficiamento</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. ExistCpo("DX3")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dx3.html">DX3</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>Inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DXJ_CODCNJ</td>
+<td>Conjunto</td>
+<td colspan="2">Código do Conjunto</td>
+<td colspan="4">Informe o conjunto para o romaneio de
+classificação.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. ExistCPO("DXE")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dxe.html">DXE</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DXJ_FRDINI</td>
+<td>Ini.Seq.Fard</td>
+<td colspan="2">Inicial Sequencia Fardos</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIF(!INCLUI,A630FRDINI(DXJ->DXJ_CODIGO)," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td>A630FRDINI(DXJ->DXJ_CODIGO)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DXJ_FRDFIM</td>
+<td>Fim.Seq.Fard</td>
+<td colspan="2">Final Sequencia Fardos</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIF(!INCLUI,A630FRDFIM(DXJ->DXJ_CODIGO)," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td>IIF(!INCLUI,A630FRDFIM(DXJ->DXJ_CODIGO)," ")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DXJ_CODCLA</td>
+<td>Cod.Class</td>
+<td colspan="2">Código do Classificador</td>
+<td colspan="4">Código do classificador.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("NNA")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/nna.html">NNA</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dxj_codcla.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DXJ_NOMCLA</td>
+<td>Nome Class.</td>
+<td colspan="2">Nome do Classificador</td>
+<td colspan="4">Nome do Classificador.
+</td>
+<td>C</td>
+<td>35</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!INCLUI,Posicione("NNA",1,xFilial("NNA")+M->DXJ_CODCLA,"NNA_NOME")," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("NNA",1,xFilial("NNA")+DXJ->DXJ_CODCLA,"NNA_NOME")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DXJ_STATUS</td>
+<td>Status</td>
+<td colspan="2">Status da Mala de Class.</td>
+<td colspan="4">Status do romaneio de classificação.
+1 = "Visual Pendente";
+2 = "Visual Parcial";
+3 = "Visual Classificado";
+4 = "Classificação HVI"
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=Visual Pendente;2=Visual Parcial;3=Visual Classificado;4=HVI Pendente;5=HVI Parcial;6=HVI Importado;7=Aberta;8=Bloqueada</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DXJ_QTVINC</td>
+<td>Qt.Vinc</td>
+<td colspan="2">Qtde Fardos Vinculados</td>
+<td colspan="4">Exibe a quantidade de fardinhos
+vinculados ao romaneio de classificação
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>@E 999                                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DXJ_DATA</td>
+<td>Data</td>
+<td colspan="2">Data da Mala de Class.</td>
+<td colspan="4">Data de emissão da Mala de Classificação
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>ddatabase</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>Inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DXJ_HORA</td>
+<td>Hora</td>
+<td colspan="2">Hora da Mala de Class.</td>
+<td colspan="4">Registra hora da inclusão da mala
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@! 99:99                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DXJ_DTCLAS</td>
+<td>Data Clas.</td>
+<td colspan="2">Data de classificação</td>
+<td colspan="4">Data de classificação visual.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DXJ_AUTOMA</td>
+<td>MALA AUT.</td>
+<td colspan="2">MALA AUTOMÁTICA</td>
+<td colspan="4">Indica se a mala é automática.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DXJ_CODBAR</td>
+<td>Codigo Único</td>
+<td colspan="2">Código Único (Barras)</td>
+<td colspan="4">Codigo Identificador Único de Barras
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DXJ_CODUSU</td>
+<td>Usuário</td>
+<td colspan="2">Código Usuário</td>
+<td colspan="4">Código do usuário que inseriu a mala
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DXJ_DATENV</td>
+<td>Data Envio</td>
+<td colspan="2">Data Envio Mala Class.</td>
+<td colspan="4">Data de envio do romaneio.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DXJ_HORENV</td>
+<td>Hora Envio</td>
+<td colspan="2">Hora Envio Mala Class.</td>
+<td colspan="4">Hora de envio da mala
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@! 99:99                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DXJ_USRENV</td>
+<td>User Envio</td>
+<td colspan="2">Usuário Envio Mala Class.</td>
+<td colspan="4">Usuário do envio da mala
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DXJ_DATREC</td>
+<td>Data Receb</td>
+<td colspan="2">Data Recebimento Mala</td>
+<td colspan="4">Data de Recebimento da Mala
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DXJ_HORREC</td>
+<td>Hora Receb</td>
+<td colspan="2">Hora Recebimento Mala</td>
+<td colspan="4">Hora Recebimento da Mala
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@! 99:99                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DXJ_USRREC</td>
+<td>User Receb</td>
+<td colspan="2">Usuario Recebimento Mala</td>
+<td colspan="4">Usuario Recebimento Mala
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DXJ_DATANA</td>
+<td>Dt.Lanc.Ana</td>
+<td colspan="2">Data Lancamento Analise</td>
+<td colspan="4">Data Lançamento de Analise da Mala
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DXJ_HORANA</td>
+<td>Hr.Lanc.Ana</td>
+<td colspan="2">Hora Lançamento Analise</td>
+<td colspan="4">Hora do Lançamento de Análise da Mala
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@! 99:99                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DXJ_USRANA</td>
+<td>User Analise</td>
+<td colspan="2">Usuario Lancamento Analis</td>
+<td colspan="4">Usuario do Lancamento de Analise da Mala
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DXJ_OK</td>
+<td>OK</td>
+<td colspan="2">OK</td>
+<td colspan="4">Campo para markbrowse
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DXJ_CODPRO</td>
+<td>Produto</td>
+<td colspan="2">Código do Produto</td>
+<td colspan="4">Código do produto da mala de
+classificação.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCPO("SB1")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/030.html">030</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DXJ_DESPRO</td>
+<td>Desc. Prod.</td>
+<td colspan="2">Descrição do Produto</td>
+<td colspan="4">Descrição do produto da mala de
+classificação.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(INCLUI,'',POSICIONE('SB1',1,XFILIAL('SB1')+DXJ->DXJ_CODPRO,'B1_DESC'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DXJ_DATATU</td>
+<td>Data Atu.</td>
+<td colspan="2">Data da atualização</td>
+<td colspan="4">Data da atualização da mala
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DXJ_HORATU</td>
+<td>Hora Atu.</td>
+<td colspan="2">Hora da atualização</td>
+<td colspan="4">Hora da atualização da mala
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>@! 99:99:99                                  </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DXJ_CONFER</td>
+<td>Conferência</td>
+<td colspan="2">Conferência da Classific.</td>
+<td colspan="4">Informa se a conferência da
+classificação foi efetuada.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>'2'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>N73</td>
+<td colspan="2">DXJ_CODIGO</td>
+<td colspan="2">N73_CODMAL</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

@@ -1,0 +1,739 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: N13 - Orçamentos</title></head>
+<body>
+<font color="orange"><h2 id="N13">Tabela: N13 - Orçamentos</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Orçamentos</b></td><td colspan="2"><b>N13_FILIAL+N13_ANO+N13_CODIGO</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">N13_FILIAL+N13_ANO+N13_CODIGO</td><td>Ano Orçament + Cod.Orcam.</td><td></td></tr>
+<tr><td>2</td><td colspan="2">N13_FILIAL+N13_ANO+N13_DESC</td><td>Ano Orçament + Descricao</td><td></td></tr>
+<tr><td>3</td><td colspan="2">N13_FILIAL+N13_CODIGO</td><td>Cod.Orcam.</td><td></td></tr>
+<tr><td>4</td><td colspan="2">N13_FILIAL+N13_DESC</td><td>Descricao</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>N13_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N13_ANO</td>
+<td>Ano Orçament</td>
+<td colspan="2">Ano de Vigencia do Orçam.</td>
+<td colspan="4">Define-se o ano em será aplicado o
+Orçamento, importante para que os
+orçamentos futuros possam ser gerados e
+mantidos os anteriores
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>GSPN001()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>N13_CODIGO</td>
+<td>Cod.Orcam.</td>
+<td colspan="2">Codigo Orcamento</td>
+<td colspan="4">Informe o Código para definição deste
+Orçamento.
+Código aleatório
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>EXISTCHAV("N13", M->N13_ANO + M->N13_CODIGO ) .And. LEN(ALLTRIM(M->N13_CODIGO)) == 8</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>N13_APELID</td>
+<td>Desc Reduzid</td>
+<td colspan="2">Descricao Reduzida</td>
+<td colspan="4">Informe um nome genérico para este
+Orçamento
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N13_DESC</td>
+<td>Descricao</td>
+<td colspan="2">Descricao do Orcamento</td>
+<td colspan="4">Descreva qual o título deste Orçamento
+</td>
+<td>C</td>
+<td>100</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>N13_TIPO</td>
+<td>Tipo Orcam.</td>
+<td colspan="2">Tipo de Orcamento</td>
+<td colspan="4">Informe o Tipo Geral qdo o plano for de
+despesas e receitas, Tipo Despesa qdo
+somente despesa, Receitas qdo somente
+receita e Próprio qdo for controle
+interno
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>!                                            </td>
+<td></td>
+<td>"D"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>P=Proprio;D=Despesas;R=Receitas</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N13_TCORG</td>
+<td>Orgao</td>
+<td colspan="2">Orgao Para o TC</td>
+<td colspan="4">É o Órgão que controlará o Programa
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td>EXISTCPO("N19", M->N13_ANO + M->N13_TCORG )</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/n19.html">N19</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N13_TCUNI</td>
+<td>Unid. Orcam.</td>
+<td colspan="2">Unidade Orcament. TC</td>
+<td colspan="4">É a Unidade que controlará o Programa
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td>EXISTCPO("N1A", M->N13_ANO + M->N13_TCORG + M->N13_TCUNI )</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/n1a.html">N1A</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N13_TCFUN</td>
+<td>Funcao</td>
+<td colspan="2">Funcao para T.Contas</td>
+<td colspan="4">É o Código da Função do Responsável
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td>EXISTCPO("N1B", M->N13_ANO + M->N13_TCFUN )</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/n1b.html">N1B</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N13_TCSFU</td>
+<td>Sub-Funcao</td>
+<td colspan="2">Sub Funcao p/ T.Contas</td>
+<td colspan="4">É o Código da Sub Função do responsável
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>                                             </td>
+<td>EXISTCPO("N1C", M->N13_ANO + M->N13_TCSFU )</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/n1c.html">N1C</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N13_PROGR</td>
+<td>Programa</td>
+<td colspan="2">Codigo do Programa</td>
+<td colspan="4">Definir um código para o programa ou
+utilizar o padrão estabelecido
+pelo tribunal de contas
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>                                             </td>
+<td>EXISTCPO("N1D", M->N13_ANO + M->N13_PROGR )</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/n1d.html">N1D</a></td>
+<td><a href="/tabelas_protheus/gatilhos/n13_progr.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N13_DESPRG</td>
+<td>Des.Programa</td>
+<td colspan="2">Descricao do Programa</td>
+<td colspan="4">Descreva sucintamente o Programa
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N13_SUBPRG</td>
+<td>Sub-Programa</td>
+<td colspan="2">Sub.Programa</td>
+<td colspan="4">Codifique o detalhe do Programa, veja
+informaçoes no Help desta rotina
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>                                             </td>
+<td>EXISTCPO("N1E", M->N13_ANO + M->N13_SUBPRG )</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/n1e.html">N1E</a></td>
+<td><a href="/tabelas_protheus/gatilhos/n13_subprg.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N13_DESCSP</td>
+<td>Des.SubProg</td>
+<td colspan="2">Descricao da Sub Programa</td>
+<td colspan="4">Descreva sucintamente o Subprograma
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N13_PROJET</td>
+<td>Projeto</td>
+<td colspan="2">Codigo do Projeto</td>
+<td colspan="4">Defina um Código para o Projeto, ou
+utilize o padrão do TCE
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>                                             </td>
+<td>EXISTCPO("N1F", M->N13_ANO + M->N13_PROJET )</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/n1f.html">N1F</a></td>
+<td><a href="/tabelas_protheus/gatilhos/n13_projet.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N13_DESPRJ</td>
+<td>Desc.Projeto</td>
+<td colspan="2">Descricao do Projeto</td>
+<td colspan="4">Descreva sucintamente o Projeto
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N13_RECVIN</td>
+<td>Recurso Vinc</td>
+<td colspan="2">Codigo Recurso Vinculado</td>
+<td colspan="4">Informe o Recurso para este Projeto que
+fornecerá subsidios conforme a tabela
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>                                             </td>
+<td>VAZIO() .OR. EXISTCPO("N1G", M->N13_ANO + M->N13_RECVIN )</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/n1g.html">N1G</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N13_RECCPA</td>
+<td>Rec.Ctr.Part</td>
+<td colspan="2">Recurso Contrapartida</td>
+<td colspan="4">Informe o Recurso que se beneficiará do
+Projeto
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>                                             </td>
+<td>EXISTCPO("N1G", M->N13_ANO + M->N13_RECCPA )</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/n1g.html">N1G</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N13_LIMITE</td>
+<td>Valor Limite</td>
+<td colspan="2">Valor Limite - LRF</td>
+<td colspan="4">É o Valor Total do Projeto
+</td>
+<td>N</td>
+<td>13</td>
+<td>2</td>
+<td>@e 9999,999,999.99                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N13_PREVRE</td>
+<td>% Realizacao</td>
+<td colspan="2">% de Realizacao no Ano</td>
+<td colspan="4">É o Percentual que será realizado no ano
+vigente
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>@e 999.99                                    </td>
+<td></td>
+<td>100</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N13_CTRREC</td>
+<td>Ctrl Rec.Vin</td>
+<td colspan="2">Controla Recurs Vinculado</td>
+<td colspan="4">Neste campo, se o Plano terá controle
+entre Receitas e Despesas
+Veja Help do Programa
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>!                                            </td>
+<td>PERTENCE("LPN")</td>
+<td>"N"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>N=Nao;L=Liquidado;P=Pago</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>N51</td>
+<td colspan="2">N13_ANO+N13_CODIGO</td>
+<td colspan="2">N51_ANO+N51_MAPA</td>
+</tr>
+<tr>
+<td>SE1</td>
+<td colspan="2">N13_CODIGO</td>
+<td colspan="2">E1_CODORCA</td>
+</tr>
+<tr>
+<td>SC1</td>
+<td colspan="2">N13_CODIGO</td>
+<td colspan="2">C1_CODORCA</td>
+</tr>
+<tr>
+<td>SCY</td>
+<td colspan="2">N13_CODIGO</td>
+<td colspan="2">CY_CODORCA</td>
+</tr>
+<tr>
+<td>N22</td>
+<td colspan="2">N13_CODIGO</td>
+<td colspan="2">N22_CODORC</td>
+</tr>
+<tr>
+<td>SC7</td>
+<td colspan="2">N13_CODIGO</td>
+<td colspan="2">C7_CODORCA</td>
+</tr>
+<tr>
+<td>N55</td>
+<td colspan="2">N13_CODIGO</td>
+<td colspan="2">N55_MAPA</td>
+</tr>
+<tr>
+<td>SE2</td>
+<td colspan="2">N13_CODIGO</td>
+<td colspan="2">E2_CODORCA</td>
+</tr>
+<tr>
+<td>N54</td>
+<td colspan="2">N13_CODIGO</td>
+<td colspan="2">N54_MAPA</td>
+</tr>
+<tr>
+<td>N15</td>
+<td colspan="2">N13_CODIGO</td>
+<td colspan="2">N15_CODORC</td>
+</tr>
+<tr>
+<td>N18</td>
+<td colspan="2">N13_ANO+N13_CODIGO</td>
+<td colspan="2">N18_ANO+N18_MAPA</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

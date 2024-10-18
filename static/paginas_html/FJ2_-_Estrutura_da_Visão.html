@@ -1,0 +1,589 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: FJ2 - Estrutura da Visão</title></head>
+<body>
+<font color="orange"><h2 id="FJ2">Tabela: FJ2 - Estrutura da Visão</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Estrutura da Visão</b></td><td colspan="2"><b>FJ2_FILIAL+FJ2_CODIGO+FJ2_ORDEM</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">FJ2_FILIAL+FJ2_CODIGO+FJ2_CONTAG+FJ2_ORDEM</td><td>Cod Visao + Entid Gerenc + Ordem</td><td></td></tr>
+<tr><td>2</td><td colspan="2">FJ2_FILIAL+FJ2_CODIGO+FJ2_CTASUP+FJ2_ORDEM+FJ2_CONTAG</td><td>Cod Visao + Entid Super + Ordem + Entid Gerenc</td><td></td></tr>
+<tr><td>3</td><td colspan="2">FJ2_FILIAL+FJ2_DESCCG</td><td>Desc Ent Ger</td><td></td></tr>
+<tr><td>4</td><td colspan="2">FJ2_FILIAL+FJ2_CODIGO+FJ2_ORDEM</td><td>Cod Visao + Ordem</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>FJ2_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Código da filial do sistema
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>FJ2_CODIGO</td>
+<td>Cod Visao</td>
+<td colspan="2">Codigo da Visao Gerencial</td>
+<td colspan="4">Código de Identificação da Visão
+Gerencial Financeira
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Fina271Vld('FJ2_CODIGO',INCLUI)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>FJ2_CONTAG</td>
+<td>Entid Gerenc</td>
+<td colspan="2">Entidade Gerencial</td>
+<td colspan="4">Código da Entidade Gerencial (Código
+Atribuído ao item da nova estrutura
+gerencial)
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistChav("FJ2",M->FJ2_CODIGO+M->FJ2_CONTAG,2,).And.Fina271Vld("FJ2_CONTAG",INCLUI)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>FJ2_ORDEM</td>
+<td>Ordem</td>
+<td colspan="2">Ordem de Exibicao</td>
+<td colspan="4">Seqüência de ordem para a impressão dos
+relatórios
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistChav("FJ2",M->FJ2_CODIGO+M->FJ2_ORDEM,4,).And.Fina271Vld("FJ2_ORDEM",INCLUI)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>FJ2_CLASSE</td>
+<td>Classe</td>
+<td colspan="2">Classe de Entid Gerencial</td>
+<td colspan="4">Informar se esta estrutura é sintética
+ou analítica.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Fina271Vld('FJ2_CLASSE',INCLUI)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sintetica;2=Analitica</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>FJ2_CTASUP</td>
+<td>Entid Super</td>
+<td colspan="2">Entidade Superior</td>
+<td colspan="4">Informar o Código da Entidade Gerencial
+Superior
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Fina271Vld('FJ2_CTASUP',INCLUI)</td>
+<td>FJ2->FJ2_CONTAG</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>FJ2_DESCCG</td>
+<td>Desc Ent Ger</td>
+<td colspan="2">Descricao Entid Gerencial</td>
+<td colspan="4">Descrição da Entidade Gerencial
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Fina271Vld('FJ2_DESCCG',INCLUI)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>!M->FJ2_TRACO</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>FJ2_NORMAL</td>
+<td>Cond Normal</td>
+<td colspan="2">Condicao Normal da Entid</td>
+<td colspan="4">Informar a condição normal, se é
+pagamento ou recebimento.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Fina271Vld('FJ2_NORMAL',INCLUI)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Debito;2=Credito</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>FJ2_COLUNA</td>
+<td>Coluna</td>
+<td colspan="2">Coluna</td>
+<td colspan="4">Em qual coluna devera ser exibida no
+relatório.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Fina271Vld('FJ2_COLUNA',INCLUI)</td>
+<td>'0'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>0=Nenhuma;1=Coluna 1;2=Coluna 2;3=Coluna 3;4=Coluna 4;5=Coluna 5;6=Coluna 6</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>FJ2_NEGRIT</td>
+<td>Negrito</td>
+<td colspan="2">Negrito</td>
+<td colspan="4">Pergunta se imprime em Negrito
+</td>
+<td>L</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>Fa271SetL(.T.,.F.,.F.,.F.)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>M->FJ2_CLASSE=="1" .and. Fa271Chkbox(.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>FJ2_TOTAL</td>
+<td>Total Geral</td>
+<td colspan="2">Total Geral</td>
+<td colspan="4">Pergunta se é uma linha de Total.
+</td>
+<td>L</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>Fa271SetL(.F.,.T.,.F.,.F.)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>M->FJ2_CLASSE=="1" .and. Fa271Chkbox(,.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>FJ2_SEPARA</td>
+<td>Sem Valor</td>
+<td colspan="2">Linha Sem Valor</td>
+<td colspan="4">Pergunta se é uma linha de separação (em
+branco).
+</td>
+<td>L</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>Fa271SetL(.F.,.F.,.T.,.F.)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>M->FJ2_CLASSE=="1" .and. Fa271Chkbox(,,.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>FJ2_TRACO</td>
+<td>Traco</td>
+<td colspan="2">Traco</td>
+<td colspan="4">Pergunta se é uma linha de separação
+preenchida com traços.
+</td>
+<td>L</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>Fa271SetL(.F.,.F.,.F.,.T.)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>M->FJ2_CLASSE=="1" .and. Fa271Chkbox(,,,.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>FJ2_IDENT</td>
+<td>Identificad.</td>
+<td colspan="2">Identificador</td>
+<td colspan="4">Identifica o tipo de operação que sera
+realizada (Soma ou Subtração)
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>FJ2_TOTVIS</td>
+<td>Resul.Visao?</td>
+<td colspan="2">Resultado da Visao?</td>
+<td colspan="4">Definir se a entidade é o resultado da
+Visão.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>'2'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td>M->FJ2_CLASSE=="1"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>FJ2_VISENT</td>
+<td>Vis. Entid.?</td>
+<td colspan="2">Visualiza Entidade?</td>
+<td colspan="4">Define se a entidade será visualizada
+nos relatórios.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>'1'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>FJ2_SLDENT</td>
+<td>Sld. Entid.?</td>
+<td colspan="2">Saldo Entidade?</td>
+<td colspan="4">Define como será calculado o saldo da
+entidade.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>'1'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Processamento;2=Saldo Anterior;3=Saldo Atual;4=Variacao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>FJ2_FATSLD</td>
+<td>Fator Entid?</td>
+<td colspan="2">Fator Entidade?</td>
+<td colspan="4">Define se o valor da entidade deverá ser
+mantido ou invertido na impressão do
+relatório.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>'1'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Mant�m;2=Inverte</td>
+<td>M->FJ2_CLASSE=="2"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

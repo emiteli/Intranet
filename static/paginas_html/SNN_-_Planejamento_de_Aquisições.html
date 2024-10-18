@@ -1,0 +1,999 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: SNN - Planejamento de Aquisições</title></head>
+<body>
+<font color="orange"><h2 id="SNN">Tabela: SNN - Planejamento de Aquisições</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Planejamento de Aquisições</b></td><td colspan="2"><b>NN_FILIAL+NN_CODIGO+NN_ITEM</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">NN_FILIAL+NN_CODIGO+NN_ITEM</td><td>Codigo + Item</td><td></td></tr>
+<tr><td>2</td><td colspan="2">NN_FILIAL+NN_CODEFTV+NN_ITMEFTV+NN_CODIGO+NN_ITEM</td><td>Codigo Efet. + Item efet. + Codigo + Item</td><td></td></tr>
+<tr><td>3</td><td colspan="2">NN_FILIAL+NN_CCONTAB</td><td>Conta</td><td></td></tr>
+<tr><td>4</td><td colspan="2">NN_FILIAL+NN_CDEPREC</td><td>Cta Desp Dep</td><td></td></tr>
+<tr><td>5</td><td colspan="2">NN_FILIAL+NN_CCDEPR</td><td>Cta Dep Acum</td><td></td></tr>
+<tr><td>6</td><td colspan="2">NN_FILIAL+NN_CUSTBEM</td><td>C Custo Bem</td><td></td></tr>
+<tr><td>7</td><td colspan="2">NN_FILIAL+NN_CCCDEP</td><td>Cc Depr Ac</td><td></td></tr>
+<tr><td>8</td><td colspan="2">NN_FILIAL+NN_CCDESP</td><td>Cc Des Depr</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>NN_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Filial do Sistema
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NN_CODIGO</td>
+<td>Codigo</td>
+<td colspan="2">Codigo Sequencial do Bem</td>
+<td colspan="4">Codigo Sequencial do Bem
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCHAV("SNN",M->NN_CODIGO+M->NN_ITEM)</td>
+<td>GETSXENUM("SNN","NN_CODIGO")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NN_ITEM</td>
+<td>Item</td>
+<td colspan="2">Numero do Item</td>
+<td colspan="4">Numero do Item
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCHAV('SNN', M->NN_CODIGO + M->NN_ITEM)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NN_AQUISIC</td>
+<td>Dt.Aquisição</td>
+<td colspan="2">Data de Aquisição</td>
+<td colspan="4">Data de Aquisição do Item.
+É preenchida no momento da efetivação do
+item.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>DataValida()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NN_DESCRIC</td>
+<td>Descr.Bem</td>
+<td colspan="2">Descrição do Bem</td>
+<td colspan="4">Descrição do Bem
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NN_QUANTD</td>
+<td>Quantidade</td>
+<td colspan="2">Quantidade do Bem</td>
+<td colspan="4">Quantidade do Bem
+</td>
+<td>N</td>
+<td>11</td>
+<td>3</td>
+<td>@E 9,999,999.999                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NN_GRUPO</td>
+<td>Grupo</td>
+<td colspan="2">Grupo de Bens</td>
+<td colspan="4">Grupo do Bem
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>(Vazio() .Or. ExistCpo("SNG")) .And. AF310GRUPO(.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sng.html">SNG</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NN_DTPREVI</td>
+<td>Dt. Aq Previ</td>
+<td colspan="2">Data Prevista</td>
+<td colspan="4">Data Prevista para Efetivação do Bem
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>DataValida()</td>
+<td>DDATABASE</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NN_CODEFTV</td>
+<td>Codigo Efet.</td>
+<td colspan="2">Codigo Efetivação do bem</td>
+<td colspan="4">Codigo Efetivacao do Bem
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NN_ITMEFTV</td>
+<td>Item efet.</td>
+<td colspan="2">Codigo do Item Efetivado</td>
+<td colspan="4">Codigo do Item Efetivado
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NN_VORIG1</td>
+<td>Val Orig M1</td>
+<td colspan="2">Valor Original Moeda 1</td>
+<td colspan="4">Valor Original Moeda 1
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td>IIf(aCols[n][1] != '05',POSITIVO(),.T.) .AND. AF310ACONV()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NN_TXDEPR1</td>
+<td>Tx.An.Depr.1</td>
+<td colspan="2">Taxa Anual Depreciacao 1</td>
+<td colspan="4">Taxa Anual Depreciação 1
+</td>
+<td>N</td>
+<td>9</td>
+<td>4</td>
+<td>@E 9,999.9999                                </td>
+<td>POSITIVO() .and. IF(FINDFUNCTION("AF310ATAXA"), AF310ATAXA(),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NN_VORIG2</td>
+<td>Val Orig M2</td>
+<td colspan="2">Valor Original Moeda 2</td>
+<td colspan="4">Valor Original Moeda 2
+</td>
+<td>N</td>
+<td>16</td>
+<td>4</td>
+<td>@E 99,999,999,999.9999                       </td>
+<td>POSITIVO()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NN_TXDEPR2</td>
+<td>Tx.An.Depr.2</td>
+<td colspan="2">Taxa Anual Depreciacao 2</td>
+<td colspan="4">Taxa Anual Depreciação 2
+</td>
+<td>N</td>
+<td>9</td>
+<td>4</td>
+<td>@E 9,999.9999                                </td>
+<td>POSITIVO()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NN_VORIG3</td>
+<td>Val Orig M3</td>
+<td colspan="2">Valor Original Moeda 3</td>
+<td colspan="4">Valor Original Moeda 3
+</td>
+<td>N</td>
+<td>16</td>
+<td>4</td>
+<td>@E 99,999,999,999.9999                       </td>
+<td>POSITIVO()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NN_TXDEPR3</td>
+<td>Tx.An.Depr.3</td>
+<td colspan="2">Taxa Anual Depreciacao 3</td>
+<td colspan="4">Taxa Anual Depreciação 3
+</td>
+<td>N</td>
+<td>9</td>
+<td>4</td>
+<td>@E 9,999.9999                                </td>
+<td>POSITIVO()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NN_VORIG4</td>
+<td>Val Orig M4</td>
+<td colspan="2">Valor Original Moeda 4</td>
+<td colspan="4">Valor Original Moeda 4
+</td>
+<td>N</td>
+<td>16</td>
+<td>4</td>
+<td>@E 99,999,999,999.9999                       </td>
+<td>POSITIVO()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NN_TXDEPR4</td>
+<td>Tx.An.Depr.4</td>
+<td colspan="2">Taxa Anual Depreciacao 4</td>
+<td colspan="4">Taxa Anual Depreciação 4
+</td>
+<td>N</td>
+<td>9</td>
+<td>4</td>
+<td>@E 9,999.9999                                </td>
+<td>POSITIVO()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NN_VORIG5</td>
+<td>Val Orig M5</td>
+<td colspan="2">Valor Original Moeda 5</td>
+<td colspan="4">Valor Original Moeda 5
+</td>
+<td>N</td>
+<td>16</td>
+<td>4</td>
+<td>@E 99,999,999,999.9999                       </td>
+<td>POSITIVO()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NN_TXDEPR5</td>
+<td>Tx.An.Depr.5</td>
+<td colspan="2">Taxa Anual Depreciacao 5</td>
+<td colspan="4">Taxa Anual Depreciação 5
+</td>
+<td>N</td>
+<td>9</td>
+<td>4</td>
+<td>@E 9,999.9999                                </td>
+<td>POSITIVO()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NN_CCONTAB</td>
+<td>Conta</td>
+<td colspan="2">Conta Contabil</td>
+<td colspan="4">Conta Contabil
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ValClaSint(M->NN_CCONTAB, "CT1",1,"CT1_CLASSE")</td>
+<td>AF310AGRP("NN_CCONTAB")</td>
+<td><a href="/tabelas_protheus/f3/ct1.html">CT1</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/003.html">003</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NN_CUSTBEM</td>
+<td>C Custo Bem</td>
+<td colspan="2">C Custo da Conta do Bem</td>
+<td colspan="4">C Custo da Conta do Bem
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ValClaSint(M->NN_CUSTBEM, "CTT",1,"CTT_CLASSE")</td>
+<td>AF310AGRP("NN_CUSTBEM")</td>
+<td><a href="/tabelas_protheus/f3/ctt.html">CTT</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>CtbMovSaldo("CTT")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/004.html">004</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NN_SUBCCON</td>
+<td>Item do Bem</td>
+<td colspan="2">Item Conta do Bem</td>
+<td colspan="4">Item Conta do Bem
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ValClaSint(M->NN_SUBCCON, "CTD",1,"CTD_CLASSE")</td>
+<td>AF310AGRP("NN_SUBCCON")</td>
+<td><a href="/tabelas_protheus/f3/ctd.html">CTD</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>CtbMovSaldo("CTD")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/005.html">005</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NN_CLVLCON</td>
+<td>Cl Vlr Bem</td>
+<td colspan="2">Classe de Valor do Bem</td>
+<td colspan="4">Classe de Valor do Bem
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ValClaSint(M->NN_CLVLCON, "CTH",1,"CTH_CLASSE")</td>
+<td>AF310AGRP("NN_CLVLCON")</td>
+<td><a href="/tabelas_protheus/f3/cth.html">CTH</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>CtbMovSaldo("CTH")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/006.html">006</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NN_CDEPREC</td>
+<td>Cta Desp Dep</td>
+<td colspan="2">Conta Despesa Depreciacao</td>
+<td colspan="4">Conta Despesa Depreciacao
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ValClaSint(M->NN_CDEPREC, "CT1",1,"CT1_CLASSE")</td>
+<td>AF310AGRP("NN_CDEPREC")</td>
+<td><a href="/tabelas_protheus/f3/ct1.html">CT1</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/003.html">003</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NN_CCDESP</td>
+<td>Cc Des Depr</td>
+<td colspan="2">Centro Custo Desp Depr.</td>
+<td colspan="4">Centro de Custos da Despesa
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ValClaSint(M->NN_CCDESP, "CTT",1,"CTT_CLASSE")</td>
+<td>AF310AGRP("NN_CCDESP")</td>
+<td><a href="/tabelas_protheus/f3/ctt.html">CTT</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>CtbMovSaldo("CTT")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/004.html">004</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NN_SUBCDEP</td>
+<td>Item Ds.Dep.</td>
+<td colspan="2">Item Despesa Depreciacao</td>
+<td colspan="4">Item Contábil
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ValClaSint(M->NN_SUBCDEP, "CTD",1,"CTD_CLASSE")</td>
+<td>AF310AGRP("NN_SUBCDEP")</td>
+<td><a href="/tabelas_protheus/f3/ctd.html">CTD</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>CtbMovSaldo("CTD")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/005.html">005</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NN_CLVLDEP</td>
+<td>Clvl Des.Dep</td>
+<td colspan="2">Classe Vlr Despesa Dep.</td>
+<td colspan="4">Classe Vlr Despesa Dep.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ValClaSint(M->NN_CLVLDEP, "CTH",1,"CTH_CLASSE")</td>
+<td>AF310AGRP("NN_CLVLDEP")</td>
+<td><a href="/tabelas_protheus/f3/cth.html">CTH</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>CtbMovSaldo("CTH")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/006.html">006</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NN_CCDEPR</td>
+<td>Cta Dep Acum</td>
+<td colspan="2">Conta Deprec. Acumulada</td>
+<td colspan="4">Conta de Despesa Acumulada
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ValClaSint(M->NN_CCDEPR, "CT1",1,"CT1_CLASSE")</td>
+<td>AF310AGRP("NN_CCDEPR")</td>
+<td><a href="/tabelas_protheus/f3/ct1.html">CT1</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/003.html">003</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NN_CCCDEP</td>
+<td>Cc Depr Ac</td>
+<td colspan="2">Centro Custo Dep. Acumul.</td>
+<td colspan="4">Centro de Custo
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ValClaSint(M->NN_CCCDEP, "CTT",1,"CTT_CLASSE")</td>
+<td>AF310AGRP("NN_CCCDEP")</td>
+<td><a href="/tabelas_protheus/f3/ctt.html">CTT</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>CtbMovSaldo("CTT")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/004.html">004</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NN_SUBCCDE</td>
+<td>Item Dep.Ac.</td>
+<td colspan="2">Item Correcao Depreciacao</td>
+<td colspan="4">Item Correcao Depreciacao
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ValClaSint(M->NN_SUBCCDE, "CTD",1,"CTD_CLASSE")</td>
+<td>AF310AGRP("NN_SUBCCDE")</td>
+<td><a href="/tabelas_protheus/f3/ctd.html">CTD</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>CtbMovSaldo("CTD")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/005.html">005</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NN_CLVLCDE</td>
+<td>Clvl Dep.Acu</td>
+<td colspan="2">Classe de Vlr Dep. Acum</td>
+<td colspan="4">Classe de Vlr Dep. Acum.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ValClaSint(M->NN_CLVLCDE, "CTH",1,"CTH_CLASSE")</td>
+<td>AF310AGRP("NN_CLVLCDE")</td>
+<td><a href="/tabelas_protheus/f3/cth.html">CTH</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>CtbMovSaldo("CTH")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/006.html">006</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NN_OK</td>
+<td>Flag Marca</td>
+<td colspan="2">Flag Marcacao</td>
+<td colspan="4">Flag de Marcação
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

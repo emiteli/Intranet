@@ -1,0 +1,699 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: SQD - Agenda do Candidato</title></head>
+<body>
+<font color="orange"><h2 id="SQD">Tabela: SQD - Agenda do Candidato</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Agenda do Candidato</b></td><td colspan="2"><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">QD_FILIAL+DTOS(QD_DATA)+QD_CURRIC</td><td>Data + Codigo</td><td></td></tr>
+<tr><td>2</td><td colspan="2">QD_FILIAL+QD_CURRIC+DTOS(QD_DATA)</td><td>Codigo + Data</td><td></td></tr>
+<tr><td>3</td><td colspan="2">QD_FILIAL+QD_VAGA+QD_CURRIC+DTOS(QD_DATA)</td><td>Cod.Vaga + Codigo + Data</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>QD_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Neste campo deve ser digitado:
+Código que identifica a filial da
+empresa usuária do sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QD_TPPROCE</td>
+<td>Tp Processo</td>
+<td colspan="2">Tipo Processo</td>
+<td colspan="4">Neste campo deve ser digitado:
+Tipo de processo de seleç„o que   o
+candidato esta participando.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .And. ExistCpo("SX5","R9"+M->QD_TPPROCE) .And. Rs150Desc(2)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/r9.html">R9</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QD_DTPPROC</td>
+<td>Desc. Proces</td>
+<td colspan="2">Descricao Tipo Processo</td>
+<td colspan="4">Neste campo deve ser digitado:
+Descriç„o do Tipo de processo
+de seleç„o que o candidato esta parti-
+cipando.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Rs150DTProc()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QD_NOME</td>
+<td>Nome</td>
+<td colspan="2">Nome</td>
+<td colspan="4">Neste campo deve ser digitado:
+Nome do candidato que fará o teste
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(Inclui,"",FDESC("SQG",SQD->QD_CURRIC,"QG_NOME"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>IF(SQG->(DBSEEK(XFILIAL("SQG",SQD->QD_FILIAL)+SQD->QD_CURRIC)),SQG->QG_NOME," ")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QD_CURRIC</td>
+<td>Codigo</td>
+<td colspan="2">Cod Curriculo</td>
+<td colspan="4">Neste campo deve ser digitado:
+Código do currículo do candidato
+que fará o teste.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td>#QD_CURRIC <>'      '</td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QD_HORA</td>
+<td>Hora</td>
+<td colspan="2">Hora do Processo</td>
+<td colspan="4">Neste campo deve ser digitado:
+Hora que o candidato realizará o
+teste.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td>TrmHora()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QD_DATA</td>
+<td>Data</td>
+<td colspan="2">Data</td>
+<td colspan="4">Neste campo deve ser digitado:
+Data que foi agendado o candidato
+para fazer o teste.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>NaoVazio() .And. Rs150Ver(1)</td>
+<td>Ctod("//")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QD_TESTE</td>
+<td>Cod.Teste</td>
+<td colspan="2">Codigo Teste</td>
+<td colspan="4">Neste campo deve ser digitado:
+Código do teste que o candidato
+irá fazer.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>(Vazio() .Or. (ExistCpo("SQQ") .And. Rs150Ver(4))) .And. Rs150Desc(4)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sqq.html">SQQ</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QD_DESCRIC</td>
+<td>Teste</td>
+<td colspan="2">Descricao Teste</td>
+<td colspan="4">Neste campo deve ser digitado:
+Descriç„o do teste que o
+candidatoirá fazer.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Rs150Descri()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>IF(SQQ->(DBSEEK(XFILIAL()+SQD->QD_TESTE)),SQQ->QQ_DESCRIC," ")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QD_VAGA</td>
+<td>Cod.Vaga</td>
+<td colspan="2">Codigo Vaga</td>
+<td colspan="4">Neste campo deve ser digitado:
+Código da vaga que o candidato
+es-ta esta participando.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .And. Rs150Desc(1) .And. Rs150Ver(2)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sqs.html">SQS</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QD_DVAGA</td>
+<td>Descr. Vaga</td>
+<td colspan="2">Descricao Vaga</td>
+<td colspan="4">Neste campo deve ser digitado:
+Descriç„o da vaga que o candida-
+to esta participando.
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(Inclui,"",FDESC("SQS",SQD->QD_VAGA,"QS_DESCRIC"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QD_RESULTA</td>
+<td>Resultado</td>
+<td colspan="2">Resultado do Processo</td>
+<td colspan="4">Neste campo deve ser digitado:
+Resultado do Processo de Seleç„o
+que o candidato esta participando.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .And. ExistCpo("SX5","RA"+M->QD_RESULTA) .And. Rs150Desc(3)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ra.html">RA</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QD_DRESULT</td>
+<td>Desc. Result</td>
+<td colspan="2">Descricao Resultado</td>
+<td colspan="4">Neste campo deve ser digitado:
+Descriç„o do resultado do
+ProcessoSeleç„o que o candidato esta
+participan-do.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Rs150Dresul()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QD_OK</td>
+<td>Teste Feito</td>
+<td colspan="2">Teste Feito</td>
+<td colspan="4">Neste campo deve ser digitado: Indica se
+o teste foi realizado.
+S=Sim ou N=Não.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("SN ")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QD_MATPROC</td>
+<td>Mat.Resp.P.S</td>
+<td colspan="2">Mat. Resp. Proc Selet.</td>
+<td colspan="4">Neste campo deve ser informando a
+matrícula do responsável pela etapa do
+processo seletivo na agenda do
+candidato.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>vazio() .OR. ExistCPO('SRA')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/srapt3.html">SRAPT3</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/121.html">121</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QD_FILPROC</td>
+<td>Fil.Etap.P.S</td>
+<td colspan="2">Fil. etapa proc. seletivo</td>
+<td colspan="4">Neste campo deve ser digitado a filial
+da etapa do processo seletivo.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QD_SITPROC</td>
+<td>Sit. Etapa</td>
+<td colspan="2">Situação Etapa Proc Selet</td>
+<td colspan="4">Esse campo indica a situação do
+candidato na etapa do processo seletivo.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@                                            </td>
+<td>Pertence("012")</td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=N�o avaliado;1=Aprovado;2=Reprovado</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QD_CODOBSC</td>
+<td>Cod.Obs.Cand</td>
+<td colspan="2">Cod.Observ. ao Candidato</td>
+<td colspan="4">Neste campo deve ser inserido o código
+do campo MEMO relativo ao campo
+"Obs.Cand.".
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QD_OBSCAND</td>
+<td>Obs.Cand.</td>
+<td colspan="2">Observação ao candidato</td>
+<td colspan="4">Neste campo devem ser inseridas as
+informações ao candidato sobre a etapa
+da agenda no processo seletivo.
+</td>
+<td>M</td>
+<td>80</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(inclui,"",MSMM(SQD->QD_CODOBSC,80,,,,,,,,"RDY"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QD_CODOBSA</td>
+<td>Cod.Obs.Aval</td>
+<td colspan="2">Cod. Observ.do Avaliador</td>
+<td colspan="4">Neste campo deve ser inserido o código
+do campo MEMO relativo ao campo "Obs.
+Aval.".
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QD_OBSAVAL</td>
+<td>Obs.Aval.</td>
+<td colspan="2">Observação do Avaliador</td>
+<td colspan="4">Neste campo devem ser inseridas as
+informações do avaliador referente ao
+candidato na etapa da agenda no processo
+seletivo.
+</td>
+<td>M</td>
+<td>80</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(inclui,"",MSMM(SQD->QD_CODOBSA,80,,,,,,,,"RDY"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

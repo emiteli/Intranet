@@ -1,0 +1,438 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: DX6 - Cadastro Usuario x Balança</title></head>
+<body>
+<font color="orange"><h2 id="DX6">Tabela: DX6 - Cadastro Usuario x Balança</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Cadastro Usuario x Balança</b></td><td colspan="2"><b>DX6_FILIAL+DX6_CODUSU+DX6_CODBAL+DX6_CODIGO</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">DX6_FILIAL+DX6_CODUSU+DX6_CODBAL</td><td>Cod. Usuário + Balança</td><td></td></tr>
+<tr><td>2</td><td colspan="2">DX6_FILIAL+DX6_CODBAL</td><td>Balança</td><td></td></tr>
+<tr><td>3</td><td colspan="2">DX6_FILIAL+DX6_GRPUSR+DX6_CODBAL</td><td>Grp Usuários + Balança</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>DX6_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Filial do Sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DX6_CODIGO</td>
+<td>Código</td>
+<td colspan="2">Código UsuárioXBalança</td>
+<td colspan="4">Indica o código do cadastro de usuário x
+balança.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo( "DX6", FWFldGet('DX6_CODIGO'))</td>
+<td>GETSXENUM("DX6","DX6_CODIGO")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DX6_CODUSU</td>
+<td>Cod. Usuário</td>
+<td colspan="2">Código do Usuário</td>
+<td colspan="4">Código identificador do usuário.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. UsrExist(M->DX6_CODUSU,.T.) .AND. AGRA770US()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/usr.html">USR</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dx6_codusu.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DX6_NOMUSU</td>
+<td>Nome Usuario</td>
+<td colspan="2">Nome do Usuário</td>
+<td colspan="4">Nome do usuário.
+</td>
+<td>C</td>
+<td>25</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIF(!INCLUI,UsrRetName(M->DX6_CODUSU),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>UsrRetName(DX6->DX6_CODUSU)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DX6_GRPUSR</td>
+<td>Grp Usuários</td>
+<td colspan="2">Código Grupo de Usuários</td>
+<td colspan="4">Indica qual o grupo de usuários que terá
+a permissão para utilizar a balança.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or.  AGRA770GP()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/grp.html">GRP</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DX6_CODBAL</td>
+<td>Balança</td>
+<td colspan="2">Balança</td>
+<td colspan="4">Código da balança.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>AGRA770BL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dx5.html">DX5</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dx6_codbal.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DX6_DESBAL</td>
+<td>Desc.Balança</td>
+<td colspan="2">Descrição da Balança</td>
+<td colspan="4">Descrição da balança.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!S25                                        </td>
+<td></td>
+<td>IIF(!INCLUI,Posicione("DX5",1,M->DX6_FILIAL+M->DX6_CODBAL,"DX5_DESCRI")," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("DX5",1,DX6->DX6_FILIAL+DX6->DX6_CODBAL,"DX5_DESCRI")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DX6_MODAL</td>
+<td>Modalidade</td>
+<td colspan="2">Modalidade</td>
+<td colspan="4">Modalidade da balança.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('012')</td>
+<td>'0'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Automatica;1=Manual;2=Ambas</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DX6_STATUS</td>
+<td>Status</td>
+<td colspan="2">Status da Balança</td>
+<td colspan="4">Status de autorização da balança.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('12')</td>
+<td>'1'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Autorizado;2=Desautorizado</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DX6_DTINI</td>
+<td>Data Inicial</td>
+<td colspan="2">Data Inicial do Período</td>
+<td colspan="4">Data inicial do período liberado para o
+usuário ou grupo utilizar a balança.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>Vazio() .Or. FwFldGet("DX6_DTINI ") >= Date()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>If( FwFldGet("DX6_MODAL") == "0", .F., .T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DX6_HRINI</td>
+<td>Hora Inicial</td>
+<td colspan="2">Hora Inicial do Período</td>
+<td colspan="4">Hora inicial do período liberado para o
+usuário ou grupo utilizar a balança.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>If( FwFldGet("DX6_MODAL") == "0", .F., .T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DX6_DTFIM</td>
+<td>Data Final</td>
+<td colspan="2">Data Final do Período</td>
+<td colspan="4">Data final do período liberado para o
+usuário ou grupo utilizar a balança.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>Vazio() .Or. FwFldGet("DX6_DTFIM ") >= FwFldGet("DX6_DTINI ")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>If( FwFldGet("DX6_MODAL") == "0", .F., .T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DX6_HRFIM</td>
+<td>Hora Final</td>
+<td colspan="2">Hora Final do Período</td>
+<td colspan="4">Hora final do período liberado para o
+usuário ou grupo utilizar a balança.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>If( FwFldGet("DX6_MODAL") == "0", .F., .T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

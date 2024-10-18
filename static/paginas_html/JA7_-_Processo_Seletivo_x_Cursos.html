@@ -1,0 +1,554 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: JA7 - Processo Seletivo x Cursos</title></head>
+<body>
+<font color="orange"><h2 id="JA7">Tabela: JA7 - Processo Seletivo x Cursos</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Processo Seletivo x Cursos</b></td><td colspan="2"><b>JA7_FILIAL+JA7_CODIGO+JA7_CODCUR</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">JA7_FILIAL+JA7_CODIGO+JA7_CODCUR</td><td>Codigo P.S. + Curso Vig.</td><td></td></tr>
+<tr><td>2</td><td colspan="2">JA7_FILIAL+JA7_CODCUR</td><td>Curso Vig.</td><td></td></tr>
+<tr><td>3</td><td colspan="2">JA7_FILIAL+JA7_CODIGO+JA7_ITEM</td><td>Codigo P.S. + Item</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>JA7_FILIAL</td>
+<td>FILIAL</td>
+<td colspan="2">Filial</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JA7_CODIGO</td>
+<td>Codigo P.S.</td>
+<td colspan="2">Codigo do Proc. Seletivo</td>
+<td colspan="4">Código do Processo Seletivo. Este código
+deve estar previamente cadastrado no
+arquivo JA6 (Processos Seletivos).
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GEExistCpo("JA6",M->JA7_CODIGO)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ja6.html">JA6</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JA7_DCODIG</td>
+<td>Descricao</td>
+<td colspan="2">Descricao Proc. Seletivo</td>
+<td colspan="4">Descriç„o do Processo Seletivo.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui, " ", Posicione("JA6",1,xFilial("JA6") + JA7->JA7_CODIGO,"JA6_DESC"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("JA6",1,xFilial("JA6") + JA7->JA7_CODIGO,"JA6_DESC")</td>
+<td><a href="/tabelas_protheus/grupocampo/020.html">020</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JA7_ITEM</td>
+<td>Item</td>
+<td colspan="2">Item da Amarracao</td>
+<td colspan="4">Item (numeraç„o sequencial) referente
+aos cursos relacionados ao Processo
+Seletivo.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JA7_CODCUR</td>
+<td>Curso Vig.</td>
+<td colspan="2">Codigo do Curso Vigente</td>
+<td colspan="4">Código do Curriculo que fará parte do
+Processo Seletivo. Este código deve
+estar previamente cadastrado no Cadastro
+de Curriculos.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>AC080VLDCUR()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/jah.html">JAH</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ja7_codcur.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JA7_DCURSO</td>
+<td>Desc.Curric.</td>
+<td colspan="2">Descricao do Curso</td>
+<td colspan="4">Descriç„o do Curso.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui, " ", Posicione("JAH",1,xFilial("JAH") + JA7->JA7_CODCUR,"JAH_DESC"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("JAH",1,xFilial("JAH") + JA7->JA7_CODCUR,"JAH_DESC")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JA7_ANOLET</td>
+<td>Ano Letivo</td>
+<td colspan="2">Ano Letivo</td>
+<td colspan="4">Informa o Ano Letivo do Curso Vigente
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>Iif(Inclui, " ", Posicione("JAR",1,xFilial("JAR") + JA7->JA7_CODCUR,"JAR_ANOLET"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JA7_PERLET</td>
+<td>Periodo Let.</td>
+<td colspan="2">Periodo Letivo</td>
+<td colspan="4">Informa o Periodo Letivo do curso
+vigente
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>Iif(Inclui, " ", Posicione("JAR",1,xFilial("JAR") + JA7->JA7_CODCUR,"JAR_PERIOD"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JA7_DTURNO</td>
+<td>Turno</td>
+<td colspan="2">Descricao do Turno</td>
+<td colspan="4">Informa a descrição do turno do curso
+vigente
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>Iif(Inclui, " ", A080DTurno(JA7->JA7_CODCUR))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JA7_CORTE</td>
+<td>Pontos Corte</td>
+<td colspan="2">Pontuacao de Corte</td>
+<td colspan="4">Nota de corte para este curso. Caso o
+candidato tenha uma nota abaixo desta
+estará automaticamente desclassificado.
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>@E 999                                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JA7_PERC</td>
+<td>Perc. Cham.</td>
+<td colspan="2">Percentual</td>
+<td colspan="4">Percentual de candidatos que ser„o
+chamados para matrícula além dos que
+foram aprovados no Processo Seletivo.
+Utilizado para prever desistências.
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>@E 999                                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JA7_NUMVAG</td>
+<td>Num. Vagas</td>
+<td colspan="2">Numero de Vagas</td>
+<td colspan="4">Quantidade total de vagas que ser„o
+disponibilizadas para o curso neste
+processo seletivo.
+</td>
+<td>N</td>
+<td>6</td>
+<td>0</td>
+<td>@E 999,999                                   </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JA7_VAGLIV</td>
+<td>Vagas Livres</td>
+<td colspan="2">Vagas Livres</td>
+<td colspan="4">Quantidade de vagas disponíveis no
+momento para este Curso.
+</td>
+<td>N</td>
+<td>6</td>
+<td>0</td>
+<td>@E 999,999                                   </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JA7_VAGPRE</td>
+<td>Vagas Preenc</td>
+<td colspan="2">Vagas Preenchidas</td>
+<td colspan="4">Quantidade de vagas já preenchidas para
+este Curso.
+</td>
+<td>N</td>
+<td>6</td>
+<td>0</td>
+<td>@E 999,999                                   </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JA7_DATAF</td>
+<td>Dt.Fim Proc.</td>
+<td colspan="2">Data Final Processo Site</td>
+<td colspan="4">Data de encerramento de inscrições do
+processo seletivo.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>CTOD("")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JA7_HORAF</td>
+<td>Hr.Fim Proc.</td>
+<td colspan="2">Hora Final Processo Site</td>
+<td colspan="4">Hora de encerramento de inscrições do
+processo seletivo.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>JA8</td>
+<td colspan="2">JA7_CODIGO+JA7_CODCUR</td>
+<td colspan="2">JA8_CODIGO+JA8_CODCUR</td>
+</tr>
+<tr>
+<td>JB4</td>
+<td colspan="2">JA7_CODIGO+JA7_CODCUR</td>
+<td colspan="2">JB4_PROCES+JB4_CODCUR</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

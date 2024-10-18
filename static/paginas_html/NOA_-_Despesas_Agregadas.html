@@ -1,0 +1,1039 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: NOA - Despesas Agregadas</title></head>
+<body>
+<font color="orange"><h2 id="NOA">Tabela: NOA - Despesas Agregadas</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Despesas Agregadas</b></td><td colspan="2"><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">NOA_FILIAL+NOA_CODIGO</td><td>Codigo</td><td></td></tr>
+<tr><td>2</td><td colspan="2">NOA_FILIAL+NOA_TIPDOC+NOA_SERDOC+NOA_NUMDOC+NOA_CLIFOR+NOA_LOJACF</td><td>Tipo Orig. + Serie Orig. + Numero Orig. + Client/Forn + Loja Cli/For</td><td></td></tr>
+<tr><td>3</td><td colspan="2">NOA_FILIAL+NOA_PEDIDO+NOA_ITEMPC</td><td>Pedido + Item</td><td></td></tr>
+<tr><td>4</td><td colspan="2">NOA_FILIAL+NOA_TIPDOC+NOA_SDOC+NOA_NUMDOC+NOA_CLIFOR+NOA_LOJACF</td><td>Tipo Orig. + Série Doc. + Numero Orig. + Client/Forn + Loja Cli/For</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>NOA_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NOA_CODIGO</td>
+<td>Codigo</td>
+<td colspan="2">Codigo da Despesa</td>
+<td colspan="4">Campo destinado à inclusão do Codigo da
+Despesa.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo('NOA')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NOA_CODFOR</td>
+<td>Cod. Fornec.</td>
+<td colspan="2">Codigo Fornecedor</td>
+<td colspan="4">Campo destinado à seleção do código do
+Fornecedor relacionado à Despesa que
+está sendo cadastrada. (O Fornecedor
+deverá ter sido previamente cadastrado
+no Sistema através da rotina -Cadastro
+de Fornecedores- disponível no
+SIGAAGR-Gestão Agrícola ? F3
+Disponível).
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo('SA2')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sa2.html">SA2</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NOA_LOJFOR</td>
+<td>Loja Fornec.</td>
+<td colspan="2">Loja do Fornecedor</td>
+<td colspan="4">Campo destinado à Loja do Fornecedor (O
+Sistema apresentará automaticamente este
+código, assim que o usuário selecionar o
+Fornecedor).
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NOA_NOMFOR</td>
+<td>Nome Fornec.</td>
+<td colspan="2">Nome do Fornecedor</td>
+<td colspan="4">Campo destinado ao nome do Fornecedor
+relacionado à Despesa que está sendo
+cadastrada (O Sistema apresentará
+automaticamente este nome, assim que o
+usuário selecionar o Fornecedor).
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NOA_PREFIX</td>
+<td>Prefixo</td>
+<td colspan="2">Prefixo da Despesa</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>'PC'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NOA_NUMERO</td>
+<td>Numero</td>
+<td colspan="2">Numero da Despesa</td>
+<td colspan="4">Número da despesa.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>GetSXENum('SC7','C7_NUM')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/018.html">018</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NOA_PARCEL</td>
+<td>Parcela</td>
+<td colspan="2">Parcela do Titulo</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>'1'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NOA_DATEMI</td>
+<td>Data Emissao</td>
+<td colspan="2">Data de Emissao</td>
+<td colspan="4">Campo data destinado à inserção da Data
+de Emissão da Despesa que está sendo
+cadastrada.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>99/99/9999                                   </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NOA_DATVEN</td>
+<td>Data Vencto</td>
+<td colspan="2">Data de Vencimento</td>
+<td colspan="4">Campo data destinado à inserção da Data
+de Vencimento da Despesa que está sendo
+cadastrada.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>99/99/9999                                   </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NOA_NATURE</td>
+<td>Natureza</td>
+<td colspan="2">Natureza Financeira</td>
+<td colspan="4">Campo destinado à Natureza relacionada à
+Despesa que está sendo cadastrada. (A
+Natureza deverá ter sido previamente
+cadastrada no Sistema através da rotina
+-Cadastro de Naturezas- disponível no
+SIGAAGR-Gestão Agrícola ? F3
+Disponível).
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>FinVldNat( .F. )</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sed.html">SED</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NOA_MOEDA</td>
+<td>Moeda</td>
+<td colspan="2">Moeda do Titulo</td>
+<td colspan="4">Campo numérico destinado à inclusão no
+código da Moeda que se refere à Despesa
+que está sendo cadastrada (A Moeda
+deverá ter sido previamente cadastrada
+no Sistema através da rotina -Cadastro
+de Moedas- disponível no SIGAAGR-Gestão
+Agrícola ? F3 Disponível).
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td></td>
+<td>1</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NOA_CODBCO</td>
+<td>Portador</td>
+<td colspan="2">Portador do Titulo</td>
+<td colspan="4">Campo destinado à seleção do Portador
+(Banco) relacionado à Despesa que está
+sendo inserida no Sistema.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo('SA6')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sa6.html">SA6</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NOA_HISTOR</td>
+<td>Historico</td>
+<td colspan="2">Historico do Titulo</td>
+<td colspan="4">Campo alfa-numérico destinado à inclusão
+de todo e qualquer Histórico que o
+usuário ache necessário.
+</td>
+<td>C</td>
+<td>25</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NOA_PEDIDO</td>
+<td>Pedido</td>
+<td colspan="2">Pedido de Compra</td>
+<td colspan="4">Campo destinado para informar o Numero
+do Pedido de Compra.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NOA_ITEMPC</td>
+<td>Item</td>
+<td colspan="2">Item do Pedido de Compras</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>'001'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NOA_CODPRO</td>
+<td>Cod. Produto</td>
+<td colspan="2">Codigo do Produto</td>
+<td colspan="4">Campo destinado ao código do produto
+relacionado à Despesa que está sendo
+cadastrada (O Produto deverá ter sido
+previamente cadastrado no Sistema
+através da rotina -Cadastro de Produtos-
+disponível no SIGAAGR-Gestão Agrícola).
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo('SB1')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sb1.html">SB1</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/030.html">030</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NOA_DESPRO</td>
+<td>Desc Produto</td>
+<td colspan="2">Descricao do Produto</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NOA_UM</td>
+<td>Unid. Medida</td>
+<td colspan="2">Unidade de Medida</td>
+<td colspan="4">Campo destinado à seleção da Unidade de
+Medida relacionada ao Produto acima
+discriminado. (O Sistema apresentará
+automaticamente a Unidade de Medida
+assim que o usuário selecionar o
+Produto).
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td>ExistCpo('SAH')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sah.html">SAH</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/122.html">122</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NOA_LOCAL</td>
+<td>Local</td>
+<td colspan="2">Local de Estoque</td>
+<td colspan="4">Campo destinado à seleção do Local em
+que encontra o Produto relacionado à
+Despesa que está sendo cadastrada (O
+Sistema apresentará automaticamente o
+Local assim que o usuário selecionar o
+Produto).
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("NNR")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/nnr.html">NNR</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/024.html">024</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NOA_QTDPRO</td>
+<td>Quantidade</td>
+<td colspan="2">Quantidade</td>
+<td colspan="4">Campo numérico destino à inclusão da
+quantidade de itens relacionados à
+Despesa que está sendo cadastrada.
+</td>
+<td>N</td>
+<td>14</td>
+<td>6</td>
+<td>@E 999,999.999999                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NOA_VLRUNI</td>
+<td>Valor Unit.</td>
+<td colspan="2">Valor Unitario</td>
+<td colspan="4">Campo destinado à inclusão do valor
+unitário do Produto que relaciona-se com
+a Despesa que está sendo inserida no
+Sistema.
+</td>
+<td>N</td>
+<td>14</td>
+<td>6</td>
+<td>@E 999,999.999999                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NOA_VLRTOT</td>
+<td>Valor Total</td>
+<td colspan="2">Valor Total</td>
+<td colspan="4">Campo destinado ao Valor Total do
+Produto relacionado à Despesa que está
+sendo cadastrada. (O Sistema preenche
+automaticamente este campo assim que o
+usuário preenche os campos de Quantidade
+e Valor Unitário).
+</td>
+<td>N</td>
+<td>14</td>
+<td>6</td>
+<td>@E 999,999.999999                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NOA_CC</td>
+<td>C. Custo</td>
+<td colspan="2">Centro de Custo</td>
+<td colspan="4">Campo reservado à inclusão do número do
+Centro de Custo relacionado à Despesa em
+questão (O número do Centro de Custo
+deve estar previamente cadastrado no
+Sistema, através da rotina -Cadastro de
+Custos-, disponível no
+SIGACTB-Contabilidade Gerencial,
+SIGACON-Contabilidade ou SIGAATF-Ativo
+Fixo - F3 Disponível).
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo('CTT')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ctt.html">CTT</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/004.html">004</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NOA_ITEMCT</td>
+<td>It. Contabil</td>
+<td colspan="2">Item Contabil</td>
+<td colspan="4">Campo reservado à inclusão do número do
+Item da Conta Contábil relacionado à
+Despesa (O número do Item Contábil deve
+estar previamente cadastrado no Sistema,
+através da rotina -Cadastro de Custos-,
+disponível no SIGACTB-Contabilidade
+Gerencial, SIGACON-Contabilidade ou
+SIGAATF-Ativo Fixo - F3 Disponível).
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo('CTD')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ctd.html">CTD</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/005.html">005</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NOA_CLVL</td>
+<td>Cod. Cl. Vl.</td>
+<td colspan="2">Classe de Valor</td>
+<td colspan="4">Campo reservado à inclusão do número da
+Classe Valor relacionado à Despesa (O
+número da Classe Valor deverá ter sido
+previamente cadastrado no Sistema,
+através da rotina -Cadastro de Custos-,
+disponível no SIGACTB-Contabilidade
+Gerencial, SIGACON-Contabilidade ou
+SIGAATF-Ativo Fixo - F3 Disponível).
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo('CTH')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/cth.html">CTH</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/006.html">006</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NOA_TIPDOC</td>
+<td>Tipo Orig.</td>
+<td colspan="2">Tipo Documento Original</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NOA_SERDOC</td>
+<td>Serie Orig.</td>
+<td colspan="2">Serie Documento Original</td>
+<td colspan="4">Série do documento fiscal
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>!!!                                          </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/094.html">094</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NOA_NUMDOC</td>
+<td>Numero Orig.</td>
+<td colspan="2">Numero Documento Original</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NOA_CLIFOR</td>
+<td>Client/Forn</td>
+<td colspan="2">Cliente ou Fornecedor</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NOA_LOJACF</td>
+<td>Loja Cli/For</td>
+<td colspan="2">Loja Cliente Fornecedor</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NOA_SDOC</td>
+<td>Série Doc.</td>
+<td colspan="2">Série do Documento Fiscal</td>
+<td colspan="4">Série do Documento Fiscal
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>!!!                                          </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/095.html">095</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

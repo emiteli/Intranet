@@ -1,0 +1,2704 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: VS3 - Itens de Orçamento (Peças)</title></head>
+<body>
+<font color="orange"><h2 id="VS3">Tabela: VS3 - Itens de Orçamento (Peças)</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Itens de Orçamento (Peças)</b></td><td colspan="2"><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">VS3_FILIAL+VS3_NUMORC+VS3_SEQUEN</td><td>Nro Orcam/o + Sequencia</td><td></td></tr>
+<tr><td>2</td><td colspan="2">VS3_FILIAL+VS3_NUMORC+VS3_GRUITE+VS3_CODITE+VS3_SEQUEN</td><td>Nro Orcam/o + Grupo Item + Codigo Item + Sequencia</td><td></td></tr>
+<tr><td>3</td><td colspan="2">VS3_FILIAL+VS3_NUMORC</td><td>Nro Orcam/o</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>VS3_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Filial
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_SEQINC</td>
+<td>Seq. Inconv.</td>
+<td colspan="2">Sequencia Inconveniente</td>
+<td colspan="4">Sequencia do Inconveniente no Orcamento.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_GRUINC</td>
+<td>Grupo Incon.</td>
+<td colspan="2">Grupo do Inconveniente</td>
+<td colspan="4">Informe o grupo de Inconveniente
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!S3                                         </td>
+<td>FG_Seek("VSK","VV1->VV1_CODMAR+M->VS3_GRUINC",1,.f.)</td>
+<td>IF(!INCLUI,POSICIONE("VST",1,xFilial("VST")+"1"+VS3->VS3_NUMORC+VS3->VS3_SEQINC,"VST_GRUINC"),"")</td>
+<td><a href="/tabelas_protheus/f3/vsk.html">VSK</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_CODINC</td>
+<td>Cod. Incon.</td>
+<td colspan="2">Codigo do Inconveniente</td>
+<td colspan="4">Informe o Codigo do Inconveniente
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>FG_Seek("VSL","VV1->VV1_CODMAR+M->VS3_GRUINC+M->VS3_CODINC",1,.f.)</td>
+<td>IF(!INCLUI,POSICIONE("VST",1,xFilial("VST")+"1"+VS3->VS3_NUMORC+VS3->VS3_SEQINC,"VST_CODINC"),"")</td>
+<td><a href="/tabelas_protheus/f3/vsl.html">VSL</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_DESINC</td>
+<td>Descr Inconv</td>
+<td colspan="2">Descr do Inconveniente</td>
+<td colspan="4">Informe a Descricao do Inconveniente
+</td>
+<td>C</td>
+<td>120</td>
+<td>0</td>
+<td>@!S30                                        </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("VST",1,xFilial("VST")+"1"+VS3->VS3_NUMORC+VS3->VS3_SEQINC,"VST_DESINC"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_SEQUEN</td>
+<td>Sequencia</td>
+<td colspan="2">Sequencia</td>
+<td colspan="4">Sequencia da Peca no Orcamento
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>FS_VALSEQ()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VS3_GRUITE</td>
+<td>Grupo Item</td>
+<td colspan="2">Grupo do Item</td>
+<td colspan="4">Grupo da Peca Desejada
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!S4                                         </td>
+<td>VAZIO() .OR. FG_Seek("SBM","M->VS3_GRUITE",1,.F.).and.If(M->VS1_TIPORC == "2",FG_GRUTEM(M->VS1_TIPTEM),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/bm2.html">BM2</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VS3_KEYALT</td>
+<td>Cod Alternat</td>
+<td colspan="2">Cod Alternat</td>
+<td colspan="4">Código Alternativo relacionado a este
+item.
+</td>
+<td>C</td>
+<td>27</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("VB1",1,XFILIAL("VB1")+VS3->VS3_CODITE,"VB1_KEYALT")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_CODITE</td>
+<td>Codigo Item</td>
+<td colspan="2">Codigo do Item</td>
+<td colspan="4">Código da Peca desejado. Ao ser
+escolhi-do,  o sistema apresentara
+tambem no ro-dape da janela as Pecas
+relacionadas
+</td>
+<td>C</td>
+<td>27</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>OFIOA520C().AND.(FG_POSSB1("M->VS3_CODITE","SB1->B1_CODITE","M->VS3_GRUITE")).and.FS_BATUGRP().and.FS_VERPEC().AND.OFXX01V2UM()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/b07.html">B07</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VS3_NUMORC</td>
+<td>Nro Orcam/o</td>
+<td colspan="2">Numero do Orcamento</td>
+<td colspan="4">Número do Orcamento
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>@ 99999999                                   </td>
+<td></td>
+<td>M->VS3_NUMORC := M->VS1_NUMORC</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_DESITE</td>
+<td>Descricao</td>
+<td colspan="2">Descricao do Item</td>
+<td colspan="4">Descrição da Peca
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!S40                                        </td>
+<td></td>
+<td>if(!Inclui,Posicione("SB1",7,xFilial("SB1")+VS3->VS3_GRUITE+VS3->VS3_CODITE,"B1_DESC"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("SB1",7,xFilial("SB1")+VS3->VS3_GRUITE+VS3->VS3_CODITE,"B1_DESC")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_CODSIT</td>
+<td>Cod Situacao</td>
+<td colspan="2">Codigo Situacao</td>
+<td colspan="4">Informe o codigo da situacao da Demanda
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>FG_Seek("V09","M->VS3_CODSIT",1,.F.)</td>
+<td>"01"</td>
+<td><a href="/tabelas_protheus/f3/v09.html">V09</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_QTDEST</td>
+<td>Qtd. Estoque</td>
+<td colspan="2">Quantidade em Estoque</td>
+<td colspan="4">A quantidade atual desta peca em
+estoque, referente ao armazem
+selecionado.
+</td>
+<td>N</td>
+<td>10</td>
+<td>2</td>
+<td>@E 9,999,999.99                              </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_SITTRI</td>
+<td>Sit.Trib.</td>
+<td colspan="2">Situacao Tributaria</td>
+<td colspan="4">Informe a situação tributária da peça.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_QTDITE</td>
+<td>Qtd Requisit</td>
+<td colspan="2">Qtde Requisitada</td>
+<td colspan="4">Quantidade da Peca Desejada pelo
+Cliente
+</td>
+<td>N</td>
+<td>10</td>
+<td>2</td>
+<td>@E 9,999,999.99                              </td>
+<td>FS_TOTPEC() .and. VALPMOD020( M->VS3_GRUITE ,M->VS3_CODITE ,M->VS3_QTDITE,"1", "1")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/vs3_qtdite.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_VALPEC</td>
+<td>Vl Peca</td>
+<td colspan="2">Valor da Peca</td>
+<td colspan="4">Valor Unitario da Peca
+</td>
+<td>N</td>
+<td>14</td>
+<td>4</td>
+<td>@E 999,999,999.9999                          </td>
+<td>FS_TOTPEC()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VS3_QTD2UM</td>
+<td>2a Un Medida</td>
+<td colspan="2">2a Un Medida</td>
+<td colspan="4">Informe a 2a. Unidade de Medida
+</td>
+<td>N</td>
+<td>10</td>
+<td>2</td>
+<td>@E 9,999,999.99                              </td>
+<td>FS_TOTPEC()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/vs3_qtd2um.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_PERDES</td>
+<td>% Desc</td>
+<td colspan="2">% Desconto</td>
+<td colspan="4">% Desconto a ser Aplicado na Peca
+</td>
+<td>N</td>
+<td>7</td>
+<td>2</td>
+<td>@E 9,999.99                                  </td>
+<td>POSITIVO().AND.FS_TOTPEC()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_VALDES</td>
+<td>Vl Desconto</td>
+<td colspan="2">Valor Desconto</td>
+<td colspan="4">Valor do Desconto da Peca
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td>Positivo().and.FS_TOTPEC()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_VALTOT</td>
+<td>Vl Total</td>
+<td colspan="2">Valor Total</td>
+<td colspan="4">Valor Total da Peca
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_FORMUL</td>
+<td>Formula</td>
+<td colspan="2">Formula do Calculo Valor</td>
+<td colspan="4">Formula para Cálculo do Preco da Peca
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>FG_STRZERO("M->VS3_FORMUL",6).and.FG_Seek("VEG","M->VS3_FORMUL").and.VEG->VEG_GRUFOR==cGruFor.and.FS_PRECPO("P",2)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/veg.html">VEG</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VS3_MODVEI</td>
+<td>Mod Veiculo</td>
+<td colspan="2">Modelo do Veiculo</td>
+<td colspan="4">Modelo do Veiculo.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>FG_SEEK("VV2","M->VS1_CODMAR+M->VS3_MODVEI",1,.F.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/vv2.html">VV2</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_ARMORI</td>
+<td>Arm. origem</td>
+<td colspan="2">Cod. do armazem de origem</td>
+<td colspan="4">Informe o Codigo do armazem de origem
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>M->VS1_TIPORC == "3"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/024.html">024</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_VBAICM</td>
+<td>Vl Base ICM</td>
+<td colspan="2">Vlr Base do ICM</td>
+<td colspan="4">Valor da Base do ICM.
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_QTDPED</td>
+<td>Qtd.Pedido</td>
+<td colspan="2">Quantidade Restante</td>
+<td colspan="4">Quantidade Atendida do pedido.
+</td>
+<td>N</td>
+<td>10</td>
+<td>2</td>
+<td>@E 9,999,999.99                              </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_QTDELI</td>
+<td>Qt.Eliminada</td>
+<td colspan="2">Quantidade Eliminada</td>
+<td colspan="4">Quantidade com residuo eliminado.
+</td>
+<td>N</td>
+<td>10</td>
+<td>2</td>
+<td>@E 9,999,999.99                              </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_QTDAGU</td>
+<td>Qtd.Aguard.</td>
+<td colspan="2">Quantidade Aguardando</td>
+<td colspan="4">Quantidade aguardando entrada.
+</td>
+<td>N</td>
+<td>10</td>
+<td>2</td>
+<td>@E 9,999,999.99                              </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_QTDTRA</td>
+<td>Qt.Agrd.Trf.</td>
+<td colspan="2">Qt.Agrd.Trf.</td>
+<td colspan="4">Qtd.aguardando transf.
+</td>
+<td>N</td>
+<td>10</td>
+<td>2</td>
+<td>@E 9,999,999.99                              </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_QTDATE</td>
+<td>Qtd.Atendida</td>
+<td colspan="2">Quantidade Atendida</td>
+<td colspan="4">Quantidade Atendida do pedido.
+</td>
+<td>N</td>
+<td>8</td>
+<td>2</td>
+<td>@E 99999.99                                  </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_ALIICM</td>
+<td>Aliquota ICM</td>
+<td colspan="2">Aliquota ICMS</td>
+<td colspan="4">Alíquota ICMS.
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>@E 999.99                                    </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_ICMCAL</td>
+<td>ICM Calcul</td>
+<td colspan="2">ICM Calculado</td>
+<td colspan="4">ICM Calculado
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_CODTES</td>
+<td>T.E.S.</td>
+<td colspan="2">Tipo de Entrada e Saida</td>
+<td colspan="4">TES de Saida para esta Operação
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>FG_Seek("SF4","M->VS3_CODTES",1,.f.).and.FS_TOTPEC().and. MaAvalTes("S",M->VS3_CODTES)  .and. FS_OFM430OPER()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sf4.html">SF4</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VS3_QTDRES</td>
+<td>Qtd Reservad</td>
+<td colspan="2">Quantidade Reservada</td>
+<td colspan="4">Informe aqui a quantidade reservada do
+item.
+</td>
+<td>N</td>
+<td>10</td>
+<td>2</td>
+<td>@E 9,999,999.99                              </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_CONBAR</td>
+<td>Conferencia</td>
+<td colspan="2">Conferencia Cod.Barras</td>
+<td colspan="4">Informe Conferencia por Codigo de Barras
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_CODKIT</td>
+<td>Codigo Kit</td>
+<td colspan="2">Codigo do Kit</td>
+<td colspan="4">Informe o código do Kit.
+</td>
+<td>C</td>
+<td>27</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_LOCAL</td>
+<td>Armazem</td>
+<td colspan="2">Armazem</td>
+<td colspan="4">Informe o código do Armazem
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/024.html">024</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_GRUKIT</td>
+<td>Grupo Kit</td>
+<td colspan="2">Grupo do Kit</td>
+<td colspan="4">Informe o grupo do KIT.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_DTNFFB</td>
+<td>Data NF Fab</td>
+<td colspan="2">Data NF Fab</td>
+<td colspan="4">Informe a data da Nota Fiscal de
+fábrica.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>CTOD("")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_NOTFAB</td>
+<td>NF Fabrica</td>
+<td colspan="2">NF Fabrica</td>
+<td colspan="4">Informe o código da Nota Fiscal da
+fábrica.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_PIPIFB</td>
+<td>% IPI Fab</td>
+<td colspan="2">% IPI Fab</td>
+<td colspan="4">Informe o percentual  IPI fab.
+</td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_VIPIFB</td>
+<td>Vl IPI Fab</td>
+<td colspan="2">Vl IPI Fab</td>
+<td colspan="4">Informe o valor do IPI Fab.
+</td>
+<td>N</td>
+<td>11</td>
+<td>2</td>
+<td>@E 99,999,999.99                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_PICMFB</td>
+<td>% ICM Fab</td>
+<td colspan="2">% ICM Fab</td>
+<td colspan="4">Informe o Percentual ICM fab.
+</td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_QTDINI</td>
+<td>Qtd.Inicial</td>
+<td colspan="2">Quantidade Inicial</td>
+<td colspan="4">Quantidade Inicial da Peca Solicitada no
+Orçamento.
+</td>
+<td>N</td>
+<td>10</td>
+<td>2</td>
+<td>@E 9,999,999.99                              </td>
+<td>FS_OFM430OPER()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_QTDCON</td>
+<td>Qtd.Conferid</td>
+<td colspan="2">Quantidade Conferida</td>
+<td colspan="4">Informe a quantidade que deseja ser
+conferida.
+</td>
+<td>N</td>
+<td>10</td>
+<td>2</td>
+<td>@E 9,999,999.99                              </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_VICMFB</td>
+<td>Vl ICM Fab</td>
+<td colspan="2">Vl ICM Fab</td>
+<td colspan="4">Informe o valor de ICM Fab.
+</td>
+<td>N</td>
+<td>11</td>
+<td>2</td>
+<td>@E 99,999,999.99                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_PICMSB</td>
+<td>% ICM Sub</td>
+<td colspan="2">% ICM Sub</td>
+<td colspan="4">Informe o percentual de ICm
+Substituição.
+</td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_VICMSB</td>
+<td>Vl ICM Sub</td>
+<td colspan="2">Vl ICM Sub</td>
+<td colspan="4">Informe o valor do  ICM  SUb.
+</td>
+<td>N</td>
+<td>11</td>
+<td>2</td>
+<td>@E 99,999,999.99                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_NUMIDE</td>
+<td>Etiq. Ident</td>
+<td colspan="2">Etiq. Ident</td>
+<td colspan="4">Informe Etiq. Ident.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_ITESUB</td>
+<td>Cod. Ite Sub</td>
+<td colspan="2">Cod. Ite Sub</td>
+<td colspan="4">Informe o código do Item subst.
+</td>
+<td>C</td>
+<td>27</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>FS_TOTPEC()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_OPER</td>
+<td>Tip Operacao</td>
+<td colspan="2">Tipo de Operacao</td>
+<td colspan="4">Informe o tipo de operacao para TES
+inteligente
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Existcpo("SX5","DJ"+M->VS3_OPER) .and. FS_OFM430OPER()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dj.html">DJ</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_BASPIS</td>
+<td>Base PIS</td>
+<td colspan="2">Base PIS</td>
+<td colspan="4">Base de Calculo de PIS
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_BASCOF</td>
+<td>Base COFINS</td>
+<td colspan="2">Base COFINS</td>
+<td colspan="4">Base de Calculo de COFINS
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_VALPIS</td>
+<td>Valor PIS</td>
+<td colspan="2">Valor PIS</td>
+<td colspan="4">Valor de PIS
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_LOTECT</td>
+<td>Lote</td>
+<td colspan="2">Lote</td>
+<td colspan="4">Numeração do Lote criada pelo próprio
+usuário.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td>FG_RASTRO(M->VS3_GRUITE,M->VS3_CODITE,M->VS3_QTDITE,M->VS3_LOTECT,M->VS3_NUMLOT)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/068.html">068</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_NUMLOT</td>
+<td>Sub-Lote</td>
+<td colspan="2">Sub-Lote</td>
+<td colspan="4">Número do Lote (utilizado na
+Rastreabi-lidade  de  Produtos  quando
+parãmetro MV_RASTRO estiver ativado).
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>FG_RASTRO(M->VS3_GRUITE,M->VS3_CODITE,M->VS3_QTDITE,M->VS3_LOTECT,M->VS3_NUMLOT)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_VALCOF</td>
+<td>Valor COFINS</td>
+<td colspan="2">Valor COFINS</td>
+<td colspan="4">Valor de COFINS
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_DTVALI</td>
+<td>Valid. Lote</td>
+<td colspan="2">Validade do Lote Inform.</td>
+<td colspan="4">Data de Validade do Lote
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>CTOD("")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_LOCALI</td>
+<td>Localização</td>
+<td colspan="2">Localização</td>
+<td colspan="4">Informe a localização.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>VldLocaliz( "O011" )</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sbe.html">SBE</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_ALQPIS</td>
+<td>Aliq. PIS</td>
+<td colspan="2">Aliq. PIS</td>
+<td colspan="4">Aliquota de PIS
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_NUMSER</td>
+<td>Num.Serie</td>
+<td colspan="2">Num.Serie</td>
+<td colspan="4">Número de Série do produto movimentado.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>FG_RASTRO(M->VS3_GRUITE,M->VS3_CODITE,M->VS3_QTDITE,M->VS3_LOTECT,M->VS3_NUMLOT,M->VS3_NUMSER)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_ALQCOF</td>
+<td>Aliq.Cofins</td>
+<td colspan="2">Aliq.Cofins</td>
+<td colspan="4">Aliquota de COFINS
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_BICMSB</td>
+<td>Base ICMS Re</td>
+<td colspan="2">Base ICMS Retido</td>
+<td colspan="4">Base de calculo de ICMS retido
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_MARLUC</td>
+<td>Marg.Lucro</td>
+<td colspan="2">Margem de Lucro</td>
+<td colspan="4">Informe as margens de lucro apuradas nas
+vendas em funcao de desconto do produto
+</td>
+<td>N</td>
+<td>7</td>
+<td>2</td>
+<td>@E 9999.99                                   </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_TESENT</td>
+<td>Tes Entrada</td>
+<td colspan="2">Tes Entrada</td>
+<td colspan="4">Informe o Tes de entrada
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>FG_Seek("SF4","M->VS3_TESENT",1,.f.).and.FS_TOTPEC() .and. MaAvalTes("E",M->VS3_TESENT) .and. FS_OFM430OPER()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sf4.html">SF4</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>If(FunName()<>"OFIOM430",M->VS1_TIPORC == "3",.t.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_VALLIQ</td>
+<td>Vl Peca Liq</td>
+<td colspan="2">Valor Peca com Desconto</td>
+<td colspan="4">Valor da Peca com o Desconto.
+</td>
+<td>N</td>
+<td>14</td>
+<td>4</td>
+<td>@E 999,999,999.9999                          </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_TESSAI</td>
+<td>Tes Saida</td>
+<td colspan="2">Tes Saida</td>
+<td colspan="4">Informe o Tes de Saida
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>FG_Seek("SF4","M->VS3_TESSAI",1,.f.).and.FS_TOTPEC().and. MaAvalTes("S",M->VS3_TESSAI)  .and. FS_OFM430OPER()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sf4.html">SF4</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>If(FunName()<>"OFIOM430",M->VS1_TIPORC == "3",.t.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_PECKIT</td>
+<td>Peca Kit</td>
+<td colspan="2">Peca faz parte de um kit</td>
+<td colspan="4">Informe se a peça pertence a um kit.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('012')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>0=N�o;1=Mandat�rio;2=Correlato</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_MOTPED</td>
+<td>MotivoCancel</td>
+<td colspan="2">Motivo Cancelamento</td>
+<td colspan="4">Motivo do Concelamento do Item
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/vs0.html">VS0</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_DESMOT</td>
+<td>Descr Motivo</td>
+<td colspan="2">Descricao do Motivo</td>
+<td colspan="4">Informe aqui a descricao do motivo.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>POSICIONE("VS0",1,xFilial("VS0")+"000004"+VS3->VS3_MOTPED,"VS0_DESMOT")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_QESTNA</td>
+<td>Estoque N.A.</td>
+<td colspan="2">Estoque N.A.</td>
+<td colspan="4">Estoque para Nivel Atendimento
+</td>
+<td>N</td>
+<td>10</td>
+<td>2</td>
+<td>@E 9,999,999.99                              </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_FLGNAT</td>
+<td>Flag Niv Ate</td>
+<td colspan="2">Flag do Nivel de Atendime</td>
+<td colspan="4">Informe Flag do Nivel de Atendimento
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("01")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>0=Nao Lido;1=Lido</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_DOCSDB</td>
+<td>Num.Doc. SDB</td>
+<td colspan="2">Numero do DOC SDB</td>
+<td colspan="4">Informe o Numero do Docto do SDB!
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/018.html">018</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_DEPGAR</td>
+<td>Depto Garant</td>
+<td colspan="2">Depto Garantia</td>
+<td colspan="4">Informe o departamento Interno.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .or. FG_Seek("SX5","'VF'+M->VS3_DEPGAR",1,.f.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/vf.html">VF</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_DEPINT</td>
+<td>Depto Intern</td>
+<td colspan="2">Depto Interno</td>
+<td colspan="4">Informe o departamento Interno.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .or. FG_Seek("SX5","'VD'+M->VS3_DEPINT",1,.f.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/vd.html">VD</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_RESERV</td>
+<td>Reserva Peca</td>
+<td colspan="2">Reserva Pecas?</td>
+<td colspan="4">Informe se as pecas devem ser
+reservadas.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("01")</td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>0=Nao;1=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_CENCUS</td>
+<td>Centro Custo</td>
+<td colspan="2">Centro de Custo</td>
+<td colspan="4">Informe aqui o centro de custo.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>(Vazio() .or. Ctb105CC())</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ctt.html">CTT</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>M->VS1_TIPORC != "2"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/004.html">004</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_CONTA</td>
+<td>C Contabil</td>
+<td colspan="2">Conta Contabil</td>
+<td colspan="4">Informe aqui a conta contabil.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>(Vazio() .or. Ctb105CTA())</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ct1.html">CT1</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>M->VS1_TIPORC != "2"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/003.html">003</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_ITEMCT</td>
+<td>Item Conta</td>
+<td colspan="2">Item da Conta</td>
+<td colspan="4">Informe aqui o item da conta contabil.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>(Vazio() .or. Ctb105ITEM())</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ctd.html">CTD</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>M->VS1_TIPORC != "2"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/005.html">005</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_CLVL</td>
+<td>Classe Valor</td>
+<td colspan="2">Classe de Valor</td>
+<td colspan="4">Informe aqui Classe de Valor Contabil.
+Digite um codigo valido ou utilize
+<F3>.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>(Vazio() .or. Ctb105CLVL())</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/cth.html">CTH</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>M->VS1_TIPORC != "2"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/006.html">006</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_IMPRES</td>
+<td>Impresso</td>
+<td colspan="2">Ja Impresso na Ord. Busca</td>
+<td colspan="4">Controla se o item ja foi impresso na
+ordem de busca.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("01")</td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>0=Nao;1=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_VALCMP</td>
+<td>ICMS Compl.</td>
+<td colspan="2">ICMS Complementar</td>
+<td colspan="4">Informe aqui o valor do ICMS.
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_DIFAL</td>
+<td>Dif.de ICMS</td>
+<td colspan="2">Diferencial de ICMS</td>
+<td colspan="4">Informe aqui o valor do diferencial
+de ICMS.
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_PEDXML</td>
+<td>NroPedCli</td>
+<td colspan="2">Nro Pedido Cliente (NFE)</td>
+<td colspan="4">Informe aqui o Numero do Pedido do
+Cliente (NFE).
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_ITEXML</td>
+<td>ItePedCli</td>
+<td colspan="2">Nro do Item no Ped (NFE)</td>
+<td colspan="4">Informe aqui o Numero do Item no
+Pedido (NFE)
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_FCICOD</td>
+<td>Cod. FCI</td>
+<td colspan="2">Codigo FCI</td>
+<td colspan="4">Informe aqui o codigo do FCI.
+</td>
+<td>C</td>
+<td>36</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_QTDAPR</td>
+<td>Qtd.Aprovada</td>
+<td colspan="2">Qtd.Aprovada</td>
+<td colspan="4">Informe a quantidade aprovada
+para a Transferencia de Pecas.
+</td>
+<td>N</td>
+<td>10</td>
+<td>4</td>
+<td>@E 99999.9999                                </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_TIPTRA</td>
+<td>Tipo Transf.</td>
+<td colspan="2">Tipo Transferencia</td>
+<td colspan="4">Informe o tipo de Transferencia
+de Pecas.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("0123")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>0=Avulsa;1=Reposicao;2=Devolucao;3=Garantia</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_VENTRA</td>
+<td>Vend.Transf.</td>
+<td colspan="2">Vendedor Transferencia</td>
+<td colspan="4">Informe o vendedor solicitante
+da Transferencia de Pecas.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_LOCPRO</td>
+<td>Locacao</td>
+<td colspan="2">Locacao do Item</td>
+<td colspan="4">Informe aqui a locacao do item.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>FM_PRODSBZ(SB1->B1_COD,"SB5->B5_LOCALI2")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_TRSFER</td>
+<td>Transf. DPM?</td>
+<td colspan="2">Originado Transfer DPM?</td>
+<td colspan="4">Para orcamentos de transferencia
+identifica se o mesmo foi originado por
+meio do arquivo de Transfer do processo
+DPM John Deere.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>0=Nao;1=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_PROMOC</td>
+<td>Promocao ?</td>
+<td colspan="2">Valor Produto e Promocao?</td>
+<td colspan="4">Informe se o Valor da Peca e Promocional
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("01")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>0=Nao;1=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_IPITRF</td>
+<td>IPI Transf</td>
+<td colspan="2">Base do IPI para transfer</td>
+<td colspan="4">Informe o valor de base do ipi para
+transferencia.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VS3_SQCONF</td>
+<td>Sq.Conferenc</td>
+<td colspan="2">Sequencial Conferencia</td>
+<td colspan="4">Informe o sequencial da Conferencia.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

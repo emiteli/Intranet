@@ -1,0 +1,2095 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: AA1 - Atendentes</title></head>
+<body>
+<font color="orange"><h2 id="AA1">Tabela: AA1 - Atendentes</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Atendentes</b></td><td colspan="2"><b>AA1_FILIAL+AA1_CODTEC</b></td><td><b>TECA020</b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">AA1_FILIAL+AA1_CODTEC</td><td>Atendente</td><td></td></tr>
+<tr><td>2</td><td colspan="2">AA1_FILIAL+AA1_REGIAO+AA1_CODTEC</td><td>Regiao + Atendente</td><td></td></tr>
+<tr><td>3</td><td colspan="2">AA1_FILIAL+AA1_NOMUSU</td><td>Nome Usuario</td><td></td></tr>
+<tr><td>4</td><td colspan="2">AA1_FILIAL+AA1_CODUSR</td><td>Cod. Usuario</td><td></td></tr>
+<tr><td>5</td><td colspan="2">AA1_FILIAL+AA1_NOMTEC</td><td>Nome Atend.</td><td></td></tr>
+<tr><td>6</td><td colspan="2">AA1_FILIAL+AA1_CODVEN</td><td>Cod Vendedor</td><td></td></tr>
+<tr><td>7</td><td colspan="2">AA1_FILIAL+AA1_CDFUNC+AA1_FUNFIL</td><td>Cod. Func. + Filial Func</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="6" align="center"><b><i>Abas(SXA)</i></b></td></tr><tr><td><b>XA_ALIAS</b></td><td><b>XA_ORDEM</b></td><td colspan="2"><b>XA_DESCRIC</b></td><td><b>XA_AGRUP</b></td><td><b>XA_TIPO</b></td></tr><tr><td><b>AA1</b></td><td><b>1</b></td><td colspan="2"><b>Cadastrais</b></td><td><b></b></td><td><b></b></td></tr><tr><td><b>AA1</b></td><td><b>2</b></td><td colspan="2"><b>Perfil do Vistoriador</b></td><td><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>AA1_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Filial do sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_CODTEC</td>
+<td>Atendente</td>
+<td colspan="2">Código do Atendente</td>
+<td colspan="4">Código do Atendente. Este deve ser único
+em todo o cadastro.
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>                                             </td>
+<td>ExistChav("AA1").And.FreeForUse("AA1",M->AA1_CODTEC)</td>
+<td>GetSx8Num("AA1","AA1_CODTEC")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/116.html">116</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>AA1_NOMTEC</td>
+<td>Nome Atend.</td>
+<td colspan="2">Nome Atendente</td>
+<td colspan="4">Nome do Atendente.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>AA1_FUNCAO</td>
+<td>Funçao</td>
+<td colspan="2">Função do Atendente</td>
+<td colspan="4">Função do atendente.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SRJ")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/srj.html">SRJ</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>AA1_CDFUNC</td>
+<td>Cod. Func.</td>
+<td colspan="2">Codigo do Funcionario</td>
+<td colspan="4">Codigo da matricula do funcionario
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>At020VTCA()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sra.html">SRA</a></td>
+<td><a href="/tabelas_protheus/gatilhos/aa1_cdfunc.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>iF(!INCLUI,.F.,.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/121.html">121</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_CC</td>
+<td>Centro Custo</td>
+<td colspan="2">Centro Custo</td>
+<td colspan="4">Centro de Custo a qual pertence o
+atendente.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. Ctb105CC()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ctt.html">CTT</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>IIF(!INCLUI .AND. !Empty(FwFldGet("AA1_CDFUNC")),.F.,.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/004.html">004</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_CENTRA</td>
+<td>Central Pag.</td>
+<td colspan="2">Telefone da central Pager</td>
+<td colspan="4">Número Telefônico da Central do Pager.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_PAGER</td>
+<td>Codigo Pager</td>
+<td colspan="2">Código do Pager</td>
+<td colspan="4">Número do Pager do Atendente.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_EMAIL</td>
+<td>E-Mail</td>
+<td colspan="2">Endereco p/ E-mail</td>
+<td colspan="4">E-Mail do atendente.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_FONE</td>
+<td>Telefone</td>
+<td colspan="2">Telefone p/ contato</td>
+<td colspan="4">Número do Telefone do atendente.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_REGIAO</td>
+<td>Regiao</td>
+<td colspan="2">Região de Atendimento</td>
+<td colspan="4">Código da Região do Atendente. Utilizado
+para administrar os atendentes por
+regiões de atendimento.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SX5","A2"+M->AA1_REGIAO)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/a2.html">A2</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_SEQTUR</td>
+<td>Seq. Turno</td>
+<td colspan="2">Sequencia de turno</td>
+<td colspan="4">Sequencia de Turno
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/spjtec.html">SPJTEC</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_TURNO</td>
+<td>Turno</td>
+<td colspan="2">Turno de Trabalho</td>
+<td colspan="4">Indica o Turno de Trabalho do
+atendente.Este campo é utilizado na
+alocação automática do atendente.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SR6")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sr6.html">SR6</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>IIF(!INCLUI .AND. !Empty(FwFldGet("AA1_CDFUNC")),.F.,.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_VALOR</td>
+<td>Valor Hora</td>
+<td colspan="2">Valor Hora do Atendente</td>
+<td colspan="4">Valor da Hora do Atendente. Este valor
+será tratado no apontamento do
+atendente.
+</td>
+<td>N</td>
+<td>9</td>
+<td>2</td>
+<td>@E 999,999.99                                </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/aa1_valor.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_RATE</td>
+<td>Custo  %</td>
+<td colspan="2">Custo percentual/atendent</td>
+<td colspan="4">Percentual do custo do atendente em
+relação ao valor hora. Utilizado para
+preenchimento automático do valor de
+custo com base no valor hora.
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>@E 999.99                                    </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/aa1_rate.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_EMINFI</td>
+<td>Emite NF</td>
+<td colspan="2">.</td>
+<td colspan="4">Indica se o funcionário pode ou não
+emitir nota fiscal.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>!                                            </td>
+<td>Pertence("01")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>0=Nao;1=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>AA1_CUSTO</td>
+<td>Vlr.Custo Hr</td>
+<td colspan="2">Valor do Custo Hora</td>
+<td colspan="4">Valor do Custo Hora. Este campo é
+informado pelo usuário.
+</td>
+<td>N</td>
+<td>9</td>
+<td>2</td>
+<td>@e 999,999.99                                </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_FUNPRO</td>
+<td>Produtivo</td>
+<td colspan="2">Funcionario Produtivo</td>
+<td colspan="4">Indica se o funcionário é produtivo ou
+não.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>!                                            </td>
+<td>Pertence("01")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>0=Nao;1=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>AA1_LOCAL</td>
+<td>Armazem</td>
+<td colspan="2">Armazem padrao do atend.</td>
+<td colspan="4">Código do Armazem padrão para controle
+de estoque do atendente.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("NNR")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/nnr.html">NNR</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/024.html">024</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_LOCLZB</td>
+<td>Ender. Boas</td>
+<td colspan="2">Localizacao de pecas boa.</td>
+<td colspan="4">Código do Endereço Padrão para controle
+de estoque do atendente.Este Endereço
+será utilizado para o controle das peças
+"boas".
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo( "SBE", M->AA1_LOCAL + M->AA1_LOCLZB )</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sbe.html">SBE</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_LIBOSV</td>
+<td>Libera OS</td>
+<td colspan="2">Pode liberar Ord Servico</td>
+<td colspan="4">Funcionário com direito de Liberar OS
+para efeito do seu fechamento ?
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("01")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>0=Nao;1=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>AA1_LOCLZR</td>
+<td>Ender. Ruins</td>
+<td colspan="2">Localizacao pecas ruins.</td>
+<td colspan="4">Código do Endereço para controle de
+estoque em poder do atendente.
+Este Endereço será utilizado para
+controlar peças substituídas que
+apresentarem defeito.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo( "SBE", M->AA1_LOCAL + M->AA1_LOCLZR )</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sbe.html">SBE</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_LOCLZF</td>
+<td>Ender.  Fat.</td>
+<td colspan="2">Loc.pecas faturamento</td>
+<td colspan="4">Código de Endereço para controle de
+peças em poder de atendentes.
+Indica o Endereço que será passado ao
+pedido de venda para baixa de materiais.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo( "SBE", M->AA1_LOCAL + M->AA1_LOCLZF )</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sbe.html">SBE</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_DULTES</td>
+<td>Ult Escala</td>
+<td colspan="2">Data da Ultima Escala</td>
+<td colspan="4">Data da ultima escala de trabalho do
+produtivo, antes da atual.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_CULTES</td>
+<td>Cod Ult Esc</td>
+<td colspan="2">Codigo da Ultima Escala</td>
+<td colspan="4">Código da última escala de trabalho do
+produtivo, antes da atual.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_DATUES</td>
+<td>Escala Atual</td>
+<td colspan="2">Data Atual da Escala</td>
+<td colspan="4">Data inicial da escala de trabalho em
+que o produtivo se encontra agora.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>DataValida()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_CATUES</td>
+<td>Cd Esc Atual</td>
+<td colspan="2">Codigo Atual da Escala</td>
+<td colspan="4">Código da escala de trabalho em que o
+produtivo se encontra agora.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>FG_Seek("VOH",M->AA1_CATUESC,1,.f.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/voh.html">VOH</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_REQPEC</td>
+<td>Func Req Pec</td>
+<td colspan="2">Func Requisita Pecas</td>
+<td colspan="4">Indica se o funcionário pode requisitar
+peças.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("01")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>0=Nao;1=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>AA1_DATADM</td>
+<td>Dt Admissao</td>
+<td colspan="2">Data da Admissao</td>
+<td colspan="4">Data da Admissão.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_PERQTD</td>
+<td>Al.Qtd.Sup.</td>
+<td colspan="2">Aloca Qtd. Sup.</td>
+<td colspan="4">Preencher com Permite a realização de
+alocação superior ao definido na
+proposta.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_DATDEM</td>
+<td>Dt Demissao</td>
+<td colspan="2">Data da Demissao</td>
+<td colspan="4">Data da Demissão.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_CODVEN</td>
+<td>Cod Vendedor</td>
+<td colspan="2">Cod no cad de vendedor</td>
+<td colspan="4">Código do funcionário como Vendedor ?
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td>ExistCpo("SA3")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sa3.html">SA3</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>AA1_NOMUSU</td>
+<td>Nome Usuario</td>
+<td colspan="2">Nome do Usuario</td>
+<td colspan="4">Nome do Usuário.
+</td>
+<td>C</td>
+<td>25</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>AA1_TIPO</td>
+<td>Tipo</td>
+<td colspan="2">Tipo de atendente</td>
+<td colspan="4">Indica a modalidade de atuação do
+atendente.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("123")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Field Service;2=Help Desk;3=Ambos</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>AA1_CODUSR</td>
+<td>Cod. Usuario</td>
+<td colspan="2">Codigo do usuario</td>
+<td colspan="4">Código do usuário Microsiga associado ao
+atendente.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>UsrExist(M->AA1_CODUSR).and.at020ValUs()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/usr.html">USR</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_CONTRB</td>
+<td>Controla Trb</td>
+<td colspan="2">Controla Trabalho</td>
+<td colspan="4">Parâmetro para exigir (SIM) que o
+produtivo esteja apontado na OS (com
+hora aberta) para poder requisitar
+peças, caso contrário, não fará esta
+checagem, permitindo a requisição sem o
+apontamento.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("01")</td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>0=Nao;1=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_TIPVEN</td>
+<td>Tp Vendedor</td>
+<td colspan="2">Tipo de Vendedor</td>
+<td colspan="4">Tipo do vendedor: Consultor técnico,
+Vend. balcão, Vend. atacado
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .or. Pertence("012")</td>
+<td>" "</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>0=Consultor Tecnico;1=Vend. Balcao;2=Vend. Atacado</td>
+<td>M->AA1_FUNPRO=="0"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_ALOCA</td>
+<td>Alocacao</td>
+<td colspan="2">Alocacao-disponibilidade</td>
+<td colspan="4">Indica se o atendente está ou não
+disponível para alocação. Este campo
+é informado pelo usuário.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Disponivel;2=Indisponivel</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>AA1_CODFOR</td>
+<td>Fornecedor</td>
+<td colspan="2">Atendente como Fornecedor</td>
+<td colspan="4">Código do atendente como fornecedor para
+integração com o módulo financeiro.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. ExistCpo("SA2",M->AA1_CODFOR)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/for.html">FOR</a></td>
+<td><a href="/tabelas_protheus/gatilhos/aa1_codfor.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_LOJFOR</td>
+<td>Loja</td>
+<td colspan="2">Loja do Atendente</td>
+<td colspan="4">Código da Loja para o fornecedor
+informado.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SA2",M->AA1_CODFOR+M->AA1_LOJFOR)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/aa1_lojfor.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_NOMFOR</td>
+<td>Nome</td>
+<td colspan="2">Nome do Fornecedor</td>
+<td colspan="4">Nome do fornecedor.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!INCLUI,Posicione("SA2",1,xFilial("SA2")+AA1->AA1_CODFOR+AA1->AA1_LOJFOR,"A2_NOME")," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("SA2",1,xFilial("SA2")+AA1->AA1_CODFOR+AA1->AA1_LOJFOR,"A2_NOME")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_ACESSO</td>
+<td>Acesso Linha</td>
+<td colspan="2">Acesso a linha telefonica</td>
+<td colspan="4">Prefixo a ser adicionado ao número
+discado no discador do Help Desk.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_VISTOR</td>
+<td>Vistoriador?</td>
+<td colspan="2">Vistoriador?</td>
+<td colspan="4">Indica se o atendente tem perfil de
+vistoriador para realizar a vistoria
+técnica.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_VISVLR</td>
+<td>Vis.Valores</td>
+<td colspan="2">Visualizar Valores</td>
+<td colspan="4">Permite  o vistoriador visualizar os
+campos de valores dos produtos e
+acessórios.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_VISPRO</td>
+<td>Vis.Proposta</td>
+<td colspan="2">Visualizar Proposta</td>
+<td colspan="4">Permite o vistoriador visualizar a
+proposta comercial.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_IMPPRO</td>
+<td>Imp.Proposta</td>
+<td colspan="2">Importar Proposta</td>
+<td colspan="4">Permite o Vistoriador importar a
+proposta comercial para vistoria
+técnica.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_CATEGO</td>
+<td>Categoria</td>
+<td colspan="2">Categoria de Produtos</td>
+<td colspan="4">Permite o vistoriador acessar a rotina
+de categoria de produtos.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_ALTVIS</td>
+<td>Alt.Vist.Res</td>
+<td colspan="2">Altera Vist. Responsável</td>
+<td colspan="4">Permite alterar o vistoriador
+responsável pela vistoria técnica.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_FTVIST</td>
+<td>Filtrar Vist</td>
+<td colspan="2">Filtrar Vistoria por Vist</td>
+<td colspan="4">Permite que o vistoriador acesse somente
+suas vistorias (Vistoriador), do grupo
+que pertence (Grupo) ou acessar todas as
+vistorias (Todas).
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("123")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Vistoriador;2=Todas;3=Grupo</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_CRMSIM</td>
+<td>Simulador</td>
+<td colspan="2">CRM Simulador</td>
+<td colspan="4">Permite o vistoriador acessar a rotina
+CRM Simulador.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_FUNFIL</td>
+<td>Filial Func</td>
+<td colspan="2">Filial Funcionario</td>
+<td colspan="4">Filial do funcionario através da tabela
+SRA
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td>At020VldFu(FwfldGet("AA1_CDFUNC"),FwfldGet("AA1_FUNFIL"))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_MPONTO</td>
+<td>Marca Ponto</td>
+<td colspan="2">Marca Ponto Eletronico</td>
+<td colspan="4">Indica se Funcionario marca ponto
+eletronico.
+1 = Sim; Marca Ponto Eletronico através
+do Relegio.
+2= Não; Não marca Ponto Eletronico
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12") .AND. If (FindFunction("At020VLMarc") ,At020VLMarc(),.T.)</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_VINCUL</td>
+<td>Vinculo Empr</td>
+<td colspan="2">Vinculo empregaticio</td>
+<td colspan="4">Tipo de vinculo empregatício
+estabelecido com o Funcionário. Esse
+recurso visa a elaboração dos relatórios
+Gesp
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("123456789")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Vigilante;2=Supervisor;3=Instrutor;4=Gerente/Diretor;5=Socio;6=Socio/Ger./Diretor;7=Acionista;8=Proprietario;9=Outros</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_RSPMNT</td>
+<td>Resp. Manut?</td>
+<td colspan="2">Responsavel Manutenção</td>
+<td colspan="4">Indica se o atendente será responsavel
+para fazer manutenções nos armamentos.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_EXTVIG</td>
+<td>Extens.Vigil</td>
+<td colspan="2">'Extensao do vigilante'</td>
+<td colspan="4">Tipo de extensão do curso que o
+Vigilante realizou e fundamental para
+exercer a profissão. Esse recurso visa a
+elaboração dos relatórios Gesp
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("1234")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=TV;2=SPP;3=TV/SPP;4=SPP/TV</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_RSPTRA</td>
+<td>Resp. Transp</td>
+<td colspan="2">Responsavel Transporte</td>
+<td colspan="4">Indica se o atendente é responsavél pelo
+tansporte de armamentos
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_CNV</td>
+<td>CNV</td>
+<td colspan="2">Numero da CNV</td>
+<td colspan="4">Numero da CNV(Carteira Nacional do
+Vigilante)
+</td>
+<td>C</td>
+<td>7</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_NREDUZ</td>
+<td>Login Mobile</td>
+<td colspan="2">Login Aplicativo Mobile</td>
+<td colspan="4">Informe o Login do atendente para o
+aplicativo móvel uMov.me para integração
+com entrega/montagem.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_SENHA</td>
+<td>Senha Mobile</td>
+<td colspan="2">Senha Aplicativo Mobile</td>
+<td colspan="4">Informe a Senha do atendente para o
+aplicativo móvel uMov.me para integração
+com entrega/montagem.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AA1_TIPMAR</td>
+<td>Tipo Marc.</td>
+<td colspan="2">Tipo de Marcação</td>
+<td colspan="4">Tipo de Marcação
+1 = Agenda
+2 = Funcionário
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Agenda;2=Funcion�rio</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>AA1_SUPERV</td>
+<td>Supervisor?</td>
+<td colspan="2">Supervisor?</td>
+<td colspan="4">Informe se o atendente é supervisor
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>ABF</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">ABF_CODTEC</td>
+</tr>
+<tr>
+<td>ABC</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">ABC_CODTEC</td>
+</tr>
+<tr>
+<td>AAT</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">AAT_VISTOR</td>
+</tr>
+<tr>
+<td>ADE</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">ADE_TECNIC</td>
+</tr>
+<tr>
+<td>TIT</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">TIT_CODTEC</td>
+</tr>
+<tr>
+<td>TIT</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">TIT_CODRES</td>
+</tr>
+<tr>
+<td>T46</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">T46_CODTEC</td>
+</tr>
+<tr>
+<td>TIW</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">TIW_CODTEC</td>
+</tr>
+<tr>
+<td>TIW</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">TIW_CODRES</td>
+</tr>
+<tr>
+<td>ABL</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">ABL_CODTEC</td>
+</tr>
+<tr>
+<td>ABL</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">ABL_PRXTEC</td>
+</tr>
+<tr>
+<td>ABB</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">ABB_CODTEC</td>
+</tr>
+<tr>
+<td>VO3</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">VO3_FUNFEC</td>
+</tr>
+<tr>
+<td>VO3</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">VO3_PROREQ</td>
+</tr>
+<tr>
+<td>AAZ</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">AAZ_CODTEC</td>
+</tr>
+<tr>
+<td>ABU</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">ABU_CODTEC</td>
+</tr>
+<tr>
+<td>TGZ</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">TGZ_ATEND</td>
+</tr>
+<tr>
+<td>TFQ</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">TFQ_RESTRA</td>
+</tr>
+<tr>
+<td>AB9</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">AB9_CODTEC</td>
+</tr>
+<tr>
+<td>ABK</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">ABK_CODTEC</td>
+</tr>
+<tr>
+<td>AAY</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">AAY_CODTEC</td>
+</tr>
+<tr>
+<td>TGQ</td>
+<td colspan="2">AA1_FILIAL+AA1_CODTEC</td>
+<td colspan="2">TGQ_FILIAL+TGQ_CODATE</td>
+</tr>
+<tr>
+<td>AA3</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">AA3_CODTEC</td>
+</tr>
+<tr>
+<td>TFR</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">TFR_CODTEC</td>
+</tr>
+<tr>
+<td>TGY</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">TGY_ATEND</td>
+</tr>
+<tr>
+<td>T47</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">T47_CODTEC</td>
+</tr>
+<tr>
+<td>TDU</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">TDU_CODTEC</td>
+</tr>
+<tr>
+<td>TW2</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">TW2_CODTEC</td>
+</tr>
+<tr>
+<td>AI3</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">AI3_CODTEC</td>
+</tr>
+<tr>
+<td>ABG</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">ABG_CODTEC</td>
+</tr>
+<tr>
+<td>ABR</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">ABR_CODSUB</td>
+</tr>
+<tr>
+<td>TGS</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">TGS_SUPERV</td>
+</tr>
+<tr>
+<td>TFN</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">TFN_CODIGO</td>
+</tr>
+<tr>
+<td>ABJ</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">ABJ_CODTEC</td>
+</tr>
+<tr>
+<td>VOE</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">VOE_CODPRO</td>
+</tr>
+<tr>
+<td>VO4</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">VO4_FUNFEC</td>
+</tr>
+<tr>
+<td>VOC</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">VOC_CODPRO</td>
+</tr>
+<tr>
+<td>VOW</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">VOW_CODPRO</td>
+</tr>
+<tr>
+<td>VO4</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">VO4_CODPRO</td>
+</tr>
+<tr>
+<td>TE5</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">TE5_ATEND</td>
+</tr>
+<tr>
+<td>AA2</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">AA2_CODTEC</td>
+</tr>
+<tr>
+<td>TXI</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">TXI_CODTEC</td>
+</tr>
+<tr>
+<td>TXB</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">TXB_CODTEC</td>
+</tr>
+<tr>
+<td>TXC</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">TXC_CODTEC</td>
+</tr>
+<tr>
+<td>TW0</td>
+<td colspan="2">AA1_CODTEC</td>
+<td colspan="2">TW0_ATEND</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

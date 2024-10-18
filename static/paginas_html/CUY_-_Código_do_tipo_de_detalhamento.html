@@ -1,0 +1,447 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: CUY - Código do tipo de detalhamento</title></head>
+<body>
+<font color="orange"><h2 id="CUY">Tabela: CUY - Código do tipo de detalhamento</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Código do tipo de detalhamento</b></td><td colspan="2"><b>CUY_FILIAL+CUY_ID</b></td><td><b>TAFA309</b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">CUY_FILIAL+CUY_ID</td><td>ID</td><td></td></tr>
+<tr><td>2</td><td colspan="2">CUY_FILIAL+CUY_CODIGO+DTOS(CUY_DTINI)+DTOS(CUY_DTFIN)</td><td>Código Det + Dt. Ini Vld. + Dt Final Vld</td><td></td></tr>
+<tr><td>3</td><td colspan="2">CUY_FILIAL+CUY_DESCRI</td><td>Desc Detal</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>CUY_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Deve representar neste campo o código da
+filial referente ao cadastro.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CUY_ID</td>
+<td>ID</td>
+<td colspan="2">Identificador do Registro</td>
+<td colspan="4">Deve representar neste campo o código de
+identificação do registro. Este código é
+controlado internamente pelo sistema de
+forma incremental e único por filial.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>GetSx8Num("CUY","CUY_ID")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CUY_CODIGO</td>
+<td>Código Det</td>
+<td colspan="2">Código Detalhamento</td>
+<td colspan="4">Deve representar neste campo o Código do
+tipo de detalhamento, conforme Tabelas
+7.1.1 e/ou 7.1.2
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>XFUNVldUni("CUY",2, M->CUY_CODIGO+DTOS(FWFLDGET("CUY_DTINI"))+DTOS(FWFLDGET("CUY_DTFIN")))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CUY_DESCRI</td>
+<td>Desc Detal</td>
+<td colspan="2">Descrição Detalhamento</td>
+<td colspan="4">Deve representar neste campo o a
+descrição do Código do tipo de
+detalhamento, conforme Tabelas 7.1.1
+e/ou 7.1.2
+</td>
+<td>C</td>
+<td>220</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CUY_DTINI</td>
+<td>Dt. Ini Vld.</td>
+<td colspan="2">Data inicial da validade</td>
+<td colspan="4">Deve representar neste campo a data de
+início de vigência das informações.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>XFUNVldUni("CUY",2, FWFLDGET("CUY_CODIGO")+DTOS(M->CUY_DTINI)+DTOS(FWFLDGET("CUY_DTFIN")))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CUY_DTFIN</td>
+<td>Dt Final Vld</td>
+<td colspan="2">Data final da validade</td>
+<td colspan="4">Deve representar neste campo a data
+final de vigência das informações.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>XFUNVldUni("CUY",2, FWFLDGET("CUY_CODIGO")+DTOS(FWFLDGET("CUY_DTINI"))+DTOS(M->CUY_DTFIN))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CUY_INDATV</td>
+<td>Ind. Ativ.</td>
+<td colspan="2">Indicador Atividade</td>
+<td colspan="4">Deve representar neste campo o indicador
+de operações realizadas no período:
+01 – Exclusivamente operações de
+Instituições Financeiras e Assemelhadas
+02 – Exclusivamente operações de Seguros
+Privados
+03 – Exclusivamente operações de
+Previdência Complementar
+04 – Exclusivamente operações de
+Capitalização
+05 – Exclusivamente operações de Planos
+de Assistência à Saúde
+06 – Realizou operações referentes a
+mais de um dos indicadores acima
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>XFUNVldCmp("CA0",,,,2,)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ca0.html">CA0</a></td>
+<td><a href="/tabelas_protheus/gatilhos/cuy_indatv.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CUY_DINDAT</td>
+<td>Des. Indic.</td>
+<td colspan="2">Descrição Indicador</td>
+<td colspan="4">Deve representar neste campo a descrição
+do Indicador de atividade
+</td>
+<td>C</td>
+<td>220</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI.AND.!EMPTY(CUY->CUY_INDATV),Posicione("CA0",1,xFilial("CA0")+CUY->CUY_INDATV,"CA0_CODIGO+' � '+CA0_DESCRI"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CUY_INDAJU</td>
+<td>Ind. Ajuste</td>
+<td colspan="2">Indicador Ajuste</td>
+<td colspan="4">Deve representar neste campo o indicador
+de ajuste
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CUY_CODGRU</td>
+<td>Cod Grupo</td>
+<td colspan="2">Código Grupo</td>
+<td colspan="4">Deve representar neste campo o código do
+grupo
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CUY_SUBGRU</td>
+<td>Sub Grupo</td>
+<td colspan="2">Sub Grupo</td>
+<td colspan="4">Deve representar neste campo o codigo do
+subgrupo
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CUY_INDOUT</td>
+<td>Ind. Outro</td>
+<td colspan="2">Indicador de Outros</td>
+<td colspan="4">Deve representar neste campo o Indicador
+de Outros
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>CA7</td>
+<td colspan="2">CUY_ID</td>
+<td colspan="2">CA7_CODCOM</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

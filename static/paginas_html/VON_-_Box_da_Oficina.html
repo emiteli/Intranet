@@ -1,0 +1,791 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: VON - Box da Oficina</title></head>
+<body>
+<font color="orange"><h2 id="VON">Tabela: VON - Box da Oficina</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Box da Oficina</b></td><td colspan="2"><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">VON_FILIAL+VON_NUMBOX</td><td>Nro do Box</td><td></td></tr>
+<tr><td>2</td><td colspan="2">VON_FILIAL+VON_CODSEC+VON_NUMBOX</td><td>Sec Oficina + Nro do Box</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>VON_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Filial
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VON_NUMBOX</td>
+<td>Nro do Box</td>
+<td colspan="2">Numero do Box</td>
+<td colspan="4">Número do Box
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@E 999                                       </td>
+<td>FG_STRZERO("M->VON_NUMBOX",3).And.ExistChav("VON",,,)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VON_CODSEC</td>
+<td>Sec Oficina</td>
+<td colspan="2">Secao da Oficina</td>
+<td colspan="4">Seção da Oficina
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!S3                                         </td>
+<td>FG_Seek("VOD","M->VON_CODSEC",1,.f.,"VON_DESSEC","VOD_DESSEC")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/vod.html">VOD</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VON_DESSEC</td>
+<td>Descricao</td>
+<td colspan="2">Descricao Secao Oficina</td>
+<td colspan="4">Descrição Seção Oficina
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!S20                                        </td>
+<td></td>
+<td>if(!Inclui,Posicione("VOD",1,xFilial("VOD")+VON->VON_CODSEC,"VOD_DESSEC"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("VOD",1,xFilial("VOD")+VON->VON_CODSEC,"VOD_DESSEC")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VON_NOVBOX</td>
+<td>Novo Box</td>
+<td colspan="2">Numero do NOVO Box</td>
+<td colspan="4">Número do Novo Box
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@E 999                                       </td>
+<td>FS_NOVBOX(2)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/box.html">BOX</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VON_DATABE</td>
+<td>Dt Abertura</td>
+<td colspan="2">Data da Abertura da OS</td>
+<td colspan="4">Data da Abertura da Ordem de Servico.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>@D                                           </td>
+<td></td>
+<td>VO1->VO1_DATABE</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VON_HORABE</td>
+<td>Hr Abertura</td>
+<td colspan="2">Hora da Abertura da OS</td>
+<td colspan="4">Hora da Abertura da Ordem de Servico.
+</td>
+<td>N</td>
+<td>4</td>
+<td>0</td>
+<td>@R 99:99                                     </td>
+<td></td>
+<td>VO1->VO1_HORABE</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VON_DATENT</td>
+<td>Dt Prev Entr</td>
+<td colspan="2">Data Previsao de Entrega</td>
+<td colspan="4">Data Previsao de Entrega
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>@D                                           </td>
+<td></td>
+<td>VO1->VO1_DATENT</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VON_HORENT</td>
+<td>Hr Prev Entr</td>
+<td colspan="2">Hora Previsao de Entrega</td>
+<td colspan="4">Hora Previsao de Entrega.
+</td>
+<td>N</td>
+<td>4</td>
+<td>0</td>
+<td>@R 99:99                                     </td>
+<td></td>
+<td>VO1->VO1_HORENT</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VON_KILOME</td>
+<td>Kilometragem</td>
+<td colspan="2">Kilometragem</td>
+<td colspan="4">Kilometragem.
+</td>
+<td>N</td>
+<td>8</td>
+<td>0</td>
+<td>@E 99,999,999                                </td>
+<td></td>
+<td>VO1->VO1_KILOME</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VON_DESMAR</td>
+<td>Marca</td>
+<td colspan="2">Marca</td>
+<td colspan="4">Descrição da Marca.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!S30                                        </td>
+<td></td>
+<td>If(FG_SEEK("VV1","VO1->VO1_CHAINT",1,.f.),Posicione("VE1",1,xFilial("VE1")+VV1->VV1_CODMAR,"VE1_DESMAR"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VON_DESMOD</td>
+<td>Modelo</td>
+<td colspan="2">Modelo</td>
+<td colspan="4">Descrição do Modelo.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!S30                                        </td>
+<td></td>
+<td>Posicione("VV2",1,xFilial("VV2")+VV1->VV1_CODMAR+VV1->VV1_MODVEI,"VV2_DESMOD")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VON_CHASSI</td>
+<td>Chassi</td>
+<td colspan="2">Chassi do Veiculo</td>
+<td colspan="4">Chassi do Veiculo.
+</td>
+<td>C</td>
+<td>25</td>
+<td>0</td>
+<td>@!S25                                        </td>
+<td></td>
+<td>VV1->VV1_CHASSI</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VON_PLAVEI</td>
+<td>Placa</td>
+<td colspan="2">Placa do Veiculo</td>
+<td colspan="4">Placa do Veiculo.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@R! AAA-!!!!!!!                              </td>
+<td></td>
+<td>VV1->VV1_PLAVEI</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VON_CODFRO</td>
+<td>Cod Frota</td>
+<td colspan="2">Codigo da Frota</td>
+<td colspan="4">Código da Frota.
+</td>
+<td>C</td>
+<td>7</td>
+<td>0</td>
+<td>@!S6                                         </td>
+<td></td>
+<td>VV1->VV1_CODFRO</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VON_PROVEI</td>
+<td>Proprietario</td>
+<td colspan="2">Proprietario do Veiculo</td>
+<td colspan="4">Proprietario do Veiculo.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>VO1->VO1_PROVEI</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VON_LJPVEI</td>
+<td>Loja Pro Vei</td>
+<td colspan="2">Loja do Proprietario</td>
+<td colspan="4">Loja do Proprietario.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>VO1->VO1_LOJPRO</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VON_NOMPRO</td>
+<td>Nome Propr</td>
+<td colspan="2">Nome do Proprietario</td>
+<td colspan="4">Nome do Proprietario.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!S20                                        </td>
+<td></td>
+<td>Posicione("SA1",1,xFilial("SA1")+VO1->VO1_PROVEI+VO1->VO1_LOJPRO,"A1_NOME")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VON_ENDPRO</td>
+<td>End Propr</td>
+<td colspan="2">Endereco do Proprietario</td>
+<td colspan="4">Endereço do Proprietario.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!S30                                        </td>
+<td></td>
+<td>SA1->A1_END</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VON_CIDPRO</td>
+<td>Cidade</td>
+<td colspan="2">Cidade</td>
+<td colspan="4">Cidade.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!S20                                        </td>
+<td></td>
+<td>POSICIONE("VAM",1,SA1->A1_IBGE,"VAM_DESCID")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VON_ESTPRO</td>
+<td>UF</td>
+<td colspan="2">Estado</td>
+<td colspan="4">Estado do Proprietario.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>POSICIONE("VAM",1,SA1->A1_IBGE,"VAM_ESTADO")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/010.html">010</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VON_FONPRO</td>
+<td>Telefone</td>
+<td colspan="2">Telefone</td>
+<td colspan="4">Telefone do Proprietario.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!S8                                         </td>
+<td></td>
+<td>SA1->A1_TEL</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VON_DATSAI</td>
+<td>Data Saida</td>
+<td colspan="2">Data da Saida do Veiculo</td>
+<td colspan="4">Data da Saida do Veiculo.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>@D                                           </td>
+<td></td>
+<td>date()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VON_HORSAI</td>
+<td>Hora Saida</td>
+<td colspan="2">Hora da Saida do Veiculo</td>
+<td colspan="4">Hora da Saida do Veiculo.
+</td>
+<td>N</td>
+<td>4</td>
+<td>0</td>
+<td>@R 99:99                                     </td>
+<td></td>
+<td>val(left(time(),2)+substr(time(),4,2))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VON_CODPRO</td>
+<td>Cod Produt</td>
+<td colspan="2">Codigo do produtivo</td>
+<td colspan="4">Informe o código do produtivo.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/vai.html">VAI</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>VAI</td>
+<td colspan="2">VON_NUMBOX</td>
+<td colspan="2">VAI_BOXAGE</td>
+</tr>
+<tr>
+<td>VSO</td>
+<td colspan="2">VON_NUMBOX</td>
+<td colspan="2">VSO_NUMBOX</td>
+</tr>
+<tr>
+<td>VO1</td>
+<td colspan="2">VON_NUMBOX</td>
+<td colspan="2">VO1_NUMBOX</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

@@ -1,0 +1,467 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: TOB - Ordens de Serviço INSS</title></head>
+<body>
+<font color="orange"><h2 id="TOB">Tabela: TOB - Ordens de Serviço INSS</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Ordens de Serviço INSS</b></td><td colspan="2"><b>TOB_FILIAL+TOB_CODFUN+TOB_CC+TOB_DEPTO</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">TOB_FILIAL+TOB_CODFUN+TOB_CC+TOB_DEPTO</td><td>Funcao + Centro Custo + Departamento</td><td></td></tr>
+<tr><td>2</td><td colspan="2">TOB_FILIAL+TOB_CC+TOB_DEPTO+TOB_CODFUN</td><td>Centro Custo + Departamento + Funcao</td><td></td></tr>
+<tr><td>3</td><td colspan="2">TOB_FILIAL+TOB_CODRES+TOB_CODFUN</td><td>Responsavel + Funcao</td><td></td></tr>
+<tr><td>4</td><td colspan="2">TOB_FILIAL+TOB_TERMO</td><td>Termo Resp.</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>TOB_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Codigo da filial da empresa.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TOB_CODFUN</td>
+<td>Funcao</td>
+<td colspan="2">Codigo da Funcao</td>
+<td colspan="4">Codigo da função.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO("SRJ",M->TOB_CODFUN)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/srj.html">SRJ</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tob_codfun.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TOB_NOMFUN</td>
+<td>Nome Funcao</td>
+<td colspan="2">Nome da Funcao</td>
+<td colspan="4">Nome da função.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>SRJ->(VDISP(TOB->TOB_CODFUN,"RJ_DESC"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>IF(SRJ->(DBSEEK(xFILIAL("SRJ")+TOB->TOB_CODFUN)),SRJ->RJ_DESC,"")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TOB_CC</td>
+<td>Centro Custo</td>
+<td colspan="2">Centro de Custo</td>
+<td colspan="4">Codigo do Centro de Custo.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>IF(VAZIO(),.T.,CTB105CC()) .AND. EXISTCHAV("TOB",M->TOB_CODFUN+M->TOB_CC)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ctt.html">CTT</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tob_cc.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/004.html">004</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TOB_DESCC</td>
+<td>Nome C.Custo</td>
+<td colspan="2">Nome do Centro de Custo</td>
+<td colspan="4">Nome do Centro de Custo.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>SI3->(VDISP(TOB->TOB_CC,"I3_DESC"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>IF(SI3->(DBSEEK(xFILIAL("SI3")+TOB->TOB_CC)),SI3->I3_DESC,"")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TOB_DEPTO</td>
+<td>Departamento</td>
+<td colspan="2">Codigo Departamento</td>
+<td colspan="4">Indica o código do Departamento.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>MDTA305Val( 2 )</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/mdtsqb.html">MDTSQB</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/025.html">025</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TOB_TEXTO</td>
+<td>Detalhe OS.</td>
+<td colspan="2">Detalhe Ordem de Servico</td>
+<td colspan="4">Detalhe da ordem de serviço.
+</td>
+<td>M</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TOB_TERMO</td>
+<td>Termo Resp.</td>
+<td colspan="2">Termo de Responsabilidade</td>
+<td colspan="4">Termo de responsabilidade.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>IF(EMPTY(M->TOB_TERMO),.T.,EXISTCPO("TMZ",M->TOB_TERMO))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tmz.html">TMZ</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TOB_CODRES</td>
+<td>Responsavel</td>
+<td colspan="2">Cod. Usuario Responsavel</td>
+<td colspan="4">Codigo do usuário responsável.
+</td>
+<td>C</td>
+<td>12</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>IF(EMPTY(M->TOB_CODRES),.T.,EXISTCPO("TMK",M->TOB_CODRES))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tmk.html">TMK</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tob_codres.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TOB_NOMRES</td>
+<td>Nome Resp.</td>
+<td colspan="2">Nome  Usuario Responsavel</td>
+<td colspan="4">Nome do usuário responsável.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>TMK->(VDISP(TOB->TOB_CODRES,"TMK_NOMUSU"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>IF(TMK->(DBSEEK(xFILIAL("TMK")+TOB->TOB_CODRES)),TMK->TMK_NOMUSU," ")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TOB_DTELAB</td>
+<td>Data Elab.</td>
+<td colspan="2">Data de Elaboracao</td>
+<td colspan="4">Data de elaboração.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TOB_DTREVI</td>
+<td>Ult. Revisao</td>
+<td colspan="2">Data da Ultima Revisao</td>
+<td colspan="4">Data da última revisão.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>MDT305VDTR(2)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TOB_DOCFIL</td>
+<td>Filial Docto</td>
+<td colspan="2">Filial Documentacao</td>
+<td colspan="4">Filial do documento.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TOB_DOCTO</td>
+<td>Docto</td>
+<td colspan="2">Documentacao Ord. Serv.</td>
+<td colspan="4">Documentação da ordem de serviço. A
+documentação é cadastrada no módulo de
+?Controle de Documentos? (SIGAQDO) no
+programa de cadastro de documentos.
+Teclando-se F3 obtêm-se a lista de
+documentos existentes que podem ser
+relacionados à ordem de serviço.
+</td>
+<td>C</td>
+<td>16</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO("QDH",M->TOB_DOCTO)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

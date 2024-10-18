@@ -1,0 +1,966 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: TMV - Param Gerar Convocação Exames</title></head>
+<body>
+<font color="orange"><h2 id="TMV">Tabela: TMV - Param Gerar Convocação Exames</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Param Gerar Convocação Exames</b></td><td colspan="2"><b>TMV_FILIAL+TMV_PCMSO+TMV_CONVOC+TMV_CODUSU</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">TMV_FILIAL+TMV_PCMSO+TMV_CONVOC+TMV_CODUSU</td><td>PCMSO + Convocacao + Medico</td><td></td></tr>
+<tr><td>2</td><td colspan="2">TMV_FILIAL+TMV_CODUSU+TMV_CONVOC</td><td>Medico + Convocacao</td><td></td></tr>
+<tr><td>3</td><td colspan="2">TMV_FILIAL+TMV_CODUSU+TMV_PCMSO+TMV_CONVOC</td><td>Medico + PCMSO + Convocacao</td><td></td></tr>
+<tr><td>4</td><td colspan="2">TMV_FILIAL+TMV_CALEND</td><td>Calendario</td><td></td></tr>
+<tr><td>5</td><td colspan="2">TMV_FILIAL+TMV_CC</td><td>Centro Custo</td><td></td></tr>
+<tr><td>6</td><td colspan="2">TMV_FILIAL+TMV_CODFUN</td><td>Funcao</td><td></td></tr>
+<tr><td>7</td><td colspan="2">TMV_FILIAL+TMV_EXAME+TMV_PCMSO+TMV_CONVOC</td><td>Exame + PCMSO + Convocacao</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>TMV_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Numero da Filial</td>
+<td colspan="4">Número da filial a que se refere o
+PCMSO. Campo alimentado automaticamente
+pelo módulo de Medicina e Segurança do
+Trabalho com base no campo Filial.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMV_PCMSO</td>
+<td>PCMSO</td>
+<td colspan="2">Numero do PCMSO</td>
+<td colspan="4">Número que identifica o PCMSO, podendo
+ser um número sequencial ou o próprio
+ano corrente. Ex. 1999. Pressione as
+teclas [Enter] + [F3] para selecionar um
+PCMSO.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO("TMW",M->TMV_PCMSO) .AND. NEXTCONVOC()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tmw.html">TMW</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>!IsInCallStack('NG195MTI')</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TMV_CONVOC</td>
+<td>Convocacao</td>
+<td colspan="2">Numero da Convocacao</td>
+<td colspan="4">Número sequencial da convocação dentro
+do PCMSO especificado. Campo alimentado
+automaticamente pelo módulo de Medicina
+e Segurança do Trabalho com base na
+especificação do PCMSO.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>9999                                         </td>
+<td>EXISTCHAV("TMV",M->TMV_PCMSO+M->TMV_CONVOC)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TMV_DTINPR</td>
+<td>Inic. Progr.</td>
+<td colspan="2">Data de Inicio Programaca</td>
+<td colspan="4">Data de início da programação. A partir
+de qual programa irá convocar os
+funcionários.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>MDTA195DTP()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TMV_DTFIPR</td>
+<td>Term. Progr.</td>
+<td colspan="2">Data de Termino Programac</td>
+<td colspan="4">Data de término da programação, limite
+de data para a qual será considerado os
+funcionários para a convocação.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>MDTA195DTP()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TMV_CODUSU</td>
+<td>Medico</td>
+<td colspan="2">Codigo do Medico</td>
+<td colspan="4">Código do médico usuário do sistema para
+o qual o sistema irá gerar a atualização
+da agenda com funcionários convocados.
+Pressione as teclas [Enter]+[F3] para
+selecionar um atendente.
+</td>
+<td>C</td>
+<td>12</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO("TMK",M->TMV_CODUSU).AND. CHKAGENDA()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tmk.html">TMK</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tmv_codusu.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TMV_NOMUSU</td>
+<td>Nome</td>
+<td colspan="2">Nome do Usuario</td>
+<td colspan="4">Nome da Usuário. Campo alimentado
+automaticamente pelo módulo de Medicina
+e Segurança do Trabalho com base no
+campo Médico.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>TMK->(VDISP(TMV->TMV_CODUSU,"TMK_NOMUSU"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMV_DTINRE</td>
+<td>Início Real.</td>
+<td colspan="2">Data Incio Realizacao</td>
+<td colspan="4">Data de início da realização dos exames
+para os funcionários convocados.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>MDT195DTRL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TMV_DTFIRE</td>
+<td>Term. Real.</td>
+<td colspan="2">Data Final Realizacao</td>
+<td colspan="4">Data de término da realização dos
+exames. Esta é uma data limite. Se a
+quantidade de funcionários convocados
+ultrapassar esta data o sistema irá
+alertar o médico que deverá realizar
+nova convocação.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>MDT195DTRL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TMV_EXAME</td>
+<td>Exame</td>
+<td colspan="2">Codigo do Exame Periodico</td>
+<td colspan="4">Código do Exame periódico que os
+funcionários deverão realizar. Pressione
+as teclas [Enter]+[F3] para selecionar
+um Exame.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO("TM4",M->TMV_EXAME)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tm4.html">TM4</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tmv_exame.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>(Type('lMultInc') <> 'L' .or. !lMultInc)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/048.html">048</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TMV_NOMEXA</td>
+<td>Nome Exame</td>
+<td colspan="2">Nome do Exame</td>
+<td colspan="4">Nome do Exame Médico. Campo alimentado
+automaticamente pelo módulo de Medicina
+e Segurança do Trabalho com base no
+campo Exame.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>TM4->(VDISP(TMV->TMV_EXAME,"TM4_NOMEXA"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>If(TM4->(dBSEEK(xFilial("TM4")+TMV->TMV_EXAME)),TM4->TM4_NOMEXA,"")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMV_CC</td>
+<td>Centro Custo</td>
+<td colspan="2">Codigo do centro de custo</td>
+<td colspan="4">Centro de custo desejado, ou deixar em
+branco para convocar funcionários de
+qualquer centro de custo. Pressione as
+teclas [Enter]+[F3] para selecionar um
+Centro de Custo.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>IF(VAZIO(),.T.,CTB105CC())</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ctt.html">CTT</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/004.html">004</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMV_CODFUN</td>
+<td>Funcao</td>
+<td colspan="2">Codigo da Funcao</td>
+<td colspan="4">Código da Função desejada, ou deixar em
+branco para convocar funcionários de
+qualquer função. Pressione as teclas
+[Enter]+[F3] para selecionar uma Função.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>IF(VAZIO(),.T.,EXISTCPO("SRJ",M->TMV_CODFUN))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/srj.html">SRJ</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMV_CALEND</td>
+<td>Calendario</td>
+<td colspan="2">Codigo do  Calendario</td>
+<td colspan="4">Código do calendário de trabalho do
+médico. Pressione as teclas [Enter]+[F3]
+para selecionar um Calendário.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO("SH7",M->TMV_CALEND)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sh7.html">SH7</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TMV_QTATEN</td>
+<td>Tempo (min.)</td>
+<td colspan="2">Tempo Adendimento (minut)</td>
+<td colspan="4">Tempo para atendimento de um funcionário
+(informar em minutos).
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td>NAOVAZIO() .And. MDTA195TEM()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TMV_MOTIVO</td>
+<td>Motivo</td>
+<td colspan="2">Codigo do Motivo Consulta</td>
+<td colspan="4">Código do Motivo. Pressione as teclas
+[Enter]+[F3] para selecionar um Motivo.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO("TMS",M->TMV_MOTIVO)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tms.html">TMS</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tmv_motivo.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TMV_NOMOTI</td>
+<td>Descricao</td>
+<td colspan="2">Descricao do Motivo</td>
+<td colspan="4">Nome do Motivo para consulta Médica.
+Campo alimentado automaticamente pelo
+módulo de Medicina e Segurança do
+Trabalho com base no campo Motivo.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>TMS->(VDISP(TMV->TMV_MOTIVO,"TMS_NOMOTI"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMV_TNOTRA</td>
+<td>Turno</td>
+<td colspan="2">Codigo do Turno Trabalho</td>
+<td colspan="4">Código do Turno desejado, ou deixar em
+branco para convocar funcionários de
+qualquer turno. Pressione as teclas
+[Enter]+[F3] para selecionar um Turno.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO("SR6",M->TMV_TNOTRA)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sr6.html">SR6</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMV_LOCAL</td>
+<td>Local Exame</td>
+<td colspan="2">Local do Exame</td>
+<td colspan="4">Descrição do local onde será realizado
+os exames.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMV_TIPODT</td>
+<td>Dt. Prevista</td>
+<td colspan="2">Dt. Prevista</td>
+<td colspan="4">Indica se a convocação será gerada para
+a mesma data da programação,
+considerando também o calendário do
+médico.
+Exemplo: Se o exame está programado para
+o dia 5/Jan/2008 (sábado) e o médico não
+tem agenda aos sábados, a consulta será
+agendada para o dia 7/Jan/2008
+(segunda-feira).
+Opções: 1-Sim / 2-Não
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>'2'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMV_DTEXC1</td>
+<td>Dt.Excecao1</td>
+<td colspan="2">Data Excecao Calendarrio</td>
+<td colspan="4">Data exceção do calendário, indica a
+data que o médico não deseja marcar
+consultas através da geração da
+convocação.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>MDT195DTEX(M->TMV_DTEXC1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMV_DTEXC2</td>
+<td>Dt.Excecao2</td>
+<td colspan="2">Data Excecao Calendarrio</td>
+<td colspan="4">Data exceção do calendário, indica a
+data que o médico não deseja marcar
+consultas através da geração da
+convocação.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>MDT195DTEX(M->TMV_DTEXC2)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMV_DTEXC3</td>
+<td>Dt.Excecao3</td>
+<td colspan="2">Data Excecao Calendarrio</td>
+<td colspan="4">Data exceção do calendário, indica a
+data que o médico não deseja marcar
+consultas através da geração da
+convocação.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>MDT195DTEX(M->TMV_DTEXC3)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMV_DTEXC4</td>
+<td>Dt.Excecao4</td>
+<td colspan="2">Data Excecao Calendarrio</td>
+<td colspan="4">Data exceção do calendário, indica a
+data que o médico não deseja marcar
+consultas através da geração da
+convocação.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>MDT195DTEX(M->TMV_DTEXC4)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMV_DTEXC5</td>
+<td>Dt.Excecao5</td>
+<td colspan="2">Data Excecao Calendarrio</td>
+<td colspan="4">Data exceção do calendário, indica a
+data que o médico não deseja marcar
+consultas através da geração da
+convocação.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>MDT195DTEX(M->TMV_DTEXC5)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMV_DTEXC6</td>
+<td>Dt.Excecao6</td>
+<td colspan="2">Data Excecao Calendarrio</td>
+<td colspan="4">Data exceção do calendário, indica a
+data que o médico não deseja marcar
+consultas através da geração da
+convocação.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>MDT195DTEX(M->TMV_DTEXC6)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMV_FILDE</td>
+<td>De Filial</td>
+<td colspan="2">De Filial</td>
+<td colspan="4">Código da primeira filial considerada na
+convocação de exames.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td>MDT195FLVL(1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/xm0.html">XM0</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMV_FILATE</td>
+<td>Ate Filial</td>
+<td colspan="2">Ate Filial</td>
+<td colspan="4">Código da última filial considerada na
+convocação de exames.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td>MDT195FLVL(2)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/xm0.html">XM0</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMV_USERGI</td>
+<td>Log de Inclu</td>
+<td colspan="2">Log de Inclusão</td>
+<td colspan="4">Indica código criptografado do usuário
+de inclusão do registro.
+</td>
+<td>C</td>
+<td>17</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

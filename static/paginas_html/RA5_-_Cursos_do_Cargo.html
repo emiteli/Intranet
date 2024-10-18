@@ -1,0 +1,423 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: RA5 - Cursos do Cargo</title></head>
+<body>
+<font color="orange"><h2 id="RA5">Tabela: RA5 - Cursos do Cargo</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Cursos do Cargo</b></td><td colspan="2"><b>RA5_FILIAL+RA5_CARGO+RA5_CC+RA5_CURSO</b></td><td><b>TRMM040</b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">RA5_FILIAL+RA5_CARGO+RA5_CURSO</td><td>Cod.Cargo + Cod.Curso</td><td></td></tr>
+<tr><td>2</td><td colspan="2">RA5_FILIAL+RA5_CARGO+RA5_CC+RA5_CURSO</td><td>Cod.Cargo + Centro Custo + Cod.Curso</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>RA5_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Neste campo deve ser digitado:
+Código que identifica a filial da
+empresa usuária do sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RA5_CARGO</td>
+<td>Cod.Cargo</td>
+<td colspan="2">Codigo do Cargo</td>
+<td colspan="4">Neste campo deve ser digitado:
+Código do cargo.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sq3.html">SQ3</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td>#RA5_CARGO <>'     '</td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RA5_CURSO</td>
+<td>Cod.Curso</td>
+<td colspan="2">Codigo do Curso</td>
+<td colspan="4">Neste campo deve ser digitado:
+Código do curso que o cargo
+necessita.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>9999                                         </td>
+<td>NaoVazio() .And. ExistCpo("RA1") .And. fTr020Desc("RA1","RA5_DESCCU",,.F.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ra1.html">RA1</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td>#RA5_CURSO <>'    '</td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RA5_DESCCU</td>
+<td>Desc.Curso</td>
+<td colspan="2">Descricao do Curso</td>
+<td colspan="4">Neste campo deve ser digitado:
+A descriç„o do curso no cargo.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>fTr020Desc("RA1","RA5_DESCCU","RA5_CURSO",.T.)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RA5_HORAS</td>
+<td>Horas Minim.</td>
+<td colspan="2">Horas Minimas</td>
+<td colspan="4">Neste campo deve ser digitado:
+Horas mínima do curso que o cargo
+necessita.
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>999.99                                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RA5_VALIDA</td>
+<td>Dias Valid.</td>
+<td colspan="2">Dias de Validade</td>
+<td colspan="4">Neste campo deve ser digitado:
+Validade do curso para o cargo.
+</td>
+<td>N</td>
+<td>7</td>
+<td>2</td>
+<td>9999.99                                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RA5_NOTA</td>
+<td>Nota Minima</td>
+<td colspan="2">Nota Minima</td>
+<td colspan="4">Neste campo deve ser digitado:
+Nota mínima do curso que o cargo
+necessita.
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>999.99                                       </td>
+<td>M->RA5_NOTA <= 100.00</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RA5_FREQUE</td>
+<td>%Freq.Minima</td>
+<td colspan="2">% Frequencia Minima</td>
+<td colspan="4">Neste campo deve ser digitado:
+Frequencia mínima do curso que o
+cargonecessita.
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>999.99                                       </td>
+<td>M->RA5_FREQUE <= 100.00</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RA5_PRIORI</td>
+<td>Prioriodade</td>
+<td colspan="2">Prioridade</td>
+<td colspan="4">Neste campo deve ser digitado:
+Prioridade do curso para este
+cargo.    Ex.: "01"
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>99                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RA5_UNPRIO</td>
+<td>Und.Priorid.</td>
+<td colspan="2">Unidade da Prioridade</td>
+<td colspan="4">Neste campo deve ser digitado:
+Unidade da prioridade deste curso
+parao cargo.
+Ex.: "M"- Mes
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>existcpo("SX5","R5"+M->RA5_UNPRIO)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/r5.html">R5</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RA5_EFICAC</td>
+<td>Eficac.Min.</td>
+<td colspan="2">Eficacia Minima</td>
+<td colspan="4">Nesse campo deve ser digitado:
+Nota de Eficácia Mínima necessária para
+o Curso.
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>999.99                                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RA5_CC</td>
+<td>Centro Custo</td>
+<td colspan="2">Cod. Centro de Custo</td>
+<td colspan="4">Informe Centro de Custo.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. Ctb105CC()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ctt.html">CTT</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/004.html">004</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

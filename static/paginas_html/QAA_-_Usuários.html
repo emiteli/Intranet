@@ -1,0 +1,1592 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: QAA - Usuários</title></head>
+<body>
+<font color="orange"><h2 id="QAA">Tabela: QAA - Usuários</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Usuários</b></td><td colspan="2"><b>QAA_FILIAL+QAA_MAT</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">QAA_FILIAL+QAA_MAT</td><td>Codigo</td><td></td></tr>
+<tr><td>2</td><td colspan="2">QAA_FILIAL+QAA_CC+QAA_MAT</td><td>Codigo Depto + Codigo</td><td></td></tr>
+<tr><td>3</td><td colspan="2">QAA_FILIAL+QAA_NOME+QAA_MAT</td><td>Nome + Codigo</td><td></td></tr>
+<tr><td>4</td><td colspan="2">QAA_FILIAL+QAA_CODFUN</td><td>Cod. Funcao</td><td></td></tr>
+<tr><td>5</td><td colspan="2">QAA_FILIAL+QAA_CC+QAA_NOME</td><td>Codigo Depto + Nome</td><td></td></tr>
+<tr><td>6</td><td colspan="2">QAA_LOGIN</td><td>Login Usr.</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>QAA_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Filial do Sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QAA_TPUSR</td>
+<td>Tipo Usuario</td>
+<td colspan="2">Tipo de Usuario</td>
+<td colspan="4">Neste campo deve ser digitado:
+Tipo de Usuário do Sistema:
+1 - Funcionario
+2 - Outros
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>If(!GetlIntGPE(),"1","2")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Funcionario;2=Outros</td>
+<td>!GetlAltUsr().And.Inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>QAA_MAT</td>
+<td>Codigo</td>
+<td colspan="2">Codigo do Usuario</td>
+<td colspan="4">Neste campo deve ser digitado:
+Código identificador do Usuário no
+sistema.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@9                                           </td>
+<td>NaoVazio() .And. EXISTCHAV("QAA") .And. Val(M->QAA_MAT) > 0 .And. QX10VldEmp(GetlIntGPE()) .And. FreeForUse("QAA",M->QAA_MAT)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>Inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>QAA_NOME</td>
+<td>Nome</td>
+<td colspan="2">Nome do Usuario</td>
+<td colspan="4">Neste campo deve ser digitado:
+Nome completo do Usuário.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Texto() .And. FHIST()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>!GetlAltUsr() .Or. Inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>QAA_APELID</td>
+<td>Nome Reduzid</td>
+<td colspan="2">Nome Reduzido do Usuario</td>
+<td colspan="4">Neste campo deve ser digitado:
+Nome resumido do Usuário, utilizado em
+alguns relatorios.
+</td>
+<td>C</td>
+<td>25</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>GetlAltUsr() .Or. Inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>QAA_CC</td>
+<td>Codigo Depto</td>
+<td colspan="2">Codigo do Departamento</td>
+<td colspan="4">Neste campo deve ser digitado:
+Código do Departamento do Usuário.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO("QAD") .And. FHIST()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/qad.html">QAD</a></td>
+<td><a href="/tabelas_protheus/gatilhos/qaa_cc.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>Inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>QAA_DESCCC</td>
+<td>Descr.Depto</td>
+<td colspan="2">Descricao do Departamento</td>
+<td colspan="4">Indica a descricao do departamento
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!inclui,fDesc("QAD",QAA->QAA_CC,"QAD_DESC"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QAA_CODFUN</td>
+<td>Cod. Funcao</td>
+<td colspan="2">Codigo da Funcao</td>
+<td colspan="4">Neste campo deve ser digitado:
+Codido da Função do Usuário.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("QAC")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/qac.html">QAC</a></td>
+<td><a href="/tabelas_protheus/gatilhos/qaa_codfun.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>!GetlAltUsr() .Or. Inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>QAA_DESCFU</td>
+<td>Desc.Funcao</td>
+<td colspan="2">Descricao da Funcao</td>
+<td colspan="4">Descricao do Funcao do Usuario
+cadastrado.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!inclui,fDesc("QAC",QAA->QAA_CODFUNC,"QAC_DESC"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QAA_INICIO</td>
+<td>Data Inicio</td>
+<td colspan="2">Data Inicial Usuario</td>
+<td colspan="4">Neste campo deve ser digitado:
+Data de Inclusão do Usuário.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>NaoVazio()</td>
+<td>CTOD("")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>Inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>QAA_FIM</td>
+<td>Data Fim</td>
+<td colspan="2">Data Final Usuario</td>
+<td colspan="4">Neste campo deve ser digitado:
+Data de Inativação do Usuário.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>QX10VDtFim()</td>
+<td>CTOD("")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>!GetlAltUsr().And.!Inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QAA_LOGIN</td>
+<td>Login Usr.</td>
+<td colspan="2">Login do Usuario</td>
+<td colspan="4">Neste campo deve ser digitado:
+Login do Usuário, deve ser igual o
+Apelido cadastrado no configurador.
+</td>
+<td>C</td>
+<td>25</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>QA010VRCFG()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/qus.html">QUS</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QAA_STATUS</td>
+<td>Status Usr.</td>
+<td colspan="2">Status do Usuario</td>
+<td colspan="4">Neste campo deve ser digitado:
+Situação do Usuário
+1 - Ativo
+2 - Inativo
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Ativo;2=Inativo</td>
+<td>!GetlAltUsr().And.!Inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QAA_RECMAI</td>
+<td>Receb E-Mail</td>
+<td colspan="2">Usuario Recebe E-Mail</td>
+<td colspan="4">Neste campo deve ser digitado:
+Usuário Recebe e-mail ?
+1 - Sim
+2 - Não
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td>Inclui .OR. Altera</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QAA_TPMAIL</td>
+<td>Tipo E-Mail</td>
+<td colspan="2">Tipo Recebimento E-Mail</td>
+<td colspan="4">Neste campo deve ser digitado:
+Tipo do recebimento de e-Mail ?
+1 - Html
+2 - Texto
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Html;2=Texto</td>
+<td>!GetlAltUsr() .Or. Inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QAA_EMAIL</td>
+<td>End. E-Mail</td>
+<td colspan="2">Endereco do E-Mail</td>
+<td colspan="4">Neste campo deve ser digitado:
+e-Mail do Usuário.
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>!GetlAltUsr() .Or. Inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QAA_DISTSN</td>
+<td>Distrib.Doc.</td>
+<td colspan="2">Distribuidor Sim/Nao</td>
+<td colspan="4">Neste campo deve ser digitado:
+Usuário Distribuidor de Documentos ?
+1 - Sim
+2 - Não
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QAA_TPRCBT</td>
+<td>TP Recebim.</td>
+<td colspan="2">Tipo de Recebimento Docto</td>
+<td colspan="4">Neste campo deve ser digitado:
+Tipo de Recebimento do Documento?
+1 - Copias Eletronicas
+2 - Copias em Papel
+3 - Ambos
+4 - Não Recebe
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("1234")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Copias Eletronicas;2=Copias em Papel;3=Ambos;4=Nao Recebe</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QAA_TPWORD</td>
+<td>Tipo Word</td>
+<td colspan="2">Tipo de Visualizacao Word</td>
+<td colspan="4">Neste campo deve ser digitado:
+Tipo de Visualização para Documentos em
+etapa de Leitura.
+1 - Html
+2 - Word
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("123")</td>
+<td>"3"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Html;2=WordView;3=Ms Word</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QAA_RECFNC</td>
+<td>Receb FNC</td>
+<td colspan="2">Usuario Recebe FNC</td>
+<td colspan="4">Campo define se o usuario pode receber
+fichas de Nao Conformidade em seu nome.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("SN")</td>
+<td>"S"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>S=Sim;N=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QAA_NIVEL</td>
+<td>Nivel Usr.</td>
+<td colspan="2">Nivel do Usuario</td>
+<td colspan="4">Define qual o nivel do usuario.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QAA_AUDIT</td>
+<td>Auditor</td>
+<td colspan="2">Auditor</td>
+<td colspan="4">Define se o usuario e um auditor. 1=Sim
+e 2=Nao.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QAA_FONE</td>
+<td>Fone</td>
+<td colspan="2">Fone</td>
+<td colspan="4">Informe o numero do telefone
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@S15                                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QAA_FAX</td>
+<td>Fax</td>
+<td colspan="2">Fax</td>
+<td colspan="4">Informe o Numero de Fax.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@S15                                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QAA_RG</td>
+<td>R.G.</td>
+<td colspan="2">RG - REGISTRO GERAL</td>
+<td colspan="4">Indica o RG - REGISTRO GERAL
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>FHIST()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>QAA_PARTIC</td>
+<td>Cod. Partic</td>
+<td colspan="2">Codigo do Particip.</td>
+<td colspan="4">Codigo do Participante.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .And. ExistCpo('RD0',M->QAA_PARTIC)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/rd0.html">RD0</a></td>
+<td><a href="/tabelas_protheus/gatilhos/qaa_partic.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>INCLUI .OR. IF(ALTERA .AND. EMPTY(QAA->QAA_PARTIC),.T.,.F.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QAA_DESCPA</td>
+<td>Nome  Partic</td>
+<td colspan="2">Nome Participante</td>
+<td colspan="4">Nome do Participante
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,Posicione('RD0',1,xFilial('RD0')+QAA->QAA_PARTIC,'RD0_NOME'),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione('RD0',1,xFilial('RD0')+QAA->QAA_PARTIC,'RD0_NOME')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QAA_RECUR</td>
+<td>Cod. Recurso</td>
+<td colspan="2">Codigo do Recurso</td>
+<td colspan="4">Codigo do Recurso.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .And. ExistCpo('AE8',M->QAA_RECUR)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ae8.html">AE8</a></td>
+<td><a href="/tabelas_protheus/gatilhos/qaa_recur.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>INCLUI .OR. IF(ALTERA .AND. EMPTY(QAA->QAA_RECUR),.T.,.F.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QAA_DESCRE</td>
+<td>Desc. Recurs</td>
+<td colspan="2">Descricao do Recurso</td>
+<td colspan="4">Descrição do Recurso
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,Posicione('AE8',1,xFilial('AE8')+QAA->QAA_RECUR,'AE8_DESCRI'),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione('AE8',1,xFilial('AE8')+QAA->QAA_RECUR,'AE8_DESCRI')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QAA_OPERAD</td>
+<td>Cod. Operado</td>
+<td colspan="2">Codigo do Operador</td>
+<td colspan="4">Codigo do Operador
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo('SU7',M->QAA_OPERAD)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/su7.html">SU7</a></td>
+<td><a href="/tabelas_protheus/gatilhos/qaa_operad.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>INCLUI .OR. IF(ALTERA .AND. EMPTY(QAA->QAA_OPERAD),.T.,.F.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QAA_DESCOP</td>
+<td>Nome Operado</td>
+<td colspan="2">Nome Operador</td>
+<td colspan="4">Nome do Operador
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,Posicione('SU7',1,xFilial('SU7')+QAA->QAA_OPERAD,'U7_NOME'),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione('SU7',1,xFilial('SU7')+QAA->QAA_OPERAD,'U7_NOME')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QAA_OFFLIN</td>
+<td>Off Line ?</td>
+<td colspan="2">Usuario Off Line ?</td>
+<td colspan="4">Informe se o colaborador/recurso esta
+ausente - conceito off-line.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('12')</td>
+<td>'2'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim; 2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QAA_SITQNC</td>
+<td>Situacao Usr</td>
+<td colspan="2">Situação Usuario</td>
+<td colspan="4">1=Ativo sem lanc. pendentes
+2=Ativo com lanc. pendentes
+3=Inativo sem lanc. pendentes
+4=Inativo com lanc. pendentes
+</td>
+<td>N</td>
+<td>1</td>
+<td>0</td>
+<td>9                                            </td>
+<td></td>
+<td>1</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=Normal, s/ lan�amentos pend.;2=Normal, c/ lan�amentos pend.;3=Inativo, s/ lan�amentos pend.;4= Inativo, c/ lan�amentos pend.</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>TF6</td>
+<td colspan="2">QAA_MAT</td>
+<td colspan="2">TF6_MAT</td>
+</tr>
+<tr>
+<td>TFB</td>
+<td colspan="2">QAA_MAT</td>
+<td colspan="2">TFB_MAT</td>
+</tr>
+<tr>
+<td>TDE</td>
+<td colspan="2">QAA_MAT</td>
+<td colspan="2">TDE_MAT</td>
+</tr>
+<tr>
+<td>TC9</td>
+<td colspan="2">QAA_MAT</td>
+<td colspan="2">TC9_CODRES</td>
+</tr>
+<tr>
+<td>TBP</td>
+<td colspan="2">QAA_MAT</td>
+<td colspan="2">TBP_CODPAR</td>
+</tr>
+<tr>
+<td>QDZ</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QDZ_FILMAT+QDZ_MAT</td>
+</tr>
+<tr>
+<td>TBB</td>
+<td colspan="2">QAA_MAT</td>
+<td colspan="2">TBB_ELABOR</td>
+</tr>
+<tr>
+<td>TBB</td>
+<td colspan="2">QAA_MAT</td>
+<td colspan="2">TBB_RESPON</td>
+</tr>
+<tr>
+<td>TAZ</td>
+<td colspan="2">QAA_MAT</td>
+<td colspan="2">TAZ_RESPON</td>
+</tr>
+<tr>
+<td>QER</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QER_FILMAT+QER_ENSR</td>
+</tr>
+<tr>
+<td>QKV</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QKV_FILRES+QKV_RESPOR</td>
+</tr>
+<tr>
+<td>QKX</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QKX_FILRES+QKX_RESPOR</td>
+</tr>
+<tr>
+<td>QAG</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QAG_FILMAT+QAG_MAT</td>
+</tr>
+<tr>
+<td>QDP</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QDP_FILMAT+QDP_MAT</td>
+</tr>
+<tr>
+<td>QDP</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QDP_FMATBX+QDP_MATBX</td>
+</tr>
+<tr>
+<td>QDU</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QDU_FILMAT+QDU_MAT</td>
+</tr>
+<tr>
+<td>QDU</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QDU_FMATBX+QDU_MATBX</td>
+</tr>
+<tr>
+<td>QM1</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QM1_FILRES+QM1_RDISTR</td>
+</tr>
+<tr>
+<td>QP5</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QP5_FILMAT+QP5_RESPON</td>
+</tr>
+<tr>
+<td>QM6</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QM6_FILRES+QM6_RESP</td>
+</tr>
+<tr>
+<td>QUH</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QUH_FILMAT+QUH_CODAUD</td>
+</tr>
+<tr>
+<td>QD1</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QD1_FILMAT+QD1_MAT</td>
+</tr>
+<tr>
+<td>QD4</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QD4_FILMAT+QD4_MAT</td>
+</tr>
+<tr>
+<td>QD7</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QD7_FILMAT+QD7_MAT</td>
+</tr>
+<tr>
+<td>QKY</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QKY_FILRES+QKY_RESP1</td>
+</tr>
+<tr>
+<td>QKY</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QKY_FILRES+QKY_RESP2</td>
+</tr>
+<tr>
+<td>QKY</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QKY_FILRES+QKY_RESP3</td>
+</tr>
+<tr>
+<td>QKX</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QKX_FILRES+QKX_RESP</td>
+</tr>
+<tr>
+<td>QKV</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QKV_FILRES+QKV_RESP</td>
+</tr>
+<tr>
+<td>TH1</td>
+<td colspan="2">QAA_MAT</td>
+<td colspan="2">TH1_RESPON</td>
+</tr>
+<tr>
+<td>QKW</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QKW_FILRES+QKW_RESPOR</td>
+</tr>
+<tr>
+<td>QF3</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QF3_FILMAT+QF3_MAT</td>
+</tr>
+<tr>
+<td>QD8</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QD8_FILMAT+QD8_MAT</td>
+</tr>
+<tr>
+<td>QMU</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QMU_FILRES+QMU_RESP</td>
+</tr>
+<tr>
+<td>QKG</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QKG_FILRES+QKG_RESP</td>
+</tr>
+<tr>
+<td>QKW</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QKW_FILRES+QKW_RESP</td>
+</tr>
+<tr>
+<td>QK6</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QK6_FILRES+QK6_CODRES</td>
+</tr>
+<tr>
+<td>TCK</td>
+<td colspan="2">QAA_MAT</td>
+<td colspan="2">TCK_RESPON</td>
+</tr>
+<tr>
+<td>QAF</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QAF_FILMAT+QAF_MAT</td>
+</tr>
+<tr>
+<td>QDF</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QDF_FILANT+QDF_MATANT</td>
+</tr>
+<tr>
+<td>QDF</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QDF_FILNOV+QDF_MATNOV</td>
+</tr>
+<tr>
+<td>QDF</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QDF_FILOP+QDF_MATOP</td>
+</tr>
+<tr>
+<td>QDN</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QDN_FILMAT+QDN_MAT</td>
+</tr>
+<tr>
+<td>QDS</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QDS_FILMAT+QDS_MAT</td>
+</tr>
+<tr>
+<td>QDS</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QDS_FMATBX+QDS_MATBX</td>
+</tr>
+<tr>
+<td>QI3</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QI3_FILMAT+QI3_MAT</td>
+</tr>
+<tr>
+<td>QIF</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QIF_FILMAT+QIF_MAT</td>
+</tr>
+<tr>
+<td>QUA</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QUA_FILMAT+QUA_MAT</td>
+</tr>
+<tr>
+<td>QUB</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QUB_FILMAT+QUB_AUDLID</td>
+</tr>
+<tr>
+<td>TCO</td>
+<td colspan="2">QAA_MAT</td>
+<td colspan="2">TCO_CODRES</td>
+</tr>
+<tr>
+<td>QUM</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QUM_FILMAT+QUM_CODAUD</td>
+</tr>
+<tr>
+<td>TAA</td>
+<td colspan="2">QAA_MAT</td>
+<td colspan="2">TAA_MAT</td>
+</tr>
+<tr>
+<td>TAF</td>
+<td colspan="2">QAA_MAT</td>
+<td colspan="2">TAF_MAT</td>
+</tr>
+<tr>
+<td>QKI</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QKI_FILMAT+QKI_MAT</td>
+</tr>
+<tr>
+<td>TC5</td>
+<td colspan="2">QAA_MAT</td>
+<td colspan="2">TC5_CODMAT</td>
+</tr>
+<tr>
+<td>TBQ</td>
+<td colspan="2">QAA_MAT</td>
+<td colspan="2">TBQ_USUARI</td>
+</tr>
+<tr>
+<td>TBX</td>
+<td colspan="2">QAA_MAT</td>
+<td colspan="2">TBX_MAT</td>
+</tr>
+<tr>
+<td>TI0</td>
+<td colspan="2">QAA_MAT</td>
+<td colspan="2">TI0_CODRES</td>
+</tr>
+<tr>
+<td>TI0</td>
+<td colspan="2">QAA_MAT</td>
+<td colspan="2">TI0_CODSUE</td>
+</tr>
+<tr>
+<td>TI0</td>
+<td colspan="2">QAA_MAT</td>
+<td colspan="2">TI0_CODSUP</td>
+</tr>
+<tr>
+<td>TI0</td>
+<td colspan="2">QAA_MAT</td>
+<td colspan="2">TI0_CODVIG</td>
+</tr>
+<tr>
+<td>TF0</td>
+<td colspan="2">QAA_MAT</td>
+<td colspan="2">TF0_RESPEX</td>
+</tr>
+<tr>
+<td>TAK</td>
+<td colspan="2">QAA_MAT</td>
+<td colspan="2">TAK_MAT</td>
+</tr>
+<tr>
+<td>QK8</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QK8_FILRES+QK8_CODRES</td>
+</tr>
+<tr>
+<td>TBH</td>
+<td colspan="2">QAA_MAT</td>
+<td colspan="2">TBH_RESPON</td>
+</tr>
+<tr>
+<td>QI2</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QI2_FILRES+QI2_MATRES</td>
+</tr>
+<tr>
+<td>QI2</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QI2_FILMAT+QI2_MAT</td>
+</tr>
+<tr>
+<td>QI5</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QI5_FILMAT+QI5_MAT</td>
+</tr>
+<tr>
+<td>QM5</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QM5_FILRES+QM5_ENSR</td>
+</tr>
+<tr>
+<td>QUD</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QUD_FILMAT+QUD_CODAUD</td>
+</tr>
+<tr>
+<td>QDG</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QDG_FILMAT+QDG_MAT</td>
+</tr>
+<tr>
+<td>QME</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QME_FILRES+QME_RESP</td>
+</tr>
+<tr>
+<td>TBR</td>
+<td colspan="2">QAA_MAT</td>
+<td colspan="2">TBR_USUARI</td>
+</tr>
+<tr>
+<td>TBV</td>
+<td colspan="2">QAA_MAT</td>
+<td colspan="2">TBV_RESPON</td>
+</tr>
+<tr>
+<td>QPR</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QPR_FILMAT+QPR_ENSR</td>
+</tr>
+<tr>
+<td>QD0</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QD0_FILMAT+QD0_MAT</td>
+</tr>
+<tr>
+<td>QKR</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QKR_FILRES+QKR_RESP</td>
+</tr>
+<tr>
+<td>QKR</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QKR_FILRES+QKR_RESPOR</td>
+</tr>
+<tr>
+<td>QKT</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QKT_FILRES+QKT_RESP</td>
+</tr>
+<tr>
+<td>QKT</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QKT_FILRES+QKT_RESPOR</td>
+</tr>
+<tr>
+<td>QKU</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QKU_FILRES+QKU_RESP</td>
+</tr>
+<tr>
+<td>QKU</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QKU_FILRES+QKU_RESPOR</td>
+</tr>
+<tr>
+<td>QMZ</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QMZ_FILVEN+QMZ_VENDED</td>
+</tr>
+<tr>
+<td>QMZ</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QMZ_FILRES+QMZ_RESP</td>
+</tr>
+<tr>
+<td>QMD</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QMD_FILRES+QMD_RESP</td>
+</tr>
+<tr>
+<td>TDI</td>
+<td colspan="2">QAA_MAT</td>
+<td colspan="2">TDI_RESPEX</td>
+</tr>
+<tr>
+<td>TCG</td>
+<td colspan="2">QAA_MAT</td>
+<td colspan="2">TCG_CODRES</td>
+</tr>
+<tr>
+<td>TB0</td>
+<td colspan="2">QAA_MAT</td>
+<td colspan="2">TB0_RESPON</td>
+</tr>
+<tr>
+<td>IC2</td>
+<td colspan="2">QAA_MAT</td>
+<td colspan="2">IC2_MAT</td>
+</tr>
+<tr>
+<td>QKP</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QKP_FILMAT+QKP_MAT</td>
+</tr>
+<tr>
+<td>QD9</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QD9_FILMAT+QD9_MAT</td>
+</tr>
+<tr>
+<td>QD9</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QD9_FILDES+QD9_DESMAT</td>
+</tr>
+<tr>
+<td>QKQ</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QKQ_FILRES+QKQ_RESP</td>
+</tr>
+<tr>
+<td>QKQ</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QKQ_FILRES+QKQ_RESPOR</td>
+</tr>
+<tr>
+<td>QKS</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QKS_FILRES+QKS_RESP</td>
+</tr>
+<tr>
+<td>QKS</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QKS_FILRES+QKS_RESPOR</td>
+</tr>
+<tr>
+<td>QF2</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QF2_FILQLD+QF2_MATQLD</td>
+</tr>
+<tr>
+<td>QF2</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QF2_FILMAT+QF2_MAT</td>
+</tr>
+<tr>
+<td>QAE</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QAE_FILMAT+QAE_MAT</td>
+</tr>
+<tr>
+<td>QDE</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QDE_FILDES+QDE_MATDES</td>
+</tr>
+<tr>
+<td>QDE</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QDE_FILSOL+QDE_MATSOL</td>
+</tr>
+<tr>
+<td>QKE</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QKE_FILMAT+QKE_MAT</td>
+</tr>
+<tr>
+<td>QDH</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QDH_FILMAT+QDH_MAT</td>
+</tr>
+<tr>
+<td>QI4</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QI4_FILMAT+QI4_MAT</td>
+</tr>
+<tr>
+<td>QIE</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QIE_FILMAT+QIE_MAT</td>
+</tr>
+<tr>
+<td>QM2</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QM2_FILRES+QM2_RESP</td>
+</tr>
+<tr>
+<td>QUC</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QUC_FILMAT+QUC_CODAUD</td>
+</tr>
+<tr>
+<td>QML</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QML_FILREL+QML_RESCOL</td>
+</tr>
+<tr>
+<td>QML</td>
+<td colspan="2">QAA_FILIAL+QAA_MAT</td>
+<td colspan="2">QML_FILRET+QML_RESRET</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

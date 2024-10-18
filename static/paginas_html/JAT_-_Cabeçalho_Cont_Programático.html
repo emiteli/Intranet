@@ -1,0 +1,492 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: JAT - Cabeçalho Cont Programático</title></head>
+<body>
+<font color="orange"><h2 id="JAT">Tabela: JAT - Cabeçalho Cont Programático</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Cabeçalho Cont Programático</b></td><td colspan="2"><b>JAT_FILIAL+JAT_CODCUR+JAT_PERLET+JAT_HABILI+JAT_CODDIS+JAT_TURMA+JAT_SUBTUR</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">JAT_FILIAL+JAT_CODCUR+JAT_PERLET+JAT_HABILI+JAT_CODDIS+JAT_TURMA+JAT_SUBTUR</td><td>Cod.Curso + Per. Letivo + Habilitacao + Cod. Discip + Turma + Sub Turm</td><td></td></tr>
+<tr><td>2</td><td colspan="2">JAT_FILIAL+JAT_CODCUR+JAT_PERLET+JAT_HABILI+JAT_TURMA</td><td>Cod.Curso + Per. Letivo + Habilitacao + Turma</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>JAT_FILIAL</td>
+<td>FILIAL</td>
+<td colspan="2">Filial</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JAT_CODCUR</td>
+<td>Cod.Curso</td>
+<td colspan="2">Codigo do Curso</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/jlb.html">JLB</a></td>
+<td><a href="/tabelas_protheus/gatilhos/jat_codcur.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>A420AtuEdit()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JAT_DCURSO</td>
+<td>Desc. Curso</td>
+<td colspan="2">Descricao do Curso</td>
+<td colspan="4">Informe a Descrição do Ano Letivo.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui, "", Posicione("JAH",1,xFilial("JAH")+JAT->JAT_CODCUR,"JAH_DESC"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("JAH",1,xFilial("JAH")+JAT->JAT_CODCUR,"JAH_DESC")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JAT_ANOLET</td>
+<td>Ano Letivo</td>
+<td colspan="2">Ano Letivo</td>
+<td colspan="4">Informe o Ano Letivo.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>9999                                         </td>
+<td></td>
+<td>Iif(Inclui, "", Posicione("JAR",1,xFilial("JAR")+JAT->JAT_CODCUR+JAT->JAT_PERLET+JAT->JAT_HABILI,"JAR_ANOLET"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Ac450InBrw("JAT_ANOLET")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JAT_PERLET</td>
+<td>Per. Letivo</td>
+<td colspan="2">Serie</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td></td>
+<td>Iif(Inclui, "", Posicione("JBL",1,xFilial("JBL")+JAT->JAT_CODCUR,"JBL_PERLET"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("JBL",1,xFilial("JBL")+JAT->JAT_CODCUR,"JBL_PERLET")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JAT_HABILI</td>
+<td>Habilitacao</td>
+<td colspan="2">Codigo da Habilitacao</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/jdk.html">JDK</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JAT_DHABIL</td>
+<td>Descricao</td>
+<td colspan="2">Descricao da Habilitacao</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(INCLUI,"",Posicione("JDK",1,xFilial("JDK")+JAT->JAT_HABILI,"JDK_DESC"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("JDK",1,xFilial("JDK") + JAT->JAT_HABILI,"JDK_DESC")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JAT_TURNO</td>
+<td>Turno</td>
+<td colspan="2">Turno</td>
+<td colspan="4">Informe o Turno
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui, "", Posicione("JAH",1,xFilial("JAH")+JAT->JAT_CODCUR,"JAH_TURNO"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("JAH",1,xFilial("JAH")+JAT->JAT_CODCUR,"JAH_TURNO")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JAT_DTURNO</td>
+<td>Desc. Turno</td>
+<td colspan="2">Desc. Turno</td>
+<td colspan="4">Informe a Descrição do Turno.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui, "", Tabela("F5",Posicione("JAH",1,xFilial("JAH")+JAT->JAT_CODCUR,"JAH_TURNO"),.F.))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Tabela("F5", Posicione("JAH",1,xFilial("JAH")+JAT->JAT_CODCUR,"JAH_TURNO"),.F.)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JAT_TURMA</td>
+<td>Turma</td>
+<td colspan="2">Turma</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui, "", Posicione("JBL",1,xFilial("JBL")+JAT->JAT_CODCUR+JAT_PERLET,"JBL_TURMA"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("JBL",1,xFilial("JBL")+JAT->JAT_CODCUR+JAT_PERLET,"JBL_TURMA")</td>
+<td><a href="/tabelas_protheus/grupocampo/021.html">021</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JAT_CODDIS</td>
+<td>Cod. Discip</td>
+<td colspan="2">Disciplina</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GEExistCpo("JAE",M->JAT_CODDIS)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/jgd.html">JGD</a></td>
+<td><a href="/tabelas_protheus/gatilhos/jat_coddis.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JAT_DDISCI</td>
+<td>Desc. Disc.</td>
+<td colspan="2">Descricao</td>
+<td colspan="4">Informe a Descrição da Disciplina.
+</td>
+<td>C</td>
+<td>100</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui, "", Posicione("JAE",1,xFilial("JAE")+JAT->(JAT_CODDIS),"JAE_DESC"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("JAE",1,xFilial("JAE")+JAT->JAT_CODDIS,"JAE_DESC")</td>
+<td><a href="/tabelas_protheus/grupocampo/046.html">046</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JAT_DATA1</td>
+<td>Periodo Ini.</td>
+<td colspan="2">Periodo Inicial</td>
+<td colspan="4">Informe o Periodo Inicial.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>Iif(Inclui,CTOD(" "),Posicione("JAR",1,xFilial("JAR")+JAT->JAT_CODCUR+JAT->JAT_PERLET+JAT->JAT_HABILI,"JAR_DATA1"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Ac450InBrw("JAT_DATA1")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JAT_DATA2</td>
+<td>Periodo Fin.</td>
+<td colspan="2">Periodo Final</td>
+<td colspan="4"></td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>Iif(Inclui,CTOD(" "),Posicione("JAR",1,xFilial("JAR")+JAT->JAT_CODCUR+JAT->JAT_PERLET+JAT->JAT_HABILI,"JAR_DATA2"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Ac450InBrw("JAT_DATA2")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JAT_SUBTUR</td>
+<td>Sub Turma</td>
+<td colspan="2">Sub Turma</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>JAU</td>
+<td colspan="2">JAT_CODCUR+JAT_PERLET+JAT_HABILI+JAT_CODDIS+JAT_TURMA</td>
+<td colspan="2">JAU_CODCUR+JAU_PERLET+JAU_HABILI+JAU_CODDIS+JAU_TURMA</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

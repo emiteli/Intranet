@@ -1,0 +1,880 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: FV0 - Cabeçalho do Documento Hábil</title></head>
+<body>
+<font color="orange"><h2 id="FV0">Tabela: FV0 - Cabeçalho do Documento Hábil</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Cabeçalho do Documento Hábil</b></td><td colspan="2"><b>FV0_FILIAL+FV0_CODIGO</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">FV0_FILIAL+FV0_CODIGO</td><td>ID Processo</td><td></td></tr>
+<tr><td>2</td><td colspan="2">FV0_FILIAL+FV0_CODSIA</td><td>Código SIAFI</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>FV0_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Filial do sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>FV0_UGEMIT</td>
+<td>UG Emitente</td>
+<td colspan="2">Unidade Gestora Emitente</td>
+<td colspan="4">Código de identificação da unidade
+gestora que efetuou a despesa ou irá
+receber valores dos títulos financeiros
+relacionados com o documento hábil.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("CPA")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>FV0_UGDESC</td>
+<td>Desc. UG</td>
+<td colspan="2">Descrição Unidade Gestora</td>
+<td colspan="4">Descrição da unidade gestora emitente do
+título a pagar ou a receber relacionado
+com o documento hábil.
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIF(!INCLUI,POSICIONE('CPA', 1, xFilial('CPA') + FV0->FV0_UGEMIT, 'CPA_DESORG'),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE('CPA', 1, xFilial('CPA') + FV0->FV0_UGEMIT, 'CPA_DESORG')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>FV0_TIPODC</td>
+<td>Tipo Doc.</td>
+<td colspan="2">Tipo de Documento Hábil</td>
+<td colspan="4">Código de identificação do tipo de
+documento hábil a ser manipulado no
+cadastro de documento hábil.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SX5","NL"+M->FV0_TIPODC)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/nl.html">NL</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>FV0_NTIPDC</td>
+<td>Desc. Tipo</td>
+<td colspan="2">Descrição Tipo Documento</td>
+<td colspan="4">Descrição do tipo de documento hábil a
+ser manipulado no cadastro de documento
+hábil.
+</td>
+<td>C</td>
+<td>55</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIF(!INCLUI,POSICIONE('SX5', 1, xFilial('SX5') + 'NL' + FV0->FV0_TIPODC, 'X5_DESCRI'),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE('SX5', 1, xFilial('SX5') + 'NL' + FV0->FV0_TIPODC, 'X5_DESCRI')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>FV0_CODSIA</td>
+<td>Código SIAFI</td>
+<td colspan="2">Código Documento SIAFI</td>
+<td colspan="4">Código de identificação do documento
+hábil no SIAFI, informação atribuída
+após o envio dos dados dos sistema
+Protheus para o WebService do SIAFI.
+</td>
+<td>C</td>
+<td>12</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>FV0_CODIGO</td>
+<td>ID Processo</td>
+<td colspan="2">Identificação Processo</td>
+<td colspan="4">Código de identificação do documento
+hábil no sistema Protheus.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>FaGetCodFV0()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>FV0_STATUS</td>
+<td>Status</td>
+<td colspan="2">Status</td>
+<td colspan="4">Status do documento hábil no sistema
+Protheus da integração com o SIAFI.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("123456789A")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td>#F761Status()</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>FV0_FORNEC</td>
+<td>Fornecedor</td>
+<td colspan="2">Fornecedor</td>
+<td colspan="4">Código identificação do fornecedor
+credor dos títulos financeiros
+vinculados ao documento hábil.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SA2")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sa2.html">SA2</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>FV0_LOJA</td>
+<td>Loja</td>
+<td colspan="2">Loja do Fornecedor</td>
+<td colspan="4">Informe a loja do fornecedor
+selecionado.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SA2",M->FV0_FORNEC+M->FV0_LOJA)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>FV0_NFORNE</td>
+<td>Desc. Forn.</td>
+<td colspan="2">Descrição do Fornecedor</td>
+<td colspan="4">Descrição do fornecedor credor dos
+títulos financeiros vinculados ao
+documento hábil.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIF(!INCLUI,Posicione("SA2",1,xFilial("SA2")+FV0->FV0_FORNEC,"A2_NOME"),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("SA2",1,xFilial("SA2")+FV0->FV0_FORNEC,"A2_NOME")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>FV0_UGPAGA</td>
+<td>UG Pagadora</td>
+<td colspan="2">Unidade Gestora Pagadora</td>
+<td colspan="4">Código de identificação da unidade
+gestora que será responsável pelo
+pagamento dos títulos relacionados no
+documento hábil.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("CPA") .AND. F761GatUGP()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/cpa.html">CPA</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>FV0_UGDSPG</td>
+<td>Desc. UG Pag</td>
+<td colspan="2">Descrição UG Pagadora</td>
+<td colspan="4">Descrição da unidade gestora que irá
+efetuar o pagamento do título a pagar ou
+a receber relacionado com o documento
+hábil.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIF(!INCLUI,POSICIONE('CPA', 1, xFilial('CPA') + FV0->FV0_UGPAGA, 'CPA_DESORG'),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE('CPA', 1, xFilial('CPA') + FV0->FV0_UGPAGA,'CPA_DESORG')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>FV0_SISORI</td>
+<td>Sist. Origem</td>
+<td colspan="2">Sistema de Origem</td>
+<td colspan="4">Sistema de origem dos documentos hábeis
+no SIAFI, sendo o serviço de Manter
+Contas a Pagar e Receber do SIAFI
+(Sistema Administrativo Financeiro do
+Governo Federal).
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>'CPR'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>FV0_DTEMIS</td>
+<td>Data Emissão</td>
+<td colspan="2">Data de Emissão</td>
+<td colspan="4">Data de emissão do documento hábil, o
+que seria a inclusão do documento hábil
+no sistema Protheus.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>FV0_DTVENC</td>
+<td>Data Venc.</td>
+<td colspan="2">Data de Vencimento</td>
+<td colspan="4">Data de Vencimento do documento hábil, o
+que seria a inclusão do documento hábil
+no sistema Protheus.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>FV0_TAXACA</td>
+<td>Taxa Câmbio</td>
+<td colspan="2">Taxa de Câmbio</td>
+<td colspan="4">Taxa de Câmbio do documento hábil.
+</td>
+<td>N</td>
+<td>6</td>
+<td>4</td>
+<td>@E 9.9999                                    </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>FV0_PROCES</td>
+<td>Processo</td>
+<td colspan="2">Processo</td>
+<td colspan="4">Processo interno administrativo do órgão
+público que originou a despesa a ser
+realizada com o documento hábil.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>FV0_ATESTE</td>
+<td>Ateste</td>
+<td colspan="2">Ateste</td>
+<td colspan="4">Data de inclusão do documento hábil, ou
+seja, a data de envio dos dados do
+documento hábil para o WebService do
+SIAFI.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>FV0_VLRDOC</td>
+<td>Valor Doc.</td>
+<td colspan="2">Valor do Documento</td>
+<td colspan="4">Valor total de documentos comprobatórios
+para pagamento informados no documento
+hábil.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>FV0_OBS</td>
+<td>Observação</td>
+<td colspan="2">Observação Documento</td>
+<td colspan="4">Campo para preenchimento de observações
+sobre o documento hábil.
+</td>
+<td>M</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>FV0_ADICIO</td>
+<td>Info. Adic.</td>
+<td colspan="2">Informação Adicional</td>
+<td colspan="4">Campo para preenchimento de informações
+adicionais sobre o documento hábil.
+</td>
+<td>M</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>FV0_OK</td>
+<td>Iden.Selecao</td>
+<td colspan="2">Identificador de Selecao</td>
+<td colspan="4">Identificador de seleção
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>FV0_DATPAG</td>
+<td>Dat. Pag.</td>
+<td colspan="2">Data de Pagamento</td>
+<td colspan="4">Data de pagamento do documento hábil.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>FVA</td>
+<td colspan="2">FV0_CODIGO</td>
+<td colspan="2">FVA_CODPRO</td>
+</tr>
+<tr>
+<td>FVD</td>
+<td colspan="2">FV0_CODIGO</td>
+<td colspan="2">FVD_CODPRO</td>
+</tr>
+<tr>
+<td>FV5</td>
+<td colspan="2">FV0_CODIGO</td>
+<td colspan="2">FV5_CODPRO</td>
+</tr>
+<tr>
+<td>FV6</td>
+<td colspan="2">FV0_CODIGO</td>
+<td colspan="2">FV6_CODPRO</td>
+</tr>
+<tr>
+<td>FVE</td>
+<td colspan="2">FV0_CODIGO</td>
+<td colspan="2">FVE_CODPRO</td>
+</tr>
+<tr>
+<td>FVI</td>
+<td colspan="2">FV0_CODIGO</td>
+<td colspan="2">FVI_CODPRO</td>
+</tr>
+<tr>
+<td>FVL</td>
+<td colspan="2">FV0_CODIGO</td>
+<td colspan="2">FVL_CODPRO</td>
+</tr>
+<tr>
+<td>FV8</td>
+<td colspan="2">FV0_CODIGO</td>
+<td colspan="2">FV8_CODPRO</td>
+</tr>
+<tr>
+<td>FV9</td>
+<td colspan="2">FV0_CODIGO</td>
+<td colspan="2">FV9_CODPRO</td>
+</tr>
+<tr>
+<td>FV1</td>
+<td colspan="2">FV0_CODIGO</td>
+<td colspan="2">FV1_CODPRO</td>
+</tr>
+<tr>
+<td>FVF</td>
+<td colspan="2">FV0_CODIGO</td>
+<td colspan="2">FVF_CODPRO</td>
+</tr>
+<tr>
+<td>FX2</td>
+<td colspan="2">FV0_CODIGO</td>
+<td colspan="2">FX2_CODDH</td>
+</tr>
+<tr>
+<td>FVQ</td>
+<td colspan="2">FV0_CODIGO</td>
+<td colspan="2">FVQ_CODPRO</td>
+</tr>
+<tr>
+<td>FV2</td>
+<td colspan="2">FV0_CODIGO</td>
+<td colspan="2">FV2_CODPRO</td>
+</tr>
+<tr>
+<td>FV7</td>
+<td colspan="2">FV0_CODIGO</td>
+<td colspan="2">FV7_CODPRO</td>
+</tr>
+<tr>
+<td>FVM</td>
+<td colspan="2">FV0_CODIGO</td>
+<td colspan="2">FVM_CODPRO</td>
+</tr>
+<tr>
+<td>FVN</td>
+<td colspan="2">FV0_CODIGO</td>
+<td colspan="2">FVN_CODPRO</td>
+</tr>
+<tr>
+<td>FVB</td>
+<td colspan="2">FV0_CODIGO</td>
+<td colspan="2">FVB_CODPRO</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

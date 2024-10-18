@@ -1,0 +1,1427 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: BG9 - Grupos Empresas</title></head>
+<body>
+<font color="orange"><h2 id="BG9">Tabela: BG9 - Grupos Empresas</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Grupos Empresas</b></td><td colspan="2"><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">BG9_FILIAL+BG9_CODINT+BG9_CODIGO+BG9_TIPO</td><td>Operadora + Codigo + Tipo Grupo</td><td></td></tr>
+<tr><td>2</td><td colspan="2">BG9_FILIAL+BG9_DESCRI</td><td>Grp/Empresa</td><td></td></tr>
+<tr><td>3</td><td colspan="2">BG9_FILIAL+BG9_USO</td><td>Uso</td><td></td></tr>
+<tr><td>4</td><td colspan="2">BG9_FILIAL+BG9_CODCLI+BG9_LOJA</td><td>Cod.Cliente + Loja</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="6" align="center"><b><i>Abas(SXA)</i></b></td></tr><tr><td><b>XA_ALIAS</b></td><td><b>XA_ORDEM</b></td><td colspan="2"><b>XA_DESCRIC</b></td><td><b>XA_AGRUP</b></td><td><b>XA_TIPO</b></td></tr><tr><td><b>BG9</b></td><td><b>1</b></td><td colspan="2"><b>Dados Cadastrais</b></td><td><b></b></td><td><b></b></td></tr><tr><td><b>BG9</b></td><td><b>2</b></td><td colspan="2"><b>Responsavel Financeiro</b></td><td><b></b></td><td><b></b></td></tr><tr><td><b>BG9</b></td><td><b>3</b></td><td colspan="2"><b>Propriedades</b></td><td><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>BG9_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">FILIAL
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BG9_CODINT</td>
+<td>Operadora</td>
+<td colspan="2">Operadora</td>
+<td colspan="4">Indica o código da Instituição de
+Saúde,para a qual, serão válidas as
+informações abaixo cadastradas.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@R !.!!!                                     </td>
+<td>PLSVLDINT(M->BG9_CODINT) .And. ExistChav("BG9",M->BG9_CODINT+M->BG9_CODIGO,1)</td>
+<td>PLSINTPAD(RETCODUSR())</td>
+<td><a href="/tabelas_protheus/f3/b89pls.html">B89PLS</a></td>
+<td><a href="/tabelas_protheus/gatilhos/bg9_codint.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>BG9_DESINT</td>
+<td>Descricao</td>
+<td colspan="2">Descricao</td>
+<td colspan="4">Este campo sera alimentado
+automaticamente com a descricao da
+Operadora de Saude selecionada no campo
+anterior.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Posicione("BA0",1,xFilial("BA0")+M->BG9_CODINT,"BA0_NOMINT")</td>
+<td><a href="/tabelas_protheus/f3/b59pls.html">B59PLS</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>BA0->(posicione("BA0",1,xFilial("BA0")+BG9->BG9_CODINT,"BA0_NOMINT"))</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BG9_CODIGO</td>
+<td>Codigo</td>
+<td colspan="2">Codigo</td>
+<td colspan="4">Código do Grupo/Empresa .
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>(PLSZERO(),ExistChav("BG9",M->BG9_CODINT+M->BG9_CODIGO,1))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>BG9_DESCRI</td>
+<td>Grp/Empresa</td>
+<td colspan="2">Descricao do Grupo/Empres</td>
+<td colspan="4">Nome do Grupo/Empresa .
+</td>
+<td>C</td>
+<td>80</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>BG9_NREDUZ</td>
+<td>Nm. Reduzido</td>
+<td colspan="2">Nome Reduzido</td>
+<td colspan="4">Indica um descrição reduzida do campo
+descrição informado anteriormente.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@C                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BG9_PODREM</td>
+<td>Perm.Reemb?</td>
+<td colspan="2">Permite Reembolso?</td>
+<td colspan="4">"Permite Reembolso?
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>'1'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;0=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BG9_TIPO</td>
+<td>Tipo Grupo</td>
+<td colspan="2">Tipo de Grupo</td>
+<td colspan="4">Selecione "F" se o Grupo/Empresa for
+pessoa Fisica , ou "J" para pessoa
+Juridica .
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/bg9_tipo.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Pessoa Fisica;2=Pessoa Juridica</td>
+<td>M->BG9_USO=="1"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>BG9_EMPANT</td>
+<td>Cod.Emp.Ant.</td>
+<td colspan="2">Codigo Antigo da Empresa</td>
+<td colspan="4">Indica o código da empresa no sistema
+anterior. Campo utilizado para que a
+operadora não perca dados no momento da
+migração de sistemas.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BG9_CODCLI</td>
+<td>Cod.Cliente</td>
+<td colspan="2">Codigo do Cliente</td>
+<td colspan="4">Código do Cliente .
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SA1",M->BG9_CODCLI+M->BG9_LOJA,1) .Or. Empty(M->BG9_CODCLI)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sa1.html">SA1</a></td>
+<td><a href="/tabelas_protheus/gatilhos/bg9_codcli.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>PL660CF(1,"C")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BG9_LOJA</td>
+<td>Loja</td>
+<td colspan="2">Loja</td>
+<td colspan="4">Número da Loja do Cliente .
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"01"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td>PL660CF(1,"C")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BG9_NOMCLI</td>
+<td>Nome Cliente</td>
+<td colspan="2">Nome Cliente</td>
+<td colspan="4">Este campo sera alimentado automatica-
+mente  com a descricao do Cliente sele-
+cionado no campo anterior.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",Posicione("SA1",1,xFilial("SA1")+BG9->(BG9_CODCLI+BG9_LOJA),"A1_NOME"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td>PL660CF(1,"C")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BG9_NATURE</td>
+<td>Natureza</td>
+<td colspan="2">Codigo da Nat Financeira</td>
+<td colspan="4">Código da Natureza da Empresa .
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>FinVldNat( .T. )</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sed.html">SED</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BG9_CODFOR</td>
+<td>Fornecedor</td>
+<td colspan="2">Fornecedor</td>
+<td colspan="4">Indica o código do fornecedor em
+situações especificas, como por exemplo,
+no caso de repasse de beneficiários.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SA2",M->BG9_CODFOR+M->BG9_LOJFOR,1) .Or. Empty(M->BG9_CODFOR)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sa2.html">SA2</a></td>
+<td><a href="/tabelas_protheus/gatilhos/bg9_codfor.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>PL660CF(1,"F")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BG9_LOJFOR</td>
+<td>Loja</td>
+<td colspan="2">Loja</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"01"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BG9_NOMFOR</td>
+<td>Nome Forn.</td>
+<td colspan="2">Nome do Fornecedor</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BG9_VENCTO</td>
+<td>Dia Vencto.</td>
+<td colspan="2">Dia do Vencimento</td>
+<td colspan="4">Indica o dia para vencimento da fatura
+do cliente informado. Sempre que
+informado um cliente, em algum nível,
+será obrigatório o cadastramento de um
+dia  para vencimento da fatura.
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>M->BG9_TIPO=="2"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BG9_USO</td>
+<td>Uso</td>
+<td colspan="2">Uso</td>
+<td colspan="4">Campo utilizado para diferenciar
+grupo/empresas normais e do tipo
+admissional. Para o tipo admissional O
+sistema permite, somente, a criação de 1
+(um) registro.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/bg9_uso.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Normal;2=Usuarios Admissionais/Contratos nao cadastrados</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>BG9_DESTP</td>
+<td>Tipo Contr.</td>
+<td colspan="2">Tipo Contrato</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@C                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>X3COMBO("BG9_TIPO",BG9->BG9_TIPO)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BG9_MESREA</td>
+<td>Mes Reajuste</td>
+<td colspan="2">Mes de Reajuste</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BG9_INDREA</td>
+<td>Ind Reajuste</td>
+<td colspan="2">Indice Reajuste</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td>Vazio() .Or. ExistCpo("AAD")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/aad.html">AAD</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BG9_VALFAI</td>
+<td>Vlr Usu Min.</td>
+<td colspan="2">Valor Cobranca Minimo Usr</td>
+<td colspan="4">Indica o valor, por usuário, que será
+base para o cálculo, referente à
+quantida-de mínima de usuários.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BG9_TIPPAG</td>
+<td>Forma Pagto</td>
+<td colspan="2">Codigo da Forma de Pagto</td>
+<td colspan="4">Indique o código da forma de pagamento.
+Tecla  <F3> disponível para consulta.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>vazio() .or. ExistCpo("BQL",M->BG9_TIPPAG,1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/bqlpl1.html">BQLPL1</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BG9_BCOCLI</td>
+<td>Banco Client</td>
+<td colspan="2">Banco do Cliente</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BG9_AGECLI</td>
+<td>Agenc Client</td>
+<td colspan="2">Agencia do Cliente</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BG9_CTACLI</td>
+<td>Conta Client</td>
+<td colspan="2">Conta do Cliente</td>
+<td colspan="4">Informe a conta do cliente para fins de
+controle de faturamento.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BG9_PORTAD</td>
+<td>Banco Oper</td>
+<td colspan="2">Banco da Operadora</td>
+<td colspan="4">Código do portador. Identifica  o agente
+cobrador responsável  pela  cobrança  do
+título.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>vazio() .or. ExistCpo("SA6",M->BG9_PORTAD,1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sa6.html">SA6</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BG9_AGEDEP</td>
+<td>Agencia Oper</td>
+<td colspan="2">Agencia da Operadora</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>vazio() .or. ExistCpo("SA6",M->BG9_PORTAD+M->BG9_AGEDEP,1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BG9_CTACOR</td>
+<td>Conta Oper</td>
+<td colspan="2">Conta da Operadora</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>vazio() .or. ExistCpo("SA6",M->BG9_PORTAD+M->BG9_AGEDEP+BG9_CTACOR,1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BG9_COBJUR</td>
+<td>Cob. Juros ?</td>
+<td colspan="2">Cobra Juros Proximo Mes ?</td>
+<td colspan="4">Informação para definição sobre o
+cálculo e cobrança de Juros na Geração
+do Faturamento do Mês Posterior ao Mês
+com valores em aberto para este nível de
+parametrização
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>0=Nao;1=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BG9_FILESP</td>
+<td>Filial Esp?</td>
+<td colspan="2">Filial Especial?</td>
+<td colspan="4">Informe se este grupo / empresa
+utilizará controle de filial especial.
+Opções válidas:
+"0" - Não.
+"1" - Sim.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;0=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BG9_TAXDIA</td>
+<td>% Juros Dia</td>
+<td colspan="2">% de Juros ao Dia</td>
+<td colspan="4">Indique a taxa percentual de juros ao
+dia.
+</td>
+<td>N</td>
+<td>7</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BG9_JURDIA</td>
+<td>Vl Juros Dia</td>
+<td colspan="2">Valor de Juros ao Dia</td>
+<td colspan="4">Informação referente ao valor que deve
+ser acrescido a Cobrança dos
+Beneficiários referente a Juros por
+atraso
+</td>
+<td>N</td>
+<td>9</td>
+<td>2</td>
+<td>@E 99,999.99                                 </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BG9_MAIORI</td>
+<td>Maioridade</td>
+<td colspan="2">Maioridade</td>
+<td colspan="4">Indique em anos a idade em que deve ser
+considerada a maioridade para este grupo
+/ empresa.
+Exemplo: digite 21 para 21 anos.
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BG9_CODREG</td>
+<td>Cod. Regiao</td>
+<td colspan="2">Codigo da Regiao</td>
+<td colspan="4">Código da região para classificação e
+segmentação.
+Tecla <F3> disponível para consulta as
+regiões cadastradas.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo( "BIB", PLSINTPAD() + M->BG9_CODREG )</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/bidpls.html">BIDPLS</a></td>
+<td><a href="/tabelas_protheus/gatilhos/bg9_codreg.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BG9_DESREG</td>
+<td>Desc. Regiao</td>
+<td colspan="2">Descricao da Regiao</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BG9_EMPFAT</td>
+<td>Empresa Fat.</td>
+<td colspan="2">Empresa de Faturamento</td>
+<td colspan="4">Informe o código da empresa do sistema
+que executará o faturamento desse
+cliente nesse grupo / empresa.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SM0",M->BG9_EMPFAT)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/qm0.html">QM0</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BG9_FILFAT</td>
+<td>Filial Ft</td>
+<td colspan="2">Filial de Faturamento</td>
+<td colspan="4">Indique a filial de faturamento do
+sistema para este cliente - grupo /
+empresa.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td>ExistCpo("SM0",M->BG9_EMPFAT+M->BG9_FILFAT)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BG9_DESEMP</td>
+<td>Desc. Emp Ft</td>
+<td colspan="2">Desc Empresa/Filial Fatur</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BG9_HSPEMP</td>
+<td>Cod. Emp HSP</td>
+<td colspan="2">Codigo Empresa HSP</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BG9_DIASIN</td>
+<td>Dias Inadimp</td>
+<td colspan="2">Qtd Dias de Inadimplencia</td>
+<td colspan="4">Quantidade de Dias de Inadimplencia.
+</td>
+<td>N</td>
+<td>4</td>
+<td>0</td>
+<td>@E 9,999                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BG9_REPASS</td>
+<td>Repasse SIP</td>
+<td colspan="2">Empresa Repasse</td>
+<td colspan="4">Define se o Grupo/Empresa é de contrato
+para repasse
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BG9_CODSB1</td>
+<td>Produto ERP</td>
+<td colspan="2">Codigo Produto ERP</td>
+<td colspan="4">Codigo do produto ERP
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. SB1->(ExistCpo('SB1',M->BG9_CODSB1))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sb1.html">SB1</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/030.html">030</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BG9_CODTES</td>
+<td>Tipo Saida</td>
+<td colspan="2">Tipo de Saida da Nota</td>
+<td colspan="4">Codigo do TES
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .or. Existcpo('SF4').And. MaAvalTes('S',M->BG9_CODTES)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sf4.html">SF4</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BG9_COMAUT</td>
+<td>Compe. Auto?</td>
+<td colspan="2">Compensação automática</td>
+<td colspan="4">Na geração do lote de cobrança a
+compensação automática deverá ser
+efetuada?
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("01")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Nao;1=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>B40</td>
+<td colspan="2">BG9_CODIGO</td>
+<td colspan="2">B40_CODEMP</td>
+</tr>
+<tr>
+<td>B44</td>
+<td colspan="2">BG9_CODIGO</td>
+<td colspan="2">B44_CODEMP</td>
+</tr>
+<tr>
+<td>BHZ</td>
+<td colspan="2">BG9_CODIGO</td>
+<td colspan="2">BHZ_EMPDE</td>
+</tr>
+<tr>
+<td>BHZ</td>
+<td colspan="2">BG9_CODIGO</td>
+<td colspan="2">BHZ_EMPATE</td>
+</tr>
+<tr>
+<td>B79</td>
+<td colspan="2">BG9_CODIGO</td>
+<td colspan="2">B79_EMPINI</td>
+</tr>
+<tr>
+<td>B79</td>
+<td colspan="2">BG9_CODIGO</td>
+<td colspan="2">B79_EMPFIM</td>
+</tr>
+<tr>
+<td>BQC</td>
+<td colspan="2">BG9_CODIGO</td>
+<td colspan="2">BQC_CODEMP</td>
+</tr>
+<tr>
+<td>BQQ</td>
+<td colspan="2">BG9_CODIGO</td>
+<td colspan="2">BQQ_EMPDES</td>
+</tr>
+<tr>
+<td>BQQ</td>
+<td colspan="2">BG9_CODIGO</td>
+<td colspan="2">BQQ_EMPORI</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

@@ -1,0 +1,376 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: DHE - Relacao Prod x Car. Fis. Quim.</title></head>
+<body>
+<font color="orange"><h2 id="DHE">Tabela: DHE - Relacao Prod x Car. Fis. Quim.</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Relacao Prod x Car. Fis. Quim.</b></td><td colspan="2"><b>DHE_FILIAL+DHE_LAUDO+DHE_CODPRO+DHE_ITECAR</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">DHE_FILIAL+DHE_LAUDO+DHE_CODPRO</td><td>Nr. Laudo + Cod. Prod.</td><td></td></tr>
+<tr><td>2</td><td colspan="2">DHE_FILIAL+DHE_CODCAR</td><td>Car Fis Quim</td><td></td></tr>
+<tr><td>3</td><td colspan="2">DHE_FILIAL+DHE_MAFER</td><td>Met.Afericao</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>DHE_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Filial do Sistema
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DHE_LAUDO</td>
+<td>Nr. Laudo</td>
+<td colspan="2">Laudo de Car. Fis-Quim.</td>
+<td colspan="4">Laudo de Car. Fis-Quim.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>DclSm012Chk(M->DHE_LAUDO, M->DHE_CODPRO)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DHE_CODPRO</td>
+<td>Cod. Prod.</td>
+<td colspan="2">Codigo do Produto</td>
+<td colspan="4">Codigo do Produto
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>(ExistCpo("SB1", M->DHE_CODPRO) .OR. Vazio(M->DHE_CODPRO)) .And. DclSm012Chk(M->DHE_LAUDO, M->DHE_CODPRO)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sb1.html">SB1</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dhe_codpro.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/030.html">030</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DHE_PRODES</td>
+<td>Produto</td>
+<td colspan="2">Descricao do Produto</td>
+<td colspan="4">Descrição do Produto
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!INCLUI,Posicione("SB1",1,xFilial("SB1")+DHE->DHE_CODPRO,"B1_DESC"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DHE_ITECAR</td>
+<td>Item</td>
+<td colspan="2">Item</td>
+<td colspan="4">Codigo do item da caracteristica
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>9999                                         </td>
+<td></td>
+<td>Dcl012ItCa()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DHE_CODCAR</td>
+<td>Car Fis Quim</td>
+<td colspan="2">Codigo da Car. Fis-Quim.</td>
+<td colspan="4">Codigo da Car. Fis-Quim.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("DHD", M->DHE_CODCAR) .OR. Vazio(M->DHE_CODCAR)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dhd.html">DHD</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dhe_codcar.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DHE_CARACT</td>
+<td>Descricao</td>
+<td colspan="2">Descricao da Car Fis-Quim</td>
+<td colspan="4">Descricao da Car Fis-Quim
+</td>
+<td>C</td>
+<td>70</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!INCLUI,Posicione("DHD",1,xFilial("DHD")+DHE->DHE_CODCAR,"DHD_CARACT"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DHE_UNMEDI</td>
+<td>Un.Med. CFQ</td>
+<td colspan="2">Unid. Med. da Car.Fis-Qui</td>
+<td colspan="4">Unid. Med. da Car.Fis-Qui
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!INCLUI,Posicione("DHD",1,xFilial("DHD")+DHE->DHE_CODCAR,"DHD_UNMEDI"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DHE_MAFER</td>
+<td>Met.Afericao</td>
+<td colspan="2">Metodo de Afericao CFQ</td>
+<td colspan="4">Metodo de Afericao CFQ
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SX5", "HD"+M->DHE_MAFER) .OR. Vazio(M->DHE_MAFER)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/hd.html">HD</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DHE_VALOR</td>
+<td>Valor CFQ</td>
+<td colspan="2">Valor da Car. Fis-Quim.</td>
+<td colspan="4">Valor da Car. Fis-Quim.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DHE_MASSA</td>
+<td>Massa Esp.</td>
+<td colspan="2">Massa Especifica do Prod.</td>
+<td colspan="4">Massa Especifica do Prod.
+</td>
+<td>N</td>
+<td>8</td>
+<td>3</td>
+<td>@E 9,999.999                                 </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

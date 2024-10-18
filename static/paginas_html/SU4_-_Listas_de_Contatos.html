@@ -1,0 +1,1514 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: SU4 - Listas de Contatos</title></head>
+<body>
+<font color="orange"><h2 id="SU4">Tabela: SU4 - Listas de Contatos</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Listas de Contatos</b></td><td colspan="2"><b>U4_FILIAL+U4_LISTA+DTOS(U4_DATA)</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">U4_FILIAL+U4_LISTA+DTOS(U4_DATA)</td><td>Codigo + Data</td><td></td></tr>
+<tr><td>2</td><td colspan="2">U4_FILIAL+U4_DESC</td><td>Nome Lista</td><td></td></tr>
+<tr><td>3</td><td colspan="2">U4_FILIAL+DTOS(U4_DATA)+U4_STATUS</td><td>Data + Status</td><td></td></tr>
+<tr><td>4</td><td colspan="2">U4_FILIAL+U4_CODLIG</td><td>Cod.Ligacao</td><td></td></tr>
+<tr><td>5</td><td colspan="2">U4_FILIAL+U4_OPERAD+U4_STATUS</td><td>Operador + Status</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>U4_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Código da filial da empresa.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_TIPO</td>
+<td>Tipo Lista</td>
+<td colspan="2">Objetivo da Lista</td>
+<td colspan="4">Tipo de lista a ser gerada.
+1- Marketing.
+2- Cobrança.
+3- Vendas.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("1234")</td>
+<td>IIF(INCLUI,"1","")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Marketing;2=Cobranca;3=Vendas;4=TeleAtendimento</td>
+<td>If (!nModulo == 73, .T., .F.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>U4_STATUS</td>
+<td>Status</td>
+<td colspan="2">Status da Lista</td>
+<td colspan="4">Status da lista.
+1 - Ativa
+2 - Encerrada
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("123")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td>1=Ativa;2=Encerrada;3=Em Andamento</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_LISTA</td>
+<td>Codigo</td>
+<td colspan="2">Codigo da Lista</td>
+<td colspan="4">Código da Lista de contatos.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td>naovazio()</td>
+<td>IIF(INCLUI,GETSXENUM("SU4","U4_LISTA"),SU4->U4_LISTA)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>U4_DESC</td>
+<td>Nome Lista</td>
+<td colspan="2">Nome da Lista</td>
+<td colspan="4">Descrição da lista de contatos.
+Exemplo: Prospects.
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@x                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>U4_DATA</td>
+<td>Data</td>
+<td colspan="2">Data da geracao da Lista</td>
+<td colspan="4">Informe neste campo a data para execução
+da lista de contatos.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>NaoVazio() .AND. M->U4_DATA >= dDatabase .AND. TK061DATA()</td>
+<td>dDataBase</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>U4_HORA1</td>
+<td>Hora Inicial</td>
+<td colspan="2">Hora Inicial para contato</td>
+<td colspan="4">Hora inicial para execução da lista
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>99:99:99                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_FORMA</td>
+<td>Tipo Contato</td>
+<td colspan="2">Tipo de Marketing</td>
+<td colspan="4">Modo de interação  com os contatos.
+1 - Voz.            4 - Mala Direta.
+2 - Fax.            5 - Pendência.
+3 - CrossPosting.    6 - WebSite.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>9                                            </td>
+<td>Pertence("1234")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/u4_forma.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Voz;2=Fax;3=Cross Posting;4=Mala Direta;5=Pendencia;6=Website</td>
+<td></td>
+<td>Tk061DescForma(SU4->U4_FORMA)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_TELE</td>
+<td>Rotina</td>
+<td colspan="2">Rotina de Atendimento</td>
+<td colspan="4">Rotina de atendimento.
+1- Televendas.
+2- TeleMarketing.
+3- TeleCobrança.*
+4- Ambos.
+Esta opção irá definir em quais
+atendimentos a lista de contatos será
+executada. Esta definição influenciará
+diretamente na seleção do operador.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>9                                            </td>
+<td>Iif(IsInCallStack("TMKA061"),Pertence("125"),Pertence("3"))</td>
+<td>IIF(INCLUI,"1",SU4->U4_TELE)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=TeleMarketing;2=TeleVendas;3=TeleCobranca;4=Todos;5=Teleatendimento</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_OPERAD</td>
+<td>Operador</td>
+<td colspan="2">Operador</td>
+<td colspan="4">Operador para execução da lista.
+Pressione [F3] para selecionar o
+operador que irá realizar os contatos ou
+deixe em branco para a seleção
+automática.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Tk061VldOp()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/fu7.html">FU7</a></td>
+<td><a href="/tabelas_protheus/gatilhos/u4_operad.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_NOPERAD</td>
+<td>Nome</td>
+<td colspan="2">Nome do Operador</td>
+<td colspan="4">Descriç„o do Operador.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIF(!INCLUI,Posicione("SU7",1,xFilial("SU7")+SU4->U4_OPERAD,"U7_NOME"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("SU7",1,xFilial("SU7")+SU4->U4_OPERAD,"U7_NOME")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_CONFIG</td>
+<td>Configuracao</td>
+<td colspan="2">Configuracao de TMK</td>
+<td colspan="4">Código da configuração Telemarketing.
+(Disponível F3.)
+A Configuração TeleMarketing permite o
+preenchimento automático da da Tela de
+Atendimento TeleMarketing Receptivo.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td>IIF(!EMPTY(M->U4_CONFIG),ExistCpo("SUE",M->U4_CONFIG),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sue.html">SUE</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_TIPOTEL</td>
+<td>Telefone</td>
+<td colspan="2">Tipo do Telefone</td>
+<td colspan="4">Tipo do telefone.
+1 - Residencial     5- Comercial 2
+2 - Celular
+3 - Fax
+4 - Comercial 1
+O opção '3- Fax' só poderá ser
+selecionada quando o campo "Tipo
+Contato" for 2- Fax.
+Os contatos que não possuirem o tipo de
+telefone  selecionado neste campo não
+serão incluidos na lista.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>9                                            </td>
+<td>IIF(M->U4_FORMA == "1",Pertence("1245"), IIF(M->U4_FORMA == "2",Pertence("3"),Vazio()))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Residencial;2=Celular;3=Fax;4=Comercial 1;5=Comercial 2</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_MALADIR</td>
+<td>Arquivo</td>
+<td colspan="2">Arquivo de Mala-Direta</td>
+<td colspan="4">Arquivo de mala direta / Cross Posting,
+que será utilizado nessa lista.
+Os arquivos só poderão ser selecionados
+quando o campo "Tipo Contato' estiver
+com uma dessas opções selecionadas.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>IIF(M->U4_FORMA == "2" .OR. M->U4_FORMA == "3" .OR. M->U4_FORMA == "4",Naovazio(),(Vazio(),Tk061VLD()))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/arq.html">ARQ</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_TIPOEND</td>
+<td>Endereco</td>
+<td colspan="2">Endereço para envio</td>
+<td colspan="4">Tipo de endereço para envio.
+1 - Residencial.
+2 - Comercial.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>9                                            </td>
+<td>IIF(M->U4_FORMA == "4",Pertence("12"),Vazio())</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Residencial;2=Comercial</td>
+<td>IIF(M->U4_FORMA=="4",.T.,.F.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_LABEL</td>
+<td>Etiqueta</td>
+<td colspan="2">Gerar Etiquetas</td>
+<td colspan="4">Habilita a geração de etiquetas.
+1 - Sim
+2 - Não
+Este campo só poderá ser alterado quando
+o campo "Tipo Contato" for Mala Direta.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>9                                            </td>
+<td>IIF(M->U4_FORMA == "4",Pertence("12"),Vazio())</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td>IIF(M->U4_FORMA=="4",.T.,.F.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_ETIQUET</td>
+<td>Arq.Etiqueta</td>
+<td colspan="2">Arquivo de Etiqueta</td>
+<td colspan="4">Arquivo de Etiquetas.
+O arquivo só poderá ser selecionado
+quando o campo "Tipo Contato" for igual
+a Mala Direta e o campo "Etiqueta" for
+igual a SIM.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>IIF(M->U4_LABEL == "1".AND.M->U4_FORMA=="4",Naovazio(),Vazio())</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ar1.html">AR1</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_CODCAMP</td>
+<td>Campanha</td>
+<td colspan="2">Campanha</td>
+<td colspan="4">Código da campanha que será associada a
+essa Lista.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td>IIF(!Empty(M->U4_CODCAMP),ExistCpo("SUO",M->U4_CODCAMP) .And. Tk310VldCamp(M->U4_CODCAMP),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/suo.html">SUO</a></td>
+<td><a href="/tabelas_protheus/gatilhos/u4_codcamp.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_DESCCAM</td>
+<td>Descricao</td>
+<td colspan="2">Descricao da Campanha</td>
+<td colspan="4">Descriç„o da campanha.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIF(!INCLUI,Posicione("SUO",1,xFilial("SUO")+SU4->U4_CODCAMP,"UO_DESC"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_SCRIPT</td>
+<td>Script</td>
+<td colspan="2">Codigo do Script</td>
+<td colspan="4">Código do script que será associado a
+Lista.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td>IIF(!Empty(M->U4_SCRIPT),ExistCpo("SUZ",M->U4_SCRIPT),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/fuz.html">FUZ</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_EVENTO</td>
+<td>Evento</td>
+<td colspan="2">Codigo do Evento</td>
+<td colspan="4">Código do Evento que será associado a
+Lista.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td>IIF(!Empty(M->U4_EVENTO),EXISTCPO("ACD",M->U4_EVENTO),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/fcd.html">FCD</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_ASSUNTO</td>
+<td>Assunto</td>
+<td colspan="2">Assunto do Email</td>
+<td colspan="4">Título do assunto do e-mail.
+</td>
+<td>C</td>
+<td>80</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_CODMENS</td>
+<td>Codigo Msg.</td>
+<td colspan="2">Codigo da mensagem email</td>
+<td colspan="4">Código da mensagem de e-mail.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_ATTACH</td>
+<td>Anexos</td>
+<td colspan="2">Anexos</td>
+<td colspan="4">Arquivos anexos que serao enviados
+juntamente com o e-mail
+</td>
+<td>C</td>
+<td>254</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_FILTRO</td>
+<td>Filtro</td>
+<td colspan="2">Filtro utilizado</td>
+<td colspan="4">Filtro utilizado.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_CRONUM</td>
+<td>Codigo</td>
+<td colspan="2">Codigo</td>
+<td colspan="4">Código da ligaç„o
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_CLIENTE</td>
+<td>Operador Ant</td>
+<td colspan="2">Operador anterior</td>
+<td colspan="4">Código do cliente para esta ligaç„o
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_LOJA</td>
+<td>Chamadas</td>
+<td colspan="2">Qtd. de Chamadas Realizad</td>
+<td colspan="4">Código da Loja.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_NREDUZ</td>
+<td>Total Itens</td>
+<td colspan="2">Total de itens da Lista</td>
+<td colspan="4">Total de Itens da Lista
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>999999                                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_HORA2</td>
+<td>Hora Final</td>
+<td colspan="2">Hora final para contato</td>
+<td colspan="4">Hora final para execução da lista
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>99:99:99                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_NCONTAT</td>
+<td>Nome</td>
+<td colspan="2">Nome do contato</td>
+<td colspan="4">Nome do Contato
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_OCODISC</td>
+<td>Ano Nasc.</td>
+<td colspan="2">Ano de Nascimento</td>
+<td colspan="4">Ano do aniversário da lista de
+aniversario
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_NSTATUS</td>
+<td>Off</td>
+<td colspan="2">Off</td>
+<td colspan="4">Data Inicial e Data final da lista de
+aniversário.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_NIVEL</td>
+<td>Lembrete</td>
+<td colspan="2">Lembrete messenger</td>
+<td colspan="4">Lembrete Messenger
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_CODLIG</td>
+<td>Cod.Ligacao</td>
+<td colspan="2">Codigo da ligacao</td>
+<td colspan="4">Código do atendimento de origem quando
+for uma ligação (voz) pendente.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_PROSPEC</td>
+<td>Periodicidad</td>
+<td colspan="2">Periodicidade</td>
+<td colspan="4">Flag para controle da lista de
+Periodicidade. 1=Sim 2=Não
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_FAXARQ</td>
+<td>Off</td>
+<td colspan="2">Off</td>
+<td colspan="4">Nome do arquivo de fax que será enviado
+pela CTI.
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_MESSAGE</td>
+<td>Mensagem</td>
+<td colspan="2">Mensagem do e-mail</td>
+<td colspan="4">Mensagem do e-mail para listas do tipo
+Cross-Posting.
+</td>
+<td>M</td>
+<td>40</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_CONTATO</td>
+<td>Data Anivers</td>
+<td colspan="2">Data de Aniversario</td>
+<td colspan="4">Data de aniversário da lista de
+aniversário no formato DDMM (Dia e Mes).
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_ROTINA</td>
+<td>Rotina</td>
+<td colspan="2">Rotina Encerramento</td>
+<td colspan="4">Rotina de encerramento.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_ANTLST</td>
+<td>Antiga lista</td>
+<td colspan="2">Lista de origem</td>
+<td colspan="4">Número da lista de origem.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_BLQCONT</td>
+<td>Gera.Con.Blq</td>
+<td colspan="2">Gera Contato Bloqueado</td>
+<td colspan="4">Gera Lista Para Contatos Bloqueados?
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_SERVSLA</td>
+<td>Servico SLA</td>
+<td colspan="2">Servico de SLA do grupo</td>
+<td colspan="4">Informa o servico de SLA do grupo.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_ORIGEM</td>
+<td>Origem</td>
+<td colspan="2">Origem da Lista</td>
+<td colspan="4">Preencher com Nome da Origem de onde a
+Lista de Contato foi obtida.
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_CUSTO</td>
+<td>Custo</td>
+<td colspan="2">Custo da Lista</td>
+<td colspan="4">Preencher com Valor de custo da obtenção
+da Lista de Marketing.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_DTUPD</td>
+<td>Dt Modific</td>
+<td colspan="2">Dt Última Modifica</td>
+<td colspan="4">Preencher com Data da última modificação
+da Lista de Marketing.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_DTUTIL</td>
+<td>Dt Utiliza</td>
+<td colspan="2">Dt Última Utilização</td>
+<td colspan="4">Preencher com Data da última utilização
+da Lista de Marketing.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U4_ENTIDA</td>
+<td>Alias</td>
+<td colspan="2">Alias da Entidade</td>
+<td colspan="4">Preencher com Alias da Entidade
+relacionada a Lista de Marketing.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>SU6</td>
+<td colspan="2">U4_LISTA</td>
+<td colspan="2">U6_LISTA</td>
+</tr>
+<tr>
+<td>VCE</td>
+<td colspan="2">U4_MALADIR</td>
+<td colspan="2">VCE_MALADI</td>
+</tr>
+<tr>
+<td>VCE</td>
+<td colspan="2">U4_ETIQUET</td>
+<td colspan="2">VCE_ETIQUE</td>
+</tr>
+<tr>
+<td>AB9</td>
+<td colspan="2">U4_LISTA</td>
+<td colspan="2">AB9_TMKLST</td>
+</tr>
+<tr>
+<td>AO4</td>
+<td colspan="2">U4_FILIAL+U4_LISTA+U4_DATA</td>
+<td colspan="2">AO4_CHVREG</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

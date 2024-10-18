@@ -1,0 +1,521 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: VFA - Faixas do Acordo de Manutenção</title></head>
+<body>
+<font color="orange"><h2 id="VFA">Tabela: VFA - Faixas do Acordo de Manutenção</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Faixas do Acordo de Manutenção</b></td><td colspan="2"><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">VFA_FILIAL+VFA_CODCLI+VFA_LOJA+VFA_CATACO+STR(VFA_KILFAI)</td><td>Cod Cliente + Loja + Categ Acordo + Kil da Faixa</td><td></td></tr>
+<tr><td>2</td><td colspan="2">VFA_FILIAL+VFA_CODCLI+VFA_LOJA+STR(VFA_KILFAI)+VFA_CATACO</td><td>Cod Cliente + Loja + Kil da Faixa + Categ Acordo</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>VFA_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Filial
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VFA_CODCLI</td>
+<td>Cod Cliente</td>
+<td colspan="2">Codigo do Cliente</td>
+<td colspan="4">Código do Cliente
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>FG_Seek("SA1","M->VFA_CODCLI",1,.f.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/vsa.html">VSA</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VFA_LOJA</td>
+<td>Loja</td>
+<td colspan="2">Loja do Cliente</td>
+<td colspan="4">Loja do Cliente
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>FG_Seek("SA1","M->VFA_CODCLI+M->VFA_LOJA",1,.f.,"VFA_NOMCLI","A1_NREDUZ")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VFA_NOMCLI</td>
+<td>Nome</td>
+<td colspan="2">Nome do Cliente</td>
+<td colspan="4">Nome do Cliente
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!S20                                        </td>
+<td></td>
+<td>if(!Inclui,Posicione("SA1",1,xFilial("SA1")+VFA->VFA_CODCLI+VFA->VFA_LOJA,"A1_NREDUZ"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("SA1",1,xFilial("SA1")+VFA->VFA_CODCLI+VFA->VFA_LOJA,"A1_NREDUZ")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VFA_CATACO</td>
+<td>Categ Acordo</td>
+<td colspan="2">Categoria do Acordo</td>
+<td colspan="4">Código da categoria do acordo/contrato
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@E 999                                       </td>
+<td>FG_Strzero("M->VFA_CATACO",3).AND.FG_Seek("VF2","M->A1_COD+M->A1_LOJA+M->VFA_CATACO",1,.t.,"VFA_DESCAT","VF2_DESCAT")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/vf2.html">VF2</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VFA_DESCAT</td>
+<td>Descricao</td>
+<td colspan="2">Descricao</td>
+<td colspan="4">Descrição da categoria de acordo/con-
+trato
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!S20                                        </td>
+<td></td>
+<td>Posicione("VF2",1,xFilial("VF2")+SA1->A1_COD+SA1->A1_LOJA+VFA->VFA_CATACO,"VF2_DESCAT")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("VF2",1,xFilial("VF2")+VFA->VFA_CODCLI+VFA->VFA_CATACO,"VF2_DESCAT")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VFA_CODMAR</td>
+<td>Marca</td>
+<td colspan="2">Codigo da Marca</td>
+<td colspan="4">Código da Marca
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!S3                                         </td>
+<td>VAZIO() .OR. FG_Seek("VE1","M->VFA_CODMAR",1,.f.,"VFA_DESMAR","VE1_DESMAR")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ve1.html">VE1</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VFA_DESMAR</td>
+<td>Descricao</td>
+<td colspan="2">Descricao da Marca</td>
+<td colspan="4">Descrição da Marca.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!S30                                        </td>
+<td></td>
+<td>Posicione("VE1",1,xFilial("VE1")+VFA->VFA_CODMAR,"VE1_DESMAR")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("VE1",1,xFilial("VE1")+VFA->VFA_CODMAR,"VE1_DESMAR")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VFA_KILFAI</td>
+<td>Kil da Faixa</td>
+<td colspan="2">Kilometragem da Faixa</td>
+<td colspan="4">Limite Superior da Kilometragem da
+Faixa
+</td>
+<td>N</td>
+<td>8</td>
+<td>0</td>
+<td>@E 99,999,999                                </td>
+<td>M->VFA_KILFAI > 0 .AND. ExistChav("VFA",SA1->A1_COD+SA1->A1_LOJA+M->VFA_CATACO+STR(M->VFA_KILFAI),1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VFA_DATVAL</td>
+<td>Dt Validade</td>
+<td colspan="2">Data de Validade</td>
+<td colspan="4">Data de Validade. Campo documentacional
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>M->VFA_DATVAL >= DDATABASE</td>
+<td>ctod("  /  /  ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VFA_VALFAI</td>
+<td>Vl Faixa</td>
+<td colspan="2">Valor da Faixa</td>
+<td colspan="4">Valor da faixa de kilometragem. Este
+va-lor será usado para calcular o valor
+daskilometragens para os  veiculos  em
+con-trato de manutenção, no momento do
+fatu-ramento
+</td>
+<td>N</td>
+<td>8</td>
+<td>4</td>
+<td>@E 999.9999                                  </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VFA_GRUSER</td>
+<td>Grupo Servic</td>
+<td colspan="2">Grupo de Servico</td>
+<td colspan="4">Grupo do Servico
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!S2                                         </td>
+<td>FG_Seek("VOS","M->VFA_CODMAR+M->VFA_GRUSER",1,.f.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/vs7.html">VS7</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VFA_CODSER</td>
+<td>Cod Servico</td>
+<td colspan="2">Codigo do Servico</td>
+<td colspan="4">Código do Servico
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!S15                                        </td>
+<td>FG_Seek("VO6","FG_MARSRV(M->VFA_CODMAR)+M->VFA_CODSER",2,.f.,"VFA_DESSER","VO6_DESSER")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/vo8.html">VO8</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VFA_DESSER</td>
+<td>Descricao</td>
+<td colspan="2">Descricao do Servico</td>
+<td colspan="4">Descrição do Servico.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!S30                                        </td>
+<td></td>
+<td>Posicione("VO6",2,xFilial("VO6")+FG_MARSRV(VFA->VFA_CODMAR,VFA->VFA_CODSER)+VFA->VFA_CODSER,"VO6_DESSER")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("VO6",2,xFilial("VO6")+VFA->VFA_CODMAR+VFA->VFA_CODSER,"VO6_DESSER")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VFA_TIPSER</td>
+<td>Tipo Servico</td>
+<td colspan="2">Tipo de Servico</td>
+<td colspan="4">Tipo de Servico
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!S3                                         </td>
+<td>FG_Seek("VOK","M->VFA_TIPSER",1,.f.,"VFA_DESTPS","VOK_DESSER")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/vok.html">VOK</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VFA_DESTPS</td>
+<td>Descricao</td>
+<td colspan="2">Descricao Tipo de Servico</td>
+<td colspan="4">Descrição do Tipo de Servico.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!S20                                        </td>
+<td></td>
+<td>Posicione("VOK",1,xFilial("VOK")+VFA->VFA_TIPSER,"VOK_DESSER")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("VOK",1,xFilial("VOK")+VFA->VFA_TIPSER,"VOK_DESSER")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

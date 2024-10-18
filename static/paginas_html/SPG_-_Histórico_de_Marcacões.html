@@ -1,0 +1,1202 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: SPG - Histórico de Marcacões</title></head>
+<body>
+<font color="orange"><h2 id="SPG">Tabela: SPG - Histórico de Marcacões</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Histórico de Marcacões</b></td><td colspan="2"><b></b></td><td><b>PONA040</b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">PG_FILIAL+PG_MAT+PG_ORDEM+Dtos(PG_DATA)+Str(PG_HORA,5,2)</td><td>Matricula + Ordem + Data + Horario</td><td></td></tr>
+<tr><td>2</td><td colspan="2">PG_FILIAL+PG_MAT+DTOS(PG_DATA)+STR(PG_HORA,5,2)</td><td>Matricula + Data + Horario</td><td></td></tr>
+<tr><td>3</td><td colspan="2">PG_FILIAL+PG_MAT+DTOS(PG_DATAAPO)+DTOS(PG_DATA)+STR(PG_HORA,5,2)</td><td>Matricula + Data Apont. + Data + Horario</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>PG_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Informe o Código da Filial.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PG_MAT</td>
+<td>Matricula</td>
+<td colspan="2">Numero da Matricula</td>
+<td colspan="4">Corresponde a Matrícula do funcionário.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .And. EXISTCHAV("SRA")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/121.html">121</a></td>
+<td></td>
+<td></td>
+<td>#PG_MAT    <>'      '</td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PG_DATA</td>
+<td>Data</td>
+<td colspan="2">Data da marcação</td>
+<td colspan="4">Corresponde a data em que foi efetuada a
+marcação.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>NaoVazio()</td>
+<td>Ctod("//")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td>#PG_DATA   <>'        '</td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>PG_HORA</td>
+<td>Horario</td>
+<td colspan="2">Horario da marcação</td>
+<td colspan="4">Informe as Horas em que foi efetuada a
+marcação.
+</td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td>VldHora(M->PG_HORA)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td>#PG_HORA   >=0</td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PG_CC</td>
+<td>Centro Custo</td>
+<td colspan="2">Codigo do Centro de Custo</td>
+<td colspan="4">Informe o Código do Centro de Custo.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. Ctb105CC()</td>
+<td>CalendRetCpo("PG_CC")</td>
+<td><a href="/tabelas_protheus/f3/ctt.html">CTT</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/004.html">004</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PG_ORDEM</td>
+<td>Ordem</td>
+<td colspan="2">Ordem da Classificacao</td>
+<td colspan="4">Este campo é que determina a qual dia as
+marcaçöes fazem parte. As marcaçöes são
+ordenadas a Partir do Calendário de
+Marcaçöes definido para o Funcionário.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td>NaoVazio()</td>
+<td>CalendRetCpo("PG_ORDEM")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>PG_FLAG</td>
+<td>Flag</td>
+<td colspan="2">Flag da Geracao</td>
+<td colspan="4">Corresponde ao "Flag" de Geração das
+Marcaçöes.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>!                                            </td>
+<td></td>
+<td>"I"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PG_APONTA</td>
+<td>Marc. Apont.</td>
+<td colspan="2">Marcacao Apontada</td>
+<td colspan="4">Define se a marcação já foi  apontada ou
+não.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>!                                            </td>
+<td>Vazio() .or. Pertence("SN")</td>
+<td>"N"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>#PonRetOpcBox(05)</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PG_TURNO</td>
+<td>Turno</td>
+<td colspan="2">Turno de trabalho</td>
+<td colspan="4">Informe Turno de Trabalho do Funcionário
+.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SR6")</td>
+<td>CalendRetCpo("PG_TURNO")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PG_RELOGIO</td>
+<td>Nro. Relógio</td>
+<td colspan="2">Número do Relógio</td>
+<td colspan="4">Informe o Número do Relógio.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td>EXISTCPO("SP0")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sp0.html">SP0</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PG_FUNCAO</td>
+<td>Funcao</td>
+<td colspan="2">Função do relógio</td>
+<td colspan="4">Informe a Função do relógio.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PG_GIRO</td>
+<td>Sentido Giro</td>
+<td colspan="2">Sentido do giro relógio</td>
+<td colspan="4">Informe o Sentido do giro relógio.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>!                                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PG_TPMARCA</td>
+<td>Tp Marcacao</td>
+<td colspan="2">Tipo da Marcacao</td>
+<td colspan="4">Corresponde às Marcações dos
+Funcionários. Ex.:
+1E - 1a. Entrada
+1S - 1a. Saída
+2E - 2a. Entrada
+2S - 2a. Saída
+...
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td>#PonRetOpcBox(06)</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PG_PROCES</td>
+<td>Cod Processo</td>
+<td colspan="2">Codigo Processo</td>
+<td colspan="4">Identifica o tipo de pagamento por
+contrato.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>                                             </td>
+<td>PGProcesVld()</td>
+<td>PGProcesInit()</td>
+<td><a href="/tabelas_protheus/f3/rcj.html">RCJ</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PG_ROTEIR</td>
+<td>Roteiro Calc</td>
+<td colspan="2">Roteiro Cálculo</td>
+<td colspan="4">Corresponde ao código do
+procedimento/roteiro de cálculo. No
+SIGAPON, este campo possui o conteúdo
+padrão 'PON'.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PGRoteirVld()</td>
+<td>PGRoteirInit()</td>
+<td><a href="/tabelas_protheus/f3/sry.html">SRY</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td>#PG_ROTEIR <>'   '</td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PG_PERIODO</td>
+<td>Cod. Periodo</td>
+<td colspan="2">Codigo do Periodo</td>
+<td colspan="4">Identifica a que periodo de cálculo está
+se referenciando o lançamento.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td>PGPeriodoVld()</td>
+<td>PGPeriodoInit()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PG_NUMPAG</td>
+<td>Numero Pagto</td>
+<td colspan="2">Numero Pagamento</td>
+<td colspan="4">Identifica o numero de pagamento de um
+periodo de calculo.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>PGNumPagInit()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td>#PG_NUMPAG <>'  '</td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PG_DEPTO</td>
+<td>Cod. Depto</td>
+<td colspan="2">Codigo Departamento</td>
+<td colspan="4">Neste campo deve ser digitado:
+Código da unidade de trabalho.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PGDeptoVld()</td>
+<td>PGDeptoInit()</td>
+<td><a href="/tabelas_protheus/f3/sqb.html">SQB</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PG_POSTO</td>
+<td>Cod. Posto</td>
+<td colspan="2">Codigo do Posto</td>
+<td colspan="4">Número que identifica o posto, ou seja,
+os locais dentro de um centro de custo.
+Esses postos são formados por uma
+numeração sequencial e única dentro da
+tabela.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PGPostoVld()</td>
+<td>PGPostoInit()</td>
+<td><a href="/tabelas_protheus/f3/rcl.html">RCL</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PG_CODFUNC</td>
+<td>Cod.Funcao</td>
+<td colspan="2">Codigo da Funcao</td>
+<td colspan="4">Informe o Código da função do
+funcionário de  acordo com tabela
+definida no Cadastro  de Funçöes.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PGFuncVld()</td>
+<td>PGFuncInit()</td>
+<td><a href="/tabelas_protheus/f3/srj.html">SRJ</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PG_DATAAPO</td>
+<td>Data Apont.</td>
+<td colspan="2">Data de Apontamento</td>
+<td colspan="4">Informe a data de apontamento.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>PGDataApoInit()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PG_SEMANA</td>
+<td>Sequencia</td>
+<td colspan="2">Sequencia de Turno</td>
+<td colspan="4">Corresponde a seqüência/semana do turno
+de trabalho. Por exemplo, um turno
+poderá apresentar 7 seqüências para
+atender uma escala de trabalho onde a
+cada semana um dia diferente é o dia da
+folga. Nesse caso, a primeira semana
+teria o domingo como o dia de folga, a
+segunda semana a segunda-feira seria o
+dia de folga e assim por diante.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PG_NUMREP</td>
+<td>Número REP</td>
+<td colspan="2">Número REP</td>
+<td colspan="4">Indica o número de fabricação do REP
+onde foi feito o registro. O REP ?
+Registrador Eletrônico de Ponto - é o
+equipamento de automação utilizado
+exclusivamente para o registro de
+jornada de trabalho e com capacidade
+para emitir documentos fiscais e
+realizar controles de natureza fiscal,
+referentes à entrada e à saída de
+empregados nos locais de trabalho.
+</td>
+<td>C</td>
+<td>17</td>
+<td>0</td>
+<td>99999999999999999                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PG_TPMCREP</td>
+<td>Tp.Marc.REP</td>
+<td colspan="2">Tipo Marcacao do REP</td>
+<td colspan="4">Quando apresentar o conteúdo "D"
+significa que  o registro foi
+DESCONSIDERADO.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PG_SEQJRN</td>
+<td>Seq.Jorn.</td>
+<td colspan="2">Sequencia da Jornada</td>
+<td colspan="4">Indica o número seqüencial por empregado
+e jornada para o conjunto Entrada/Saída.
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PG_TIPOREG</td>
+<td>Tipo Reg.</td>
+<td colspan="2">Tipo Registro.</td>
+<td colspan="4">Indica o tipo de registro: "O" para
+registro eletrônico ORIGINAL, "I" para
+registro INCLUÍDO por digitação, "P"
+para intervalo PRÉ-ASSINALADO.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PG_MOTIVRG</td>
+<td>Motivo Reg.</td>
+<td colspan="2">Mot.Modificação Registro</td>
+<td colspan="4">Indica o motivo da inclusão ou
+desconsideração da marcação.
+</td>
+<td>C</td>
+<td>100</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PG_EMPORG</td>
+<td>Empresa Orig</td>
+<td colspan="2">Empresa Origem</td>
+<td colspan="4">Corresponde ao código da empresa onde a
+marcação foi registrada.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PG_FILORG</td>
+<td>Filial Orig.</td>
+<td colspan="2">Filial Origem</td>
+<td colspan="4">Corresponde ao código da filial onde a
+marcação foi registrada.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PG_MATORG</td>
+<td>Mat. Orig.</td>
+<td colspan="2">Mat. Origem</td>
+<td colspan="4">Corresponde ao código da matricula onde
+a marcação foi registrada.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/121.html">121</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PG_DHORG</td>
+<td>Data Hora</td>
+<td colspan="2">Data Hora Origem</td>
+<td colspan="4">Corresponde a combinação Data e Hora
+(AAMMDDHHmm) de quando a marcação foi
+registrada. Onde:
+AA ? Ano
+MM ? Mês
+DD ? Dia
+HH ? Hora
+mm ? Minuto
+</td>
+<td>C</td>
+<td>12</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PG_IDORG</td>
+<td>ID. Org</td>
+<td colspan="2">ID. Org</td>
+<td colspan="4">Corresponde a seqüência do registro da
+marcação. Por exemplo, se a leitura for
+por filtro, cada arquivo TXT receberá
+uma identificação exclusiva iniciando
+01.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PG_DATAALT</td>
+<td>Dt.Log</td>
+<td colspan="2">Data Log</td>
+<td colspan="4">Indica a data da ocorrência.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PG_HORAALT</td>
+<td>Hora Log</td>
+<td colspan="2">Hora do Log</td>
+<td colspan="4">Indica a hora da ocorrência no formato
+HHMMSS.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PG_USUARIO</td>
+<td>Usuário Log</td>
+<td colspan="2">Usuário Log</td>
+<td colspan="4">Indica o usuário autor da inclusão ou
+modificação do registro.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PG_LATITU</td>
+<td>Latitude</td>
+<td colspan="2">Latitude</td>
+<td colspan="4">Latitude quando a marcação tiver sido
+realizada por geolocalização.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PG_LONGIT</td>
+<td>Longitude</td>
+<td colspan="2">Longitude</td>
+<td colspan="4">Longitude quando a marcação tiver sido
+realizada por geolocalização.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PG_PAPONTA</td>
+<td>Periodo Apon</td>
+<td colspan="2">Periodo de Apontamento</td>
+<td colspan="4">Define o Período de Apontamento ao qual
+a marcação pertence.
+</td>
+<td>C</td>
+<td>16</td>
+<td>0</td>
+<td>9999999999999999                             </td>
+<td>PGPapontaVld()</td>
+<td>PGPapontaInit()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>PGPapontaWhen()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

@@ -1,0 +1,295 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: TK7 - ENCAMINHAMENTO AO ESPECIALISTA</title></head>
+<body>
+<font color="orange"><h2 id="TK7">Tabela: TK7 - ENCAMINHAMENTO AO ESPECIALISTA</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>ENCAMINHAMENTO AO ESPECIALISTA</b></td><td colspan="2"><b>TK7_FILIAL+TK7_NUMFIC+TK7_CODESP+DTOS(TK7_DATAEN)</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">TK7_FILIAL+TK7_NUMFIC+TK7_CODESP+DTOS(TK7_DATAEN)</td><td>Ficha Medica + Cod. Espec. + Data Encam.</td><td></td></tr>
+<tr><td>2</td><td colspan="2">TK7_FILIAL+TK7_CODESP+TK7_NUMFIC+DTOS(TK7_DATAEN)</td><td>Cod. Espec. + Ficha Medica + Data Encam.</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>TK7_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Filial do Sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TK7_NUMFIC</td>
+<td>Ficha Medica</td>
+<td colspan="2">Ficha Medica</td>
+<td colspan="4">Ficha Médica do paciente encaminhado ao
+especialista.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>999999999                                    </td>
+<td>MDT925FIC()</td>
+<td>If( IsInCallStack('MDTA155A'), M->TMT_NUMFIC, Space( Len( TMT->TMT_NUMFIC ) ) )</td>
+<td><a href="/tabelas_protheus/f3/tm0.html">TM0</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tk7_numfic.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>MDT925WHEN()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TK7_NOMFIC</td>
+<td>Nome</td>
+<td colspan="2">Nome</td>
+<td colspan="4">Nome do paciente encaminhado ao
+especialista.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Posicione('TM0',1,xFilial('TM0')+M->TK7_NUMFIC,'TM0_NOMFIC')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("TM0",1,XFILIAL("TM0")+TK7->TK7_NUMFIC,"TM0_NOMFIC")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TK7_CODESP</td>
+<td>Cod. Espec.</td>
+<td colspan="2">Codigo Especialidade</td>
+<td colspan="4">Código da Especialidade.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>MDT925ESP()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tog.html">TOG</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tk7_codesp.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TK7_NOMESP</td>
+<td>Nome Espec.</td>
+<td colspan="2">Especialidade</td>
+<td colspan="4">Nome da Especialidade Médica.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,SUBSTR(POSICIONE("TOG",1,XFILIAL("TOG")+TK7->TK7_CODESP,"TOG_NOME"),1,20),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("TOG",1,XFILIAL("TOG")+TK7->TK7_CODESP,"TOG_NOME")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TK7_DATAEN</td>
+<td>Data Encam.</td>
+<td colspan="2">Data Encaminhamento</td>
+<td colspan="4">Data do encaminhamento ao especialista.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>MDTA925EN()</td>
+<td>dDataBase</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TK7_DATAEX</td>
+<td>Data Exame</td>
+<td colspan="2">Data dos Exames</td>
+<td colspan="4">Data de realização dos exames ou
+diagnóstico médico.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>MDTA925EX()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TK7_USERGI</td>
+<td>Log de Inclu</td>
+<td colspan="2">Log de Inclusão</td>
+<td colspan="4">Indica código criptografado do usuário
+de inclusão do registro.
+</td>
+<td>C</td>
+<td>17</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

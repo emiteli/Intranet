@@ -1,0 +1,577 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: JCJ - Apontamento de Horas de Evento</title></head>
+<body>
+<font color="orange"><h2 id="JCJ">Tabela: JCJ - Apontamento de Horas de Evento</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Apontamento de Horas de Evento</b></td><td colspan="2"><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">JCJ_FILIAL+JCJ_COD+JCJ_MATPRF+DTOS(JCJ_DATAI)</td><td>Codigo + Matr. Profes + Data Inicial</td><td></td></tr>
+<tr><td>2</td><td colspan="2">JCJ_FILIAL+DTOS(JCJ_DATAF)</td><td>Data Final</td><td></td></tr>
+<tr><td>3</td><td colspan="2">JCJ_FILIAL+DTOS(JCJ_DATAI)</td><td>Data Inicial</td><td></td></tr>
+<tr><td>4</td><td colspan="2">JCJ_FILIAL+JCJ_MATPRF</td><td>Matr. Profes</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>JCJ_FILIAL</td>
+<td>FILIAL</td>
+<td colspan="2">Filial</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JCJ_COD</td>
+<td>Codigo</td>
+<td colspan="2">Codigo do Projeto</td>
+<td colspan="4">Informe o código do projeto.
+Pressione F3 para efetuar a consulta.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GEExistCpo("JCI")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/jci.html">JCI</a></td>
+<td><a href="/tabelas_protheus/gatilhos/jcj_cod.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JCJ_DESPRO</td>
+<td>Descr.Projet</td>
+<td colspan="2">Descricao do Projeto</td>
+<td colspan="4">Informe a Descrição do Projeto
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui,"",Posicione("JCI",1,xfilial("JCI")+JCJ->JCJ_COD,"JCI_DESC"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("JCI",1,xFilial("JCI")+JCJ->JCJ_COD,"JCI_DESC")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JCJ_MATPRF</td>
+<td>Matr. Profes</td>
+<td colspan="2">Professor</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GEExistCpo("SRA")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/j2b.html">J2B</a></td>
+<td><a href="/tabelas_protheus/gatilhos/jcj_matprf.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JCJ_NOME</td>
+<td>Nome Profes.</td>
+<td colspan="2">Nome</td>
+<td colspan="4">Informe o Nome do Professor
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui,"",Posicione("SRA",1,xFilial("SRA")+JCJ->JCJ_MATPRF, "RA_NOME"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("SRA",1,xFilial("SRA")+JCJ->JCJ_MATPRF, "RA_NOME")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JCJ_DATAI</td>
+<td>Data Inicial</td>
+<td colspan="2">Inicio do tarefa</td>
+<td colspan="4">Informe a data de início do projeto.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>ExistChav("JCJ",M->JCJ_COD+M->JCJ_MATPRF+DTOS(M->JCJ_DATAI)).And.FreeForUse("JCJ",M->JCJ_COD+M->JCJ_MATPRF+DTOS(M->JCJ_DATAI))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JCJ_DATAF</td>
+<td>Data Final</td>
+<td colspan="2">Final da tarefa</td>
+<td colspan="4">Informe a data do término do projeto.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>M->JCJ_DATAF >= M->JCJ_DATAI</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JCJ_HORAS</td>
+<td>Horas</td>
+<td colspan="2">Horas</td>
+<td colspan="4">Quantidade de horas despendidas no
+projeto.
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>@E 999.99                                    </td>
+<td>AC620VerVl("H")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JCJ_VALOR</td>
+<td>Valor</td>
+<td colspan="2">Valor</td>
+<td colspan="4">Valor do projeto.
+</td>
+<td>N</td>
+<td>15</td>
+<td>2</td>
+<td>@E 999,999,999,999.99                        </td>
+<td>AC620VerVl("V")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>AC620VerWh("V")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JCJ_TIPO</td>
+<td>Mes/Semana</td>
+<td colspan="2">Mensal/Semanal</td>
+<td colspan="4">Informe o Tipo.
+1=Mês; 2=Semana.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/jcj_tipo.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Mes;2=Semana</td>
+<td>AC620VerWh("H")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JCJ_REG</td>
+<td>Registro</td>
+<td colspan="2">Registro</td>
+<td colspan="4">Informe o Registro
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>GetSXENum("JCJ","JCJ_REG")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JCJ_UNIDAD</td>
+<td>Unidade</td>
+<td colspan="2">Unidade</td>
+<td colspan="4">Selecione a unidade onde será ministrado
+o projeto.
+Pressione F3 para efetuar a consulta.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GEExistCpo("JA3")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ja3.html">JA3</a></td>
+<td><a href="/tabelas_protheus/gatilhos/jcj_unidad.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JCJ_DUNID</td>
+<td>Des. Unidade</td>
+<td colspan="2">Descricao da Unidade</td>
+<td colspan="4">Informa a Descrição da Unidade
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!Inclui,Posicione("JA3",1,xFilial("JA3")+JCJ->JCJ_UNIDAD,"JA3_DESLOC"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("JA3",1,xFilial("JA3")+JCJ->JCJ_UNIDAD,"JA3_DESLOC")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JCJ_CURSO</td>
+<td>Curso</td>
+<td colspan="2">Codigo do Curso</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .or. GEExistCpo("JAF",M->JCJ_CURSO)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/j20.html">J20</a></td>
+<td><a href="/tabelas_protheus/gatilhos/jcj_curso.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JCJ_DCURSO</td>
+<td>Desc. Curso</td>
+<td colspan="2">Descricao do Curso</td>
+<td colspan="4">Informa a Descrição do Curso
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!Inclui,Posicione("JAF",1,xFilial("JAF")+JCJ->JCJ_CURSO,"JAF_DESC"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("JAF",1,xFilial("JAF")+JCJ->JCJ_CURSO,"JAF_DESC")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JCJ_VERSAO</td>
+<td>Versao Curso</td>
+<td colspan="2">Versao Curso</td>
+<td colspan="4">Informa a vesão do Curso Vigente
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JCJ_CCUSTO</td>
+<td>Centro Custo</td>
+<td colspan="2">Codigo Centro de Custo</td>
+<td colspan="4">Verifique o centro de custo onde será
+contabilizado o valor do projeto.
+Pressione F3 para efetuar a consulta.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .or. GEExistCpo("SI3")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/si3.html">SI3</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/004.html">004</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JCJ_OBSERV</td>
+<td>Observacao</td>
+<td colspan="2">Observacao</td>
+<td colspan="4">Observações Gerais.
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

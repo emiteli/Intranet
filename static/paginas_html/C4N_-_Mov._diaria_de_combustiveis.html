@@ -1,0 +1,534 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: C4N - Mov. diaria de combustiveis</title></head>
+<body>
+<font color="orange"><h2 id="C4N">Tabela: C4N - Mov. diaria de combustiveis</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Mov. diaria de combustiveis</b></td><td colspan="2"><b>C4N_FILIAL+C4N_ID</b></td><td><b>TAFA085</b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">C4N_FILIAL+C4N_CODITE+DTOS(C4N_DTFECH)</td><td>Id. item + Dt Moviment.</td><td></td></tr>
+<tr><td>2</td><td colspan="2">C4N_FILIAL+DTOS(C4N_DTFECH)</td><td>Dt Moviment.</td><td></td></tr>
+<tr><td>3</td><td colspan="2">C4N_FILIAL+C4N_ID</td><td>ID</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>C4N_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Informar o Código da Filial
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C4N_ID</td>
+<td>ID</td>
+<td colspan="2">Identificador Registro</td>
+<td colspan="4">Deve representar o código de
+identificação do registro. Este código é
+controlado internamente pelo sistema de
+forma incremental e único por filial.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>GetSx8Num("C4N","C4N_ID")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C4N_CODITE</td>
+<td>Id. item</td>
+<td colspan="2">Id. Item</td>
+<td colspan="4">Deve representar o código identificador
+do item para controle interno do
+sistema.
+</td>
+<td>C</td>
+<td>36</td>
+<td>0</td>
+<td>                                             </td>
+<td>XFUNVldCmp("C1L",3).AND.XFUNVldUni("C4N",1,M->C4N_CODITE+DTOS(FWFLDGET("C4N_DTFECH")))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/c4n_codite.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/085.html">085</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>C4N_ITEM</td>
+<td>Cód. Item</td>
+<td colspan="2">Código do Item</td>
+<td colspan="4">Deve representar o código do item
+A informação deste campo corresponde á
+um código de identificação conforme
+respectivo cadastro.
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>XFUNVldCmp("C1L",1).AND.XFUNVldUni("C4N",1,POSICIONE("C1L",1,XFILIAL("C1L")+M->C4N_ITEM,"C1L_ID")+DTOS(FWFLDGET("C4N_DTFECH")))</td>
+<td>IF(!INCLUI.AND.!EMPTY(C4N->C4N_CODITE),POSICIONE("C1L",3,XFILIAL("C1L")+C4N->C4N_CODITE,"C1L_CODIGO"),"")</td>
+<td><a href="/tabelas_protheus/f3/c1l1.html">C1L1</a></td>
+<td><a href="/tabelas_protheus/gatilhos/c4n_item.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("C1L",3,XFILIAL("C1L")+C4N->C4N_CODITE,"C1L_CODIGO")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>C4N_DCODIT</td>
+<td>Des Cod Item</td>
+<td colspan="2">Des Codigo do Item</td>
+<td colspan="4">Deve representar a descrição do item
+</td>
+<td>C</td>
+<td>220</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>XFUNRelac(13,'C4N_CODITE')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C4N_DTFECH</td>
+<td>Dt Moviment.</td>
+<td colspan="2">Data de Movimentação</td>
+<td colspan="4">Deve representar a data do fechamento da
+movimentação
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>XFUNVldUni("C4N",1,FWFLDGET("C4N_CODITE")+DTOS(M->C4N_DTFECH))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>C4N_ESTQAB</td>
+<td>Estq Aberto</td>
+<td colspan="2">Estoque Aberto</td>
+<td colspan="4">Deve representar o estoque do início do
+dia, mesmo que tenha ocorrido
+intervenção posterior.
+</td>
+<td>N</td>
+<td>16</td>
+<td>3</td>
+<td>@E 999,999,999,999.999                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/c4n_estqab.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C4N_VOLENT</td>
+<td>Vol Recebido</td>
+<td colspan="2">Volume Recebido</td>
+<td colspan="4">Deve representar o volume de combustível
+recebido no dia da movimentação
+</td>
+<td>N</td>
+<td>16</td>
+<td>3</td>
+<td>@E 999,999,999,999.999                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/c4n_volent.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C4N_VOLDIS</td>
+<td>Vol Disponiv</td>
+<td colspan="2">Volume Disponivel</td>
+<td colspan="4">Deve representar o volume disponível,
+que corresponde à soma dos campos
+C4N_ESTQAB + C4N_VOLENT
+</td>
+<td>N</td>
+<td>16</td>
+<td>3</td>
+<td>@E 999,999,999,999.999                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/c4n_voldis.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C4N_VOLSAI</td>
+<td>Vol Saida</td>
+<td colspan="2">Volume de Saida</td>
+<td colspan="4">Deve representar o volume (em litros)
+total das saídas, que corresponde à soma
+dos registros de volume de vendas.
+</td>
+<td>N</td>
+<td>16</td>
+<td>3</td>
+<td>@E 999,999,999,999.999                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/c4n_volsai.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C4N_ESTQES</td>
+<td>Estq Escrit.</td>
+<td colspan="2">Estoque Escritural</td>
+<td colspan="4">Deve representar o estoque escritural,
+que corresponde ao valor constante no
+campo C4N_VOLDIS menos o valor constante
+no campo C4N_VOLSAI
+</td>
+<td>N</td>
+<td>16</td>
+<td>3</td>
+<td>@E 999,999,999,999.999                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C4N_VAJPER</td>
+<td>Val Perda</td>
+<td colspan="2">Valor de Perda</td>
+<td colspan="4">Deve representar o valor da perda, em
+litros
+</td>
+<td>N</td>
+<td>16</td>
+<td>3</td>
+<td>@E 999,999,999,999.999                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C4N_VAJGAN</td>
+<td>Val Ganho</td>
+<td colspan="2">Valor do Ganho</td>
+<td colspan="4">Deve representar o valor do ganho, em
+litros
+</td>
+<td>N</td>
+<td>16</td>
+<td>3</td>
+<td>@E 999,999,999,999.999                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C4N_FECHFI</td>
+<td>Estq Fecham.</td>
+<td colspan="2">Estoque Fechamento</td>
+<td colspan="4">Deve representar o estoque de
+fechamento, em litros
+</td>
+<td>N</td>
+<td>16</td>
+<td>3</td>
+<td>@E 999,999,999,999.999                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C4N_STATUS</td>
+<td>Status Reg.</td>
+<td colspan="2">Status do registro</td>
+<td colspan="4">Campo de uso interno do sistema.
+Deve representar neste campo o status do
+registro:
+(Vazio) = Registro Novo
+0 = Registro Válido (integração)
+1 = Registro invalido (integração)
+2 = Registro transmitido
+3 = Registro transmitido com
+inconsistência(s)
+4 = Registro transmitido válido
+9 = Em Processamento
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence(" 012349")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Reg.V�lido;1=Reg.Inv�lido;2=Reg.Transmitido;3=Reg.Transmitido com inconsist�ncia;4=Reg.Transmitido v�lido;9=Em Processamento</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/079.html">079</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>C4O</td>
+<td colspan="2">C4N_ID</td>
+<td colspan="2">C4O_ID</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

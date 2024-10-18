@@ -1,0 +1,716 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: G6H - Cabecalho das Faturas Aereas</title></head>
+<body>
+<font color="orange"><h2 id="G6H">Tabela: G6H - Cabecalho das Faturas Aereas</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Cabecalho das Faturas Aereas</b></td><td colspan="2"><b>G6H_FILIAL+G6H_FATURA+DTOS(G6H_EMISSA)+G6H_FORNEC+G6H_LOJA</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">G6H_FILIAL+G6H_FATURA+DTOS(G6H_EMISSA)+G6H_FORNEC+G6H_LOJA</td><td>Fatura + Data Emissao + Fornecedor + Loja Fornece</td><td></td></tr>
+<tr><td>2</td><td colspan="2">G6H_FILIAL+G6H_FATFOR</td><td>Fatura Forne</td><td></td></tr>
+<tr><td>3</td><td colspan="2">G6H_FILIAL+DTOS(G6H_EMISSA)+G6H_FORNEC+G6H_LOJA</td><td>Data Emissao + Fornecedor + Loja Fornece</td><td></td></tr>
+<tr><td>4</td><td colspan="2">G6H_FILIAL+DTOS(G6H_VENCTO)+G6H_FORNEC+G6H_LOJA</td><td>Vencimento + Fornecedor + Loja Fornece</td><td></td></tr>
+<tr><td>5</td><td colspan="2">G6H_FILIAL+G6H_ARQUIV</td><td>Arquivo</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>G6H_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Filial do Sistema
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>G6H_FATURA</td>
+<td>Fatura</td>
+<td colspan="2">Codigo da Fatura Aerea</td>
+<td colspan="4">Codigo interno da Fatura Aerea
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIf(IsInCallStack("FWMILEIMPORT"),"",TurGetNum("G6H","G6H_FATURA"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/018.html">018</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>G6H_TIPO</td>
+<td>Tipo Importa</td>
+<td colspan="2">Tipo de Importacao</td>
+<td colspan="4">Tipo de Importacao:
+1=Diretorio
+2=Arquivo
+3=Fisico
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("123")</td>
+<td>IIf(!IsBlind(), "3", "")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Diretorio;2=Arquivo;3=Fisico</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>G6H_LAYOUT</td>
+<td>Layout</td>
+<td colspan="2">Layout da Fatura</td>
+<td colspan="4">Layout da Fatura. Opcoes:
+1=BSP Detalhado
+2=BSP Simplificado
+3=Aereo Manual
+4=Aereo Localizador
+5=Outros
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("1234567")</td>
+<td>IIf(!IsBlind(), "3", "")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=BSP Detalhado;2=BSP Simplificado;3=Aereo Manual;4=Aereo Localizador;5=Outros;6=BSP AVIANCA;7=BSP TAM</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>G6H_MES</td>
+<td>Mes</td>
+<td colspan="2">Mes de Referencia Fatura</td>
+<td colspan="4">Mes de Referencia da Fatura
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td>Val(M->G6H_MES) >= 1 .and. Val(M->G6H_MES) <= 12</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>G6H_ANO</td>
+<td>Ano</td>
+<td colspan="2">Ano de Referencia Fatura</td>
+<td colspan="4">Mes de Referencia da Fatura
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>9999                                         </td>
+<td>Iif(!IsInCallStack("TURA038IMP"),Val(M->G6H_ANO) >= Year(dDataBase) - 1,.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/g6h_ano.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>G6H_PERCID</td>
+<td>Periodicidad</td>
+<td colspan="2">Periodicidade</td>
+<td colspan="4">Informe a Periodicidade. Opcoes:
+1=Semanal
+2=Decendial
+3=Quinzenal
+4=Mensal
+5=Duo Decendial
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12345")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/g6h_percid.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Semanal;2=Decendial;3=Quinzenal;4=Mensal;5=Duo Decendial</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>G6H_PERIOD</td>
+<td>Periodo</td>
+<td colspan="2">Periodo da Fatura</td>
+<td colspan="4">Infome o Periodo de acordo com a
+periodicidade escolhida. Sendo:
+Semanal: de 1 a 4
+Decendial: de 1 a 3;
+Quinzenal: de 1 a 2;
+Mensal: apenas 1 e
+Duo Decendialde: de 1 a 2
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>IIf(FindFunction("TURA038PER"), TURA038Per(), .T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=1;2=2;3=3;4=4;5=5</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>G6H_FATFOR</td>
+<td>Fatura Forne</td>
+<td colspan="2">Codigo Fatura Fornecedor</td>
+<td colspan="4">Codigo da Fatura no Fornecedor
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>G6H_EMISSA</td>
+<td>Data Emissao</td>
+<td colspan="2">Data de Emissao da Fatura</td>
+<td colspan="4">Data de Emissao da Fatura
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>dDataBase</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>G6H_VENCTO</td>
+<td>Vencimento</td>
+<td colspan="2">Vencimento da Fatura</td>
+<td colspan="4">Data de Vencimento da Fatura
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>G6H_VALOR</td>
+<td>Valor</td>
+<td colspan="2">Valor da Fatura</td>
+<td colspan="4">Informe o Valor da Fatura
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>G6H_FORNEC</td>
+<td>Fornecedor</td>
+<td colspan="2">Fornecedor da Fatura</td>
+<td colspan="4">Fornecedor da Fatura
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SA2")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/for.html">FOR</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>G6H_LOJA</td>
+<td>Loja Fornece</td>
+<td colspan="2">Loja Fornecedor da Fatura</td>
+<td colspan="4">Loja do Fornecedor da Fatura
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SA2",M->G6H_FORNEC+M->G6H_LOJA)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/g6h_loja.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>G6H_NREDUZ</td>
+<td>Nome Reduz</td>
+<td colspan="2">Nome do Fornecedor</td>
+<td colspan="4">Nome Reduzido do Fornecedor da Fatura
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>E_Field("G6H_FORNEC","A2_NREDUZ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione('SA2',1,xFilial('SA2')+G6H->G6H_FORNEC+G6H->G6H_LOJA,'A2_NREDUZ')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>G6H_REPORT</td>
+<td>Reporte</td>
+<td colspan="2">Fornecedor de Reporte</td>
+<td colspan="4">Informa se o Fornecedor da Fatura é um
+Fornecedor de Reporte
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>G6H_EFETIV</td>
+<td>Efetivada</td>
+<td colspan="2">Fatura Efetivada</td>
+<td colspan="4">Informa a situacao de Concliacao da
+Fatura:
+1=Conciliada
+2=Nao Conciliada
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=Conciliada;2=Nao Conciliada</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>G6H_DTIMP</td>
+<td>Importacao</td>
+<td colspan="2">Data de Importacao Fatura</td>
+<td colspan="4">Data de importacao da Fatura Aerea,
+preenchida automaticamente pelo sistema
+apenas nos casos de Faturas importadas
+via interface.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>G6H_ARQUIV</td>
+<td>Arquivo</td>
+<td colspan="2">Arquivo da Fatura</td>
+<td colspan="4">Arquivo utilizado na importacao da
+Fatura Aerea
+</td>
+<td>C</td>
+<td>240</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>G6H_SERIE</td>
+<td>Série</td>
+<td colspan="2">Série da Nota</td>
+<td colspan="4">Série da nota fiscal gerada na
+efetivação.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>G6H_CONDPG</td>
+<td>Cond.Pgto</td>
+<td colspan="2">Condição Pgto.</td>
+<td colspan="4">Condição de pagamento utilizada na nota
+gerada no processo de efetivação.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>                                             </td>
+<td>ExistCpo("SE4")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/se4.html">SE4</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>G6H_NATUR</td>
+<td>Natureza</td>
+<td colspan="2">Natureza</td>
+<td colspan="4">Natureza que será utilizada na fatura a
+pagar
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>TurVldNat( FwFldGet( 'G6H_NATUR' ) )</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sed.html">SED</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

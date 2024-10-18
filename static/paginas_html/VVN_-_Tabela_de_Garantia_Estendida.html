@@ -1,0 +1,531 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: VVN - Tabela de Garantia Estendida</title></head>
+<body>
+<font color="orange"><h2 id="VVN">Tabela: VVN - Tabela de Garantia Estendida</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Tabela de Garantia Estendida</b></td><td colspan="2"><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">VVN_FILIAL+VVN_TPGREX+VVN_CODMAR+VVN_CODGAR</td><td>Tp Gar Esten + Marca + Cod Garantia</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>VVN_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Filial.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VVN_TPGREX</td>
+<td>Tp Gar Esten</td>
+<td colspan="2">Tipo Garantia Estendida</td>
+<td colspan="4">Informe aqui se trata-se de um tipo de
+garantia estendida promovida pela
+montadora ou pela propria
+concessionaria, ex:  1 = Montadora
+2 = Concessionaria
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!S1                                         </td>
+<td>PERTENCE("12").and.FG_EK("VVN",,,"EXITPGREX")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Fabrica;2=Concessionaria</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VVN_CODMAR</td>
+<td>Marca</td>
+<td colspan="2">Codigo da Marca</td>
+<td colspan="4">Informe o Código da Marca do Veiculo.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!S3                                         </td>
+<td>FG_Seek("VE1","M->VVN_CODMAR",1,.f.,"VVN_DESMAR","VE1_DESMAR").AND.FG_EK("VVN",,,"EXITPGREX")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ve1.html">VE1</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VVN_DESMAR</td>
+<td>Descricao</td>
+<td colspan="2">Descricao do Modelo</td>
+<td colspan="4">descrição da marca, referente a
+montadora do veiculo utilizado, conforme
+exemplo:
+VW  = Volkswagen
+FOR = Ford
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!S30                                        </td>
+<td></td>
+<td>If(!Inclui,Posicione("VE1",1,xFilial("VE1")+VVN->VVN_CODMAR,"VE1_CODMAR"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("VE1",1,xFilial("VE1")+VVN->VVN_CODMAR,"VE1_DESMAR")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VVN_CODGAR</td>
+<td>Cod Garantia</td>
+<td colspan="2">Codigo da Garantia</td>
+<td colspan="4">Informe aqui o código da garantia
+estendida que se esta cadastrando.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!S15                                        </td>
+<td>FG_EK("VVN",,,"EXITPGREX")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VVN_DESCRI</td>
+<td>Descr Garant</td>
+<td colspan="2">Descr Garantia Estendida</td>
+<td colspan="4">Informe aqui a descrição da garantia
+estendida que se esta cadastrando.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!S30                                        </td>
+<td>NaoVazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VVN_COBPEC</td>
+<td>Cobre Pecas</td>
+<td colspan="2">Cobert de Pecas Garantia</td>
+<td colspan="4">Informe aqui se este tipo de garantia
+estendida da cobertura as pecas
+aplicadas, conforme exemplo:
+0 = Não cobre
+1 = Cobre
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!S1                                         </td>
+<td>PERTENCE("01")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;0=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VVN_COBSRV</td>
+<td>Cobre Srvs</td>
+<td colspan="2">Cobert de Srvs Garantia</td>
+<td colspan="4">Informe aqui se este tipo de garantia
+estendida da cobertura aos servicos
+efetuados, conforme exemplo:
+0 = Não cobre servicos efetuados
+1 = Cobre os servicos efetuados
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!S1                                         </td>
+<td>PERTENCE("01")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;0=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VVN_PRZGAR</td>
+<td>Prz Validade</td>
+<td colspan="2">Prazo Valid Garant Estend</td>
+<td colspan="4">Prazo de validade em dias para aplicação
+neste tipo de garantia estendida,
+conforme exemplos:
+180 dias
+140 dias
+</td>
+<td>N</td>
+<td>4</td>
+<td>0</td>
+<td>@E 9999                                      </td>
+<td>M->VVN_PRZGAR > 0</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VVN_KILGAR</td>
+<td>Km Gar Esten</td>
+<td colspan="2">Km da Garantia Estendida</td>
+<td colspan="4">Informe aqui a validade em kilometros
+para aplicação neste tipoo de garantia
+estendida, conforme exemplos:
+5.000 kilometros
+10.000 kilometros
+</td>
+<td>N</td>
+<td>8</td>
+<td>0</td>
+<td>@E 99,999,999                                </td>
+<td>M->VVN_KILGAR > 0</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VVN_DESMOD</td>
+<td>Descricao</td>
+<td colspan="2">Descricao    modelo</td>
+<td colspan="4">Descrição do Modelo do Veiculo.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!S30                                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VVN_DATPRC</td>
+<td>Dt Apl Preco</td>
+<td colspan="2">Dt da Aplicacao do Preco</td>
+<td colspan="4">Informe a Data da Aplicação do Preco.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VVN_VALMOD</td>
+<td>Valor</td>
+<td colspan="2">Valor do Modelo</td>
+<td colspan="4">Informe o Valor do Modelo do Veiculo.
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VVN_MODVEI</td>
+<td>Mod Veiculo</td>
+<td colspan="2">Modelo do Veiculo</td>
+<td colspan="4">Informe o Modelo do Veiculo.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>FG_Seek("VV2","M->VVN_CODMAR+M->VVN_MODVEI",1,.f.,"VVN_DESMOD","VV2_DESMOD").AND.M->VVN_CODMAR==VE1->VE1_CODMAR</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VVN_SEGMOD</td>
+<td>Segmento</td>
+<td colspan="2">Segmento do Modelo</td>
+<td colspan="4">Informe o Segmento do Modelo do Veiculo.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td>Vazio() .or. FG_Seek("VVX","M->VVN_CODMAR+M->VVN_SEGMOD",1,.f.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/147.html">147</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>VV1</td>
+<td colspan="2">VVN_TPGREX+VVN_CODMAR+VVN_CODGAR</td>
+<td colspan="2">VV1_TPGREX+VV1_CODMAR+VV1_CODGAR</td>
+</tr>
+<tr>
+<td>VV1</td>
+<td colspan="2">VVN_CODGAR</td>
+<td colspan="2">VV1_CODGAR</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

@@ -1,0 +1,353 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: ACK - Cabeçalho das Verbas de Vendas</title></head>
+<body>
+<font color="orange"><h2 id="ACK">Tabela: ACK - Cabeçalho das Verbas de Vendas</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Cabeçalho das Verbas de Vendas</b></td><td colspan="2"><b>ACK_FILIAL+ACK_CODVER</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">ACK_FILIAL+ACK_CODVER+ACK_GRPVEN+ACK_CODVEN+ACK_GRPCLI+ACK_CODCLI+ACK_LOJA+DTOS(ACK_DATINI)+DTOS(ACK_DATFIM)</td><td>Codigo + Grupo Vend. + Vendedor + Grp.Cliente + Cliente + Loja + Data</td><td></td></tr>
+<tr><td>2</td><td colspan="2">ACK_FILIAL+ACK_GRPVEN+ACK_CODVEN+ACK_GRPCLI+ACK_CODCLI+ACK_LOJA+ACK_CODVER+DTOS(ACK_DATINI)+DTOS(ACK_DATFIM)</td><td>Grupo Vend. + Vendedor + Grp.Cliente + Cliente + Loja + Codigo + Data</td><td></td></tr>
+<tr><td>3</td><td colspan="2">ACK_FILIAL+ACK_CODVEN+ACK_GRPVEN+ACK_GRPCLI+ACK_CODCLI+ACK_LOJA+ACK_CODVER+DTOS(ACK_DATINI)+DTOS(ACK_DATFIM)</td><td>Vendedor + Grupo Vend. + Grp.Cliente + Cliente + Loja + Codigo + Data</td><td></td></tr>
+<tr><td>4</td><td colspan="2">ACK_FILIAL+ACK_GRPCLI+ACK_CODCLI+ACK_LOJA+ACK_GRPVEN+ACK_CODVEN+ACK_CODVER+DTOS(ACK_DATINI)+DTOS(ACK_DATFIM)</td><td>Grp.Cliente + Cliente + Loja + Grupo Vend. + Vendedor + Codigo + Data</td><td></td></tr>
+<tr><td>5</td><td colspan="2">ACK_FILIAL+ACK_CODCLI+ACK_LOJA+ACK_GRPCLI+ACK_GRPVEN+ACK_CODVEN+ACK_CODVER+DTOS(ACK_DATINI)+DTOS(ACK_DATFIM)</td><td>Cliente + Loja + Grp.Cliente + Grupo Vend. + Vendedor + Codigo + Data</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>ACK_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Código que identifica a filial da
+empresa usuária do sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ACK_CODVER</td>
+<td>Codigo</td>
+<td colspan="2">Codigo</td>
+<td colspan="4">Informe neste campo o código da verba de
+vendas.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>GetSxeNum("ACK","ACK_CODVER")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>ACK_GRPVEN</td>
+<td>Grupo Vend.</td>
+<td colspan="2">Grupo Vendedores</td>
+<td colspan="4">Informe neste campo o grupo de
+representantes no qual esta verba é
+destinada. Somente o grupo de venda ou o
+cliente poderão ser informados
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td>Vazio() .Or. ExistCpo("ACA",M->ACK_GRPVEN)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/aca.html">ACA</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ack_grpven.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ACK_CODVEN</td>
+<td>Vendedor</td>
+<td colspan="2">Codigo do Vendedor</td>
+<td colspan="4">Informe neste campo o código do vendedor
+no qual esta verba seja destinada.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. ExistCpo("SA3",M->ACK_CODVEN)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sa3.html">SA3</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ack_codven.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ACK_GRPCLI</td>
+<td>Grp.Cliente</td>
+<td colspan="2">Grupo de Clientes</td>
+<td colspan="4">Informe neste campo o grupo de clientes
+no qual esta verba está destinada
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. ExistCpo("ACY",M->ACK_GRPCLI)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/acy.html">ACY</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ack_grpcli.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ACK_CODCLI</td>
+<td>Cliente</td>
+<td colspan="2">Codigo do Cliente</td>
+<td colspan="4">Informe neste campo o código do cliente
+no qual esta verba é destinada. Somente
+o grupo de venda ou o cliente poderão
+ser informados
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. ExistCpo("SA1",M->ACK_CODCLI+RTRIM(M->ACK_LOJA),,,,!EMPTY(M->ACK_LOJA))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sa1.html">SA1</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ack_codcli.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ACK_LOJA</td>
+<td>Loja</td>
+<td colspan="2">Loja</td>
+<td colspan="4">Informe neste campo a loja do cliente no
+qual esta verba é destinada. Somente o
+grupo de venda ou o cliente poderão ser
+informados
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. ExistCpo("SA1",M->ACK_CODCLI+M->ACK_LOJA)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ACK_DATINI</td>
+<td>Data inicial</td>
+<td colspan="2">Data inicial</td>
+<td colspan="4">Informe neste campo a data inicial de
+vigência da verba.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>ACK_DATFIM</td>
+<td>Data final</td>
+<td colspan="2">Data final</td>
+<td colspan="4">Informe neste campo a data final de
+vigência da verba de vendas. Caso não
+seja preenchido, a verba não terá
+validade final.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>M->ACK_DATFIM>=M->ACK_DATINI</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>ACL</td>
+<td colspan="2">ACK_CODVER</td>
+<td colspan="2">ACL_CODVER</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

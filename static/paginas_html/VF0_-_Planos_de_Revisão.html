@@ -1,0 +1,362 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: VF0 - Planos de Revisão</title></head>
+<body>
+<font color="orange"><h2 id="VF0">Tabela: VF0 - Planos de Revisão</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Planos de Revisão</b></td><td colspan="2"><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">VF0_FILIAL+VF0_CODMAR+VF0_CODPLA</td><td>Marca + Cod Plano</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>VF0_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Filial
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VF0_CODMAR</td>
+<td>Marca</td>
+<td colspan="2">Codigo da Marca</td>
+<td colspan="4">Código da Marca
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!S3                                         </td>
+<td>FG_Seek("VE1","M->VF0_CODMAR",1,.f.,"VF0_DESMAR","VE1_DESMAR").And.FG_EK("VF0")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ve1.html">VE1</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>Vazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VF0_DESMAR</td>
+<td>Descricao</td>
+<td colspan="2">Descricao da Marca</td>
+<td colspan="4">Descrição da Marca do Veiculo
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!S30                                        </td>
+<td></td>
+<td>if(!Inclui,Posicione("VE1",1,xFilial("VE1")+VF0->VF0_CODMAR,"VE1_DESMAR"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("VE1",1,xFilial("VE1")+VF0->VF0_CODMAR,"VE1_DESMAR")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VF0_CODPLA</td>
+<td>Cod Plano</td>
+<td colspan="2">Cod do Plano de Revisao</td>
+<td colspan="4">Código do Plano de Revisao
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@E 999                                       </td>
+<td>FG_Strzero("M->VF0_CODPLA",3,.f.) .and. ExistChav("VF0",M->VF0_CODMAR+M->VF0_CODPLA,1,"EXICODPLA").And.FG_EK("VF0")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VF0_DESPLA</td>
+<td>Descr Plano</td>
+<td colspan="2">Descr do Plano de Revisao</td>
+<td colspan="4">Descrição do Plano de Revisao
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!S30                                        </td>
+<td>NaoVazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VF0_MODVEI</td>
+<td>Mod Veiculo</td>
+<td colspan="2">Modelo do Veiculo</td>
+<td colspan="4">Modelo do Veiculo
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>FG_Seek("VV2","M->VF0_CODMAR+M->VF0_MODVEI",1,.f.,"VF0_DESMOD","VV2_DESMOD")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/mc0.html">MC0</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>Inclui .or. Vazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VF0_DESMOD</td>
+<td>Descricao</td>
+<td colspan="2">Descricao do Modelo</td>
+<td colspan="4">Descrição do Modelo do Veiculo
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!S30                                        </td>
+<td></td>
+<td>if(!Inclui,Posicione("VV2",1,xFilial("VV2")+VF0->VF0_CODMAR+VF0->VF0_MODVEI,"VV2_DESMOD"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("VV2",1,xFilial("VV2")+VF0->VF0_CODMAR+VF0->VF0_MODVEI,"VV2_DESMOD")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VF0_TIPOPE</td>
+<td>Tipo Operac</td>
+<td colspan="2">Tipo de Operacao</td>
+<td colspan="4">Tipo de operação que este plano se
+destina. O tipo de operação indica a
+aplicação do veículo, que é fornecido
+pela montadora no manual do veículo,
+sendo mais utilizado por veículos
+'comerciais'.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!S3                                         </td>
+<td>FG_Seek("VF5","M->VF0_CODMAR+M->VF0_TIPOPE",1,.f.,"VF0_DESTPO","VF5_DESTOP")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/vf5.html">VF5</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VF0_DESTPO</td>
+<td>Descricao</td>
+<td colspan="2">Descricao Tipo Operacao</td>
+<td colspan="4">Descrição do Tipo de Operação
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!S30                                        </td>
+<td></td>
+<td>if(!Inclui,Posicione("VF5",1,xFilial("VF5")+VF0->VF0_CODMAR+VF0->VF0_TIPOPE,"VF5_DESTOP"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("VF5",1,xFilial("VF5")+VF0->VF0_CODMAR+VF0->VF0_TIPOPE,"VF5_DESTOP")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>VV1</td>
+<td colspan="2">VF0_CODPLA</td>
+<td colspan="2">VV1_PLAVEI</td>
+</tr>
+<tr>
+<td>VV1</td>
+<td colspan="2">VF0_CODPLA</td>
+<td colspan="2">VV1_PLAREV</td>
+</tr>
+<tr>
+<td>VV2</td>
+<td colspan="2">VF0_CODPLA</td>
+<td colspan="2">VV2_PLAREV</td>
+</tr>
+<tr>
+<td>VF1</td>
+<td colspan="2">VF0_CODPLA</td>
+<td colspan="2">VF1_CODPLA</td>
+</tr>
+<tr>
+<td>VF1</td>
+<td colspan="2">VF0_CODMAR+VF0_CODPLA</td>
+<td colspan="2">VF1_CODMAR+VF1_CODPLA</td>
+</tr>
+<tr>
+<td>VO5</td>
+<td colspan="2">VF0_CODPLA</td>
+<td colspan="2">VO5_PLAREV</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

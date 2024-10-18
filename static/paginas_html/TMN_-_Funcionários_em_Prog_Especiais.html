@@ -1,0 +1,305 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: TMN - Funcionários em Prog Especiais</title></head>
+<body>
+<font color="orange"><h2 id="TMN">Tabela: TMN - Funcionários em Prog Especiais</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Funcionários em Prog Especiais</b></td><td colspan="2"><b>TMN_FILIAL+TMN_CODPRO+TMN_NUMFIC</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">TMN_FILIAL+TMN_CODPRO+TMN_NUMFIC</td><td>Progr. Saúde + Ficha Médica</td><td></td></tr>
+<tr><td>2</td><td colspan="2">TMN_FILIAL+TMN_NUMFIC+TMN_CODPRO</td><td>Ficha Médica + Progr. Saúde</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>TMN_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Código da filial da empresa. Campo
+alimentado automaticamente pelo módulo
+de Medicina e Segurança do Trabalho com
+base no campo Filial.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMN_CODPRO</td>
+<td>Progr. Saúde</td>
+<td colspan="2">Codigo Programa de Saude</td>
+<td colspan="4">Informe o código do Programa de Saúde.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO("TMO",M->TMN_CODPRO)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tmo.html">TMO</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tmn_codpro.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TMN_NOMPRO</td>
+<td>Nome</td>
+<td colspan="2">Nome do Programa de Saude</td>
+<td colspan="4">Nome do Programa de Saúde. Campo
+alimentado automaticamente pelo módulo
+de Medicina e Segurança do Trabalho com
+base no campo Programa de Saúde.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>TMO->(VDISP(TMN->TMN_CODPRO,"TMO_NOMPRO"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>If(TMO->(dBSEEK(xFilial("TMO")+TMN->TMN_CODPRO)),TMO->TMO_NOMPRO,"")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMN_NUMFIC</td>
+<td>Ficha Médica</td>
+<td colspan="2">Numero da Ficha Medica</td>
+<td colspan="4">Número da Ficha Médica do funcionário.
+Pressione as teclas [Enter]+[F3] para
+selecionar uma Ficha Médica.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>999999999                                    </td>
+<td>SitFunFicha(M->TMN_NUMFIC,.t.,.t.,.t.) .AND. D115CHK()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tm0.html">TM0</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tmn_numfic.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>LENUMFIC</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TMN_NOMFIC</td>
+<td>Nome</td>
+<td colspan="2">Nome Proprietario Ficha</td>
+<td colspan="4">Nome do Paciente na Ficha Médica. Campo
+alimentado automaticamento pelo módulo
+de Medicina e Segurança do Trabalho com
+base no campo Ficha Médica.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(cPROGRAMA="MDTA115", TM0->(VDISP(TMN->TMN_NUMFIC,"TM0_NOMFIC")),VSAYMDT("01"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>If(TM0->(dBSEEK(xFilial("TM0")+TMN->TMN_NUMFIC)),TM0->TM0_NOMFIC,"")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMN_DTINIC</td>
+<td>Data Inicio</td>
+<td colspan="2">Data Inicio no Programa</td>
+<td colspan="4">Data em que o Funcionário iniciou no
+programa de saúde.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>MDT110DTA(M->TMN_DTINIC,M->TMN_DTTERM)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TMN_DTTERM</td>
+<td>Data Término</td>
+<td colspan="2">Data Termino no Programa</td>
+<td colspan="4">Data em que o Funcionário terminou sua
+participação no programa especial.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>MDT110DTA(M->TMN_DTINIC,M->TMN_DTTERM)</td>
+<td>IF(INCLUI,CTOD("  /  /  "),TMN->TMN_DTTERM)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMN_USERGI</td>
+<td>Log de Inclu</td>
+<td colspan="2">Log de Inclusão</td>
+<td colspan="4">Indica código criptografado do usuário
+de inclusão do registro.
+</td>
+<td>C</td>
+<td>17</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

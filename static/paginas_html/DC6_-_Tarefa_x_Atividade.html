@@ -1,0 +1,596 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: DC6 - Tarefa x Atividade</title></head>
+<body>
+<font color="orange"><h2 id="DC6">Tabela: DC6 - Tarefa x Atividade</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Tarefa x Atividade</b></td><td colspan="2"><b>DC6_FILIAL+DC6_TAREFA+DC6_ORDEM</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">DC6_FILIAL+DC6_TAREFA+DC6_ORDEM</td><td>Cod. Tarefa + Ordem</td><td></td></tr>
+<tr><td>2</td><td colspan="2">DC6_FILIAL+DC6_TAREFA+DC6_ATIVID</td><td>Cod. Tarefa + Cod.Atividad</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>DC6_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Filial do sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC6_TAREFA</td>
+<td>Cod. Tarefa</td>
+<td colspan="2">Cod. Tarefa</td>
+<td colspan="4">Código da Tarefa executada no armazem e
+que será responsável por disparar
+atividades.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SX5","L2"+M->DC6_TAREFA) .And. ExistChav("DC6",M->DC6_TAREFA)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/l2.html">L2</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dc6_tarefa.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DC6_DESTAR</td>
+<td>Desc.Tarefa</td>
+<td colspan="2">Desc.Tarefa</td>
+<td colspan="4">Descriç„o da Tarefa.
+</td>
+<td>C</td>
+<td>55</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui,"",Tabela("L2",DC6->DC6_TAREFA,.F.))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Tabela("L2",DC6->DC6_TAREFA,.F.)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC6_ORDEM</td>
+<td>Ordem</td>
+<td colspan="2">Ordem</td>
+<td colspan="4">Ordem da Atividade.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DC6_ATIVID</td>
+<td>Cod.Atividad</td>
+<td colspan="2">Codigo da Atividade</td>
+<td colspan="4">Código da Atividade que será executada
+utilizando um recurso físico e um
+recurso humano.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SX5","L3"+M->DC6_ATIVID)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/l3.html">L3</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dc6_ativid.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DC6_DESATI</td>
+<td>Desc.Ativida</td>
+<td colspan="2">Desc.Ativida</td>
+<td colspan="4">Descriç„o da Atividade.
+</td>
+<td>C</td>
+<td>55</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui,"",Tabela("L3",DC6->DC6_ATIVID,.F.))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Tabela("L3",DC6->DC6_ATIVID,.F.)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC6_FUNCAO</td>
+<td>Rec Humano</td>
+<td colspan="2">Cod. Funcao</td>
+<td colspan="4">Determina qual Função o Recurso Humano
+devera exercer para executar esta
+Atividade.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. ExistCpo("SRJ")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/srj.html">SRJ</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dc6_funcao.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC6_DESFUN</td>
+<td>Desc.Rec Hum</td>
+<td colspan="2">Desc.Funcao</td>
+<td colspan="4">Descriç„o do tipo de Recurso Humano
+necessário para se executar a Atividade.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui,"",Posicione("SRJ",1,xFilial("SRJ")+DC6->DC6_FUNCAO,"RJ_DESC"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("SRJ",1,xFilial("SRJ")+DC6->DC6_FUNCAO,"RJ_DESC")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC6_TPREC</td>
+<td>Rec Fisico</td>
+<td colspan="2">Tipo Recurso</td>
+<td colspan="4">Determina qual o tipo de Recurso Fisico
+necessario para a execução desta
+Atividade.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. ExistCpo("D05",+M->DC6_TPREC)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/d05.html">D05</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dc6_tprec.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DC6_DESREC</td>
+<td>Desc.Rec Fis</td>
+<td colspan="2">Descricao do Recurso</td>
+<td colspan="4">Descrição do Recurso Fisico.
+</td>
+<td>C</td>
+<td>55</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui,'',POSICIONE('D05',1,xFilial('D05')+DC6->DC6_TPREC,'D05_DESREC'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE('D05',1,xFilial('D05')+DC6->DC6_TPREC,'D05_DESREC')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC6_DURAC</td>
+<td>Duracao Ativ</td>
+<td colspan="2">Duracao da Atividade</td>
+<td colspan="4">Duração desta atividade.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>999:99                                       </td>
+<td>AtVldHora(M->DC6_DURAC)</td>
+<td>"000:00"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC6_RADIOF</td>
+<td>Radio Freq.</td>
+<td colspan="2">Aciona Radio Frequencia</td>
+<td colspan="4">Indica se a Atividade em questao será
+executada com a utilização de terminais
+de Radio Frequencia.
+ATENCAO! Para a utilização desta opção
+deve-se ativar o parâmetro MV_RADIOF.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC6_FILATI</td>
+<td>Fil.Ativid.</td>
+<td colspan="2">Filial da Atividade</td>
+<td colspan="4">Para esta atividade é obrigatório
+informar a Filial da Atividade.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td>Vazio() .Or. TMSValidEmp(cEmpAnt+M->DC6_FILATI)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dlb.html">DLB</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC6_OBS</td>
+<td>Observacao</td>
+<td colspan="2">Observacao</td>
+<td colspan="4">Observaç„o.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC6_TPAGLU</td>
+<td>Tipo de Agl.</td>
+<td colspan="2">Tipo de Aglutinacao</td>
+<td colspan="4">Tipo de aglutinacao
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("123456")</td>
+<td>'1'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Nao Aglutina;2=Documento;3=Cliente/Fornecedor;4=Carga;5=Carga/Cliente;6=Produto</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC6_PERMUL</td>
+<td>Permite Mult</td>
+<td colspan="2">Permite Mult</td>
+<td colspan="4">Permite multiplos movimentos.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DC6_SOLEND</td>
+<td>Solic. End.</td>
+<td colspan="2">Solic. End.</td>
+<td colspan="4">Solicitante endereçamento.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("012")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Origem/Destino;1=Origem/Origem;2=Destino/Destino</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>D12</td>
+<td colspan="2">DC6_TAREFA</td>
+<td colspan="2">D12_TAREFA</td>
+</tr>
+<tr>
+<td>AAO</td>
+<td colspan="2">DC6_TAREFA</td>
+<td colspan="2">AAO_TAREFA</td>
+</tr>
+<tr>
+<td>DCQ</td>
+<td colspan="2">DC6_TAREFA</td>
+<td colspan="2">DCQ_TAREFA</td>
+</tr>
+<tr>
+<td>SDB</td>
+<td colspan="2">DC6_TAREFA</td>
+<td colspan="2">DB_TAREFA</td>
+</tr>
+<tr>
+<td>SDB</td>
+<td colspan="2">DC6_ATIVID</td>
+<td colspan="2">DB_ATIVID</td>
+</tr>
+<tr>
+<td>DC5</td>
+<td colspan="2">DC6_TAREFA</td>
+<td colspan="2">DC5_TAREFA</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

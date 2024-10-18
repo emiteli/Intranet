@@ -1,0 +1,553 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: C2L - Bens/Comp. Atv Imobilizado</title></head>
+<body>
+<font color="orange"><h2 id="C2L">Tabela: C2L - Bens/Comp. Atv Imobilizado</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Bens/Comp. Atv Imobilizado</b></td><td colspan="2"><b>C2L_FILIAL+C2L_ID</b></td><td><b>TAFA058</b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">C2L_FILIAL+C2L_CODBEM+C2L_IDENTM</td><td>Cod.Bem + Cod.Ident</td><td></td></tr>
+<tr><td>2</td><td colspan="2">C2L_FILIAL+C2L_DESCRI</td><td>Descr Bem</td><td></td></tr>
+<tr><td>3</td><td colspan="2">C2L_FILIAL+C2L_ID</td><td>C2L_</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>C2L_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Informar o Código da Filial
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C2L_ID</td>
+<td>ID</td>
+<td colspan="2">Identificador Registro</td>
+<td colspan="4">Deve representar o código de
+identificação do registro. Este código é
+controlado internamente pelo sistema de
+forma incremental e único por filial.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>GetSx8Num("C2L","C2L_ID")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>C2L_CODBEM</td>
+<td>Cod.Bem</td>
+<td colspan="2">Cd Individualizado do Bem</td>
+<td colspan="4">Deve representar o código
+individualizado do bem ou componente
+adotado no controle patrimonial do
+estabelecimento informante.
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>XFUNVldUni("C2L",1, M->C2L_CODBEM+FWFLDGET("C2L_IDENTM"))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>C2L_IDENTM</td>
+<td>Cod.Ident</td>
+<td colspan="2">Cod Identificdor da Merca</td>
+<td colspan="4">Deve representar o código de
+Identificação do tipo de mercadoria.
+Pode-se utilizar as seguintes opções:
+1 = bem
+2 = componente
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12").And.XFUNVldUni("C2L",1, FWFLDGET("C2L_CODBEM")+M->C2L_IDENTM)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=bem;2=componente</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>C2L_DESCRI</td>
+<td>Descr Bem</td>
+<td colspan="2">Descrição Bem</td>
+<td colspan="4">Deve representar a descrição do bem ou
+componente (modelo, marca e outras
+características necessárias a sua
+individualização)
+</td>
+<td>C</td>
+<td>220</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>C2L_CODPRN</td>
+<td>Cod Bem Prin</td>
+<td colspan="2">Cod Bem Principal</td>
+<td colspan="4">Deve representar o código de cadastro do
+bem principal nos casos em que o bem ou
+componente esteja vinculado a um bem
+principal.
+A informação deste campo corresponde á
+um código de identificação conforme
+respectivo cadastro.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>XFUNVldCmp("C2L",3) .And. XFUNRedund("C2L_ID")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/c2l.html">C2L</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C2L_CODCTA</td>
+<td>Id. Cta Cont</td>
+<td colspan="2">Id. Conta Contabil</td>
+<td colspan="4">Identificador do registro da conta
+contábil.
+</td>
+<td>C</td>
+<td>36</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/c2l_codcta.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>C2L_CTACTB</td>
+<td>Cta Contab</td>
+<td colspan="2">Conta Contábil</td>
+<td colspan="4">Deve representar o código da conta
+analítica de contabilização do bem ou
+componente (campo 06 do Registro 0500 da
+EFD Contribuições)
+A informação deste campo corresponde á
+um código de identificação conforme
+respectivo cadastro.
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>XFUNVldCmp("C1O",1)</td>
+<td>XFUNRelac(39,'C2L_CODCTA',1)</td>
+<td><a href="/tabelas_protheus/f3/c1ob.html">C1OB</a></td>
+<td><a href="/tabelas_protheus/gatilhos/c2l_ctactb.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("C1O",3,xFilial("C1O")+C2L->C2L_CODCTA,"ALLTRIM(C1O_CODIGO)")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>C2L_DCODCT</td>
+<td>Descr Conta</td>
+<td colspan="2">Descr. Conta Contabil</td>
+<td colspan="4">Deve representar a descrição da conta
+analítica de contabilização do bem ou
+componente (campo 06 do Registro 0500 da
+EFD Contribuições)
+</td>
+<td>C</td>
+<td>220</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>XFUNRelac(39,'C2L_CODCTA')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C2L_NRPARC</td>
+<td>Num Parcelas</td>
+<td colspan="2">Numero de Parcelas</td>
+<td colspan="4">Deve representar o número total de
+parcelas a serem apropriadas, segundo a
+legislação de cada unidade federada
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>@E 999                                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>C2L_CODCUS</td>
+<td>C. de Custo</td>
+<td colspan="2">Codigo Centro de Custo</td>
+<td colspan="4">Deve representar o código do centro de
+custo onde o bem está sendo ou será
+utilizado
+A informação deste campo corresponde á
+um código de identificação conforme
+respectivo cadastro.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>XFUNVldCmp("C1P",3)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/c1p.html">C1P</a></td>
+<td><a href="/tabelas_protheus/gatilhos/c2l_codcus.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>C2L_DCODCU</td>
+<td>Desc C Custo</td>
+<td colspan="2">Descr. Centro de Custo</td>
+<td colspan="4">Deve representar a descrição do centro
+de custo onde o bem está sendo ou será
+utilizado
+</td>
+<td>C</td>
+<td>220</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>XFUNRelac(27,'C2L_CODCUS')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C2L_FUNC</td>
+<td>Func.Bem</td>
+<td colspan="2">Função do Bem</td>
+<td colspan="4">Deve representar a descrição sucinta da
+função do bem na atividade do
+estabelecimento
+</td>
+<td>C</td>
+<td>220</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>C2L_VIDAUT</td>
+<td>Vida Util</td>
+<td colspan="2">Vida Util</td>
+<td colspan="4">Deve representar a vida útil estimada do
+bem, em número de meses
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>@E 999                                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>C2L_STATUS</td>
+<td>Status</td>
+<td colspan="2">Status Registro</td>
+<td colspan="4">Campo de uso interno do sistema.
+Deve representar neste campo o status do
+registro:
+(Vazio)  = Registro Novo
+0  = Registro Válido (integração)
+1  = Registro invalido (integração)
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence(" 01")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/079.html">079</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>C2L</td>
+<td colspan="2">C2L_ID</td>
+<td colspan="2">C2L_CODPRN</td>
+</tr>
+<tr>
+<td>C4S</td>
+<td colspan="2">C2L_ID</td>
+<td colspan="2">C4S_INDBEM</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

@@ -1,0 +1,454 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: N18 - Revisões Orçamentária</title></head>
+<body>
+<font color="orange"><h2 id="N18">Tabela: N18 - Revisões Orçamentária</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Revisões Orçamentária</b></td><td colspan="2"><b>N18_FILIAL+N18_ANO+N18_MAPA+N18_REVISA</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">N18_FILIAL+N18_ANO+N18_MAPA+N18_REVISA</td><td>Ano + Orçamento + Revisão</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>N18_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N18_ANO</td>
+<td>Ano</td>
+<td colspan="2">Ano do Orcamento</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>GSPN001()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>N18_MAPA</td>
+<td>Orçamento</td>
+<td colspan="2">Codigo Orçamentário</td>
+<td colspan="4">Indique o Mapa Orçamentario, da revisão
+que será lançada, a peração de inclusão
+de uma nova revisão deverá ser efetuada
+pela geração de revisões ou pela
+confirmação da DAO
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>EXISTCHAV("N18" , M->N18_ANO + M->N18_MAPA + M->N18_REVISA ) .AND. EXISTCPO("N13",M->N18_ANO + M->N18_MAPA)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/n13.html">N13</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>N18_REVISA</td>
+<td>Revisão</td>
+<td colspan="2">Revisão Orçamentária</td>
+<td colspan="4">Indique a Revisão do Mapa Orçamentario,
+mas cuidado, a operação de inclusão de
+uma nova revisão deverá ser efetuada
+pela geração de revisões ou pela
+confirmação da DAO
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>                                             </td>
+<td>EXISTCHAV("N18" , M->N18_ANO + M->N18_MAPA + M->N18_REVISA )</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>N18_TIPO</td>
+<td>Tipo Revisão</td>
+<td colspan="2">Tipo da Revisão</td>
+<td colspan="4">Informe o tipo de revisão, esse campo
+define a forma como enviaremos os dados
+para o tribunal de contas.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td>EXISTCPO('SX5',"NN"+M->N18_TIPO )</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/nn.html">NN</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>N18_LEI</td>
+<td>Lei da Revis</td>
+<td colspan="2">Lei da Revisão</td>
+<td colspan="4">Este Campo deve conter informações sobre
+a Lei Orçamentária
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N18_DTLEI</td>
+<td>Data da Lei</td>
+<td colspan="2">Data da lei Orçamentária</td>
+<td colspan="4">Informe Neste Campo a Data da Lei que
+Autorizou a Dotacao Orcamentaria ou
+Revisao
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>N18->N18_DTLEI</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N18_DECRET</td>
+<td>Decreto</td>
+<td colspan="2">Decreto da revisão</td>
+<td colspan="4">Informe Neste Campo Qual o Tipo de
+Orcamento(Inicial, Suplementacao Etc.)
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>N18->N18_DECRET</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N18_DATA</td>
+<td>Data Revisão</td>
+<td colspan="2">Data de Revisão</td>
+<td colspan="4">Este campo deve conter a data em que se
+concretizou a revisão ou seja a data da
+assinatura do decreto que autorizou a
+revisão
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N18_TPCRED</td>
+<td>Tipo Crédito</td>
+<td colspan="2">Tipo de Crédito</td>
+<td colspan="4">Informe Neste Campo o Tipo de
+Credito(1-Suplementar, 2-Especial,
+3-Extraordinario)
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Suplementar;2=Especial;3=Extraordin�rio</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N18_ORECUR</td>
+<td>Origen Recur</td>
+<td colspan="2">Origem do Recurso Orçamen</td>
+<td colspan="4">Escolha Uma das Opcoes Para Este
+Campo(1- Superavit, 2-Exec.Arrecadacao,
+3-Operacao de Credito,
+4-Auxilio/Convenios, 5-Reducoes)
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=SuperAvit;2=Excesso Arr.;3=Opera��o Credito;4=Aux�lio/conv�nios;5=Redu��es</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N18_DESC</td>
+<td>Desc.Revisão</td>
+<td colspan="2">Descrição da Revisão</td>
+<td colspan="4">Este Campo deve conter informações sobre
+o motivo da alteração Orçamentária
+</td>
+<td>C</td>
+<td>200</td>
+<td>0</td>
+<td>@S70                                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N18_RESPON</td>
+<td>Responsavel</td>
+<td colspan="2">Responsavel p/ Revisao</td>
+<td colspan="4">Este Campo deve conter informações sobre
+o responsavel pela assinatura dos
+decretos de Lei da alteração
+Orçamentária
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

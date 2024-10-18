@@ -1,0 +1,1924 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: SR8 - Controle de Ausências</title></head>
+<body>
+<font color="orange"><h2 id="SR8">Tabela: SR8 - Controle de Ausências</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Controle de Ausências</b></td><td colspan="2"><b>R8_FILIAL+R8_MAT+DTOS(R8_DATAINI)+R8_TIPO+R8_TIPOAFA</b></td><td><b>GPEA240</b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">R8_FILIAL+R8_MAT+DTOS(R8_DATAINI)+R8_TIPO</td><td>Matricula + Dt. Afastam. + Tipo Afastam</td><td></td></tr>
+<tr><td>2</td><td colspan="2">R8_FILIAL+R8_MAT+R8_SEQ+DTOS(R8_DATA)+R8_TIPOAFA</td><td>Matricula + Sequência + R8_DATA+Cód. Ausenc.</td><td></td></tr>
+<tr><td>3</td><td colspan="2">R8_FILIAL+R8_MAT+R8_PER+R8_NUMPAGO</td><td>Matricula + Cod.Per.Inic + Num. Pagto</td><td></td></tr>
+<tr><td>4</td><td colspan="2">R8_FILIAL+R8_MAT+DTOS(R8_DTBLEG)</td><td>Matricula + Dt.Bas.Legal</td><td></td></tr>
+<tr><td>5</td><td colspan="2">R8_FILIAL+R8_NUMID</td><td>Num.Identif.</td><td></td></tr>
+<tr><td>6</td><td colspan="2">R8_FILIAL+R8_MAT+DTOS(R8_DATAINI)+R8_TIPOAFA+STR(R8_DIASEMP)</td><td>Matricula + Dt. Afastam. + Cód. Ausenc. + Dias Empresa</td><td></td></tr>
+<tr><td>7</td><td colspan="2">R8_FILIAL+R8_CODRPAT+R8_MAT+DTOS(R8_DATA)</td><td>Reg.Patronal + Matricula + R8_DA</td><td></td></tr>
+<tr><td>9</td><td colspan="2">R8_FILIAL+R8_MAT+R8_SEQ+DTOS(R8_DATA)+R8_TIPO</td><td>Matricula + Sequência + Dt.Alteracao + Tipo Afastam</td><td>INDICEGFP9</td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>R8_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Insira ou selecione a Filial desejada.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_MAT</td>
+<td>Matricula</td>
+<td colspan="2">Numero da Matricula</td>
+<td colspan="4">Numero/codigo da Matricula
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .And. EXISTCHAV("SRA") .And. Val(M->R8_MAT) > 0</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/121.html">121</a></td>
+<td></td>
+<td></td>
+<td>#R8_MAT    <>'      '</td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>R8_DATA</td>
+<td>Dt.Alteracao</td>
+<td colspan="2">Data Alteracao</td>
+<td colspan="4">Informe a data em que está sendo
+efetuada a alteração.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>NaoVazio()</td>
+<td>dDataBase</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td>#R8_DATA   <>'        '</td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>R8_SEQ</td>
+<td>Sequência</td>
+<td colspan="2">Sequência</td>
+<td colspan="4">Sequência do afastamento.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_TIPO</td>
+<td>Tipo Afastam</td>
+<td colspan="2">Tipo de Afastamento</td>
+<td colspan="4">Informe o Tipo de Afastamento para Fgts
+ou Tecle [F3] para consultar tabela.
+Obs: Alguns Tipos não são válidos para
+esta rotina.
+Ex: Tipo "S" -> Falecimento
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .And. EXISTCPO("SX5","30"+M->R8_TIPO) .And. Pertence("FOPQRXYZW18VB67D") .And. A240NumDias()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/30.html">30</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td>#R8_TIPO   <>' '</td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_TIPOAFA</td>
+<td>Cód. Ausenc.</td>
+<td colspan="2">Código da Ausência</td>
+<td colspan="4">Codigo do tipo do afastamento. Consulte
+F3 para selecionar de uma lista.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .and. ExistCpo("RCM") .and. Gp240ValAfa()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/rcmbra.html">RCMBRA</a></td>
+<td><a href="/tabelas_protheus/gatilhos/r8_tipoafa.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>gp240VerEdit()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td>#R8_TIPOAFA<>'   '</td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>R8_DESCTP</td>
+<td>Descrição</td>
+<td colspan="2">Descricao Afastamento</td>
+<td colspan="4">Informe a descrição do Tipo da Ausência.
+</td>
+<td>C</td>
+<td>75</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(INCLUI, "", Posicione("RCM",1,xFilial("RCM")+SR8->R8_TIPOAFA,"RCM_DESCRI"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_PD</td>
+<td>Cod. Verba</td>
+<td colspan="2">Codigo Verba</td>
+<td colspan="4">Verba vinculada ao lançamento do
+afastamento para tratamento de cálculo.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .or. ExistCpo("SRV")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/srv.html">SRV</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td>gp240VerEdit()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_DATAINI</td>
+<td>Dt. Afastam.</td>
+<td colspan="2">Data de Afastamento</td>
+<td colspan="4">Informe a data de início do afastamento.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>NaoVazio() .and. A240NumDias()</td>
+<td>Ctod("//")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>gp240VerEdit()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td>#R8_DATAINI<>'        '</td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>R8_AFARAIS</td>
+<td>Afast. RAIS</td>
+<td colspan="2">Cod.Afast.RAIS</td>
+<td colspan="4">Codigo de afastamento para a RAIS.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>#fBoxRAIS()</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_DURACAO</td>
+<td>Num. Dias</td>
+<td colspan="2">Número Dias</td>
+<td colspan="4">Duração (em dias) do afastamento.
+</td>
+<td>N</td>
+<td>5</td>
+<td>0</td>
+<td>@E 99999                                     </td>
+<td>gp240DurValid()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/r8_duracao.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>gp240RevEdit()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_DATAFIM</td>
+<td>Dt.Fim Afas.</td>
+<td colspan="2">Data Fim do Afastamento</td>
+<td colspan="4">Informe a Data Fim de afastamento ou
+deixe em branco, para informar
+posteriormente.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>A240NumDias()</td>
+<td>Ctod("//")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>gp240RevEdit()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_CONTAFA</td>
+<td>Nr.Sequencia</td>
+<td colspan="2">Continuacao da Sequencia</td>
+<td colspan="4">Informe a sequência do afastamento do
+qual este é continuação.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td>Vazio() .or. aContAfaVal()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/r8_contafa.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>Gp240VerEdit()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_DIASEMP</td>
+<td>Dias Empresa</td>
+<td colspan="2">Dias Empresa</td>
+<td colspan="4">Neste campo será gravado a quantidade de
+dias que a empresa pagará ao funcionário
+para as incapacidades. Esta quantidade
+esta configurada no Cadastro de Tipos de
+Ausências.
+</td>
+<td>N</td>
+<td>5</td>
+<td>0</td>
+<td>99999                                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_DPAGAR</td>
+<td>Dias a Pagar</td>
+<td colspan="2">Dias a Pagar</td>
+<td colspan="4">Saldo de dias da ausência a serem pagos.
+</td>
+<td>N</td>
+<td>5</td>
+<td>0</td>
+<td>99999                                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_SDPAGAR</td>
+<td>Saldo Dias</td>
+<td colspan="2">Saldo Dias</td>
+<td colspan="4">Informe o saldo de dias a ser
+considerado no afastamento do
+funcionário.
+</td>
+<td>N</td>
+<td>5</td>
+<td>0</td>
+<td>99999                                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_DPAGOS</td>
+<td>Dias Pagos</td>
+<td colspan="2">Dias Pagos</td>
+<td colspan="4">Número de dias pagos da ausência.
+</td>
+<td>N</td>
+<td>5</td>
+<td>0</td>
+<td>99999                                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td>gp240VerEdit()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_CONTINU</td>
+<td>Cont.Afa.Ant</td>
+<td colspan="2">Continua Afast. Anterior</td>
+<td colspan="4">Informe se o afastamento é continuação
+de um afastamento anterior com o mesmo
+tipo.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .and. A240NumDias()</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_CID</td>
+<td>Cod.Int.Doen</td>
+<td colspan="2">Cod. Int. Doenca</td>
+<td colspan="4">Codigo internacional de doenças.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo( "TMR", M->R8_CID )</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tmr.html">TMR</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_CODCAT</td>
+<td>Cod.Com. CAT</td>
+<td colspan="2">Cod. Com. CAT</td>
+<td colspan="4">Número do comunicado de acidente do
+trabalho (CAT).
+</td>
+<td>C</td>
+<td>13</td>
+<td>0</td>
+<td>@R 9999999999-9/99                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_DTCAT</td>
+<td>Dt. Reg. CAT</td>
+<td colspan="2">Dt. Reg. CAT</td>
+<td colspan="4">Data do registro da CAT.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>CtoD("//")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_MEMO</td>
+<td>Desc. Det.</td>
+<td colspan="2">Descricao Detalhada</td>
+<td colspan="4">Descrição detalhada do afastamento.
+</td>
+<td>M</td>
+<td>80</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(INCLUI, "", MSMM(SR8->R8_CODMEMO))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>gp240VerEdit()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_CODMEMO</td>
+<td>Codigo Memo</td>
+<td colspan="2">Codigo Memo</td>
+<td colspan="4">Informe Codigo Memo.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>gp240VerEdit()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_SDODIAS</td>
+<td>Saldo Dias</td>
+<td colspan="2">Saldo de Dias</td>
+<td colspan="4">Informe o Saldo de Dias
+</td>
+<td>N</td>
+<td>7</td>
+<td>2</td>
+<td>@E 9,999.99                                  </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_STATUS</td>
+<td>Status</td>
+<td colspan="2">Status</td>
+<td colspan="4">Controle do status da ausencia.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>C=Calculado;R=Reversao;T=Retroativo</td>
+<td>gp240VerEdit()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_NUMID</td>
+<td>Num.Identif.</td>
+<td colspan="2">Numero Identificacao</td>
+<td colspan="4">Número de controle interno do sistema
+para identificar o registro da ausência.
+Este campo é composto por:
+Alias da tabela (SR8) + Matricula do
+Funcionário + Ano + Mês + Dia do Inicio
+da Ausência.
+</td>
+<td>C</td>
+<td>26</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/129.html">129</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_PROCES</td>
+<td>Cód.Processo</td>
+<td colspan="2">Código do Processo</td>
+<td colspan="4">Código do Processo do funcionário no
+momento do lançamento da ausência. O
+processo esta vinculado diretamente ao
+período de
+inicio da ausência.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>SRA->RA_PROCES</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_PER</td>
+<td>Cod.Per.Inic</td>
+<td colspan="2">Codigo Periodo Inicio</td>
+<td colspan="4">Identifica a que periodo de cálculo está
+se referenciando o lançamento dentro do
+processo.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>gp240RetCont("RCH",1,xFilial("RCH")+cProcesso,"RCH_PER","Empty(RCH->RCH_DTFECH) .AND. (RCH->RCH_PROCES == cProcesso)")</td>
+<td><a href="/tabelas_protheus/f3/rch.html">RCH</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_NUMPAGO</td>
+<td>Num. Pagto</td>
+<td colspan="2">Num. Pagto</td>
+<td colspan="4">Identifica o numero de pagamento de um
+periodo de calculo.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>gp240RetCont("RCH",1,xFilial("RCH")+cProcesso,"RCH_NUMPAG","Empty(RCH->RCH_DTFECH) .AND. (RCH->RCH_PROCES == cProcesso)")</td>
+<td><a href="/tabelas_protheus/f3/rch.html">RCH</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>gp240VerEdit()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_EMPPG</td>
+<td>Empresa Paga</td>
+<td colspan="2">Empresa Paga os Dias</td>
+<td colspan="4">Informe, para os afastamentos tipo 'O' e
+'P', se os dias do afastamento serão
+considerados no cálculo do pagamento dos
+primeiros 15 dias realizado pela
+empresa.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>R8EMPPGWHEN()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_CODRPAT</td>
+<td>Reg.Patronal</td>
+<td colspan="2">Cod. do registro Patronal</td>
+<td colspan="4">INFORME O CODIGO DO REGISTRO PATRONAL
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("RCO")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gf0.html">GF0</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>gp240VerEdit()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_DTBLEG</td>
+<td>Dt.Bas.Legal</td>
+<td colspan="2">Data da Base Legal</td>
+<td colspan="4">Informe a data da base legal.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_CODTPA</td>
+<td>Cod. Tpa.</td>
+<td colspan="2">Cod. Memo Obs. TPA</td>
+<td colspan="4">Código do campo MEMO R8_OBSTPA
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_RHEXP</td>
+<td>Contr.Exp.RH</td>
+<td colspan="2">Controle de Exportação RH</td>
+<td colspan="4">Neste campo é armazenado a data da
+exportação para o aplicativo Totvs
+Controle de Acesso.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_OBSAFAS</td>
+<td>Inf. Compl.</td>
+<td colspan="2">Inf.Compl. de afastamento</td>
+<td colspan="4">Inf. Complementares do afastamento.
+</td>
+<td>C</td>
+<td>200</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_TPEFD</td>
+<td>Motivo Afast</td>
+<td colspan="2">Cod Motivo Afastamento</td>
+<td colspan="4">Selecione o código do motivo de
+afastamento temporário.
+Uso eSocial.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ValidRCC("S048",RCM->RCM_TPEFD,1,2)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/s48.html">S48</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_TIPOAT</td>
+<td>Tp Ac Trâns.</td>
+<td colspan="2">Tipo Afast. Acid.Trânsito</td>
+<td colspan="4">Se o afastamento temporário é decorrente
+de um acidente de trânsito (seja por
+acidente de trabalho ou por doença),
+será necessário identificar o Tipo de
+Acidente de Trânsito.
+1 - Atropelamento;
+2 - Colisão;
+3 - Outros.
+Uso eSocial.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>(VAZIO() .OR. (Pertence("123 ")))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Atropelamento;2=Colis�o;3=Outros</td>
+<td>fGP240Edit()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_OBSTPA</td>
+<td>Obs.Tp.Afast</td>
+<td colspan="2">Obs.Tp.Afast.Acid.Trabalh</td>
+<td colspan="4">Utilize esse campo para inserir
+observações do tipo do afastamento
+relativo ao acidente de trabalho.
+Uso eSocial.
+</td>
+<td>M</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(INCLUI, "", MSMM(SR8->R8_CODTPA))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>fGP240Edit()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_NMMED</td>
+<td>Nm Emitente</td>
+<td colspan="2">Nome do Emitente</td>
+<td colspan="4">Preencher com o nome do emitente do
+atestado de afastamento.
+Uso eSocial.
+</td>
+<td>C</td>
+<td>80</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>fGP240Edit()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_CRMMED</td>
+<td>Insc Emitent</td>
+<td colspan="2">Inscrição do Emitente</td>
+<td colspan="4">Número de inscrição do emitente do
+atestado de afastamento no órgão de
+classe.
+Uso eSocial.
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>fGP240Edit()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_UFCRM</td>
+<td>Cod. UF</td>
+<td colspan="2">Cód. Unidade da Federação</td>
+<td colspan="4">Preencher com a sigla da Unidade da
+Federação relativa ao órgao de classe do
+emitente do Atestado de afastamento.
+Se o campo R8_CRMMED for preenchido,
+este campo deverá ser preenchido com uma
+UF válida. Uso eSocial.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>VAZIO() .OR. (EXISTCPO("SX5", "12" + M->R8_UFCRM))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/12.html">12</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>fGP240Edit()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/010.html">010</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_IDEOC</td>
+<td>Órg.Classe</td>
+<td colspan="2">Órgão de Classe</td>
+<td colspan="4">Neste campo deve ser informado o tipo de
+órgão de classe:
+1 = CRM;
+2 = CRO
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>9                                            </td>
+<td>Vazio() .Or. Pertence("123")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=CRM;2=CRO;3=RMS</td>
+<td>fGP240Edit()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_CNPJCES</td>
+<td>CNPJ Cession</td>
+<td colspan="2">CNPJ do Cessionário</td>
+<td colspan="4">Informar o CNPJ da empresa Cessionária,
+para a qual o funcionário foi cedido, o
+qual deverá ser válido e diferente do
+CNPJ do declarante.
+Uso eSocial.
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>@R 99.999.999/9999-99                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>fGP240Edit()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_TPCES</td>
+<td>Tp Ônus Cess</td>
+<td colspan="2">Tipo Ônus da Cessão</td>
+<td colspan="4">Informar Tipo Ônus da Cessão do
+trabalhador:
+1=Ônus do Cedente;
+2=Ônus do Cessionário;
+3=Ônus do Cedente e Cessionário.
+Uso eSocial.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>(VAZIO() .OR. (Pertence("123 ")))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=�nus do Cedente;2=�nus do Cession�rio;3=�nus do Cedente e Cession�rio;</td>
+<td>fGP240Edit()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_CNPJSIN</td>
+<td>CNPJ Sindica</td>
+<td colspan="2">CNPJ do Sindicato</td>
+<td colspan="4">Informar o CNPJ do sindicato no qual o
+trabalhador exercerá o mandato.
+Uso eSocial.
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>@R 99.999.999/9999-99                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>fGP240Edit()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_TPSIND</td>
+<td>Tp Ônus Sind</td>
+<td colspan="2">Tipo Ônus Ren. Sindicato</td>
+<td colspan="4">Informar Tipo Ônus da Remuneração no
+Mandato Sindical do trabalhador:
+1=Ônus Empregador;
+2=Ônus Sindicato;
+3=Dif.Salarial paga pelo Sindicato.
+Uso eSocial.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>(VAZIO() .OR. (Pertence("123 ")))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=�nus Empregador;2=�nus Sindicato;3=Dif.Salarial paga pelo Sindicato;</td>
+<td>fGP240Edit()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_PROADIC</td>
+<td>Calc Pr Adic</td>
+<td colspan="2">Calc. Prop. Adicionais</td>
+<td colspan="4">Informe '1=Sim' para que o cálculo
+proporcione o valor dos adicionais
+conforme os afastamentos ou '2=Não' para
+que não proporcione.
+Por exemplo: afastamento do dia
+01/07/2016 à 03/07/2016, ao selecionar
+'1=Sim', para o cálculo dos adicionais
+serão pagos os dias trabalhados mais os
+dias de afastamento, nesse caso 28
+dias.Ao selecionar '2=Não', seriam pagos
+apenas sobre os dias trabalhados, nesse
+caso 31 dias.
+Atenção: Válido para todos os tipos de
+ausências exceto a do tipo '4=Controle
+de Dias de Direito'.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence(" 12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_INTGTAF</td>
+<td>Integ TAF</td>
+<td colspan="2">Integrado com TAF</td>
+<td colspan="4">Data de Integração com TAF
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_TPPROC</td>
+<td>Tp. Processo</td>
+<td colspan="2">Tipo de Processo</td>
+<td colspan="4">Informar o tipo de processo
+valores permitidos:
+1=Administrativo;
+2=Judicial;
+Uso eSocial.
+3=Numero do Beneficio (NB) do INSS
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>9                                            </td>
+<td>Vazio() .Or. Pertence("123")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Administrativo;2=Judicial;3=Numero do Beneficio (NB) do INSS</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_TPEFDAN</td>
+<td>Mot Anterior</td>
+<td colspan="2">Cod Motiv Afastamento Ant</td>
+<td colspan="4">Contém o Codigo do Motivo Anterior, caso
+o mesmo seja alterado no campo R8_TPEFD.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_EFDRETR</td>
+<td>Info Retroat</td>
+<td colspan="2">Efeito Retroativo Afastam</td>
+<td colspan="4">Informar se a alteração de motivo tem
+efeito retroativo à data de afastamento
+original.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_ORIGALT</td>
+<td>Orig Alterac</td>
+<td colspan="2">Origem da Alteração</td>
+<td colspan="4">Origem da alteração.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("123")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Por iniciativa do empregador;2=Revis�o Administrativa;3=Determina��o Judicial</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_NRPRCJU</td>
+<td>Processo Jud</td>
+<td colspan="2">Nr. Processo Judicial</td>
+<td colspan="4">Preencher com o número do processo
+judicial.
+</td>
+<td>C</td>
+<td>21</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_TAFKA</td>
+<td>TAFKey Alter</td>
+<td colspan="2">Código de integ. da alt</td>
+<td colspan="4">Chave de integração da alteração com o
+TAF.
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_FILSUB</td>
+<td>Fil. Substit</td>
+<td colspan="2">Filial do Substituto</td>
+<td colspan="4">Filial do substituto
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td>vazio() .or. ExistCpo("SM0",cEmpAnt+M->R8_FILSUB)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/xm0.html">XM0</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_TAFKI</td>
+<td>TAFKeyInicio</td>
+<td colspan="2">Chave inicial do TAF</td>
+<td colspan="4">Informe a chave inicial do TAF
+(CODUNICO+SEQUENCIA AFASTAMENTO+ "INI")
+uso eSocial.
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_MATSUB</td>
+<td>Matr.Substit</td>
+<td colspan="2">Matricula do Substituto</td>
+<td colspan="4">Matricula do Substituto
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>vazio() .or. ExistCpoRh("SRA",M->R8_MATSUB,1,GDFieldGet("R8_FILSUB")) .AND. VldSubst(GDFieldGet("R8_FILSUB"),M->R8_MATSUB)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/srafil.html">SRAFIL</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/121.html">121</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_TAFKF</td>
+<td>TAFKeyFinal</td>
+<td colspan="2">Chave final do TAF</td>
+<td colspan="4">Informe a chave final do TAF
+(CODUNICO+SEQUENCIA AFASTAMENTO+ "FIM")
+uso eSocial.
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_GEDOC</td>
+<td>Nr GEDOC</td>
+<td colspan="2">Numero GEDOC</td>
+<td colspan="4">Numero do Gerenciador Eletronico de
+Documentos e Processos
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@                                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_DTER</td>
+<td>Data Ef Retr</td>
+<td colspan="2">Data de Efeito Retroativo</td>
+<td colspan="4">Data a partir da qual o instrumento ou
+determinação legal passa a produzir seus
+efeitos.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>Ctod("//")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>Iif(FindFunction('fWhenDtEr'),fWhenDtEr(),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>R8_DATALT</td>
+<td>Dt. Alt. Mot</td>
+<td colspan="2">Data de Alt. Mot. Afasta</td>
+<td colspan="4">O campo reserva a data de alteração do
+tipo de afastamento eSocial de doença
+para acidente de trabalho ou vice-versa.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>Ctod("//")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>R8_INTTAF</td>
+<td>Int. TAF/MID</td>
+<td colspan="2">Integra com o TAF/MID.</td>
+<td colspan="4">Informe 2 para o evento não seja
+integrado com o TAF/Middleware;
+Informe 1 ou mantenha vazio para que o
+afastamento seja integrado;
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence(" 12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

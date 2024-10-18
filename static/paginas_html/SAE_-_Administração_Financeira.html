@@ -1,0 +1,1247 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: SAE - Administração Financeira</title></head>
+<body>
+<font color="orange"><h2 id="SAE">Tabela: SAE - Administração Financeira</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Administração Financeira</b></td><td colspan="2"><b>AE_FILIAL+AE_COD</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">AE_FILIAL+AE_COD</td><td>Cod Adm</td><td></td></tr>
+<tr><td>2</td><td colspan="2">AE_FILIAL+AE_CODCLI</td><td>Cod. Cliente</td><td></td></tr>
+<tr><td>3</td><td colspan="2">AE_FILIAL+AE_DESC+AE_COD</td><td>Nome Adm + Cod Adm</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>AE_FILIAL</td>
+<td>FILIAL</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AE_COD</td>
+<td>Cod Adm</td>
+<td colspan="2">Cod Administradora</td>
+<td colspan="4">Código da Administradora de cartöes de
+crédito que será usado pelo sistema.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>                                             </td>
+<td>existchav("SAE",m->ae_cod).And.FreeForUse("SAE",M->AE_COD)</td>
+<td>IIF(FWISINCALLSTACK('FINA225') .OR. FWISINCALLSTACK('RMIGRVADM'),GETSXENUM("SAE","AE_COD"),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>IIF(FWISINCALLSTACK('FINA225'),.F.,.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td>#AE_COD    <>'   '</td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>AE_DESC</td>
+<td>Nome Adm</td>
+<td colspan="2">Nome da Admin.Cartao</td>
+<td colspan="4">Nome completo da administradora de car-
+töes de crédito.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>                                             </td>
+<td>naovazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td>#AE_DESC   <>'                              '</td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>AE_DIAS</td>
+<td>Virar em...</td>
+<td colspan="2">Dia de a virar o cartao</td>
+<td colspan="4">Dia padrão em que será feita a virada
+do recebimento da administradora em
+questão ("Virar o Cartao")
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AE_TAXA</td>
+<td>Tx.Cobranca</td>
+<td colspan="2">Taxa Cobranca</td>
+<td colspan="4">Percentual que a administradora cobra.
+</td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AE_VENCTO</td>
+<td>Vecto Padrao</td>
+<td colspan="2">Dia Vencto no Mes</td>
+<td colspan="4">Dia do mês em que a administradora
+costuma fazer o crédito.
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td>L070Venc()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AE_TIPO</td>
+<td>Tipo Adminis</td>
+<td colspan="2">Tipo da Administradora</td>
+<td colspan="4">Tipo de pgto. adiministrado. Por
+exemploCart„o de Crédito, Convênio e
+etc.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .And. l070Tipo() .And. IIf(FindFunction("Lj70VTipo"),Lj70VTipo(),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/24.html">24</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td>#AE_TIPO   <>'  '</td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>AE_USAFATO</td>
+<td>Usa Fator</td>
+<td colspan="2">Utiliza o Fator de Multip</td>
+<td colspan="4">Utiliza Fator de multiplicação para
+cal-cular as parcelas para o cliente.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("SN ") .And. L070Fator()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>S=Sim;N=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AE_VENCFIN</td>
+<td>Venc Financ</td>
+<td colspan="2">Vencimento Financiamento</td>
+<td colspan="4">Número de dias para recebimento do títu
+lo financiado, a partir da data de
+VendaEX. Venda em 10/10/97, com o Campo
+AE_VENCFIN igual a 5, o Título será
+gerado   para o dia 15/10/97. (Valido p/
+TIPO FI)
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td>L070Finc()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AE_FINPRO</td>
+<td>Financ. Prop</td>
+<td colspan="2">Financiamento próprio</td>
+<td colspan="4">Verifica se esta admnistradora utiliza
+financiamento próprio.
+Caso afirmativo os títulos serão
+geradosum a um conforme o número de
+parcelas.  Caso contrário apenas um
+título.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>S=Sim;N=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>AE_CODCLI</td>
+<td>Cod. Cliente</td>
+<td colspan="2">Código do Cliente</td>
+<td colspan="4">Codigo do cliente
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. ExistCpo("SA1", M->AE_CODCLI, 1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sa1.html">SA1</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AE_LOJCLI</td>
+<td>Loja Cliente</td>
+<td colspan="2">Loja do Cliente</td>
+<td colspan="4">Código da Loja relacionado o Cliente.
+Este código é utilizado na geração de
+Títulos a Receber no momento da venda.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. ExistCpo("SA1", M->AE_CODCLI + M->AE_LOJCLI, 1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AE_REDE</td>
+<td>Rede Destino</td>
+<td colspan="2">Rede Destino para TEF</td>
+<td colspan="4">Código da rede onde esta Administradora
+efetuara a transação TEF.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .OR. GenTabPos('L9',M->AE_REDE)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/l9.html">L9</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AE_GRPFRT</td>
+<td>Grupo FRT</td>
+<td colspan="2">Grupo Adm. para FrontLoja</td>
+<td colspan="4">Grupo de Administradoras que será usado
+para agrupar Teclas de Finalização no
+FrontLoja. O primeiro byte indica a
+tecla Ctrl correspondente e os dois
+seguintes o número de ordem.
+Ex:"C01","C02","D01".
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AE_PLABEL</td>
+<td>Prv.Label</td>
+<td colspan="2">Private Label</td>
+<td colspan="4">Indica se esta administradora será
+utilizada para controle de Private Label
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AE_AGLPARC</td>
+<td>Agl. Parcela</td>
+<td colspan="2">Aglutina Parcela</td>
+<td colspan="4">Define se aglutina os titulos a receber
+da venda do tipo: cartao de
+credito/debito, vale, convenio,
+financiado: 1=Aglutina;2=Nao aglutina
+</td>
+<td>N</td>
+<td>1</td>
+<td>0</td>
+<td>9                                            </td>
+<td>M->AE_AGLPARC == 1 .OR. M->AE_AGLPARC ==2</td>
+<td>2</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AE_SOFEXP</td>
+<td>Cod Soft Exp</td>
+<td colspan="2">Cod. Software express</td>
+<td colspan="4">Código da Software Express
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .OR. GenTabPos('G3',M->AE_SOFEXP)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/g3.html">G3</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AE_DESCSE</td>
+<td>Desc Rede</td>
+<td colspan="2">Descrição Rede</td>
+<td colspan="4">Descrição Rede
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AE_SEGURAD</td>
+<td>Seguradora</td>
+<td colspan="2">Flag de seguradora</td>
+<td colspan="4">Flag que define se o fornecedor é
+seguradora, default "2-não"
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence ("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AE_ECCODIG</td>
+<td>Cod e-commer</td>
+<td colspan="2">Código e-commerce</td>
+<td colspan="4">Código e-commerce
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AE_LAYOUT</td>
+<td>Cod. Layout</td>
+<td colspan="2">Codigo LayOut</td>
+<td colspan="4">Codigo do Layout de retorno do arquivo
+texto.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td>ExistCPO("MFG",M->AE_LAYOUT)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/mfg.html">MFG</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AE_LAYIMP</td>
+<td>Cod Lay Ret</td>
+<td colspan="2">Cod. Layout de retorno</td>
+<td colspan="4">Codigo do Layout de retorno do arquivo
+texto.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCPO("MFG",M->AE_LAYIMP)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/mfg.html">MFG</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AE_ECCNFPG</td>
+<td>Conf Pagto?</td>
+<td colspan="2">Confirma Pagamento?</td>
+<td colspan="4">Permite a confirmação do pagamento sem
+processar a baixa do título. Válido para
+Intermediadores de Pagamento, cuja baixa
+do título somente ocorrerá após a
+emissão da Nota Fiscal
+</td>
+<td>L</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>Rtrim(M->AE_TIPO) == "FI" .AND. RTrim(M->AE_FINPRO) = "N"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AE_VCOMPRA</td>
+<td>Vale Compras</td>
+<td colspan="2">Utiliza Vale Compras</td>
+<td colspan="4">Informar se utiliza vale compra
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AE_PARCDE</td>
+<td>Parcela De</td>
+<td colspan="2">Qtd. minima parcelas</td>
+<td colspan="4">Qtde. minma de parcelas permitida por
+essa administradora financeira
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>@E 999                                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AE_PARCATE</td>
+<td>Parcela Até</td>
+<td colspan="2">Qtd. máxima parcelas</td>
+<td colspan="4">Qtd. máxima de parcelas permitida por
+essa administradora
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>@E 999                                       </td>
+<td>IIF(ExistFunc("L070VlDt"),L070VlDt(),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AE_DIAUTIL</td>
+<td>Vcto D Útil</td>
+<td colspan="2">Vencimento em Dias Úteis?</td>
+<td colspan="4">Define se o vencimento será somente em
+dias úteis.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("123")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Vencto Dias Corridos;2=Vencto Proximo Dia Util;3=Vencto Dia Util Anterior</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AE_SAT</td>
+<td>Cred. SAT</td>
+<td colspan="2">Credenciadora SAT</td>
+<td colspan="4">Código administradora SAT
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AE_CODEXT</td>
+<td>Form Pg Ext</td>
+<td colspan="2">Forma de Pgto Externa</td>
+<td colspan="4">Código da Forma de Pagamento Externa
+enviada por integração com outros
+sistemas.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. ExistCpo("SX5","24"+M->AE_CODEXT)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/24.html">24</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AE_DIAEMI</td>
+<td>Dia Emis.</td>
+<td colspan="2">Dia Emissao</td>
+<td colspan="4">Considera dia da Emissão
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Nao;2=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AE_FIXADIA</td>
+<td>Fixa Dia</td>
+<td colspan="2">Fixa Dia</td>
+<td colspan="4">Se ira fixar o dia de vencimento dos
+titulos
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Nao;2=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AE_ADMCART</td>
+<td>Bandeira</td>
+<td colspan="2">Cod. Bandeira SITEF</td>
+<td colspan="4">Informar o código correspondente da
+administradora retornada pelo SITEF.
+Usado apenas quando o parâmetro
+MV_LJADMFI estiver definido como TRUE,
+para que seja feito o retorno automático
+na finalização da venda
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. ( ExistCpo("MDE",M->AE_ADMCART) .And. Loja075Valid() )</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/mde.html">MDE</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AE_REDEAUT</td>
+<td>Rede Autoriz</td>
+<td colspan="2">Codigo Rede Autorizadora</td>
+<td colspan="4">Informar o código correspondente a Rede
+Autorizadora da transação TEF retornada
+pelo SITEF.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. Lj070VldRD()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/mdered.html">MDERED</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AE_PCORTE</td>
+<td>Period.Corte</td>
+<td colspan="2">Periodicidade do Corte</td>
+<td colspan="4">É o intervalo em dias entre um corte e
+outro.
+É bastante utilizado para
+administradores de Voucher, como
+vales-refeição, vales-alimentação, etc.
+Definimos Corte o agrupamento dos
+títulos a receber em um determinado
+período, cujo montante é creditado na
+conta do lojista após um período
+determinado pelo administrador no campo
+"Virar em..." (AE_DIAS).
+O mínimo válido para corte é 7 dias
+(semanal), podendo ser configurado a
+cada 10 dias, 15 dias, etc.
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td>Positivo() .And. ExistFunc("L070VlPCrt") .And. L070VlPCrt()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AE_DCORTE</td>
+<td>Inicio Corte</td>
+<td colspan="2">Dia Inicial do Corte</td>
+<td colspan="4">No Dia Inicial do Corte, o sistema
+calculará com precisão as datas do
+corte, baseado no campo anterior Dias de
+Periodicidade do Corte. Os dias sempre
+deverão ser fixos a cada mês, exceto o
+dia da semana para periodicidade
+(AE_PCORTE) 7 dias.
+Exemplos:
+Caso o Dia de Periodicidade do Corte
+(AE_PCORTE) for 7 dias, necessário
+escolher o dia da semana: 1 para
+Domingo, 2 para Segunda-Feira, até 7
+para Sábado.
+Caso o Dia de Periodicidade do Corte
+(AE_PCORTE) for 10 dias, baseado nos
+períodos 05 a 14, 15 a 24 e 25 a 04 do
+mês seguinte, entendemos que os dias de
+corte serão os dias 14, 24 e 04, deverá
+escolher sempre a primeira data inicial,
+como dia 05.
+Caso o Dia de Periodicidade do Corte
+(AE_PCORTE) for 15 dias, baseado nos
+períodos 01 a 15, e 16 ao final do dia,
+entendemos que os dias de corte serão os
+dias 15 e final do mês, então deverá
+escolher sempre a primeira data inicial,
+como dia 01.
+Importante:
+Os dias dos Cortes, tanto periodicidade
+semanal (7 dias) ou periódica (maior que
+7 dias), inclui Feriados normalmente.
+No período dos cortes, os dias dos
+cortes sempre são a data final desses
+períodos, e se a data da Venda coincidir
+com a data final do período do corte, o
+corte será no mesmo dia.
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td>Positivo() .And. ExistFunc("L070VlDCrt") .And. L070VlDCrt()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AE_TMPVCTO</td>
+<td>Tempo Vencto</td>
+<td colspan="2">Tempo de Vencimento</td>
+<td colspan="4">Quando maior ou igual 1.00, considera
+somente parte inteira e o vencimento
+será calculado em dias úteis, caso
+contrario, as casas decimais signifca
+vencimento em horas corridas, valor
+máximo é 0.23, ou seja, 23 horas
+corridas.
+Ex.: Se configurado o valor 0.02, o
+vencimento será em 2 horas
+Se configurado o valor 2.00, o
+vencimento será em 2 dias úteis.
+</td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>SB1</td>
+<td colspan="2">AE_COD</td>
+<td colspan="2">B1_ADMIN</td>
+</tr>
+<tr>
+<td>GQL</td>
+<td colspan="2">AE_COD</td>
+<td colspan="2">GQL_CODADM</td>
+</tr>
+<tr>
+<td>SS3</td>
+<td colspan="2">AE_COD</td>
+<td colspan="2">S3_CODADM</td>
+</tr>
+<tr>
+<td>G58</td>
+<td colspan="2">AE_COD</td>
+<td colspan="2">G58_BAND</td>
+</tr>
+<tr>
+<td>SA2</td>
+<td colspan="2">AE_COD</td>
+<td colspan="2">A2_CODADM</td>
+</tr>
+<tr>
+<td>SS4</td>
+<td colspan="2">AE_COD</td>
+<td colspan="2">S4_ADMIN</td>
+</tr>
+<tr>
+<td>MG8</td>
+<td colspan="2">AE_FILIAL+AE_COD</td>
+<td colspan="2">MG8_FILIAL+MG8_ADMIN</td>
+</tr>
+<tr>
+<td>SAF</td>
+<td colspan="2">AE_COD</td>
+<td colspan="2">AF_COD</td>
+</tr>
+<tr>
+<td>MGV</td>
+<td colspan="2">AE_COD</td>
+<td colspan="2">MGV_ADMFIN</td>
+</tr>
+<tr>
+<td>GIR</td>
+<td colspan="2">AE_COD</td>
+<td colspan="2">GIR_CODADM</td>
+</tr>
+<tr>
+<td>GZP</td>
+<td colspan="2">AE_COD</td>
+<td colspan="2">GZP_FPAGTO</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

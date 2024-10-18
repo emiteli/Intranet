@@ -1,0 +1,484 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: DV1 - Regras Tributação por Cliente</title></head>
+<body>
+<font color="orange"><h2 id="DV1">Tabela: DV1 - Regras Tributação por Cliente</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Regras Tributação por Cliente</b></td><td colspan="2"><b>DV1_FILIAL+DV1_CODCLI+DV1_LOJCLI+DV1_DOCTMS+DV1_CODPRO+DV1_TIPNFC+DV1_TIPCLI+DV1_SEQINS</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">DV1_FILIAL+DV1_CODCLI+DV1_LOJCLI+DV1_DOCTMS+DV1_CODPRO+DV1_TIPNFC+DV1_TIPCLI+DV1_SEQINS+DV1_REGTRI</td><td>Cliente + Loja + Docto.Transp + Cod. Prod. + Tipo da NFC + Tipo Client</td><td></td></tr>
+<tr><td>2</td><td colspan="2">DV1_FILIAL+DV1_REGTRI+DV1_CODCLI+DV1_LOJCLI+DV1_DOCTMS</td><td>Regra Trib. + Cliente + Loja + Docto.Transp</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>DV1_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Filial do Sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DV1_CODCLI</td>
+<td>Cliente</td>
+<td colspan="2">Codigo do Cliente</td>
+<td colspan="4">Código que individualiza cada um dos
+clientes da empresa. É complementado
+pelo código da loja. Uma regra de
+tributação será vinculada a este
+cliente. Podemos configurar uma regra de
+tributacao para um cliente generico, se
+o sistema nao encontrar uma regra
+definida para um cliente a regra do
+cliente generico sera utilizada.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SA1",M->DV1_CODCLI+AllTrim(M->DV1_LOJCLI))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sa1.html">SA1</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dv1_codcli.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DV1_LOJCLI</td>
+<td>Loja</td>
+<td colspan="2">Loja do Cliente</td>
+<td colspan="4">Código que identifica a loja do cliente.
+Permite que haja um controle das
+operações por loja.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SA1",M->DV1_CODCLI+AllTrim(M->DV1_LOJCLI))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/dv1_lojcli.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DV1_NOMCLI</td>
+<td>Nome</td>
+<td colspan="2">Nome do Cliente</td>
+<td colspan="4">Nome ou razão social do cliente.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",Posicione("SA1",1,xFilial("SA1")+DV1->DV1_CODCLI+DV1->DV1_LOJCLI,"A1_NOME"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("SA1",1,xFilial("SA1")+DV1->DV1_CODCLI+DV1->DV1_LOJCLI,"A1_NOME")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DV1_DOCTMS</td>
+<td>Docto.Transp</td>
+<td colspan="2">Documento de Transporte</td>
+<td colspan="4">Selecione o tipo de documento de
+transporte a ser definido na regra por
+cliente, podemos ter os seguintes tipos:
+(Coleta, CTRC, AWB, Docto Bx. Estoque,
+Nota Fiscal, CTRC Devolução, CTRC
+Reentrega, CTRC complemento, CTRC
+Retorno). Utilize a tecla F3 para
+realizar a seleção do tipo de Documento
+de Transporte.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>TMSValField("M->DV1_DOCTMS",.T.,"DV1_DESDOC")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dlc.html">DLC</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DV1_DESDOC</td>
+<td>Desc.Docto.</td>
+<td colspan="2">Desc. Documento</td>
+<td colspan="4">Ao selecionar o documento de transporte
+este campo será preenchido
+automaticamente com a descrição do
+documento de transporte.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",TMSValField("DV1->DV1_DOCTMS",.F.))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>TMSValField("DV1->DV1_DOCTMS",.F.)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DV1_REGTRI</td>
+<td>Regra Trib.</td>
+<td colspan="2">Regra Tributacao</td>
+<td colspan="4">Este código vincula um componente de
+frete ou uma UF origem ou uma UF destino
+ou um tipo de frete a um TES,
+determinando as regras tributarias de
+cada operação.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SX5","MC"+M->DV1_REGTRI)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/mc.html">MC</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dv1_regtri.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DV1_DESREG</td>
+<td>Desc.Regra</td>
+<td colspan="2">Descricao Regra</td>
+<td colspan="4">Descrição da regra de tributação, este
+campo é preenchido automaticamente após
+selecionarmos uma regra de tributação.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",Tabela("MC",DV1->DV1_REGTRI,.F.))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Tabela("MC",DV1->DV1_REGTRI,.F.)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DV1_CODPRO</td>
+<td>Cod. Prod.</td>
+<td colspan="2">Codigo do Produto</td>
+<td colspan="4">Código do Produto, da rotina cadastro de
+produtos. Caso não seja selecionado um
+produto a regra é valida para todos os
+produtos.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. Existcpo ("SB1",M->DV1_CODPRO)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sb1.html">SB1</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dv1_codpro.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/030.html">030</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DV1_DESPRO</td>
+<td>Desc. Prod</td>
+<td colspan="2">Descricao do Produto</td>
+<td colspan="4">Descrição do Produto, este campo é
+preenchido automaticamente após
+selecionarmos um produto.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui, "", Posicione ("SB1", 1,xFilial("SB1")+DV1->DV1_CODPRO,"B1_DESC"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DV1_TIPNFC</td>
+<td>Tipo da NFC</td>
+<td colspan="2">Tipo da Nota Fiscal</td>
+<td colspan="4">Este campo indica o Tipo da Nota
+fiscal.Normal = é a forma padrão de
+inclusão de uma Nota Fiscal do
+Cliente;Devolução = Utilizado para
+realizar Devoluções Parciais. Neste
+caso, o cálculo do frete irá inverter as
+regiões origem e destino informadas na
+Nota Fiscal, para encontrar a tabela de
+frete do documento original que será
+utilizada para calculo do
+frete;Subcontratação = Utilizado para os
+casos em que os impostos já tenham sido
+recolhidos pela transportadora que
+realizou o primeiro percurso do
+transporte.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("0123456789")</td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/dlc.html">DLC</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DV1_TIPCLI</td>
+<td>Tipo Cliente</td>
+<td colspan="2">Tipo do Cliente</td>
+<td colspan="4">Informe o Tipo de Cliente. Este campo
+deverá ser informado apenas para o
+Cliente Genérico <MV_CLIGEN>.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Vazio() .Or. Pertence('FLRSX')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>F=Cons.Final;L=Produtor Rural;R=Revendedor;S=Solidario;X=Exportacao</td>
+<td>TMSA600Whe('M->DV1_TIPCLI')</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DV1_SEQINS</td>
+<td>Seq.Inscrica</td>
+<td colspan="2">Sequencia Inscricao</td>
+<td colspan="4">Informe a sequência de inscrição
+estadual do cliente. Esta sequência deve
+ser cadastrada através da rotina
+Inscrições Estaduais de Cliente. Este
+campo NÃO deverá ser preenchido para o
+Cliente Genérico <MV_CLIGEN>.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td>TMSA600Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dv3.html">DV3</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>TMSA600Whe('DV1_SEQINS')</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

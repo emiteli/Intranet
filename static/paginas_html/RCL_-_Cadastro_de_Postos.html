@@ -1,0 +1,1082 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: RCL - Cadastro de Postos</title></head>
+<body>
+<font color="orange"><h2 id="RCL">Tabela: RCL - Cadastro de Postos</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Cadastro de Postos</b></td><td colspan="2"><b>RCL_FILIAL+RCL_POSTO</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">RCL_FILIAL+RCL_DEPTO+RCL_POSTO</td><td>Cod. Depto + Codigo Posto</td><td></td></tr>
+<tr><td>2</td><td colspan="2">RCL_FILIAL+RCL_POSTO</td><td>Codigo Posto</td><td></td></tr>
+<tr><td>3</td><td colspan="2">RCL_FILIAL+RCL_CC+RCL_POSTO</td><td>Cod. C.Custo + Codigo Posto</td><td></td></tr>
+<tr><td>4</td><td colspan="2">RCL_FILIAL+RCL_DEPTO+RCL_CARGO</td><td>Cod. Depto + Cod. Cargo</td><td></td></tr>
+<tr><td>5</td><td colspan="2">RCL_FILIAL+RCL_CARGO+RCL_POSTO</td><td>Cod. Cargo + Codigo Posto</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>RCL_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Código que identifica a filial da
+empresa usuária do sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/xm0.html">XM0</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RCL_POSTO</td>
+<td>Codigo Posto</td>
+<td colspan="2">Codigo Posto</td>
+<td colspan="4">Número que identifica o posto, ou seja,
+os locais dentro de um centro de custo.
+Esses postos são formados por uma
+numeração sequencial e única dentro da
+tabela.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>RCLPostoInit()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/026.html">026</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RCL_STATUS</td>
+<td>Situacao</td>
+<td colspan="2">Situacao</td>
+<td colspan="4">Inf a situação do posto:Livre, Aprovado
+Cancelado ou Congelado. A situação
+poderá ser
+alterada p/ Congelado ou Cancelado
+somente
+se não existir nenhum funcionário
+ocupando
+posto,ou seja,o número de postos ocupado
+for zero.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>9                                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Livre;2=Ocupado;3=Congelado;4=Cancelado</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RCL_DEPTO</td>
+<td>Cod. Depto</td>
+<td colspan="2">Codigo Departamento</td>
+<td colspan="4">Deve ser informado o código do
+departamento relativo a este posto.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo('SQB')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sqb.html">SQB</a></td>
+<td><a href="/tabelas_protheus/gatilhos/rcl_depto.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/025.html">025</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RCL_DDEPTO</td>
+<td>Departamento</td>
+<td colspan="2">Descrição do Departamento</td>
+<td colspan="4">Descrição do Departamento.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>RCLDDeptoIni()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>RCLDDeptoIni()</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RCL_PROCES</td>
+<td>Cod Processo</td>
+<td colspan="2">Codigo do Processo</td>
+<td colspan="4">Informe o processo referente ao posto.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo('RCJ')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/rcj.html">RCJ</a></td>
+<td><a href="/tabelas_protheus/gatilhos/rcl_proces.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RCL_DPROC</td>
+<td>Processo</td>
+<td colspan="2">Descrição do Processo</td>
+<td colspan="4">Informe a descrição do processo.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>RCLDProcIni()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RCL_CARGO</td>
+<td>Cod. Cargo</td>
+<td colspan="2">Codigo Cargo</td>
+<td colspan="4">Informe o cargo referente ao posto.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo('SQ3')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sq3.html">SQ3</a></td>
+<td><a href="/tabelas_protheus/gatilhos/rcl_cargo.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RCL_DCARGO</td>
+<td>Cargo</td>
+<td colspan="2">Descrição do Cargo</td>
+<td colspan="4">Descrição do cargo.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>RCLDCargIni()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RCL_FUNCAO</td>
+<td>Cod. Funcao</td>
+<td colspan="2">Codigo Funcao</td>
+<td colspan="4">Informe a função referente ao posto.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo('SRJ')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/srj.html">SRJ</a></td>
+<td><a href="/tabelas_protheus/gatilhos/rcl_funcao.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RCL_DFUNC</td>
+<td>Função</td>
+<td colspan="2">Descrição da Função</td>
+<td colspan="4">Descrição da Função.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>RCLDFuncIni()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>RCLDFuncIni()</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RCL_CC</td>
+<td>Cod. C.Custo</td>
+<td colspan="2">Codigo Centro de Custo</td>
+<td colspan="4">Número que identifica o centro de custo
+a qual o posto pertence.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo('CTT')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ctt.html">CTT</a></td>
+<td><a href="/tabelas_protheus/gatilhos/rcl_cc.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RCL_DESCCC</td>
+<td>Centro Custo</td>
+<td colspan="2">Descrição Centro de Custo</td>
+<td colspan="4">Descrição do Centro de Custos.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>RCLDescCCIni()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RCL_LOCPAG</td>
+<td>Cod.Loc.Pag.</td>
+<td colspan="2">Localidade de Pagamento</td>
+<td colspan="4">Deve ser informado o local de pagamento
+para este posto.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO("RGC")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RCL_DESLOC</td>
+<td>Local. Pagto</td>
+<td colspan="2">Localidade de Pagamento</td>
+<td colspan="4">Descrição da localidade de pagamento
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RCL_TABSAL</td>
+<td>Tb. Salarial</td>
+<td colspan="2">Tabela Salarial</td>
+<td colspan="4">Informe a tabela salarial.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/rb601.html">RB601</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RCL_NIVEL</td>
+<td>Nv. Salarial</td>
+<td colspan="2">Nivel Salarial</td>
+<td colspan="4">Conteúdo preenchido conforme o Nível da
+Tabela Salarial informado no campo
+Tb.Salarial.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@E 99                                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RCL_FAIXSA</td>
+<td>Fx. Salarial</td>
+<td colspan="2">Faixa Salarial</td>
+<td colspan="4">Conteúdo preenchido conforme a Faixa da
+Tabela Salarial informado no campo
+Tb.Salarial.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RCL_SALAR</td>
+<td>Salario</td>
+<td colspan="2">Salario</td>
+<td colspan="4">Informe o valor do salário referente ao
+posto. Este campo, juntamente com os
+campos Encargos Patronais, Benefícios e
+FGTS, servirão para compor o custo do
+posto de trabalho e estimar o custo do
+centro de custo.
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RCL_ENCARG</td>
+<td>Enc Empresa</td>
+<td colspan="2">Encargo Empresa</td>
+<td colspan="4">Informe o valor de encargos patronais
+referente ao posto. Este campo,
+juntamente com os campos Salário Base,
+Benefícios e FGTS, servirão para compor
+o custo do posto de trabalho e estimar o
+custo do centro de custo.
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RCL_FGTS</td>
+<td>Fgts</td>
+<td colspan="2">FGTS</td>
+<td colspan="4">Informe o valor de FGTS referente ao
+posto. Este campo, juntamente com os
+campos Salário Base, Encargos Patronais
+e Benefícios, servirão para compor o
+custo do posto de trabalho e estimar o
+custo do centro de custo.
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RCL_BENEF</td>
+<td>Beneficios</td>
+<td colspan="2">Beneficios</td>
+<td colspan="4">Informe o valor dos benefícios referente
+ao posto. Este campo, juntamente com os
+campos Salário Base, Encargos Patronais
+e FGTS, servirão para compor o custo do
+posto de trabalho e estimar o custo do
+centro de custo.
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RCL_TPCONT</td>
+<td>Tp Contrato</td>
+<td colspan="2">Tipo Contrato</td>
+<td colspan="4">Informe o tipo de contrato referente ao
+posto: Indeterminado, Determinado ou
+Coletivo. Quando o tipo de contrato for
+Coletivo servirá para cadastrar um único
+posto e terá um controle coletivo de
+número de ocupantes.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>9                                            </td>
+<td>fOrTpCon() .And. Pertence("123")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Indeterminado;2=Determinado;3=Coletivo</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RCL_NPOSTO</td>
+<td>Qtde. Max.</td>
+<td colspan="2">Qtde. Maxima de Ocupantes</td>
+<td colspan="4">Informe a quantidade de vagas referente
+ao posto. Esse campo poderá ser alterado
+somente quando o tipo de contrato do
+posto for Coletivo. Quando o tipo de
+contrato for Indeterminado ou
+Determinado a quantidade de vagas sempre
+será igual a "1".
+</td>
+<td>N</td>
+<td>5</td>
+<td>0</td>
+<td>99999                                        </td>
+<td></td>
+<td>1</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RCL_OPOSTO</td>
+<td>Qtde. Ocup.</td>
+<td colspan="2">Quantidade de Ocupantes</td>
+<td colspan="4">Identifica quantas vagas do posto estão
+ocupadas.
+</td>
+<td>N</td>
+<td>5</td>
+<td>0</td>
+<td>99999                                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RCL_DTINI</td>
+<td>Data Inicial</td>
+<td colspan="2">Data Inicial</td>
+<td colspan="4">Informe a data inicial do posto.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>fOrDtIni()</td>
+<td>CTOD("//")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RCL_DTFIM</td>
+<td>Data Fim</td>
+<td colspan="2">Data Fim</td>
+<td colspan="4">Informe a data final do posto. Essa data
+só poderá ser informada se o tipo de
+contrato for Determinado ou Coletivo.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>CTOD("//")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>Alltrim("(M->RCL_TPCONT $ '23')")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RCL_DTATU</td>
+<td>Data Atualiz</td>
+<td colspan="2">Data Atualizacao</td>
+<td colspan="4">Campo utilizado para armazenar a data de
+alteração do posto.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RCL_TPOSTO</td>
+<td>Tp Posto</td>
+<td colspan="2">Tipo do Posto</td>
+<td colspan="4">Informe o Tipo do Posto:
+1 - Individual - Utilizado para
+controlar todos os processos de
+movimentação do Posto.
+2 - Genérico - Utilizado para postos que
+não necessitam de controle individual e
+histórico, com exemplo: Um determinado
+posto criado para ser ocupado por uma
+equipe.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>9                                            </td>
+<td></td>
+<td>RclTPostoIni()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=Individual;2=Generico</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RCL_ESTRUT</td>
+<td>Estrutura</td>
+<td colspan="2">Estrutura</td>
+<td colspan="4">Código da Estrutura de postos.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>SPC</td>
+<td colspan="2">RCL_POSTO</td>
+<td colspan="2">PC_POSTO</td>
+</tr>
+<tr>
+<td>SPL</td>
+<td colspan="2">RCL_POSTO</td>
+<td colspan="2">PL_POSTO</td>
+</tr>
+<tr>
+<td>SPI</td>
+<td colspan="2">RCL_POSTO</td>
+<td colspan="2">PI_POSTO</td>
+</tr>
+<tr>
+<td>RCK</td>
+<td colspan="2">RCL_POSTO</td>
+<td colspan="2">RCK_POSTO</td>
+</tr>
+<tr>
+<td>SRK</td>
+<td colspan="2">RCL_POSTO</td>
+<td colspan="2">RK_POSTO</td>
+</tr>
+<tr>
+<td>RGB</td>
+<td colspan="2">RCL_POSTO</td>
+<td colspan="2">RGB_POSTO</td>
+</tr>
+<tr>
+<td>SQB</td>
+<td colspan="2">RCL_DEPTO</td>
+<td colspan="2">QB_DEPTO</td>
+</tr>
+<tr>
+<td>SPB</td>
+<td colspan="2">RCL_POSTO</td>
+<td colspan="2">PB_POSTO</td>
+</tr>
+<tr>
+<td>SP8</td>
+<td colspan="2">RCL_POSTO</td>
+<td colspan="2">P8_POSTO</td>
+</tr>
+<tr>
+<td>RGJ</td>
+<td colspan="2">RCL_POSTO</td>
+<td colspan="2">RGJ_POSTO</td>
+</tr>
+<tr>
+<td>SRC</td>
+<td colspan="2">RCL_POSTO</td>
+<td colspan="2">RC_POSTO</td>
+</tr>
+<tr>
+<td>SRD</td>
+<td colspan="2">RCL_POSTO</td>
+<td colspan="2">RD_POSTO</td>
+</tr>
+<tr>
+<td>RF7</td>
+<td colspan="2">RCL_POSTO</td>
+<td colspan="2">RF7_POSTO</td>
+</tr>
+<tr>
+<td>RAR</td>
+<td colspan="2">RCL_POSTO</td>
+<td colspan="2">RAR_CODPOS</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td colspan="2">RCL_FILIAL+RCL_POSTO</td>
+<td colspan="2">RE_FILIAL+RE_POSTOD</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td colspan="2">RCL_FILIAL+RCL_POSTO</td>
+<td colspan="2">RE_FILIAL+RE_POSTOP</td>
+</tr>
+<tr>
+<td>RCX</td>
+<td colspan="2">RCL_POSTO</td>
+<td colspan="2">RCX_POSTO</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td colspan="2">RCL_POSTO</td>
+<td colspan="2">RE_POSTOD</td>
+</tr>
+<tr>
+<td>SRE</td>
+<td colspan="2">RCL_POSTO</td>
+<td colspan="2">RE_POSTOP</td>
+</tr>
+<tr>
+<td>RBU</td>
+<td colspan="2">RCL_POSTO</td>
+<td colspan="2">RBU_POSTO</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

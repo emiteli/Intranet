@@ -1,0 +1,1873 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: GWF - CALCULO DE FRETE</title></head>
+<body>
+<font color="orange"><h2 id="GWF">Tabela: GWF - CALCULO DE FRETE</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>CALCULO DE FRETE</b></td><td colspan="2"><b>GWF_FILIAL+GWF_NRCALC</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">GWF_FILIAL+GWF_NRCALC</td><td>Calculo</td><td></td></tr>
+<tr><td>2</td><td colspan="2">GWF_FILIAL+GWF_NRCONT</td><td>Nr Contrato</td><td></td></tr>
+<tr><td>3</td><td colspan="2">GWF_FILPRE+GWF_NRPREF</td><td>Fil. Pre-fat + Nr Pre-fat.</td><td></td></tr>
+<tr><td>4</td><td colspan="2">GWF_FILIAL+GWF_NRROM</td><td>Romaneio</td><td></td></tr>
+<tr><td>5</td><td colspan="2">GWF_FILIAL+GWF_NROCO+GWF_NRCALC</td><td>Ocorrencia + Calculo</td><td></td></tr>
+<tr><td>6</td><td colspan="2">GWF_FILIAL+GWF_CDESP+GWF_EMISDF+GWF_SERDF+GWF_NRDF+DTOS(GWF_DTEMDF)</td><td>Espécie DF + Emissor DF + Série DF + Número DF + Data Emis DF</td><td>DOCFRETE</td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="6" align="center"><b><i>Abas(SXA)</i></b></td></tr><tr><td><b>XA_ALIAS</b></td><td><b>XA_ORDEM</b></td><td colspan="2"><b>XA_DESCRIC</b></td><td><b>XA_AGRUP</b></td><td><b>XA_TIPO</b></td></tr><tr><td><b>GWF</b></td><td><b>1</b></td><td colspan="2"><b>Geral</b></td><td><b></b></td><td><b></b></td></tr><tr><td><b>GWF</b></td><td><b>2</b></td><td colspan="2"><b>Impostos</b></td><td><b></b></td><td><b></b></td></tr><tr><td><b>GWF</b></td><td><b>3</b></td><td colspan="2"><b>Diversos</b></td><td><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>GWF_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Código que identifica a filial da
+empresa usuária do sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_NRCALC</td>
+<td>Calculo</td>
+<td colspan="2">Numero do Calculo</td>
+<td colspan="4">Número que identifica o cálculo de frete
+no sistema.
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>99999999                                     </td>
+<td>Val(M->GWF_NRCALC) > 0 .AND. ExistChav("GWF",M->GWF_NRCALC)</td>
+<td>GETSXENUM("GWF","GWF_NRCALC")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GWF_EMIREM</td>
+<td>Remetente</td>
+<td colspan="2">Remetente</td>
+<td colspan="4">Código do emitente cliente que está
+enviando a mercadoria.
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("GU3",M->GWF_EMIREM)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gu3guc.html">GU3GUC</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gwf_emirem.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/052.html">052</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GWF_NMREM</td>
+<td>Nome Rem</td>
+<td colspan="2">Nome do Remetente</td>
+<td colspan="4">Nome do Remetente.
+</td>
+<td>C</td>
+<td>80</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("GU3",1,XFILIAL("GU3")+GWF->GWF_EMIREM,"GU3_NMEMIT"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("GU3",1,XFILIAL("GU3")+GWF->GWF_EMIREM,"GU3_NMEMIT")</td>
+<td><a href="/tabelas_protheus/grupocampo/059.html">059</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_EMIDES</td>
+<td>Destinatario</td>
+<td colspan="2">Destinatario</td>
+<td colspan="4">Código do emitente cliente que receberá
+a mercadoria.
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("GU3",M->GWF_EMIDES)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gu3guc.html">GU3GUC</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gwf_emides.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/052.html">052</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GWF_NMDEST</td>
+<td>Nome Dest</td>
+<td colspan="2">Nome do Destinatario</td>
+<td colspan="4">Nome do Destinatario.
+</td>
+<td>C</td>
+<td>80</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("GU3",1,XFILIAL("GU3")+GWF->GWF_EMIDES,"GU3_NMEMIT"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("GU3",1,XFILIAL("GU3")+GWF->GWF_EMIDES,"GU3_NMEMIT")</td>
+<td><a href="/tabelas_protheus/grupocampo/059.html">059</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_EMIRED</td>
+<td>Redesp.</td>
+<td colspan="2">Transp Redespachante</td>
+<td colspan="4">Código do emitente de Redespacho.
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .OR. ExistCpo("GU3",M->GWF_EMIRED)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gu3trp.html">GU3TRP</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gwf_emired.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/052.html">052</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_NMRED</td>
+<td>Nome Redesp</td>
+<td colspan="2">Nome do Redespachante</td>
+<td colspan="4">Nome do Redespachante do Frete
+</td>
+<td>C</td>
+<td>80</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("GU3",1,XFILIAL("GU3")+GWF->GWF_EMIRED,"GU3_NMEMIT"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("GU3",1,XFILIAL("GU3")+GWF->GWF_EMIRED,"GU3_NMEMIT")</td>
+<td><a href="/tabelas_protheus/grupocampo/059.html">059</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_EMIPAG</td>
+<td>Pagador</td>
+<td colspan="2">Pagador</td>
+<td colspan="4">Código do emitente que será o
+responsável pelo pagamento do frete.
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("GU3",M->GWF_EMIPAG)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gu3guc.html">GU3GUC</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gwf_emipag.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/052.html">052</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GWF_NMPAG</td>
+<td>Nome Pag</td>
+<td colspan="2">Nome do Pagador</td>
+<td colspan="4">Nome do Pagador do Frete
+</td>
+<td>C</td>
+<td>80</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("GU3",1,XFILIAL("GU3")+GWF->GWF_EMIPAG,"GU3_NMEMIT"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("GU3",1,XFILIAL("GU3")+GWF->GWF_EMIPAG,"GU3_NMEMIT")</td>
+<td><a href="/tabelas_protheus/grupocampo/059.html">059</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_TRANSP</td>
+<td>Transp.</td>
+<td colspan="2">Transportador</td>
+<td colspan="4">Código do emitente transportador ou
+autônomo responsável por este frete.
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("GU3",M->GWF_TRANSP)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/gwf_transp.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/052.html">052</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GWF_NMTRP</td>
+<td>Nome Transp</td>
+<td colspan="2">Nome do Transportador</td>
+<td colspan="4">Nome do transportador
+</td>
+<td>C</td>
+<td>80</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("GU3",1,XFILIAL("GU3")+GWF->GWF_TRANSP,"GU3_NMEMIT"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("GU3",1,XFILIAL("GU3")+GWF->GWF_TRANSP,"GU3_NMEMIT")</td>
+<td><a href="/tabelas_protheus/grupocampo/059.html">059</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_ORIGEM</td>
+<td>Origem Valor</td>
+<td colspan="2">Origem Valor Cálculo</td>
+<td colspan="4">Indica a origem dos valores do cálculo
+de frete
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("1234")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=Calculado;2=Informado;3=Apura��o Per�odo;4=Simula��o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GWF_TPCALC</td>
+<td>Tipo Calculo</td>
+<td colspan="2">Tipo de Calculo</td>
+<td colspan="4">Indica o tipo de cálculo do frete.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12345678")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=Normal;2=Compl Valor;3=Compl Imposto;4=Reentrega;5=Devolucao;6=Redespacho;7=Servico;8=Estimativa</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GWF_TPFRET</td>
+<td>Tipo Frete</td>
+<td colspan="2">Tipo de Frete</td>
+<td colspan="4">Indica o tipo de frete ao qual o cálculo
+corresponde.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("123456")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=CIF;2=CIF Redesp.;3=FOB;4=FOB Redesp.;5=Consignado;6=Consig. Redesp.</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GWF_FINCAL</td>
+<td>Finalidade</td>
+<td colspan="2">Finalidade Calculo</td>
+<td colspan="4">Indica a que documento de frete o
+cálculo se relacionará.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("123")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=CTR;2=NFST;3=Contrato</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GWF_CIDORI</td>
+<td>Cid. Origem</td>
+<td colspan="2">Cidade de Origem</td>
+<td colspan="4">Número da cidade de origem, a partir da
+qual é calculado o frete.
+</td>
+<td>C</td>
+<td>7</td>
+<td>0</td>
+<td>9999999                                      </td>
+<td>ExistCpo("GU7",M->GWF_CIDORI)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/gwf_cidori.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/053.html">053</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_NMCIOR</td>
+<td>Nome Cid Ori</td>
+<td colspan="2">Nome da Cidade de Origem</td>
+<td colspan="4">Nome da Cidade de Origem do Frete
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("GU7",1,XFILIAL("GU7")+GWF->GWF_CIDORI,"GU7_NMCID"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("GU7",1,XFILIAL("GU7")+GWF->GWF_CIDORI,"GU7_NMCID")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_CIDDES</td>
+<td>Cid. Destino</td>
+<td colspan="2">Cidade de Destino</td>
+<td colspan="4">Número da cidade de destino, até onde é
+calculado o frete.
+</td>
+<td>C</td>
+<td>7</td>
+<td>0</td>
+<td>9999999                                      </td>
+<td>ExistCpo("GU7",M->GWF_CIDDES)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/gwf_ciddes.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/053.html">053</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_NMCIDE</td>
+<td>Nome Cid Des</td>
+<td colspan="2">Nome Cidade Destino</td>
+<td colspan="4">Nome da Cidade de Destino do Frete
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("GU7",1,XFILIAL("GU7")+GWF->GWF_CIDDES,"GU7_NMCID"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_ENDENT</td>
+<td>Ender. Entr.</td>
+<td colspan="2">Endereco de Entrega</td>
+<td colspan="4">Endereço de entrega da mercadoria.
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Texto()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_BAIENT</td>
+<td>Bairro Entr.</td>
+<td colspan="2">Bairro de Entrega</td>
+<td colspan="4">Nome do bairro de entrega da mercadoria.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Texto()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_CIDENT</td>
+<td>Cid. Entrega</td>
+<td colspan="2">Cidade de Entrega</td>
+<td colspan="4">Número da cidade de entrega da
+mercadoria.
+</td>
+<td>C</td>
+<td>7</td>
+<td>0</td>
+<td>9999999                                      </td>
+<td>Vazio() .OR. ExistCpo("GU7",M->GWF_CIDENT)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/053.html">053</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_DTCRIA</td>
+<td>Data Criacao</td>
+<td colspan="2">Data de Criacao</td>
+<td colspan="4">Data em que o cálculo foi criado.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>DDATABASE</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GWF_HRCRIA</td>
+<td>Hora Criacao</td>
+<td colspan="2">Hora de Criacao</td>
+<td colspan="4">Hora em que o cálculo foi criado.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td></td>
+<td>TIME()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GWF_USUCRI</td>
+<td>Usr. Criacao</td>
+<td colspan="2">Usuario de Criacao</td>
+<td colspan="4">Nome do usuário que criou o cálculo de
+frete.
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>CUSERNAME</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GWF_DTPREN</td>
+<td>Dat Prev Ent</td>
+<td colspan="2">Data Prevista de Entrega</td>
+<td colspan="4">Data prevista de entrega da mercadoria,
+calculada com base no prazo informado na
+tabela de frete.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_HRPREN</td>
+<td>Hr Prev Entr</td>
+<td colspan="2">Hora Prevista de Entrega</td>
+<td colspan="4">Hora prevista de entrega da mercadoria,
+calculada com base no prazo informado na
+tabela de frete.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_CARREG</td>
+<td>Carregamento</td>
+<td colspan="2">Identific. Carregamento</td>
+<td colspan="4">Identificador de carregamento. Pode ser
+o número do romaneio de carga ou um
+código de rastreamento.
+</td>
+<td>C</td>
+<td>12</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_NRROM</td>
+<td>Romaneio</td>
+<td colspan="2">Numero do Romaneio</td>
+<td colspan="4">Número do romaneio de carga ao qual o
+cálculo de frete está vinculado.
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>99999999                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_VLAJUS</td>
+<td>Valor Ajuste</td>
+<td colspan="2">Valor de Ajuste</td>
+<td colspan="4">Valor de ajuste do cálculo.
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_TPTRIB</td>
+<td>Tipo Tribut.</td>
+<td colspan="2">Tipo de Tributacao</td>
+<td colspan="4">Indica o tipo de tributação do frete
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("123456")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Tributado;2=Isento/N�o-tributado;3=Subs Tribut�ria;4=Diferido;5=Reduzido;6=Outros;7=Presumido</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_IMPOST</td>
+<td>Imposto</td>
+<td colspan="2">Imposto</td>
+<td colspan="4">Imposto ICMS/ISS.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=ICMS;2=ISS</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_BASISS</td>
+<td>Base ISS</td>
+<td colspan="2">Base de calculo de ISS</td>
+<td colspan="4">Valor utilizado como base de calculo do
+ISS
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>M->GWF_IMPOST = "2"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_PCISS</td>
+<td>% ISS</td>
+<td colspan="2">Aliquota de ISS</td>
+<td colspan="4">Valor correspondente a aliquota de ISS
+</td>
+<td>N</td>
+<td>9</td>
+<td>5</td>
+<td>@E 999.99999                                 </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>M->GWF_IMPOST = "2"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_VLISS</td>
+<td>Vl. ISS</td>
+<td colspan="2">Valor de ISS</td>
+<td colspan="4">Valor de ISS correspondente ao frete.
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>M->GWF_IMPOST = "2"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_BASICM</td>
+<td>Base ICMS</td>
+<td colspan="2">Base de Calculo do ICMS</td>
+<td colspan="4">Valor utilizado com base de cálculo para
+o ICMS.
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>M->GWF_IMPOST = "1"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_PCICMS</td>
+<td>% ICMS Aplic</td>
+<td colspan="2">Perc. ICMS Aplicado</td>
+<td colspan="4">Percentual de ICMS efetivamente aplicado
+sobre a mercadoria.
+</td>
+<td>N</td>
+<td>9</td>
+<td>5</td>
+<td>@E 999.99999                                 </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>M->GWF_IMPOST = "1"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_PCREIC</td>
+<td>% Red. ICMS</td>
+<td colspan="2">Perc. Reducao ICMS</td>
+<td colspan="4">Percentual de redução da aliquota de
+ICMS.
+</td>
+<td>N</td>
+<td>9</td>
+<td>5</td>
+<td>@E 999.99999                                 </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_VLICMS</td>
+<td>Vl. ICMS</td>
+<td colspan="2">Valor de ICMS</td>
+<td colspan="4">Valor de ICMS correspondente ao frete.
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>M->GWF_IMPOST = "1"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_ICMRET</td>
+<td>ICMS Retido</td>
+<td colspan="2">Valor de ICMS retido</td>
+<td colspan="4">Valor de ICMS a ser retido pelo
+embarcador.
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_CRDICM</td>
+<td>Cred ICMS</td>
+<td colspan="2">Gera Crédito ICMS</td>
+<td colspan="4">Informe se o ICMS previsto no Cálculo de
+Frete irá gerar crédito pelo Documento
+de Frete.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_BAPICO</td>
+<td>Base PIS/COF</td>
+<td colspan="2">Base Calculo PIS/COFINS</td>
+<td colspan="4">Valor utilizado com base de cálculo para
+o PIS/COFINS.
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_VLPIS</td>
+<td>Vl. PIS</td>
+<td colspan="2">Valor de PIS</td>
+<td colspan="4">Valor de PIS correspondente ao frete.
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_VLCOFI</td>
+<td>Vl. COFINS</td>
+<td colspan="2">Valor de COFINS</td>
+<td colspan="4">Valor de COFINS correspondente ao frete.
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_FILPRE</td>
+<td>Fil. Pre-fat</td>
+<td colspan="2">Filial Pre Fatura</td>
+<td colspan="4">Filial emissora da pre-fatura ao qual o
+calculo está vinculado.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_NRPREF</td>
+<td>Nr Pre-fat.</td>
+<td colspan="2">Numero Pre Fatura</td>
+<td colspan="4">Número da pré-fatura ao qual o cálculo
+está vinculado.
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>Vazio .OR. ExistCpo("GWJ",M->GWF_FILIAL+M->GWF_NRPREF)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/090.html">090</a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_NRCONT</td>
+<td>Nr Contrato</td>
+<td colspan="2">Nr Contrato com Autonomo</td>
+<td colspan="4">Numero do contrato com autonomo ao qual
+o calculo de frete está vinculado.
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>99999999                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_IDFRVI</td>
+<td>Fr Viagem?</td>
+<td colspan="2">Calculo por viagem?</td>
+<td colspan="4">Indica se o cálculo é correspondente a
+um frete único que acoberta várias
+entregas.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_AGRUP</td>
+<td>Agrupado?</td>
+<td colspan="2">Calculo agrupado?</td>
+<td colspan="4">Indica se o cálculo é proveniente de um
+agrupamento de outros calculos.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_SEQTRE</td>
+<td>Sequencia</td>
+<td colspan="2">Sequencia do trecho</td>
+<td colspan="4">Sequencia do trecho no itinerario do
+documento de carga com o qual o calculo
+esta relacionado.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_OBS</td>
+<td>Observacoes</td>
+<td colspan="2">Observacoes</td>
+<td colspan="4">Observação sobre o frete.
+</td>
+<td>M</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_CRDPC</td>
+<td>Cred PIS/COF</td>
+<td colspan="2">Gera crédito PIS/COFINS</td>
+<td colspan="4">Informe se o PIS e o COFINS previstos no
+Cálculo de Frete irão gerar crédito pelo
+Documento de Frete.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_NROCO</td>
+<td>Ocorrencia</td>
+<td colspan="2">Numero da Ocorrencia</td>
+<td colspan="4">Número da ocorrência.
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>99999999                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_ADICIS</td>
+<td>Ad. ICMS/ISS</td>
+<td colspan="2">Adiciona ICMS/ISS Frete</td>
+<td colspan="4">Indica se o valor de ICMS ou ISS deverá
+ser adicionado no valor do frete.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_CDTPSE</td>
+<td>Tp Servico</td>
+<td colspan="2">Código Tipo Serviço</td>
+<td colspan="4">Código do Tipo de Serviço de Frete
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/gwf_cdtpse.html">S</td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GWF_CDESP</td>
+<td>Espécie DF</td>
+<td colspan="2">Espécie Doc Frete</td>
+<td colspan="4">Espécie do documento de frete
+relacionado
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_EMISDF</td>
+<td>Emissor DF</td>
+<td colspan="2">Emissor Doc Frete</td>
+<td colspan="4">Emissor do documento de frete do calculo
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/052.html">052</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_DSTPSE</td>
+<td>Descricao</td>
+<td colspan="2">Descricao Tipo Serviço</td>
+<td colspan="4">Descricao do Tipo de Serviço de Frete
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("GVU",1,XFILIAL("GVU")+GWF->GWF_CDTPSE,"GVU_DSTPSE"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("GVU",1,XFILIAL("GVU")+GWF->GWF_CDTPSE,"GVU_DSTPSE")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_SERDF</td>
+<td>Série DF</td>
+<td colspan="2">Série Doc Frete</td>
+<td colspan="4">Série do documento de frete
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_NRDF</td>
+<td>Número DF</td>
+<td colspan="2">Número Doc Frete</td>
+<td colspan="4">Número do documento de frete
+</td>
+<td>C</td>
+<td>16</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWF_DTEMDF</td>
+<td>Data Emis DF</td>
+<td colspan="2">Data Emissão Doc Frete</td>
+<td colspan="4">Data de emissão do documento de frete
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>GWI</td>
+<td colspan="2">GWF_NRCALC</td>
+<td colspan="2">GWI_NRCALC</td>
+</tr>
+<tr>
+<td>GWH</td>
+<td colspan="2">GWF_NRCONT</td>
+<td colspan="2">GWH_NRCALC</td>
+</tr>
+<tr>
+<td>GWG</td>
+<td colspan="2">GWF_NRCALC</td>
+<td colspan="2">GWG_NRCALC</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

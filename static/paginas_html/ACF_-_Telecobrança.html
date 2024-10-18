@@ -1,0 +1,1093 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: ACF - Telecobrança</title></head>
+<body>
+<font color="orange"><h2 id="ACF">Tabela: ACF - Telecobrança</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Telecobrança</b></td><td colspan="2"><b>ACF_FILIAL+ACF_CODIGO</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">ACF_FILIAL+ACF_CODIGO</td><td>Atendimento</td><td></td></tr>
+<tr><td>2</td><td colspan="2">ACF_FILIAL+ACF_CLIENT+ACF_LOJA</td><td>Cliente + Loja</td><td></td></tr>
+<tr><td>3</td><td colspan="2">ACF_FILIAL+ACF_CLIENT+ACF_LOJA+STR(ACF_DIASDA,8,0)+STR(ACF_HORADA,8,0)</td><td>Cliente + Loja + N. Dias Liga + Hora Histori</td><td></td></tr>
+<tr><td>4</td><td colspan="2">ACF_FILIAL+DTOS(ACF_DATA)</td><td>Data</td><td></td></tr>
+<tr><td>5</td><td colspan="2">ACF_FILIAL+ACF_MOTIVO</td><td>Ocorrencia</td><td></td></tr>
+<tr><td>6</td><td colspan="2">ACF_FILIAL+ACF_OPERAD</td><td>Operador</td><td></td></tr>
+<tr><td>7</td><td colspan="2">ACF_FILIAL+ACF_CODCON+ACF_CLIENT+ACF_LOJA</td><td>Contato + Cliente + Loja</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>ACF_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Filial do sistema
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>ACF_CODIGO</td>
+<td>Atendimento</td>
+<td colspan="2">Codigo do Atendimento</td>
+<td colspan="4">Código do Atendimento de Telecobranca.
+Ex: 000001
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td></td>
+<td>TkNumero("ACF","ACF_CODIGO")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>ACF_CLIENT</td>
+<td>Cliente</td>
+<td colspan="2">Codigo do Cliente</td>
+<td colspan="4">Código do Cliente.
+Pressione [F3] para selecionar o
+cliente a ser atendido.
+Ex.: 000001
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .AND. Tk274Client()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/clt.html">CLT</a></td>
+<td><a href="/tabelas_protheus/gatilhos/acf_client.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>ACF_LOJA</td>
+<td>Loja</td>
+<td colspan="2">Loja do Cliente</td>
+<td colspan="4">Loja do Cliente.
+Ex.: 01
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .AND. Tk274Client()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/acf_loja.html">S</td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>ACF_PRAZO</td>
+<td>Prazo Cobr.</td>
+<td colspan="2">Prazo para cobrar.</td>
+<td colspan="4">Prazo de Cobrança que o operador possui
+para cobrar a conta.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>@D                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ACF_DESC</td>
+<td>Empresa</td>
+<td colspan="2">Nome do Cliente</td>
+<td colspan="4">Descrição do cliente selecionado
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIF(EMPTY(M->ACF_CLIENT),"",TkDCliente(ACF->ACF_CLIENT,ACF->ACF_LOJA))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>TkDCliente(ACF->ACF_CLIENT,ACF->ACF_LOJA)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ACF_CODCON</td>
+<td>Contato</td>
+<td colspan="2">Codigo do Contato</td>
+<td colspan="4">Código do contato do cliente.
+Pressione [F3] para selecionar
+o contato do cliente.
+Ex.: 000001
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>TkVldContato("SA1", M->ACF_CLIENT+M->ACF_LOJA)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/cnt.html">CNT</a></td>
+<td><a href="/tabelas_protheus/gatilhos/acf_codcon.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ACF_DESCNT</td>
+<td>Nome</td>
+<td colspan="2">Nome do Contato</td>
+<td colspan="4">Descriç„o do contato.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIF(!INCLUI,Posicione("SU5",1,xFilial("SU5") + ACF->ACF_CODCON,"U5_CONTAT"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("SU5",1,xFilial("SU5") + ACF->ACF_CODCON, "U5_CONTAT")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ACF_OPERAD</td>
+<td>Operador</td>
+<td colspan="2">Codigo do Operador</td>
+<td colspan="4">Código do Operador do Atendimento.
+Pressione [F3] para selecionar o
+operador que realizara a cobrança.
+Ex.: 000001
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td>NaoVazio() .And. ExistCpo("SU7") .And. Tk273ValOper("ACF_OPERAD")</td>
+<td>IIf(INCLUI,TkOperador(),ACF->ACF_OPERAD)</td>
+<td><a href="/tabelas_protheus/f3/su7.html">SU7</a></td>
+<td><a href="/tabelas_protheus/gatilhos/acf_operad.html">S</td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>ACF_DESCOP</td>
+<td>Nome</td>
+<td colspan="2">Nome do Operador</td>
+<td colspan="4">Descriç„o do operador.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIF(!INCLUI .or. IsInCallStack("Tk274Htlc"),Posicione("SU7",1,xFilial("SU7")+ACF->ACF_OPERAD,"U7_NOME"),SU7->U7_NOME)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("SU7",1,xFilial("SU7") + ACF->ACF_OPERAD, "U7_NOME")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ACF_OPERA</td>
+<td>Ligacao</td>
+<td colspan="2">Tipo da Ligacao</td>
+<td colspan="4">Tipo da Operação do Atendimento:
+1-Receptivo
+2-Ativo
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>!@                                           </td>
+<td>Pertence("12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=Receptivo;2=Ativo</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>ACF_STATUS</td>
+<td>Status</td>
+<td colspan="2">Status do atendimento</td>
+<td colspan="4">Status do Atendimento. 1-Atendimento
+2-Cobrança 3-Encerrado
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .OR. Pertence("123")</td>
+<td>IIF(INCLUI,"2","")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Atendimento;2=Cobranca;3=Encerrado</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>ACF_MOTIVO</td>
+<td>Ocorrencia</td>
+<td colspan="2">Ocorrencia da Ligacao</td>
+<td colspan="4">Código do Motivo do Atendimento.
+Pressione [F3] para selecionar o
+motivo do atendimento.
+Ex.: 000001
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/u9c.html">U9C</a></td>
+<td><a href="/tabelas_protheus/gatilhos/acf_motivo.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ACF_DESCMO</td>
+<td>Descricao</td>
+<td colspan="2">Descricao do Motivo</td>
+<td colspan="4">Descrição do motivo do atendimento.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIf(!INCLUI,Posicione("SU9",2,xFilial("SU9") + ACF->ACF_MOTIVO,"U9_DESC"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("SU9",2,xFilial("SU9") + ACF->ACF_MOTIVO, "U9_DESC")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ACF_DATA</td>
+<td>Data</td>
+<td colspan="2">Data do Atendimento</td>
+<td colspan="4">Data do Atendimento
+Ex.: 01/01/2001
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>99/99/9999                                   </td>
+<td></td>
+<td>dDatabase</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ACF_CODOBS</td>
+<td>Codigo Obs.</td>
+<td colspan="2">Codigo da Observacao</td>
+<td colspan="4">Código da observaç„o.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ACF_OBS</td>
+<td>Observacao</td>
+<td colspan="2">Observacao do Atendimento</td>
+<td colspan="4">Observação do Atendimento.
+Ex.: O cliente entrara em contato
+mais tarde.
+</td>
+<td>M</td>
+<td>35</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IIF(!INCLUI,MSMM(ACF->ACF_CODOBS,80),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ACF_PENDEN</td>
+<td>Retorno</td>
+<td colspan="2">Data do Retorno</td>
+<td colspan="4">Data do Retorno a ser contatado o
+cliente.
+Ex.: 01/01/2001
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>99/99/9999                                   </td>
+<td>Tk274Penden()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>ACF_HRPEND</td>
+<td>Hora</td>
+<td colspan="2">Hora do Retorno</td>
+<td colspan="4">Horario em que será contatado o
+cliente.
+Ex.: 15:00
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td>TK274HACF()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>ACF_INICIO</td>
+<td>Inicio</td>
+<td colspan="2">Inicio do Atendimento</td>
+<td colspan="4">Horário inicial do atendimento.
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>99:99:99                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ACF_FIM</td>
+<td>Termino</td>
+<td colspan="2">Termino do Atendimento</td>
+<td colspan="4">Horário de termino do atendimento.
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>99:99:99                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ACF_DIASDA</td>
+<td>N. Dias Liga</td>
+<td colspan="2">Nº de Dias das Ligacoes</td>
+<td colspan="4">Número de dias das ligaçães.
+</td>
+<td>N</td>
+<td>8</td>
+<td>0</td>
+<td>99999999                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ACF_HORADA</td>
+<td>Hora Histori</td>
+<td colspan="2">Nº de horas da Ligacao</td>
+<td colspan="4">Tempo total da ligaç„o.
+</td>
+<td>N</td>
+<td>8</td>
+<td>0</td>
+<td>99999999                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ACF_CODCAM</td>
+<td>Campanha</td>
+<td colspan="2">Codigo da Campanha</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td>Tk310VldCamp(M->ACF_CODCAM)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/suo.html">SUO</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ACF_DESCAM</td>
+<td>Descricao</td>
+<td colspan="2">Descricao da Campanha</td>
+<td colspan="4">Descrição da Campanha
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIF(!INCLUI,Posicione("SUO",1,xFilial("SUO") + ACF->ACF_CODCAM, "UO_DESC"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ACF_DTINI</td>
+<td>Data Inicial</td>
+<td colspan="2">Data Inicial do Atendimen</td>
+<td colspan="4">Data Inicial do Atendimento
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>@D                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ACF_QTDATE</td>
+<td>Qtd Atendim.</td>
+<td colspan="2">Quantidade de Atendimento</td>
+<td colspan="4">Quantidade de Atendimento
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>@E 999                                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ACF_CONDPG</td>
+<td>Condição</td>
+<td colspan="2">Condição Pagamento</td>
+<td colspan="4">Código da condição de pagamento
+permitida.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sv0.html">SV0</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ACF_OBSCAN</td>
+<td>Obs Cancelam</td>
+<td colspan="2">Observacäo Cancelamento</td>
+<td colspan="4">Observação do Cancelamento
+</td>
+<td>M</td>
+<td>35</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IIF(!INCLUI,MSMM(ACF->ACF_CCANC,80),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ACF_CCANC</td>
+<td>Cod. Cancel.</td>
+<td colspan="2">Codigo do Cancelamento</td>
+<td colspan="4">Código Memo do Cancelamento
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ACF_OPERAT</td>
+<td>Operador</td>
+<td colspan="2">Operador Atendimento</td>
+<td colspan="4">Segundo operador do Atendimento.
+Operador que não é o dono da conta, mas
+realizou o atendimento.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ACF_CODENC</td>
+<td>Encerramento</td>
+<td colspan="2">Codigo do Encerramento</td>
+<td colspan="4">Código Memo do Encerramento
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sun001.html">SUN001</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ACF_CODMOT</td>
+<td>Cod.Motivo</td>
+<td colspan="2">Codigo da Descricäo</td>
+<td colspan="4">Código Memo do Motivo do Encerramento
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ACF_OBSMOT</td>
+<td>Motivo</td>
+<td colspan="2">Motivo do Encerramento</td>
+<td colspan="4">Observação do Motivo do Cancelamento
+</td>
+<td>C</td>
+<td>80</td>
+<td>0</td>
+<td>@x                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ACF_ULTATE</td>
+<td>Data Ult.At.</td>
+<td colspan="2">Data Ultimo Atendimento</td>
+<td colspan="4">Data Ultimo Atendimento
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>@D                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>ACG</td>
+<td colspan="2">ACF_CODIGO</td>
+<td colspan="2">ACG_CODIGO</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

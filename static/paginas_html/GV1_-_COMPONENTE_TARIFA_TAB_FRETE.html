@@ -1,0 +1,627 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: GV1 - COMPONENTE TARIFA TAB FRETE</title></head>
+<body>
+<font color="orange"><h2 id="GV1">Tabela: GV1 - COMPONENTE TARIFA TAB FRETE</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>COMPONENTE TARIFA TAB FRETE</b></td><td colspan="2"><b>GV1_FILIAL+GV1_CDEMIT+GV1_NRTAB+GV1_NRNEG+GV1_CDFXTV+GV1_NRROTA+GV1_CDCOMP</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">GV1_FILIAL+GV1_CDEMIT+GV1_NRTAB+GV1_NRNEG+GV1_CDFXTV+GV1_NRROTA+GV1_CDCOMP</td><td>Emitente + Tabela + Negociacao + Seq Faixa + Rota + Componente</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>GV1_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GV1_CDEMIT</td>
+<td>Emitente</td>
+<td colspan="2">Codigo do emitente da tab</td>
+<td colspan="4">Código do emitente, transportador ou
+autônomo, ao qual está relacionado a
+tabela de frete.
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("GU3",M->GV1_CDEMIT)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gu3gva.html">GU3GVA</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>.F.</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/052.html">052</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GV1_NMEMIT</td>
+<td>Nome</td>
+<td colspan="2">Nome do Emitente</td>
+<td colspan="4">Nome do Emitente da Tabela de Frete
+</td>
+<td>C</td>
+<td>80</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>POSICIONE("GU3",1,XFILIAL("GU3")+GV1->GV1_CDEMIT,"GU3_NMEMIT")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("GU3",1,XFILIAL("GU3")+GV1->GV1_CDEMIT,"GU3_NMEMIT")</td>
+<td><a href="/tabelas_protheus/grupocampo/059.html">059</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GV1_NRTAB</td>
+<td>Tabela</td>
+<td colspan="2">Numero da tabela de frete</td>
+<td colspan="4">Número que identifica a tabela de frete.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gva2.html">GVA2</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>.F.</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GV1_DSTAB</td>
+<td>Descricao</td>
+<td colspan="2">Descricao da Tabela</td>
+<td colspan="4">Descricao da Tabela de Frete
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>POSICIONE("GVA",1,XFILIAL("GVA")+GV1->GV1_CDEMIT+GV1->GV1_NRTAB,"GVA_DSTAB")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("GVA",1,XFILIAL("GVA")+GV1->GV1_CDEMIT+GV1->GV1_NRTAB,"GVA_DSTAB")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GV1_NRNEG</td>
+<td>Negociacao</td>
+<td colspan="2">Numero da negociacao</td>
+<td colspan="4">Identifica a negociação dentro da tabela
+de frete.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gv9.html">GV9</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>.F.</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GV1_CDFXTV</td>
+<td>Seq Faixa</td>
+<td colspan="2">Sequencia Faixa</td>
+<td colspan="4">Sequencia que identifica a faixa ou tipo
+de veículo.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>9999                                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>.F.</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GV1_NRROTA</td>
+<td>Rota</td>
+<td colspan="2">Numero da Rota</td>
+<td colspan="4">Número que identifica a rota na
+negociação da tabela de frete.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>9999                                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>.F.</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GV1_CDCOMP</td>
+<td>Componente</td>
+<td colspan="2">Codigo do componente</td>
+<td colspan="4">Código que identifica o componente de
+frete no sistema.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GFE61COMP()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/guya.html">GUYA</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GV1_VLFIXN</td>
+<td>Vl. Fixo Nor</td>
+<td colspan="2">Valor Fixo Tarifa Normal</td>
+<td colspan="4">Valor cobrado independente da quantidade
+transportada.
+</td>
+<td>N</td>
+<td>15</td>
+<td>5</td>
+<td>@E 999,999,999.99999                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>GFEA61FWHN()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GV1_PCNORM</td>
+<td>% Normal</td>
+<td colspan="2">Percentual Tarifa Normal</td>
+<td colspan="4">Percentual a ser aplicado sobre a
+quantidade transportada.
+</td>
+<td>N</td>
+<td>9</td>
+<td>5</td>
+<td>@E 999.99999                                 </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>GFEA61FWHN()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GV1_VLUNIN</td>
+<td>Vl. Unit Nor</td>
+<td colspan="2">Valor Unitario Tarifa Nor</td>
+<td colspan="4">Valor de frete que será multiplicado
+pela quantidade transportada ou pela
+quantidade de frações.
+</td>
+<td>N</td>
+<td>15</td>
+<td>5</td>
+<td>@E 999,999,999.99999                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>GFEA61FWHN()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GV1_VLFRAC</td>
+<td>Fracao Norm</td>
+<td colspan="2">Fracao Tarifa Normal</td>
+<td colspan="4">Valor que define o tamanho da fração
+pela qual a quantidade total
+transportada será dividida, chegando-se
+a quantidade de frações.
+</td>
+<td>N</td>
+<td>15</td>
+<td>5</td>
+<td>@E 999,999,999.99999                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>GFEA61FWHN()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GV1_VLMINN</td>
+<td>Vl. Min Norm</td>
+<td colspan="2">Valor Mínimo Tarifa Norma</td>
+<td colspan="4">Valor de frete mínimo que será cobrado
+que será cobrado para este componente,
+caso a soma do valor fixo com o
+percentual e o valor unitário seja
+menor.
+</td>
+<td>N</td>
+<td>15</td>
+<td>5</td>
+<td>@E 999,999,999.99999                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>GFEA61FWHN()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GV1_VLLIM</td>
+<td>Vl. Limite</td>
+<td colspan="2">Valor Limite</td>
+<td colspan="4">Valor que define a quantidade
+transportada limite até a qual é
+aplicada a tarifa normal.
+</td>
+<td>N</td>
+<td>15</td>
+<td>5</td>
+<td>@E 999,999,999.99999                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>GFEA61FWHN()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GV1_VLFIXE</td>
+<td>Vl. Fixo Ext</td>
+<td colspan="2">Valor Fixo Tarifa Extra</td>
+<td colspan="4">Valor cobrado independente da quantidade
+transportada, quando esta excede o valor
+ou o percentual limites da tarifa
+normal.
+</td>
+<td>N</td>
+<td>15</td>
+<td>5</td>
+<td>@E 999,999,999.99999                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>GFEA61FWHN()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GV1_PCEXTR</td>
+<td>% Extra</td>
+<td colspan="2">Percentual Tarifa Extra</td>
+<td colspan="4">Percentual a ser aplicado sobre a
+quantidade transportada, quando esta
+excede os limites para a tarifa normal.
+</td>
+<td>N</td>
+<td>9</td>
+<td>5</td>
+<td>@E 999.99999                                 </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>GFEA61FWHN()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GV1_VLUNIE</td>
+<td>Vl. Unit Ext</td>
+<td colspan="2">Valor Unitario Tarifa Ext</td>
+<td colspan="4">Valor de frete que será multiplicado
+pela quantidade transportada ou pela
+quantidade de frações, quando se excede
+os limites da tarifa normal.
+</td>
+<td>N</td>
+<td>15</td>
+<td>5</td>
+<td>@E 999,999,999.99999                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>GFEA61FWHN()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GV1_CALCEX</td>
+<td>Calc. Exced</td>
+<td colspan="2">Forma Calculo Excedente</td>
+<td colspan="4">Indica de que forma será calculado o
+frete sobre a quantidade transportada
+que excede os valores limites da tarifa
+normal.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Diferenca;2=Total</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

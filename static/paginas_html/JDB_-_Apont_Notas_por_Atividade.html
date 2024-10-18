@@ -1,0 +1,581 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: JDB - Apont Notas por Atividade</title></head>
+<body>
+<font color="orange"><h2 id="JDB">Tabela: JDB - Apont Notas por Atividade</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Apont Notas por Atividade</b></td><td colspan="2"><b>JDB_FILIAL+JDB_CODCUR+JDB_PERLET+JDB_HABILI+JDB_TURMA+JDB_CODDIS+JDB_CODAVA+JDB_ATIVID</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">JDB_FILIAL+JDB_CODCUR+JDB_PERLET+JDB_HABILI+JDB_TURMA+JDB_CODDIS+JDB_CODAVA+JDB_ATIVID+JDB_SUBTUR</td><td>Cod.Curso + Per. Letivo + Habilitacao + Turma + Disciplina + Avaliacao</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>JDB_FILIAL</td>
+<td>FILIAL</td>
+<td colspan="2">Filial</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JDB_CODCUR</td>
+<td>Cod.Curso</td>
+<td colspan="2">Codigo do curso</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GEExistCpo("JAH") .and. AC760Chav() .and. ACNivSec(,M->JDB_CODCUR)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/jbk.html">JBK</a></td>
+<td><a href="/tabelas_protheus/gatilhos/jdb_codcur.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JDB_DCURSO</td>
+<td>Descricao</td>
+<td colspan="2">Descricao</td>
+<td colspan="4">Informe a Descrição do Curso
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui,"",Posicione("JAH",1,xFilial("JAH")+JDB->JDB_CODCUR,"JAH_DESC"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("JAH",1,xFilial("JAH")+JDB->JDB_CODCUR,"JAH_DESC")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JDB_PERLET</td>
+<td>Per. Letivo</td>
+<td colspan="2">Serie</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td>GEExistCpo("JAR",M->JDB_CODCUR+M->JDB_PERLET+M->JDB_HABILI,1) .and. AC760Chav()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JDB_HABILI</td>
+<td>Habilitacao</td>
+<td colspan="2">Codigo da Habilitacao</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Iif(Empty(M->JDB_HABILI), .T., GEExistCpo("JDK")) .And. Ac760Chav()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/jdk.html">JDK</a></td>
+<td><a href="/tabelas_protheus/gatilhos/jdb_habili.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>Inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JDB_DHABIL</td>
+<td>Descricao</td>
+<td colspan="2">Descricao da Habilitacao</td>
+<td colspan="4">Informa a Descrição da Habilitaçã
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(INCLUI,"",Posicione("JDK",1,xFilial("JDK")+JDB->JDB_HABILI,"JDK_DESC"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("JDK",1,xFilial("JDK") + JDB->JDB_HABILI,"JDK_DESC")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JDB_TURMA</td>
+<td>Turma</td>
+<td colspan="2">Turma</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GEExistCpo("JBO",M->JDB_CODCUR+M->JDB_PERLET+M->JDB_HABILI+M->JDB_TURMA,1) .and. AC760Chav()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/021.html">021</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JDB_CODDIS</td>
+<td>Disciplina</td>
+<td colspan="2">Codigo da disciplina</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GEExistCpo("JAS",M->JDB_CODCUR+M->JDB_PERLET+M->JDB_HABILI+M->JDB_CODDIS,2) .and. AC760Chav()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/j12.html">J12</a></td>
+<td><a href="/tabelas_protheus/gatilhos/jdb_coddis.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JDB_DDISCI</td>
+<td>Descricao</td>
+<td colspan="2">Descricao da disciplina</td>
+<td colspan="4">Informe a Descrição da Disciplina
+</td>
+<td>C</td>
+<td>100</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui,"",Posicione("JAE",1,xFilial("JAE")+JDB->JDB_CODDIS,"JAE_DESC"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("JAE",1,xFilial("JAE")+JDB->JDB_CODDIS,"JAE_DESC")</td>
+<td><a href="/tabelas_protheus/grupocampo/046.html">046</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JDB_CODAVA</td>
+<td>Avaliacao</td>
+<td colspan="2">Codigo de avaliacao</td>
+<td colspan="4">Informe o código da avaliação para o
+apontamento.
+Pressione F3 para efetuar a consulta.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GEExistCpo("JBQ",M->JDB_CODCUR+M->JDB_PERLET+M->JDB_HABILI+M->JDB_CODAVA,3) .and. AC760Chav()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/jbq.html">JBQ</a></td>
+<td><a href="/tabelas_protheus/gatilhos/jdb_codava.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JDB_DCODAV</td>
+<td>Desc.avaliac</td>
+<td colspan="2">Descricao da avaliacao</td>
+<td colspan="4">Informe a Descrição da Avaliação
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui,"",Posicione("JBQ",3,xFilial("JBQ")+JDB->JDB_CODCUR+JDB->JDB_PERLET+JDB->JDB_HABILI+JDB->JDB_CODAVA,"JBQ_DESC"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>AC760DAva()</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JDB_TIPAVA</td>
+<td>Tipo.avaliac</td>
+<td colspan="2">Tipo da avaliacao</td>
+<td colspan="4">Informe o Tipo de Avaliação
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui,"",Posicione("JBQ",3,xFilial("JBQ")+JDB->JDB_CODCUR+JDB->JDB_PERLET+JDB->JDB_HABILI+JDB->JDB_CODAVA,"JBQ_TIPO"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td>1=Regular;2=Exame;3=Integrada;4=Nota Unica</td>
+<td></td>
+<td>AC760TAva()</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JDB_ATIVID</td>
+<td>Atividade</td>
+<td colspan="2">Codigo da Atividade</td>
+<td colspan="4">Informe o item que representa a
+atividade dentro da avaliação.
+Pressione <F3> para efetuar a consulta.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>AC760Ativ() .and. AC760Chav()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/j1l.html">J1L</a></td>
+<td><a href="/tabelas_protheus/gatilhos/jdb_ativid.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JDB_DATIVI</td>
+<td>Descricao</td>
+<td colspan="2">Descricao da Atividade</td>
+<td colspan="4">Informe a Descrição da Atividade
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui,"",AC760Desc())</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>AC760Desc()</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JDB_MATPRF</td>
+<td>Professor</td>
+<td colspan="2">Matricula do professor</td>
+<td colspan="4">Informe a Matricula do Professor
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>iif(inclui,"",AC760Prof())</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>AC760Prof()</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JDB_NOME</td>
+<td>Nome</td>
+<td colspan="2">Nome do professor</td>
+<td colspan="4">Informe o Nome do Professor
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui,"",Posicione("SRA",1,xFilial("SRA")+AC760Prof(),"RA_NOME"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("SRA",1,xFilial("SRA")+AC760Prof(),"RA_NOME")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JDB_TIPATI</td>
+<td>Tipo Ativid.</td>
+<td colspan="2">Tipo da atividade</td>
+<td colspan="4">Informa o Tipo de Atividade
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui,"",Ac760TipAti())</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td>1=Regular;2=Integrada</td>
+<td></td>
+<td>Ac760TipAti()</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JDB_SUBTUR</td>
+<td>Sub Turma</td>
+<td colspan="2">Sub Turma</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>AC760Chav()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>JDC</td>
+<td colspan="2">JDB_CODCUR+JDB_PERLET+JDB_HABILI+JDB_TURMA+JDB_CODDIS+JDB_CODAVA+JDB_ATIVID</td>
+<td colspan="2">JDC_CODCUR+JDC_PERLET+JDC_HABILI+JDC_TURMA+JDC_CODDIS+JDC_CODAVA+JDC_ATIVID</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

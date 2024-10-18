@@ -1,0 +1,396 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: DDY - Aprovadores TMS</title></head>
+<body>
+<font color="orange"><h2 id="DDY">Tabela: DDY - Aprovadores TMS</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Aprovadores TMS</b></td><td colspan="2"><b>DDY_FILIAL+DDY_USUARI+DDY_ROTINA</b></td><td><b>TMSA026</b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">DDY_FILIAL+DDY_USUARI+DDY_ROTINA</td><td>Usuário + Rotina</td><td></td></tr>
+<tr><td>2</td><td colspan="2">DDY_FILIAL+DDY_ROTINA+DDY_USUARI</td><td>Rotina + Usuário</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>DDY_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial Do Sistema</td>
+<td colspan="4">Filial Do Sistema
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DDY_USUARI</td>
+<td>Usuário</td>
+<td colspan="2">Usuário</td>
+<td colspan="4">Código do Usuário Que Será Cadastrado
+Como Liberador.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td>ExistChav("DDY") .And. UsrExist(M->DDY_USUARI)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/usr.html">USR</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ddy_usuari.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>Inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DDY_NOME</td>
+<td>Nome</td>
+<td colspan="2">Nome Liberador</td>
+<td colspan="4">Nome Do Liberador Cadastrado.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIF(!INCLUI,AllTrim(UsrFullName(DDY->DDY_USUARI))," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>AllTrim(UsrFullName(DDY->DDY_USUARI))</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DDY_ROTINA</td>
+<td>Rotina</td>
+<td colspan="2">Rotina</td>
+<td colspan="4">Código da Rotina Cujos Bloqueios  o
+Aprovador Terá Acesso De Liberação.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("DDX")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ddx.html">DDX</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ddy_rotina.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DDY_DESCR</td>
+<td>Descrição</td>
+<td colspan="2">Descrição da Rotina</td>
+<td colspan="4">Descrição Da Rotina.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIF(!INCLUI,POSICIONE("DDX",1,XFILIAL("DDX") + DDY->DDY_ROTINA,"DDX_DESCR")," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("DDV",1,xFilial("DDV") + DDY->DDY_ROTINA,"DDV_DESCB")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DDY_TPBLQ</td>
+<td>Tipos Bloqu.</td>
+<td colspan="2">Tipos Bloqueio</td>
+<td colspan="4">Selecione Os Códigos De Bloqueio Cujo
+Usuário Terá Acesso De Liberação.
+</td>
+<td>C</td>
+<td>200</td>
+<td>0</td>
+<td>@S30                                         </td>
+<td>NaoVazio() .And. TmsVLDDY("DDY_TPBLQ","V")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ddv.html">DDV</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DDY_TIPLIB</td>
+<td>Tipo Liberac</td>
+<td colspan="2">Tipo Liberação</td>
+<td colspan="4">Define Se Liberador Efetua Liberações
+Simples (1) Ou Por Hierarquia (2) Ou
+Libera Todos Os Niveis Hierarquicos (3).
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("123") .And. TmsVLDDY("DDY_TIPLIB","V")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Simples;2=Hierarquia;3=Libera Todos Niveis</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DDY_NIVEL</td>
+<td>Nível Liber.</td>
+<td colspan="2">Nível Liberação</td>
+<td colspan="4">Define o Nível Hierarquico Do Aprovador.
+Obedece As Regras Do Cadastro TMSA026 -
+Regras Liberação Por Rotina.
+</td>
+<td>N</td>
+<td>1</td>
+<td>0</td>
+<td>9                                            </td>
+<td>Positivo() .And. TmsVLDDY("DDY_NIVEL","V")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DDY_STATUS</td>
+<td>Status</td>
+<td colspan="2">Status Liberador</td>
+<td colspan="4">Define o Status Do Liberador Para a
+Rotina Específica. 1 = Ativo (Tem Acesso
+De Liberação), 2 = Inativo (Não Tem
+Acesso Para Liberar).
+Desta Forma o Sistema Permite Bloquear o
+Acesso De Um Usuário a Uma Determinada
+Sem a Necessidade De Excluir o Cadastro
+Efetuado Anteriormente.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Ativo;2=Inativo</td>
+<td></td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DDY_NOTIF</td>
+<td>Notifica ?</td>
+<td colspan="2">Notifica Por E-Mail?</td>
+<td colspan="4">Define Se Liberador Será Notificado
+Sempre Que Um Novo Bloqueio For Incluído
+No Sistema.
+1 = Não Notifica, 2 = Notifica Por
+E-Mail.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=N�o Notifica;2=Notifica Por E-Mail</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DDY_EMAIL</td>
+<td>E-Mail Sec.</td>
+<td colspan="2">E-Mail Secundário</td>
+<td colspan="4">O Sistema Utiliza o E-Mail Padrão Do
+Usuário Constante No Configurador,
+Informe Somente Se E-Mail De Notificação
+For Diferente Deste.
+</td>
+<td>C</td>
+<td>120</td>
+<td>0</td>
+<td>                                             </td>
+<td>Vazio() .Or.("@" $ M->DDY_EMAIL)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

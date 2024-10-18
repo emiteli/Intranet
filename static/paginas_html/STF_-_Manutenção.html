@@ -1,0 +1,1639 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: STF - Manutenção</title></head>
+<body>
+<font color="orange"><h2 id="STF">Tabela: STF - Manutenção</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Manutenção</b></td><td colspan="2"><b>TF_FILIAL+TF_CODBEM+TF_SERVICO+TF_SEQRELA</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">TF_FILIAL+TF_CODBEM+TF_SERVICO+TF_SEQRELA</td><td>Bem + Serviço + Sequência</td><td></td></tr>
+<tr><td>2</td><td colspan="2">TF_FILIAL+TF_CODAREA+TF_CODBEM+TF_SERVICO+TF_SEQRELA</td><td>Área Manut. + Bem + Serviço + Sequência</td><td></td></tr>
+<tr><td>3</td><td colspan="2">TF_FILIAL+TF_SERVICO+TF_CODBEM</td><td>Serviço + Bem</td><td></td></tr>
+<tr><td>4</td><td colspan="2">TF_FILIAL+TF_SERVICO+TF_CODAREA+TF_TIPO</td><td>Serviço + Área Manut. + Tipo de Man.</td><td></td></tr>
+<tr><td>5</td><td colspan="2">TF_FILIAL+TF_DOCFIL+TF_DOCTO</td><td>Filial Proc. + Procedimento</td><td></td></tr>
+<tr><td>6</td><td colspan="2">TF_FILIAL+TF_CALENDA</td><td>Calendário</td><td></td></tr>
+<tr><td>7</td><td colspan="2">TF_FILIAL+TF_DOCTO</td><td>Procedimento</td><td></td></tr>
+<tr><td>8</td><td colspan="2">TF_FILIAL+TF_CODBEM+TF_SERVICO+STR(TF_INENMAN,6)</td><td>Bem + Serviço + Incr. Man.</td><td></td></tr>
+<tr><td>9</td><td colspan="2">TF_FILIAL+TF_CODBEM+TF_SERVICO+TF_UNENMAN+STR(TF_TEENMAN,3)</td><td>Bem + Serviço + Unid.Manut. + Tempo Manut.</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>TF_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Código da filial da empresa.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_CODBEM</td>
+<td>Bem</td>
+<td colspan="2">Codigo do Bem</td>
+<td colspan="4">Código de identificação do Bem.
+</td>
+<td>C</td>
+<td>16</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO('ST9',M->TF_CODBEM) .And. NGDISP('M->TF_NOMBEM',ST9->T9_NOME) .And. NG120SERV() .And. MNTVALBEM()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/st9.html">ST9</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tf_codbem.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TF_NOMBEM</td>
+<td>Nome Bem</td>
+<td colspan="2">Nome do Bem</td>
+<td colspan="4">Nome do Bem da preventiva.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>ST9->(VDISP(STF->TF_CODBEM,'T9_NOME'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("ST9",1, xFilial("ST9")+STF->TF_CODBEM,"T9_NOME")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_SERVICO</td>
+<td>Serviço</td>
+<td colspan="2">Codigo do Servico</td>
+<td colspan="4">Código do serviço da manutenção.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>If(!Empty(M->TF_SERVICO),EXISTCPO("ST4",M->TF_SERVICO) .AND. NG120SERV(),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/st4.html">ST4</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tf_servico.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TF_NOMSERV</td>
+<td>Nome Serviço</td>
+<td colspan="2">Nome do Servico</td>
+<td colspan="4">Nome do serviço da manutenção
+preventiva.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>ST4->(VDISP(STF->TF_SERVICO,'T4_NOME'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("ST4",1, xFilial("ST4")+STF->TF_SERVICO,"T4_NOME")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_SEQRELA</td>
+<td>Sequência</td>
+<td colspan="2">Sequencia da Manutencao</td>
+<td colspan="4">Código da sequência da manutenção.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>naovazio()  .AND. EXISTCHAV("STF",M->TF_CODBEM+M->TF_SERVICO+M->TF_SEQRELA)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_NOMEMAN</td>
+<td>Nome Manut.</td>
+<td colspan="2">Nome da manutencao</td>
+<td colspan="4">Nome da Manutençao do Bem.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_PADRAO</td>
+<td>Man. Padrão</td>
+<td colspan="2">Manutencao Padrao</td>
+<td colspan="4">Indicador de utilização de definições
+padrões para a manutenção. Caso este
+campo contendo "S"=sim, os campos
+cadastrais desta manutenção serão
+atualizados conforme padrão.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("SN") .AND. MNTA120PAD()</td>
+<td>IF(INCLUI,'N',STF->TF_PADRAO)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>N=Nao;S=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_SEQREPA</td>
+<td>Seq. Padrão</td>
+<td colspan="2">Sequencia Padrao</td>
+<td colspan="4">Sequência Padrão
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>CARREG180('M->TF_SEQREPA')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ngtpfc.html">NGTPFC</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>M->TF_PADRAO = "S"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_DTULTMA</td>
+<td>Última Man.</td>
+<td colspan="2">Data da Ultima Manutencao</td>
+<td colspan="4">Data em que foi efetuada a última
+manutenção para o bem.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>VLDDTUTLM()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>lWhenOs</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TF_CODAREA</td>
+<td>Área Manut.</td>
+<td colspan="2">Codigo Area de Manutencao</td>
+<td colspan="4">Código de identificação da área de
+manutenção a que refere a manutenção do
+Bem.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO("STD",M->TF_CODAREA)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/std.html">STD</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TF_NOMAREA</td>
+<td>Nome da Área</td>
+<td colspan="2">Nome da Area do servico</td>
+<td colspan="4">Nome da área de manutenção.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>STD->(VDISP(STF->TF_CODAREA,'TD_NOME'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_TIPO</td>
+<td>Tipo de Man.</td>
+<td colspan="2">Codigo do Tipo Manutencao</td>
+<td colspan="4">Código de identificação do tipo a que
+se refere a manutenção do Bem.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO("STE",M->TF_TIPO)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ste.html">STE</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TF_NOMTIPO</td>
+<td>Nome do Tipo</td>
+<td colspan="2">Nome do Tipo do servico</td>
+<td colspan="4">Nome do tipo da manutenção.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>STE->(VDISP(STF->TF_TIPO,'TE_NOME'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_CALENDA</td>
+<td>Calendário</td>
+<td colspan="2">Calendario da Manutencao</td>
+<td colspan="4">Código do calendário que indica o turno
+em que a manutenção deverá ser
+executada.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>If(!Empty(M->TF_CALENDA),EXISTCPO("SH7",M->TF_CALENDA),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sh7.html">SH7</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tf_calenda.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TF_NOMCALE</td>
+<td>Nome Calend.</td>
+<td colspan="2">Nome do Calendario</td>
+<td colspan="4">Nome do calendário da execução da
+manutenção.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>SH7->(VDISP(STF->TF_CALENDA,'H7_DESCRI'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_TIPACOM</td>
+<td>Tipo Acomp.</td>
+<td colspan="2">Tipo do Acompanhamento</td>
+<td colspan="4">Identifica o tipo de acompanhamento para
+a manutenção, podendo ser C – Contador,
+T – tempo, A – contador / tempo, P -
+produção, F – contador fixo, S – segundo
+contador.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("FTCAPS") .AND. NG120CHKCTD() .AND. IF(M->TF_TIPACOM="S",NG120CON2(),.T.)</td>
+<td>IF(INCLUI,"T",STF->TF_TIPACOM)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>T=Tempo;C=Contador;A=Tempo/Contador;P=Producao;F=Contador Fixo;S=Segundo Contador</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TF_PARADA</td>
+<td>Parada Bem</td>
+<td colspan="2">Indicacao de Parada Bem</td>
+<td colspan="4">Indica se haverá necessidade de parada
+do bem para a execução da manutenção,
+podendo ser: N – O bem não necessita de
+parada para a manutenção, S – O bem
+necessita de parada para a manutenção ou
+T – todos os bens da estrutura param.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("SNT")  .AND. NG120CHKPAR()</td>
+<td>IF(INCLUI,"N",STF->TF_PARADA)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>S=Sim;N=Nao;T=Todos</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_TEPAANT</td>
+<td>Parada Antes</td>
+<td colspan="2">Tempo Parada Antes Manut.</td>
+<td colspan="4">Tempo de antecedência em que o Bem
+deverá estar parado para que possa ser
+executada a manutenção.
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td>NAOVAZIO().and.Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>M->TF_PARADA == "S"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_UNPAANT</td>
+<td>Unid. Antes</td>
+<td colspan="2">Unidade Tpo. Parada Antes</td>
+<td colspan="4">Unidade de medida do tempo de parada
+a ser observado antes que se possa
+efetuar a manutenção.
+H-Horas, D-Dias, M-Meses, I-Minutos
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("MHDI")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>D=Dias;H=Horas;I=Minutos;M=Meses</td>
+<td>M->TF_TEPAANT > 0</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_TEPADEP</td>
+<td>Parada Dep.</td>
+<td colspan="2">Tempo de Para Depois Manu</td>
+<td colspan="4">Tempo em que o Bem deverá permanecer
+parado após executada a manutenção.
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td>NAOVAZIO().and.Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>M->TF_PARADA == "S"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_UNPADEP</td>
+<td>Unid. Depois</td>
+<td colspan="2">Unidade Tpo.Parada Depois</td>
+<td colspan="4">Unidade de medida do tempo de parada
+que deverá ser observado após a execução
+da manutenção.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("MHDI")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>D=Dias;H=Horas;I=Minutos;M=Meses</td>
+<td>M->TF_TEPADEP > 0</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_TEENMAN</td>
+<td>Tempo Manut.</td>
+<td colspan="2">Tempo Entre Manutencoes</td>
+<td colspan="4">Tempo a ser observado entre as
+manutenções. Utilizado somente para a
+manutenção por tempo decorrido.
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td>NAOVAZIO().and.POSITIVO()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>M->TF_TIPACOM$"T/A"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_UNENMAN</td>
+<td>Unid.Manut.</td>
+<td colspan="2">Unidade Tempo Manutencao</td>
+<td colspan="4">Unidade de medida do tempo a ser
+observado entre manutenções.
+H-Horas, D-Dias, S-Semanas, M-Meses
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("DSMH")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>D=Dia(s);S=Semana(s);M=Mes(es);H=Horas</td>
+<td>M->TF_TIPACOM$"T/A"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_CONMANU</td>
+<td>Cont.Manut</td>
+<td colspan="2">Contador Ultima Manuten.</td>
+<td colspan="4">Posição do contador ACUMULADO na ultima
+manutenção efetuada para o Bem.
+</td>
+<td>N</td>
+<td>12</td>
+<td>0</td>
+<td>@E 999,999,999,999                           </td>
+<td>IF(M->TF_TIPACOM$"C/A/P/F/S",NAOVAZIO(M->TF_CONMANU),EMPTY(M->TF_CONMANU)).AND.POSITIVO()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>M->TF_TIPACOM!="T"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_INENMAN</td>
+<td>Incr. Man.</td>
+<td colspan="2">Incremento Entre Manut.</td>
+<td colspan="4">Incremento do contador a ser observado
+para que se efetue a proxima manutenção.
+Este valor será somado a posição do
+contador na última manutenção, para
+obter a posição do contador na próxima
+manutenção.
+</td>
+<td>N</td>
+<td>6</td>
+<td>0</td>
+<td>@E 999,999                                   </td>
+<td>IF(M->TF_TIPACOM$"C/A/P/F/S",NAOVAZIO(M->TF_INENMAN),EMPTY(M->TF_INENMAN)).AND.POSITIVO()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>M->TF_TIPACOM!="T"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_NAOUTIL</td>
+<td>Dia não Útil</td>
+<td colspan="2">Atitude Para Dia Nao Util</td>
+<td colspan="4">Indica qual a atitude do plano de
+manutenção quando a Ordem de Serviço
+cair em dia não útil, podendo ser: A –
+adianta. T – atrasa ou U – utiliza o
+dia.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("ATU")</td>
+<td>IF(INCLUI,"A",STF->TF_NAOUTIL)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>A=Adianta;T=Atrasa;U=Utiliza Dia</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TF_PRIORID</td>
+<td>Prioridade</td>
+<td colspan="2">Prioridade da Manutencao</td>
+<td colspan="4">Código de estabelecimento da prioridade
+que deverá ser considerada a manutenção
+quando da execução do planejamento.
+Quanto maior o valor maior será a
+prioridade.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(INCLUI,REPLICATE("Z",Len(STF->TF_PRIORID)),STF->TF_PRIORID)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_PERIODO</td>
+<td>Período</td>
+<td colspan="2">Tipo de Periodo de Manut.</td>
+<td colspan="4">Identifica a periodicidade da
+manutenção, podendo ser: R – repetitiva,
+U – única.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("RUE")</td>
+<td>IF(INCLUI,"R",STF->TF_PERIODO)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>R=Repetitiva;U=Unica;E=Eventual</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_ATIVO</td>
+<td>Mant.Ativa</td>
+<td colspan="2">Manutencao ativa ?</td>
+<td colspan="4">Indica se a manutenção está ativa.
+S- Sim
+N- Não
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("SN") .And. MNTA120IMA()</td>
+<td>IF(INCLUI,"S",STF->TF_ATIVO)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>S=Sim;N=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_QUANTOS</td>
+<td>Quant. O.S.</td>
+<td colspan="2">Quantidade de O.S.</td>
+<td colspan="4">Quantidade de OS's já executadas para a
+manutenção.
+</td>
+<td>N</td>
+<td>9</td>
+<td>0</td>
+<td>@E 999,999                                   </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_DOCFIL</td>
+<td>Filial Proc.</td>
+<td colspan="2">Filial Procedimento</td>
+<td colspan="4">Código da filial responsável pelo
+documento que estabelece os
+procedimentos de execução da manutenção.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_DOCTO</td>
+<td>Procedimento</td>
+<td colspan="2">Procedimento Manutencao</td>
+<td colspan="4">Código do documento no SIGAQDO que
+estabelece os procedimentos para a
+execução da manutenção.
+</td>
+<td>C</td>
+<td>16</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO("QDH",M->TF_DOCTO)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_SUBSTIT</td>
+<td>Subst. O.S.</td>
+<td colspan="2">Substituicao de O.S.</td>
+<td colspan="4">Substituição da O.S.
+</td>
+<td>C</td>
+<td>11</td>
+<td>0</td>
+<td>XXX,XXX,XXX                                  </td>
+<td>NGSUBSTIT(M->TF_CODBEM+M->TF_SERVICO,If(NGVERIFY("STF"),M->TF_SEQRELA,Str(M->TF_SEQUENC,3)),M->TF_SUBSTIT)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>MNT120WHEN("TF_SUBSTIT")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_PLANEJA</td>
+<td>Cons. Plan.</td>
+<td colspan="2">Considera no Planejamento</td>
+<td colspan="4">Considera no planejamento. S-Sim, N-Não.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("SN")</td>
+<td>IF(INCLUI,"S",STF->TF_PLANEJA)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>S=Sim;N=Nao</td>
+<td>MNT120WHEN("TF_PLANEJA")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_DESCRIC</td>
+<td>Descrição</td>
+<td colspan="2">Descricao da Manutenção</td>
+<td colspan="4">Descrição complementar da manutenção.
+Texto livre destinado a informaçöes
+adicionais relativas à manutenção.
+</td>
+<td>M</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_PERACOM</td>
+<td>Periodo Acom</td>
+<td colspan="2">Periodo Entre Acompanh.</td>
+<td colspan="4">Período de acompanhamento a ser
+observado entre cada medição de
+contador.
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td>NAOVAZIO()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_UNIACOM</td>
+<td>Unid.Acomp.</td>
+<td colspan="2">Unidade do Periodo Acomp.</td>
+<td colspan="4">Unidade de medida de tempo para o
+acompanhamento do contador do Bem.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("DSM")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>D=Dias;S=Semanas;M=Meses</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_CONTADO</td>
+<td>Cont.Bem</td>
+<td colspan="2">Contador de Qual Bem?</td>
+<td colspan="4">Se informado, indica de qual Bem será
+considerado o contador para fins de
+manutenção. Somente para manutenção
+controlada por contador ou produção.
+</td>
+<td>C</td>
+<td>16</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_MFPADR</td>
+<td>Padrao Data</td>
+<td colspan="2">Padrao de Calculo de Data</td>
+<td colspan="4">Campo para definição de data fixa para
+manutenção. Identificação do padrão a
+ser observado.
+A-Anual, M-Mensal, S-Semanal.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("AMS")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>A=Anual;M=Mensal;S=Semanal</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_MFINTE</td>
+<td>Intervalo</td>
+<td colspan="2">Numero do Intervalo</td>
+<td colspan="4">Campo para definição de data fixa para
+manutenção. Número de intervalo a ser
+observado. Utilizado nas diversas
+composições possíveis.
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_MFSEMA</td>
+<td>Dia Semana</td>
+<td colspan="2">Dia da Semana</td>
+<td colspan="4">Campo para definição de data fixa para
+manutenção. Dia da semana podendo ser:
+Domingo,........,Segunda.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("STQIXAD")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>S=Segunda;T=Terca;Q=Quarta;I=Quinta;X=Sexta:A=Sabada;D=Domingo</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_MFDIME</td>
+<td>Dia do Mes</td>
+<td colspan="2">Dia do Mes</td>
+<td colspan="4">Campo para definição de data fixa para
+manutenção. Dia do mês, indo de 01 a 31.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_MFMEAN</td>
+<td>Mes Ano</td>
+<td colspan="2">Mes do Ano</td>
+<td colspan="4">Campo para definição de data fixa para
+manutenção.Mês do ano, podendo ser
+01-janeiro,......,12-dezembro.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("01\02\03\04\05\06\07\08\09\10\11\12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>01=Janeiro;02=Fevereiro;03=Marco;04=Abril;05=Maio;06=Junho;07=Julho;08=Agosto;09=Setembro;10=Outubro;11=Novembro;12=Dezembro</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_MFSEQU</td>
+<td>Sequencia</td>
+<td colspan="2">Sequencia da Serie</td>
+<td colspan="4">Campo para definição de data fixa para
+manutenção.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("PSTQU")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>P=Primeiro;S=Segundo;T=Terceiro;Q=Quarto;U=Ultimo</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_MFDIDF</td>
+<td>Dia Definido</td>
+<td colspan="2">Dia Definido</td>
+<td colspan="4">Campo para definição de data fixa para
+manutenção. Definição do dia da semana.
+B-Dia, E-Dia da semana, F-Dia do fim de
+semana, S-Segunda, T-Terça, Q-Quarta,
+I-Quinta, X-Sexta, A-Sabádo, D-Domingo.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("BEFSTQIXAD")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>B=Dia;E=Dia da Semana;F=Dia do Fim Semana;S=Segunda;T=Terca;Q=Quarta;I=Quinta;X=Sexta;A=Sabado;D=Domingo</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_MFNACO</td>
+<td>Data N. Conh</td>
+<td colspan="2">Data Nao Exata</td>
+<td colspan="4">Campo para definição de data fixa para
+manutenção. Definição de opção para
+tratamento da data da manutenção quando
+a data anteriormente calculada não
+coincidir com a data fixa definida.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("VFT")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>V=Menor Diferenca;F=Para Frente;T=Para Traz</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_SEQUENC</td>
+<td>Sequencia</td>
+<td colspan="2">Sequencia da Manutecao</td>
+<td colspan="4">Número de sequência da manutenção.
+Incrementar este número para cada
+conjunto de Bem + Serviço.
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td>NAOVAZIO() .AND. EXISTCHAV("STF",M->TF_CODBEM+M->TF_SERVICO+STR(M->TF_SEQUENC,3))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_SEQUEPA</td>
+<td>Seq. Padrao</td>
+<td colspan="2">Sequencia Padrao</td>
+<td colspan="4">Sequência Padrão
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td>CARREG180()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ngtpfn.html">NGTPFN</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>M->TF_PADRAO = "S"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_TIPLUB</td>
+<td>Servico Lubr</td>
+<td colspan="2">Servico Lubrificacao</td>
+<td colspan="4">Indica se o serviço é do tipo
+lubrificação.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_TOLERA</td>
+<td>Toler. Tempo</td>
+<td colspan="2">Tempo Toleran OS a Vencer</td>
+<td colspan="4">Dias de tolerância que será considerada
+com base nas Ordens de Serviço
+preventivas a vencer. Este campo será
+utilizado a nível de relatório e
+workflows.
+</td>
+<td>N</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>MNT120TOLE()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TF_TOLECON</td>
+<td>Toler. Cont.</td>
+<td colspan="2">Tolerancia Contador</td>
+<td colspan="4">Tolerancia do contador, que será
+considerada com base nas Ordens de
+Serviço Preventivas a vencer. Este campo
+será utilizado a nível de relatórios e
+workflows.
+</td>
+<td>N</td>
+<td>9</td>
+<td>0</td>
+<td>@E 999,999,999                               </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>MNT120TOCO()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>STJ</td>
+<td colspan="2">TF_CODBEM+TF_SERVICO+TF_SEQRELA</td>
+<td colspan="2">TJ_CODBEM+TJ_SERVICO+TJ_SEQRELA</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

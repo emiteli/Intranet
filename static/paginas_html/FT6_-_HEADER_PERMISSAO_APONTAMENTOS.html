@@ -1,0 +1,218 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: FT6 - HEADER PERMISSAO APONTAMENTOS</title></head>
+<body>
+<font color="orange"><h2 id="FT6">Tabela: FT6 - HEADER PERMISSAO APONTAMENTOS</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>HEADER PERMISSAO APONTAMENTOS</b></td><td colspan="2"><b>FT6_FILIAL+FT6_CONTRA+FT6_ASSUNT</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">FT6_FILIAL+FT6_CONTRA+FT6_ASSUNT</td><td>Contrato + Assunto</td><td>FT6_CONTRA</td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>FT6_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>FT6_CONTRA</td>
+<td>Contrato</td>
+<td colspan="2">Cod. do Contrato</td>
+<td colspan="4">Código de identificação do contrato do
+cliente objeto da permissão de
+apontamentos.
+Teclando-se[F3] será possível consultar
+e selecionar o contrato.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td>ExistCpo("FSC")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/fsc.html">FSC</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ft6_contra.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>FT6_DSCCON</td>
+<td>Descrição</td>
+<td colspan="2">Descrição do Contrato</td>
+<td colspan="4">Descrição do contrato ao qual se refere
+a permissão de apontamentos.
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("FSC",1,XFILIAL("FSC")+FT6->FT6_CONTRA,"FSC_DESCRI")," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("FSC",1,XFILIAL("FSC")+FT6->FT6_CONTRA,"FSC_DESCRI")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>FT6_ASSUNT</td>
+<td>Assunto</td>
+<td colspan="2">Cod. do Assunto</td>
+<td colspan="4">Código de identificação do assunto
+relacionado ao contrato selecionado, que
+será objeto da permissão de
+apontamentos, se as permissões se
+aplicarem a todos os assuntos do
+contrato deixar este campo em branco.
+Teclando-se[F3] será possível consultar
+e selecionar o assunto.
+</td>
+<td>C</td>
+<td>11</td>
+<td>0</td>
+<td>                                             </td>
+<td>Vazio() .or. GavTemChav("FSB",M->FT6_CONTRA+M->FT6_ASSUNT,"FSB_CONTRA",.F.,.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/fsbft6.html">FSBFT6</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ft6_assunt.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>FT6_DSCASS</td>
+<td>Descrição</td>
+<td colspan="2">Descrição do Assunto</td>
+<td colspan="4">Descrição do assunto ao qual a permissão
+de apontamentos pertence.
+</td>
+<td>C</td>
+<td>144</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("FSB",1,XFILIAL("FSB")+FT6->FT6_ASSUNT,"FSB_DESCRI")," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("FSB",1,XFILIAL("FSB")+FT6->FT6_ASSUNT,"FSB_DESCRI")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

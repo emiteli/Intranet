@@ -1,0 +1,1037 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: DDQ - Cartao Operadora de Frota</title></head>
+<body>
+<font color="orange"><h2 id="DDQ">Tabela: DDQ - Cartao Operadora de Frota</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Cartao Operadora de Frota</b></td><td colspan="2"><b>DDQ_FILIAL+DDQ_IDCART</b></td><td><b>TMSA017</b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">DDQ_FILIAL+DDQ_IDCART+DDQ_CODFOR+DDQ_LOJFOR</td><td>Num.Cartao + Cod.Fornec. + Loja Fornec.</td><td></td></tr>
+<tr><td>2</td><td colspan="2">DDQ_FILIAL+DDQ_CODFOR+DDQ_LOJFOR</td><td>Cod.Fornec. + Loja Fornec.</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>DDQ_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Filial do Sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DDQ_CODFOR</td>
+<td>Cod.Fornec.</td>
+<td colspan="2">Codigo Fornecedor</td>
+<td colspan="4">Código do Fornecedor proprietário do
+cartão.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Tmsa017Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/for.html">FOR</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DDQ_LOJFOR</td>
+<td>Loja Fornec.</td>
+<td colspan="2">Loja Fornec. Cartao</td>
+<td colspan="4">Loja do Fornecedor proprietário do
+cartão.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Iif(Empty(M->DDQ_CODFOR),Vazio(),.F.) .Or. ExistCPO('SA2',M->DDQ_CODFOR+M->DDQ_LOJFOR,1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/ddq_lojfor.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DDQ_IDCART</td>
+<td>Num.Cartao</td>
+<td colspan="2">Numero Cartao Op.Frota</td>
+<td colspan="4">Número do cartão junto a Operadora de
+Frota.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>IIF(findfunction('TMSA017SCA'),TMSA017SCA(),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DDQ_STATUS</td>
+<td>Status Cart.</td>
+<td colspan="2">Status do Cartão</td>
+<td colspan="4">Informa o status do cartão do
+favorecido. Retorno obtido através da
+integração via Web Service com a
+operadora.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=Liberado;2=Bloqueado;3=Cancelado</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DDQ_TIPO</td>
+<td>Tipo Resp.</td>
+<td colspan="2">Tipo Responsável Cartão</td>
+<td colspan="4">Devera ser informado J para pessoa
+Juridica e F para pessoa Fisica e X para
+Importacao.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("FJX")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>F=Fisico;J=Juridico;X=Outros</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DDQ_NOME</td>
+<td>Nome</td>
+<td colspan="2">Nome do Fornecedor</td>
+<td colspan="4">Nome do Fornecedor Proprietário do
+Cartão.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DDQ_CGC</td>
+<td>CNPJ/CPF</td>
+<td colspan="2">CNPJ/CPF do responsavel</td>
+<td colspan="4">CNPJ/CPF do Responsável pelo Cartão.
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>@ R 99.999.999/9999-99                       </td>
+<td>Vazio() .Or. TmsA017CGC()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DDQ_RG</td>
+<td>R.G.</td>
+<td colspan="2">R.G. - Registro Geral</td>
+<td colspan="4">RG do responsável pelo cartão.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DDQ_RGORG</td>
+<td>Org.Emissor</td>
+<td colspan="2">Orgao Emissor do R.G.</td>
+<td colspan="4">Orgão Emissor do RG (Carteira de
+Identidade)
+.
+Campo a ser utilizado quando o
+fornecedor for Pessoa Física.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. ExistCpo("SX5","O2"+M->DDQ_RGORG)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/o2.html">O2</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DDQ_RGEST</td>
+<td>Estado Emis.</td>
+<td colspan="2">Estado Emissao do RG</td>
+<td colspan="4">Estado onde foi emitido o RG.
+Campo a ser utilizado quando o
+fornecedor for Pessoa Física.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio().Or.ExistCpo("SX5","12"+M->DDQ_RGEST)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/12.html">12</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DDQ_RGDT</td>
+<td>Data Emi.R.G</td>
+<td colspan="2">Data Emissao R.G.</td>
+<td colspan="4">Data da Emissão do RG.
+Campo a ser utilizado quando o
+fornecedor for pessoa física.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>M->DDQ_RGDT <= ddatabase</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DDQ_SEXO</td>
+<td>Sexo</td>
+<td colspan="2">Sexo do Responsável</td>
+<td colspan="4">Indica o sexo do responsável pelo cartão
+(pessoa física: 1:Masculino;
+2:Feminino.)
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. Pertence('12')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Masculino;2=Feminino</td>
+<td>M->DDQ_TIPO == "F"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DDQ_END</td>
+<td>Endereco</td>
+<td colspan="2">Endereco Responsavel</td>
+<td colspan="4">Endereço do responsável pelo cartão.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DDQ_BAIRRO</td>
+<td>Bairro</td>
+<td colspan="2">Bairro do Responsavel</td>
+<td colspan="4">Bairro em que reside o responsável pelo
+cartão.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DDQ_EST</td>
+<td>Estado</td>
+<td colspan="2">Estado do Responsável</td>
+<td colspan="4">Estado onde reside o responsável pelo
+cartão.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SX5","12"+M->DDQ_EST)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/12.html">12</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DDQ_CODMUN</td>
+<td>Cod.Municip.</td>
+<td colspan="2">Codigo do Municipio</td>
+<td colspan="4">Código do Município do responsável pelo
+cartão.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@99999                                       </td>
+<td>Vazio() .Or. ExistCpo("CC2",M->DDQ_EST+M->DDQ_CODMUN)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/cc2ddq.html">CC2DDQ</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ddq_codmun.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DDQ_MUN</td>
+<td>Municipio</td>
+<td colspan="2">Municipio do Responsavel</td>
+<td colspan="4">Nome do Município do responsável pelo
+cartão.
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Texto()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DDQ_PAIS</td>
+<td>País</td>
+<td colspan="2">País do Responsável</td>
+<td colspan="4">País onde reside o responsável pelo
+cartão.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .or. ExistCpo("SYA",M->DDQ_PAIS)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sya.html">SYA</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DDQ_PAISDS</td>
+<td>Descr. Pais</td>
+<td colspan="2">Descricao Pais</td>
+<td colspan="4">Descriçao do Pais onde o responsável
+pelo cartão reside.
+</td>
+<td>C</td>
+<td>25</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>E_Field("DDQ_PAIS","YA_DESCR")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>E_Field("DDQ_PAIS","YA_DESCR",,,1)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DDQ_CEP</td>
+<td>CEP</td>
+<td colspan="2">CEP do Responsável</td>
+<td colspan="4">CEP do endereço do responsável pelo
+cartão.
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>@R 99999-999                                 </td>
+<td>A020Cep()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DDQ_DDD</td>
+<td>DDD</td>
+<td colspan="2">Código DDD</td>
+<td colspan="4">Código DDD do telefone do responsável
+pelo cartão.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DDQ_TEL</td>
+<td>Telefone</td>
+<td colspan="2">NUmero Telefone</td>
+<td colspan="4">Numero do telefone do responsável pelo
+cartão.
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@R 99999-9999                                </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DDQ_TPPROP</td>
+<td>Tp.Propried.</td>
+<td colspan="2">Tipo da Propriedade</td>
+<td colspan="4">Tipo da Propriedade do Fornecedor.
+Ex:
+1 Proprio
+2 Proprio Financiado
+3 Alugado
+4 Familiar
+5 Cedido
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio().Or.ExistCpo("SX5","O3"+M->DDQ_TPPROP)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>01=Proprio;02=Proprio Financiado;03=Alugado;04=Familiar;05=Cedido</td>
+<td>M->DDQ_TIPO == "F"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DDQ_RESDES</td>
+<td>Reside Desde</td>
+<td colspan="2">Reside Desde...</td>
+<td colspan="4">Data desde que o Fornecedor reside ou
+está instalado no imóvel.
+Campo a ser utilizado quando o
+responsável pelo cartão for pessoa
+física.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@R 99/9999                                   </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>M->DDQ_TIPO == "F"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DDQ_DTNASC</td>
+<td>Dt.Nascto.</td>
+<td colspan="2">Data de Nascimento</td>
+<td colspan="4">Data de nascimento do responsável pelo
+cartão.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>M->DDQ_DTNASC <= ddatabase</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>M->DDQ_TIPO == "F"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DDQ_ESTNAT</td>
+<td>Estado Nat.</td>
+<td colspan="2">Estado Naturalidade</td>
+<td colspan="4">Estado onde o fornecedor nasceu
+(naturalidade).
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. ExistCpo("SX5","12"+M->DDQ_ESTNAT)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/12.html">12</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>M->DDQ_TIPO == "F"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DDQ_CMUNAT</td>
+<td>Cd.Mun.Nat.</td>
+<td colspan="2">Cd.Municipio Naturalidade</td>
+<td colspan="4">Codigo do Município onde o responsável
+pelo cartão nasceu(Naturalidade).
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/cc2nat.html">CC2NAT</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ddq_cmunat.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DDQ_NOMNAT</td>
+<td>Mun. Natur.</td>
+<td colspan="2">Nome Municipio Naturalid.</td>
+<td colspan="4">Nome do Município onde o responsável
+pelo cartão nasceu (Naturalidade).
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Texto()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DDQ_CODBAN</td>
+<td>Cód. Banco</td>
+<td colspan="2">Cód. Banco do Cartão</td>
+<td colspan="4">Código do banco utilizado no cartão do
+motorista.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SX5","EU"+M->DDQ_CODBAN)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/eu.html">EU</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DDQ_OPECEL</td>
+<td>Oper. Cel.</td>
+<td colspan="2">Operadora do celular</td>
+<td colspan="4">Operadora do celular do responsável pelo
+cartão.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>01=AMAZONIA CELULAR;02=BRASIL TELECOM;03=CERCOMTEL;04=CLARO;05=CTBC;06=OI;07=TELEMIG;08=TIM;09=VIVO;10=NEXTEL</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DDQ_DDDCEL</td>
+<td>DDD Cel.</td>
+<td colspan="2">Código DDD do Celular</td>
+<td colspan="4">Código DDD do celular do responsável
+pelo cartão.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DDQ_CEL</td>
+<td>Celular</td>
+<td colspan="2">Número Celular</td>
+<td colspan="4">Número do celular do responsável pelo
+cartão.
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@R 99999-9999                                </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

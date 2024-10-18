@@ -1,0 +1,1142 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: AB6 - Ordens de Serviços</title></head>
+<body>
+<font color="orange"><h2 id="AB6">Tabela: AB6 - Ordens de Serviços</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Ordens de Serviços</b></td><td colspan="2"><b>AB6_FILIAL+AB6_NUMOS</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">AB6_FILIAL+AB6_NUMOS</td><td>O.S.</td><td></td></tr>
+<tr><td>2</td><td colspan="2">AB6_FILIAL+AB6_CODCLI+AB6_LOJA</td><td>Cliente + Loja</td><td></td></tr>
+<tr><td>3</td><td colspan="2">AB6_FILIAL+AB6_CODCLI+AB6_LOJA+DTOS(AB6_EMISSA)</td><td>Cliente + Loja + Emissao</td><td></td></tr>
+<tr><td>4</td><td colspan="2">AB6_FILIAL+AB6_STATUS+AB6_CODCLI+AB6_LOJA</td><td>Status + Cliente + Loja</td><td></td></tr>
+<tr><td>5</td><td colspan="2">AB6_FILIAL+AB6_NUMLOJ</td><td>Orc. Loja</td><td></td></tr>
+<tr><td>6</td><td colspan="2">AB6_FILIAL+AB6_TPCONT+AB6_CONTRT+AB6_NUMOS</td><td>Tp.Contrato + Nr. Contrato + O.S.</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>AB6_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Filial do sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AB6_NUMOS</td>
+<td>O.S.</td>
+<td colspan="2">N·mero da O.S.</td>
+<td colspan="4">Número da ordem de serviço
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistChav("AB6")</td>
+<td>GetSX8Num("AB6","AB6_NUMOS")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>AB6_CODCLI</td>
+<td>Cliente</td>
+<td colspan="2">Cliente</td>
+<td colspan="4">Código do Cliente.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SA1",M->AB6_CODCLI+RTRIM(M->AB6_LOJA),,,,!EMPTY(M->AB6_LOJA))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sa1.html">SA1</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ab6_codcli.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>AB6_LOJA</td>
+<td>Loja</td>
+<td colspan="2">Loja</td>
+<td colspan="4">Loja do Cliente.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SA1",M->AB6_CODCLI+M->AB6_LOJA)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/ab6_loja.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>AB6_EMISSA</td>
+<td>Emissao</td>
+<td colspan="2">Emissao</td>
+<td colspan="4">Emissão da Ordem de Serviço.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>M->AB6_EMISSA>=dDataBase</td>
+<td>dDataBase</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>AB6_ATEND</td>
+<td>Atendente</td>
+<td colspan="2">Atendente</td>
+<td colspan="4">Atendente da ordem de serviço.
+</td>
+<td>C</td>
+<td>25</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>SubStr(cUsuario,7,15)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AB6_STATUS</td>
+<td>Status</td>
+<td colspan="2">Status do Orçamento</td>
+<td colspan="4">Status da Ordem de serviço. Uso Interno.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("ABE")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>A=Aberto;B=Atendida;E=Encerrado</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AB6_CONPAG</td>
+<td>Cond.Pagto</td>
+<td colspan="2">Cond.Pagto</td>
+<td colspan="4">Condição de Pagamento a ser colocada no
+Pedido de Venda gerado a partir da Ordem
+de Serviço.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SE4")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/se4.html">SE4</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>AB6_DESC1</td>
+<td>%Desconto 1</td>
+<td colspan="2">Desconto em Percentual 1</td>
+<td colspan="4">Desconto em Cascata 1.
+</td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td>Positivo().And.At450RDesc()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AB6_DESC2</td>
+<td>%Desconto 2</td>
+<td colspan="2">Desconto em Percentual 2</td>
+<td colspan="4">Desconto em Cascata 2.
+</td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@e 99.99                                     </td>
+<td>Positivo().And.At450RDesc()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AB6_DESC3</td>
+<td>%Desconto 3</td>
+<td colspan="2">Desconto em Percentual 3</td>
+<td colspan="4">Desconto em Cascata 3.
+</td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td>Positivo().And.At450RDesc()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AB6_DESC4</td>
+<td>%Desconto 4</td>
+<td colspan="2">Desconto em Percentual 4</td>
+<td colspan="4">Desconto em Cascata 4.
+</td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td>Positivo().And.At450RDesc()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AB6_TABELA</td>
+<td>Tabela</td>
+<td colspan="2">Tabela de Preço</td>
+<td colspan="4">Tabela de Preço utilizada.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>                                             </td>
+<td>"Vazio().Or.(ExistCpo('DA0') .And. Teca450Tbl())"</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/da0.html">DA0</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AB6_PARC1</td>
+<td>Parcela 1</td>
+<td colspan="2">Parcela 1</td>
+<td colspan="4">Parcela 1 da Condição de Pagamento Tipo
+9.
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AB6_DATA1</td>
+<td>Vencimento 1</td>
+<td colspan="2">Vencimento da Parc. 1</td>
+<td colspan="4">Data para Condição de Pagamento Tipo 9.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AB6_PARC2</td>
+<td>Parcela 2</td>
+<td colspan="2">Parcela 2</td>
+<td colspan="4">Parcela 2 da Condição de Pagamento Tipo
+9.
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AB6_DATA2</td>
+<td>Vencimento 2</td>
+<td colspan="2">Vencimento da Parc. 2</td>
+<td colspan="4">Data para Condição de Pagamento Tipo 9.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AB6_PARC3</td>
+<td>Parcela 3</td>
+<td colspan="2">Parcela 3</td>
+<td colspan="4">Parcela 3 da Condição de Pagamento Tipo
+9.
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AB6_DATA3</td>
+<td>Vencimento 3</td>
+<td colspan="2">Vencimento da Parc. 3</td>
+<td colspan="4">Data para Condição de Pagamento Tipo 9.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AB6_PARC4</td>
+<td>Parcela 4</td>
+<td colspan="2">Parcela 4</td>
+<td colspan="4">Parcela 4 da Condição de Pagamento Tipo
+9.
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AB6_DATA4</td>
+<td>Vencimento 4</td>
+<td colspan="2">Vencimento 4</td>
+<td colspan="4">Data para Condição de Pagamento Tipo 9.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AB6_OK</td>
+<td>Ok</td>
+<td colspan="2">Ok</td>
+<td colspan="4">Flag para markbrowse. Uso Interno.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>AB6_HORA</td>
+<td>Horario</td>
+<td colspan="2">Horario</td>
+<td colspan="4">Horário de abertura da ordem de serviço.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td></td>
+<td>Time()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AB6_REGIAO</td>
+<td>Regiao</td>
+<td colspan="2">Regiao</td>
+<td colspan="4">Região do cliente que efetuou a abertura
+da ordem de serviço.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AB6_MSG</td>
+<td>Mensagem</td>
+<td colspan="2">Mensagem do Monitor da OS</td>
+<td colspan="4">Mensagem do monitor de OS.
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AB6_MOEDA</td>
+<td>Moeda</td>
+<td colspan="2">Moeda da Ordem de Servico</td>
+<td colspan="4">Moeda venda está sendo utilizada.
+Conforme o cadastro de moedas.
+</td>
+<td>N</td>
+<td>1</td>
+<td>0</td>
+<td>@E 9                                         </td>
+<td></td>
+<td>1</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AB6_TXMOED</td>
+<td>Taxa Moeda</td>
+<td colspan="2">Taxa da Moeda</td>
+<td colspan="4">Taxa da Moeda
+</td>
+<td>N</td>
+<td>11</td>
+<td>4</td>
+<td>@E 999999.9999                               </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AB6_NUMLOJ</td>
+<td>Orc. Loja</td>
+<td colspan="2">Orçamento SIGALOJA</td>
+<td colspan="4">Codigo do orçamento criado no SIGALOJA
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AB6_TPCONT</td>
+<td>Tp.Contrato</td>
+<td colspan="2">Tipo do Contrato</td>
+<td colspan="4">Tipo do contrato de manutenção ou
+serviço associado a esta O/S.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("123")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/ab6_tpcont.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Manuten��o;2=Servi�os;3=Integra��o com GCT</td>
+<td>At450WTpCt()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AB6_CONTRT</td>
+<td>Nr. Contrato</td>
+<td colspan="2">Número do Contrato</td>
+<td colspan="4">Número do contrato de manutenção ou
+serviço associado a esta O/S.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>At450VCtrt()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/f3ctrt.html">F3CTRT</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>At450WCtrt()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AB6_TPORCS</td>
+<td>Vínculo</td>
+<td colspan="2">Vínculo</td>
+<td colspan="4">Vínculo do orçamento de serviço.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@9                                           </td>
+<td>Pertence("123")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/ab6_tporcs.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Or�amento;2=It. Loca��o;3=It. Rec. Humanos</td>
+<td>At450When("AB6_TPORCS") .And. INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AB6_FIORCS</td>
+<td>Fil Orc Serv</td>
+<td colspan="2">Filial Orcamento Servicos</td>
+<td colspan="4">Filial para vínculo do orçamento de
+serviços ao qual a OS faz referência
+para a montagem.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td>ExistCpo("SM0", cEmpAnt+M->AB6_FIORCS)</td>
+<td>cFilAnt</td>
+<td><a href="/tabelas_protheus/f3/sm0.html">SM0</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AB6_CDORCS</td>
+<td>Cod. Orc. Se</td>
+<td colspan="2">Codigo Orç. Serviços</td>
+<td colspan="4">Codigo do orçamento de serviço.
+</td>
+<td>C</td>
+<td>11</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. At450Orcs()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tfj.html">TFJ</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AB6_ITORCS</td>
+<td>It Orc. Serv</td>
+<td colspan="2">Item Orç. Serviços</td>
+<td colspan="4">Item de orçamento de serviço
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. At450Orcs()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tfj_it.html">TFJ_IT</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>At450When("AB6_ITORCS") .And. INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AB6_ORCAME</td>
+<td>Cód Orçam</td>
+<td colspan="2">Código Orçamento</td>
+<td colspan="4">Indica o código do orçamento alimentado
+quando a OS de inspeção é gerada.
+</td>
+<td>C</td>
+<td>11</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AB6_FILORC</td>
+<td>Filial Orçam</td>
+<td colspan="2">Filial Orçamento</td>
+<td colspan="4">Indica a filial do orçamento no qual foi
+gerado a OS de inspeção.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>TE4</td>
+<td colspan="2">AB6_NUMOS</td>
+<td colspan="2">TE4_NUMOS</td>
+</tr>
+<tr>
+<td>AB7</td>
+<td colspan="2">AB6_NUMOS</td>
+<td colspan="2">AB7_NUMOS</td>
+</tr>
+<tr>
+<td>ABG</td>
+<td colspan="2">AB6_NUMOS</td>
+<td colspan="2">ABG_NUMOS</td>
+</tr>
+<tr>
+<td>AB8</td>
+<td colspan="2">AB6_NUMOS</td>
+<td colspan="2">AB8_NUMOS</td>
+</tr>
+<tr>
+<td>ABB</td>
+<td colspan="2">AB6_NUMOS</td>
+<td colspan="2">ABB_NUMOS</td>
+</tr>
+<tr>
+<td>TEW</td>
+<td colspan="2">AB6_NUMOS</td>
+<td colspan="2">TEW_NUMOS</td>
+</tr>
+<tr>
+<td>ABF</td>
+<td colspan="2">AB6_NUMOS</td>
+<td colspan="2">ABF_NUMOS</td>
+</tr>
+<tr>
+<td>TWA</td>
+<td colspan="2">AB6_NUMOS</td>
+<td colspan="2">TWA_CODAB6</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

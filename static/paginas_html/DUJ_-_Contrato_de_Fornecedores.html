@@ -1,0 +1,587 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: DUJ - Contrato de Fornecedores</title></head>
+<body>
+<font color="orange"><h2 id="DUJ">Tabela: DUJ - Contrato de Fornecedores</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Contrato de Fornecedores</b></td><td colspan="2"><b></b></td><td><b>TMSA800</b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">DUJ_FILIAL+DUJ_NCONTR</td><td>No. Contrato</td><td></td></tr>
+<tr><td>2</td><td colspan="2">DUJ_FILIAL+DUJ_CODFOR+DUJ_LOJFOR+DTOS(DUJ_INIVIG)</td><td>Fornecedor + Loja + Ini.Vigencia</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>DUJ_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Filial do Sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUJ_NCONTR</td>
+<td>No. Contrato</td>
+<td colspan="2">No Contrato do Fornecedor</td>
+<td colspan="4">Número do contrato do fornecedor. Este
+número é gerado automaticamente pelo
+sistema e identifica o contrato do
+fornecedor.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistChav("DUJ") .And. Freeforuse("DUJ")</td>
+<td>GetSXENum("DUJ","DUJ_NCONTR")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DUJ_CODFOR</td>
+<td>Fornecedor</td>
+<td colspan="2">Codigo do Fornecedor</td>
+<td colspan="4">Neste campo cadastramos o fornecedor
+relacionado a este contrato. É com base
+neste fornecedor que o sistema irá gerar
+contas a pagar.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SA2",M->DUJ_CODFOR+AllTrim(M->DUJ_LOJFOR))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/for.html">FOR</a></td>
+<td><a href="/tabelas_protheus/gatilhos/duj_codfor.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DUJ_LOJFOR</td>
+<td>Loja</td>
+<td colspan="2">Loja Fornecedor</td>
+<td colspan="4">Loja do Fornecedor, este campo é
+preenchido automaticamente ao
+selecionarmos um fornecedor.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SA2",M->DUJ_CODFOR+M->DUJ_LOJFOR)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/duj_lojfor.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DUJ_NOMFOR</td>
+<td>Nome</td>
+<td colspan="2">Nome do Fornecedor</td>
+<td colspan="4">Nome do Fornecedor, este campo será
+preenchido automaticamente ao
+selecionarmos um fornecedor.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUJ_INIVIG</td>
+<td>Ini.Vigencia</td>
+<td colspan="2">Inicio da Vigencia</td>
+<td colspan="4">Inicio da vigência do contrato do
+fornecedor. A partir desta data podemos
+utilizar o contrato para este
+fornecedor.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>NaoVazio() .And. If(!Empty(M->DUJ_FIMVIG), M->DUJ_FIMVIG > M->DUJ_INIVIG, .T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DUJ_GERAPC</td>
+<td>Gera Ped. Co</td>
+<td colspan="2">Gera Pedido de Compra</td>
+<td colspan="4">Informe se este contrato irá gerar
+pedido de compra.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>!                                            </td>
+<td>TMSA800Val()</td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o;0=N�o Considera</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUJ_FIMVIG</td>
+<td>Fim Vigencia</td>
+<td colspan="2">Fim da Vigencia</td>
+<td colspan="4">Fim da vigência do contrato do
+fornecedor, caso este campo não seja
+preenchido o sistema assume como um
+contrato vitalício.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>Vazio().Or. M->DUJ_FIMVIG>M->DUJ_INIVIG</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUJ_TITFRE</td>
+<td>Ger.Titi.Frt</td>
+<td colspan="2">Ger.Tit.Frete pos Ger.CTC</td>
+<td colspan="4">Gera o título de frete a pagar,logo após
+a geração do contrato, mesmo que o
+controle de liberação de contratos
+esteja ativo MV_LIBCTC ==.T. .
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUJ_PERADT</td>
+<td>% Adiantamto</td>
+<td colspan="2">% Adiantamento</td>
+<td colspan="4">% de Adiantamento sugerido na viagem
+</td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUJ_BXAPDG</td>
+<td>Bx. PDG Auto</td>
+<td colspan="2">Baixa Tit.Pdg.Automatica</td>
+<td colspan="4">Define se o título do pedágio será
+baixado automaticamente, logo após a sua
+geração.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUJ_PAMOVB</td>
+<td>PA.Mov.Banco</td>
+<td colspan="2">Pagto.Antec.Movta.Banco</td>
+<td colspan="4">Define se os pagamentos antecipados do
+fornecedores gerarão movimentação
+financeira automaticamente?
+SIM: Adiantamento em dinheiro (c/movim)
+NAO: Adiantamento s/ movimento bancário
+para envio de CNAB(DOC/TED)
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUJ_TITNDF</td>
+<td>Ger.Tit.NDF.</td>
+<td colspan="2">Ger.Tit.NDF pos Ger.CTC</td>
+<td colspan="4">Informa se o contrato do fornecedor
+estava configurado para gerar o título
+de NDF antes da liberação do contrato de
+carreteiro. Campo será utilizado na
+liberação do contrato, para evitar que
+seja gerado um novo título para o
+contrato de carreteiro.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('12')</td>
+<td>'2'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUJ_TITPDG</td>
+<td>Mom.Ger.PDG</td>
+<td colspan="2">Momento Ger.Título de PDG</td>
+<td colspan="4">Defiine o momento que será gerado o
+título do pedágio no financeiro, tabela
+SE2.
+1=Na geraçao do contrato de carreteiro.
+2=No Fechamento da viagem.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('12')</td>
+<td>'2'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Fechamento Viagem;2=Gera�ao CTC;</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUJ_TITADI</td>
+<td>Mom.Ger.ADI.</td>
+<td colspan="2">Momento Ger. Adiantamento</td>
+<td colspan="4">Momento da geração do PA(Pagamento
+Antecipado) no Financeiro.
+'0' = Na geraçao da viagem;
+'1' = No fechamento da viagem;
+'2 '= Na geraçao do contrato de
+carreteiro.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('012')</td>
+<td>'0'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0= Geracao da Viagem;1= Fechamento da Viagem; 2= Geracao CTC.</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUJ_TPCIOT</td>
+<td>Tipo CIOT</td>
+<td colspan="2">Tipo de CIOT</td>
+<td colspan="4">Tipo de CIOT: Por viagem ou Por periodo
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence('12')</td>
+<td>'1'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Por Viagem;2=Por Periodo</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DUJ_PRCIOT</td>
+<td>Prazo CIOT</td>
+<td colspan="2">Prazo CIOT</td>
+<td colspan="4">Prazo do CIOT em dias. Será computado
+este prazo na abertura de um CIOT por
+periodo.
+</td>
+<td>N</td>
+<td>4</td>
+<td>0</td>
+<td>@E 9,999                                     </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

@@ -1,0 +1,2129 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: GWN - ROMANEIOS DE CARGA</title></head>
+<body>
+<font color="orange"><h2 id="GWN">Tabela: GWN - ROMANEIOS DE CARGA</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>ROMANEIOS DE CARGA</b></td><td colspan="2"><b>GWN_FILIAL+GWN_NRROM</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">GWN_FILIAL+GWN_NRROM</td><td>Nr Romaneio</td><td>PK</td></tr>
+<tr><td>2</td><td colspan="2">GWN_FILIAL+GWN_CDTRP+GWN_SIT</td><td>Transp + Situacao</td><td>TRANSP</td></tr>
+<tr><td>3</td><td colspan="2">GWN_FILIAL+DTOS(GWN_DTIMPL)</td><td>Data Criacao</td><td>DATA CRIAC</td></tr>
+<tr><td>4</td><td colspan="2">GWN_FILIAL+DTOS(GWN_DTSAI)</td><td>Dt Said/Entr</td><td>DT SAI/ENT</td></tr>
+<tr><td>5</td><td colspan="2">GWN_FILIAL+GWN_CDTPOP</td><td>Tipo Oper</td><td>TIPOPER</td></tr>
+<tr><td>6</td><td colspan="2">GWN_VIAGEM</td><td>Viagem</td><td>VIAGEM</td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>GWN_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Código que identifica a filial da
+empresa usuária do sistema
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_NRROM</td>
+<td>Nr Romaneio</td>
+<td colspan="2">Numero do Romaneio</td>
+<td colspan="4">Informar o identificador único do
+romaneio de cargas no sistema em cada
+filial
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>99999999                                     </td>
+<td></td>
+<td>GFE50NRROM()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GWN_CDTPOP</td>
+<td>Tipo Oper</td>
+<td colspan="2">Tipo de Operacao</td>
+<td colspan="4">Informar o tipo de operaçao do romaneio
+de cargas
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GFEExistC("GV4",,M->GWN_CDTPOP,"GV4->GV4_SIT=='1'")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gv4.html">GV4</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GWN_CDCLFR</td>
+<td>Class Frete</td>
+<td colspan="2">Classificacao de Frete</td>
+<td colspan="4">Informar o código da classificaçao de
+frete, se houver
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ALLTRIM(M->GWN_CDCLFR)=="".OR.GFEExistC("GUB",,M->GWN_CDCLFR,"GUB->GUB_SIT=='1'")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gub.html">GUB</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gwn_cdclfr.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_DSCLFR</td>
+<td>Desc Class</td>
+<td colspan="2">Descricao Classific Frete</td>
+<td colspan="4">Descrição da classificação de frete
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!INCLUI,Posicione('GUB',1,xFilial('GUB') + GWN->GWN_CDCLFR,'GUB_DSCLFR'),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_CDTRP</td>
+<td>Transp</td>
+<td colspan="2">Transportador</td>
+<td colspan="4">Informar a transportadora ou o
+priprietário autônomo do romaneio de
+cargas
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GFEExistC("GU3",,M->GWN_CDTRP,"GU3->GU3_SIT=='1'.AND.(GU3->GU3_TRANSP=='1'.OR.GU3->GU3_AUTON=='1')")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gu3trp.html">GU3TRP</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gwn_cdtrp.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>GFEA050WCT()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/052.html">052</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GWN_DSTRP</td>
+<td>Nome Transp</td>
+<td colspan="2">Nome do Transportador</td>
+<td colspan="4">Nome da transportadora ou do
+proprietário autônomo do romaneio de
+cargas
+</td>
+<td>C</td>
+<td>80</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("GU3",1,XFILIAL("GU3")+GWN->GWN_CDTRP,"GU3_NMEMIT"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("GU3",1,XFILIAL("GU3")+GWN->GWN_CDTRP,"GU3_NMEMIT")</td>
+<td><a href="/tabelas_protheus/grupocampo/059.html">059</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_CDMTR</td>
+<td>Motorista</td>
+<td colspan="2">Codigo do Motorista</td>
+<td colspan="4">Informar o código do motorista no
+sistema
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GFEA50RLMT(M->GWN_CDMTR, M->GWN_CDMTR2,"1",.F.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/guumtr.html">GUUMTR</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gwn_cdmtr.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/054.html">054</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_NMMTR</td>
+<td>Nome Motoris</td>
+<td colspan="2">Nome do Motorista</td>
+<td colspan="4">Nome do Motorista
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("GUU",1,XFILIAL("GUU")+GWN->GWN_CDMTR,"GUU_NMMTR"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("GUU",1,XFILIAL("GUU")+GWN->GWN_CDMTR,"GUU_NMMTR")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_CDMTR2</td>
+<td>Motorista 2</td>
+<td colspan="2">Codigo Motorista 2</td>
+<td colspan="4">Informar o código do segundo motorista,
+se houver
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GFEA50RLMT(M->GWN_CDMTR, M->GWN_CDMTR2,"2",.F.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/guumtr.html">GUUMTR</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gwn_cdmtr2.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/054.html">054</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_NMMTR2</td>
+<td>Nm Motoris 2</td>
+<td colspan="2">Nome do Motorista 2</td>
+<td colspan="4">Nome do Segundo Motorista
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("GUU",1,XFILIAL("GUU")+GWN->GWN_CDMTR2,"GUU_NMMTR"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("GUU",1,XFILIAL("GUU")+GWN->GWN_CDMTR2,"GUU_NMMTR")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_CDTPVC</td>
+<td>Tipo Veiculo</td>
+<td colspan="2">Tipo de Veiculo</td>
+<td colspan="4">Informar o código do tipo de veículo
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GFEA50TPVC(M->GWN_CDTPVC)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gv3.html">GV3</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_PLACAD</td>
+<td>Placa Diant</td>
+<td colspan="2">Placa Veiculo Dianteiro</td>
+<td colspan="4">Informar a placa do veículo dianteiro da
+composiçao
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GFEA50PLC(M->GWN_PLACAD, M->GWN_PLACAT, M->GWN_PLACAM, "D",.F.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gu8rpl.html">GU8RPL</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gwn_placad.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_PLACAT</td>
+<td>Placa Trasei</td>
+<td colspan="2">Placa Veiculo Traseiro</td>
+<td colspan="4">Informar a placa do veículo traseiro da
+composição
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GFEA50PLC(M->GWN_PLACAD, M->GWN_PLACAT, M->GWN_PLACAM, "T",.F.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gu8rpl.html">GU8RPL</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_PLACAM</td>
+<td>Placa Meio</td>
+<td colspan="2">Placa Veiculo do Meio</td>
+<td colspan="4">Informar a placa do veículo do meio
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GFEA50PLC(M->GWN_PLACAD, M->GWN_PLACAT, M->GWN_PLACAM, "M",.F.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gu8rpl.html">GU8RPL</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_SIT</td>
+<td>Situacao</td>
+<td colspan="2">Situacao</td>
+<td colspan="4">Situaçao do romaneio de carga no sistema
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("1234")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=Digitado;2=Emitido;3=Liberado;4=Encerrado</td>
+<td></td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GWN_DTIMPL</td>
+<td>Data Criacao</td>
+<td colspan="2">Data da Criacao Romaneio</td>
+<td colspan="4">Data em que o romaneio de carga foi
+criado no sistema
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>DDATABASE</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td>DDATABASE</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_HRIMPL</td>
+<td>Hora Criacao</td>
+<td colspan="2">Horario Criacao Romaneio</td>
+<td colspan="4">Hora de Criação do Romaneio.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td></td>
+<td>TIME()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_CALC</td>
+<td>Sit Cálculo</td>
+<td colspan="2">Situação do Cálculo</td>
+<td colspan="4">Romaneio de cargas foi calculado?
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("1234")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=Calculado com Sucesso;2=Nao Calculado;3=Tentativa sem Sucesso;4=Necessita Recalculo</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GWN_DTCALC</td>
+<td>Data Calculo</td>
+<td colspan="2">Data do Calculo</td>
+<td colspan="4">Data mais recente em que o romaneio foi
+calculado
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_HRCALC</td>
+<td>Hora Calculo</td>
+<td colspan="2">Horario do Calculo</td>
+<td colspan="4">Horário em que o cálculo mais recente do
+romaneio de carga foi efetuado
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_USUIMP</td>
+<td>Usuario</td>
+<td colspan="2">Usuario Criacao Romaneio</td>
+<td colspan="4">Usuário que criou o romaneio de cargas
+no sistema
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>CUSERNAME</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td>CUSERNAME</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_ORI</td>
+<td>Origem</td>
+<td colspan="2">Origem</td>
+<td colspan="4">Origem do romaneio de carga no sistema
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("1234")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=Usuario;2=ERP;3=Outros;4=Sistema</td>
+<td></td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GWN_PRIOR</td>
+<td>Prioridade</td>
+<td colspan="2">Prioridade</td>
+<td colspan="4">Informar a prioridade do romaneio de
+cargas na expedição/recebimento
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_DTSAI</td>
+<td>Dt Said/Entr</td>
+<td colspan="2">Data de Saida/Entrada</td>
+<td colspan="4">Data de saida/entrada da carga do
+estabelecimento embarcador
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_HRSAI</td>
+<td>Hr Said/Entr</td>
+<td colspan="2">Hora da Saida/Entrada</td>
+<td colspan="4">Horário da saida/entrada da carga no
+estabelecimento embarcador
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_DISTAN</td>
+<td>Percurso</td>
+<td colspan="2">Percurso (km)</td>
+<td colspan="4">Informar a distância (em quilômetros) a
+percorrer ou percorrida
+</td>
+<td>N</td>
+<td>8</td>
+<td>1</td>
+<td>@E 999,999.9                                 </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_NRCIDD</td>
+<td>Cidade Dest</td>
+<td colspan="2">Cidade Destino</td>
+<td colspan="4">Informar o número da cidade de destino
+quando o romaneio for realizado por
+autônomo
+</td>
+<td>C</td>
+<td>7</td>
+<td>0</td>
+<td>9999999                                      </td>
+<td>ALLTRIM(M->GWN_NRCIDD)=="".OR.GFEExistC("GU7",,M->GWN_NRCIDD,"GU7->GU7_SIT=='1'")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gu7gua.html">GU7GUA</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gwn_nrcidd.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/053.html">053</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_NMCIDD</td>
+<td>Nome Cidade</td>
+<td colspan="2">Nome Cidade</td>
+<td colspan="4">Nome da Cidade Destino.
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("GU7",1,XFILIAL("GU7")+GWN->GWN_NRCIDD,"GU7_NMCID"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("GU7",1,XFILIAL("GU7")+GWN->GWN_NRCIDD,"GU7_NMCID")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_CEPD</td>
+<td>CEP Destino</td>
+<td colspan="2">CEP Destino</td>
+<td colspan="4">Informar o CEP do destino quando o
+romaneio for realizado por autônomo
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>@R 99.999-999                                </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/gwn_cepd.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_BLOQPF</td>
+<td>Bloq PF</td>
+<td colspan="2">Bloquear para Pré-faturas</td>
+<td colspan="4">Indica que se o romaneio de cargas está
+bloqueado para fazer parte de
+pré-faturas
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_OBS</td>
+<td>Observacoes</td>
+<td colspan="2">Observacoes</td>
+<td colspan="4">Registrar quaisquer observaçoes
+relevantes sobre o romaneio de cargas
+</td>
+<td>M</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_AGRUP</td>
+<td>Agrupado?</td>
+<td colspan="2">Romaneio agrupado?</td>
+<td colspan="4">Indica se o romaneio teve seus cálculos
+de frete agrupados em um único cálculo.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_MTCALC</td>
+<td>Observacao</td>
+<td colspan="2">Observacao do calculo</td>
+<td colspan="4">Informe a observação referente ao
+calculo.
+</td>
+<td>M</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_RASTR</td>
+<td>Cod Rastream</td>
+<td colspan="2">Codigo do Rastreamento</td>
+<td colspan="4">Informe o código de rastreamento.
+</td>
+<td>C</td>
+<td>18</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_VALEP</td>
+<td>Vale Pedágio</td>
+<td colspan="2">Situação do Vale Pedágio</td>
+<td colspan="4">Situação da conciliação manual do vale
+pedágio do Romaneio em relação ao
+extrato da operadora de pagamento
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("123")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=N�o se aplica;2=N�o conferido;3=Conferido</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_VPVAL</td>
+<td>Valor Pedág</td>
+<td colspan="2">Valor Adiantament Pedagio</td>
+<td colspan="4">Informar o valor do vale pedágio pago ao
+Transportador
+</td>
+<td>N</td>
+<td>8</td>
+<td>2</td>
+<td>@E 99,999.99                                 </td>
+<td></td>
+<td>0</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>GFE50VERVP()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_VPNUM</td>
+<td>Comprov Peda</td>
+<td colspan="2">Comprovante Vale Pedágio</td>
+<td colspan="4">Informar o número do protocolo de
+transação que comprova o pagamento do
+vale pedágio
+</td>
+<td>C</td>
+<td>16</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>GFE50VERVP()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_VPCDOP</td>
+<td>Op Vale Ped</td>
+<td colspan="2">Operadora do Vale Pedágio</td>
+<td colspan="4">Informar o código do emitente da
+operadora de pagamento do vale-pedágio
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GFEExistC("GU3",,M->GWN_VPCDOP, "GU3->GU3_SIT=='1'.AND.GU3->GU3_FORN=='1'")</td>
+<td>GFE50CDOP()</td>
+<td><a href="/tabelas_protheus/f3/gu3for.html">GU3FOR</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>GFE50VERVP()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/052.html">052</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_VPNMOP</td>
+<td>Nome Op Vale</td>
+<td colspan="2">Nome Operadora Vale Pedag</td>
+<td colspan="4">Nome do emitente da operadora de
+pagamento do vale-pedágio
+</td>
+<td>C</td>
+<td>80</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!EMPTY(GWN->GWN_VPCDOP),POSICIONE("GU3",1,XFILIAL("GU3")+GWN->GWN_VPCDOP,"GU3_NMEMIT"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("GU3",1,XFILIAL("GU3")+GWN->GWN_VPCDOP,"GU3_NMEMIT")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_DTRET</td>
+<td>Data Retorno</td>
+<td colspan="2">Data do Retorno do Veic.</td>
+<td colspan="4">Informe a data de retorno do veículo
+após realizar as entregas do Romaneio
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_HRRET</td>
+<td>Hora Retorno</td>
+<td colspan="2">Horario do Retorno Veic.</td>
+<td colspan="4">Informe o horário de retorno do veículo
+após realizar as entregas do Romaneio
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_HODSAI</td>
+<td>Hodom Saida</td>
+<td colspan="2">Leitura do Hodom na Saida</td>
+<td colspan="4">Informe o registro do hodômetro do
+veículo principal antes de sua saída
+</td>
+<td>N</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/gwn_hodsai.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_HODRET</td>
+<td>Hodom Retorn</td>
+<td colspan="2">Leitura do Hodom no Retur</td>
+<td colspan="4">Informe o registro do hodômetro do
+veículo principal após seu retorno
+</td>
+<td>N</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/gwn_hodret.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_DSREAL</td>
+<td>Dist. Real</td>
+<td colspan="2">Distância Real Percorrida</td>
+<td colspan="4">Distancia Real
+</td>
+<td>N</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_FECHAM</td>
+<td>Apur Periodo</td>
+<td colspan="2">Apuracao no Fechamento</td>
+<td colspan="4">Registra como o Romaneio participa da
+apuração de despesas por fechamento de
+período
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("1234")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=Nao se aplica;2=Pendente;3=Efetuada;4=Sem efeito</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_DTFECH</td>
+<td>Data Fecham</td>
+<td colspan="2">Data do Fechamento</td>
+<td colspan="4">Data em que foi realizada a apuração de
+despesas do período que compreendeu este
+Romaneio
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_NRCIDO</td>
+<td>Cid Origem</td>
+<td colspan="2">Cidade de Origem</td>
+<td colspan="4">Informe o número da cidade de origem
+quando desejar que o sistema calcule o
+frete considerando a cidade informada em
+vez da cidade do endereço do Remetente
+de cada Documento de Carga
+</td>
+<td>C</td>
+<td>7</td>
+<td>0</td>
+<td>9999999                                      </td>
+<td>ALLTRIM( M->GWN_NRCIDO)=="".OR.GFEExistC("GU7",,M->GWN_NRCIDO,"GU7->GU7_SIT=='1'")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gu7gua.html">GU7GUA</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gwn_nrcido.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/053.html">053</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_NMCIDO</td>
+<td>Nm Cid Orig</td>
+<td colspan="2">Nome Cidade Origem</td>
+<td colspan="4">Nome da cidade de origem quando
+informada
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("GU7",1,XFILIAL("GU7")+GWN->GWN_NRCIDO,"GU7_NMCID"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("GU7",1,XFILIAL("GU7")+GWN->GWN_NRCIDO,"GU7_NMCID")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_CEPO</td>
+<td>CEP Origem</td>
+<td colspan="2">CEP de Origem</td>
+<td colspan="4">Informe o CEP de origem quando desejar
+que o sistema calcule o frete
+considerando o CEP informado em vez do
+CEP do endereço do Remetente de cada
+Documento de Carga
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>@R 99.999-999                                </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_NRMOV</td>
+<td>Nr Mov</td>
+<td colspan="2">Nr Movimento</td>
+<td colspan="4">Apresenta o movimento que o romaneio
+está relacionado.
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>.F.</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_MOTREA</td>
+<td>Mot Reab.</td>
+<td colspan="2">Motivo da Reabertura</td>
+<td colspan="4">Informar o motivo da reabertura do
+Romaneio
+</td>
+<td>M</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_DTREAB</td>
+<td>Data Reab</td>
+<td colspan="2">Data da reabertura</td>
+<td colspan="4">Informar a data da reabertura do
+Romaneio.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_HRREAB</td>
+<td>Hora Reab</td>
+<td colspan="2">Hora da Reabertura</td>
+<td colspan="4">Informar a hora da Reabertura do
+Romaneio.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_USUREA</td>
+<td>Usuario Reab</td>
+<td colspan="2">Usuario da reabertura</td>
+<td colspan="4">Informar o usuário que realizou a
+reabertura do romaneio.
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_LACRE</td>
+<td>Nr Lacre</td>
+<td colspan="2">Número do Lacre</td>
+<td colspan="4">Informar o número do Lacre inserido no
+veículo de transporte de carga.
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_TOTVOL</td>
+<td>Tot Volume</td>
+<td colspan="2">Total volume (m3)</td>
+<td colspan="4">Totalizador de volume (m3) do romaneio
+de todos os itens dos documentos de
+carga vinculados.
+</td>
+<td>N</td>
+<td>11</td>
+<td>5</td>
+<td>@E 99,999.99999                              </td>
+<td></td>
+<td>Iif(!INCLUI,GFEA050CPT(GWN->GWN_NRROM)[1],0)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>GFEA050CPT(GWN->GWN_NRROM)[1]</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_TOTPER</td>
+<td>Tot Pes Real</td>
+<td colspan="2">Total peso real</td>
+<td colspan="4">Totalizador do peso real do romaneio de
+todos os itens dos documentos de carga
+vinculados.
+</td>
+<td>N</td>
+<td>13</td>
+<td>5</td>
+<td>@E 9,999,999.99999                           </td>
+<td></td>
+<td>Iif(!INCLUI,GFEA050CPT(GWN->GWN_NRROM)[2],0)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>GFEA050CPT(GWN->GWN_NRROM)[2]</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_TOTPEC</td>
+<td>Tot Peso Cub</td>
+<td colspan="2">Total peso cubado</td>
+<td colspan="4">Totalizador do peso cubado do romaneio
+de todos os itens dos documentos de
+carga vinculados.
+</td>
+<td>N</td>
+<td>13</td>
+<td>5</td>
+<td>@E 9,999,999.99999                           </td>
+<td></td>
+<td>Iif(!INCLUI,GFEA050CPT(GWN->GWN_NRROM)[3],0)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>GFEA050CPT(GWN->GWN_NRROM)[3]</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_TOTALT</td>
+<td>Tot Peso Liq</td>
+<td colspan="2">Total peso líquido</td>
+<td colspan="4">Totalizador do peso líquido do romaneio
+de todos os itens dos documentos de
+carga vinculados.
+</td>
+<td>N</td>
+<td>13</td>
+<td>5</td>
+<td>@E 9,999,999.99999                           </td>
+<td></td>
+<td>Iif(!INCLUI,GFEA050CPT(GWN->GWN_NRROM)[4],0)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>GFEA050CPT(GWN->GWN_NRROM)[4]</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_TQTVOL</td>
+<td>Tot Qt Volum</td>
+<td colspan="2">Total quantidade volume</td>
+<td colspan="4">Totalizador da quantidade de volumes do
+romaneio de todos os documentos de carga
+vinculados.
+</td>
+<td>N</td>
+<td>8</td>
+<td>0</td>
+<td>@E 99,999,999                                </td>
+<td></td>
+<td>Iif(!INCLUI,GFEA050CVT(GWN->GWN_NRROM),0)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>GFEA050CVT(GWN->GWN_NRROM)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_VIAGEM</td>
+<td>Viagem</td>
+<td colspan="2">Número da Viagem</td>
+<td colspan="4">Utilize para vincular romaneios de
+filiais diferentes que compartilham um
+veículo com negociação por valor
+fechado.
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>99999999                                     </td>
+<td>Vazio() .Or. GFEExistC("GWP",,M->GWN_VIAGEM,"GWP->GWP_SIT=='1'.AND.GWP->GWP_CDTRP == '"+M->GWN_CDTRP+"'")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gwpgwn.html">GWPGWN</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>If(ALTERA,GFEA058RVG(),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_CPESO</td>
+<td>Peso compart</td>
+<td colspan="2">Peso carga Compartilhada</td>
+<td colspan="4">Peso das mercadorias de outros
+embarcadores ou romaneios de outras
+filiais que compõe a carga
+compartilhada.
+</td>
+<td>N</td>
+<td>13</td>
+<td>5</td>
+<td>@E 9,999,999.99999                           </td>
+<td>M->CPESO == 0 .Or. POSITIVO()</td>
+<td>0</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>Empty(M->GWN_VIAGEM) .And. If(ALTERA,GFEA058RVG(),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_CVOL</td>
+<td>Volume comp</td>
+<td colspan="2">Volume carga compartilhad</td>
+<td colspan="4">Volume das mercadorias de outros
+embarcadores ou romaneios de outras
+filiais que compõe a carga
+compartilhada.
+</td>
+<td>N</td>
+<td>11</td>
+<td>5</td>
+<td>@E 99,999.99999                              </td>
+<td>M->GWN_CVOL == 0 .Or. POSITIVO()</td>
+<td>0</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>Empty(M->GWN_VIAGEM) .And. If(ALTERA,GFEA058RVG(),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_CVAL</td>
+<td>Vlr Carga Co</td>
+<td colspan="2">Valor Carga Compartilhada</td>
+<td colspan="4">Valor dos itens de outros embarcadores
+ou romaneios de outras filiais que
+compõe a carga compartilhada.
+</td>
+<td>N</td>
+<td>11</td>
+<td>2</td>
+<td>@E 99,999,999.99                             </td>
+<td>M->GWN_CVAL == 0 .Or. POSITIVO()</td>
+<td>0</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>Empty(M->GWN_VIAGEM) .And. If(ALTERA,GFEA058RVG(),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_CQTDE</td>
+<td>Qtde compart</td>
+<td colspan="2">Qtde itens compartilhados</td>
+<td colspan="4">Quantidade de itens de outros
+embarcadores ou romaneios de outras
+filiais que compõe a carga
+compartilhada.
+</td>
+<td>N</td>
+<td>13</td>
+<td>5</td>
+<td>@E 9,999,999.99999                           </td>
+<td>M->GWN_CQTDE == 0 .Or. POSITIVO()</td>
+<td>0</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>Empty(M->GWN_VIAGEM) .And. If(ALTERA,GFEA058RVG(),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_ENVNFE</td>
+<td>Enviado NFe</td>
+<td colspan="2">Enviado XML de NFe</td>
+<td colspan="4">Indica se os arquivos XML correspodentes
+aos documento de cargas foram enviados
+para a transportadora
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=Sim; 2=Nao; 3=Nao se aplica</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_MOTNFE</td>
+<td>Mot Env NF</td>
+<td colspan="2">Motivo Envio XML NFe</td>
+<td colspan="4">Motivo Envio XML NFe
+</td>
+<td>M</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GWN_NRCT</td>
+<td>Num Contrato</td>
+<td colspan="2">Número do Contrato</td>
+<td colspan="4">Infome o numero do contrato da negocição
+de frete,  esta relacionado a requisição
+de frete.
+</td>
+<td>C</td>
+<td>12</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>VAZIO() .OR. GFEExistC("GXT",,M->GWN_NRCT,"GXT->GXT_CDTRP==M->GWN_CDTRP")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gwngxt.html">GWNGXT</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/136.html">136</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>GZY</td>
+<td colspan="2">GWN_NRROM</td>
+<td colspan="2">GZY_NRROM</td>
+</tr>
+<tr>
+<td>GWR</td>
+<td colspan="2">GWN_NRROM</td>
+<td colspan="2">GWR_NRROM</td>
+</tr>
+<tr>
+<td>GWV</td>
+<td colspan="2">GWN_NRROM</td>
+<td colspan="2">GWV_NRROM</td>
+</tr>
+<tr>
+<td>GWS</td>
+<td colspan="2">GWN_NRROM</td>
+<td colspan="2">GWS_NRROM</td>
+</tr>
+<tr>
+<td>GWT</td>
+<td colspan="2">GWN_NRROM</td>
+<td colspan="2">GWT_NRROM</td>
+</tr>
+<tr>
+<td>GW1</td>
+<td colspan="2">GWN_NRROM</td>
+<td colspan="2">GW1_NRROM</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

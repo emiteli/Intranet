@@ -1,0 +1,2138 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: DE5 - EDI - Notas Fiscais</title></head>
+<body>
+<font color="orange"><h2 id="DE5">Tabela: DE5 - EDI - Notas Fiscais</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>EDI - Notas Fiscais</b></td><td colspan="2"><b>DE5_FILIAL+DE5_CGCREM+DE5_DOC+DE5_SERIE+DE5_CODPRO</b></td><td><b>TMSAE55</b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">DE5_FILIAL+DE5_CGCREM+DE5_DOC+DE5_SERIE</td><td>CNPJ Remet. + No Docto + Serie Docto</td><td></td></tr>
+<tr><td>2</td><td colspan="2">DE5_FILIAL+DE5_STATUS+DE5_CGCREM+DE5_DOC+DE5_SERIE</td><td>Status + CNPJ Remet. + No Docto + Serie Docto</td><td></td></tr>
+<tr><td>3</td><td colspan="2">DE5_FILIAL+DE5_FILDPC+DE5_CTRDPC+DE5_STATUS+DE5_DOC+DE5_SERIE</td><td>Filial Desp. + CTRC Desp. + Status + No Docto + Serie Docto</td><td></td></tr>
+<tr><td>4</td><td colspan="2">DE5_FILIAL+DE5_LOTEDI</td><td>Lote EDI</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>DE5_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Filial do Sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_CGCREM</td>
+<td>CNPJ Remet.</td>
+<td colspan="2">CNPJ do Remetente</td>
+<td colspan="4">CNPJ do Cliente Remetente, da rotina
+Cadastro de Clientes.
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>@R 99.999.999/9999-99                        </td>
+<td>Vazio() .Or. TMSAE55VLD()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/de5.html">DE5</a></td>
+<td><a href="/tabelas_protheus/gatilhos/de5_cgcrem.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>TMSAE55Whe()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DE5_NOMREM</td>
+<td>Nome Remet.</td>
+<td colspan="2">Nome do Remetente</td>
+<td colspan="4">Nome Fantasia do Cliente Remetente, este
+campo é preenchido automaticamente após
+selecionarmos um Cliente.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!Inclui,Posicione("SA1",3,xFilial("SA1")+DE5->DE5_CGCREM,"A1_NREDUZ"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_DTAEMB</td>
+<td>DT Embarque</td>
+<td colspan="2">Data do embarque</td>
+<td colspan="4">Data do Embarque da Mercadoria do
+Remetente.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_CGCDES</td>
+<td>CNPJ Dest</td>
+<td colspan="2">CNPJ do Destinatario</td>
+<td colspan="4">CNPJ do Cliente Destinatário, da rotina
+Cadastro de Clientes.
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>@R 99.999.999/9999-99                        </td>
+<td>Vazio() .Or. TMSAE55VLD()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/de5.html">DE5</a></td>
+<td><a href="/tabelas_protheus/gatilhos/de5_cgcdes.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>TMSAE55Whe()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DE5_NOMDES</td>
+<td>Nome Dest.</td>
+<td colspan="2">Nome do Destinatario</td>
+<td colspan="4">Nome Fantasia do Cliente Destinatário,
+este campo é preenchido automaticamente
+após selecionarmos um Cliente.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!Inclui .And. !Empty(DE5->DE5_CGCDES),Posicione("SA1",3,xFilial("SA1")+DE5->DE5_CGCDES,"A1_NREDUZ"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_SQIDES</td>
+<td>Seq.Ins.Dest</td>
+<td colspan="2">Sed.Ins.Destino</td>
+<td colspan="4">Sequencia da Inscrição Estadual do
+Destinatário.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_INSDES</td>
+<td>Insc.Dest</td>
+<td colspan="2">Insc. Destinatário</td>
+<td colspan="4">Inscrição Estadual do Cliente
+Destinatario. Este campo será preenchido
+automaticamente.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_CGCCON</td>
+<td>CNPJ Consig.</td>
+<td colspan="2">CNPJ do Consignatario</td>
+<td colspan="4">CNPJ do Cliente Consignatário, da rotina
+Cadastro de Clientes, responsável pela
+mercadoria.
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>@R 99.999.999/9999-99                        </td>
+<td>Vazio() .Or. TMSAE55VLD()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/de5.html">DE5</a></td>
+<td><a href="/tabelas_protheus/gatilhos/de5_cgccon.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_NOMCON</td>
+<td>Nome Consig.</td>
+<td colspan="2">Nome do Consignatario</td>
+<td colspan="4">Nome Fantasia do Cliente Consignatário,
+este campo é preenchido automaticamente
+após selecionarmos um Cliente.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!Inclui .And. !Empty(DE5->DE5_CGCCON),Posicione("SA1",3,xFilial("SA1")+DE5->DE5_CGCCON,"A1_NREDUZ"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_CGCDPC</td>
+<td>CNPJ Despach</td>
+<td colspan="2">CNPJ do Despachante</td>
+<td colspan="4">CNPJ do Cliente Despachante, da rotina
+Cadastro de Clientes, responsável por
+uma parte do percurso do transporte.
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>@R 99.999.999/9999-99                        </td>
+<td>Vazio() .Or. TMSAE55VLD()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/de5.html">DE5</a></td>
+<td><a href="/tabelas_protheus/gatilhos/de5_cgcdpc.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_NOMDPC</td>
+<td>Nome Despach</td>
+<td colspan="2">Nome do Despachante</td>
+<td colspan="4">Nome Fantasia do Cliente Despachante,
+este campo é preenchido automaticamente
+após selecionarmos um Cliente.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!Inclui .And. !Empty(DE5->DE5_CGCDPC),Posicione("SA1",3,xFilial("SA1")+DE5->DE5_CGCDPC,"A1_NREDUZ"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_CGCDEV</td>
+<td>CNPJ Devedor</td>
+<td colspan="2">CNPJ do Devedor</td>
+<td colspan="4">CNPJ do Cliente Devedor, da rotina
+Cadastro de Clientes, o Devedor do Frete
+é quem pagará o transporte.
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>@R 99.999.999/9999-99                        </td>
+<td>Vazio() .Or. TMSAE55VLD()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/de5.html">DE5</a></td>
+<td><a href="/tabelas_protheus/gatilhos/de5_cgcdev.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>TMSAE55Whe()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_NOMDEV</td>
+<td>Nome Devedor</td>
+<td colspan="2">Nome do Devedor</td>
+<td colspan="4">Nome Fantasia do Cliente Devedor, este
+campo é preenchido automaticamente após
+selecionarmos um Cliente.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!Inclui .And. !Empty(DE5->DE5_CGCDEV),Posicione("SA1",3,xFilial("SA1")+DE5->DE5_CGCDEV,"A1_NREDUZ"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_TIPTRA</td>
+<td>Tipo Transp.</td>
+<td colspan="2">Tipo de Transporte</td>
+<td colspan="4">Tipo de transporte a ser utilizado no
+controle operacional da carga e em
+relatórios estatísticos.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>TMSValField("M->DE5_TIPTRA",.T.,"DE5_DESTPT")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dlc.html">DLC</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>TMSAE55Whe()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_DESTPT</td>
+<td>Desc.Tp.Tran</td>
+<td colspan="2">Desc.Tipo Transporte</td>
+<td colspan="4">Descricao do tipo de transporte.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!Inclui,TMSValField("DE5->DE5_TIPTRA",.F.,"DE5_DESTPT"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_TIPFRE</td>
+<td>Tipo Frete</td>
+<td colspan="2">Tipo do Frete</td>
+<td colspan="4">Tipo de Frete a ser utilizado em
+relatórios estatísticos e na
+determinação do devedor do frete. Em
+regra geral, quando o tipo de frete é
+"CIF" o pagador do frete é o Cliente
+Remetente, quando o Frete é "FOB" o
+Pagador do Frete é o Cliente
+Destinatário.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=CIF;2=FOB</td>
+<td>TMSAE55Whe()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_DOC</td>
+<td>No Docto</td>
+<td colspan="2">Numero do Documento</td>
+<td colspan="4">Número da Nota Fiscal incluída através
+da rotina de Recebimento de EDI.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>TMSAE55VLD()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/019.html">019</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DE5_SERIE</td>
+<td>Serie Docto</td>
+<td colspan="2">Serie do Documento</td>
+<td colspan="4">Série da Nota Fiscal incluída através da
+rotina de Recebimento de EDI.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>TMSAE55VLD()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DE5_EMINFC</td>
+<td>DT Emissao</td>
+<td colspan="2">Dt Emissao Nf Cliente</td>
+<td colspan="4">Data de Emissão da Nota Fiscal.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_CODPRO</td>
+<td>Cod. Produto</td>
+<td colspan="2">Codigo do Produto</td>
+<td colspan="4">Código do Produto da Nota Fiscal, da
+rotina Cadastro de Produtos.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>TMSAE55VLD()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/de6.html">DE6</a></td>
+<td><a href="/tabelas_protheus/gatilhos/de5_codpro.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>TMSAE55Whe()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/030.html">030</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_DESPRO</td>
+<td>Desc.Produto</td>
+<td colspan="2">Descricao do Produto</td>
+<td colspan="4">Descrição do Produto, este campo é
+preenchido automaticamente ao
+selecionarmos o Produto.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!Inclui,Posicione("SB1",1,xFilial("SB1")+DE5->DE5_CODPRO,"B1_DESC"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_CODEMB</td>
+<td>Embalagem</td>
+<td colspan="2">Embalagem</td>
+<td colspan="4">Código da Embalagem da Mercadoria a ser
+utilizado na impressão do documento de
+transporte.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SX5","MG"+M->DE5_CODEMB)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/mg.html">MG</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_QTDVOL</td>
+<td>Qtd. Volumes</td>
+<td colspan="2">Qtd. Volumes</td>
+<td colspan="4">Quantidade de Volumes da Nota Fiscal.
+</td>
+<td>N</td>
+<td>5</td>
+<td>0</td>
+<td>99999                                        </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_VALOR</td>
+<td>Valor</td>
+<td colspan="2">Valor</td>
+<td colspan="4">Valor da Mercadoria da Nota Fiscal.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_PESO</td>
+<td>Peso</td>
+<td colspan="2">Peso</td>
+<td colspan="4">Peso da Mercadoria da Nota Fiscal.
+</td>
+<td>N</td>
+<td>11</td>
+<td>4</td>
+<td>@E 999,999.9999                              </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_PESOM3</td>
+<td>Peso Cubado</td>
+<td colspan="2">Peso Cubado</td>
+<td colspan="4">Peso Cubado da Mercadoria da Nota
+Fiscal, a ser utilizado no cálculo do
+frete. O Peso Cubado é definido na
+existência de cargas leves, porém que
+ocupam um grande espaço físico.
+</td>
+<td>N</td>
+<td>11</td>
+<td>4</td>
+<td>@E 999,999.9999                              </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_VALSEG</td>
+<td>Valor Seguro</td>
+<td colspan="2">Valor do Seguro</td>
+<td colspan="4">Valor de Seguro em caráter informativo
+no sistema.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_FILDPC</td>
+<td>Filial Desp.</td>
+<td colspan="2">Filial do Despachante</td>
+<td colspan="4">Filial do Despachante, caso esta
+mercadoria seja redespachada por uma
+transportadora parceira, aqui será
+informado o código da filial do
+parceiro.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dvl.html">DVL</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_CTRDPC</td>
+<td>CTRC Desp.</td>
+<td colspan="2">CTRC Despachante</td>
+<td colspan="4">Número do Conhecimento da transportadora
+que realizou um dos trechos do
+transporte.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_STATUS</td>
+<td>Status</td>
+<td colspan="2">Status</td>
+<td colspan="4">Indica se uma nota fiscal recebida via
+EDI, já foi utilizada na digitação das
+notas fiscais do cliente. Quando o
+conteúdo for 1=Em Aberto, ainda não foi
+utilizada, quando for 2=Encerrado, a
+nota já foi utilizada.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td>1=Em aberto;2=Encerrado</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_METRO3</td>
+<td>M3</td>
+<td colspan="2">M3</td>
+<td colspan="4">O M3 é o valor da cubagem que necessita
+ser digitado, não é calculado
+automaticamente como o peso cubado,
+baseado em altura X largura X
+comprimento. Não levamos em consideração
+o fator de cubagem.
+</td>
+<td>N</td>
+<td>11</td>
+<td>4</td>
+<td>@E 999,999.9999                              </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_BASEIC</td>
+<td>Base p/ ICMS</td>
+<td colspan="2">Base de Calculo para ICMS</td>
+<td colspan="4">Base de calculo do ICMS da NF do Cliente
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td>MaFisRef("DE5_BASEIC","MT100",M->DE5_BASEIC)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_VALICM</td>
+<td>Vlr ICMS</td>
+<td colspan="2">Valor do ICMS</td>
+<td colspan="4">Valor do ICMS da NF do cliente
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td>MaFisRef("DE5_VALICM","MT100",M->DE5_VALICM)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_BASIST</td>
+<td>Base ST Tran</td>
+<td colspan="2">Base ICMS ST transporte</td>
+<td colspan="4">Base da substituicao tributaria da NF do
+cliente.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td>Positivo() .And. MaFisRef("DE5_BASIST","MT100",M->DE5_BASIST)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_VALIST</td>
+<td>Val. ST Tran</td>
+<td colspan="2">Valor ICMS ST transporte</td>
+<td colspan="4">Valor da substituicao tributaria da NF
+do cliente
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td>Positivo() .And. MaFisRef("DE5_VALIST","MT100",M->DE5_VALIST)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_CFOPNF</td>
+<td>Cod. Fiscal</td>
+<td colspan="2">Codigo Fiscal da Operacao</td>
+<td colspan="4">Código do CFOP da NF do cliente
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio().and.AvalCfo("DE5",M->DE5_CFOPNF)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/13.html">13</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_NFEID</td>
+<td>Chave NF-e</td>
+<td colspan="2">Chave da NFe SEFAZ</td>
+<td colspan="4">Chave da Nota Fiscal Eletronica
+</td>
+<td>C</td>
+<td>44</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_LOTEDI</td>
+<td>Lote EDI</td>
+<td colspan="2">Lote EDI</td>
+<td colspan="4">Aglutinador para composição de frete.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>TMSAE55VLD()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/det.html">DET</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_STAUTO</td>
+<td>Sta EDI Aut</td>
+<td colspan="2">Status EDI Automatico</td>
+<td colspan="4">Informa se o status do EDI automatico,
+sendo: 0=Nao Executado, 1=Executado com
+Sucesso e 2=Executado com Erro.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("012")</td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>0=Nao Executado;1=Exec. com Sucesso;2=Exec. com Erro</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_SERVIC</td>
+<td>Servico</td>
+<td colspan="2">Codigo do Servico</td>
+<td colspan="4">Serviço de negociação utilizado pelo
+cliente.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("DC5")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dc5.html">DC5</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>TMSAE55Whe()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_SERTMS</td>
+<td>Serv.Transp.</td>
+<td colspan="2">Servico de Transporte</td>
+<td colspan="4">Serviço de Transporte
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>TMSValField("M->DE5_SERTMS",.T.,"DE5_DESSVT")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dlc.html">DLC</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>TMSAE55Whe()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_DESSVT</td>
+<td>Desc.Sv.Tran</td>
+<td colspan="2">Desc.Servico Transporte</td>
+<td colspan="4">Descricao do Servico de Transporte.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!Inclui,TMSValField("DE5->DE5_SERTMS",.F.,"DE5_DESSVT"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_SELORI</td>
+<td>Selec.Regiao</td>
+<td colspan="2">Seleciona Regiao Origem</td>
+<td colspan="4">Este campo indica qual região de origem
+será considerada no EDI.
+1=Transportadora.   O sistema utiliza o
+parâmetro MV_CDRORI que contém a região
+da filial atual do sistema como região
+de origem do EDI.
+2=Cliente Remetente. O sistema utiliza a
+região do cliente remetente como região
+de origem para o EDI.
+3=Local Coleta. O sistema utiliza a
+região do solicitante da coleta como
+região de origem para o EDI.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("123")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Transportadora;2=Cliente Remetente;3=Local Coleta</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_OBSAUT</td>
+<td>Obs. EDI Aut</td>
+<td colspan="2">Obs. de Edi Automatico</td>
+<td colspan="4">Observacoes de EDI Automatico.
+</td>
+<td>M</td>
+<td>80</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_EDIAUT</td>
+<td>EDI Automat.</td>
+<td colspan="2">EDI Automatico</td>
+<td colspan="4">Este campo informa se o cliente utiliza
+EDI automático e se calcula o lote de
+documentos. Sendo : 0=Não utiliza,1=Lote
+s/ calculo,2=Lote c/ calculo.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>0=Nao utiliza;1=Lote s/ calculo;2=Lote c/ calculo</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_EDILOT</td>
+<td>Lote EDI Aut</td>
+<td colspan="2">Lote EDI Automatico</td>
+<td colspan="4">Informa se no EDI automático, caso o
+cliente utilize, será criado lotes por:
+1=Por processamento ou 2=Por
+destinatário.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=N�o Utiliza;1=Por processamento;2=Por destinat�rio</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_EDIFRT</td>
+<td>Frt. EDI Aut</td>
+<td colspan="2">Frete EDI Automatico</td>
+<td colspan="4">Informa se o valor do frete será
+1=Assume Frete ou 2=Somente Informativo.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>0=N�o Utiliza;1=Assume Frete;2=Somente Informativo</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_FILORI</td>
+<td>Fil.Origem</td>
+<td colspan="2">Filial de Origem</td>
+<td colspan="4">Filial de Origem.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_LOTNFC</td>
+<td>No.Lote</td>
+<td colspan="2">No.Lote</td>
+<td colspan="4">Número do lote de notas fiscais.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_SEQEND</td>
+<td>Seq.Endereco</td>
+<td colspan="2">Sequencia de Endereco</td>
+<td colspan="4">Sequencia de Endereço, este campo deve
+ser preenchido de acordo com a sequencia
+de endereço do solicitante.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dlt.html">DLT</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/077.html">077</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_OLDSEQ</td>
+<td>Old.Seq.End.</td>
+<td colspan="2">Old.Seq.Endereco</td>
+<td colspan="4">Sequencia de Endereco (Antigo)
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_TIPAGD</td>
+<td>Tipo Agend.</td>
+<td colspan="2">Tipo de Agendamento</td>
+<td colspan="4">O campo Tipo de Agendamento de Entrega é
+utilizado para informar a origem do
+agendamento.
+(responsabilidade).
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>"4"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Prioridade Cliente;1=Prioridade Transportador;2=Cliente;3=Transportador;4=Aguardando Agendamento</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_EMINFE</td>
+<td>Emissao NF-e</td>
+<td colspan="2">Emissao da NF Eletronica</td>
+<td colspan="4">Informar a data em que a Nota Fiscal
+Eletrônica foi emitida pela prefeitura.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_DATAGD</td>
+<td>Data Agend.</td>
+<td colspan="2">Data de Agendamento</td>
+<td colspan="4">Data definida para o Agendamento de
+Entrega.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>TMSAE55Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_CODNEG</td>
+<td>Cod Negociac</td>
+<td colspan="2">Código da Negociação</td>
+<td colspan="4">Informe o código da negociação do
+contrato do cliente.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>(Vazio() .Or. Existcpo("DDB")) .And. TMSAE55Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ddb.html">DDB</a></td>
+<td><a href="/tabelas_protheus/gatilhos/de5_codneg.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>TMSAE55Whe()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/119.html">119</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_CODNFE</td>
+<td>Cd.Ver.NF-e</td>
+<td colspan="2">Codigo Verificacao NF-e</td>
+<td colspan="4">Informar o código de verificação da Nota
+Fiscal Eletrônica.
+O código de verificação indica a
+autenticidade da Nota Fiscal eletrônica
+emitida pela prefeitura.
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_DESNEG</td>
+<td>Desc Neg Ctr</td>
+<td colspan="2">Descr Negociação Contrato</td>
+<td colspan="4">Exibe a descrição da negociação do
+contrato do cliente.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui,"",Posicione("DDB",1,xFilial("DDB") + DE5->DE5_CODNEG,"DDB_DESCRI"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_PRDAGD</td>
+<td>Periodo</td>
+<td colspan="2">Periodo para Entrega</td>
+<td colspan="4">Definir o período para efetivar a
+entrega.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>TMSAE55Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=A partir de;2=Ate;3=De / Ate;4=Na hora</td>
+<td>TMSAE55Whe("M->DE5_PRDAGD")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_NFELET</td>
+<td>NF-e</td>
+<td colspan="2">Nota Fiscal Eletronica</td>
+<td colspan="4">Informar o número da Nota Fiscal
+Eletrônica emitida pela Prefeitura,
+referente a esse RPS (Recibo Provisório
+de Serviços)
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_INIAGD</td>
+<td>Hr.Ini.Agend</td>
+<td colspan="2">Hora Inicial Agd. de Entr</td>
+<td colspan="4">Hora definida para o Agendamento de
+Entrega.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@R 99:99                                     </td>
+<td>ATVLDHORA(M->DE5_INIAGD) .And. TMSAE55Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>TMSAE55Whe("M->DE5_INIAGD")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_FIMAGD</td>
+<td>Hr.Fim Agend</td>
+<td colspan="2">Hora Final Agend. de Entr</td>
+<td colspan="4">Hora final definida para o Agendamento
+de Entrega.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@R 99:99                                     </td>
+<td>ATVLDHORA(M->DE5_FIMAGD) .And. TMSAE55Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>TMSAE55Whe("M->DE5_FIMAGD")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_MOTAGD</td>
+<td>Motivo Agend</td>
+<td colspan="2">Motivo do Agendamento</td>
+<td colspan="4">Motivo para o Agendamento da Entrega.
+Informar tanto no primeiro Agendamento,
+quanto nas manutenções do Agendamento ou
+cancelamento.
+</td>
+<td>M</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_INSCRE</td>
+<td>Ins.Rem</td>
+<td colspan="2">Insc.Estadual Remetente</td>
+<td colspan="4">Inscrição estadual do Remetente
+</td>
+<td>C</td>
+<td>19</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_INSDEV</td>
+<td>Insc.Dev</td>
+<td colspan="2">Insc.Estadual Devedor</td>
+<td colspan="4">Inscrição Estadual do Devedor
+</td>
+<td>C</td>
+<td>18</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_PESLIQ</td>
+<td>Peso Líquido</td>
+<td colspan="2">Peso Líquido</td>
+<td colspan="4">Peso Líquido da Mercadoria da Nota
+Fiscal.
+</td>
+<td>N</td>
+<td>11</td>
+<td>4</td>
+<td>@E 999,999.9999                              </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_CGCEXP</td>
+<td>Cnpj Expedid</td>
+<td colspan="2">Cnpj do Expedidor</td>
+<td colspan="4">Informe o CNPJ do cliente expedidor da
+carga
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>@R 99.999.999/9999-99                        </td>
+<td>Vazio() .Or. TMSAE55VLD()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/de5.html">DE5</a></td>
+<td><a href="/tabelas_protheus/gatilhos/de5_cgcexp.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>TMSAE55Whe()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_NOMEXP</td>
+<td>Nome Expedid</td>
+<td colspan="2">Nome Expedidor</td>
+<td colspan="4">Esse campo é preenchido automaticamente
+ao informar o CNPJ do Expedidor da
+carga.
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!Inclui,Posicione("SA1",3,xFilial("SA1")+DE5->DE5_CGCEXP,"A1_NREDUZ"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_CGCREC</td>
+<td>CNPJ Receb.</td>
+<td colspan="2">CNPJ do Recebedor</td>
+<td colspan="4">Informe o CNPJ do Recebedor da Carga
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>@R 99.999.999/9999-99                        </td>
+<td>Vazio() .Or. TMSAE55Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/de5.html">DE5</a></td>
+<td><a href="/tabelas_protheus/gatilhos/de5_cgcrec.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>TMSAE55WHE()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DE5_NOMREC</td>
+<td>Nome Receb.</td>
+<td colspan="2">Nome do Recebedor</td>
+<td colspan="4">este campo é preenchido automaticamente
+ao informar o campo CNPJ do Recebedor.
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(!Inclui,Posicione("SA1",3,xFilial("SA1") + DE5->DE5_CGCREC,"A1_NREDUZ"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

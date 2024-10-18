@@ -1,0 +1,1090 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: QI3 - Cadastro de Plano de Ações</title></head>
+<body>
+<font color="orange"><h2 id="QI3">Tabela: QI3 - Cadastro de Plano de Ações</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Cadastro de Plano de Ações</b></td><td colspan="2"><b>QI3_FILIAL+QI3_CODIGO+QI3_REV</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">QI3_FILIAL+QI3_ANO+QI3_CODIGO+QI3_REV</td><td>Ano Acao + Codigo Acao + Revisao</td><td></td></tr>
+<tr><td>2</td><td colspan="2">QI3_FILIAL+QI3_CODIGO+QI3_REV</td><td>Codigo Acao + Revisao</td><td></td></tr>
+<tr><td>3</td><td colspan="2">QI3_FILMAT+QI3_MAT</td><td>Fil Usr.Resp + Mat Usr Resp</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>QI3_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Filial do Usuário
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QI3_CODIGO</td>
+<td>Codigo Acao</td>
+<td colspan="2">Codigo da Acao</td>
+<td colspan="4">Neste campo devera ser digitado:
+O Código da Ação Corretiva.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@R 99999999999/9999                          </td>
+<td></td>
+<td>IF(INCLUI,GETQNCNUM("QI3","QI3_CODIGO",,1,StrZero(Year(dDataBase),4),@aQNQI3),)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>.F.</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>QI3_REV</td>
+<td>Revisao</td>
+<td colspan="2">Codigo Revisao Acao</td>
+<td colspan="4">Neste campo devera ser digitado:
+O Código da Revisao da Ação Corretiva.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>FQNCCHKREV("QI3",RIGHT(M->QI3_CODIGO,4)+M->QI3_CODIGO+M->QI3_REV)</td>
+<td>"00"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>.F.</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>QI3_ANO</td>
+<td>Ano Acao</td>
+<td colspan="2">Ano da Acao Corretiva</td>
+<td colspan="4">Neste campo devera ser digitado:
+O Ano da Ação Corretiva.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>9999                                         </td>
+<td>Naovazio()</td>
+<td>SubStr(M->QI3_CODIGO,7,4)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>.F.</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>QI3_ABERTU</td>
+<td>Dt.Abertura</td>
+<td colspan="2">Data da Abertura da Acao</td>
+<td colspan="4">Neste campo devera ser digitado:
+A Data de Abertura da Ação Corretiva.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>Naovazio()</td>
+<td>dDatabase</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>QI3_ENCPRE</td>
+<td>Dt.Encer.Pre</td>
+<td colspan="2">Data de Encerramento Prev</td>
+<td colspan="4">Neste campo devera ser digitado:
+A Data do Encerramento Prevista da
+Ação Corretiva.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>Naovazio() .And. M->QI3_ENCPRE >= M->QI3_ABERTU</td>
+<td>dDataBase+30</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QI3_ENCREA</td>
+<td>Dt.Encer.Rea</td>
+<td colspan="2">Data de Encerramento Real</td>
+<td colspan="4">Neste campo devera ser digitado:
+A Data do Encerramento Real da Ação
+Corretiva.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>Vazio() .Or. M->QI3_ENCREA >= M->QI3_ABERTU</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>!M->QI3_STATUS$"12"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QI3_FILMAT</td>
+<td>Fil Usr.Resp</td>
+<td colspan="2">Filial Usuar Responsavel</td>
+<td colspan="4">Neste campo devera ser digitado:
+A Filial do Usuário Responsavel pela
+abertura da Ação Corretiva.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td>QA_CHKFIL(M->QI3_FILMAT,@cFilMat)</td>
+<td>cMatFil</td>
+<td><a href="/tabelas_protheus/f3/sm0.html">SM0</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QI3_MAT</td>
+<td>Mat Usr Resp</td>
+<td colspan="2">Cod. Usuario Responsavel</td>
+<td colspan="4">Neste campo devera ser digitado:
+O Código/Matricula do Usuário
+responsavel pela abertura da Ação
+Corretiva
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>QA_CHKMAT(cFilMat,M->QI3_MAT)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/qde.html">QDE</a></td>
+<td><a href="/tabelas_protheus/gatilhos/qi3_mat.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QI3_NUSR</td>
+<td>Nome Usuario</td>
+<td colspan="2">Nome do Usuario Responsav</td>
+<td colspan="4">Neste campo devera ser digitado:
+O Nome do usuário responsavel
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(INCLUI,QA_NUSR(cMatFil,cMatCod,.T.),QA_NUSR(QI3->QI3_FILMAT,QI3->QI3_MAT))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QI3_MEMO1</td>
+<td>Descr.Detalh</td>
+<td colspan="2">Descricao Detalhada</td>
+<td colspan="4">Neste campo devera ser digitado:
+A Descrição Detalhada das Ações
+Corretivas.
+</td>
+<td>M</td>
+<td>80</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IF(INCLUI,"",MSMM(QI3->QI3_PROBLE,80))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>QI3_PROBLE</td>
+<td>Descr.Detalh</td>
+<td colspan="2">Descricao Detalhada</td>
+<td colspan="4">Neste campo devera ser digitado:
+A Descrição Detalhada
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QI3_MEMO2</td>
+<td>Local Ocorr.</td>
+<td colspan="2">Local onde ocorreu</td>
+<td colspan="4">Neste campo devera ser digitado:
+A Descrição do Local onde ocorrerao as
+Ações Corretivas.
+</td>
+<td>M</td>
+<td>80</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IF(INCLUI,"",MSMM(QI3->QI3_LOCAL,80))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QI3_LOCAL</td>
+<td>Local Ocorr.</td>
+<td colspan="2">Local onde ocorreu</td>
+<td colspan="4">Neste campo devera ser digitado:
+Local onde ocorreu a Não-Conformidade
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QI3_MEMO3</td>
+<td>Res.Esperado</td>
+<td colspan="2">Resultado Esperado</td>
+<td colspan="4">Neste campo devera ser digitado:
+A Descrição Detalhada dos Resultados
+Esperados das Ações Corretivas.
+</td>
+<td>M</td>
+<td>80</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IF(INCLUI,"",MSMM(QI3->QI3_RESESP,80))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QI3_RESESP</td>
+<td>Res.Esperado</td>
+<td colspan="2">Resultado Esperado</td>
+<td colspan="4">Resultado Esperado
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QI3_MEMO4</td>
+<td>Res.Atingido</td>
+<td colspan="2">Resultado Atingido</td>
+<td colspan="4">Neste campo devera ser digitado:
+A Descrição Detalhada dos Resultados
+Atingidos das Ações Corretivas.
+</td>
+<td>M</td>
+<td>80</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IF(INCLUI,"",MSMM(QI3->QI3_RESATI,80))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QI3_RESATI</td>
+<td>Res.Atingido</td>
+<td colspan="2">Resultado Atingido</td>
+<td colspan="4">Resultado Atingido
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QI3_MEMO5</td>
+<td>Observacoes</td>
+<td colspan="2">Observacoes</td>
+<td colspan="4">Neste campo devera ser digitado:
+A Descrição Detalhada de Algumas
+possiveis Observações referentes as
+Ações Corretivas.
+</td>
+<td>M</td>
+<td>80</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IF(INCLUI,"",MSMM(QI3->QI3_OBSERV,80))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QI3_OBSERV</td>
+<td>Observacoes</td>
+<td colspan="2">Observacoes</td>
+<td colspan="4">Neste campo devera ser digitado:
+Observações
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QI3_MEMO6</td>
+<td>Metodo Util</td>
+<td colspan="2">Metodo utilizado</td>
+<td colspan="4">Neste campo devera ser digitado:
+A Descrição Detalhada da Metodologia
+Utilizada nas Ações Corretivas.
+</td>
+<td>M</td>
+<td>80</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IF(INCLUI,"",MSMM(QI3->QI3_METODO,80))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QI3_METODO</td>
+<td>Metodo Util</td>
+<td colspan="2">Metodo utilizado</td>
+<td colspan="4">Neste campo devera ser digitado:
+O Metodo utilizado
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QI3_STATUS</td>
+<td>Status Acao</td>
+<td colspan="2">Status Final da Acao</td>
+<td colspan="4">Neste campo devera ser digitado:
+O Código da Situação da Ação Corretiva
+1-Registrada 2-Em Analise 3-Procede
+4-Não Procede 5- Cancelada
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>9                                            </td>
+<td>Pertence("12345")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Registrada;2=Em Analise;3=Procede;4=N.Procede;5=Cancelada</td>
+<td>QNC030Stat()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>QI3_TIPO</td>
+<td>Tipo Acao</td>
+<td colspan="2">Tipo de Acao registrada</td>
+<td colspan="4">Neste campo devera ser digitado:
+O Tipo da Ação Corretiva
+1-Corretiva
+2-Preventiva
+3-Melhoria
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>9                                            </td>
+<td>Pertence("123")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Corretiva;2=Preventiva;3=Melhoria</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QI3_MODELO</td>
+<td>Modelo/Grupo</td>
+<td colspan="2">Codigo do Modelo/Grupo</td>
+<td colspan="4">Neste campo devera ser digitado o
+Códigodo Modelo de Passos/Etapas
+pre-definidosno Cadastro de
+Modelos/Passos das Ações Corretivas
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td>EXISTCPO("QIB",M->QI3_MODELO)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/qih.html">QIH</a></td>
+<td><a href="/tabelas_protheus/gatilhos/qi3_modelo.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QI3_DESCMD</td>
+<td>Descr Modelo</td>
+<td colspan="2">Nome do Usuario Responsav</td>
+<td colspan="4">Neste campo devera ser digitado:
+O Nome do usuário responsavel
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>FQNCDQIB(IF(INCLUI,M->QI3_MODELO,QI3->QI3_MODELO))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>FQNCDQIB(QI3->QI3_MODELO)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QI3_OBSOL</td>
+<td>Obsoleto</td>
+<td colspan="2">Obsoleto</td>
+<td colspan="4">Este campo identifica se o Plano de Ação
+esta obsoleto, isto e, se já existe uma
+revisao.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QI3_MEMO7</td>
+<td>Motivo Rev.</td>
+<td colspan="2">Motivo da Revisao</td>
+<td colspan="4">Neste campo devera ser digitado:
+A Descrição Detalhada do Motivo da
+geração da Revisao deste Plano de
+Ação.
+</td>
+<td>M</td>
+<td>80</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IF(INCLUI,"",MSMM(QI3->QI3_MOTREV,80))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QI3_MOTREV</td>
+<td>Motivo Rev.</td>
+<td colspan="2">Chave Motivo da Revisao</td>
+<td colspan="4">Neste campo devera ser digitado:
+A Descrição Detalhada do Motivo da
+geração da Revisao deste Plano de
+Ação.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QI3_SIGILO</td>
+<td>Sigilo ?</td>
+<td colspan="2">Sigilo ?</td>
+<td colspan="4">Indique se o Plano de Acao sera
+sigiloso.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence('12')</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>QI3_CODCLI</td>
+<td>Cod. Cliente</td>
+<td colspan="2">Código do Cliente</td>
+<td colspan="4">Será apresentado o código do cliente
+originado da Ficha de Não Conformidade.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sa1.html">SA1</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QI3_LOJCLI</td>
+<td>Loja Cliente</td>
+<td colspan="2">Loja do Cliente</td>
+<td colspan="4">Será apresentado a loja do cliente
+originado da Ficha de Não Conformidade.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QI3_NOMCLI</td>
+<td>Nome Cliente</td>
+<td colspan="2">Nome do Cliente</td>
+<td colspan="4">Será apresentado o nome do cliente
+originado da Ficha de Não Conformidade.
+</td>
+<td>C</td>
+<td>33</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,FQNCDESCLI(QI3->QI3_CODCLI,QI3->QI3_LOJCLI,'1'),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>QI4</td>
+<td colspan="2">QI3_CODIGO+QI3_REV</td>
+<td colspan="2">QI4_CODIGO+QI4_REV</td>
+</tr>
+<tr>
+<td>QI8</td>
+<td colspan="2">QI3_CODIGO+QI3_REV</td>
+<td colspan="2">QI8_CODIGO+QI8_REV</td>
+</tr>
+<tr>
+<td>QIE</td>
+<td colspan="2">QI3_CODIGO+QI3_REV</td>
+<td colspan="2">QIE_CODIGO+QIE_REV</td>
+</tr>
+<tr>
+<td>QI5</td>
+<td colspan="2">QI3_CODIGO+QI3_REV</td>
+<td colspan="2">QI5_CODIGO+QI5_REV</td>
+</tr>
+<tr>
+<td>ICI</td>
+<td colspan="2">QI3_CODIGO+QI3_REV</td>
+<td colspan="2">ICI_CODACA+ICI_REVACA</td>
+</tr>
+<tr>
+<td>QI6</td>
+<td colspan="2">QI3_CODIGO+QI3_REV</td>
+<td colspan="2">QI6_CODIGO+QI6_REV</td>
+</tr>
+<tr>
+<td>QI7</td>
+<td colspan="2">QI3_CODIGO+QI3_REV</td>
+<td colspan="2">QI7_CODIGO+QI7_REV</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

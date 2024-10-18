@@ -1,0 +1,631 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: GA8 - Itens de Procedimentos</title></head>
+<body>
+<font color="orange"><h2 id="GA8">Tabela: GA8 - Itens de Procedimentos</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Itens de Procedimentos</b></td><td colspan="2"><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">GA8_FILIAL+GA8_CODPRO+GA8_TABPRO+DTOS(GA8_DATVIG)</td><td>Procedimento + Tab Procedim + Vigencia</td><td></td></tr>
+<tr><td>2</td><td colspan="2">GA8_FILIAL+GA8_TABPRO+GA8_CODPRT+DTOS(GA8_DATVIG)</td><td>Tab Procedim + Proced Tab + Vigencia</td><td></td></tr>
+<tr><td>3</td><td colspan="2">GA8_FILIAL+GA8_TABPRO+GA8_CODPRO+DTOS(GA8_DATVIG)</td><td>Tab Procedim + Procedimento + Vigencia</td><td></td></tr>
+<tr><td>4</td><td colspan="2">GA8_FILIAL+GA8_TABPRO+GA8_CODPRO+GA8_CODPRT+DTOS(GA8_DATVIG)</td><td>Tab Procedim + Procedimento + Proced Tab + Vigencia</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>GA8_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GA8_CODPRO</td>
+<td>Procedimento</td>
+<td colspan="2">Codigo do Procedimento</td>
+<td colspan="4">Informar o codigo proprio utilizado,
+este substituira o codigo das Tabelas,
+Ex: AMB.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>HS_SeekRet("GA7","M->GA8_CODPRO",1,.f.,"GA8_DESPRO","GA7_DESC")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ga7.html">GA7</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>Empty(M->GA8_CODPRO) .or. oGA8:oBrowse:nAt > nLGA8</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GA8_DESPRO</td>
+<td>Descricao</td>
+<td colspan="2">Descricao do Procedimento</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>HS_DescA15("GA8")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("GA7",1,XFILIAL("GA7")+GA8->GA8_CODPRO,"GA7_DESC")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GA8_TABPRO</td>
+<td>Tab Procedim</td>
+<td colspan="2">Tabela de Procedimentos</td>
+<td colspan="4">Informe   a   tabela   de   preços   ao
+qual   o procedimento está relacionado.
+Tecla <F3> disponível para consulta ao
+Cadastro de Tabela de Procedimento.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>HS_SeekRet("GDB","M->GA8_TABPRO",1,.f.,"GA8_DESTPR","GDB_DESCRI")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gdb.html">GDB</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GA8_DESTPR</td>
+<td>Nome Tabela</td>
+<td colspan="2">Nome Tabela Procedimento</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!Inclui,Posicione("GDB",1,xFilial("GDB")+GA8->GA8_TABPRO,"GDB_DESCRI"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("GDB",1,xFilial("GDB")+GA8->GA8_TABPRO,"GDB_DESCRI")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GA8_CODPRT</td>
+<td>Proced Tab</td>
+<td colspan="2">Cod Procedimento Tabela</td>
+<td colspan="4">Código próprio do procedimento.  Ele
+pode ser definido através de
+função(Cadastro de Tabela de Proced.),
+que  valida  a  quantidade  de
+caracteres  ou  sem  esta  validação,
+com a quantidade desejada de caracteres.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GA8_DESPRT</td>
+<td>Desc.Pr.Tab.</td>
+<td colspan="2">Descricao do Produto</td>
+<td colspan="4">Informe a descrição para identificação
+do procedimento de acordo com esta
+tabela.
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GA8_DATVIG</td>
+<td>Vigencia</td>
+<td colspan="2">Vigencia dos itens</td>
+<td colspan="4">Informe a data de vigência ao qual
+passam a ser válidos   os   valores
+informados  para  o procedimento em
+questão.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>@D                                           </td>
+<td></td>
+<td>DDATABASE</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>Empty(M->GA8_DATVIG) .or. oGA8:oBrowse:nAt > nLGA8</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GA8_VLRPRO</td>
+<td>Vlr R$/Qt CH</td>
+<td colspan="2">Valor R$ / Quantidade CH</td>
+<td colspan="4">Informe o valor em Real (R$) ou a
+quantidade de Coeficiente  de
+Honorários.
+Define-se a forma de cobrança dos
+valores é determinada  no Cadastro  de
+Tabelas  de Procedimentos,    campo
+"Usa Índice".
+</td>
+<td>N</td>
+<td>10</td>
+<td>2</td>
+<td>@E 99,999.99                                 </td>
+<td>M->GA8_VLRPRO > 0</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GA8_VLRCOS</td>
+<td>R$/CH C Oper</td>
+<td colspan="2">Valor R$ / CH C Operacio.</td>
+<td colspan="4">Informe o valor em Real (R$) ou a
+quantidade de Coeficiente  de
+Honorários  CH  para  Custo Operacional.
+Define-se a forma de cobrança dos
+valores é determinada  no Cadastro  de
+Tabelas  de Procedimentos,    campo
+"Usa Índice".
+</td>
+<td>N</td>
+<td>10</td>
+<td>3</td>
+<td>@E 9,999,999.999                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GA8_METFIL</td>
+<td>M2.Filme</td>
+<td colspan="2">Metro Quadrado de Filme</td>
+<td colspan="4">Informe a quantidade em m2 de filme
+utilizado nesse procedimento.
+</td>
+<td>N</td>
+<td>6</td>
+<td>4</td>
+<td>@E 9.9999                                    </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GA8_CODPAN</td>
+<td>Porte Anest.</td>
+<td colspan="2">Codigo Porte Anestesico</td>
+<td colspan="4">Informe o porte anestésico do
+procedimento nesta tabela de preço.
+Tecla <F3> disponível para consulta ao
+Cadastro de Porte Anestésico.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EMPTY(M->GA8_CODPAN) .OR. EXISTCPO("SX5","PA"+M->GA8_CODPAN)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/pa.html">PA</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GA8_QTDAUX</td>
+<td>Qtd Auxiliar</td>
+<td colspan="2">Quantidade de auxiliares</td>
+<td colspan="4">Informe a quantidade de auxiliares
+médicos para a realização deste
+procedimento.
+</td>
+<td>N</td>
+<td>1</td>
+<td>0</td>
+<td>@E 9                                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GA8_CLAPRO</td>
+<td>Classifica</td>
+<td colspan="2">Classificação</td>
+<td colspan="4">Este campo refere-se a classificação da
+tabela CBHPM, A1, A2, etc.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GA8_LOGARQ</td>
+<td>Log do Arq</td>
+<td colspan="2">Log do Arq</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>HS_LOGARQ()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GA8_VLSRVH</td>
+<td>Vlr Srv Hosp</td>
+<td colspan="2">Vlr Srv Hosp</td>
+<td colspan="4">Valor de Honorario
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GA8_VLSRVP</td>
+<td>Vlr Srv Prof</td>
+<td colspan="2">Vlr Srv Prof</td>
+<td colspan="4">Valor de Servico Profissional
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GA8_VLSRVA</td>
+<td>Vlr SA</td>
+<td colspan="2">Vlr SA</td>
+<td colspan="4">Valor SA
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GA8_VLSADT</td>
+<td>Valor SADT</td>
+<td colspan="2">Valor SADT</td>
+<td colspan="4">Valor de SADT
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

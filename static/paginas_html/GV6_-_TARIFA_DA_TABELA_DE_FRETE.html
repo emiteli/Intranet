@@ -1,0 +1,663 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: GV6 - TARIFA DA TABELA DE FRETE</title></head>
+<body>
+<font color="orange"><h2 id="GV6">Tabela: GV6 - TARIFA DA TABELA DE FRETE</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>TARIFA DA TABELA DE FRETE</b></td><td colspan="2"><b>GV6_FILIAL+GV6_CDEMIT+GV6_NRTAB+GV6_NRNEG+GV6_CDFXTV+GV6_NRROTA</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">GV6_FILIAL+GV6_CDEMIT+GV6_NRTAB+GV6_NRNEG+GV6_CDFXTV+GV6_NRROTA</td><td>Emitente + Tabela + Negociacao + Seq Faixa + Rota</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>GV6_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GV6_CDEMIT</td>
+<td>Emitente</td>
+<td colspan="2">Codigo do emitente da tab</td>
+<td colspan="4">Código do emitente, transportador ou
+autônomo, ao qual está relacionado a
+tabela de frete.
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("GU3",M->GV6_CDEMIT)</td>
+<td>GV9->GV9_CDEMIT</td>
+<td><a href="/tabelas_protheus/f3/gu3gva.html">GU3GVA</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>.F.</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/052.html">052</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GV6_NMEMIT</td>
+<td>Nome</td>
+<td colspan="2">Nome do Emitente</td>
+<td colspan="4">Nome do Emitente da Tabela de Frete
+</td>
+<td>C</td>
+<td>80</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>POSICIONE("GU3",1,XFILIAL("GU3")+GV9->GV9_CDEMIT,"GU3_NMEMIT")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("GU3",1,XFILIAL("GU3")+GV6->GV6_CDEMIT,"GU3_NMEMIT")</td>
+<td><a href="/tabelas_protheus/grupocampo/059.html">059</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GV6_NRTAB</td>
+<td>Tabela</td>
+<td colspan="2">Numero da tabela de frete</td>
+<td colspan="4">Número que identifica a tabela de frete.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td></td>
+<td>GV9->GV9_NRTAB</td>
+<td><a href="/tabelas_protheus/f3/gva2.html">GVA2</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>.F.</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GV6_DSTAB</td>
+<td>Descricao</td>
+<td colspan="2">Descricao da Tabela</td>
+<td colspan="4">Descricao da Tabela de Frete
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>POSICIONE("GVA",1,XFILIAL("GVA")+GV9->GV9_CDEMIT+GV9->GV9_NRTAB,"GVA_DSTAB")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("GVA",1,XFILIAL("GVA")+GV6->GV6_CDEMIT+GV6->GV6_NRTAB,"GVA_DSTAB")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GV6_NRNEG</td>
+<td>Negociacao</td>
+<td colspan="2">Numero da negociacao</td>
+<td colspan="4">Identifica a negociação dentro da tabela
+de frete.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td></td>
+<td>GV9->GV9_NRNEG</td>
+<td><a href="/tabelas_protheus/f3/gv9.html">GV9</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>.F.</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GV6_CDFXTV</td>
+<td>Seq Faixa</td>
+<td colspan="2">Sequencia Faixa</td>
+<td colspan="4">Sequencia que identifica a faixa ou tipo
+de veículo.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>9999                                         </td>
+<td>ExistCpo("GV7",M->GV6_CDEMIT+M->GV6_NRTAB+M->GV6_NRNEG+M->GV6_CDFXTV) .AND. GFEA61FVL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gv7esp.html">GV7ESP</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gv6_cdfxtv.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GV6_INFFXA</td>
+<td>Inf Faixa</td>
+<td colspan="2">Informações da Faixa</td>
+<td colspan="4">Apresenta as informações da Faixa.
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,GFEASEQFX(),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>GFEASEQFX(GV6->GV6_CDEMIT,GV6->GV6_NRTAB,GV6->GV6_NRNEG,GV6->GV6_CDFXTV)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GV6_NRROTA</td>
+<td>Rota</td>
+<td colspan="2">Numero da Rota</td>
+<td colspan="4">Número que identifica a rota na
+negociação da tabela de frete.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>9999                                         </td>
+<td>ExistCpo("GV8",M->GV6_CDEMIT+M->GV6_NRTAB+M->GV6_NRNEG+M->GV6_NRROTA) .AND. GFEA61FVL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gv8rot.html">GV8ROT</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gv6_nrrota.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GV6_INFROT</td>
+<td>Inf Rota</td>
+<td colspan="2">Informações Rota</td>
+<td colspan="4">Apresenta as informações da rota da
+tabela de frete.
+</td>
+<td>C</td>
+<td>200</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,GFEAINFROT(),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>GFEAINFROT(GV6->GV6_CDEMIT, GV6->GV6_NRTAB, GV6->GV6_NRNEG,GV6->GV6_NRROTA)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GV6_QTMIN</td>
+<td>Qtde. Minima</td>
+<td colspan="2">Quantidade Minima</td>
+<td colspan="4">Quantidade mínima para cálculo do valor
+do frete. Esta quantidade está
+relacionada a unidade de medida para
+cálculo.
+</td>
+<td>N</td>
+<td>15</td>
+<td>5</td>
+<td>@E 999,999,999.99999                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GV6_FRMIN</td>
+<td>Frete Minimo</td>
+<td colspan="2">Valor de Frete Minimo</td>
+<td colspan="4">Valor de frete mínimo a ser cobrado
+nesta rota e faixa.
+</td>
+<td>N</td>
+<td>15</td>
+<td>5</td>
+<td>@E 999,999,999.99999                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GV6_COMFRG</td>
+<td>Comp. Fr.Gar</td>
+<td colspan="2">Componente Frete Garantia</td>
+<td colspan="4">Componente que será considerado para o
+cálculo do frete garantia.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .OR. ExistCpo("GUY",M->GV6_CDEMIT+M->GV6_NRTAB+M->GV6_NRNEG+M->GV6_COMFRG)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/guya.html">GUYA</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GV6_CONSPZ</td>
+<td>Cons. Prazo</td>
+<td colspan="2">Considera Prazo Entrega?</td>
+<td colspan="4">Indica se o prazo de entrega informado
+na tabela de frete será considerado.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("012")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Tabela de Prazos;1=Tarifa;2=Nao Calcula</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GV6_TPPRAZ</td>
+<td>Tipo Prazo</td>
+<td colspan="2">Tipo de Prazo (Hr ou Dia)</td>
+<td colspan="4">Indica se o prazo será informado em
+horas ou em dias.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Dias;2=Horas</td>
+<td>M->GV6_CONSPZ=="1"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GV6_QTPRAZ</td>
+<td>Prazo</td>
+<td colspan="2">Prazo</td>
+<td colspan="4">Quantidade de dias ou de horas
+necessárias para entrega da
+</td>
+<td>N</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>M->GV6_CONSPZ=="1"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GV6_CONTPZ</td>
+<td>Cont. Prazo</td>
+<td colspan="2">Contagem do Prazo</td>
+<td colspan="4">Quando prazo for em dias, a contagem
+será pelos dias úteis ou pelos dias
+corridos?
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Dias Corridos;2=Dias Uteis</td>
+<td>M->GV6_TPPRAZ="1".AND.M->GV6_CONSPZ=="1"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GV6_DTATU</td>
+<td>Data Atual.</td>
+<td colspan="2">Data de Atualizacao</td>
+<td colspan="4">Data em que o valor de frete foi
+alterado pela última vez.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>DDATABASE</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GV6_HRATU</td>
+<td>Hora Atual.</td>
+<td colspan="2">Hora de Atualizacao</td>
+<td colspan="4">Hora em que o valor de frete foi
+alterado pela última vez.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td></td>
+<td>TIME()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GV6_USUATU</td>
+<td>Usr. Atualiz</td>
+<td colspan="2">Usuario Atualizacao</td>
+<td colspan="4">Nome do usuário que efetuou a
+atualização do valor da tabela de frete.
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>cUserName</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>GUC</td>
+<td colspan="2">GV6_CDEMIT+GV6_NRTAB+GV6_NRNEG+GV6_CDFXTV+GV6_NRROTA</td>
+<td colspan="2">GUC_CDEMIT+GUC_NRTAB+GUC_NRNEG+GUC_CDFXTV+GUC_NRROTA</td>
+</tr>
+<tr>
+<td>GV1</td>
+<td colspan="2">GV6_CDEMIT+GV6_NRTAB+GV6_NRNEG+GV6_CDFXTV+GV6_NRROTA</td>
+<td colspan="2">GV1_CDEMIT+GV1_NRTAB+GV1_NRNEG+GV1_CDFXTV+GV1_NRROTA</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

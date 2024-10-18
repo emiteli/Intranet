@@ -1,0 +1,418 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: T6V - RESUMO NAT. OPERAÇÃO ICMS ST</title></head>
+<body>
+<font color="orange"><h2 id="T6V">Tabela: T6V - RESUMO NAT. OPERAÇÃO ICMS ST</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>RESUMO NAT. OPERAÇÃO ICMS ST</b></td><td colspan="2"><b>T6V_FILIAL+T6V_ID+T6V_ESTADO+T6V_NATOPE+T6V_TPOPER</b></td><td><b>TAFA188</b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">T6V_FILIAL+T6V_ID</td><td>ID</td><td></td></tr>
+<tr><td>2</td><td colspan="2">T6V_FILIAL+T6V_ESTADO+T6V_NATOPE+T6V_TPOPER</td><td>Id.Estado + Id.Nat.Oper. + Tp. Operação</td><td></td></tr>
+<tr><td>3</td><td colspan="2">T6V_FILIAL+T6V_ID+T6V_ESTADO+T6V_NATOPE+T6V_TPOPER</td><td>ID + Id.Estado + Id.Nat.Oper. + Tp. Operação</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>T6V_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Filial do sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>T6V_ID</td>
+<td>ID</td>
+<td colspan="2">Identificador do Registro</td>
+<td colspan="4">Identificador do registro.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>T6V_ESTADO</td>
+<td>Id.Estado</td>
+<td colspan="2">Identificador do Estado</td>
+<td colspan="4">Deve representar neste campo o código de
+Identificação Único do Estado.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>XFUNVldCmp("C09",3)  .And.  XFUNVldUni("T6V",3,FWFLDGET("C3J_ID")+M->T6V_ESTADO+FWFLDGET("T6V_NATOPE")+FWFLDGET("T6V_TPOPER"))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/c09.html">C09</a></td>
+<td><a href="/tabelas_protheus/gatilhos/t6v_estado.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>T6V_DESTAD</td>
+<td>Des.Estado</td>
+<td colspan="2">Descrição do Estado</td>
+<td colspan="4">Deve representar neste campo a descrição
+do Estado
+</td>
+<td>C</td>
+<td>220</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI.AND.!EMPTY(T6V->T6V_ESTADO),POSICIONE("C09",3,xFilial("C09")+T6V->T6V_ESTADO,"C09_CODIGO+' - '+C09_DESCRI"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>T6V_NATOPE</td>
+<td>Id.Nat.Oper.</td>
+<td colspan="2">Id. Natureza Operação</td>
+<td colspan="4">Deve representar o identificador da
+natureza de operação.
+</td>
+<td>C</td>
+<td>36</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>T6V_CODNAT</td>
+<td>Nat.Oper.</td>
+<td colspan="2">Natureza Operação</td>
+<td colspan="4">Código da natureza de operação.
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>XFUNVldCmp("C1N",1) .And. XFUNVldUni("T6V",3,FWFLDGET("C3J_ID")+ FWFLDGET("T6V_ESTADO")+T6V->T6V_NATOPE+FWFLDGET("T6V_TPOPER"))</td>
+<td>IF(!INCLUI.AND.!EMPTY(T6V->T6V_NATOPE),POSICIONE("C1N",3,XFILIAL("C1N")+T6V->T6V_NATOPE,"C1N_CODNAT"),"")</td>
+<td><a href="/tabelas_protheus/f3/c1n3.html">C1N3</a></td>
+<td><a href="/tabelas_protheus/gatilhos/t6v_codnat.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>T6V_DNATOP</td>
+<td>D.Nat.Oper.</td>
+<td colspan="2">Desc. Nat. Operação</td>
+<td colspan="4">Deve representar nesse campo o código e
+a descrição da natureza de operação.
+</td>
+<td>C</td>
+<td>220</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI.AND.!EMPTY(T6V->T6V_NATOPE),POSICIONE("C1N",3,xFilial("C1N")+T6V->T6V_NATOPE,"C1N_CODNAT+' - '+C1N_DESNAT"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>T6V_TPOPER</td>
+<td>Tp. Operação</td>
+<td colspan="2">Tipo da operação</td>
+<td colspan="4">Deve representar o tipo de operação:
+0=Entrada;
+1=Saída.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Entrada;1=Sa�da;</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>T6V_BASE</td>
+<td>B.Cálculo</td>
+<td colspan="2">Base de cálculo</td>
+<td colspan="4">Deve representar a base de calculo do
+tributo consolidado por Estado e
+Natureza de Operação.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>T6V_IMPCRD</td>
+<td>Vl.Crdto/Déb</td>
+<td colspan="2">Vlr. Crédito/Débito</td>
+<td colspan="4">Deve representar o valor de
+crédito/débito do tributo consolidado
+por  Estado e natureza de operação.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>T6V_ISENNT</td>
+<td>Vl.Isen/NT</td>
+<td colspan="2">Vlr. Isento / NT</td>
+<td colspan="4">Deve representar o valor de isento ou
+não tributo do tributo consolidado por
+Estado e natureza de operação.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>T6V_OUTROS</td>
+<td>Vl.Outros</td>
+<td colspan="2">Vlr. Outros</td>
+<td colspan="4">Deve representar o valor de outros do
+tributo consolidado por  Estado e
+natureza de operação.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

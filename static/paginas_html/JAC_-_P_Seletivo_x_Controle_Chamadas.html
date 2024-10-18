@@ -1,0 +1,357 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: JAC - P Seletivo x Controle Chamadas</title></head>
+<body>
+<font color="orange"><h2 id="JAC">Tabela: JAC - P Seletivo x Controle Chamadas</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>P Seletivo x Controle Chamadas</b></td><td colspan="2"><b>JAC_FILIAL+JAC_CODIGO+JAC_CODCHA</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">JAC_FILIAL+JAC_CODIGO+JAC_CODCHA</td><td>Codigo P.S. + Cod.Chamada</td><td></td></tr>
+<tr><td>2</td><td colspan="2">JAC_FILIAL+JAC_CODIGO+JAC_ITEM</td><td>Codigo P.S. + Item</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>JAC_FILIAL</td>
+<td>FILIAL</td>
+<td colspan="2">Filial</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JAC_CODIGO</td>
+<td>Codigo P.S.</td>
+<td colspan="2">Codigo do Proc. Seletivo</td>
+<td colspan="4">Código do Processo Seletivo. Este código
+deve estar previamente cadastrado no
+arquivo JA6 (Processos Seletivos).
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GEExistCpo("JA6",M->JAC_CODIGO)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ja6.html">JA6</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JAC_DCODIG</td>
+<td>Descricao</td>
+<td colspan="2">Descricao Proc. Seletivo</td>
+<td colspan="4">Descriç„o do Processo Seletivo.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui, " ", Posicione("JA6",1,xFilial("JA6") + JAC->JAC_CODIGO,"JA6_DESC"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("JA6",1,xFilial("JA6") + JAC->JAC_CODIGO,"JA6_DESC")</td>
+<td><a href="/tabelas_protheus/grupocampo/020.html">020</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JAC_ITEM</td>
+<td>Item</td>
+<td colspan="2">Item da Amarracao</td>
+<td colspan="4">Item (numeraç„o sequencial) referente às
+chamadas relacionadas ao Processo
+Seletivo.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JAC_CODCHA</td>
+<td>Cod.Chamada</td>
+<td colspan="2">Codigo da Chamada</td>
+<td colspan="4">Codigo que identifica as possiveis
+chamadas dos candidatos aprovados no
+Processo Selectivo (Ex.: 1ª chamada, 2ª
+chamada). Deve estar cadastrado, via
+Configurador, na tabela E7.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>AC080VLDATU("SX5",1,xFilial("SX5")+"F7"+M->JAC_CODCHA,"JAC_DCHAM","X5_DESCRI")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/f7.html">F7</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JAC_DCHAM</td>
+<td>Des. Chamada</td>
+<td colspan="2">Descricao da Chamada</td>
+<td colspan="4">Descriç„o da chamada (Ex.: Primeira
+Chamada, Segunda Chamada, etc.).
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui, " ", Tabela("F7", JAC->JAC_CODCHA, .F.))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Tabela("F7", JAC->JAC_CODCHA, .F.)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JAC_DATA1</td>
+<td>Data De Mat.</td>
+<td colspan="2">Data De Matricula</td>
+<td colspan="4">Data de início das matrículas para esta
+chamada.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>AC080DTINS(1,M->JAC_DATA1)</td>
+<td>CTOD("")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JAC_DATA2</td>
+<td>Data Ate Mat</td>
+<td colspan="2">Data Ate Matricula</td>
+<td colspan="4">Data de encerramento das matrículas para
+esta chamada.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>AC080DTINS(2,M->JAC_DATA2)</td>
+<td>CTOD("")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JAC_DTILA</td>
+<td>Dt.Ini Lista</td>
+<td colspan="2">Data Inicio Lista Aprov.</td>
+<td colspan="4">Data inicial da lista de aprovação.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>A080VldLis()</td>
+<td>CTOD("")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JAC_HRILA</td>
+<td>Hr.Ini Lista</td>
+<td colspan="2">Hora Inicio Lista Aprov.</td>
+<td colspan="4">Hora inicial da lista de aprovação.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

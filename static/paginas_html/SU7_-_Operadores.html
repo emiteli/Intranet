@@ -1,0 +1,1202 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: SU7 - Operadores</title></head>
+<body>
+<font color="orange"><h2 id="SU7">Tabela: SU7 - Operadores</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Operadores</b></td><td colspan="2"><b>U7_FILIAL+U7_COD</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">U7_FILIAL+U7_COD</td><td>Codigo</td><td></td></tr>
+<tr><td>2</td><td colspan="2">U7_FILIAL+U7_CGC</td><td>CPF/CNPJ</td><td></td></tr>
+<tr><td>3</td><td colspan="2">U7_FILIAL+U7_NOME</td><td>Nome</td><td></td></tr>
+<tr><td>4</td><td colspan="2">U7_FILIAL+U7_CODUSU</td><td>Cod. Usuario</td><td></td></tr>
+<tr><td>5</td><td colspan="2">U7_FILIAL+DTOS(U7_DTRODZ)+U7_HRRODZ</td><td>Data Rodizio + Hora Rodizio</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="6" align="center"><b><i>Abas(SXA)</i></b></td></tr><tr><td><b>XA_ALIAS</b></td><td><b>XA_ORDEM</b></td><td colspan="2"><b>XA_DESCRIC</b></td><td><b>XA_AGRUP</b></td><td><b>XA_TIPO</b></td></tr><tr><td><b>SU7</b></td><td><b>1</b></td><td colspan="2"><b>Cadastrais</b></td><td><b></b></td><td><b></b></td></tr><tr><td><b>SU7</b></td><td><b>2</b></td><td colspan="2"><b>Perfil</b></td><td><b></b></td><td><b></b></td></tr><tr><td><b>SU7</b></td><td><b>3</b></td><td colspan="2"><b>Telefonia</b></td><td><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>U7_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Código da filial do sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U7_COD</td>
+<td>Codigo</td>
+<td colspan="2">Codigo do Operador</td>
+<td colspan="4">Código do operador
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .AND. ExistChav("SU7",M->U7_COD,1,"EXISTOPER") .AND. FreeForUse("SU7",M->U7_COD)</td>
+<td>IIF(INCLUI,GETSXENUM("SU7","U7_COD"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>U7_NOME</td>
+<td>Nome</td>
+<td colspan="2">Nome do Operador</td>
+<td colspan="4">Nome do operador
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@x                                           </td>
+<td>texto()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>U7_NREDUZ</td>
+<td>Nome Reduzid</td>
+<td colspan="2">Nome Reduzido do Operador</td>
+<td colspan="4">Nome reduzido do operador
+</td>
+<td>C</td>
+<td>25</td>
+<td>0</td>
+<td>@x                                           </td>
+<td>texto()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>U7_END</td>
+<td>Endereco</td>
+<td colspan="2">Endereco do Operador</td>
+<td colspan="4">Endereço do operador
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@x                                           </td>
+<td>Texto() .OR. Vazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U7_BAIRRO</td>
+<td>Bairro</td>
+<td colspan="2">Bairro do Operador</td>
+<td colspan="4">Bairro do operador
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@x                                           </td>
+<td>Texto() .OR. Vazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U7_MUN</td>
+<td>Municipio</td>
+<td colspan="2">Municipio do Operador</td>
+<td colspan="4">Municipio do operador
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@x                                           </td>
+<td>Texto() .OR. Vazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U7_EST</td>
+<td>Estado</td>
+<td colspan="2">Sigla da Federacao</td>
+<td colspan="4">Estado do operador
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SX5","12"+M->U7_EST)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/12.html">12</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/010.html">010</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U7_CEP</td>
+<td>CEP</td>
+<td colspan="2">Cod Enderecamento Postal</td>
+<td colspan="4">Cep do operador
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>@R 99999-999                                 </td>
+<td>naovazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U7_CGC</td>
+<td>CPF/CNPJ</td>
+<td colspan="2">CPF/CNPJ do Operador</td>
+<td colspan="4">Número do CGC/CPF do operador.
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>@R 99.999.999/9999-99                        </td>
+<td>Vazio() .or. ( CGC(M->U7_CGC) .AND. Existchav("SU7",M->U7_CGC,2,"U7_CGC") .AND. FreeForUse("SU7",M->U7_CGC) )</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U7_FAX</td>
+<td>FAX</td>
+<td colspan="2">Numero do FAX do Operador</td>
+<td colspan="4">Fax do operador
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U7_TEL</td>
+<td>Telefone</td>
+<td colspan="2">Numero do Telefone</td>
+<td colspan="4">Telefone do operador
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U7_VEND</td>
+<td>Vendedor</td>
+<td colspan="2">Operador e Vendedor</td>
+<td colspan="4">Define se o Operador também é um
+vendedor. Se for gera um registro no
+cadastro de vendedores.
+1 = Sim
+2 = Não
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>!                                            </td>
+<td>vazio() .OR. Pertence("12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/u7_vend.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U7_CODVEN</td>
+<td>Cod.Vendedor</td>
+<td colspan="2">Codigo no cad. vendedor</td>
+<td colspan="4">Código de vendedor deste operador.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SA3").Or.Vazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sa3.html">SA3</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>M->U7_VEND=="1"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U7_POSTO</td>
+<td>Grupo</td>
+<td colspan="2">Grupo de Atendimento</td>
+<td colspan="4">Define o Grupo de Operadores no qual
+este Operador pertencerá bem como as
+respectivas regras de atendimento do
+Call Center deste Grupo, que serão
+herdadas por este Operador.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td>ExistCpo("SU0").Or.Vazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/su0.html">SU0</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>U7_TIPOATE</td>
+<td>Atendimento</td>
+<td colspan="2">Atendimento por Rotina</td>
+<td colspan="4">Indica qual a rotina o Operador
+poderá acessar na tela de atendimento.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>!                                            </td>
+<td>Pertence("123456")</td>
+<td>IIF(INCLUI,"4","")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=TeleMarketing;2=TeleVendas;3=Telecobranca;4=Todos;5=Tmk e Tlv;6=TeleAtendimento</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>U7_REGIAO</td>
+<td>Regiao</td>
+<td colspan="2">Atende Chamadas da Regiao</td>
+<td colspan="4">Região onde o operador está habilitado
+para atender as chamadas.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .OR. ExistCpo("SX5","12"+M->U7_REGIAO)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/12.html">12</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U7_HABIL</td>
+<td>Habilidade</td>
+<td colspan="2">Habilidade do Operador</td>
+<td colspan="4">Define a principal Habilidade do
+operador. A habilidade deve ser uma
+característica pessoal para
+identificação dos perfis dentro de um
+Grupo de atendimento.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SX5","A4"+M->U7_HABIL)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/a4.html">A4</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U7_CONTA</td>
+<td>Conta E-mail</td>
+<td colspan="2">Conta no servidor email</td>
+<td colspan="4">Conta de e-mail do operador
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U7_SENHA</td>
+<td>Senha E-mail</td>
+<td colspan="2">Senha no servidor email</td>
+<td colspan="4">Senha da conta de e-mail do operador
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U7_TAREFA</td>
+<td>Qtd. Tarefas</td>
+<td colspan="2">Quantidade de Tarefas</td>
+<td colspan="4">Utilizado para quantificar as tarefas de
+cada
+operador. Este é acrescido  pela Lista
+de Contatos e subtraido pela exclusão da
+Lista de contatos que estiver com o
+status Ativo ou na conclusão da Agenda
+do Operador.
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U7_VALIDO</td>
+<td>Valido</td>
+<td colspan="2">Operador Valido</td>
+<td colspan="4">Informa se esse operador é válido ou não
+para ser selecionado nas rotinas de
+aténdimento.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>!                                            </td>
+<td>Pertence("12")</td>
+<td>IIF(INCLUI,"1","")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>U7_CFGBTN</td>
+<td>Botões</td>
+<td colspan="2">Configura botões da barra</td>
+<td colspan="4">Determina se os botões serão
+apresentados com acesso ao usuário ou
+desabilitado.
+Para habilitar um botão, a representação
+é o valor "1" e para desabilitar um
+botão o valor é "0". Utilize a tecla F3
+para gerar a string automaticamente.
+</td>
+<td>C</td>
+<td>33</td>
+<td>0</td>
+<td>9999999999999999999999999999999999           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U7_TIPO</td>
+<td>Tipo</td>
+<td colspan="2">Operador/Supervisor</td>
+<td colspan="4">Define se o Operador de Call Center será
+um Supervisor de equipe ou não.
+O Supervisor não terá restrições de
+acessos.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>IIF(INCLUI,"1",SU7->U7_TIPO)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Operador;2=Supervisor</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>U7_CODUSU</td>
+<td>Cod. Usuario</td>
+<td colspan="2">Codigo do usuario</td>
+<td colspan="4">Código do Usuario no SIGACFG
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/us2.html">US2</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U7_CODRD0</td>
+<td>Participante</td>
+<td colspan="2">Codigo do participante</td>
+<td colspan="4">Código do Participante
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .OR. ExistCpo("RD0")  .AND. Tk090Trigger()</td>
+<td>IIF(!INCLUI,FGetPessoa("SU7",xFilial("SU7")+SU7->U7_COD),"")</td>
+<td><a href="/tabelas_protheus/f3/rd0.html">RD0</a></td>
+<td><a href="/tabelas_protheus/gatilhos/u7_codrd0.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U7_DESCRD0</td>
+<td>Nome Partic.</td>
+<td colspan="2">Nome do participante</td>
+<td colspan="4">Descrição do Participante
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Tk090Rd0Nome()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U7_AGENTID</td>
+<td>Agent ID</td>
+<td colspan="2">ID do Agente no DAC</td>
+<td colspan="4">ID do Agente no DAC.
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U7_PENDCHA</td>
+<td>Assum Ch Alt</td>
+<td colspan="2">Assumir chamado Alteração</td>
+<td colspan="4">Define o tipo de ação a ser tomado sobre
+a responsábilidade da pendência de
+atendimento quando o analista de Help
+Desk manipula o chamado sobre
+responsábilidade de outro analista.
+Sim - sempre assume a pendência.
+Não - nunca assume a pendência.
+Pergunte - pergunta ao analista se
+deseja assumir a pendência.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("123")</td>
+<td>'2'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o;3=Pergunte</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U7_SUBSTIT</td>
+<td>Substituto</td>
+<td colspan="2">Operador Substituto</td>
+<td colspan="4">Código do operador que substitui o
+operador atual na ausência do mesmo.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Tk090Substit()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tmk016.html">TMK016</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U7_DTRODZ</td>
+<td>Data Rodizio</td>
+<td colspan="2">Data Rodizio</td>
+<td colspan="4">Data do rodizio entre os operadores do
+mesmo grupo de atendimento
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U7_HRRODZ</td>
+<td>Hora Rodizio</td>
+<td colspan="2">Hora Rodizio</td>
+<td colspan="4">Hora Rodizio
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@R 99:99:99                                  </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U7_AGENTPW</td>
+<td>Senha CTI</td>
+<td colspan="2">Senha do Agente no CTI</td>
+<td colspan="4">Armazena a senha do agente utilizada na
+integração com SmartCTI.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U7_ATURAP</td>
+<td>Atu. Rapida?</td>
+<td colspan="2">Atu. Rapida de Chamado?</td>
+<td colspan="4">Informe se o operador poderá ter acesso
+a Atualização Rápida de Chamado.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("12")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U7_ASSCHI</td>
+<td>Assum CH Inc</td>
+<td colspan="2">Assumir chamado Inclusão</td>
+<td colspan="4">Assume chamado na inclusão.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("123")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o;3=Pergunte</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U7_ESTACAO</td>
+<td>Estação</td>
+<td colspan="2">Código da Estação</td>
+<td colspan="4">Código da Estação do Operador.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>IIF(!Empty(M->U7_ESTACAO),ExistCpo('SLG',M->U7_ESTACAO),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/slg.html">SLG</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>Tk090Estac()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>ACF</td>
+<td colspan="2">U7_COD</td>
+<td colspan="2">ACF_OPERAD</td>
+</tr>
+<tr>
+<td>SU4</td>
+<td colspan="2">U7_COD</td>
+<td colspan="2">U4_OPERAD</td>
+</tr>
+<tr>
+<td>SK1</td>
+<td colspan="2">U7_COD</td>
+<td colspan="2">K1_OPERAD</td>
+</tr>
+<tr>
+<td>SUA</td>
+<td colspan="2">U7_COD</td>
+<td colspan="2">UA_OPERADO</td>
+</tr>
+<tr>
+<td>SUC</td>
+<td colspan="2">U7_COD</td>
+<td colspan="2">UC_OPERADO</td>
+</tr>
+<tr>
+<td>SU5</td>
+<td colspan="2">U7_COD</td>
+<td colspan="2">U5_OPERADO</td>
+</tr>
+<tr>
+<td>ACG</td>
+<td colspan="2">U7_COD</td>
+<td colspan="2">ACG_OPERAD</td>
+</tr>
+<tr>
+<td>SUE</td>
+<td colspan="2">U7_COD</td>
+<td colspan="2">UE_OPERADO</td>
+</tr>
+<tr>
+<td>VCE</td>
+<td colspan="2">U7_COD</td>
+<td colspan="2">VCE_OPERAD</td>
+</tr>
+<tr>
+<td>QAA</td>
+<td colspan="2">U7_COD</td>
+<td colspan="2">QAA_OPERAD</td>
+</tr>
+<tr>
+<td>ACI</td>
+<td colspan="2">U7_COD</td>
+<td colspan="2">ACI_OPERAD</td>
+</tr>
+<tr>
+<td>SU6</td>
+<td colspan="2">U7_COD</td>
+<td colspan="2">U6_CODOPER</td>
+</tr>
+<tr>
+<td>SUV</td>
+<td colspan="2">U7_CODUSU</td>
+<td colspan="2">UV_USUARIO</td>
+</tr>
+<tr>
+<td>ADE</td>
+<td colspan="2">U7_COD</td>
+<td colspan="2">ADE_OPERAD</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

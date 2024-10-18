@@ -1,0 +1,415 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: RJI - TROCA DE CPF</title></head>
+<body>
+<font color="orange"><h2 id="RJI">Tabela: RJI - TROCA DE CPF</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>TROCA DE CPF</b></td><td colspan="2"><b></b></td><td><b>GPEA937</b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">RJI_FILIAL+RJI_MAT+RJI_CPFA</td><td>Matricula + CPF Antigo</td><td></td></tr>
+<tr><td>2</td><td colspan="2">RJI_FILIAL+RJI_MAT+RJI_CPF</td><td>Matricula + RJI_C</td><td></td></tr>
+<tr><td>3</td><td colspan="2">RJI_CPFA+RJI_FILIAL+RJI_MAT+RJI_STATUS</td><td>CPF Antigo + Filial + Matricula + Status</td><td></td></tr>
+<tr><td>4</td><td colspan="2">RJI_CPF+RJI_FILIAL+RJI_MAT+RJI_STATUS</td><td>RJI_CPF+Filial + Matricula + Status</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>RJI_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">filial do sistema
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>.F.</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RJI_MAT</td>
+<td>Matricula</td>
+<td colspan="2">Matricula do Funcionario</td>
+<td colspan="4">Informe a Matrícula do Funcionario
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NAOVAZIO()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sra.html">SRA</a></td>
+<td><a href="/tabelas_protheus/gatilhos/rji_mat.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>IIf(INCLUI,.T.,.F.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/121.html">121</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RJI_NOME</td>
+<td>Nome</td>
+<td colspan="2">Nome do Funcionario</td>
+<td colspan="4">Nome do Funcionario
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NAOVAZIO()</td>
+<td>IF(!INCLUI,Posicione("SRA",5,xFilial("SRA")+SRA->RA_CIC,"RA_NOME"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>.F.</td>
+<td>Posicione("SRA",1,xFilial("SRA",RJI->RJI_FILIAL)+RJI->RJI_MAT,"RA_NOME")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RJI_CPFA</td>
+<td>CPF Antigo</td>
+<td colspan="2">CPF Antigo Funcionario</td>
+<td colspan="4">Informe o número do C.P.F. do
+Funcionario.
+</td>
+<td>C</td>
+<td>11</td>
+<td>0</td>
+<td>@R 999.999.999-99                            </td>
+<td>NAOVAZIO()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/srarji.html">SRARJI</a></td>
+<td><a href="/tabelas_protheus/gatilhos/rji_cpfa.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>IIf(INCLUI,.T.,.F.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RJI_CPF</td>
+<td>CPF Novo</td>
+<td colspan="2">CPF Novo Funcionario</td>
+<td colspan="4">Informe o número do C.P.F. do
+Funcionario.
+</td>
+<td>C</td>
+<td>11</td>
+<td>0</td>
+<td>@R 999.999.999-99                            </td>
+<td>NAOVAZIO() .AND. ChkCPF(M->RJI_CPF) .AND. ChkCPF(M->RJI_CPF)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RJI_DTALT</td>
+<td>Dt Alt RFB</td>
+<td colspan="2">Dt Alteracao RFB</td>
+<td colspan="4">Informe a Data da Alteração do CPF
+conforme informado na Notificação
+enviada pela Receita Federal do Brasil -
+RFB
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>CTOD("//")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>WhenSetEpoch(.F.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RJI_DTEF</td>
+<td>Dt Efet Alt</td>
+<td colspan="2">Data Efetiva Alteracao</td>
+<td colspan="4">Informe a Data da Efetiva Alteração do
+CPF do Funcionário
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>M->RJI_DTEF >= M->RJI_DTALT</td>
+<td>CTOD("//")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>WhenSetEpoch(.F.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RJI_CODA</td>
+<td>Cod Un Ant</td>
+<td colspan="2">Cod. Unico Antigo</td>
+<td colspan="4">Código Unico Antigo do Funcionario
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RJI_CODU</td>
+<td>Cod Un Novo</td>
+<td colspan="2">Cod. Unico Novo</td>
+<td colspan="4">Código Unico Novo do Funcionario
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RJI_OBS</td>
+<td>Observacoes</td>
+<td colspan="2">Observacoes</td>
+<td colspan="4">Observaçoes da Troca de CPF
+</td>
+<td>M</td>
+<td>255</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RJI_STATUS</td>
+<td>Status</td>
+<td colspan="2">Status</td>
+<td colspan="4">Informe o Status do Registro com as
+seguintes opções:
+0 = Não Processado;
+1 = Gerado S-2299;
+3 = Gerado S-2200/SRA
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Nao Processado;1=Gerado S-2299;2=Gerado S-2200/SRA</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RJI_PRI</td>
+<td>Reg.Princ</td>
+<td colspan="2">Registro Principal</td>
+<td colspan="4">Informe se o registro é o principal
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=1-Sim;2=2-N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

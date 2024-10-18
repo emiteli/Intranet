@@ -1,0 +1,1123 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: REA - Audiências</title></head>
+<body>
+<font color="orange"><h2 id="REA">Tabela: REA - Audiências</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Audiências</b></td><td colspan="2"><b>REA_FILIAL+REA_PRONUM+DTOS(REA_DATA)</b></td><td><b>APTA080</b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">REA_FILIAL+REA_PRONUM+DtoS(REA_DATA)</td><td>Num.Processo + Data Aud.</td><td></td></tr>
+<tr><td>2</td><td colspan="2">REA_FILIAL+DtoS(REA_DATA)+REA_PRONUM</td><td>Data Aud. + Num.Processo</td><td></td></tr>
+<tr><td>3</td><td colspan="2">REA_FILIAL+REA_PRONUM+REA_TIPO</td><td>Num.Processo + Tipo Aud.</td><td></td></tr>
+<tr><td>4</td><td colspan="2">REA_FILIAL+REA_TIPO</td><td>Tipo Aud.</td><td></td></tr>
+<tr><td>5</td><td colspan="2">REA_FILIAL+REA_FASECD</td><td>Codigo Fase</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>REA_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>REA_PRONUM</td>
+<td>Num.Processo</td>
+<td colspan="2">Numero do Processo</td>
+<td colspan="4">Número do Processo a que se refere a
+Audiência. Campo chave, não alterável.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>APTValidaProcesso()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>REA_DATA</td>
+<td>Data Aud.</td>
+<td colspan="2">Data da Audiencia</td>
+<td colspan="4">Informe a data da Audiência. Este campo
+irá atualizar, automaticamente, a Data
+da Fase do Processo, na tela principal
+do Processo Trabalhista.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>NAOVAZIO() .AND. EXISTCHAV("REA",RE0->RE0_NUM+DTOS(M->REA_DATA))</td>
+<td>CTOD("")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>REA_HORA</td>
+<td>Hora Aud.</td>
+<td colspan="2">Horario da Audiencia</td>
+<td colspan="4">Informe a Hora da Audiência.
+</td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>REA_TIPO</td>
+<td>Tipo Aud.</td>
+<td colspan="2">Tipo da Audiencia</td>
+<td colspan="4">Informe o Tipo da Audiência ou pressione
+F3 para consultar os tipos existentes.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO("RE5","REA "+M->REA_TIPO)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/re5.html">RE5</a></td>
+<td><a href="/tabelas_protheus/gatilhos/rea_tipo.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>REA_TPDESC</td>
+<td>Desc.Tp.Aud.</td>
+<td colspan="2">Descr. Tipo da Audiencia</td>
+<td colspan="4">Descrição do Tipo da Audiência. Campo
+virtual, deduzido a partir do Cadastro
+de Tipos de Audiências.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(Inclui,"",fDesc("RE5","REA "+REA->REA_TIPO,"RE5_DESCR"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>REA_CPAUTA</td>
+<td>C_Pauta</td>
+<td colspan="2">Cod.Memo Pauta Audiencia</td>
+<td colspan="4">Campo memo destinado ao cadastramento da
+Pauta da Audiência.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>REA_PAUTA</td>
+<td>Pauta</td>
+<td colspan="2">Pauta da Audiencia</td>
+<td colspan="4"></td>
+<td>M</td>
+<td>80</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,MSMM(REA->REA_CPAUTA,80,,,,,,,,"RE6"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>REA_CPROVI</td>
+<td>C_Provid.</td>
+<td colspan="2">Cod.Memo Providencias</td>
+<td colspan="4">Campo memo destinado ao cadastramento
+das Providências a serem tomadas para a
+Audiência.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>REA_PROVID</td>
+<td>Providencias</td>
+<td colspan="2">Providencias Audiencia</td>
+<td colspan="4"></td>
+<td>M</td>
+<td>80</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,MSMM(REA->REA_CPROVI,80,,,,,,,,"RE6"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>REA_FASECD</td>
+<td>Codigo Fase</td>
+<td colspan="2">Codigo da Fase do Proc.</td>
+<td colspan="4">Informe o codigo da fase do Processo ou
+pressione F3 para consultar os códigos
+existentes. Este campo irá atualizar,
+automaticamente, a Fase do Processo, na
+tela principal do Processo Trabalhista,
+desde que a data seja posterior à última
+informada.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>VAZIO() .or. AptFaseCdValid('REF ','REA_FASECD')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/re5fse.html">RE5FSE</a></td>
+<td><a href="/tabelas_protheus/gatilhos/rea_fasecd.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>REA_FASEDS</td>
+<td>Fase Proc.</td>
+<td colspan="2">Fase do Processo</td>
+<td colspan="4">Descrição da Fase em que o Processo
+Trabalhista se encontrará após a
+realização da Audiência. Campo virtual,
+deduzido a partir do Cadastro de Tipos
+de Fases.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>RE0FaseDsX3Relacao("REA")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>REA_TPPREP</td>
+<td>Tipo Prep.</td>
+<td colspan="2">Tipo do Preposto</td>
+<td colspan="4">Informe o tipo de preposto:
+1=Funcionário
+2=Sócio
+3=Presidente
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("123")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Funcionario;2=Socio;3=Presidente</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>REA_PRECOD</td>
+<td>Preposto</td>
+<td colspan="2">Codigo do Preposto</td>
+<td colspan="4">Código do Preposto. Preposto é um
+Funcionário da Empresa Reclamada que a
+representa em uma Audiência.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>VAZIO() .or. ReaPrepValid( M->REA_PRECOD)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/rd0apt.html">RD0APT</a></td>
+<td><a href="/tabelas_protheus/gatilhos/rea_precod.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>REA_PRENOM</td>
+<td>Nome Prep.</td>
+<td colspan="2">Nome do Preposto</td>
+<td colspan="4">Nome do Preposto que representou a
+Reclanada na Audiência. Campo virtual,
+deduzido a partir do Cadastro de
+Pessoas.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(Inclui,"",fDesc("RD0",REA->REA_PRECOD,"RD0_NOME"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>REA_PREMAT</td>
+<td>Matr. Prep.</td>
+<td colspan="2">Matricula do Preposto</td>
+<td colspan="4">Matrícula do Preposto que representou a
+Reclamada na Audiência. Campo virtual
+deduzido a partir do Cadastro de
+Funcionários, desde que este esteja
+relacionado com o Cadastro de Pessoas.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>EntGetInfo("SRA","RA_MAT",REA->REA_PRECOD)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/121.html">121</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>REA_REPNOM</td>
+<td>Nome Repres.</td>
+<td colspan="2">Nome do Representante</td>
+<td colspan="4">Pessoa nomeada pelo Reclamante para
+representá-lo em uma Audiência, em caso
+de doença ou motivo grave.
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>REA_ADRDAC</td>
+<td>Cod.Adv.Rda.</td>
+<td colspan="2">Codigo Advogado Reclamada</td>
+<td colspan="4">Informe o código do Advogado da
+Reclamada que a representará na
+Audiência ou pressione F3 para consultar
+os códigos existentes.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Apt100_Adv(M->REA_ADRDAC)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/re4.html">RE4</a></td>
+<td><a href="/tabelas_protheus/gatilhos/rea_adrdac.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>REA_ADRDAN</td>
+<td>Nome Adv.Rda</td>
+<td colspan="2">Nome Advogado Reclamada</td>
+<td colspan="4">Nome do Advogado da Reclamada que
+patrocinou a Audiência. Campo virtual,
+deduzido a partir do Cadastro de
+Pessoas.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(Inclui,"",fDesc("RD0",REA->REA_ADRDAC,"RD0_NOME"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>REA_RDASGL</td>
+<td>Sigla Rda.</td>
+<td colspan="2">Sigla Reg.Cl.Ad.Reclda.</td>
+<td colspan="4">Sigla do Registro de Classe do Advogado
+da Reclamada que patrocinou a Audiência.
+Campo visual, não alterável, deduzido a
+partir do Cadastro de Registros de
+Classe por Pessoa.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>FDESC("RE8","ADV","RE8_SIGLA")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>REA_OABRDA</td>
+<td>OAB Adv.Rda.</td>
+<td colspan="2">Nro.Reg.Cl.Ad.Reclamada</td>
+<td colspan="4">Número do Registro de Classe( OAB ) do
+Advogado da Reclamada.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(Inclui,"",If(Empty(REA->REA_ADRDAC),"",FDesc("REU",(REA->REA_ADRDAC+(FDESC("RE8","ADV","RE8_SIGLA"))),"REU_NUMREG")))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>REA_ADRTEC</td>
+<td>Cod.Adv.Rte.</td>
+<td colspan="2">Cod. Advogado Reclamante</td>
+<td colspan="4">Informe o Código do Advogado do
+Reclamante ou pressione F3 para
+consultar os existentes.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>APT100_ADV(M->REA_ADRTEC)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/re4.html">RE4</a></td>
+<td><a href="/tabelas_protheus/gatilhos/rea_adrtec.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>REA_ADRTEN</td>
+<td>Nome Adv.Rte</td>
+<td colspan="2">Nome Advogado Reclamante</td>
+<td colspan="4">Nome do Advogado do Reclamante de
+compareceu à Audiência. Campo virtual,
+deduzido a partir do Cadastro de
+Pessoas.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(Inclui,"",fDesc("RD0",REA->REA_ADRTEC,"RD0_NOME"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>REA_RTESGL</td>
+<td>Sigla Rte.</td>
+<td colspan="2">Sigla Reg.Cl.Ad.Reclte.</td>
+<td colspan="4">Sigla do Registro de Classe do Advogado
+do Reclamante que o representou na
+Audiência. Campo visual, não alterável,
+deduzido a partir do Cadastro de
+Registros de Classe por Pessoa.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>FDESC("RE8","ADV","RE8_SIGLA")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>REA_OABRTE</td>
+<td>OAB Adv.Rte.</td>
+<td colspan="2">Nro.Reg.Cl.Ad.Reclamante</td>
+<td colspan="4">Número do Registro de Classe( OAB ) do
+Advogado do Reclamante.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(Inclui,"",If(Empty(REA->REA_ADRTEC),"",FDesc("REU",REA->REA_ADRTEC+FDESC("RE8","ADV","RE8_SIGLA"),"REU_NUMREG")))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>REA_JUIZ_C</td>
+<td>Juiz Resp.</td>
+<td colspan="2">Codigo do Juiz Respons.</td>
+<td colspan="4">Informe o código do Juiz da Audiência ou
+pressione F3 para consultar um código
+existente.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>VAZIO() .OR. ExistCpo("REJ",M->REA_JUIZ_C)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/rej.html">REJ</a></td>
+<td><a href="/tabelas_protheus/gatilhos/rea_juiz_c.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>REA_J_NOME</td>
+<td>Nome Juiz</td>
+<td colspan="2">Nome do Juiz Responsavel</td>
+<td colspan="4">Nome do Juiz que presidiu a Audiência.
+Campo virtual, deduzido a partir do
+Cadastro de Juízes.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(Inclui,"",fDesc("REJ",REA->REA_JUIZ_C,"REJ_NOME"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>fDesc("REJ",REA->REA_JUIZ_C,"REJ_NOME")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>REA_VALOFE</td>
+<td>Vlr. Oferec.</td>
+<td colspan="2">Valor Oferecido</td>
+<td colspan="4">Informe o valor oferecido na Audiência.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>REA_VALACO</td>
+<td>Vlr. Acord.</td>
+<td colspan="2">Valor Acordado</td>
+<td colspan="4">Informe o Valor Acordado na Audiência.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>REA_CCONCL</td>
+<td>C_Conclusao</td>
+<td colspan="2">Cod.Memo Conclusao</td>
+<td colspan="4">Campo memo destinado ao cadastramento da
+conclusão da Audiência.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>REA_CONCLS</td>
+<td>Conclusao</td>
+<td colspan="2">Conclusao Audiencia</td>
+<td colspan="4"></td>
+<td>M</td>
+<td>80</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,MSMM(REA->REA_CCONCL,80,,,,,,,,"RE6"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>REA_REPLIC</td>
+<td>Replica?</td>
+<td colspan="2">Houve Replica?</td>
+<td colspan="4">Informe se houve Réplica ou não.
+1=Sim
+2=Não
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=SIM;2=NAO</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>REA_REPPRZ</td>
+<td>Prazo Repl.</td>
+<td colspan="2">Prazo para Replica</td>
+<td colspan="4">Data limite para apresentação da
+réplica.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IF(Inclui,CtoD("  /  /  "),REA->REA_REPPRZ)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>REA_COBS</td>
+<td>C_Obs.</td>
+<td colspan="2">Cod.Memo Observacoes</td>
+<td colspan="4">Campo memo destinado ao cadastramento
+das Observações referentes à Audiência.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>REA_OBS</td>
+<td>Obs.</td>
+<td colspan="2">Observacoes</td>
+<td colspan="4"></td>
+<td>M</td>
+<td>80</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,MSMM(REA->REA_COBS,80,,,,,,,,"RE6"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>RE9</td>
+<td colspan="2">REA_PRONUM+REA_DATA</td>
+<td colspan="2">RE9_PRONUM+RE9_DATA</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

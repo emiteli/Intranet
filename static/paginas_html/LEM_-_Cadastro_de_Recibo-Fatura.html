@@ -1,0 +1,1642 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: LEM - Cadastro de Recibo/Fatura</title></head>
+<body>
+<font color="orange"><h2 id="LEM">Tabela: LEM - Cadastro de Recibo/Fatura</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Cadastro de Recibo/Fatura</b></td><td colspan="2"><b>LEM_FILIAL+LEM_ID</b></td><td><b>TAFA448</b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">LEM_FILIAL+LEM_ID</td><td>ID</td><td></td></tr>
+<tr><td>2</td><td colspan="2">LEM_FILIAL+LEM_PREFIX+LEM_NUMERO+LEM_IDPART+DTOS(LEM_DTEMIS)</td><td>Prefixo Tit. + Num Fat/Rec + Id. Particip + Dt Emissão</td><td></td></tr>
+<tr><td>3</td><td colspan="2">LEM_FILIAL+LEM_DOCORI</td><td>Doc Original</td><td></td></tr>
+<tr><td>4</td><td colspan="2">LEM_FILIAL+LEM_NUMERO</td><td>Num Fat/Rec</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>LEM_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Deve representar neste campo o código da
+filial referente ao cadastro
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_ID</td>
+<td>ID</td>
+<td colspan="2">Identificador do Registro</td>
+<td colspan="4">Deve representar neste campo a
+identificação única do registro. Este
+código é controlado internamente pelo
+sistema de
+forma incremental e único por filial.
+</td>
+<td>C</td>
+<td>36</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>TAFGeraID()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/085.html">085</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_NUMERO</td>
+<td>Num Fat/Rec</td>
+<td colspan="2">Numero da Fatura/Recibo</td>
+<td colspan="4">Neste campo deve representar o Numero da
+Fatura/Recibo
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>                                             </td>
+<td>XFUNVldUni("LEM",2,FWFLDGET("LEM_PREFIX")+M->LEM_NUMERO+FWFLDGET("LEM_IDPART"))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>LEM_PREFIX</td>
+<td>Prefixo Tit.</td>
+<td colspan="2">Prefixo do Titulo</td>
+<td colspan="4">Neste campo deve representar o prefixo
+do titulo.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>                                             </td>
+<td>XFUNVldUni("LEM",2,M->LEM_PREFIX+FWFLDGET("LEM_NUMERO")+FWFLDGET("LEM_IDPART"))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_NATTIT</td>
+<td>Natureza</td>
+<td colspan="2">Natureza do Titulo</td>
+<td colspan="4">Deve informar nesse campo a natureza do
+título
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence(" 01")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=A Pagar;1=A Receber</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>LEM_DTEMIS</td>
+<td>Dt Emissão</td>
+<td colspan="2">Data de Emissão</td>
+<td colspan="4">Neste campo deve representar Data de
+Emissão da Fatura/Recibo.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>LEM_IDPART</td>
+<td>Id. Particip</td>
+<td colspan="2">Id do Participante</td>
+<td colspan="4">Deve representar o Id do participante da
+fatura/recibo, este participante deve
+ser previamente cadastrado no no sistema
+com suas informações
+específicas relacionadas em seu
+registro.
+</td>
+<td>C</td>
+<td>36</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/lem_idpart.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>LEM_PARTIC</td>
+<td>Participante</td>
+<td colspan="2">Código Participante</td>
+<td colspan="4">Deve representar o Id do participante da
+fatura/recibo, este participante deve
+ser previamente cadastrado no no sistema
+com suas informações
+específicas relacionadas em seu
+registro.
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>XFUNVldCmp("C1H",1)</td>
+<td>XFUNRelac(15,'LEM_IDPART',1)</td>
+<td><a href="/tabelas_protheus/f3/c1ha.html">C1HA</a></td>
+<td><a href="/tabelas_protheus/gatilhos/lem_partic.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("C1H",5,xFilial("C1H")+LEM->LEM_IDPART,"ALLTRIM(C1H_CODPAR)")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_DPARTC</td>
+<td>Desc. Part.</td>
+<td colspan="2">Desc. Participante</td>
+<td colspan="4">Neste Campo deve representar a descrição
+do Participante da fatura/recibo.
+</td>
+<td>C</td>
+<td>220</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>XFUNRelac(15,'LEM_IDPART')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("C1H",5,xFilial("C1L")+LEM->LEM_IDPART,"C1H_NOME")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_VLBRUT</td>
+<td>Valor Bruto</td>
+<td colspan="2">Vlr. Bruto</td>
+<td colspan="4">Neste campo deve representar o valor
+bruto da nota fiscal.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>LEM_IDPCRP</td>
+<td>Id Proces RP</td>
+<td colspan="2">Id Processo Ret Principal</td>
+<td colspan="4">Neste campo deve representar o Processo
+Administrativo/Judicial referente a
+Retenção Principal
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td>XFUNVldCmp("C1G",3)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/c1g.html">C1G</a></td>
+<td><a href="/tabelas_protheus/gatilhos/lem_idpcrp.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_DRETPC</td>
+<td>D Proc Ret P</td>
+<td colspan="2">Descr. Processo Ret Princ</td>
+<td colspan="4">Neste campo deve representar a descrição
+do Processo Administrativo/Judicial
+referente a Retenção Principal
+</td>
+<td>C</td>
+<td>220</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>XFUNRelac(16,'LEM_IDPCRP')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_IDPCRA</td>
+<td>Id Proces RA</td>
+<td colspan="2">Id Proceso Ret Adic. INSS</td>
+<td colspan="4">Neste campo deve representar o Processo
+Administrativo/Judicial referente a
+Retenção Adicional de INSS que deixou de
+ser efetuada
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td>XFUNVldCmp("C1G",3)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/c1g.html">C1G</a></td>
+<td><a href="/tabelas_protheus/gatilhos/lem_idpcra.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_DRETRA</td>
+<td>D Proc INSS</td>
+<td colspan="2">Desc Proc Ret Adic. INSS</td>
+<td colspan="4">Neste campo deve representar o Processo
+Administrativo/Judicial referente a
+Retenção Adicional INSS
+</td>
+<td>C</td>
+<td>220</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>XFUNRelac(16,'LEM_IDPCRA')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_IDCNTA</td>
+<td>ID. Cnt. Ana</td>
+<td colspan="2">Id Conta Anali. Contábil</td>
+<td colspan="4">Código da conta analítica contábil aonde
+é feita a escrituração dos serviços
+tomados mediante cessão de mão de obra
+desse prestador.
+</td>
+<td>C</td>
+<td>36</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/c1o.html">C1O</a></td>
+<td><a href="/tabelas_protheus/gatilhos/lem_idcnta.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_CTACTB</td>
+<td>Cta Contábil</td>
+<td colspan="2">Conta Contábil</td>
+<td colspan="4">Código da conta analítica contábil aonde
+é feita a escrituração dos serviços
+tomados mediante cessão de mão de obra
+desse prestador.
+</td>
+<td>C</td>
+<td>62</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>XFUNVldCmp("C1O",1)</td>
+<td>XFUNRelac(11,'LEM_IDCNTA',1)</td>
+<td><a href="/tabelas_protheus/f3/c1ob.html">C1OB</a></td>
+<td><a href="/tabelas_protheus/gatilhos/lem_ctactb.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_DCNTAA</td>
+<td>Des Cnt. Ana</td>
+<td colspan="2">Des Conta Anali. Contábil</td>
+<td colspan="4">Descrição da conta analítica contábil
+aonde é feita a escrituração dos
+serviços tomados mediante cessão de mão
+de obra desse prestador.
+</td>
+<td>C</td>
+<td>220</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>XFUNRelac(11,'LEM_IDCNTA')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_OBSERV</td>
+<td>Observacao</td>
+<td colspan="2">Observacao</td>
+<td colspan="4">Neste campo deve representar a
+Observação que o tomador julgar
+necessária.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_DOCORI</td>
+<td>Doc Original</td>
+<td colspan="2">Documento Original</td>
+<td colspan="4">Neste campo deve representar a chave do
+Registro Original
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>XFUNVldCmp("C20",4)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/c20.html">C20</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_TPREPA</td>
+<td>Tipo Repasse</td>
+<td colspan="2">Tipo de Repasse</td>
+<td colspan="4">Tipo de repasse, conforme opções abaixo:
+1 - Patrocínio;
+2 - Licenciamento de marcas e símbolos;
+3 - Publicidade;
+4 - Propaganda;
+5 - Transmissão de espetáculos.
+Valores Válidos: 1,2,3,4,5
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence(" 12345")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Patroc�nio;2=Licenciamento de Marcas e S�mbolos;3=Publicidade;4=Propaganda;5=Transmiss�o de Espet�ulos</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_IDPRUR</td>
+<td>Id Prc Rural</td>
+<td colspan="2">Id Processo Contrib Rural</td>
+<td colspan="4">Id do Número do processo referente a
+contribuições incidentes sobre a
+comercialização rural.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td>XFUNVldCmp("C1G",3)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/c1g.html">C1G</a></td>
+<td><a href="/tabelas_protheus/gatilhos/lem_idprur.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_DPRORU</td>
+<td>D Proc Rural</td>
+<td colspan="2">Desc. Processo Con. Rural</td>
+<td colspan="4">Descrição do Tipo do processo referente
+a contribuições incidentes sobre a
+comercialização rural
+</td>
+<td>C</td>
+<td>220</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>XFUNRelac(16,'LEM_IDPRUR')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_VLRCP</td>
+<td>Vlr Contr Pr</td>
+<td colspan="2">Valor Contribuição Previd</td>
+<td colspan="4">Valor da contribuição previdenciária
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_VLRGIL</td>
+<td>Vlr GILRAT</td>
+<td colspan="2">Valor Contrib Prev GILRAT</td>
+<td colspan="4">Valor da contribuição previdenciária
+GILRAT
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_VLRSEN</td>
+<td>Vlr Senar</td>
+<td colspan="2">Valor Senar</td>
+<td colspan="4">Valor da contribuição para o SENAR.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_VLCPSU</td>
+<td>Vlr CP Susp.</td>
+<td colspan="2">Valor Contr Prev Suspensa</td>
+<td colspan="4">Valor da contribuição previdenciária com
+exigibilidade suspensa
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_VLGILS</td>
+<td>Vlr GILRAT S</td>
+<td colspan="2">Valor GILRAT Suspensa</td>
+<td colspan="4">Valor da contribuição para GILRAT com
+exigibilidade suspensa
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_VLSENS</td>
+<td>Vl SENAR Sus</td>
+<td colspan="2">Valor SENAR Suspenso</td>
+<td colspan="4">Valor da contribuição para o SENAR com
+exigibilidade suspensa
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_PREVPR</td>
+<td>Vlr Prev Pri</td>
+<td colspan="2">Valor Ded BC Prev Privada</td>
+<td colspan="4">Valor da Dedução da base de cálculo
+Previdência Privada.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_VLFAPI</td>
+<td>Vlr FAPI</td>
+<td colspan="2">Valor Dedução BC  FAPI</td>
+<td colspan="4">Valor da Dedução da base de cálculo
+Fapi.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_VLFUNP</td>
+<td>Vlr FUNPRESP</td>
+<td colspan="2">Valor Ded. BC FUNPRESP</td>
+<td colspan="4">Valor da Dedução da base de cálculo
+Funpresp.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_VLPALI</td>
+<td>Vlr Pensao A</td>
+<td colspan="2">Valor Pensão Alimentícia</td>
+<td colspan="4">Valor da Dedução da base de cálculo
+Pensão Alimentícia.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_IDPRRA</td>
+<td>ID Proc. RRA</td>
+<td colspan="2">ID Processo RRA</td>
+<td colspan="4">ID do Número do processo/requerimento
+administrativo/judicial referente a
+Rendimentos Recebidos Acumuladamente
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td>XFUNVldCmp("C1G",3)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/c1g.html">C1G</a></td>
+<td><a href="/tabelas_protheus/gatilhos/lem_idprra.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_DPCRRA</td>
+<td>Des Proc RRA</td>
+<td colspan="2">Descrição Proc. RRA</td>
+<td colspan="4">Descrição do número do
+processo/requerimento
+administrativo/judicial referente a
+Rendimentos Recebidos Acumuladamente
+</td>
+<td>C</td>
+<td>220</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>XFUNRelac(16,'LEM_IDPRRA')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_NATRRA</td>
+<td>Natureza RRA</td>
+<td colspan="2">Descrição da Natureza RRA</td>
+<td colspan="4">Descrição da natureza dos rendimentos
+recebidos acumuladamente.
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_QTDRRA</td>
+<td>Qt Meses RRA</td>
+<td colspan="2">Qt Meses Relativos ao RRA</td>
+<td colspan="4">Quantidade de meses relativos ao
+rendimento acumulado.
+</td>
+<td>N</td>
+<td>5</td>
+<td>1</td>
+<td>@E 999.9                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_IDPCDM</td>
+<td>Id Proc. DR</td>
+<td colspan="2">Id Processo Demais Rend.</td>
+<td colspan="4">ID do número do processo de demais
+rendimentos decorrentes de Decisão
+Judicial.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td>XFUNVldCmp("C1G",3)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/c1g.html">C1G</a></td>
+<td><a href="/tabelas_protheus/gatilhos/lem_idpcdm.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_DPRODM</td>
+<td>ID. Proc. DR</td>
+<td colspan="2">ID. Processo Demais Rend.</td>
+<td colspan="4">Descrição do número do processo de
+demais rendimentos decorrentes de
+Decisão Judicial.
+</td>
+<td>C</td>
+<td>220</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>XFUNRelac(16,'LEM_IDPCDM')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_IORIRE</td>
+<td>Ind. Ori Rec</td>
+<td colspan="2">Ind. Origem Recursos DR</td>
+<td colspan="4">Indicativo da origem dos recursos
+(demais rendimentos):
+1 - Recursos do próprio declarante
+2 - Recursos de terceiros (Declarante é
+a Instituição Finan-ceira responsável
+apenas pelo repasse dos valores);
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Recursos do Pr�prio Declarante;2=Recursos de Terceiros</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_CNPJDM</td>
+<td>Cnpj Orig DR</td>
+<td colspan="2">Cnpj Origem Recursos DR</td>
+<td colspan="4">Registro preenchido exclusivamente pela
+instituição financeira que efetua
+pagamentos de valores relativos a
+créditos judiciais, identificando a
+empresa de origem dos recursos (CNPJ).
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>                                             </td>
+<td>XFUNVldPJF("LEM_CNPJDM",2)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_STATUS</td>
+<td>Status Reg.</td>
+<td colspan="2">Status do Registro</td>
+<td colspan="4">Campo de uso interno do sistema.
+Deve representar neste campo o status do
+registro:
+(Vazio) = Registro Novo
+0 = Registro Válido (integração)
+1 = Registro invalido (integração)
+2 = Registro transmitido
+3 = Registro transmitido com
+inconsistência(s)
+4 = Registro transmitido válido
+6 = Registro pendente de exclusão (RET).
+7 = Registro excluído (RET)
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/079.html">079</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_TPRECF</td>
+<td>Tipo Rec/Fat</td>
+<td colspan="2">Tipo do Recibo/Fatura</td>
+<td colspan="4">Informar o tipo do Recibo/Fatura,
+podendo ser:
+1    - Oriundo de Nota Fiscal
+2    - Desdobramento (Quando a partir de
+um título são geradas parcelas de
+pagamento)
+3    - Avulso (Quando título não foi
+oriundo de um documento fiscal)
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence(" 123")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Nota Fiscal;2=Desdobramento;3=Avulso</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>LEM_SRVMUN</td>
+<td>Cód. Serviço</td>
+<td colspan="2">Cód. Serviço Municipal</td>
+<td colspan="4">Código do serviço conforme tabela do
+municipio.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_CODLOC</td>
+<td>Loc Pre Serv</td>
+<td colspan="2">Codigo Local Prest Serv</td>
+<td colspan="4">Código do município onde ocorreu a
+prestação do serviço.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIF(!INCLUI .AND. !EMPTY(LEM->LEM_CODLOC),POSICIONE("C07",3,XFILIAL("C07")+LEM->LEM_CODLOC,"C07_CODIGO"),"")</td>
+<td><a href="/tabelas_protheus/f3/c07.html">C07</a></td>
+<td><a href="/tabelas_protheus/gatilhos/lem_codloc.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_DESLOC</td>
+<td>Des. Local</td>
+<td colspan="2">Local Prestação Serviço</td>
+<td colspan="4">Descrição do local da prestação do
+serviço.
+</td>
+<td>C</td>
+<td>42</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIF(!INCLUI .AND. !EMPTY(LEM->LEM_CODLOC),POSICIONE("C07",3,XFILIAL("C07")+LEM->LEM_CODLOC,"C07_DESCRI"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_TIPDOC</td>
+<td>Tip. Docum.</td>
+<td colspan="2">Tipo de Documento</td>
+<td colspan="4">Tipo de Recibo/Fatura.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=RPA</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_IDOBRA</td>
+<td>Id Obra</td>
+<td colspan="2">Id Estabelecimento Obra</td>
+<td colspan="4">Id do estabelecimento da obra
+</td>
+<td>C</td>
+<td>36</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_TPINOB</td>
+<td>Tp Inscr Obr</td>
+<td colspan="2">Tipo Inscrição Estab Obra</td>
+<td colspan="4">Tipo Inscrição do estabelecimento da
+obra:
+- 1 - CNPJ;
+- 4 - CNO.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>iif(!Empty(M->LEM_NRINOB), XFUNVldCmp("T9C",3,M->LEM_TPINOB+M->LEM_NRINOB), .T.)</td>
+<td>Iif(!INCLUI .and. !Empty(LEM->LEM_IDOBRA),Posicione("T9C",1,xFilial("T9C")+LEM->LEM_IDOBRA,"T9C_TPINSC"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=CNPJ;4=CNO</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_NRINOB</td>
+<td>Nr Inscr Obr</td>
+<td colspan="2">Núm Inscrição Estab Obra</td>
+<td colspan="4">Deve ser um informado um código válido
+existente no cadastro de Estabelecimento
+Obras.
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>                                             </td>
+<td>iif(!Empty(M->LEM_TPINOB), XFUNVldCmp("T9C",3,M->LEM_TPINOB+M->LEM_NRINOB), .T.)</td>
+<td>Iif(!INCLUI .and. !Empty(LEM->LEM_IDOBRA),Posicione("T9C",1,xFilial("T9C")+LEM->LEM_IDOBRA,"T9C_NRINSC"),"")</td>
+<td><a href="/tabelas_protheus/f3/t9c.html">T9C</a></td>
+<td><a href="/tabelas_protheus/gatilhos/lem_nrinob.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_DSCOBR</td>
+<td>Descr Obra</td>
+<td colspan="2">Descrição Estab Obra</td>
+<td colspan="4">Descrição do Estabelecimento Obra.
+</td>
+<td>C</td>
+<td>220</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>Iif(!INCLUI .and. !Empty(LEM->LEM_IDOBRA),Posicione("T9C",1,xFilial("T9C")+LEM->LEM_IDOBRA,"T9C_DSCOBR"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LEM_PROCID</td>
+<td>Proc ID</td>
+<td colspan="2">ID de Processos.</td>
+<td colspan="4">Campo ID de log de processos.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>T53</td>
+<td colspan="2">LEM_IDPART+LEM_NUMERO</td>
+<td colspan="2">T53_IDPART+T53_NUMFAT</td>
+</tr>
+<tr>
+<td>T9L</td>
+<td colspan="2">LEM_ID</td>
+<td colspan="2">T9L_IDCODF</td>
+</tr>
+<tr>
+<td>CW7</td>
+<td colspan="2">LEM_ID</td>
+<td colspan="2">CW7_IDCODF</td>
+</tr>
+<tr>
+<td>C9H</td>
+<td colspan="2">LEM_ID</td>
+<td colspan="2">C9H_IDCODF</td>
+</tr>
+<tr>
+<td>T5M</td>
+<td colspan="2">LEM_IDPART+LEM_NUMERO</td>
+<td colspan="2">T5M_IDPART+T5M_NUMFAT</td>
+</tr>
+<tr>
+<td>T9M</td>
+<td colspan="2">LEM_ID</td>
+<td colspan="2">T9M_IDCODF</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

@@ -1,0 +1,504 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: TMB - Exames por Agente</title></head>
+<body>
+<font color="orange"><h2 id="TMB">Tabela: TMB - Exames por Agente</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Exames por Agente</b></td><td colspan="2"><b>TMB_FILIAL+TMB_AGENTE+TMB_EXAME</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">TMB_FILIAL+TMB_AGENTE+TMB_EXAME</td><td>Agente + Exame</td><td></td></tr>
+<tr><td>2</td><td colspan="2">TMB_FILIAL+TMB_EXAME+TMB_AGENTE</td><td>Exame + Agente</td><td></td></tr>
+<tr><td>3</td><td colspan="2">TMB_FILIAL+TMB_ESOC</td><td>Cód. eSocial</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>TMB_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Código da filial da empresa. Campo
+alimentado automaticamente pelo módulo
+de Medicina e Segurança do Trabalho com
+base no campo Filial.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMB_AGENTE</td>
+<td>Agente</td>
+<td colspan="2">Codigo Agente Risco</td>
+<td colspan="4">Código que irá identificar o agente de
+risco. Pressione as teclas [Enter]+[F3]
+para selecionar um Agente.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO("TMA",M->TMB_AGENTE)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tma.html">TMA</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tmb_agente.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TMB_NOMAGE</td>
+<td>Nome Agente</td>
+<td colspan="2">Nome do Agente de Risco</td>
+<td colspan="4">Nome do Agente. Campo alimentado
+automaticamente pelo módulo de Medicina
+e Segurança do Trabalho com base no
+campo Agente.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>TMA->(VDISP(TMB->TMB_AGENTE,"TMA_NOMAGE"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMB_EXAME</td>
+<td>Exame</td>
+<td colspan="2">Codigo Exame Medico</td>
+<td colspan="4">Código do Exame Médico. Pressione as
+teclas [Enter]+[F3] para selecionar um
+Exame.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO("TM4",M->TMB_EXAME) .AND. D035CHK()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tm4.html">TM4</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tmb_exame.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>MDT035VLIN()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/048.html">048</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TMB_NOMEXA</td>
+<td>Nome Exame</td>
+<td colspan="2">Nome do Exame</td>
+<td colspan="4">Nome do Exame Médico. Campo alimentado
+automaticamente pelo módulo de Medicina
+e Segurança do Trabalho com base no
+campo Exame.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>TM4->(VDISP(TMB->TMB_EXAME,"TM4_NOMEXA"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMB_VALREF</td>
+<td>Valor Refer.</td>
+<td colspan="2">Valor Referencia</td>
+<td colspan="4">Valor de referência que pessoas em
+condições normais podem apresentar da
+substância na amostra.
+</td>
+<td>N</td>
+<td>10</td>
+<td>2</td>
+<td>@E 9,999,999.99                              </td>
+<td>M->TMA_GRISCO=="2" .and. MDT035HABL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>M->TMA_GRISCO=="2" .and. MDT035HABL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMB_QTIBMP</td>
+<td>IBMP</td>
+<td colspan="2">IBMP</td>
+<td colspan="4">Indíce Biológico máximo permitido.
+Define a quantidade que uma pessoa
+normal pode apresentar de incidência do
+agente com o resultado do exame.
+</td>
+<td>N</td>
+<td>10</td>
+<td>2</td>
+<td>@E 9,999,999.99                              </td>
+<td>M->TMA_GRISCO=="2" .and. MDT035HABL()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>M->TMA_GRISCO=="2" .and. MDT035HABL() .AND. MDT035VLIN()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMB_UNIDAD</td>
+<td>Unid. Medida</td>
+<td colspan="2">Unidade de Medida</td>
+<td colspan="4">Código da Unidade de Medida. Pressione
+as teclas [Enter]+[F3] para selecionar
+uma Unidade.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO("SX5","62"+M->TMB_UNIDAD)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/62.html">62</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tmb_unidad.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>M->TMA_GRISCO=="2" .and. MDT035HABL() .AND. MDT035VLIN()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMB_DESUNI</td>
+<td>Descr. Unid.</td>
+<td colspan="2">Descricao Unidade Medida</td>
+<td colspan="4">Descrição da Unidade de Medida. Campo
+alimentado automaticamente pelo módulo
+de Medicina e Segurança do Trabalho com
+base no campo Unidade de Medida.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>SX5->(VDISP("62"+TMB->TMB_UNIDAD,"X5_DESCRI"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMB_MATBIO</td>
+<td>Mat. Biolog.</td>
+<td colspan="2">Material Biologico</td>
+<td colspan="4">Material biologico que deverá ser
+coletado para realização do exame.
+Opções:
+1=Urina; 2=Sangue; 3=Fezes.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Urina;2=Sangue;3=Fezes</td>
+<td>MDT035VLIN()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMB_USERGI</td>
+<td>Log de Inclu</td>
+<td colspan="2">Log de Inclusão</td>
+<td colspan="4">Indica código criptografado do usuário
+de inclusão do registro.
+</td>
+<td>C</td>
+<td>17</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMB_ESOC</td>
+<td>Cód. eSocial</td>
+<td colspan="2">Código eSocial</td>
+<td colspan="4">Informar o código eSocial do
+Monitoramento Biológico.
+</td>
+<td>C</td>
+<td>7</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>MDTeSocVal('CUQ', 'TN4', 2, 3, M->TMB_ESOC)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/mdtcuq.html">MDTCUQ</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMB_FAIXA</td>
+<td>Faixa</td>
+<td colspan="2">Faixa Periódica</td>
+<td colspan="4">Informe a faixa periódica do exame atual
+a ser considerada.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Empty(M->TMB_FAIXA) .Or. EXISTCPO('TMQ',M->TMB_FAIXA)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tmq.html">TMQ</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMB_INTERP</td>
+<td>Interpr.</td>
+<td colspan="2">Interpretação do Exame</td>
+<td colspan="4">Indique a interpretação do exame,
+podendo ser: 1=EE, 2=SC ou 3=SC+.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@ 9                                          </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=EE;2=SC;3=SC+</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>TN4</td>
+<td colspan="2">TMB_AGENTE+TMB_EXAME</td>
+<td colspan="2">TN4_AGENTE+TN4_EXAME</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

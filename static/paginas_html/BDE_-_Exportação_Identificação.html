@@ -1,0 +1,1419 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: BDE - Exportação Identificação</title></head>
+<body>
+<font color="orange"><h2 id="BDE">Tabela: BDE - Exportação Identificação</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Exportação Identificação</b></td><td colspan="2"><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">BDE_FILIAL+BDE_CODINT+BDE_CODIGO</td><td>Operadora + Codigo</td><td></td></tr>
+<tr><td>2</td><td colspan="2">BDE_FILIAL+BDE_STACAR</td><td>Status Emis.</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>BDE_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDE_CODINT</td>
+<td>Operadora</td>
+<td colspan="2">Operadora</td>
+<td colspan="4">Indica o código da Instituição de
+Saúde,para a qual, serão válidas as
+informações abaixo cadastradas.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@R !.!!!                                     </td>
+<td>ExistCpo('BA0') .And. PLSVLDINT(M->BDE_CODINT)</td>
+<td>PLSINTPAD(RETCODUSR())</td>
+<td><a href="/tabelas_protheus/f3/b89pls.html">B89PLS</a></td>
+<td><a href="/tabelas_protheus/gatilhos/bde_codint.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>BDE_DESINT</td>
+<td>Descricao</td>
+<td colspan="2">Descricao</td>
+<td colspan="4">Este campo sera alimentado
+automaticamente com a descricao da
+Operadora de Saude selecionada no campo
+anterior.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>BA0->(Posicione("BA0",1,xFilial("BA0")+M->BDE_CODINT,"BA0_NOMINT"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDE_CODPLA</td>
+<td>Cod.Plano</td>
+<td colspan="2">Codigo do Plano</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@R !!!!                                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDE_CODIGO</td>
+<td>Codigo</td>
+<td colspan="2">Codigo</td>
+<td colspan="4">Informe o numero do arquivo de importa-
+cao.
+</td>
+<td>C</td>
+<td>12</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>PLSA262NUM(PLSINTPAD(RETCODUSR()))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>BDE_QTD</td>
+<td>Qtd Usuarios</td>
+<td colspan="2">Qtd Usuarios</td>
+<td colspan="4"></td>
+<td>N</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDE_MOTIVO</td>
+<td>Motivo</td>
+<td colspan="2">Motivo</td>
+<td colspan="4">Indica o motivo da emissão deste lote de
+identificação. Este código é buscado a
+partir do cadastro de "Motivos de
+Emissão de Identificação".
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("BPX",M->BDE_CODINT+M->BDE_MOTIVO)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/bpxpls.html">BPXPLS</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDE_STATUS</td>
+<td>Status</td>
+<td colspan="2">Status</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Selecao;2=Geracao Automatica</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDE_UNILOC</td>
+<td>Operad Local</td>
+<td colspan="2">Operadora Local</td>
+<td colspan="4">Indica se será considerado emissão para
+Operadora Local.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("1;2")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Inclui;2=Exclui</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDE_TIPGRU</td>
+<td>Tipo Grupo</td>
+<td colspan="2">Tipo do Grupo</td>
+<td colspan="4">Indica o tipo de grupo empresa do(s)
+qual(is) fazem parte os usuários para os
+quais serão emitidas as identificações.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Fisica;2=Juridica</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDE_EMPDE</td>
+<td>Empresa De</td>
+<td colspan="2">Empresa De</td>
+<td colspan="4">Indica o código do grupo empresa a
+partir do qual serão emitidas as
+identificações.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/b7fpls.html">B7FPLS</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDE_EMPATE</td>
+<td>Empresa Ate</td>
+<td colspan="2">Empresa Ate</td>
+<td colspan="4">Indica o código do grupo empresa até o
+qual serão emitidas as identificações.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>M->BDE_EMPATE >= M->BDE_EMPDE</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/b7fpls.html">B7FPLS</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDE_CONDE</td>
+<td>Contrato De</td>
+<td colspan="2">Contrato De</td>
+<td colspan="4">Indica o código do contrato a partir do
+qual serão emitidas as identificações.
+</td>
+<td>C</td>
+<td>12</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/b7gpls.html">B7GPLS</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDE_CONATE</td>
+<td>Contrato Ate</td>
+<td colspan="2">Contrato Ate</td>
+<td colspan="4">Indica o código do contrato até o qual
+serão emitidas as identificações.
+</td>
+<td>C</td>
+<td>12</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>M->BDE_CONATE >= M->BDE_CONDE</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/b7hpls.html">B7HPLS</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDE_SUBDE</td>
+<td>Sub-Cont.De</td>
+<td colspan="2">Sub-Cont.De</td>
+<td colspan="4">Indica o código do subcontrato a partir
+do qual serão emitidas as
+identificações.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/b7ipls.html">B7IPLS</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDE_SUBATE</td>
+<td>Sub-Cont.Ate</td>
+<td colspan="2">Sub-Cont.Ate</td>
+<td colspan="4">Indica o código do subcontrato até o
+qual serão emitidas as identificações.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>M->BDE_SUBATE >= M->BDE_SUBDE</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/b7jpls.html">B7JPLS</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDE_MATDE</td>
+<td>Matric. De</td>
+<td colspan="2">Matric. De</td>
+<td colspan="4">Indica o código de matrícula a partir do
+qual serão emitidas as identificações.
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/b7kpls.html">B7KPLS</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDE_MATATE</td>
+<td>Matric. Ate</td>
+<td colspan="2">Matric. Ate</td>
+<td colspan="4">Indica o código de matrícula até o qual
+serão emitidas as identificações.
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>M->BDE_MATATE >= M->BDE_MATDE</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/b7kpls.html">B7KPLS</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDE_TIPGER</td>
+<td>Tipo Geracao</td>
+<td colspan="2">Tipo de geracao</td>
+<td colspan="4">Indica se a carteirinha será gerada no
+tipo arquivo txt=  1 – Arquivo ou se
+será diretamente impressa = 2 –
+Impressão.
+Observação: O tipo de geração "2 –
+Impressão" ainda não está disponível
+nesta versão do produto, pois está
+reservada para futuras implementações.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Arquivo;2=Impressao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDE_DATA1</td>
+<td>Dt.Val. De</td>
+<td colspan="2">Data inicial de Validade</td>
+<td colspan="4">Data inicial de validade das
+carteirinhas que será considerada para
+filtro na geração do lote de cartão.
+Ex.: Serão gerados novos cartões para os
+usuários que tenham a carteirinha com
+validade á partir de 01/01/2010 até
+30/12/2010 (BDE_DATA2).
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDE_DATA2</td>
+<td>Dt.Val. Ate</td>
+<td colspan="2">Data final de Validade</td>
+<td colspan="4">Indica a data validade das carterinhas
+atá a qual ocorrerá a emissão. Data de
+Validade = BA1_DTVLCR, indica a data de
+validade do contrato da família por
+exemplo.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>M->BDE_DATA2 >= M->BDE_DATA1</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>!Empty(M->BDE_DATA1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDE_DIRGRV</td>
+<td>Local Grav.</td>
+<td colspan="2">Local de gravacao</td>
+<td colspan="4">Indica o díretório para onde serão
+enviados os arquivos .TXT a serem
+gerados através desta rotina.
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"C:\"</td>
+<td><a href="/tabelas_protheus/f3/bb3pls.html">BB3PLS</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>M->BDE_TIPGER="1"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDE_STACAR</td>
+<td>Status Emis.</td>
+<td colspan="2">Status da emissao</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td>1=Em aberto;2=Encerrado</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDE_MUDVAL</td>
+<td>Muda Validad</td>
+<td colspan="2">Muda validada ?</td>
+<td colspan="4">Indica se a data de validade do cartão
+do usuário deve ser atualizada, ou seja,
+se o campo BA1_DTVLCR deve ser
+atualizado para a data informada abaixo.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>0=Nao;1=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDE_DATVAL</td>
+<td>Data Validad</td>
+<td colspan="2">Data validada</td>
+<td colspan="4">Indica a nova data de validade das
+identificações contidas no lote a ser
+gerado.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>M->BDE_MUDVAL=="1"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDE_DTRNCR</td>
+<td>Val Subcontr</td>
+<td colspan="2">Data validade Subcontrato</td>
+<td colspan="4">Indica a nova data de validade dos
+subcontratos dos usuários contidos no
+lote a ser gerado.
+A data informada neste campo atualizará
+o campo BQC_VALID do subcontrato
+(PLSA660).
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>M->BDE_MUDVAL=="1"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDE_EMPRES</td>
+<td>Resp. Impres</td>
+<td colspan="2">Resp. pela Impressao</td>
+<td colspan="4">Nome do responsável pela emissão do lote
+de cartão.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDE_DATENT</td>
+<td>Dat. Entrega</td>
+<td colspan="2">Previsao para Entrega</td>
+<td colspan="4">Data de Entrega do lote de cartão.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDE_CODPRO</td>
+<td>Cod. Produto</td>
+<td colspan="2">Codigo Produto</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .or. ExistCpo("BI3",M->BDE_CODINT+M->BDE_CODPRO,1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/b2dpls.html">B2DPLS</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDE_DATALI</td>
+<td>Dat. Alt De</td>
+<td colspan="2">Data Inicio de Alteracao</td>
+<td colspan="4"></td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDE_DATALF</td>
+<td>Dat. Alt Ate</td>
+<td colspan="2">Data Fim de Alteracao</td>
+<td colspan="4"></td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>M->BDE_DATALF >= M->BDE_DATALI</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDE_MAIORI</td>
+<td>Contr. Maior</td>
+<td colspan="2">Crontrola Marioridade</td>
+<td colspan="4">Indica se será considerado o controle de
+Maioridade.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDE_GFILHO</td>
+<td>GrP Filho</td>
+<td colspan="2">Grau de Parentesco Filho</td>
+<td colspan="4">Código do grau de parentesco do filho á
+ser considerado para a geração do lote
+de cartão.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("BRP",M->BDE_GFILHO,1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>M->BDE_MAIORI == "1"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDE_IMFILO</td>
+<td>Id Max Filho</td>
+<td colspan="2">Idade Maxima do Filho</td>
+<td colspan="4">Idade máximo do filho (grau de
+parentesco) a ser considerada para gerar
+a carteirinha.
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDE_GFILUN</td>
+<td>Grp Filho Un</td>
+<td colspan="2">Grau de Parent Filho Univ</td>
+<td colspan="4">Código do grau de parentesco do filho
+universitário.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("BRP",M->BDE_GFILUN,1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>M->BDE_MAIORI == "1"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDE_IMFOUN</td>
+<td>Id Mx Fil Un</td>
+<td colspan="2">Idade Max Filho Universit</td>
+<td colspan="4">Idade máximo do filho universitário a
+ser considerada para gerar a
+carteirinha.
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDE_GFILHA</td>
+<td>Grp Filha</td>
+<td colspan="2">Grau de Parentesco Filha</td>
+<td colspan="4">Código do grau de parentesco da filha á
+ser considerado para a geração do lote
+de cartão.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("BRP",M->BDE_GFILHA,1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>M->BDE_MAIORI == "1"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDE_IMFIHA</td>
+<td>Id Max Filha</td>
+<td colspan="2">Idade Maxima da Filha</td>
+<td colspan="4">Idade máximo da filha (grau de
+parentesco) a ser considerada para gerar
+a carteirinha.
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDE_GFILAU</td>
+<td>Grp Filha Un</td>
+<td colspan="2">Grau de Parent Filha Univ</td>
+<td colspan="4">Código do grau de parentesco da filha
+universitária.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("BRP",M->BDE_GFILAU,1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>M->BDE_MAIORI == "1"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDE_IMFAUN</td>
+<td>Id Mx Fia Un</td>
+<td colspan="2">Idade Max Filha Universit</td>
+<td colspan="4">Informe a Idade Maxima para Filha
+Universitaria.
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDE_GERINT</td>
+<td>Ger Int S/N</td>
+<td colspan="2">Gera Intercambio S/N</td>
+<td colspan="4">Permitir gerar o cartão de identificação
+para usuários de intercâmbio?
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>0=Nao;1=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDE_GRPDE</td>
+<td>Grupo De</td>
+<td colspan="2">Grupo de produto De</td>
+<td colspan="4">BDE_GRPDE: Grupo de produto/plano á
+partir de qual será considerado o filtro
+para emissão de lote.
+Exemplo:
+Grupo 1 (plano básico e intermediário).
+Grupo 2 (plano avançado, executivo
+etc.).
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>If(EMPTY(M->BDE_GRPDE),.T.,M->BDE_GRPDE <= M->BDE_GRPATE )</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/by4pl.html">BY4PL</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDE_GRPATE</td>
+<td>Grupo Ate</td>
+<td colspan="2">Grupo de Produto Ate</td>
+<td colspan="4">BDE_GRPATE: Grupo de produto/plano até
+qual será considerado o filtro para
+emissão de lote.
+Exemplo:
+Grupo 1 (plano básico e intermediário).
+Grupo 2 (plano avançado, executivo
+etc.).
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>If(EMPTY(M->BDE_GRPATE),.T.,M->BDE_GRPATE >= M->BDE_GRPDE )</td>
+<td>"ZZZZ"</td>
+<td><a href="/tabelas_protheus/f3/by4pl.html">BY4PL</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDE_NOMCAR</td>
+<td>Nome Cartão</td>
+<td colspan="2">Nome Impresso no Cartão</td>
+<td colspan="4">Esse campo define como será impresso o
+nome no cartão. As opções, informadas no
+momento da inclusão da vida, são: Nome
+Cart. (Nome Cart. - BTS_NOMCAR) ou Nome
+Usuário (Nome - BTS_NOMUSR).
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Nome Cart.; 2=Nome Usuario</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BDE_PROTOC</td>
+<td>Protocolo 	</td>
+<td colspan="2">Protocolo Web</td>
+<td colspan="4">Este campo faz referencia  ao Numero de
+Protocolo Web emitido ao Beneficiario na
+Rotina de Informe/Perda e Roubo do
+Portal Beneficiário
+</td>
+<td>C</td>
+<td>12</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>BDC</td>
+<td colspan="2">BDE_CODIGO</td>
+<td colspan="2">BDC_LOTREN</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

@@ -1,0 +1,489 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: RE4 - Advogados Processos</title></head>
+<body>
+<font color="orange"><h2 id="RE4">Tabela: RE4 - Advogados Processos</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Advogados Processos</b></td><td colspan="2"><b>RE4_FILIAL+RE4_PRONUM+RE4_CODADV</b></td><td><b>APTA100</b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">RE4_FILIAL+RE4_PRONUM+RE4_CODADV</td><td>Num.Processo + Cod.Advogado</td><td></td></tr>
+<tr><td>2</td><td colspan="2">RE4_FILIAL+RE4_CODADV+RE4_PRONUM</td><td>Cod.Advogado + Num.Processo</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>RE4_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RE4_PRONUM</td>
+<td>Num.Processo</td>
+<td colspan="2">Numero do Processo</td>
+<td colspan="4">Código do Processo Trabalhista em que o
+Advogado está atuando. Campo chave, que
+não permite alteração.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RE4_CODADV</td>
+<td>Cod.Advogado</td>
+<td colspan="2">Codigo do Advogado</td>
+<td colspan="4">Informe o código do Advogado ou
+pressione F3 para selecionar dos
+existentes.
+Apenas advogados identificados
+aparecerão na consulta - Campo "Ident.
+Prof." (RD0_IDENT = "ADV") no Cadastro
+de Participantes.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Re4CodAdvValid()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/rd0adv.html">RD0ADV</a></td>
+<td><a href="/tabelas_protheus/gatilhos/re4_codadv.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>Re4Sx3When()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RE4_ADVNOM</td>
+<td>Nome Advog.</td>
+<td colspan="2">Nome do Advogado</td>
+<td colspan="4">Nome do Advogado. Campo virtual deduzido
+a partir do Cadastro de Pessoas.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(Inclui,"",fDesc("RD0",RE4->RE4_CODADV,"RD0_NOME"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RE4_SIGLA</td>
+<td>Sigla</td>
+<td colspan="2">Sigla Registro de Classe</td>
+<td colspan="4">Sigla do Registro de Classe do Advogado
+que está atuando no Processo
+Trabalhista. Campo visual, deduzido a
+partir do Cadastro de Registros de
+Classe da Pessoa.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Re4SiglaRel()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RE4_DS_REG</td>
+<td>Desc. Reg.</td>
+<td colspan="2">Descr. Registro de Classe</td>
+<td colspan="4">Descrição do Registro de Classe do
+Advogado do Processo. Campo virtual,
+deduzido a partir do Cadastro de
+Registros de Classe, com base na
+Identificação Profissional do código da
+Pessoa informada como Advogado.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(EMPTY(RE4->RE4_CODADV),"",FDESC("RE8","ADV","RE8_DESCR"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>FDESC("RE8",REU->REU_SIGLA,"RE8_DESCR",,,2)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RE4_OAB</td>
+<td>Nro.Registro</td>
+<td colspan="2">Numero Registro de Classe</td>
+<td colspan="4">Informe o número do Registro de Classe
+do Advogado.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>FDesc("REU",RE4->RE4_CODADV+FDESC("RE8","ADV","RE8_SIGLA"),"REU_NUMREG")</td>
+<td><a href="/tabelas_protheus/f3/reuadv.html">REUADV</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>FDesc("REU",M->RE4_CODADV+FDESC("RE8","ADV","RE8_SIGLA"),"REU_DS_REG")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RE4_PARTE</td>
+<td>Parte</td>
+<td colspan="2">Reclamante ou Reclamada</td>
+<td colspan="4">Informe a qual parte pertence o
+Advogado:
+1=Reclamada
+2=Reclamante.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Reclamada;2=Reclamante</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RE4_ESCRIT</td>
+<td>Cod.Escrit.</td>
+<td colspan="2">Cod. Escrit. Advocacia</td>
+<td colspan="4">Informe o código do Escritório de
+Advocacia ou pressione F3 para consultar
+os códigos existentes.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>VAZIO() .OR. EXISTCPO("RE3",M->RE4_ESCRIT)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/re3.html">RE3</a></td>
+<td><a href="/tabelas_protheus/gatilhos/re4_escrit.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RE4_ESCNOM</td>
+<td>Nome Escrit.</td>
+<td colspan="2">Nome do Escrit. Advocac.</td>
+<td colspan="4">Nome do Escritório de Advocacia através
+do qual o Advogado está atuando no
+Processo. Campo virtual, deduzido a
+partir do Cadastro de Escritórios de
+Advocacia.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(Inclui,"",fDesc("RE3",RE4->RE4_ESCRIT,"RE3_NOME"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RE4_DTINGR</td>
+<td>Data Ingres.</td>
+<td colspan="2">Data de Ingresso no Proc.</td>
+<td colspan="4">Informe a Data de ingresso do Advogado
+no Processo.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>99/99/9999                                   </td>
+<td>VAZIO() .OR. (M->RE4_DTINGR <= DDATABASE)</td>
+<td>IF(Inclui,CtoD("  /  /  "),RE4->RE4_DTINGR)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RE4_DTAFAS</td>
+<td>Data Afast.</td>
+<td colspan="2">Data de Afast. do Proc.</td>
+<td colspan="4">Informe a data de afastamento do
+Advogado no Processo.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>VAZIO() .OR. Re4DtAfasValid('M->RE4_DTAFAS')</td>
+<td>IF(INCLUI,CtoD("  /  /  "),IF(EMPTY(RE4->RE4_DTINGR),CtoD("  /  /  "),DDATABASE))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RE4_COBS</td>
+<td>C_Obs.</td>
+<td colspan="2">Cod.Memo Observacoes</td>
+<td colspan="4">Campo memo, destinado à informação das
+Observações relacionadas à vindulação do
+Advogado ao Processo.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RE4_OBS</td>
+<td>Obs.</td>
+<td colspan="2">Observacoes</td>
+<td colspan="4"></td>
+<td>M</td>
+<td>80</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,MSMM(RE4->RE4_COBS,80,,,,,,,,"RE6"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

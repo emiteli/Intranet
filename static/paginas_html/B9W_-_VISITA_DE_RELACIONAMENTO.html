@@ -1,0 +1,884 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: B9W - VISITA DE RELACIONAMENTO</title></head>
+<body>
+<font color="orange"><h2 id="B9W">Tabela: B9W - VISITA DE RELACIONAMENTO</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>VISITA DE RELACIONAMENTO</b></td><td colspan="2"><b>B9W_FILIAL+B9W_CODINT+B9W_CODPRE+B9W_SEQVIS</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">B9W_FILIAL+B9W_CODINT+B9W_CODPRE</td><td>Operadora + Prestador</td><td></td></tr>
+<tr><td>2</td><td colspan="2">B9W_FILIAL+B9W_CODINT+B9W_SEQVIS</td><td>Operadora + Seq Visita</td><td></td></tr>
+<tr><td>3</td><td colspan="2">B9W_FILIAL+B9W_CODINT+B9W_AGENTE+DTOS(B9W_DATAAG)</td><td>Operadora + Agente + Agendamento</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>B9W_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Ssitema</td>
+<td colspan="4">Filial do Sistema
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B9W_AGENTE</td>
+<td>Agente</td>
+<td colspan="2">Código do Agente</td>
+<td colspan="4">Código do Agente que realizará a visita
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>B9H->(ExistCpo("B9H",PLSINTPAD()+PLS806Zero(M->B9W_AGENTE),2)) .OR. EmpTy(M->B9W_AGENTE)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/b9pb9h.html">B9PB9H</a></td>
+<td><a href="/tabelas_protheus/gatilhos/b9w_agente.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B9W_NOMAGT</td>
+<td>Nome</td>
+<td colspan="2">Nome do Agente</td>
+<td colspan="4">Nome do Agente
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(INCLUI,"",POSICIONE("B9H",2,XFILIAL("B9H")+PLSINTPAD()+PLS806ZERO(B9W->B9W_AGENTE),"B9H_NOME"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/b9w_nomagt.html">S</td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("B9H",2,XFILIAL("B9H")+B9W->B9W_CODINT+B9W->B9W_AGENTE,"B9H_NOME")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B9W_CODPRE</td>
+<td>Prestador</td>
+<td colspan="2">Código do Prestador</td>
+<td colspan="4">Código do Prestador
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>BAU->(ExistCpo("BAU",PLS806Zero(M->B9W_CODPRE))) .OR. Empty(M->B9W_CODPRE)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/b9wbau.html">B9WBAU</a></td>
+<td><a href="/tabelas_protheus/gatilhos/b9w_codpre.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>IF(INCLUI, .T., .F.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B9W_PRESTA</td>
+<td>Descrição</td>
+<td colspan="2">Descrição Prestador</td>
+<td colspan="4">nome do prestador
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(INCLUI,"",POSICIONE("BAU",1,XFILIAL("B9W")+B9W->B9W_CODPRE,"BAU_NOME"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/b9w_presta.html">S</td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("BAU",1,XFILIAL("B9W")+B9W->B9W_CODPRE,"BAU_NOME")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B9W_CPFCGC</td>
+<td>CPF/CNPJ</td>
+<td colspan="2">CPF/CNPJ Prestador</td>
+<td colspan="4">Cpf/CNPJ do prestador
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(INCLUI,"",POSICIONE("BAU",1,XFILIAL("B9W")+B9W->B9W_CODPRE,"BAU_CPFCGC"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("BAU",1,XFILIAL("B9W")+B9W->B9W_CODPRE,"BAU_CPFCGC")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B9W_DATAAG</td>
+<td>Agendamento</td>
+<td colspan="2">Data Agendada</td>
+<td colspan="4">Data prevista da visita
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>M->B9W_DATAAG>=Date()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B9W_HORAAG</td>
+<td>Hora Agenda</td>
+<td colspan="2">Horário agendado</td>
+<td colspan="4">Horário previsto da visita
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@R 99:99                                     </td>
+<td>PLSVLDHOR(M->B9W_HORAAG)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B9W_DATAVI</td>
+<td>Data Visita</td>
+<td colspan="2">Data real da visita</td>
+<td colspan="4">Data Efetiva da Visita
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>M->B9W_DATAVI >= M->B9W_DATAAG .AND. !Empty(M->B9W_DATAAG) .AND. M->B9W_DATAVI<=Date()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>IF(INCLUI, .F., .T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B9W_HORAVI</td>
+<td>Hora Visita</td>
+<td colspan="2">Horário real da visita</td>
+<td colspan="4">Hora efetiva da visita
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@R 99:99                                     </td>
+<td>PLSVLDHOR(M->B9W_HORAVI)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>! (INCLUI)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B9W_DESCON</td>
+<td>Contato</td>
+<td colspan="2">Descrição do contato</td>
+<td colspan="4">Nome do contato
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B9W_TELCON</td>
+<td>Telefone</td>
+<td colspan="2">Telefone do contato</td>
+<td colspan="4">Telefone do contato
+</td>
+<td>C</td>
+<td>11</td>
+<td>0</td>
+<td>@R (99) 99999-9999                           </td>
+<td>ValFone()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B9W_EMAIL</td>
+<td>E-mail</td>
+<td colspan="2">E-mail de Contato</td>
+<td colspan="4">e-mail do contato
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>IsEmail(AllTrim(M->B9W_EMAIL))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B9W_MOTVIS</td>
+<td>Mot Visita</td>
+<td colspan="2">Motivo da Visita</td>
+<td colspan="4">Código do motivo da visita
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>((B9L->(ExistCpo("B9L",PLSINTPAD()+PLS806Zero(M->B9W_MOTVIS), 7))  .AND. PLS807VTPV(M->B9W_MOTVIS))  .OR. Empty(M->B9W_MOTVIS))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/b9wb9l.html">B9WB9L</a></td>
+<td><a href="/tabelas_protheus/gatilhos/b9w_motvis.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B9W_DESVIS</td>
+<td>Motivo</td>
+<td colspan="2">Descrição Motivo Visita</td>
+<td colspan="4">Motivo da Visita
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(INCLUI,"",B9L->(B9L_DESVIS))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/b9w_desvis.html">S</td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("B9L",6,XFILIAL("B9L")+PLSINTPAD()+B9W->B9W_MOTVIS,"B9L_DESVIS")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B9W_CODOBS</td>
+<td>Observação</td>
+<td colspan="2">Observação Padrao Portal</td>
+<td colspan="4">Código da observação padrão
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>B9N->(ExistCpo("B9N",PLSINTPAD()+PLS806Zero(M->B9W_CODOBS), 1)).OR. EmpTy(M->B9W_CODOBS)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/b9pb9n.html">B9PB9N</a></td>
+<td><a href="/tabelas_protheus/gatilhos/b9w_codobs.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B9W_DESOBS</td>
+<td>Descrição</td>
+<td colspan="2">Descri Observação Padrão</td>
+<td colspan="4">Observação padrão
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(INCLUI,"",B9N->B9N_OBSERV)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/b9w_desobs.html">S</td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B9W_CODSOL</td>
+<td>Solicitante</td>
+<td colspan="2">Código do solicitante</td>
+<td colspan="4">Solicitante da visita
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>UsrExist(PLS806Zero(M->B9W_CODSOL)) .OR. Empty(M->B9W_CODSOL)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/b9pusr.html">B9PUSR</a></td>
+<td><a href="/tabelas_protheus/gatilhos/b9w_codsol.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B9W_DESSOL</td>
+<td>Solicitante</td>
+<td colspan="2">Descrição Solicitante</td>
+<td colspan="4">Identificação do solicitante
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/b9w_dessol.html">S</td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B9W_CODCAN</td>
+<td>Canais Com.</td>
+<td colspan="2">Usou Canais Comunicação?</td>
+<td colspan="4">O prestador usa/usou algum canal de
+comunicação?
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>B9M->(ExistCpo("B9M",PLSINTPAD()+PLS806Zero(M->B9W_CODCAN), 2)).OR. EmpTy(M->B9W_CODCAN)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/b9wb9m.html">B9WB9M</a></td>
+<td><a href="/tabelas_protheus/gatilhos/b9w_codcan.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B9W_DESCAN</td>
+<td>Descrição</td>
+<td colspan="2">Descr Canal comunicação</td>
+<td colspan="4">Descrição do canal de comunicação
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(INCLUI,"",B9M->B9M_DESCAN)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/b9w_descan.html">S</td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B9W_CODINF</td>
+<td>Recebe Info?</td>
+<td colspan="2">Rec Inf eletrôn.Operadora</td>
+<td colspan="4">Código de informação eletrônica
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>B9F->(ExistCpo("B9F",PLSINTPAD()+PLS806Zero(M->B9W_CODINF), 2)).OR. EmpTy(M->B9W_CODINF)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/b9wb9f.html">B9WB9F</a></td>
+<td><a href="/tabelas_protheus/gatilhos/b9w_codinf.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B9W_DESINF</td>
+<td>Descrição</td>
+<td colspan="2">Descr Info eletrônica</td>
+<td colspan="4">Descrição informação eletrônica
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(INCLUI,"",B9F->B9F_DESCRI)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/b9w_desinf.html">S</td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B9W_END2</td>
+<td>Outro end?</td>
+<td colspan="2">Há Outro End Atendimento?</td>
+<td colspan="4">Indica se o prestador atende em outra
+localidade
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=N�o;1=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B9W_SCON</td>
+<td>Usa Portal?</td>
+<td colspan="2">Prestador Utiliza Portal?</td>
+<td colspan="4">Indica se o prestador utiliza o Saúde
+Connect
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=N�o;1=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B9W_SEQVIS</td>
+<td>Seq Visita</td>
+<td colspan="2">Sequencial da Visita</td>
+<td colspan="4">Sequencial da Visita para evitar
+problemas com o X2 único
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>GETSXENUM("B9W", "B9W_SEQVIS")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B9W_OBSERV</td>
+<td>Observação</td>
+<td colspan="2">Observações da Visita</td>
+<td colspan="4">Observação sobre a visita realizada
+</td>
+<td>M</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B9W_CODINT</td>
+<td>Operadora</td>
+<td colspan="2">Código da Operadora</td>
+<td colspan="4">Código da Operadora
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@R !.!!!                                     </td>
+<td></td>
+<td>PLSINTPAD()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B9W_DESINT</td>
+<td>Desc Ope</td>
+<td colspan="2">Descrição Operadora</td>
+<td colspan="4">Nome da operadora
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>POSICIONE("BA0",1,XFILIAL("BA0")+M->B9W_CODINT,"BA0_NOMINT")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

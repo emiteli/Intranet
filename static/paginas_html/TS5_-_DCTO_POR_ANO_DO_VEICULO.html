@@ -1,0 +1,263 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: TS5 - DCTO POR ANO DO VEICULO</title></head>
+<body>
+<font color="orange"><h2 id="TS5">Tabela: TS5 - DCTO POR ANO DO VEICULO</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>DCTO POR ANO DO VEICULO</b></td><td colspan="2"><b>TS5_FILIAL+TS5_CODFAM+TS5_TIPMOD+TS5_DOCTO</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">TS5_FILIAL+TS5_CODFAM+TS5_TIPMOD+TS5_DOCTO</td><td>Familia + Tipo Modelo + Taxa</td><td></td></tr>
+<tr><td>2</td><td colspan="2">TS5_FILIAL+TS5_DOCTO</td><td>Taxa</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>TS5_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Código da filial da empresa.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TS5_CODFAM</td>
+<td>Familia</td>
+<td colspan="2">Codigo da Familia</td>
+<td colspan="4">Código da Família de Bens.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO('ST6',M->TS5_CODFAM)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/st6.html">ST6</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ts5_codfam.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>Inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TS5_NOMFAM</td>
+<td>Nome Familia</td>
+<td colspan="2">Nome da Familia</td>
+<td colspan="4">Nome da Família do bem.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>ST6->(VDISP(TS5->TS5_CODFAM,'T6_NOME'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione('ST6',1,xFilial('ST6')+TS5->TS5_CODFAM,'T6_NOME')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TS5_TIPMOD</td>
+<td>Tipo Modelo</td>
+<td colspan="2">Codigo do Tipo de Modelo</td>
+<td colspan="4">Código do Tipo de Modelo do Bem.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO('TQR',M->TS5_TIPMOD)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tqr.html">TQR</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>Inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TS5_NOMMOD</td>
+<td>Nome Modelo</td>
+<td colspan="2">Nome do Tipo de Modelo</td>
+<td colspan="4">Nome do Tipo de Modelo do Bem.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>TQR->(VDISP(TS5->TS5_TIPMOD,'TQR_DESMOD'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione('TQR',1,xFilial('TQR')+TS5->TS5_TIPMOD,'TQR_DESMOD')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TS5_DOCTO</td>
+<td>Taxa</td>
+<td colspan="2">Codigo da Taxa</td>
+<td colspan="4">Código do Documento (Taxa)
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO('TS0',M->TS5_DOCTO) .And. EXISTCHAV('TS5',M->TS5_CODFAM+M->TS5_TIPMOD+M->TS5_DOCTO)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ts0.html">TS0</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ts5_docto.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>Inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TS5_NOMDOC</td>
+<td>Nome Taxa</td>
+<td colspan="2">Descricao da Taxa</td>
+<td colspan="4">Descrição do Documento (Taxa)
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>TS0->(VDISP(TS5->TS5_DOCTO,'TS0_NOMDOC'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione('TS0',1,xFilial( 'TS0' )+TS5->TS5_DOCTO,'TS0_NOMDOC')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

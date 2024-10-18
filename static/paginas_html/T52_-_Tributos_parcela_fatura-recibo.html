@@ -1,0 +1,473 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: T52 - Tributos parcela fatura/recibo</title></head>
+<body>
+<font color="orange"><h2 id="T52">Tabela: T52 - Tributos parcela fatura/recibo</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Tributos parcela fatura/recibo</b></td><td colspan="2"><b>T52_FILIAL+T52_ID+T52_IDPART+T52_NUMFAT+T52_IDTSER+T52_NUMPAR+DTOS(T52_DTPGTO)+T52_CODTRI+T52_CODPAG</b></td><td><b>TAFA448</b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">T52_FILIAL+T52_ID+T52_IDPART+T52_NUMFAT+T52_IDTSER+T52_NUMPAR+T52_CODTRI+T52_CODPAG</td><td>ID + Participante + Num. Fat/Rec + Tipo Serviço + Num Parcela + Cod. T</td><td></td></tr>
+<tr><td>2</td><td colspan="2">T52_FILIAL+T52_CODTRI+T52_CODPAG</td><td>Cod. Tributo + Id Cod Pagam</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>T52_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Deve reprensentar neste campo o código
+da filial referente ao cadastro.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>T52_ID</td>
+<td>ID</td>
+<td colspan="2">Identificador do Registro</td>
+<td colspan="4">Deve representar neste campo a
+identificação única do resgistro. Este
+código é controlado internamente pelo
+sistema de forma incremental e única.
+</td>
+<td>C</td>
+<td>36</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/085.html">085</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>T52_CODTRI</td>
+<td>Cod. Tributo</td>
+<td colspan="2">Código do Tributo</td>
+<td colspan="4">Neste campo deve representar o código do
+tributo conforme especificações do do
+layout totvs registro T013AP.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td>XFUNVldCmp("C3S",3)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/c3s.html">C3S</a></td>
+<td><a href="/tabelas_protheus/gatilhos/t52_codtri.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>T52_DESTRI</td>
+<td>Desc Tributo</td>
+<td colspan="2">Descrição do Tributo</td>
+<td colspan="4">Descrição do Tributo
+</td>
+<td>C</td>
+<td>220</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI.AND.!EMPTY(T52->T52_CODTRI),POSICIONE("C3S",3,XFILIAL("C3S")+T52->T52_CODTRI,"C3S_CODIGO+'-'+C3S_DESCRI"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>T52_CODPAG</td>
+<td>Id Cod Pagam</td>
+<td colspan="2">Id do Código de Pagamento</td>
+<td colspan="4">Neste campo deve representar o ID do
+código de pagamento conforme tabela
+disponibilizada pelo governo.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>xFunVldCmp("CUF",,,,2)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/cuf.html">CUF</a></td>
+<td><a href="/tabelas_protheus/gatilhos/t52_codpag.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>T52_DESPAG</td>
+<td>D Cod Pagamt</td>
+<td colspan="2">Desc. Código do Pagamento</td>
+<td colspan="4">Neste campo deve representar a descrição
+do código de pagamento
+</td>
+<td>C</td>
+<td>220</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>Iif(!INCLUI .and. !Empty(T52->T52_CODPAG),Posicione("CUF",1,xFilial("CUF")+T52->T52_CODPAG,"CUF_CODIGO+' - '+CUF_DESCRI"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>T52_BASECA</td>
+<td>Base Calculo</td>
+<td colspan="2">Base de Calculo Tributo</td>
+<td colspan="4">Base de calculo do tributo
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>T52_ALIQ</td>
+<td>Alíquota</td>
+<td colspan="2">Alíquota</td>
+<td colspan="4">Alíquota do tributo.
+</td>
+<td>N</td>
+<td>8</td>
+<td>4</td>
+<td>@E 999.9999                                  </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/t52_aliq.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>T52_VLTRIB</td>
+<td>Vlr. Tributo</td>
+<td colspan="2">Valor do Tributo</td>
+<td colspan="4">Neste campo deve representar o valor do
+tributo.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>T52_IDPART</td>
+<td>Participante</td>
+<td colspan="2">ID do Participante</td>
+<td colspan="4">ID do Participante (Campo de relação)
+</td>
+<td>C</td>
+<td>36</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>T52_NUMFAT</td>
+<td>Num. Fat/Rec</td>
+<td colspan="2">Numero da Fatura/Recibo</td>
+<td colspan="4">Numero da Fatura/Recibo (Campo de
+Relação)
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>T52_NUMPAR</td>
+<td>Num Parcela</td>
+<td colspan="2">Número da Parcela</td>
+<td colspan="4">Numero da Parcela da Fatura (campo de
+relação)
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>T52_IDTSER</td>
+<td>Tipo Serviço</td>
+<td colspan="2">Tipo de Serviço</td>
+<td colspan="4">Id Tipo de Serviço (campo de
+relacionamento)
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/036.html">036</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>T52_DTPGTO</td>
+<td>Data Pgto</td>
+<td colspan="2">Data do Pagamento</td>
+<td colspan="4">Data que foi realizado o pagamento da
+parcela. (campo de relacionamento)
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

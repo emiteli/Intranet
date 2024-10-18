@@ -1,0 +1,1049 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: GI8 - Num. e Movimento de Bilhetes</title></head>
+<body>
+<font color="orange"><h2 id="GI8">Tabela: GI8 - Num. e Movimento de Bilhetes</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Num. e Movimento de Bilhetes</b></td><td colspan="2"><b>GI8_FILIAL+GI8_TPDOC+GI8_COMPLE+GI8_TIPPAS+GI8_SERIE+GI8_SUBSER+GI8_NUMCOM+GI8_NUMINI+GI8_NUMFIM</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">GI8_FILIAL+GI8_TPDOC+GI8_COMPLE+GI8_TIPPAS+GI8_SERIE+GI8_SUBSER+GI8_NUMCOM+GI8_NUMINI+GI8_NUMFIM</td><td>Cód.Tp.Doc. + Complemento + Tp.Passagem + Série + Subsérie + Num.Compl</td><td></td></tr>
+<tr><td>2</td><td colspan="2">GI8_FILIAL+GI8_NUMMOV</td><td>Núm.Movim.</td><td></td></tr>
+<tr><td>3</td><td colspan="2">GI8_FILIAL+DTOS(GI8_DATA)+GI8_HORA+GI8_TPMOV</td><td>Dt.Moviment. + Hora Mov. + Tipo.Movim.</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>GI8_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Preencher com a Filial do Sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI8_NUMMOV</td>
+<td>Núm.Movim.</td>
+<td colspan="2">Número do Movimento</td>
+<td colspan="4">Mostra o número da Movimentação.
+</td>
+<td>C</td>
+<td>12</td>
+<td>0</td>
+<td>999999999999                                 </td>
+<td></td>
+<td>IIF(INCLUI,GETSXENUM("GI8","GI8_NUMMOV"),GI8->GI8_NUMMOV)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GI8_DATA</td>
+<td>Dt.Moviment.</td>
+<td colspan="2">Data do Movimento</td>
+<td colspan="4">Preenche com a Data do Movimento.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>dDataBase</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>Inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI8_TPDOC</td>
+<td>Cód.Tp.Doc.</td>
+<td colspan="2">Cód.Tp.Doc.</td>
+<td colspan="4">Preencher com o código do tipo de
+documento.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .OR. ExistCpo("GYA")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gya.html">GYA</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gi8_tpdoc.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>Inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GI8_DOCUME</td>
+<td>Tipo Doc.</td>
+<td colspan="2">Tipo Documento</td>
+<td colspan="4">Mostra a Descrição do Tipo de Documento.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!INCLUI, POSICIONE("GYA", 1, XFILIAL("GYA") + GI8->GI8_TPDOC, "GYA_DESCRI"), "")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td>INCLUI</td>
+<td>POSICIONE("GYA",1,XFILIAL("GYA")+GI8->GI8_TPDOC,"GYA_DESCRI")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI8_COMPLE</td>
+<td>Complemento</td>
+<td colspan="2">Complemento</td>
+<td colspan="4">Complemento da passagem.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=PE(Passagem Estrada); 2=PA(Passagem Agencia)</td>
+<td>inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI8_TIPPAS</td>
+<td>Tp.Passagem</td>
+<td colspan="2">Tipo de Passagem</td>
+<td colspan="4">Informe o tipo de passagem estrada.
+1=Motorista;
+2=Cobrador.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Motorista;2=Cobrador</td>
+<td>inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI8_SERIE</td>
+<td>Série</td>
+<td colspan="2">Série dos Documentos</td>
+<td colspan="4">Preencher com a série dos documentos.
+Para consultar os bilhetes disponiveis
+pressione F4 para exibir as faixas
+disponiveis.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>Inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GI8_SUBSER</td>
+<td>Subsérie</td>
+<td colspan="2">Subsérie</td>
+<td colspan="4">Subsérie dos documentos.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@R 999                                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GI8_NUMCOM</td>
+<td>Num.Compl.</td>
+<td colspan="2">Número Complemento</td>
+<td colspan="4">Número do complemento.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI8_NUMINI</td>
+<td>Num.Inicial</td>
+<td colspan="2">Numeração Inicial</td>
+<td colspan="4">Preencher com a numeração inicial dos
+documentos.
+Para consultar os bilhetes disponiveis
+pressione F4 para exibir as faixas.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@R 999999                                    </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/gi8_numini.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>Inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GI8_NUMFIM</td>
+<td>Num.Final</td>
+<td colspan="2">Numeração Final</td>
+<td colspan="4">Preencher com a numeração final dos
+documentos.
+Para consultar os bilhetes disponiveis
+pressione F4 para exibir as faixas
+disponiveis para realizar a
+movimentação.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@R 999999                                    </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/gi8_numfim.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>Inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GI8_QUANT</td>
+<td>Qnt.Solicit.</td>
+<td colspan="2">Quantidade Solicitada</td>
+<td colspan="4">Mostra a quantidade solicitada de
+bilhetes.
+</td>
+<td>N</td>
+<td>6</td>
+<td>0</td>
+<td>@E 999,999                                   </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI8_DTINI</td>
+<td>Data Inicial</td>
+<td colspan="2">Data Inicial</td>
+<td colspan="4">Informe a data inicial do bloco
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>DDATABASE</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI8_DTFIM</td>
+<td>Dt. Vencimen</td>
+<td colspan="2">Data de Vencimento</td>
+<td colspan="4">Inclua a data de vencimento do bloco
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI8_SALDO</td>
+<td>Saldo</td>
+<td colspan="2">Saldo</td>
+<td colspan="4">Saldo do documento.
+</td>
+<td>N</td>
+<td>6</td>
+<td>0</td>
+<td>@E 999,999                                   </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI8_DEPSOL</td>
+<td>Departamento</td>
+<td colspan="2">Departamento</td>
+<td colspan="4">Departamento solicitante.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SQB")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sqb.html">SQB</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI8_ULTBIL</td>
+<td>Ult.Doc.</td>
+<td colspan="2">Ultimo Doc.</td>
+<td colspan="4">Ultimo documento.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI8_EMISSO</td>
+<td>Emissor</td>
+<td colspan="2">Emissor</td>
+<td colspan="4">Emissor.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("GYG")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gyg.html">GYG</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI8_CHAVE</td>
+<td>Chave Oper.</td>
+<td colspan="2">Chave da Operacao</td>
+<td colspan="4">Preenche com a chave da operação.
+</td>
+<td>C</td>
+<td>16</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI8_NEMISS</td>
+<td>Desc.Emissor</td>
+<td colspan="2">Descrição Emissor</td>
+<td colspan="4">Descrição do emissor.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIF(!INCLUI,POSICIONE('GYG',1,XFILIAL('GI8')+GI8->GI8_EMISSO,'GYG_NOME'),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI8_FUNPAS</td>
+<td>Funcionário</td>
+<td colspan="2">Funcionário</td>
+<td colspan="4">Funcionário.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SRA")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sra.html">SRA</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI8_NFUNPA</td>
+<td>Nome Func.</td>
+<td colspan="2">Nome Func.</td>
+<td colspan="4">Nome do funcionário.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIF(!INCLUI,POSICIONE('SRA',1,XFILIAL('SRA')+GI8->GI8_FUNPAS,'RA_NOME'),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI8_DTALOC</td>
+<td>Dt.Alocação</td>
+<td colspan="2">Data da Alocação</td>
+<td colspan="4">Data da alocação.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI8_NAGENC</td>
+<td>Agência</td>
+<td colspan="2">Agência</td>
+<td colspan="4">Mostra a Descrição da Agência.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("GI6",1,XFILIAL("GI6")+GI8_AGENCI,"GI6_DESCRI")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI8_CODFUN</td>
+<td>Func Resp</td>
+<td colspan="2">Funcionario Responsavel</td>
+<td colspan="4">Funcionário Reponsável
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI8_NOMFUN</td>
+<td>Nome Resp</td>
+<td colspan="2">Nome Responsável</td>
+<td colspan="4">Nome do Funcionario Responsavel
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI8_TPPAS</td>
+<td>Tp Passagem</td>
+<td colspan="2">Tipo de Passagem</td>
+<td colspan="4">Tipo de passagem
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Motorista;2=Cobrador</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI8_DTREM</td>
+<td>Data Remessa</td>
+<td colspan="2">Data da Remessa</td>
+<td colspan="4">Data da remessa.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI8_HORA</td>
+<td>Hora Mov.</td>
+<td colspan="2">Hora do Movimento</td>
+<td colspan="4">Mostra a Hora da Movimentação.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@R 99:99:99                                  </td>
+<td></td>
+<td>Time()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI8_AGENCI</td>
+<td>Cód. Agência</td>
+<td colspan="2">Código da Agência</td>
+<td colspan="4">Preencher com o código da Agência.
+Para consultar os bilhetes disponiveis
+pressione F4 para exibir as faixas
+disponiveis para realizar a
+movimentação.
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .OR. ExistCpo("GI6")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gi6.html">GI6</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gi8_agenci.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>M->GI8_TPMOV<>'1'</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI8_TPMOV</td>
+<td>Tipo.Movim.</td>
+<td colspan="2">Tipo do Movimento</td>
+<td colspan="4">Preencher com o tipo do movimento.
+Para consultar os bilhetes disponiveis
+pressione F4 para exibir as faixas
+disponiveis para realizar a
+movimentação.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence ('123')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Entrada;2=Remessa;3=Devolucao</td>
+<td>Inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GI8_NDEPSO</td>
+<td>Desc.Depart.</td>
+<td colspan="2">Descrição Depart.</td>
+<td colspan="4">Descrição do departamento.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIF(!INCLUI,POSICIONE("SQB",1,XFILIAL("SQB")+GII->GII_DEPSOL,"QB_DESCRIC"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>G57</td>
+<td colspan="2">GI8_NUMMOV+GI8_SERIE+GI8_SUBSER+GI8_NUMCOM+GI8_TPDOC</td>
+<td colspan="2">G57_NUMMOV+G57_SERIE+G57_SUBSER+G57_NUMCOM+G57_TIPO</td>
+</tr>
+<tr>
+<td>G5A</td>
+<td colspan="2">GI8_NUMMOV+GI8_SERIE+GI8_SUBSER+GI8_NUMCOM+GI8_TPDOC</td>
+<td colspan="2">G5A_CODDT+G5A_SERIE+G5A_SUBSER+G5A_COMPLE+G5A_TPTAXA</td>
+</tr>
+<tr>
+<td>GQH</td>
+<td colspan="2">GI8_SERIE+GI8_SUBSER+GI8_NUMCOM+GI8_NUMINI+GI8_NUMFIM</td>
+<td colspan="2">GQH_SERIE+GQH_SUBSER+GQH_NUMCOM+GQH_NUMINI+GQH_NUMFIM</td>
+</tr>
+<tr>
+<td>G9Z</td>
+<td colspan="2">GI8_NUMMOV+GI8_SERIE+GI8_SUBSER+GI8_NUMCOM+GI8_TPDOC</td>
+<td colspan="2">G9Z_NUMMOV+G9Z_SERIE+G9Z_SURSER+G9Z_COMPLE+G9Z_TPDOC</td>
+</tr>
+<tr>
+<td>GQG</td>
+<td colspan="2">GI8_SERIE+GI8_SUBSER+GI8_NUMCOM+GI8_NUMINI+GI8_NUMFIM</td>
+<td colspan="2">GQG_SERIE+GQG_SUBSER+GQG_NUMCOM+GQG_NUMINI+GQG_NUMFIM</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

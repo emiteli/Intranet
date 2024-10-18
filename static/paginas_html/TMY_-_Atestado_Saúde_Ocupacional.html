@@ -1,0 +1,1043 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: TMY - Atestado Saúde Ocupacional</title></head>
+<body>
+<font color="orange"><h2 id="TMY">Tabela: TMY - Atestado Saúde Ocupacional</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Atestado Saúde Ocupacional</b></td><td colspan="2"><b>TMY_FILIAL+TMY_NUMASO</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">TMY_FILIAL+TMY_NUMASO</td><td>Numero ASO</td><td></td></tr>
+<tr><td>2</td><td colspan="2">TMY_FILIAL+TMY_NUMFIC+TMY_NUMASO</td><td>Ficha Medica + Numero ASO</td><td></td></tr>
+<tr><td>3</td><td colspan="2">TMY_FILIAL+TMY_NUMFIC+DTOS(TMY_DTPROG)</td><td>Ficha Medica + Data Prog.</td><td></td></tr>
+<tr><td>4</td><td colspan="2">TMY_FILIAL+TMY_CODUSU</td><td>Medico Resp.</td><td></td></tr>
+<tr><td>5</td><td colspan="2">TMY_FILIAL+TMY_EXAME</td><td>Exame</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>TMY_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Código da filial da empresa. Campo
+alimentado automaticamente pelo módulo
+de Medicina e Segurança do Trabalho com
+base no campo Filial.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMY_NUMASO</td>
+<td>Numero ASO</td>
+<td colspan="2">Numero do ASO</td>
+<td colspan="4">Número sequencial dos atestados de saúde
+ocupacional já emitidos. Campo
+alimentado automaticamente pelo módulo
+de Medicina e Segurança do Trabalho com
+base no campo ASO.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>NNNNNN                                       </td>
+<td>EXISTCHAV("TMY",M->TMY_NUMASO)</td>
+<td>IF(INCLUI,NEXTNUMASO(),TMY->TMY_NUMASO)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TMY_NUMFIC</td>
+<td>Ficha Medica</td>
+<td colspan="2">Numero da Ficha Medica</td>
+<td colspan="4">Número da Ficha Médica do paciente.
+Pressione as teclas [Enter]+[F3] para
+selecionar uma Ficha Médica.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>999999999                                    </td>
+<td>SitFunFicha(M->TMY_NUMFIC,.t.,.t.,.t.) .AND. ULTDATASO("SX3") .AND. RISCOSTRB() .AND. EXAMESTRB()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tm0.html">TM0</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tmy_numfic.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>LENUMFIC</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TMY_NOMFIC</td>
+<td>Nome</td>
+<td colspan="2">Nome Proprietario Ficha</td>
+<td colspan="4">Nome do paciente na Ficha Médica. Campo
+alimentado automaticamente pelo módulo
+de Medicina e Segurança do Trabalho com
+base no campo Ficha Médica.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>MDT110REL()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>IniBrwNoFic()</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMY_EXAME</td>
+<td>Exame</td>
+<td colspan="2">Codigo do Exame Medico</td>
+<td colspan="4">Código do exame médico de avaliação
+clínica. Campo alimentado
+automaticamente pelo módulo de Medicina
+e Segurança do Trabalho com base no
+campo Ficha Médica.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO("TM4",M->TMY_EXAME)</td>
+<td>IF(INCLUI,"NR7",TMY->TMY_EXAME)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td>LEEXAME</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/048.html">048</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMY_DTPROG</td>
+<td>Data Prog.</td>
+<td colspan="2">Data Programacao Exame</td>
+<td colspan="4">Data da programação.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>RISCOSTRB()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>LEDTPROG</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TMY_DTGERA</td>
+<td>Data Geracao</td>
+<td colspan="2">Data de Geracao do ASO</td>
+<td colspan="4">Data em que foi gerado o ASO.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>RISCOSTRB()</td>
+<td>IF(INCLUI,dDataBase,TMY->TMY_DTGERA)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMY_DTEMIS</td>
+<td>Data Emissao</td>
+<td colspan="2">Data da Emissao do ASO</td>
+<td colspan="4">Data em que foi emitido o ASO.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>LEDTEMIS</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMY_DTCANC</td>
+<td>Data Cancel.</td>
+<td colspan="2">Data do Cancelamento</td>
+<td colspan="4">Data em que foi cancelado o ASO.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>LEDTCANC</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMY_QTDTRA</td>
+<td>Dias Trat.</td>
+<td colspan="2">Quant. Dias Tratamento</td>
+<td colspan="4">Informar a duração estimada do
+tratamento, em dias.
+</td>
+<td>N</td>
+<td>4</td>
+<td>0</td>
+<td>@E 9999                                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMY_INDPAR</td>
+<td>Ind. Parec.</td>
+<td colspan="2">Indicacao do Parecer</td>
+<td colspan="4">Indica o parecer do médico sobre o exame
+efetuado, podendo ser:
+1-Apto;
+2-Inapto;
+3-Apto com restrição.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("123")</td>
+<td>IF(INCLUI,"1", TMY->TMY_INDPAR)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Apto;2=Inapto;3=Apto com Restricao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TMY_DESPAR</td>
+<td>Desc. Parec.</td>
+<td colspan="2">Descricao do Parecer</td>
+<td colspan="4">Descrição do parecer médico sobre a
+situação do funcionário durante a
+realização do Exame ocupacional. Campo
+alimentado automaticamente pelo módulo
+de Medicina e Segurança do Trabalho com
+base no campo Ind. Parecer.
+</td>
+<td>C</td>
+<td>25</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(INCLUI,"Apto",mostdespar(TMY->TMY_INDPAR))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Mostdespar(TMY->TMY_INDPAR)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMY_CODUSU</td>
+<td>Medico Resp.</td>
+<td colspan="2">Medico resp. ASO.</td>
+<td colspan="4">Código do Médico responsável pelo ASO
+(Atestado de Saúde Ocupacional).
+Pressione as teclas [Enter]+[F3] para
+selecionar um Médico.
+</td>
+<td>C</td>
+<td>12</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>MDT200VMED(M->TMY_CODUSU)</td>
+<td>MDTUSRLOG()</td>
+<td><a href="/tabelas_protheus/f3/mdtgen.html">MDTGEN</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tmy_codusu.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>LECODUSU</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TMY_NOMUSU</td>
+<td>Nome</td>
+<td colspan="2">Nome do Usuario</td>
+<td colspan="4">Nome da Usuário responsável. Campo
+alimentado automaticamente pelo módulo
+de Medicina e Segurança do Trabalho com
+base no campo Médico Responsável.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>MDT110REL2()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMY_DESCRI</td>
+<td>Descricao</td>
+<td colspan="2">Descricao Parecer</td>
+<td colspan="4">Parecer do médico sobre o exame de
+avaliação clinica efetuado.
+</td>
+<td>C</td>
+<td>200</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMY_NATEXA</td>
+<td>Natureza</td>
+<td colspan="2">Natureza do Exame</td>
+<td colspan="4">Natureza do Exame, podendo ser:
+1=Admissional; 2=Períodico; 3=Mudança de
+Função; 4=Retorno ao Trabalho;
+5=Demissional.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("12345")</td>
+<td>IF(INCLUI,"2", TMY->TMY_NATEXA)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/tmy_natexa.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Admissional;2=Periodico;3=Mudanca de Funcao;4=Retorno ao Trabalho;5=Demissional</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TMY_DESNAT</td>
+<td>Desc. Nat.</td>
+<td colspan="2">Descricao da Natureza</td>
+<td colspan="4">Descrição da Natureza do Exame. Campo
+alimentado automaticamente pelo módulo
+de Medicina e Segurança do Trabalho com
+base no campo Natureza.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(INCLUI,"Admissional",mostdesnat(TMY->TMY_NATEXA))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Mostdesnat(TMY->TMY_NATEXA)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMY_EMPFUT</td>
+<td>Emp. Futura</td>
+<td colspan="2">Empresa Futura</td>
+<td colspan="4">Deverá ser selecionado neste campo a
+empresa futura do funcionário.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO('SM0',M->TMY_EMPFUT) .and. MDT200NVF(8)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ym0.html">YM0</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>MDT200WHEN(8)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMY_FILFUT</td>
+<td>Fil. Futura</td>
+<td colspan="2">Filial Futura</td>
+<td colspan="4">Deverá ser selecionado neste campo a
+filial futura do funcionário.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td>ExistCPO('SM0',M->TMY_EMPFUT+M->TMY_FILFUT)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ngxm0.html">NGXM0</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>MDT200WHEN(7)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMY_NOVFUN</td>
+<td>Nova Função</td>
+<td colspan="2">Nova Função do Func.</td>
+<td colspan="4">Indique a nova função em que o
+funcionário será alocado após o ASO.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>MDT200NVF(1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/mdtgen.html">MDTGEN</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>MDT200WHEN(2)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMY_USERGI</td>
+<td>Log de Inclu</td>
+<td colspan="2">Log de Inclusão</td>
+<td colspan="4">Indica código criptografado do usuário
+de inclusão do registro.
+</td>
+<td>C</td>
+<td>17</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMY_NOVCC</td>
+<td>Novo C.Custo</td>
+<td colspan="2">Novo Centro de Custo</td>
+<td colspan="4">Indique o novo centro de custo em que o
+funcionário será alocado após o ASO.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>MDT200NVF(3)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/mdtgen.html">MDTGEN</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>MDT200WHEN(4)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/004.html">004</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMY_USERGA</td>
+<td>Log de Alter</td>
+<td colspan="2">Log de Alteracao</td>
+<td colspan="4">Indica código criptografado do usuário
+de alteração do registro.
+</td>
+<td>C</td>
+<td>17</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMY_NOVTAR</td>
+<td>Nova Tarefa</td>
+<td colspan="2">Nova Tarefa do Func.</td>
+<td colspan="4">Indique a nova tarefa que o funcionário
+executará após o ASO.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>MDT200NVF(5)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tn5.html">TN5</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>MDT200WHEN(6)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMY_ALTURA</td>
+<td>Trab. Altura</td>
+<td colspan="2">Trabalho em Altura</td>
+<td colspan="4">Liberação para trabalho em altura.
+Informe 1=Sim ou 2=Não.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMY_CONFIN</td>
+<td>Espaco Confi</td>
+<td colspan="2">Trabalho Espaco Confinado</td>
+<td colspan="4">Liberação para trabalho em espaço
+confinado. Informe 1=Sim e 2=Não.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMY_TMC</td>
+<td>Tra/Mov Carg</td>
+<td colspan="2">Transp. Movi. de Cargas</td>
+<td colspan="4">Liberação para transporte e movimentação
+de cargas. Informe 1=Sim e 2=Não.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMY_NOVDEP</td>
+<td>Novo dep.</td>
+<td colspan="2">Novo Departamento</td>
+<td colspan="4">Indica o código do Departamento.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>MDT200NVF(9)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/mdtgen.html">MDTGEN</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>MDT200WHEN(10)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/025.html">025</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMY_CNES</td>
+<td>Cod. CNES</td>
+<td colspan="2">Código de CNES</td>
+<td colspan="4">Indique o código de CNES (Cadastro
+Nacional de Estabelecimentos de Saúde).
+</td>
+<td>C</td>
+<td>7</td>
+<td>0</td>
+<td>@ 9999999                                    </td>
+<td>Empty(M->TMY_CNES) .Or. ExistCPO('TIL',M->TMY_CNES)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/til.html">TIL</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tmy_cnes.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMY_ELETRI</td>
+<td>Trab. Eletr.</td>
+<td colspan="2">Trabalho com eletricidade</td>
+<td colspan="4">Liberação para trabalho com
+eletricidade. Informe 1=Sim ou 2=Não.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('12')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMY_ESTAB</td>
+<td>Estabelecim.</td>
+<td colspan="2">Estabelcimento do CNES</td>
+<td colspan="4">Estabelecimento cadastrado no CNES.
+</td>
+<td>C</td>
+<td>80</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TMY_INDEXA</td>
+<td>Ind. Exame</td>
+<td colspan="2">Indicação de Exame</td>
+<td colspan="4">Indicador do tipo de exame. Podendo ser:
+1- Referencial;
+2- Sequencial.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>IF(INCLUI,'2',TMY->TMY_INDEXA)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Referencial;2=Sequencial</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>TMC</td>
+<td colspan="2">TMY_NUMASO</td>
+<td colspan="2">TMC_NUMASO</td>
+</tr>
+<tr>
+<td>TMX</td>
+<td colspan="2">TMY_NUMASO</td>
+<td colspan="2">TMX_NUMASO</td>
+</tr>
+<tr>
+<td>TKB</td>
+<td colspan="2">TMY_NUMASO</td>
+<td colspan="2">TKB_NUMASO</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

@@ -1,0 +1,372 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: DU2 - Rota x Rodovia</title></head>
+<body>
+<font color="orange"><h2 id="DU2">Tabela: DU2 - Rota x Rodovia</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Rota x Rodovia</b></td><td colspan="2"><b>DU2_FILIAL+DU2_ROTA+DU2_CODROD+DU2_SEQPDG+DU2_ITEM</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">DU2_FILIAL+DU2_ROTA+DU2_CODROD+DU2_SEQPDG</td><td>Rota + Cod. Rodovia + Seq. Pedagio</td><td></td></tr>
+<tr><td>2</td><td colspan="2">DU2_FILIAL+DU2_CODROD+DU2_SEQPDG+DU2_ROTA</td><td>Cod. Rodovia + Seq. Pedagio + Rota</td><td></td></tr>
+<tr><td>3</td><td colspan="2">DU2_FILIAL+DU2_ROTA+DU2_ITEM</td><td>Rota + Item</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>DU2_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Filial do Sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DU2_ROTA</td>
+<td>Rota</td>
+<td colspan="2">Rota</td>
+<td colspan="4">Rota, da rotina cadastro de rotas. A
+esta rota iremos relacionar as rodovias
+e as praças de pedágio.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("DA8").AND.ExistChav("DU2", M->DU2_ROTA)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/da8.html">DA8</a></td>
+<td><a href="/tabelas_protheus/gatilhos/du2_rota.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/041.html">041</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DU2_DESROT</td>
+<td>Desc.Rota</td>
+<td colspan="2">Descricao da Rota</td>
+<td colspan="4">Descrição da Rota, este campo será
+preenchido automaticamente após
+selecionar uma rota.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui,"",Posicione("DA8",1,xFilial("DA8")+DU2->DU2_ROTA,"DA8_DESC"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("DA8",1,xFilial("DA8")+DU2->DU2_ROTA,"DA8_DESC")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DU2_ITEM</td>
+<td>Item</td>
+<td colspan="2">Item</td>
+<td colspan="4">Itens das rodovias. Este campo é
+preenchido automaticamente a cada item
+que incluímos relacionado a rota.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DU2_CODROD</td>
+<td>Cod. Rodovia</td>
+<td colspan="2">Codigo Rodovia</td>
+<td colspan="4">Código da rodovia, da rotina cadastro de
+rodovias. Este campo é preenchido
+automaticamente ao selecionarmos uma
+rodovia.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("DTZ").And.TMSA280Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dtz.html">DTZ</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DU2_NOMROD</td>
+<td>Nome Rodovia</td>
+<td colspan="2">Nome Rodovia</td>
+<td colspan="4">Nome da Rodovia, este campo será
+preenchido automaticamente ao
+selecionarmos uma rodovia.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",Posicione("DTZ",1,xFilial("DTZ")+DU2->DU2_CODROD,"DTZ_NOMROD"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("DTZ",1,xFilial("DTZ")+DU2->DU2_CODROD,"DTZ_NOMROD")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DU2_SEQPDG</td>
+<td>Seq. Pedagio</td>
+<td colspan="2">Seq. Pedagio</td>
+<td colspan="4">Sequência de pedágio, utilizado a cada
+pedágio cadastrado para uma rodovia.
+Este campo é preenchido automaticamente
+ao selecionarmos uma praça de pedágio.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>TMSA280Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/du0.html">DU0</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>DTZ->(MsSeek(xFilial("DTZ")+GDFieldGet("DU2_CODROD",n)))</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DU2_KM</td>
+<td>Kilometro</td>
+<td colspan="2">Kilometro</td>
+<td colspan="4">Qual kilometro se encontra a praça de
+pedágio que nós relacionamos a rota,
+este campo será preenchido
+automaticamente após selecionar uma
+sequência de pedágio, cadastrado na
+rotina praças de pedágio.
+</td>
+<td>N</td>
+<td>7</td>
+<td>1</td>
+<td>@E 99,999.9                                  </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>TmsA280Whe()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DU2_MUNPDG</td>
+<td>Municipio</td>
+<td colspan="2">Municipio</td>
+<td colspan="4">Em qual o município se encontra esta
+praça de pedágio, este campo será
+preenchido automaticamente após
+selecionarmos a sequência do pedágio,
+cadastrado na rotina praças de pedágio.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",Posicione("DU0",1,xFilial("DU0")+DU2->DU2_CODROD+DU2->DU2_SEQPDG,"DU0_MUNPDG"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>TMSA280Show("MBROWSE","DU2_MUNPDG")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DU2_SENTID</td>
+<td>Sent.Ida/Vol</td>
+<td colspan="2">Sentido Ida/Volta?</td>
+<td colspan="4">Informe para qual sentido deve se
+considerado o Pedagio.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence('123')</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Ida;2=Volta;3=Ida/Volta</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

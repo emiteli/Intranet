@@ -1,0 +1,577 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: CVN - Planos de Contas de Referencia</title></head>
+<body>
+<font color="orange"><h2 id="CVN">Tabela: CVN - Planos de Contas de Referencia</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Planos de Contas de Referencia</b></td><td colspan="2"><b>CVN_FILIAL+CVN_CODPLA+CVN_LINHA+CVN_VERSAO</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">CVN_FILIAL+CVN_CODPLA+CVN_LINHA+CVN_VERSAO</td><td>Plano Ref. + Linha + Versão</td><td></td></tr>
+<tr><td>2</td><td colspan="2">CVN_FILIAL+CVN_CODPLA+CVN_CTAREF+CVN_VERSAO</td><td>Plano Ref. + Conta Ref. + Versão</td><td></td></tr>
+<tr><td>3</td><td colspan="2">CVN_FILIAL+CVN_CODPLA+CVN_VERSAO+CVN_CTASUP+CVN_CTAREF</td><td>Plano Ref. + Versão + Conta Sup + Conta Ref.</td><td></td></tr>
+<tr><td>4</td><td colspan="2">CVN_FILIAL+CVN_CODPLA+CVN_VERSAO+CVN_CTAREF</td><td>Plano Ref. + Versão + Conta Ref.</td><td></td></tr>
+<tr><td>5</td><td colspan="2">CVN_FILIAL+CVN_CODPLA+CVN_VERSAO+CVN_LINHA</td><td>Plano Ref. + Versão + Linha</td><td></td></tr>
+<tr><td>6</td><td colspan="2">CVN_FILIAL+CVN_CTAREF+CVN_CODPLA+CVN_VERSAO</td><td>Conta Ref. + Plano Ref. + Versão</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>CVN_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Filial do Sistema
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CVN_CODPLA</td>
+<td>Plano Ref.</td>
+<td colspan="2">Codigo plano referencial</td>
+<td colspan="4">Código do plano referencial
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .And. ExistChav('CVN',M->CVN_CODPLA)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>Ctb025WCD()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CVN_VERSAO</td>
+<td>Versão</td>
+<td colspan="2">Versão</td>
+<td colspan="4">Versão do plano de contas referencial
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"0001"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CVN_DSCPLA</td>
+<td>Descr.P.Ref</td>
+<td colspan="2">Descricao plano referenci</td>
+<td colspan="4">Descrição do plano referencial
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!S20                                        </td>
+<td>NaoVazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CVN_DTVIGI</td>
+<td>Dt.Vig.Inic.</td>
+<td colspan="2">Data vigencia inicial</td>
+<td colspan="4">Data inicial da vigência
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>Vazio() .OR. IIF(!EMPTY(M->CVN_DTVIGF),(M->CVN_DTVIGF >= M->CVN_DTVIGI),.T.)</td>
+<td>STOD("")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CVN_DTVIGF</td>
+<td>Dt.Vig.Fim</td>
+<td colspan="2">Data vigencia final</td>
+<td colspan="4">Data final da vigência
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>Vazio() .OR. IIF(!EMPTY(M->CVN_DTVIGF),(M->CVN_DTVIGF >= M->CVN_DTVIGI),.T.)</td>
+<td>STOD("")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CVN_ENTREF</td>
+<td>Entidade</td>
+<td colspan="2">Codigo da entidade</td>
+<td colspan="4">Código da entidade
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo('SX5','GP'+M->CVN_ENTREF)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gp.html">GP</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CVN_LINHA</td>
+<td>Linha</td>
+<td colspan="2">Linha</td>
+<td colspan="4">Linha/item do plano referencial
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@999                                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CVN_CTAREF</td>
+<td>Conta Ref.</td>
+<td colspan="2">Codigo conta referencial</td>
+<td colspan="4">Código conta referencial
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/cvn_ctaref.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/027.html">027</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CVN_DSCCTA</td>
+<td>Descr.C.Ref.</td>
+<td colspan="2">Descricao conta referenci</td>
+<td colspan="4">Descrição conta referencial
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CVN_TPUTIL</td>
+<td>Tp.Utiliz.</td>
+<td colspan="2">Tipo de Utilizacao</td>
+<td colspan="4">Classificar por Tipo de Utilizacao, tais
+como:
+F=Fiscal
+S=Societario
+A=Ambos
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('F,S,A, ')</td>
+<td>'F'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>F=Fiscal;S=Societario;A=Ambos</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CVN_CLASSE</td>
+<td>Classe</td>
+<td colspan="2">Classe da conta</td>
+<td colspan="4">Classe da Conta Contabil Ref.
+Podera ser:
+1-Sintetica
+2-Analitica
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence(" 12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sint�tica;2=Anal�tica</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CVN_NATCTA</td>
+<td>Nat.Conta</td>
+<td colspan="2">Natureza da Conta Contabi</td>
+<td colspan="4">Informe a Natureza da conta Ref.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('01,02,03,04,05,09')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>01=Conta de Ativo;02=Conta de Passivo;03=Patrimonio Liquido;04=Contas de Resultado;05=Contas de Compensacao;09=Outras</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CVN_CTASUP</td>
+<td>Conta Sup</td>
+<td colspan="2">Conta Superior</td>
+<td colspan="4">Código de identificaçao da Conta
+Superior da Conta Ref.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/cvn4.html">CVN4</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/027.html">027</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CVN_CTAREL</td>
+<td>Cta Vers.Ant</td>
+<td colspan="2">Conta Versão Ant</td>
+<td colspan="4">Conta da versão anterior, utilizada para
+versão do plano referencial.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/027.html">027</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CVN_STAPLA</td>
+<td>Status do Pl</td>
+<td colspan="2">Status dos Planos</td>
+<td colspan="4">Status do Plano
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Ativa;2=Revis�o;3=Encerrada</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>CS0</td>
+<td colspan="2">CVN_CODPLA</td>
+<td colspan="2">CS0_CODPLA</td>
+</tr>
+<tr>
+<td>CTN</td>
+<td colspan="2">CVN_CODPLA+CVN_VERSAO</td>
+<td colspan="2">CTN_PLREF+CTN_VERSAO</td>
+</tr>
+<tr>
+<td>CVD</td>
+<td colspan="2">CVN_CODPLA+CVN_VERSAO</td>
+<td colspan="2">CVD_CODPLA+CVD_VERSAO</td>
+</tr>
+<tr>
+<td>CVD</td>
+<td colspan="2">CVN_CODPLA</td>
+<td colspan="2">CVD_CODPLA</td>
+</tr>
+<tr>
+<td>CVD</td>
+<td colspan="2">CVN_CTAREF</td>
+<td colspan="2">CVD_CTAREF</td>
+</tr>
+<tr>
+<td>CVN</td>
+<td colspan="2">CVN_CODPLA+CVN_CTAREF</td>
+<td colspan="2">CVN_CTAREF</td>
+</tr>
+<tr>
+<td>CVN</td>
+<td colspan="2">CVN_CTAREF</td>
+<td colspan="2">CVN_CTASUP</td>
+</tr>
+<tr>
+<td>CLL</td>
+<td colspan="2">CVN_CTAREF</td>
+<td colspan="2">CLL_COSIF</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

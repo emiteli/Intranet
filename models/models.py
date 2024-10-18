@@ -33,3 +33,9 @@ class Funcionario(db.Model):
     email = db.Column(db.String(150), nullable=True)
     def __repr__(self):
         return f'<Funcionario {self.nome}>'
+class HtmlFile(db.Model):
+    __tablename__ = 'html_files'
+
+    id = db.Column(db.Integer, primary_key=True)
+    filename = db.Column(db.String(255), unique=True, nullable=False)
+    content = db.Column(db.Text, nullable=False)

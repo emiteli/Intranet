@@ -1,0 +1,350 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: DTF - Tabela de Tarifas</title></head>
+<body>
+<font color="orange"><h2 id="DTF">Tabela: DTF - Tabela de Tarifas</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Tabela de Tarifas</b></td><td colspan="2"><b>DTF_FILIAL+DTF_TABFRE+DTF_TIPTAB+DTF_TABTAR</b></td><td><b>TMSA080</b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">DTF_FILIAL+DTF_TABFRE+DTF_TIPTAB+DTF_TABTAR</td><td>Tab.Frete + Tipo + Tab.Tarifa</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>DTF_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Filial do Sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTF_TABFRE</td>
+<td>Tab.Frete</td>
+<td colspan="2">Tab.Frete</td>
+<td colspan="4">Código da Tabela de Frete. Campo
+preenchido automaticamente pelo sistema,
+de acordo com a Configuração da Tabela
+selecionada.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("DTL",M->DTF_TABFRE+AllTrim(M->DTF_TIPTAB))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DTF_TIPTAB</td>
+<td>Tipo</td>
+<td colspan="2">Tipo</td>
+<td colspan="4">Tipo da Tabela de Frete. Campo
+preenchido automaticamente pelo sistema,
+de acordo com a Configuração da Tabela
+selecionada.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SX5","M5"+M->DTF_TIPTAB) .And. ExistCpo("DTL",M->DTF_TABFRE+M->DTF_TIPTAB)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/m5.html">M5</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DTF_DESTIP</td>
+<td>Desc.Tipo</td>
+<td colspan="2">Descricao Tipo da Tabela</td>
+<td colspan="4">Descrição do Tipo da Tabela de Frete.
+Campo preenchido automaticamente pelo
+sistema, de acordo com a Configuração da
+Tabela selecionada.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!Inclui,Tabela("M5",DTF->DTF_TIPTAB,.F.),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Tabela("M5",DTF->DTF_TIPTAB,.F.)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTF_DESTAB</td>
+<td>Descricao</td>
+<td colspan="2">Descricao Tabela de Frete</td>
+<td colspan="4">Descricao da tabela de frete.
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIF(Inclui,'',Posicione('DTL',1,xFilial('DTL')+DTF->DTF_TABFRE+DTF->DTF_TIPTAB,'DTL_DESCRI'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione('DTL',1,xFilial('DTL')+DTF->DTF_TABFRE+DTF->DTF_TIPTAB,'DTL_DESCRI')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DTF_TABTAR</td>
+<td>Tab.Tarifa</td>
+<td colspan="2">Tab.Tarifa</td>
+<td colspan="4">Informe o código da Tabela de Tarifa.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistChav("DTF",M->DTF_TABFRE+M->DTF_TIPTAB+M->DTF_TABTAR)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DTF_KMDE</td>
+<td>Km De</td>
+<td colspan="2">Quilometragem De</td>
+<td colspan="4">Quilometragem inicial, o sistema utiliza
+esta faixa para calcular os componentes
+da tabela de tarifa.
+</td>
+<td>N</td>
+<td>7</td>
+<td>1</td>
+<td>@E 99,999.9                                  </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DTF_KMATE</td>
+<td>Km Ate</td>
+<td colspan="2">Quilometragem Ate</td>
+<td colspan="4">Quilometragem final, o sistema utiliza
+esta faixa para calcular os componentes
+da tabela de tarifa.
+</td>
+<td>N</td>
+<td>7</td>
+<td>1</td>
+<td>@E 99,999.9                                  </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DTF_MOEDA</td>
+<td>Moeda</td>
+<td colspan="2">Moeda</td>
+<td colspan="4">Moeda.
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td></td>
+<td>Posicione('DTL',1,xFilial('DTL')+Iif(Inclui,M->(DTF_TABFRE+DTF_TIPTAB),DTF->(DTF_TABFRE+DTF_TIPTAB)),'DTL_MOEDA')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>DT0</td>
+<td colspan="2">DTF_TABTAR</td>
+<td colspan="2">DT0_TABTAR</td>
+</tr>
+<tr>
+<td>DTG</td>
+<td colspan="2">DTF_TABFRE+DTF_TIPTAB+DTF_TABTAR</td>
+<td colspan="2">DTG_TABFRE+DTG_TIPTAB+DTG_TABTAR</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

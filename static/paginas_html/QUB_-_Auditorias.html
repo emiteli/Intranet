@@ -1,0 +1,880 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: QUB - Auditorias</title></head>
+<body>
+<font color="orange"><h2 id="QUB">Tabela: QUB - Auditorias</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Auditorias</b></td><td colspan="2"><b>QUB_FILIAL+QUB_NUMAUD</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">QUB_FILIAL+QUB_NUMAUD</td><td>Auditoria</td><td></td></tr>
+<tr><td>2</td><td colspan="2">QUB_FILIAL+QUB_AUDLID+QUB_NUMAUD</td><td>AuditorLider + Auditoria</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>QUB_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Número da Filial
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QUB_NUMAUD</td>
+<td>Auditoria</td>
+<td colspan="2">Numero da Auditoria</td>
+<td colspan="4">Número da Auditoria
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistChav("QUB",M->QUB_NUMAUD,1,"AUDJAEXIST") .And. QA100chkAg() .And. FreeForUse("QUB",M->QUB_NUMAUD)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>QUB_MOTAUD</td>
+<td>Motivo</td>
+<td colspan="2">Codigo do Motivo</td>
+<td colspan="4">Código do Motivo da Auditoria
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td>!Empty(Tabela("QE", M->QUB_MOTAUD))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/qe.html">QE</a></td>
+<td><a href="/tabelas_protheus/gatilhos/qub_motaud.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>QUB_DSCMOT</td>
+<td>Desc Motivo</td>
+<td colspan="2">Motivo da Auditoria</td>
+<td colspan="4">Motivo da Auditoria
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>Iif(!INCLUI,Tabela("QE",QUB->QUB_MOTAUD)," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>TABELA("QE",QUB->QUB_MOTAUD)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QUB_TIPAUD</td>
+<td>Tipo</td>
+<td colspan="2">Tipo da Auditoria</td>
+<td colspan="4">Tipo da Auditoria
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sistema;2=Produtos;3=Fornecedores;4=Outros</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>QUB_REFAUD</td>
+<td>Referencia</td>
+<td colspan="2">Data de referencia</td>
+<td colspan="4">Data de referência da Auditoria
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>dDatabase</td>
+<td>dDatabase</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>QUB_INIAUD</td>
+<td>Inicio</td>
+<td colspan="2">Data de Inicio</td>
+<td colspan="4">Data de Inicio da Auditoria
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>Q100VldDat(M->QUB_INIAUD,M->QUB_ENCAUD)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>QUB_ENCAUD</td>
+<td>Encerramento</td>
+<td colspan="2">Data de Encerramento</td>
+<td colspan="4">Data de Encerramento da Auditoria
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>Q100VldDat(M->QUB_INIAUD,M->QUB_ENCAUD)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>QUB_ENCREA</td>
+<td>Encerr. Real</td>
+<td colspan="2">Data de Encerramento real</td>
+<td colspan="4">Data de Encerramento real da Auditoria
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>Q100VldDat(M->QUB_INIAUD,M->QUB_ENCREA)</td>
+<td>dDataBase</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>QUB_FILMAT</td>
+<td>Fil. Usuario</td>
+<td colspan="2">Filial do Usuario</td>
+<td colspan="4">Filial do Usuário.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td>If(!Empty(M->QUB_FILMAT),QA_chkFil(M->QUB_FILMAT,@cFilMat) .And. Q100VldUsu(),.T.)</td>
+<td>cFilAnt</td>
+<td><a href="/tabelas_protheus/f3/sm0.html">SM0</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>QUB_AUDLID</td>
+<td>AuditorLider</td>
+<td colspan="2">Codigo do Auditor Lider</td>
+<td colspan="4">Código do Auditor Lider
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>If(!Empty(M->QUB_AUDLID),QA_CHKMAT(cFilMat,M->QUB_AUDLID) .And. Q100VldUsu(),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/qde.html">QDE</a></td>
+<td><a href="/tabelas_protheus/gatilhos/qub_audlid.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>QUB_NOMAUD</td>
+<td>Nome Auditor</td>
+<td colspan="2">Nome do Auditor Lider</td>
+<td colspan="4">Nome do Auditor Lider
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(!INCLUI,Posicione("QAA",1,QUB->QUB_FILMAT+QUB->QUB_AUDLID,"QAA_NOME")," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("QAA",1,QUB->QUB_FILMAT+QUB->QUB_AUDLID,"QAA->QAA_NOME")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QUB_CODFOR</td>
+<td>Fornecedor</td>
+<td colspan="2">Codigo do Fornecedor</td>
+<td colspan="4">Código do Fornecedor
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SA2",M->QUB_CODFOR) .or. Vazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/qfo.html">QFO</a></td>
+<td><a href="/tabelas_protheus/gatilhos/qub_codfor.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QUB_LOJA</td>
+<td>Loja</td>
+<td colspan="2">Loja do Fornecedor</td>
+<td colspan="4">Loja do Fornecedor
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SA2",M->QUB_CODFOR+M->QUB_LOJA,1) .or. Vazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/qub_loja.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QUB_NOMEFO</td>
+<td>Nome Fornec</td>
+<td colspan="2">Nome do Fornecedor</td>
+<td colspan="4">Nome do Fornecedor
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>Iif(!INCLUI,Posicione("SA2",1,xFilial("SA2")+QUB->QUB_CODFOR+QUB->QUB_LOJA,"A2_NOME")," ")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("SA2",1,xFilial("SA2")+QUB->QUB_CODFOR+QUB->QUB_LOJA,"SA2->A2_NOME")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QUB_AUDRSP</td>
+<td>AuditadoResp</td>
+<td colspan="2">Nome do Auditado respons.</td>
+<td colspan="4">Nome do Auditado responsavel
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QUB_IQS</td>
+<td>Nota IQS</td>
+<td colspan="2">Nota de IQS do Fornecedor</td>
+<td colspan="4">Nota de IQS do Fornecedor
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>@E 999.99                                    </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QUB_DESCHV</td>
+<td>Chave Descr.</td>
+<td colspan="2">Chave Descricao Auditoria</td>
+<td colspan="4">Neste campo devera ser digitado:
+A Descricao da Auditoria
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QUB_DESCR1</td>
+<td>Descricao</td>
+<td colspan="2">Descricao da Auditoria</td>
+<td colspan="4">Identifica a Descrição da Auditoria.
+</td>
+<td>M</td>
+<td>80</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>M->QUB_DESCR1 := If(Inclui," ",MsMM(QUB_DESCHV,TamSX3("QUB_DESCR1")[1]))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>QUB_PONOBT</td>
+<td>Ptos Obtidos</td>
+<td colspan="2">Pontos obtidos</td>
+<td colspan="4">Pontos obtidos na Auditoria
+</td>
+<td>N</td>
+<td>8</td>
+<td>2</td>
+<td>@E 99999.99                                  </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QUB_PONPOS</td>
+<td>Ptos Possiv.</td>
+<td colspan="2">Pontos possiveis</td>
+<td colspan="4">Pontos possiveis a serem obtidos na
+Auditoria
+</td>
+<td>N</td>
+<td>8</td>
+<td>2</td>
+<td>@E 99999.99                                  </td>
+<td>Positivo()</td>
+<td>100</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QUB_CONCLU</td>
+<td>Conclusao</td>
+<td colspan="2">Conclusao da Auditoria</td>
+<td colspan="4">Conclusao da Auditoria
+</td>
+<td>M</td>
+<td>80</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>M->QUB_CONCLU := If(Inclui, " ", MsMM(QUB->QUB_CHAVE,TamSX3("QUB_CONCLU")[1]))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>QUB_OK</td>
+<td>Flag</td>
+<td colspan="2">Marca de Encerramento</td>
+<td colspan="4">Marca de Encerramento
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QUB_CHAVE</td>
+<td>Chave</td>
+<td colspan="2">Chave Conclusao Auditoria</td>
+<td colspan="4">Chave de ligação da conclusao da Audito
+ria
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QUB_SUGCHV</td>
+<td>Chv Sug/Obs</td>
+<td colspan="2">Chave Sugestao/Observacao</td>
+<td colspan="4">Chave Sugestao/Observacao
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QUB_SUGOBS</td>
+<td>Sug/Obs</td>
+<td colspan="2">Sugestao/Observacao</td>
+<td colspan="4">Texto da Sugestao/Observacao
+</td>
+<td>M</td>
+<td>80</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IF(INCLUI, " ", MSMM(QUB->QUB_SUGCHV, TamSx3("QUB_SUGOBS")[1]))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>QUB_STATUS</td>
+<td>Status</td>
+<td colspan="2">Status da Auditoria</td>
+<td colspan="4">Status da Auditoria
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>QUC</td>
+<td colspan="2">QUB_NUMAUD</td>
+<td colspan="2">QUC_NUMAUD</td>
+</tr>
+<tr>
+<td>QUE</td>
+<td colspan="2">QUB_NUMAUD</td>
+<td colspan="2">QUE_NUMAUD</td>
+</tr>
+<tr>
+<td>QUD</td>
+<td colspan="2">QUB_NUMAUD</td>
+<td colspan="2">QUD_NUMAUD</td>
+</tr>
+<tr>
+<td>QUF</td>
+<td colspan="2">QUB_NUMAUD</td>
+<td colspan="2">QUF_NUMAUD</td>
+</tr>
+<tr>
+<td>QUI</td>
+<td colspan="2">QUB_NUMAUD</td>
+<td colspan="2">QUI_NUMAUD</td>
+</tr>
+<tr>
+<td>QUJ</td>
+<td colspan="2">QUB_NUMAUD</td>
+<td colspan="2">QUJ_NUMAUD</td>
+</tr>
+<tr>
+<td>QI2</td>
+<td colspan="2">QUB_NUMAUD</td>
+<td colspan="2">QI2_NUMAUD</td>
+</tr>
+<tr>
+<td>QUH</td>
+<td colspan="2">QUB_NUMAUD</td>
+<td colspan="2">QUH_NUMAUD</td>
+</tr>
+<tr>
+<td>QUK</td>
+<td colspan="2">QUB_FILIAL+QUB_NUMAUD</td>
+<td colspan="2">QUK_FILIAL+QUK_NUMAUD</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

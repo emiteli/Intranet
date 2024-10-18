@@ -1,0 +1,945 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: DM2 - Informações de Carga - FreteBr</title></head>
+<body>
+<font color="orange"><h2 id="DM2">Tabela: DM2 - Informações de Carga - FreteBr</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Informações de Carga - FreteBr</b></td><td colspan="2"><b>DM2_FILIAL+DM2_FILORI+DM2_VIAGEM</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">DM2_FILIAL+DM2_FILORI+DM2_VIAGEM</td><td>Fil.Viagem + Viagem</td><td></td></tr>
+<tr><td>2</td><td colspan="2">DM2_FILIAL+DM2_IDFRT</td><td>Id Frete</td><td></td></tr>
+<tr><td>3</td><td colspan="2">DM2_FILIAL+DTOS(DM2_DTFRT)+DM2_IDFRT</td><td>Dt do Frete + Id Frete</td><td></td></tr>
+<tr><td>4</td><td colspan="2">DM2_FILIAL+DM2_UFORIG+DM2_MUNORI+DM2_UFDEST+DM2_MUNDES</td><td>UF Orig. + Mun.Origem + UF Dest + Mun.Destino</td><td></td></tr>
+<tr><td>5</td><td colspan="2">DM2_FILIAL+DM2_CODMOT</td><td>Cd.Motorista</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>DM2_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Filial do Sistema
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DM2_FILORI</td>
+<td>Fil.Viagem</td>
+<td colspan="2">Filial da Viagem</td>
+<td colspan="4">Filial da Viagem
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IIF(INCLUI,TMSC14Init(),"")</td>
+<td><a href="/tabelas_protheus/f3/dl5.html">DL5</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>TMSC14When()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DM2_VIAGEM</td>
+<td>Viagem</td>
+<td colspan="2">Viagem</td>
+<td colspan="4">Numero da Viagem
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td>ExistChav("DM2", FwFldGet("DM2_FILORI") + FwFldGet("DM2_VIAGEM") )</td>
+<td>IIF(INCLUI,TMSC14Init(),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>TMSC14When()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/143.html">143</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DM2_UFORIG</td>
+<td>UF Orig.</td>
+<td colspan="2">UF Origem</td>
+<td colspan="4">UF Origem
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. ExistCpo("SX5","12"+FwFldGet("DM2_UFORIG"))</td>
+<td>IIF(INCLUI,TMSC14Init(),"")</td>
+<td><a href="/tabelas_protheus/f3/sx512.html">SX512</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>TMSC14When()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DM2_MUNORI</td>
+<td>Mun.Origem</td>
+<td colspan="2">Cód. IBGE Município Orig.</td>
+<td colspan="4">Código IBGE do Múnicipio de Origem da
+Viagem
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. ExistCpo("CC2",FwFldGet("DM2_UFORIG")+FwFldGet("DM2_MUNORI"))</td>
+<td>IIF(INCLUI,TMSC14Init(),"")</td>
+<td><a href="/tabelas_protheus/f3/cc2.html">CC2</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>TMSC14When()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DM2_UFDEST</td>
+<td>UF Dest</td>
+<td colspan="2">UF Destino</td>
+<td colspan="4">UF Destino da Carga
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. ExistCpo("SX5","12"+FwFldGet("DM2_UFDEST"))</td>
+<td>IIF(INCLUI,TMSC14Init(),"")</td>
+<td><a href="/tabelas_protheus/f3/sx512.html">SX512</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>TMSC14When()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DM2_MUNDES</td>
+<td>Mun.Destino</td>
+<td colspan="2">Cód. IBGE Municípo Dest.</td>
+<td colspan="4">Código do IBGE do Município de Destino
+da Carga.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. ExistCpo("CC2",FwFldGet("DM2_UFDEST")+FwFldGet("DM2_MUNDES"))</td>
+<td>IIF(INCLUI,TMSC14Init(),"")</td>
+<td><a href="/tabelas_protheus/f3/cc2.html">CC2</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>TMSC14When()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DM2_PROD</td>
+<td>Produtos</td>
+<td colspan="2">Produtos da Carga</td>
+<td colspan="4">Produtos
+</td>
+<td>C</td>
+<td>80</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>TMSC14When()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DM2_TIPESP</td>
+<td>Tp. Espécie</td>
+<td colspan="2">Tipo de Espécie</td>
+<td colspan="4">Tipo de Espécie
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dm2.html">DM2</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>TMSC14When()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DM2_ESPEC</td>
+<td>Espécies</td>
+<td colspan="2">Espécies</td>
+<td colspan="4">Espécies
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td>TMSC14When()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DM2_RASTRE</td>
+<td>Rastreamento</td>
+<td colspan="2">Rastreamento</td>
+<td colspan="4">Indica se há Rastreamento
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("1|2")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td>TMSC14When()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DM2_LOTAC</td>
+<td>Lotação</td>
+<td colspan="2">Carga Lotação</td>
+<td colspan="4">Indica se é carga lotação
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('12')</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td>TMSC14When()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DM2_PEDPAG</td>
+<td>Pedag.Pago</td>
+<td colspan="2">Pedágio Pago</td>
+<td colspan="4">Indica se o Pedágio é Pago
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('12')</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td>TMSC14When()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DM2_INFOAD</td>
+<td>Info Adic</td>
+<td colspan="2">Informações Adicionais</td>
+<td colspan="4">Informe observações ou informações
+adicionais referente ao frete que será
+enviado a FreteBras
+</td>
+<td>M</td>
+<td>50</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>TMSC14When()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DM2_VEIC</td>
+<td>Veículo</td>
+<td colspan="2">Cód. Veículo</td>
+<td colspan="4">Veículos
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. (ExistCpo('DA3'))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/da3.html">DA3</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dm2_veic.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>TMSC14When()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DM2_PLACA</td>
+<td>Placa</td>
+<td colspan="2">Placa do Veículo</td>
+<td colspan="4">Placa do Veículo
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(INCLUI,"",Posicione('DA3',1,xFilial('DA3')+DM2->DM2_VEIC,'DA3_PLACA'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione('DA3',1,xFilial('DA3')+DM2->DM2_VEIC,'DA3_PLACA')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DM2_TIPVEI</td>
+<td>Tipo Veículo</td>
+<td colspan="2">Tipos do Veículo</td>
+<td colspan="4">Tipos de Veículo
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dm2.html">DM2</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>TMSC14When()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DM2_NOMVEI</td>
+<td>Tipo Descr.</td>
+<td colspan="2">Descrição Tipo Veículo</td>
+<td colspan="4">Nome do Veículo
+</td>
+<td>M</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DM2_TIPCAR</td>
+<td>Carroceria</td>
+<td colspan="2">Tipos de Carroceria</td>
+<td colspan="4">Tipos de Carrocerias
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dm2.html">DM2</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>TMSC14When()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DM2_CARROC</td>
+<td>Carroceria</td>
+<td colspan="2">Descrição Carroceria</td>
+<td colspan="4">Descrição carroceria.
+</td>
+<td>M</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td>TMSC14When()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DM2_TIPPRE</td>
+<td>Tp.Preços</td>
+<td colspan="2">Tipos de Preços</td>
+<td colspan="4">Tipos de Preços
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dm2.html">DM2</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>TMSC14When()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DM2_PRECOS</td>
+<td>Preços</td>
+<td colspan="2">Descrição Preços</td>
+<td colspan="4">Descrição Preços
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td>TMSC14When()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DM2_FRETE</td>
+<td>Vl.Frete</td>
+<td colspan="2">Valor do Frete</td>
+<td colspan="4">Valor do Frete
+</td>
+<td>N</td>
+<td>11</td>
+<td>2</td>
+<td>@E 99,999,999.99                             </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>TMSC14When()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DM2_VOLUME</td>
+<td>Volumes</td>
+<td colspan="2">Qtde Volumes</td>
+<td colspan="4">Quantidade de Volumes
+</td>
+<td>N</td>
+<td>5</td>
+<td>0</td>
+<td>99999                                        </td>
+<td>Positivo()</td>
+<td>IIF(INCLUI,TMSC14Init(),0)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>TMSC14When()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DM2_PESO</td>
+<td>Peso</td>
+<td colspan="2">Peso Real</td>
+<td colspan="4">Peso real
+</td>
+<td>N</td>
+<td>11</td>
+<td>4</td>
+<td>@E 999,999.9999                              </td>
+<td>Positivo()</td>
+<td>IIF(INCLUI,TMSC14Init(),0)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>TMSC14When()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DM2_DIMENS</td>
+<td>Dimensões</td>
+<td colspan="2">Dimensões</td>
+<td colspan="4">Dimensões da carga.
+</td>
+<td>N</td>
+<td>11</td>
+<td>4</td>
+<td>@E 999,999.9999                              </td>
+<td></td>
+<td>IIF(INCLUI,TMSC14Init(),0)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>TMSC14When()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DM2_CODMOT</td>
+<td>Cd.Motorista</td>
+<td colspan="2">Codigo do Motorista</td>
+<td colspan="4">Código Motorista
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. (ExistCpo("DA4"))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/da4.html">DA4</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dm2_codmot.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>TMSC14When()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DM2_MOTORI</td>
+<td>Motorista</td>
+<td colspan="2">Nome do Motorista</td>
+<td colspan="4">Nome do Motorista
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(INCLUI,"",Posicione("DA4",1,xFilial("DA4")+DM2->DM2_CODMOT,"DA4_NOME"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("DA4",1,xFilial("DA4")+DM2->DM2_CODMOT,"DA4_NOME")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DM2_IDFRT</td>
+<td>Id Frete</td>
+<td colspan="2">Id Frete FreteBras</td>
+<td colspan="4">Informe o ID do frete criado pela
+FreteBras
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DM2_DTFRT</td>
+<td>Dt do Frete</td>
+<td colspan="2">Data do Frete</td>
+<td colspan="4">Informe a data do frete
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DM2_STATUS</td>
+<td>Status</td>
+<td colspan="2">Status</td>
+<td colspan="4">Informe o status da negociação de frete.
+1=Em aberto
+2=Concretizado
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("123")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=Em Aberto;2=Concretizado;3=Cancelado</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

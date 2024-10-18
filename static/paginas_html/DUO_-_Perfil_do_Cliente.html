@@ -1,0 +1,2665 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: DUO - Perfil do Cliente</title></head>
+<body>
+<font color="orange"><h2 id="DUO">Tabela: DUO - Perfil do Cliente</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Perfil do Cliente</b></td><td colspan="2"><b>DUO_FILIAL+DUO_CODCLI+DUO_LOJCLI</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">DUO_FILIAL+DUO_CODCLI+DUO_LOJCLI</td><td>Cliente + Loja</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="6" align="center"><b><i>Abas(SXA)</i></b></td></tr><tr><td><b>XA_ALIAS</b></td><td><b>XA_ORDEM</b></td><td colspan="2"><b>XA_DESCRIC</b></td><td><b>XA_AGRUP</b></td><td><b>XA_TIPO</b></td></tr><tr><td><b>DUO</b></td><td><b>1</b></td><td colspan="2"><b>Comercial</b></td><td><b></b></td><td><b></b></td></tr><tr><td><b>DUO</b></td><td><b>2</b></td><td colspan="2"><b>Financeiro</b></td><td><b></b></td><td><b></b></td></tr><tr><td><b>DUO</b></td><td><b>3</b></td><td colspan="2"><b>Reentrega</b></td><td><b></b></td><td><b></b></td></tr><tr><td><b>DUO</b></td><td><b>4</b></td><td colspan="2"><b>Refaturamento</b></td><td><b></b></td><td><b></b></td></tr><tr><td><b>DUO</b></td><td><b>5</b></td><td colspan="2"><b>Armazenagem</b></td><td><b></b></td><td><b></b></td></tr><tr><td><b>DUO</b></td><td><b>6</b></td><td colspan="2"><b>TDA</b></td><td><b></b></td><td><b></b></td></tr><tr><td><b>DUO</b></td><td><b>7</b></td><td colspan="2"><b>EDI</b></td><td><b></b></td><td><b></b></td></tr><tr><td><b>DUO</b></td><td><b>8</b></td><td colspan="2"><b>Pre-Fatura</b></td><td><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>DUO_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Filial do Sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_CODCLI</td>
+<td>Cliente</td>
+<td colspan="2">Codigo do Cliente</td>
+<td colspan="4">Código do cliente a ter o perfil
+cadastrado.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Iif(Empty(M->DUO_LOJCLI),.T.,ExistChav("DUO",M->DUO_CODCLI+M->DUO_LOJCLI,,"EXISTCLI")) .And. ExistCpo("SA1")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sa1.html">SA1</a></td>
+<td><a href="/tabelas_protheus/gatilhos/duo_codcli.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DUO_LOJCLI</td>
+<td>Loja</td>
+<td colspan="2">Loja do Cliente</td>
+<td colspan="4">Loja do cliente a ter o perfil
+cadastrado.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistChav("DUO",M->DUO_CODCLI+M->DUO_LOJCLI,,"EXISTCLI").And.ExistCpo("SA1",M->DUO_CODCLI+M->DUO_LOJCLI)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/duo_lojcli.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DUO_NOMCLI</td>
+<td>Nome</td>
+<td colspan="2">Nome do Cliente</td>
+<td colspan="4">Nome do cliente a ter o perfil
+cadastrado.
+Ao selecionar o código do cliente este
+campo será preenchido automaticamente
+com a descrição do nome do cliente.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Posicione("SA1",1,xFilial("SA1")+If(Inclui,M->DUO_CODCLI+M->DUO_LOJCLI,DUO->DUO_CODCLI+DUO->DUO_LOJCLI),"A1_NOME")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("SA1",1,xFilial("SA1")+DUO->DUO_CODCLI+DUO->DUO_LOJCLI,"A1_NOME")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_CLIAGR</td>
+<td>Cli. Agrupto</td>
+<td colspan="2">Cliente Agrupamento</td>
+<td colspan="4">Código do cliente de agrupamento para
+efeito de pagamento de Frete.
+Campo utilizado para realizar o
+agrupamento de notas fiscais do cliente
+de remetentes diferentes com a
+finalidade de determinar um único valor
+de cobrança, fazendo a proporção entre o
+peso das notas fiscais de cada
+remetente. Desta forma, serão gerados n
+documentos onde a somatória do valor do
+frete de cada documento resultaria em um
+único valor de frete originado a partir
+da soma de todas as notas fiscais do
+cliente remetente.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. ExistCpo("SA1",M->DUO_CLIAGR+AllTrim(M->DUO_LOJAGR))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sa1.html">SA1</a></td>
+<td><a href="/tabelas_protheus/gatilhos/duo_cliagr.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_LOJAGR</td>
+<td>Loja Agrupto</td>
+<td colspan="2">Loja Agrupamento</td>
+<td colspan="4">Loja do cliente de agrupamento para
+efeito de pagamento de frete.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. ExistCpo("SA1",M->DUO_CLIAGR+AllTrim(M->DUO_LOJAGR))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/duo_lojagr.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_NOMAGR</td>
+<td>Nome Agrupto</td>
+<td colspan="2">Nome Cliente Agrupamento</td>
+<td colspan="4">Nome do Cliente Agrupamento, este campo
+será preenchido automaticamente após
+selecionarmos um cliente agrupamento.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui,"",Posicione("SA1",1,xFilial("SA1")+DUO->DUO_CLIAGR+DUO->DUO_LOJAGR,"A1_NOME"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_CNDFRE</td>
+<td>Cond.Frete</td>
+<td colspan="2">Condicao do Frete</td>
+<td colspan="4">Utilizado para determinar a condição de
+pagamento do frete.
+Na digitação de notas fiscais do
+cliente, esta informação tem a
+finalidade de localizar uma regra de
+pagadores de frete.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SX5","M4"+M->DUO_CNDFRE)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/m4.html">M4</a></td>
+<td><a href="/tabelas_protheus/gatilhos/duo_cndfre.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DUO_DESCND</td>
+<td>Desc.C.Frete</td>
+<td colspan="2">Descricao Cond. Frete</td>
+<td colspan="4">Descrição da condição de pagamento do
+frete.
+Preenchido automaticamente após informar
+a condição de frete.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",Tabela("M4",DUO->DUO_CNDFRE,.F.))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_FOBDIR</td>
+<td>FOB Dirigido</td>
+<td colspan="2">FOB Dirigido</td>
+<td colspan="4">Quando o tipo do frete for FOB e o
+remetente for FOB dirigido, a tabela de
+frete do cliente remetente será
+utilizada para o cálculo.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12") .And. TMSA480Vld()</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_CUBAGE</td>
+<td>Cubagem</td>
+<td colspan="2">Cubagem</td>
+<td colspan="4">Padrão de cubagem utilizado pelo Cliente
+(Sim, Não, Obrigatório, M3). Utilizado
+pela digitação de notas fiscais do
+cliente que analisa esta informação
+conforme segue abaixo:
+SIM - A digitação da cubagem é opcional.
+NÃO - A digitação da cubagem não é
+permitida.
+OBRIGATORIO - A digitação da cubagem é
+obrigatória.
+M3 - A digitação do M3 é obrigatória.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("1234")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao;3=Obrigatoria;4=M3</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_BASFAT</td>
+<td>Base Fatura.</td>
+<td colspan="2">Base Faturamento</td>
+<td colspan="4">Informe o tipo de base a ser utilizado
+na Fatura.
+Temos as seguintes opções: Manual, Data
+de Emissão, Data de entrega, Pré-Fatura.
+MANUAL - O faturamento será feito
+através da rotina de geração de fatura.
+DATA DE EMISSAO / DATA DE ENTREGA - O
+faturamento será feito através da rotina
+de fatura automática e a seleção dos
+títulos a faturar será feito com base na
+data de emissão do CTRC ou na data de
+entrega do CTRC.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("1234")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Manual;2=Data de Emissao;3=Data de Entrega</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DUO_TIPFAT</td>
+<td>Tipo Fatura.</td>
+<td colspan="2">Tipo Faturamento</td>
+<td colspan="4">Informe o tipo de faturamento.
+Ex: (Semanal, Dezenal, Quinzenal,
+BI-Semanal, Mensal).
+Utilize a tecla F3 para realizar a
+seleção. Determina em que período será
+gerado a fatura automática.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. ExistCpo("DUZ")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/duz.html">DUZ</a></td>
+<td><a href="/tabelas_protheus/gatilhos/duo_tipfat.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>TmsA480Whn()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_DESFAT</td>
+<td>Desc.Tip.Fat</td>
+<td colspan="2">Desc.Tipo Faturamento</td>
+<td colspan="4">Ao selecionar o tipo de fatura este
+campo será preenchido automaticamente.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",Posicione("DUZ",1,xFilial()+DUO->DUO_TIPFAT,"DUZ_DESCRI"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_CPVENT</td>
+<td>Comprov.Ent.</td>
+<td colspan="2">Comprovante de Entrega</td>
+<td colspan="4">Informe se o cliente utiliza comprovante
+de entrega (S/N).
+O faturamento automático somente será
+gerado após a digitação do comprovante
+de entrega.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. Pertence("12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_RESCPV</td>
+<td>Resp. Cpv.</td>
+<td colspan="2">Responsavel Comprovante</td>
+<td colspan="4">Responsável pelo comprovante de entrega,
+caso este campo esteja preenchido todos
+os comprovantes de entrega sairão em
+nome deste responsável.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_VALMAX</td>
+<td>Vlr.Max. Fat</td>
+<td colspan="2">Vlr.Maximo da Fatura</td>
+<td colspan="4">Determina o valor máximo de uma fatura
+para o faturamento automático.
+Exemplo: Num faturamento de R$ 50.000,00
+com valor Maximo de fatura de R$
+10.000,00 o sistema ira gerar 5 faturas.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_QTDCTR</td>
+<td>Qtd.CTRC Fat</td>
+<td colspan="2">Qtde.CTRC por Fatura</td>
+<td colspan="4">Determina a quantidade máxima de
+conhecimentos contidos em uma fatura.
+</td>
+<td>N</td>
+<td>5</td>
+<td>0</td>
+<td>99999                                        </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_SEPPRO</td>
+<td>Sep.Grp.Prod</td>
+<td colspan="2">Separa Grupos de Produto</td>
+<td colspan="4">Informe se a separação para geração de
+faturas será por grupo de produtos.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_SEPEST</td>
+<td>Sep.Estados</td>
+<td colspan="2">Separa Estados</td>
+<td colspan="4">Para utilizar esta opção, será
+necessário clicar na ferramenta "separar
+por estados de destino" do CTRC e
+selecionar os estados desejados para
+geração de faturas.
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_SEPTRA</td>
+<td>Sep.Tp.Trans</td>
+<td colspan="2">Separa Tipo de Transporte</td>
+<td colspan="4">Indica se separa o faturamento pelo tipo
+de transporte ( Rodoviário / Aéreo ).
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_SEPFRE</td>
+<td>Sep.CIF/FOB</td>
+<td colspan="2">Separa CIF/FOB</td>
+<td colspan="4">Informe se a separação para geração de
+faturas será por CTRC do tipo de frete
+CIF ou FOB.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_CDOCTR</td>
+<td>Cod.Obs.CTRC</td>
+<td colspan="2">Cod.Obs.do CTRC</td>
+<td colspan="4">Código da observação do CTRC.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_OBSCTR</td>
+<td>Obs.CTRC</td>
+<td colspan="2">Observacao CTRC</td>
+<td colspan="4">Informe uma observação para ser impressa
+no CTRC quando o cliente for remetente.
+</td>
+<td>M</td>
+<td>80</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>Iif(Inclui,"",E_MSMM(DUO->DUO_CDOCTR,80))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_TAXCTR</td>
+<td>Taxa p/CTRC</td>
+<td colspan="2">Taxa p/ CTRC</td>
+<td colspan="4">Será apresentado como default SIM / NÃO
+conforme segue abaixo:
+SIM - Os componentes que são Taxa serão
+incluídos em todos os CTRC's.
+NÃO - Os componentes que são Taxa serão
+incluídos somente no último CTRC.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_SEPDOC</td>
+<td>Sep.Tp.Docto</td>
+<td colspan="2">Sep. Tipo Documento</td>
+<td colspan="4">Clicando no botão "tipo de documento",
+selecione os tipos de documentos
+utilizados para faturar separadamente.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_PESCTR</td>
+<td>Pes.Max CTRC</td>
+<td colspan="2">Peso Maximo CTRC</td>
+<td colspan="4">Informe o peso máximo permitido por
+conhecimento de frete.
+Essa informação é utilizada para a
+quebra na geração de CTRCs, quando for
+excedido o peso é gerado um novo CTRC.
+Exemplo: é processado um número de notas
+fiscais de mercadoria que totalizam
+50000 kg, se nesse campo estiver
+cadastrada a informação de 40000 kg, ao
+processar a geração de CTRCs são gerados
+2 CTRCs, um com 40000 e outro com 10000.
+Se o campo estiver em branco não será
+considerada essa informação para a
+quebra de geração dos CTRCs.
+</td>
+<td>N</td>
+<td>11</td>
+<td>4</td>
+<td>@E 999,999.9999                              </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_NFCTR</td>
+<td>Nfs por CTRC</td>
+<td colspan="2">Qtde.NFs.p/ CTRC</td>
+<td colspan="4">Informe o número de notas permitidas por
+CTRC.
+Essa informação é utilizada para a
+quebra na geração de CTRCs, quando for
+excedido o número de notas é gerado um
+novo CTRC. Exemplo: são processadas 30
+notas fiscais de mercadoria, se nesse
+campo estiver cadastrada a informação de
+20, ao processar a geração de CTRCs são
+gerados 2 CTRCs, um com 20 notas e outro
+com 10. Vale ressaltar que os valores
+não são calculados com relação direta as
+notas consideradas, o valor do CTRC é
+determinado da seguinte forma: é
+calculado o valor com todas as notas
+somadas (30) e proporcionalizado pelo
+peso, o primeiro CTRC vai receber o
+valor proporcional ao peso das 20 notas
+relacionadas e o segundo CTRC vai
+receber o valor proporcional ao peso das
+10 notas relacionadas.
+</td>
+<td>N</td>
+<td>5</td>
+<td>0</td>
+<td>99999                                        </td>
+<td>Positivo() .And. TMSA480TOk()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_AJUOBR</td>
+<td>Ajuste Obrig</td>
+<td colspan="2">Ajuste Obrigatorio</td>
+<td colspan="4">Informe se este contrato tem ajuste
+obrigatório (S/N).
+Se esse campo estiver preenchido com
+sim, o sistema valida a existência de
+ajustes para o cliente. Caso não exista
+o cálculo do CTRC, será bloqueado. Essa
+informação impede a utilização da tabela
+cheia para clientes que não aceitam a
+mesma. Se o campo estiver preenchido com
+não, a tabela cheia poderá ser utilizada
+para o cliente.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_SEPREM</td>
+<td>Sep.Cliente</td>
+<td colspan="2">Sep.faturas por cliente</td>
+<td colspan="4">Neste campo iremos informar, para
+determinado cliente se haverá separação
+na geração de faturas por CTRC do tipo
+de frete FOB + Remetente.Se informarmos
+"Sim" o sistema irá criar uma fatura
+para cada remetente quando o tipo de
+frete for FOB. Se informarmos "Não" o
+sistema não fará separação.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("0123456")</td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>0=N�o separa;1=Fob+Remenente;2=Cif+Destinat�rio;3=Cif+Consignat�rio;4=Fob+Consignat�rio;5=Cif+Despachante;6=Fob+Despachante</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_AGRNFC</td>
+<td>Agrupa Nfc</td>
+<td colspan="2">Agrupa Nf do Cliente</td>
+<td colspan="4">Determina se a geração de documentos irá
+considerar as quebras por numero de
+notas fiscais por CTRC e peso maximo por
+CTRC.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12345") .And. TMSA480TOk()</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao;3=Por Docto;4=Por Produto;5=Por Devedor</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_SEPENT</td>
+<td>Sep.CTRC Ent</td>
+<td colspan="2">Separa CTRC Entregue ?</td>
+<td colspan="4">Neste campo iremos informar, para
+determinado cliente se haverá separação
+na geração de faturas por CTRC
+Entregues. Se informarmos "Sim" o
+sistema irá criar uma fatura para os
+CTRC´s entregues e outra para os CTRC´s
+não entregues. Se informarmos "Não" o
+sistema não fará separação.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_RECFRE</td>
+<td>Rec.Frt.Cot.</td>
+<td colspan="2">Recalcula Frete Cotacäo</td>
+<td colspan="4">Recalcula frete na cotação, quando este
+campo está como "Não" mesmo que nosso
+cliente envie quantidades, pesos entre
+outros detalhes a mais do que os valores
+da cotação, valores estes que interferem
+diretamente no cálculo do frete, o
+sistema assume para o valor do documento
+o próprio valor da cotação, quando o
+campo está como "Sim" o sistema
+recalcula a cotação de acordo com as
+novas quantidades, pesos entre outros
+detalhes e dará um novo valor ao
+documento, valor este diferente da
+cotação de frete relacionada a este
+documento.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_TPDIAS</td>
+<td>Tp. Dias</td>
+<td colspan="2">Tipos de Dias</td>
+<td colspan="4">Com base neste campo para determinado
+cliente o sistema irá calcular o prazo
+de entrega. Se este campo estiver como
+"Dias Úteis" ao calcular o prazo de
+entrega o sistema irá desprezar os
+finais de semana, feriados nacionais e
+feriados municipais (caso tenha sido
+cadastrado), se estiver como "Dias
+Corridos" o sistema irá calcular o prazo
+de entrega considerando estes feriados e
+finais de semana. Exemplo: Preciso
+efetuar uma entrega no Rio de Janeiro,
+recebi este pedido as 17:00 de uma
+sexta-feira, meu prazo de entrega para o
+Rio de Janeiro é de 4 horas. Se este
+campo estiver como "Dias Corridos" a
+previsão de entrega será sábado às
+10:00, se o campo estiver como "Dias
+Úteis" a previsão de entrega será na
+segunda-feira às 10:00. Horário
+calculado com base em um expediente das
+08:00 às 18:00.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>9                                            </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Dias Uteis;2=Dias Corridos</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_PGREEN</td>
+<td>Pg.Reentrega</td>
+<td colspan="2">Paga Reentrega</td>
+<td colspan="4">Indica se o cliente paga taxa de
+reentrega, em documentos que não foram
+recebidos pelo cliente, na primeira
+tentativa de entrega.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('12')</td>
+<td>'2'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DUO_REENT1</td>
+<td>%1ª.Reentreg</td>
+<td colspan="2">% Relativo a 1ª Reentrega</td>
+<td colspan="4">Percentual de cálculo sobre o valor do
+frete do documento original, na primeira
+viagem de reentrega.
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>@E 999.99                                    </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_REENT2</td>
+<td>%2ª.Reentreg</td>
+<td colspan="2">% Relativo a 2ª Reentrega</td>
+<td colspan="4">Percentual de cálculo sobre o valor do
+frete do documento original, na segunda
+viagem de reentrega.
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>@E 999.99                                    </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_REENT3</td>
+<td>%3ª.Reentreg</td>
+<td colspan="2">% Relativo a 3ª Reentrega</td>
+<td colspan="4">Percentual de cálculo sobre o valor do
+frete do documento original, na terceira
+viagem de reentrega.
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>@E 999.99                                    </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_REENT9</td>
+<td>%Demais</td>
+<td colspan="2">Relativo as demais reentr</td>
+<td colspan="4">Percentual de cálculo sobre o valor do
+frete do documento original, nas demais
+viagens de reentrega.
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>@E 999.99                                    </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_MAXREE</td>
+<td>Valor Maximo</td>
+<td colspan="2">Valor Maximo de Cobranca</td>
+<td colspan="4">Valor máximo permitido ao documento de
+reentrega. O valor deste tipo de
+documento será limitado ao contido neste
+campo. Cadastrando-se zero significa que
+não há limite de valor.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_VLRFIX</td>
+<td>Valor Fixo</td>
+<td colspan="2">Valor Fixo por Reentrega</td>
+<td colspan="4">Valor fixo para cobrança da reentrega.
+Se for cadastrado algum valor neste
+campo, os percentuais de cálculo não
+serão considerados.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_PRIREE</td>
+<td>Prim.Reentre</td>
+<td colspan="2">Primeira Cobr. Reentrega</td>
+<td colspan="4">Indica a partir de qual viagem de
+reentrega, a taxa deste serviço será
+cobrada.
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_PGREFA</td>
+<td>Pg.Refatura</td>
+<td colspan="2">Paga Refaturamento</td>
+<td colspan="4">Indica se o remetente aceita que seus
+documentos sejam transferidos para
+outros destinatários, mediante a uma
+taxa de refaturamento. Isto evita que as
+mercadorias sejam devolvidas, por
+problemas na nota fiscal do cliente.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>4</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DUO_REFAT1</td>
+<td>%Sobre Frete</td>
+<td colspan="2">% Refaturamento</td>
+<td colspan="4">Percentual para cálculo da taxa de
+refaturamento, aplicado sobre o
+documento original.
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>@E 999.99                                    </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>4</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_MDCREF</td>
+<td>Min Doc Orig</td>
+<td colspan="2">Valor Min Doc Refaturam</td>
+<td colspan="4">Indica qual o valor mínimo que o
+documento original deve possuir, para
+que sejam efetuados os cálculos para
+cobrança do documento de refaturamento.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>4</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_PGARMZ</td>
+<td>Pg Armazenag</td>
+<td colspan="2">Paga Armazenagem</td>
+<td colspan="4">Indica se o cliente paga taxa de
+armazenagem, em documentos que excederam
+o prazo máximo de estadia no armazém.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('12')</td>
+<td>'2'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>5</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DUO_PERCOB</td>
+<td>Período Cob.</td>
+<td colspan="2">Período p/Cobrança Armaz</td>
+<td colspan="4">Quantidade de dias a partir da qual será
+cobrada taxa de armazenagem.
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>@E 99                                        </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>5</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_PERMAX</td>
+<td>Período Max.</td>
+<td colspan="2">Período Máximo p/Armazen</td>
+<td colspan="4">Quantidade de dias a partir da qual o
+documento estará sujeito a devolução.
+Documentos que excederem este prazo, não
+estão isentos da cobrança da
+armazenagem.
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>@E 99                                        </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>5</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_MINARM</td>
+<td>Valor Mínimo</td>
+<td colspan="2">Valor Mínimo Armazenagem</td>
+<td colspan="4">Valor mínimo permitido ao documento de
+armazenagem. Cadastrando-se zero
+significa que não há mínimo obrigatório.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>5</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_MAXARM</td>
+<td>Valor Máximo</td>
+<td colspan="2">Valor Máximo Armazenagem</td>
+<td colspan="4">Valor máximo permitido ao documento de
+armazenagem. O valor deste tipo de
+documento será limitado ao contido neste
+campo. Cadastrando-se zero significa que
+não há limite de valor.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>5</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_MDCARM</td>
+<td>Min.Doc.Ori.</td>
+<td colspan="2">Mínimo Docto Original</td>
+<td colspan="4">Indica qual o valor mínimo que o
+documento original deve possuir, para
+que sejam efetuados os cálculos para
+cobrança do documento de armazenagem.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>5</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_MDCREE</td>
+<td>Min.Doc.Orig</td>
+<td colspan="2">Valor Min Doc Reentreg</td>
+<td colspan="4">Indica qual o valor mínimo que o
+documento original deve possuir, para
+que sejam efetuados os cálculos para
+cobrança do documento de reentrega.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_PRCPRD</td>
+<td>Preco Prod.</td>
+<td colspan="2">Preço por Produto</td>
+<td colspan="4">Define se o cliente utiliza o produto no
+calculo do frete, quando o parâmetro
+MV_PRCPROD estiver desabilitado
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_DOCFAT</td>
+<td>Fatur.Difer.</td>
+<td colspan="2">Faturamento Diferenciado</td>
+<td colspan="4">Identifica os documentos que terão
+tratamento diferenciado em seu
+faturamento (Faturamento pelo SE1).
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_PAGTDA</td>
+<td>Paga TDA</td>
+<td colspan="2">Paga TDA</td>
+<td colspan="4">Determina em que momento o cliente, paga
+a Taxa de Dificil Acesso.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Coleta;2=Entrega;3=Coleta e Entrega;4=Coleta ou Entrega</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>6</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_SEPSRV</td>
+<td>Sep. Servico</td>
+<td colspan="2">Separa Servico</td>
+<td colspan="4">Separa por Serviço.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_FTCUBA</td>
+<td>Fator Cub.</td>
+<td colspan="2">Fator de Cubagem</td>
+<td colspan="4">Fator de Cubagem para o Calculo do
+Simulado do Cliente com Densidade.
+</td>
+<td>N</td>
+<td>5</td>
+<td>0</td>
+<td>@E 99999                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_MINREE</td>
+<td>Valor Minimo</td>
+<td colspan="2">Valor Minimo de Cobranca</td>
+<td colspan="4">Valor mínimo permitido ao documento de
+reentrega.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_EDIAUT</td>
+<td>EDI Automat.</td>
+<td colspan="2">EDI Automatico</td>
+<td colspan="4">Este campo informa se o cliente utiliza
+EDI automatico. Sendo : 0=Nao
+utiliza,1=Lote s/ calculo,2=Lote c/
+calculo
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("012")</td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Nao utiliza;1=Lote s/ calculo;2=Lote c/ calculo</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>7</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_EDILOT</td>
+<td>Lote EDI Aut</td>
+<td colspan="2">Lote EDI Automatico</td>
+<td colspan="4">Informa se no EDI automatico, caso o
+cliente utilize, será criado lotes por:
+1=Por processamento ou 2=Por
+destinatario.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("012")</td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Nao utiliza;1=Por processamento;2=Por destinatario</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>7</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_EDIFRT</td>
+<td>Frt. EDI Aut</td>
+<td colspan="2">Frete EDI Automatico</td>
+<td colspan="4">Informa se o valor do frete será
+1=Assume Frete ou 2=Somente Informativo.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("012")</td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Nao utiliza;1=Assume Frete;2=Somente Informativo</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>7</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_PGPEDG</td>
+<td>Pg. Pedagio</td>
+<td colspan="2">Cliente paga pedagio?</td>
+<td colspan="4">Campo utilizado para a integração REPOM:
+Cliente usa vale-pedágio para pagamento
+de pedágio?
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('12')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_OPECOL</td>
+<td>Oper. Coleta</td>
+<td colspan="2">Operação de Coleta</td>
+<td colspan="4">Campo utilizado para a integração REPOM:
+Operação de Coleta selecionada para o
+cliente
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. TMSA480Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dej1.html">DEJ1</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_OPEENT</td>
+<td>Oper Entrega</td>
+<td colspan="2">Operação de entrega</td>
+<td colspan="4">Campo utilizado para a integração REPOM:
+Operação de entrega selecionada para o
+cliente
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. TMSA480Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dej1.html">DEJ1</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_BASREE</td>
+<td>Bas.Cal.Reen</td>
+<td colspan="2">Base Calculo Reentrega</td>
+<td colspan="4">Informe a base de calculo da reentrega.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('12')</td>
+<td>'1'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Frete com Imposto;2=Frete sem Imposto</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_ESTAGR</td>
+<td>Est.Frt.Agr</td>
+<td colspan="2">Estorno Frete Agrupado</td>
+<td colspan="4">Este campo permite configurar se será
+permitido (preencher com Sim) cancelar
+parte dos conhecimentos gerados através
+do agrupamento de nota ou não (preencher
+com Não). Se preenchido com Sim, o
+sistema gravará o campo DT6_NUMCMP com
+um número sequencial crescente mesmo
+para os agrupamentos. Se preenchido com
+Não, o sistema gravará o campo
+DT6_NUMCMP com o mesmo número quando
+houver um agrupamento para o cálculo do
+frete e o sistema gerar diversos
+documentos de transporte.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_INCOMP</td>
+<td>Inc.Produtos</td>
+<td colspan="2">Incompatibilidade Produto</td>
+<td colspan="4">Define como será o comportamento durante
+o cálculo do frete(TMSA200) quando o
+tratamento de incompatibilidade de
+produtos (ONU) estiver ativo (MV_TMSINCO
+= .T.) .
+'1' = Bloqueia o Lote;
+'2' = Separa os documentos com produtos
+divergentes em CTRCs distintos conforme
+a divergencia.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('12')</td>
+<td>'2'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Bloqueia Docto; 2=Separa Doctos</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_RRE</td>
+<td>Sep.RRE</td>
+<td colspan="2">Separa RRE</td>
+<td colspan="4">Define se na Rotina de Cálculo de Frete,
+o sistema devera bloquear o Lote quando
+houver uma Regra de Restrição de
+Embarque (RRE).
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>'0'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=N�o Utiliza;1=Bloqueia Lote</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_AGEAUT</td>
+<td>Agend.Autom.</td>
+<td colspan="2">Agendamento Automatico?</td>
+<td colspan="4">Informa se será gerado agendamento
+automaticamente, apos a importaçao do
+arquivo MRP.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>7</td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_TPCALC</td>
+<td>Tp.Calc.Ree</td>
+<td colspan="2">Tipo Calculo Reentrega</td>
+<td colspan="4">Define o tipo de cálculo que será
+utilizado na Reentrega/Devolução.
+Opcoes: "Por Percentual" ou "Por Trecho"
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('12')</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Por Percentual;2=Por Trecho</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_AGECON</td>
+<td>Conf.Ag.Aut.</td>
+<td colspan="2">Confirma Agd.Automatico.</td>
+<td colspan="4">Informa se o agendamento gerado pelo
+MRP, será confirmado automaticamente.
+Gerando assim, a solicitação de coleta.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>7</td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_PREFAT</td>
+<td>Fat Pre-Fat</td>
+<td colspan="2">Fat. somente com Pre-Fat</td>
+<td colspan="4">Faturamento somente com pré-fatura.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>8</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_MULTFA</td>
+<td>Mult. Fat.</td>
+<td colspan="2">Multi faturamento</td>
+<td colspan="4">Permite faturamento de um mesmo cliente
+por mais de um usuário simultaneamente
+na rotina de fatura por documento.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>'2'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_SEPNEG</td>
+<td>Separa Neg.</td>
+<td colspan="2">Separa Cod Negociação</td>
+<td colspan="4">Indica se as faturas automáticas serão
+separadas por código de negociação.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_FATAUT</td>
+<td>Imp Pre Fat</td>
+<td colspan="2">Importação Aut Pré-Fatura</td>
+<td colspan="4">Geração automática de fatura a partir da
+importação da pré-fatura.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>8</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_VALFAT</td>
+<td>Val. Faturar</td>
+<td colspan="2">Valor a Faturar</td>
+<td colspan="4">Permite configurar para o que possuir
+pré-fatura, se o valor a ser faturado
+será sempre o da pré-fatura ou sempre o
+do TMS.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Pre-Fatura;2=Valor do TMS</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>8</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_TIPTOL</td>
+<td>Tip. Valores</td>
+<td colspan="2">Tipo Tol. de Valores</td>
+<td colspan="4">Tolerância de Valores. Este campo poderá
+ser preenchido com as opções
+"percentual", "valor" ou "não
+considera". A analise da diferença de
+valores será efetuada conhecimento a
+conhecimento.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Percentual;2=Valor;3=N�o Considera</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>8</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_VALTOL</td>
+<td>Tol. Valores</td>
+<td colspan="2">Tolerância de Valores</td>
+<td colspan="4">Exemplo: se o tipo de tolerância é
+"Valor" o valor da tolerância é R$ 0,50
+contudo se o tipo de tolerância e % o
+valor da tolerância é 0,50%,. Se o tipo
+de tolerância estiver preenchido com
+"não considera" este campo não deve ser
+preenchido.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>8</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_QBRPRF</td>
+<td>Ger Qtd Fat</td>
+<td colspan="2">Gerar Qtd pre-fatura</td>
+<td colspan="4">Permite configurar se um cliente aceita
+que sejam geradas várias faturas para
+uma única pré-fatura.
+Se preenchido com Não, o sitema só
+gerará a fatura quando a pré-fatura
+estiver com todos os documentos aptos.
+Se preenchido com Sim, caso existam
+documentos não aptos ao faturamento, o
+sistema gerará uma fatura para os
+documentos aptos e, os não aptos,
+ficarão aguardando uma nova tentativa de
+faturamento
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim; 2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>8</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_TPVENC</td>
+<td>Tip. Vencto</td>
+<td colspan="2">Tipo do Vencto Pre-Fatura</td>
+<td colspan="4">Permite configurar se, para as faturas
+geradas através de uma pré-fatura, o
+sistema deve considerar a condição de
+pagamento cadastrada no Cliente ou então
+a data de vencimento que porventura
+esteja preenchida no arquivo de
+Pré-fatura fornecido pelo cliente.
+Importante ressaltar que, caso o campo
+“Tipo de vencimento da fatura” esteja
+preenchido com a opção de “vencimento
+conforme a pré-fatura” e o campo
+“Permite gerar mais de uma fatura para
+uma pré-fatura” esteja preenchido com
+“Não”, no momento da geração da fatura a
+partir da pré-fatura, o sistema só
+permitirá a geração da fatura se todos
+os documentos da pré-fatura estiverem
+preenchidos com a mesma data.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Vencto Pre-Fatura;2=Vencto Perfil do Cliente</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>8</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DUO_PRFEDI</td>
+<td>Env. EDI Fin</td>
+<td colspan="2">Envio EDI Financeiro</td>
+<td colspan="4">Envio automático do EDI financeiro
+(DOCCOB) após gerar fatura via
+pré-fatura
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio().Or. Pertence("12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>8</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

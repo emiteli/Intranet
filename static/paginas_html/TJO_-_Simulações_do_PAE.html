@@ -1,0 +1,323 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: TJO - Simulações do PAE</title></head>
+<body>
+<font color="orange"><h2 id="TJO">Tabela: TJO - Simulações do PAE</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Simulações do PAE</b></td><td colspan="2"><b>TJO_FILIAL+TJO_CODPLA+TJO_SEQUEN</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">TJO_FILIAL+TJO_CODPLA+TJO_SEQUEN</td><td>PAE + Sequência</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>TJO_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Informe a Filial da Simulação do Plano
+de Atendimento Emergencial.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TJO_CODPLA</td>
+<td>PAE</td>
+<td colspan="2">Codigo do PAE</td>
+<td colspan="4">Informe o Código do Plano de
+Atendimento Emergencial.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>MDT575CHKE('TJK','M->TJO_CODPLA','TJK->TJK_CODPLA') .and. MDT820Seq()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tjk.html">TJK</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tjo_codpla.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TJO_DESPLA</td>
+<td>Descrição</td>
+<td colspan="2">Descrição do Plano</td>
+<td colspan="4">Informe a Descrição do Plano de
+Atendimento Emergencial.
+</td>
+<td>C</td>
+<td>80</td>
+<td>0</td>
+<td>@S30                                         </td>
+<td></td>
+<td>IF(INCLUI,SPACE(80),POSICIONE( 'TJK', 1, xFilial('TJK') + TJO->TJO_CODPLA, 'TJK_DESPLA') )</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td>NGSEEK('TJK',TJO->TJO_CODPLA,1,'TJK->TJK_DESPLA')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TJO_SEQUEN</td>
+<td>Sequência</td>
+<td colspan="2">Sequência da Simulação</td>
+<td colspan="4">Informe a Sequência da Simualção.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>NaoVazio()                                   </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TJO_FREQUE</td>
+<td>Frequência</td>
+<td colspan="2">Frequência da Simualação</td>
+<td colspan="4">Informe a Frequência da Simulação.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('123')</td>
+<td>IF(INCLUI,'1',TJO->TJO_FREQUE)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Dia;2=Mes;3=Ano</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TJO_QUANTI</td>
+<td>Quantidade</td>
+<td colspan="2">Quantidade de Frequência</td>
+<td colspan="4">Informe a Quantidade da Frequência.
+</td>
+<td>N</td>
+<td>9</td>
+<td>0</td>
+<td>@E 999,999                                   </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TJO_DATPLA</td>
+<td>Último Plano</td>
+<td colspan="2">Data do Último Plano</td>
+<td colspan="4">Informe a Data do Último Plano de
+Simulação Realizado.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>IF(M->TJO_DATPLA > dDataBase, CHKHELP('NG080DTINV'), .T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TJO_CODCAL</td>
+<td>Calendário</td>
+<td colspan="2">Calendário da Simulação</td>
+<td colspan="4">Informe o Calendário da Simulação.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>MDT575CHKE('SH7','M->TJO_CODCAL','SH7->H7_CODIGO')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sh7.html">SH7</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tjo_codcal.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TJO_DESCAL</td>
+<td>Descrição</td>
+<td colspan="2">Descrição do Calendário</td>
+<td colspan="4">Informe a Descrição do Calendário da
+Simulação.
+</td>
+<td>C</td>
+<td>80</td>
+<td>0</td>
+<td>@S30                                         </td>
+<td></td>
+<td>IF(INCLUI,' ',POSICIONE( 'SH7', 1, xFilial('SH7') + TJO->TJO_CODCAL, 'H7_DESCRI') )</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

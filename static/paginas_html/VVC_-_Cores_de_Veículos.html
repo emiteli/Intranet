@@ -1,0 +1,514 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: VVC - Cores de Veículos</title></head>
+<body>
+<font color="orange"><h2 id="VVC">Tabela: VVC - Cores de Veículos</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Cores de Veículos</b></td><td colspan="2"><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">VVC_FILIAL+VVC_CODMAR+VVC_CORVEI</td><td>Marca + Codigo Cor</td><td></td></tr>
+<tr><td>2</td><td colspan="2">VVC_FILIAL+VVC_CODMAR+VVC_DESCRI</td><td>Marca + Descricao</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>VVC_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Filial
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VVC_CODMAR</td>
+<td>Marca</td>
+<td colspan="2">Codigo da Marca</td>
+<td colspan="4">Código da Marca
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!S3                                         </td>
+<td>FG_Seek("VE1","M->VVC_CODMAR",1,.f.,"VVC_DESMAR","VE1_DESMAR") .and. FG_EK("VVC")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ve1.html">VE1</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VVC_DESMAR</td>
+<td>Descricao</td>
+<td colspan="2">Descricao da Marca</td>
+<td colspan="4">Descrição da Marca
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!S30                                        </td>
+<td></td>
+<td>if(!Inclui,Posicione("VE1",1,xFilial("VE1")+VVC->VVC_CODMAR,"VE1_DESMAR"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("VE1",1,xFilial("VE1")+VVC->VVC_CODMAR,"VE1_DESMAR")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VVC_CORVEI</td>
+<td>Codigo Cor</td>
+<td colspan="2">Codigo da Cor</td>
+<td colspan="4">Código da Cor
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!S6                                         </td>
+<td>EXISTCHAV("VVC",M->VVC_CODMAR+M->VVC_CORVEI,1,"EXICORVEI")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VVC_DESCRI</td>
+<td>Descricao</td>
+<td colspan="2">Descricao da Cor</td>
+<td colspan="4">Descrição da Cor
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!S30                                        </td>
+<td>NaoVazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VVC_GRUCOR</td>
+<td>Grupo da Cor</td>
+<td colspan="2">Grupo da Cor</td>
+<td colspan="4">Código do Grupo da Cor (cor generica)
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@S2                                          </td>
+<td>FG_Seek("VVQ","M->VVC_GRUCOR",2,.f.,"VVC_DESGRU","VVQ_DESCRI")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/vvq.html">VVQ</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VVC_DESGRU</td>
+<td>Descricao</td>
+<td colspan="2">Descricao do Grupo da Cor</td>
+<td colspan="4">Descrição do Grupo de Cores
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!S20                                        </td>
+<td></td>
+<td>if(!Inclui,Posicione("VVQ",2,xFilial("VVQ")+VVC->VVC_GRUCOR,"VVQ_DESCRI"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("VVQ",2,xFilial("VVQ")+VVC->VVC_GRUCOR,"VVQ_DESCRI")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VVC_TIPCOR</td>
+<td>Tipo Pintura</td>
+<td colspan="2">Tipo de Pintura</td>
+<td colspan="4">Tipo de Pintura, podendo ser Solida,
+Metalica ou Perolizada
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!S1                                         </td>
+<td>PERTENCE("012")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>0=Solida;1=Metalica;2=Perolizada</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VVC_CORREN</td>
+<td>Cor Fabrica</td>
+<td colspan="2">Cor Fabrica</td>
+<td colspan="4">Informe a Cor Fabrica
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SX5","VK"+M->VVC_CORREN)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/vk.html">VK</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VVC_COREDI</td>
+<td>Cor (EDI)</td>
+<td colspan="2">Cor utilizada nos EDI</td>
+<td colspan="4">Informe a cor a ser utilizada nos
+arquivos EDI's.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VVC_UUID</td>
+<td>UUID</td>
+<td colspan="2">Id unico universal</td>
+<td colspan="4">ID unico criado para integracoes.
+</td>
+<td>C</td>
+<td>36</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>FWUUIDV4(.t.)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>.f.</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VVC_DATINC</td>
+<td>Dt Inclusao</td>
+<td colspan="2">Data Inclusao Registro</td>
+<td colspan="4">Data em que o registro foi inserido no
+banco.
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>FGX_Timestamp()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>.f.</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VVC_DATALT</td>
+<td>Dt Alteracao</td>
+<td colspan="2">Data Alteracao Registro</td>
+<td colspan="4">Data em que o registro foi alterado no
+banco.
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>FGX_Timestamp()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>.f.</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>VDM</td>
+<td colspan="2">VVC_CORVEI</td>
+<td colspan="2">VDM_CORVEI</td>
+</tr>
+<tr>
+<td>VC4</td>
+<td colspan="2">VVC_CODMAR+VVC_CORVEI</td>
+<td colspan="2">VC4_CODMAR+VC4_CORVEI</td>
+</tr>
+<tr>
+<td>VC4</td>
+<td colspan="2">VVC_CORVEI</td>
+<td colspan="2">VC4_CORVEI</td>
+</tr>
+<tr>
+<td>VVA</td>
+<td colspan="2">VVC_CORVEI</td>
+<td colspan="2">VVA_CORVEI</td>
+</tr>
+<tr>
+<td>VRK</td>
+<td colspan="2">VVC_CORVEI</td>
+<td colspan="2">VRK_CORVEI</td>
+</tr>
+<tr>
+<td>VQ0</td>
+<td colspan="2">VVC_CORVEI</td>
+<td colspan="2">VQ0_CORVEI</td>
+</tr>
+<tr>
+<td>VAZ</td>
+<td colspan="2">VVC_CODMAR+VVC_CORVEI</td>
+<td colspan="2">VAZ_CODMAR+VAZ_CORVEI</td>
+</tr>
+<tr>
+<td>VV0</td>
+<td colspan="2">VVC_CORVEI</td>
+<td colspan="2">VV0_CORVEI</td>
+</tr>
+<tr>
+<td>VV1</td>
+<td colspan="2">VVC_CORVEI</td>
+<td colspan="2">VV1_CORVEI</td>
+</tr>
+<tr>
+<td>VRI</td>
+<td colspan="2">VVC_CORVEI</td>
+<td colspan="2">VRI_CORVEI</td>
+</tr>
+<tr>
+<td>VV1</td>
+<td colspan="2">VVC_CODMAR+VVC_CORVEI</td>
+<td colspan="2">VV1_CODMAR+VV1_CORFXA</td>
+</tr>
+<tr>
+<td>VV1</td>
+<td colspan="2">VVC_CODMAR+VVC_CORVEI</td>
+<td colspan="2">VV1_CODMAR+VV1_CORVEI</td>
+</tr>
+<tr>
+<td>VAZ</td>
+<td colspan="2">VVC_CORVEI</td>
+<td colspan="2">VAZ_CORVEI</td>
+</tr>
+<tr>
+<td>VV1</td>
+<td colspan="2">VVC_CORVEI</td>
+<td colspan="2">VV1_CORFXA</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

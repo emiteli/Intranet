@@ -1,0 +1,1073 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: TM5 - Exames do Funcionário</title></head>
+<body>
+<font color="orange"><h2 id="TM5">Tabela: TM5 - Exames do Funcionário</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Exames do Funcionário</b></td><td colspan="2"><b>TM5_FILIAL+TM5_NUMFIC+DTOS(TM5_DTPROG)+TM5_HRPROG+TM5_EXAME</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">TM5_FILIAL+TM5_NUMFIC+DTOS(TM5_DTPROG)+TM5_EXAME</td><td>Ficha Médica + Data Exame + Cod. Exame</td><td></td></tr>
+<tr><td>2</td><td colspan="2">TM5_FILIAL+TM5_EXAME+TM5_FORNEC</td><td>Cod. Exame + Fornecedor</td><td></td></tr>
+<tr><td>3</td><td colspan="2">TM5_FILIAL+TM5_PCMSO+TM5_NUMFIC+TM5_EXAME+DTOS(TM5_DTPROG)</td><td>Num.PCMSO + Ficha Médica + Cod. Exame + Data Exame</td><td></td></tr>
+<tr><td>4</td><td colspan="2">TM5_FILIAL+TM5_NUMASO</td><td>Num. ASO</td><td></td></tr>
+<tr><td>5</td><td colspan="2">TM5_FILIAL+TM5_CODRES</td><td>Conclusão</td><td></td></tr>
+<tr><td>6</td><td colspan="2">TM5_FILIAL+TM5_NUMFIC+TM5_EXAME+DTOS(TM5_DTPROG)</td><td>Ficha Médica + Cod. Exame + Data Exame</td><td></td></tr>
+<tr><td>7</td><td colspan="2">TM5_FILIAL+TM5_CC+TM5_EXAME</td><td>Centro Custo + Cod. Exame</td><td></td></tr>
+<tr><td>8</td><td colspan="2">TM5_FILIAL+TM5_NUMFIC+DTOS(TM5_DTPROG)+TM5_HRPROG+TM5_EXAME</td><td>Ficha Médica + Data Exame + Hor. Prog. + Cod. Exame</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>TM5_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Filial onde o Funcionário trabalhava na
+data do exame.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TM5_NUMFIC</td>
+<td>Ficha Médica</td>
+<td colspan="2">Numero da Ficha Medica</td>
+<td colspan="4">Número da Ficha Médica do paciente.
+Pressione as teclas [Enter]+F3] para
+selecionar uma Ficha Médica.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>999999999                                    </td>
+<td>EXISTCPO("TM0",M->TM5_NUMFIC)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tm0.html">TM0</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tm5_numfic.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>LENUMFIC</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TM5_NOMFIC</td>
+<td>Nome</td>
+<td colspan="2">Nome Paciente</td>
+<td colspan="4">Nome do paciente na Ficha Médica. Campo
+alimentado automaticamente pelo módulo
+de Medicina e Segurança do Trabalho com
+base no campo Ficha Médica.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>VSAYMDT("04")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>MdtNomTM0()</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TM5_EXAME</td>
+<td>Cod. Exame</td>
+<td colspan="2">Codigo do Exame Medico</td>
+<td colspan="4">Código do Exame Médico. Pressione as
+teclas [Enter]+[F3] para selecionar um
+Exame.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO("TM4",M->TM5_EXAME)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tm4.html">TM4</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tm5_exame.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/048.html">048</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TM5_NOMEXA</td>
+<td>Nome Exame</td>
+<td colspan="2">Nome do Exame Medico</td>
+<td colspan="4">Nome do Exame Médico. Campo alimentado
+automaticamente pelo módulo de Medicina
+e Segurança do Trabalho com base no
+campo Exame.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>TM4->(VDISP(TM5->TM5_EXAME,"TM4_NOMEXA"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>IF(TM4->(DBSEEK(XFILIAL("TM4")+TM5->TM5_EXAME)),TM4->TM4_NOMEXA," ")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TM5_DTPROG</td>
+<td>Data Exame</td>
+<td colspan="2">Data Programacao Exame</td>
+<td colspan="4">Data da realização do exame.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>99/99/9999                                   </td>
+<td></td>
+<td>IF(INCLUI,dDataBase,TM5->TM5_DTPROG)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TM5_FORNEC</td>
+<td>Fornecedor</td>
+<td colspan="2">Codigo da Entidade Extern</td>
+<td colspan="4">Código da empresa externa prestadora de
+serviço na área médica, onde foi ou será
+realizado o exame. Pressione as teclas
+[Enter]+[F3] para selecionar um
+Fornecedor.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>CARRELOJA()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/nge.html">NGE</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TM5_LOJA</td>
+<td>Loja Fornec.</td>
+<td colspan="2">Loja do Fornecedor</td>
+<td colspan="4">Loja do Fornecedor. Campo alimentado
+automaticamente pelo módulo de Medicina
+e Segurança do Trabalho com base no
+campo Fornecedor.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO("SA2",M->TM5_FORNEC+M->TM5_LOJA) .AND. FORNEXA()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TM5_FILFUN</td>
+<td>Filial Func.</td>
+<td colspan="2">Filial do Funcionario</td>
+<td colspan="4">Código da filial do Funcionário. Campo
+alimentado automaticamente pelo módulo
+de Medicina e Segurança do Trabalho com
+base no campo Funcionário.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td>.F.</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TM5_MAT</td>
+<td>Matricula</td>
+<td colspan="2">Matricula do Funcionario</td>
+<td colspan="4">Matrícula do Funcionário. Campo
+alimentado automaticamente pelo módulo
+de Medicina e Segurança do Trabalho com
+base no campo Ficha Médica.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExCpoMDT("SRA",M->TM5_MAT)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td>.F.</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/121.html">121</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TM5_ORIGEX</td>
+<td>Origem Exame</td>
+<td colspan="2">Origem do Exame</td>
+<td colspan="4">Origem da necessidade do exame. Podendo
+ser: 1 = Assistencial; 2 = Ocupacional.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NUMPCMSO()</td>
+<td>IF(INCLUI,"1",TM5->TM5_ORIGEX)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/tm5_origex.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Assistencial;2=Ocupacional</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TM5_PCMSO</td>
+<td>Num.PCMSO</td>
+<td colspan="2">Numero do PCMSO</td>
+<td colspan="4">Número que identifica o PCMSO, podendo
+ser um número sequencial ou o próprio
+ano corrente ex. 1999. (só será
+utilizado se o exame for de origem
+ocupacional). Campo alimentado
+automaticamente pelo módulo de Medicina
+e Segurança do Trabalho com base no
+campo PCMSO.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>If(M->TM5_ORIGEX == "2",EXISTCPO("TMW",M->TM5_PCMSO),NUMPCMSO())</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tmw.html">TMW</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>MDT120WHE(1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TM5_DTRESU</td>
+<td>Data Result.</td>
+<td colspan="2">Data Resultado Exame</td>
+<td colspan="4">Data do resultado do exame.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>MDT120VLDR()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TM5_CODRES</td>
+<td>Conclusão</td>
+<td colspan="2">Cod Conclusao Resultado</td>
+<td colspan="4">Código do resultado do exame. Pressione
+as teclas [Enter]+[F3] para selecionar
+um Resultado do Exame.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>If(Vazio(),.T.,EXISTCPO("TMU",M->TM5_CODRES))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tmu.html">TMU</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tm5_codres.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TM5_RESULT</td>
+<td>Descrição</td>
+<td colspan="2">Descricao do Resultado</td>
+<td colspan="4">Descrição do Resultado do Exame. Campo
+alimentado automaticamente pelo módulo
+de Medicina e Segurança do Trabalho com
+base no campo Conclusão do Resultado.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>TMU->(VDISP(TM5->TM5_CODRES,"TMU_RESULT"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>IF(TMU->(DBSEEK(XFILIAL("TMU")+TM5->TM5_CODRES)),TMU->TMU_RESULT," ")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TM5_INDRES</td>
+<td>Ind. Result.</td>
+<td colspan="2">Indicador Resultado Exame</td>
+<td colspan="4">Informe o indicador do resultado do
+exame 1=Normal; 2=Alterado.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(INCLUI,'1',TM5->TM5_INDRES)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Normal;2=Alterado</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TM5_NATEXA</td>
+<td>Natureza</td>
+<td colspan="2">Indicador Natureaza Exame</td>
+<td colspan="4">Natureza do Exame 1-Admissional;
+2-Periódico; 3-Mudança função; 4-Retorno
+ao trabalho; 5-Demissional (esta inf. só
+terá validade para os exames de origem
+ocupacional).
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("12345")</td>
+<td>IF(INCLUI,'1',TM5->TM5_NATEXA)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Admissional;2=Periodico;3=Mudanca Funcao;4=Retorno Trabalho;5=Demissional</td>
+<td>M->TM5_ORIGEX = "2"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TM5_OBSERV</td>
+<td>Obs. Result.</td>
+<td colspan="2">Observacao Sobre Result.</td>
+<td colspan="4">Campo para observações necessárias ao
+registro do Exame do Funcionário.
+</td>
+<td>C</td>
+<td>80</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TM5_CC</td>
+<td>Centro Custo</td>
+<td colspan="2">Codigo do Centro de Custo</td>
+<td colspan="4">Centro de Custo onde o funcionário
+trabalhava na data do exame. Campo
+alimentado automaticamente pelo módulo
+de Medicina e Segurança do Trabalho com
+base no campo Centro de Custo.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td>.F.</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/004.html">004</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TM5_CODFUN</td>
+<td>Cod. Funcao</td>
+<td colspan="2">Funcao do Funcionario</td>
+<td colspan="4">Código da Função exercida pelo
+Funcionário. Campo alimentado
+automaticamente pelo módulo de Medicina
+e Segurança do Trabalho com base no
+campo Função.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TM5_CBO</td>
+<td>C.B.O.</td>
+<td colspan="2">C.B.O.</td>
+<td colspan="4">Código brasileiro de ocupação. Campo
+alimentado automaticamente pelo módulo
+de Medicina e Segurança do Trabalho com
+base no campo Função.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td>.F.</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TM5_NUMASO</td>
+<td>Num. ASO</td>
+<td colspan="2">Numero do ASO</td>
+<td colspan="4">Número do Atestado de Saúde Ocupacional.
+Campo alimentado automaticamente pelo
+módulo de Medicina e Segurança do
+Trabalho com base no campo Número do
+ASO.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TM5_TNOTRA</td>
+<td>Turno Trab.</td>
+<td colspan="2">Codigo do Turno Trabalho</td>
+<td colspan="4">Código do Turno de trabalho. Campo
+alimentado automaticamente pelo módulo
+de Medicina e Segurança do Trabalho com
+base no campo Turno Trabralho.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TM5_DESRES</td>
+<td>Det. Resum.</td>
+<td colspan="2">Detalhes Resultado Exame</td>
+<td colspan="4">Descrição do resultado do Exame.
+</td>
+<td>M</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TM5_EXAREF</td>
+<td>Referencial?</td>
+<td colspan="2">Exame Referencial?</td>
+<td colspan="4">Indicador de referência. Podendo ser:
+1- Referencial;
+2- Sequencial.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("12")</td>
+<td>IF(INCLUI,'2',TM5->TM5_EXAREF)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TM5_INDAGR</td>
+<td>Agravamento?</td>
+<td colspan="2">Agravamento?</td>
+<td colspan="4">Indica se houve agravamento no resultado
+do exame do paciente.
+Opções:
+1=Sim; 2=Não
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td>NG120WNAG()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TM5_ORIAGR</td>
+<td>Origem Agrav</td>
+<td colspan="2">Origem Agravamento</td>
+<td colspan="4">Origem do agravamento no resultado do
+exame.
+Opções: 1=Ocupacional;2=Não Ocupacional
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Ocupacional;2=N�o Ocupacional</td>
+<td>M->TM5_INDAGR='1'</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TM5_HRPROG</td>
+<td>Hor. Prog.</td>
+<td colspan="2">Horario Programacao</td>
+<td colspan="4">Horário programado do exame.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td>VALHORA(M->TM5_HRPROG) .AND. MDT120PK()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TM5_USERGI</td>
+<td>Log de Inclu</td>
+<td colspan="2">Log de Inclusao</td>
+<td colspan="4">Indica código criptografado do usuário
+de inclusão do registro.
+</td>
+<td>C</td>
+<td>17</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TM5_USERGA</td>
+<td>Log de Alter</td>
+<td colspan="2">Log de Alteracao</td>
+<td colspan="4">Indica código criptografado do usuário
+de alteração do registro.
+</td>
+<td>C</td>
+<td>17</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TM5_CODDET</td>
+<td>Cod.DENATRAN</td>
+<td colspan="2">Código no DENATRAN</td>
+<td colspan="4">Código do exame conforme padrão
+DENATRAN. Este código é utilizado para a
+Integração SIGAMDT x SIGAGPE na geração
+do CAGED.
+</td>
+<td>C</td>
+<td>17</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/tm5_coddet.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TM5_USUARI</td>
+<td>Med. Exam.</td>
+<td colspan="2">Médico Examinador</td>
+<td colspan="4">Código do Médico Examinador do Exame.
+Este código é utilizado para a
+Integração SIGAMDT x SIGAGPE na geração
+do CAGED.
+</td>
+<td>C</td>
+<td>12</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCPO("TNP",M->TM5_USUARI)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tnp.html">TNP</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tm5_usuari.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>M->TM5_ORIGEX == "1" .And. !Empty( M->TM5_CODDET )</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TM5_NOMMED</td>
+<td>Nome Med.</td>
+<td colspan="2">Nome do Médico</td>
+<td colspan="4">Nome do Médico Examinador.
+</td>
+<td>C</td>
+<td>80</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(INCLUI,"",Posicione("TNP",1,xFilial("TNP")+M->TM5_USUARI,"TNP_NOME"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

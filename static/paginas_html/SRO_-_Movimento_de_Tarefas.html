@@ -1,0 +1,683 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: SRO - Movimento de Tarefas</title></head>
+<body>
+<font color="orange"><h2 id="SRO">Tabela: SRO - Movimento de Tarefas</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Movimento de Tarefas</b></td><td colspan="2"><b>RO_FILIAL+RO_MAT+DTOS(RO_DATA)+RO_CODTAR+RO_CC+RO_ITEM+RO_CLVL</b></td><td><b>GPEA190</b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">RO_FILIAL+RO_MAT+DTOS(RO_DATA)+RO_CODTAR+RO_CC</td><td>Matricula + Dt.Tarefa De + Cod. Tarefa + Centro Custo</td><td></td></tr>
+<tr><td>2</td><td colspan="2">RO_FILIAL+RO_MAT+RO_CODTAR+DTOS(RO_DATA)</td><td>Matricula + Cod. Tarefa + Dt.Tarefa De</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>RO_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RO_MAT</td>
+<td>Matricula</td>
+<td colspan="2">Numero da Matricula</td>
+<td colspan="4">Neste campo deve ser digitado:
+Número da Matricula
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/121.html">121</a></td>
+<td></td>
+<td></td>
+<td>#RO_MAT    <>'      '</td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RO_TIPO</td>
+<td>Tp. Tarefa</td>
+<td colspan="2">Tipo de Tarefa</td>
+<td colspan="4">Neste campo deve ser informado:
+O tipo da tarefa que será lançada.
+1-Tarefa Fixa
+Esta tarefa será utilizada para
+composição do salário, ou seja, será
+uma tarefa de salário.
+2-Tarefa variável
+Esta tarefa será utilizada para
+pagamento apenas no mês, ou entre as
+datas, que forem lançadas.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>9                                            </td>
+<td></td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>#fCbROTIPO()</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td>#RO_TIPO    IN ('12')</td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RO_DATA</td>
+<td>Dt.Tarefa De</td>
+<td colspan="2">Data Realização Tarefa</td>
+<td colspan="4">Informe a Data Início da realização da
+tarefa.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>NAOVAZIO() .AND. GPA190VLD(M->RO_DATA)</td>
+<td>Ctod("//")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td>#RO_DATA   <>'        '</td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RO_DATAATE</td>
+<td>Dt.Taref.Ate</td>
+<td colspan="2">Data Finalização Tarefa</td>
+<td colspan="4">Informe a Data Final da realização da
+tarefa.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>Ctod("//")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RO_CODTAR</td>
+<td>Cod. Tarefa</td>
+<td colspan="2">Código da Tarefa</td>
+<td colspan="4">Neste campo deve ser digitado:
+Código da tarefa. Pressione [F3] para
+consultar.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td>GP190TAR() .AND. GPA190Blq()</td>
+<td>Space(03)</td>
+<td><a href="/tabelas_protheus/f3/s070.html">S070</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td>#RO_CODTAR <>'   '</td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RO_DESTAR</td>
+<td>Descricao</td>
+<td colspan="2">Descrição da Tarefa</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>fDescRCC("S070", SRO->RO_CODTAR, 1, 3, 4, 30)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RO_QTDSEM</td>
+<td>Aulas Semana</td>
+<td colspan="2">Aulas Semanais</td>
+<td colspan="4">Neste campo deve ser digitado:
+Quantidade de aulas semanais. Esta
+quantida será multiplicada pelo número
+de semanas do mês informada no cadastro
+de sindicatos.
+</td>
+<td>N</td>
+<td>9</td>
+<td>2</td>
+<td>@E 999,999.99                                </td>
+<td>POSITIVO() .AND. GP190PicOut("M->RO_QTDSEM")</td>
+<td>0</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/ro_qtdsem.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RO_QUANT</td>
+<td>Qtd. Tarefa</td>
+<td colspan="2">Qtd. da Tarefa Executada</td>
+<td colspan="4">Neste campo deve ser digitado:
+Quantidade da tarefa realizada.
+OBS.
+Campo Qtd Tarefa permite apenas valores
+maiores ou igual a zero e inferiores a
+1000.
+</td>
+<td>N</td>
+<td>10</td>
+<td>2</td>
+<td>@E 9,999,999.99                              </td>
+<td>POSITIVO() .AND. GP190PicOut("M->RO_QUANT")</td>
+<td>0</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/ro_quant.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RO_VALOR</td>
+<td>Val.Unitario</td>
+<td colspan="2">Valor Unitario da Tarefa</td>
+<td colspan="4">Neste campo deve ser digitado:
+Valor Unitario da Tarefa
+</td>
+<td>N</td>
+<td>12</td>
+<td>4</td>
+<td>@E 9,999,999.9999                            </td>
+<td>POSITIVO() .and. GP190TAR(M->RO_VALOR)</td>
+<td>0</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RO_VALTOT</td>
+<td>Valor Total</td>
+<td colspan="2">Valor Total da Tarefa</td>
+<td colspan="4">Informe o Valor Total da Tarefa( Valor
+Unitario multiplicado pela quantidade ).
+</td>
+<td>N</td>
+<td>12</td>
+<td>4</td>
+<td>@E 9,999,999.9999                            </td>
+<td>POSITIVO()</td>
+<td>0</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RO_SEQ</td>
+<td>Sequencia</td>
+<td colspan="2">Sequencia da Tarefa</td>
+<td colspan="4">Seqüência incremental automática do
+lançamento de tarefa.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99999                                        </td>
+<td></td>
+<td>fGPA190Seq()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RO_CONTSEQ</td>
+<td>Continua Seq</td>
+<td colspan="2">Continua Sequencia</td>
+<td colspan="4">Define se o lançamento da tarefa é
+continuação de um lançamento anterior.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99999                                        </td>
+<td></td>
+<td>Space(03)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RO_TPALT</td>
+<td>Tipo Alt.</td>
+<td colspan="2">Tipo de Alteracao</td>
+<td colspan="4">Informe o tipo de alteração da tarefa.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Space(03)</td>
+<td><a href="/tabelas_protheus/f3/x5_041.html">X5_041</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RO_POSTO</td>
+<td>Cod.Posto</td>
+<td colspan="2">Codigo do Posto</td>
+<td colspan="4">Informe o codigo do Posto
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO('RCL')</td>
+<td>ROPostoInit()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RO_HRSEXT</td>
+<td>Horas Extras</td>
+<td colspan="2">Aulas Extras a Pagar</td>
+<td colspan="4">Informe a quantidade de tarefa a ser
+paga adicionalmente ao funcionário.
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>@E 999.99                                    </td>
+<td>GP190HRSEXT("M->RO_HRSEXT")</td>
+<td>0</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RO_HRSFAL</td>
+<td>Horas Faltas</td>
+<td colspan="2">Aulas para Desconto</td>
+<td colspan="4">Informe a quantidade de tarefa a ser
+descontada do funcionário.
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>@E 999.99                                    </td>
+<td>GP190HRSEXT("M->RO_HRSFAL")</td>
+<td>0</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RO_CC</td>
+<td>Centro Custo</td>
+<td colspan="2">Código Centro de Custo</td>
+<td colspan="4">Neste campo deve ser digitado:
+Código Centro de Custo
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>CTB105CC()</td>
+<td>SRA->RA_CC</td>
+<td><a href="/tabelas_protheus/f3/ctt.html">CTT</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/004.html">004</a></td>
+<td></td>
+<td></td>
+<td>#RO_CC     <>'         '</td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RO_VERBA</td>
+<td>Verba Tarefa</td>
+<td colspan="2">Verba da Tarefa</td>
+<td colspan="4">.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td>NAOVAZIO()</td>
+<td>Space(03)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td>#RO_VERBA  <>'   '</td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RO_ITEM</td>
+<td>Item</td>
+<td colspan="2">Item Contabil</td>
+<td colspan="4">Informe o Código do Item Contábil
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio().or.CTB105Item(M->RO_ITEM)</td>
+<td>SRA->RA_ITEM</td>
+<td><a href="/tabelas_protheus/f3/ctd.html">CTD</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/005.html">005</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RO_CLVL</td>
+<td>Classe Valor</td>
+<td colspan="2">Classe de Valor</td>
+<td colspan="4">Informe o Código da Classe de Valor
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio().or.CTB105Clvl(M->RO_CLVL)</td>
+<td>SRA->RA_CLVL</td>
+<td><a href="/tabelas_protheus/f3/cth.html">CTH</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/006.html">006</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

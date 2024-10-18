@@ -1,0 +1,653 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: GN6 - CREDENCIAMENTOS MAT/MED</title></head>
+<body>
+<font color="orange"><h2 id="GN6">Tabela: GN6 - CREDENCIAMENTOS MAT/MED</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>CREDENCIAMENTOS MAT/MED</b></td><td colspan="2"><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">GN6_FILIAL+GN6_CODCON+GN6_CODCRM+GN6_CODPLA</td><td>Convenio + CRM Medico + Plano</td><td></td></tr>
+<tr><td>2</td><td colspan="2">GN6_FILIAL+GN6_CODCRM+GN6_CODCON+GN6_CODPLA</td><td>CRM Medico + Convenio + Plano</td><td></td></tr>
+<tr><td>3</td><td colspan="2">GN6_FILIAL+GN6_CODCON+GN6_CODCRM+GN6_CODPLA+GN6_CODPRO</td><td>Convenio + CRM Medico + Plano + Mat/Med</td><td></td></tr>
+<tr><td>4</td><td colspan="2">GN6_FILIAL+GN6_CODCON+GN6_CODCRM+GN6_CODPLA+GN6_CODGPA</td><td>Convenio + CRM Medico + Plano + Grupo MatMed</td><td></td></tr>
+<tr><td>5</td><td colspan="2">GN6_FILIAL+GN6_TIPCRE+GN6_CODPRE+GN6_CARATE+GN6_CODPRO+GN6_CODGPA+GN6_CODLOC+GN6_CODCRM+GN6_CODPLA+GN6_CODCON</td><td>Tipo cred. + Prestador + Carater + Mat/Med + Grupo MatMed + Setor + CR</td><td></td></tr>
+<tr><td>6</td><td colspan="2">GN6_FILIAL+GN6_CODSEQ</td><td>Codigo</td><td></td></tr>
+<tr><td>7</td><td colspan="2">GN6_FILIAL+GN6_CODPRE</td><td>Prestador</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>GN6_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GN6_CODSEQ</td>
+<td>Codigo</td>
+<td colspan="2">Codigo do Credenciamento</td>
+<td colspan="4">Informe o código de identificação do
+credenciamento.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistChav('GN6', M->GN6_CODSEQ)</td>
+<td>IF(INCLUI,GETSX8NUM('GN6','GN6_CODSEQ',,5),GN6_CODSEQ)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GN6_TIPCRE</td>
+<td>Tipo cred.</td>
+<td colspan="2">Tipo Credenciamento</td>
+<td colspan="4">Informe se este credenciamento será
+utilizado em horário "Normal" ou em
+"Plantão".
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>'0'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Normal;1=Plantao</td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GN6_CODPRE</td>
+<td>Prestador</td>
+<td colspan="2">Codigo do Prestador</td>
+<td colspan="4">Informe o código do prestador para o
+credenciamento. O preenchimento deste
+campo determina a regra de
+credenciamento, apresentada na rotina
+"Regras de Credenciamento".
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>HS_VLDGN6()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/za2.html">ZA2</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GN6_NOMPRE</td>
+<td>Nome</td>
+<td colspan="2">Nome do Prestador</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>HS_INIPADR('GAZ', 1, GN6->GN6_CODPRE,'GAZ_FANPRE')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione('GAZ',1,xFilial('GAZ')+GN6->GN6_CODPRE,'GAZ_FANPRE')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GN6_CODCON</td>
+<td>Convenio</td>
+<td colspan="2">Codigo do Convenio</td>
+<td colspan="4">Neste campo é registrado o Codigo do
+Convenio do paciente, proveniente do
+atendimento efetuado ao paciente.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>HS_VLDGN6()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ga9.html">GA9</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GN6_NOMCON</td>
+<td>Nome</td>
+<td colspan="2">Nome do Convenio</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>HS_INIPADR('GA9', 1, GN6->GN6_CODCON,'GA9_NREDUZ')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione('GA9',1,xFilial('GA9')+GN6->GN6_CODCON,'GA9_NREDUZ')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GN6_CODPLA</td>
+<td>Plano</td>
+<td colspan="2">Plano do Convenio</td>
+<td colspan="4">Informe o código de identificação do
+plano para o credenciamento. O
+preenchimento deste campo determina a
+regra de credenciamento, apresentada na
+rotina "Regras de Credenciamento".
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>HS_VLDGN6()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gcm.html">GCM</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GN6_DESPLA</td>
+<td>Descricao</td>
+<td colspan="2">Descricao do Plano</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>HS_INIPADR('GCM', 1, GN6->GN6_CODCON+GN6->GN6_CODPLA,'GCM_DESPLA')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione('GCM',1,xFilial('GCM')+GN6->GN6_CODCON+GN6->GN6_CODPLA,'GCM_DESPLA')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GN6_CODCRM</td>
+<td>CRM Medico</td>
+<td colspan="2">CRM do Medico</td>
+<td colspan="4">Informe o CRM do médico que será
+credenciado.
+O preenchimento deste campo
+determina a regra de credenciamento,
+apresentada na rotina "Regras de
+Credenciamento".
+</td>
+<td>C</td>
+<td>7</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>HS_VLDGN6()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/med.html">MED</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GN6_NOMMED</td>
+<td>Nome</td>
+<td colspan="2">Nome do Medico</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>HS_INIPADR('SRA',11, GN6->GN6_CODCRM,'RA_NOME')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>HS_INIPADR('SRA',11,GN6->GN6_CODCRM,'RA_NOME')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GN6_CODLOC</td>
+<td>Setor</td>
+<td colspan="2">Setor</td>
+<td colspan="4">Campo preenchido com o codigo do Setor
+para que as regras sejam feitas quando
+da efetuação de um atendimento.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>HS_VLDGN6()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gcs.html">GCS</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GN6_NOMLOC</td>
+<td>Descricao</td>
+<td colspan="2">Descricao</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>HS_INIPADR('GCS', 1, GN6->GN6_CODLOC, 'GCS_NOMLOC')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione('GCS',1,xFilial('GCS')+GN6->GN6_CODLOC,'GCS_NOMLOC')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GN6_CODGPA</td>
+<td>Grupo MatMed</td>
+<td colspan="2">Grupo de Mat/Medico</td>
+<td colspan="4">Informe o código de identificação do
+grupo AMB correspondente. O
+preenchimento deste campo determina a
+regra de credenciamento, apresentada na
+rotina "Regras de Credenciamento".
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>HS_VLDGN6()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sbm.html">SBM</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GN6_DESGPA</td>
+<td>Descricao</td>
+<td colspan="2">Descricao da Categoria</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>HS_INIPADR('SBM', 1, GN6->GN6_CODGPA, 'BM_DESC')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione('SBM',1,xFilial('SBM')+GN6->GN6_CODGPA,'BM_DESC')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GN6_CODPRO</td>
+<td>Mat/Med</td>
+<td colspan="2">Codigo do Mat/Med</td>
+<td colspan="4">Informe o código do procedimento.
+Tecla <F3> disnponível para consulta ao
+Cadastro de Procedimento.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>HS_VLDGN6()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sb1.html">SB1</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/030.html">030</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GN6_DDESPE</td>
+<td>Descricao</td>
+<td colspan="2">Descricao Mat/Med</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>HS_INIPADR('SB1', 1, GN6->GN6_CODPRO, 'B1_DESC')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione('GA7', 1, xFilial('GA7')+GN6->GN6_CODPRO, 'GA7_DESC')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GN6_CARATE</td>
+<td>Carater</td>
+<td colspan="2">Carater do atendimento</td>
+<td colspan="4">Informe o caráter de atendimento a ser
+considerado nesta regra.
+Tecla <F3> disponível para consunta na
+rotina Caráter do Atendimento.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>HS_VldGAY()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gd1.html">GD1</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GN6_DCARAT</td>
+<td>Descricao</td>
+<td colspan="2">Descricao carater atend.</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>HS_INIPADR('GD1', 1, GN6->GN6_CARATE, 'GD1_DCARAT')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>HS_IniPadr('GD1', 1, GN6->GN6_CARATE, 'GD1_DCARAT')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GN6_DATVLD</td>
+<td>Validade</td>
+<td colspan="2">Data de Validade</td>
+<td colspan="4">Informe a data de validade do
+credenciamento.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>@D                                           </td>
+<td></td>
+<td>DDATABASE</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

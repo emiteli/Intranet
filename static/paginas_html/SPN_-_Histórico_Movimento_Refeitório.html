@@ -1,0 +1,839 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: SPN - Histórico Movimento Refeitório</title></head>
+<body>
+<font color="orange"><h2 id="SPN">Tabela: SPN - Histórico Movimento Refeitório</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Histórico Movimento Refeitório</b></td><td colspan="2"><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">PN_FILIAL+PN_MAT+DTOS(PN_DATA)+STR(PN_HORA,5,2)</td><td>Matricula + Data + Horario</td><td></td></tr>
+<tr><td>2</td><td colspan="2">PN_FILIAL+PN_MAT+DTOS(PN_DATA)+PN_TIPOREF+STR(PN_HORA,5,2)+PN_SEQMARC</td><td>Matricula + Data + Tipo de Ref. + Horario + Seq. Marc.</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>PN_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Corresponde ao Código da Filial.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PN_MAT</td>
+<td>Matricula</td>
+<td colspan="2">Numero da Matricula</td>
+<td colspan="4">Neste campo deve ser digitado o Número
+da matrícula do funcionário.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .And. EXISTCHAV("SRA") .And. Val(M->PN_MAT) > 0</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/121.html">121</a></td>
+<td></td>
+<td></td>
+<td>#PN_MAT    <>'      '</td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>PN_DATA</td>
+<td>Data</td>
+<td colspan="2">Data da Refeição</td>
+<td colspan="4">Neste campo deve ser digitada a data da
+Refeição.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>Ctod("//")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td>#PN_DATA   <>'        '</td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>PN_HORA</td>
+<td>Horario</td>
+<td colspan="2">Horário da Marcação</td>
+<td colspan="4">Neste campo deve ser digitado o Horário
+da Marcação.
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td>VldHora(M->PN_HORA)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td>#PN_HORA   >=0</td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>PN_CODREF</td>
+<td>Codigo</td>
+<td colspan="2">Codigo de Refeicoes</td>
+<td colspan="4">Corresponde ao Código da Tabela de
+Refeiçöes.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td>Pna150Cod() .AND. Pna150Seq()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sp1.html">SP1</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>PN_TIPOREF</td>
+<td>Tipo de Ref.</td>
+<td colspan="2">Tipo de Refeição</td>
+<td colspan="4">Neste campo deverá ser informado o
+código do Tipo de Refeição conforme
+tabela. Quando não for Encontrado o
+Horário Correspondente à Marcação esta
+será  Lançada no código "ZZ" .
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SPM") .And. Pna150DTp() .AND. Pna150Seq() .AND. Pna150VSeq() .AND. Pna150VRef()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/xp1.html">XP1</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>PN_SEQ</td>
+<td>Seq. de Ref.</td>
+<td colspan="2">Sequencia da Refeição</td>
+<td colspan="4">Corresponde a Sequência do Tipo de
+Refeição na Tabela de Refeiçöes.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PN_DESCREF</td>
+<td>Desc.Tip.Ref</td>
+<td colspan="2">Descricao do Tipo de Ref.</td>
+<td colspan="4">Corresponde a Descrição do Tipo de
+Refeição (almoço, por exemplo).
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PN_SEQMARC</td>
+<td>Seq. Marc.</td>
+<td colspan="2">Sequencia da Marcação</td>
+<td colspan="4">Quando houver mais de uma Marcação  para
+o mesmo Tipo de Refeição este campo
+será preenchido com a sequência
+correspondente.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PN_GERAFOL</td>
+<td>Gera p/Folha</td>
+<td colspan="2">Gera para a Folha</td>
+<td colspan="4">Quando este campo estiver preenchido
+com"S" as Horas apuradas para o Tipo de
+Refeição serão apuradas e enviadas para
+a Folha de Pagamento.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>'S'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>#PonRetOpcBox(05)</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>PN_PD</td>
+<td>Evento Func.</td>
+<td colspan="2">Cód. Evento Funcionário</td>
+<td colspan="4">Neste campo deverá ser informado o
+Código do Evento referente ao Desc.
+Refeição parte Funcionário utilizado na
+integração com a Folha de Pagamento.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .or. ExistCpo("SP9")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sp9.html">SP9</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PN_PDEMPR</td>
+<td>Evento Empr.</td>
+<td colspan="2">Cód. Evento Empresa</td>
+<td colspan="4">Neste campo deverá ser informado o
+Código do Evento referente ao Custo da
+Refeição para a Empresa utilizado na
+integração com a Folha de Pagamento.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .or. ExistCpo("SP9")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sp9.html">SP9</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PN_VALREF</td>
+<td>Valor da Ref</td>
+<td colspan="2">Valor da Refeicao</td>
+<td colspan="4">Corresponde ao Valor da Refeição a ser
+utilizado na integração com a Folha de
+Pagamento.
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td>#PN_VALREF >=0</td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PN_CC</td>
+<td>Centro Custo</td>
+<td colspan="2">Código do Centro de Custo</td>
+<td colspan="4">Neste campo deverá ser digitado o Código
+do Centro de Custo.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. Ctb105CC()</td>
+<td>SRA->RA_CC</td>
+<td><a href="/tabelas_protheus/f3/ctt.html">CTT</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/004.html">004</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PN_DESCFUN</td>
+<td>Vl.Desc.Func</td>
+<td colspan="2">Desconto Ref. Funcionario</td>
+<td colspan="4">Valor do Desconto da Refeição
+correspondente a parte do Funcionário a
+ser utilizado na integração com a Folha
+de Pagamento.
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td>Pna150DFun()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PN_RELOGIO</td>
+<td>Nro. Relógio</td>
+<td colspan="2">Número do Relógio</td>
+<td colspan="4">Neste campo deve ser digitado o Código
+do Relógio de Refeitório.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td>Vazio() .or. ExistCpo("SP0")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sp0.html">SP0</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PN_FLAG</td>
+<td>Flag</td>
+<td colspan="2">Flag da Geracao</td>
+<td colspan="4">Este campo conterá o "Flag" de Geração
+das Marcaçöes de Refeiçöes.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>!                                            </td>
+<td></td>
+<td>"I"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PN_APONTA</td>
+<td>Marc. Apont.</td>
+<td colspan="2">Marcacao Apontada</td>
+<td colspan="4">Define se a marcação da refeição já foi
+apontada ou não.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>!                                            </td>
+<td>Vazio() .or. Pertence("SN")</td>
+<td>"N"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>#PonRetOpcBox(05)</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PN_DATAAPO</td>
+<td>Data Apont.</td>
+<td colspan="2">Data de Apontamento</td>
+<td colspan="4">Informe a data de apontamento.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>PNDataApoInit()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PN_PROCES</td>
+<td>Cod Processo</td>
+<td colspan="2">Codigo Processo</td>
+<td colspan="4">Identifica o tipo de pagamento por
+contrato.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>                                             </td>
+<td>PNProcesVld()</td>
+<td>PNProcesInit()</td>
+<td><a href="/tabelas_protheus/f3/rcj.html">RCJ</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PN_PERIODO</td>
+<td>Cod Periodo</td>
+<td colspan="2">Codigo Periodo</td>
+<td colspan="4">Identifica a que periodo de cálculo está
+se referenciando o lançamento.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td>PNPeriodoVld()</td>
+<td>PNPeriodoInit()</td>
+<td><a href="/tabelas_protheus/f3/rch.html">RCH</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PN_ROTEIR</td>
+<td>Roteiro Calc</td>
+<td colspan="2">Roteiro Calculo</td>
+<td colspan="4">Corresponde ao código do
+procedimento/roteiro de cálculo. No
+SIGAPON, este campo possui o conteúdo
+padrão 'PON'.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PNRoteirVld()</td>
+<td>PNRoteirInit()</td>
+<td><a href="/tabelas_protheus/f3/sry.html">SRY</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PN_NUMPAG</td>
+<td>Numero Pagto</td>
+<td colspan="2">Numero Pagamento</td>
+<td colspan="4">Identifica o numero de pagamento de um
+periodo de calculo.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>PNNumPagInit()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PN_POSTO</td>
+<td>Cod. Posto</td>
+<td colspan="2">Cod. Posto</td>
+<td colspan="4">Número que identifica o posto, ou seja,
+os locais dentro de um centro de custo.
+Esses postos são formados por uma
+numeração sequencial e única dentro da
+tabela.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PNPostoVld()</td>
+<td>PNPostoInit()</td>
+<td><a href="/tabelas_protheus/f3/rcl.html">RCL</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PN_DEPTO</td>
+<td>Cod. Depto</td>
+<td colspan="2">Cod. Depto</td>
+<td colspan="4">Neste campo deve ser digitado:
+Código da unidade de trabalho.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PNDeptoVld()</td>
+<td>PNDeptoInit()</td>
+<td><a href="/tabelas_protheus/f3/sqb.html">SQB</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PN_CODFUNC</td>
+<td>Cod.Funcao</td>
+<td colspan="2">Codigo da Funcao</td>
+<td colspan="4">Informe o Código da função do
+funcionário de  acordo com tabela
+definida no Cadastro  de Funçöes.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PNFuncVld()</td>
+<td>PNFuncInit()</td>
+<td><a href="/tabelas_protheus/f3/srj.html">SRJ</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

@@ -1,0 +1,516 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: CC3 - Cadastro de CNAE</title></head>
+<body>
+<font color="orange"><h2 id="CC3">Tabela: CC3 - Cadastro de CNAE</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Cadastro de CNAE</b></td><td colspan="2"><b>CC3_FILIAL+CC3_COD+CC3_DESC</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">CC3_FILIAL+CC3_COD</td><td>Código CNAE</td><td></td></tr>
+<tr><td>2</td><td colspan="2">CC3_FILIAL+CC3_DESC</td><td>Descrição</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>CC3_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Filial do Sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CC3_COD</td>
+<td>Código CNAE</td>
+<td colspan="2">Código do CNAE</td>
+<td colspan="4">Código do CNAE (Classificação Nacional
+de Atividades Econômicas)
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>9999-9/99                                    </td>
+<td>ExistChav('CC3') .AND. FT500COD(M->CC3_COD)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CC3_DESC</td>
+<td>Descrição</td>
+<td colspan="2">Descrição do código CNAE</td>
+<td colspan="4">Descrição do código CNAE.
+</td>
+<td>C</td>
+<td>200</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CC3_CSECAO</td>
+<td>Secao CNAE</td>
+<td colspan="2">Secao do CNAE</td>
+<td colspan="4">Secao do CNAE
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>!                                            </td>
+<td>ExistCpo('CCG') .AND. FT500GTH(M->CC3_CSECAO,'1')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ccg.html">CCG</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CC3_DSECAO</td>
+<td>Desc. Secao</td>
+<td colspan="2">Descricao Secao CNAE</td>
+<td colspan="4">Descricao Secao CNAE
+</td>
+<td>C</td>
+<td>200</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(INCLUI,"",POSICIONE("CCG",1,XFILIAL("CCG")+CC3_CSECAO,"CCG_DESC"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CC3_CDIVIS</td>
+<td>Cod. Divisao</td>
+<td colspan="2">Codigo da Divisao</td>
+<td colspan="4">Codigo da Divisao
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo('CCG') .AND. FT500GTH(M->CC3_CDIVIS,'2')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ccg.html">CCG</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CC3_DDIVIS</td>
+<td>Desc. Divisa</td>
+<td colspan="2">Descricao Divisao CNAE</td>
+<td colspan="4">Descricao Divisao CNAE
+</td>
+<td>C</td>
+<td>200</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(INCLUI,"",POSICIONE("CCG",1,XFILIAL("CCG")+CC3_CDIVIS,"CCG_DESC"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CC3_CGRUPO</td>
+<td>Cod. Grupo</td>
+<td colspan="2">Codigo do Grupo CNAE</td>
+<td colspan="4">Codigo do Grupo CNAE
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>99.9                                         </td>
+<td>ExistCpo('CCG') .AND. FT500GTH(M->CC3_CGRUPO,'3')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ccg.html">CCG</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CC3_DGRUPO</td>
+<td>Desc. Grupo</td>
+<td colspan="2">Descricao Grupo CNAE</td>
+<td colspan="4">Descricao Grupo CNAE
+</td>
+<td>C</td>
+<td>200</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(INCLUI,"",POSICIONE("CCG",1,XFILIAL("CCG")+CC3_CGRUPO,"CCG_DESC"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CC3_CCLASS</td>
+<td>Cod. Classe</td>
+<td colspan="2">Codigo da Classe CNAE</td>
+<td colspan="4">Codigo da Classe CNAE
+</td>
+<td>C</td>
+<td>7</td>
+<td>0</td>
+<td>99.99-9                                      </td>
+<td>ExistCpo('CCG') .AND. FT500GTH(M->CC3_CCLASS,'4')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ccg.html">CCG</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CC3_DCLASS</td>
+<td>Desc. Classe</td>
+<td colspan="2">Descricao Classe CNAE</td>
+<td colspan="4">Descricao Classe CNAE
+</td>
+<td>C</td>
+<td>200</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(INCLUI,"",POSICIONE("CCG",1,XFILIAL("CCG")+CC3_CCLASS,"CCG_DESC"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CC3_MSBLQL</td>
+<td>Bloqueado</td>
+<td colspan="2">Registro Bloqueado</td>
+<td colspan="4">Registro bloqueado.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td>'2'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CC3_CODSEG</td>
+<td>Cod. Segment</td>
+<td colspan="2">Codigo do Segmento Padrao</td>
+<td colspan="4">Informar o Código do Segmento padrão
+para as contas com este CNAE ou deixar
+em branco.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/aovp.html">AOVP</a></td>
+<td><a href="/tabelas_protheus/gatilhos/cc3_codseg.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CC3_DESSEG</td>
+<td>Desc.Segm.</td>
+<td colspan="2">Descrição do Segmento</td>
+<td colspan="4">Descrição do Segmento Padrao.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("AOV",1,XFILIAL("AOV")+CC3->CC3_CODSEG,"AOV_DESSEG"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>CTT</td>
+<td colspan="2">CC3_COD</td>
+<td colspan="2">CTT_CNAE</td>
+</tr>
+<tr>
+<td>FKF</td>
+<td colspan="2">CC3_COD</td>
+<td colspan="2">FKF_CNAE</td>
+</tr>
+<tr>
+<td>SS2</td>
+<td colspan="2">CC3_COD</td>
+<td colspan="2">S2_CNAE</td>
+</tr>
+<tr>
+<td>SA1</td>
+<td colspan="2">CC3_COD</td>
+<td colspan="2">A1_CNAE</td>
+</tr>
+<tr>
+<td>ACH</td>
+<td colspan="2">CC3_COD</td>
+<td colspan="2">ACH_CNAE</td>
+</tr>
+<tr>
+<td>SUS</td>
+<td colspan="2">CC3_COD</td>
+<td colspan="2">US_CNAE</td>
+</tr>
+<tr>
+<td>NUQ</td>
+<td colspan="2">CC3_COD</td>
+<td colspan="2">NUQ_CNAE</td>
+</tr>
+<tr>
+<td>NSZ</td>
+<td colspan="2">CC3_COD</td>
+<td colspan="2">NSZ_CNAE</td>
+</tr>
+<tr>
+<td>NYJ</td>
+<td colspan="2">CC3_COD</td>
+<td colspan="2">NYJ_CNAE</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

@@ -1,0 +1,1027 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: JAI - P Seletivo x Fases</title></head>
+<body>
+<font color="orange"><h2 id="JAI">Tabela: JAI - P Seletivo x Fases</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>P Seletivo x Fases</b></td><td colspan="2"><b>JAI_FILIAL+JAI_CODIGO+JAI_FASE+JAI_DTNOR+JAI_CODGAB+JAI_HRNDE</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">JAI_FILIAL+JAI_CODIGO+JAI_FASE+DTOS(JAI_DTNOR)+JAI_CODGAB+JAI_HRNDE</td><td>Codigo P.S. + Codigo Fase + Data Prova + Cod.Gabarito + Hora De</td><td></td></tr>
+<tr><td>2</td><td colspan="2">JAI_FILIAL+JAI_CODIGO+JAI_ITEM</td><td>Codigo P.S. + Item</td><td></td></tr>
+<tr><td>3</td><td colspan="2">JAI_FILIAL+JAI_CODIGO+JAI_CODGAB</td><td>Codigo P.S. + Cod.Gabarito</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>JAI_FILIAL</td>
+<td>FILIAL</td>
+<td colspan="2">Filial</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JAI_CODIGO</td>
+<td>Codigo P.S.</td>
+<td colspan="2">Codigo do Proc. Seletivo</td>
+<td colspan="4">Código do Processo Seletivo. Este código
+deve estar previamente cadastrado no
+arquivo JA6 (Processos Seletivos).
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GEExistCpo("JA6",M->JAI_CODIGO)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ja6.html">JA6</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JAI_DCODIG</td>
+<td>Descricao</td>
+<td colspan="2">Descricao Proc. Seletivo</td>
+<td colspan="4">Descriç„o do Processo Seletivo.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui, " ", Posicione("JA6",1,xFilial("JA6") + JAI->JAI_CODIGO,"JA6_DESC"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("JA6",1,xFilial("JA6") + JAI->JAI_CODIGO,"JA6_DESC")</td>
+<td><a href="/tabelas_protheus/grupocampo/020.html">020</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JAI_ITEM</td>
+<td>Item</td>
+<td colspan="2">Item da Amarracao</td>
+<td colspan="4">Item (numeraç„o sequencial) referente
+às fases relacionadas ao Processo
+Seletivo.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JAI_FASE</td>
+<td>Codigo Fase</td>
+<td colspan="2">Codigo da Fase</td>
+<td colspan="4">Código da Fase que fará parte do
+Processo Seletivo. Este código deve
+estar previamente cadastrado, via
+Configurador, na Tabela de Fases (Tabela
+E6).
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>AC080VLDFAS()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/f6.html">F6</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JAI_DFASE</td>
+<td>Desc. Fase</td>
+<td colspan="2">Descricao da Fase</td>
+<td colspan="4">Descriç„o da Fase do Processo Seletivo.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui, " ", Tabela("F6", JAI->JAI_FASE, .F.))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Tabela("F6", JAI->JAI_FASE, .F.)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JAI_DTNOR</td>
+<td>Data Prova</td>
+<td colspan="2">Data Normal Prova</td>
+<td colspan="4">Data da Prova.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>Iif(Inclui .Or. Altera, Ctod("  /  /  "), JAI->JAI_DTNOR)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/jai_dtnor.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JAI_CODGAB</td>
+<td>Cod.Gabarito</td>
+<td colspan="2">Codigo do Gabarito</td>
+<td colspan="4">Código do Gabarito utilizado nesta Fase
+do Processo Seletivo. Este código deve
+estar previamente cadastrado no Cadastro
+de Gabaritos.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>AC080VLDATU("JAL",1,xFilial("JAL")+M->JAI_CODGAB,"JAI_DGABAR","JAL_DESC")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/jal.html">JAL</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JAI_DGABAR</td>
+<td>Des.Gabarito</td>
+<td colspan="2">Descricao do Gabarito</td>
+<td colspan="4">Descriç„o do Gabarito.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui, " ", Posicione("JAL",1,xFilial("JAL") + JAI->JAI_CODGAB,"JAL_DESC"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("JAL",1,xFilial("JAL") + JAI->JAI_CODGAB,"JAL_DESC")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JAI_HRNDE</td>
+<td>Hora De</td>
+<td colspan="2">Hora Normal De</td>
+<td colspan="4">Hora de início da prova.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JAI_HRNATE</td>
+<td>Hora Ate</td>
+<td colspan="2">Hora Normal Ate</td>
+<td colspan="4">Hora de término da prova.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JAI_PROEFI</td>
+<td>Proficiente</td>
+<td colspan="2">Proeficiente</td>
+<td colspan="4">Indica se a reprovaç„o do candidato
+nesta fase elimina-o automaticamente da
+fase seguinte.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JAI_FINAL</td>
+<td>Fase Final</td>
+<td colspan="2">Fase Final</td>
+<td colspan="4">Informa se esta é a última fase do
+Processo Seletivo.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JAI_CHAMA</td>
+<td>Chama F.Seg.</td>
+<td colspan="2">Chama p/ Fase Seguinte</td>
+<td colspan="4">Indica se, mesmo sendo reprovado, o
+candidato pode fazer a fase seguinte ou
+n„o.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JAI_NOVAIN</td>
+<td>Nova Inscr.</td>
+<td colspan="2">Nova Inscricao</td>
+<td colspan="4">Indica se o candidato necessita fazer
+uma nova inscriç„o para a fase seguinte.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JAI_DTESP</td>
+<td>Data Espec.</td>
+<td colspan="2">Data Especial Prova</td>
+<td colspan="4">Data especial (alternativa) para a
+realizaç„o da prova.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>Iif(Inclui .Or. Altera, Ctod("  /  /  "), JAI->JAI_DTESP)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JAI_HREDE</td>
+<td>Hora Esp. De</td>
+<td colspan="2">Hora Especial De</td>
+<td colspan="4">Hora de início da prova na data especial
+(alternativa) de sua realizaç„o.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JAI_HREATE</td>
+<td>Hora Esp.Ate</td>
+<td colspan="2">Hora Especial Ate</td>
+<td colspan="4">Hora de término da prova na data
+especial (alternativa) de sua realizaç„o
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JAI_CRIDS1</td>
+<td>Crit.Descl.1</td>
+<td colspan="2">Criterio de Desclassif. 1</td>
+<td colspan="4">Primeiro critério utilizado para
+desclassificar um candidato.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Ausencia;2=Pontuacao Minima Geral;3=Pontuacao Minima Disciplina</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JAI_CRIDS2</td>
+<td>Crit.Descl.2</td>
+<td colspan="2">Criterio de Desclassif. 2</td>
+<td colspan="4">Segundo critério utilizado para
+desclassificar um candidato.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Ausencia;2=Pontuacao Minima Geral;3=Pontuacao Minima Disciplina</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JAI_CRIDS3</td>
+<td>Crit.Descl.3</td>
+<td colspan="2">Criterio de Desclassif. 3</td>
+<td colspan="4">Terceiro critério utilizado para
+desclassificar um candidato.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Ausencia;2=Pontuacao Minima Geral;3=Pontuacao Minima Disciplina</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JAI_CRIDE1</td>
+<td>Crit.Desem.1</td>
+<td colspan="2">Criterio de Desempate 1</td>
+<td colspan="4">Primeiro critério utilizado quando mais
+de um candidato possuir a mesma
+pontuaç„o.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Pontuacao Minima Disciplina;2=Data de Nascimento;3=Numero de Inscricao;4=Pontuacao das Disciplinas;5=Avaliacao Subjetiva</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JAI_CRIDE2</td>
+<td>Crit.Desem.2</td>
+<td colspan="2">Criterio de Desempate 2</td>
+<td colspan="4">Segundo critério utilizado quando mais
+de um candidato possuir a mesma
+pontuaç„o.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Pontuacao Minima Disciplina;2=Data de Nascimento;3=Numero de Inscricao;4=Pontuacao das Disciplinas;5=Avaliacao Subjetiva</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JAI_CRIDE3</td>
+<td>Crit.Desem.3</td>
+<td colspan="2">Criterio de Desempate 3</td>
+<td colspan="4">Terceiro critério utilizado quando mais
+de um candidato possuir a mesma
+pontuaç„o.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Pontuacao Minima Disciplina;2=Data de Nascimento;3=Numero de Inscricao;4=Pontuacao das Disciplinas;5=Avaliacao Subjetiva</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JAI_CRIDE4</td>
+<td>Crit.Desem.4</td>
+<td colspan="2">Criterio de Desempate 4</td>
+<td colspan="4">Informe o 4º. Critério de Desempate.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Pontuacao Minima Disciplina;2=Data de Nascimento;3=Numero de Inscricao;4=Pontuacao das Disciplinas;5=Avaliacao Subjetiva</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JAI_CRIDE5</td>
+<td>Crit.Desem.5</td>
+<td colspan="2">Criterio de Desempate 5</td>
+<td colspan="4">Informe o 5º. Critério de Desempate.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Pontuacao Minima Disciplina;2=Data de Nascimento;3=Numero de Inscricao;4=Pontuacao das Disciplinas;5=Avaliacao Subjetiva</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JAI_MEMO1</td>
+<td>Msg E-mail</td>
+<td colspan="2">Mensagem de E-Mail</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JAI_MMAIL</td>
+<td>Msg E-mail</td>
+<td colspan="2">Mensagem de E-Mail</td>
+<td colspan="4">Informe a Mensagem de E-mail.
+</td>
+<td>M</td>
+<td>80</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!Inclui,MSMM(JAI->JAI_MEMO1),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JAI_ASSUNT</td>
+<td>Assu. E-Mail</td>
+<td colspan="2">Assunto do E-Mail</td>
+<td colspan="4">Descricao do Assunto do E-mail a ser
+enviado aos candidatos sobre aprovacao
+no Processo Seletivo.
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JAI_STATUS</td>
+<td>Status Gabar</td>
+<td colspan="2">Status de Proc. Gabarito</td>
+<td colspan="4">Indica se a rotina de Processamento de
+Gabarito foi realizada ou não.
+1=Processado;
+2=Pendente.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td>1=Processado;2=Pendente</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JAI_DTIGB</td>
+<td>Dt.Ini Gab.</td>
+<td colspan="2">Data Inicio Gabarito</td>
+<td colspan="4">Data de inicio do processamento do
+gabarito.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>CTOD("")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JAI_HRIGB</td>
+<td>Hr.Ini Gab.</td>
+<td colspan="2">Hora Inicio Gabarito</td>
+<td colspan="4">Hora de inicio do processamento do
+gabarito.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>JAV</td>
+<td colspan="2">JAI_CODIGO+JAI_FASE+JAI_DTNOR+JAI_CODGAB</td>
+<td colspan="2">JAV_CODPRO+JAV_CODFAS+JAV_DTFASE+JAV_CODGAB</td>
+</tr>
+<tr>
+<td>JAA</td>
+<td colspan="2">JAI_CODIGO+JAI_FASE</td>
+<td colspan="2">JAA_CODIGO+JAA_FASE</td>
+</tr>
+<tr>
+<td>JA8</td>
+<td colspan="2">JAI_CODIGO+JAI_FASE</td>
+<td colspan="2">JA8_CODIGO+JA8_FASE</td>
+</tr>
+<tr>
+<td>JA9</td>
+<td colspan="2">JAI_CODIGO+JAI_FASE</td>
+<td colspan="2">JA9_CODIGO+JA9_FASE</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

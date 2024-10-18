@@ -1,0 +1,1063 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: SB9 - Saldos Iniciais</title></head>
+<body>
+<font color="orange"><h2 id="SB9">Tabela: SB9 - Saldos Iniciais</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Saldos Iniciais</b></td><td colspan="2"><b>B9_FILIAL+B9_COD+B9_LOCAL+DTOS(B9_DATA)</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">B9_FILIAL+B9_COD+B9_LOCAL+DTOS(B9_DATA)</td><td>Produto + Armazem + Data Saldo</td><td></td></tr>
+<tr><td>2</td><td colspan="2">B9_FILIAL+DTOS(B9_DATA)+B9_LOCAL</td><td>Data Saldo + Armazem</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>B9_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Código que identifica a filial da
+empresa usuária do sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B9_COD</td>
+<td>Produto</td>
+<td colspan="2">Codigo do Produto</td>
+<td colspan="4">Código identificador do produto junto ao
+sistema.
+Tecla [F3] Disponível.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>A093Prod() .And. A220IniCpo() .And. AProdGr220() .And. A220Desc()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sb1.html">SB1</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/030.html">030</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B9_LOCAL</td>
+<td>Armazem</td>
+<td colspan="2">Armazem do Produto</td>
+<td colspan="4">Código   do   Armazem   no   qual
+seráArmazenado o produto.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("NNR")  .And. existchav("SB9",M->B9_COD+M->B9_LOCAL) .And. A220IniCpo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/nnr.html">NNR</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/024.html">024</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B9_DATA</td>
+<td>Data Saldo</td>
+<td colspan="2">Data Saldo inicial</td>
+<td colspan="4">Data da geraçáo do saldo inicial.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B9_QINI</td>
+<td>Qtd.Inic.Mes</td>
+<td colspan="2">Qtde inicial no mes</td>
+<td colspan="4">Saldo em quantidade no ínicio do mês
+para fins de reprocessamento e Kardex.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td>AQtdGr220() .And. A220SegUM()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B9_QISEGUM</td>
+<td>Qt.Ini.2a UM</td>
+<td colspan="2">Qtde Incial na 2a. UM</td>
+<td colspan="4">Quantidade na segunda unidade de medida.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td>AQtdGr220() .And. Positivo() .And. A220PriUM()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B9_VINI1</td>
+<td>Sld.Ini.Mes</td>
+<td colspan="2">Sal.ini.do mes em valor</td>
+<td colspan="4">Saldo inicial do mês em valor.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td>AQtdGr220() .And. Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B9_VINI2</td>
+<td>Sld.Ini.2a M</td>
+<td colspan="2">Saldo Ini.mes na 2a moeda</td>
+<td colspan="4">Saldo em valor no inicio do mês na
+segunda moeda.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td>AQtdGr220() .And. Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B9_VINI3</td>
+<td>Sld.Ini.3a M</td>
+<td colspan="2">Saldo Ini.mes na 3a moeda</td>
+<td colspan="4">Saldo em valor no inicio do mês na
+terceira moeda.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td>AQtdGr220() .And. Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B9_VINI4</td>
+<td>Sld.Ini.4a M</td>
+<td colspan="2">Saldo Ini.mes na 4a moeda</td>
+<td colspan="4">Saldo em valor no inicio do mês na
+quarta moeda.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td>AQtdGr220() .And. Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B9_VINI5</td>
+<td>Sld.Ini.5a M</td>
+<td colspan="2">Saldo Ini.mes na 5a Moeda</td>
+<td colspan="4">Saldo em valor no inicio do mês na
+quinta moeda.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td>AQtdGr220() .And. Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B9_VINIFF1</td>
+<td>Sld.Ini.FIF1</td>
+<td colspan="2">Saldo Ini.mes Custo Fifo1</td>
+<td colspan="4">Saldo inicial do mês do Custo FIFO.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B9_VINIFF2</td>
+<td>Sld.Ini.FIF2</td>
+<td colspan="2">Saldo Ini.mes Custo Fifo2</td>
+<td colspan="4">Saldo inicial do mês do Custo FIFO na
+2a Moeda.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B9_VINIFF3</td>
+<td>Sld.Ini.FIF3</td>
+<td colspan="2">Saldo Ini.mes Custo Fifo3</td>
+<td colspan="4">Saldo inicial do mês do Custo FIFO na
+3a Moeda.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B9_VINIFF4</td>
+<td>Sld.Ini.FIF4</td>
+<td colspan="2">Saldo Ini.mes Custo Fifo4</td>
+<td colspan="4">Saldo inicial do mês do Custo FIFO na
+4a Moeda.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B9_VINIFF5</td>
+<td>Sld.Ini.FIF5</td>
+<td colspan="2">Saldo Ini.mes Custo Fifo5</td>
+<td colspan="4">Saldo inicial do mês do Custo FIFO na
+5a Moeda.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B9_CODGRP</td>
+<td>Grupo</td>
+<td colspan="2">Grupo Veiculos/Oficina</td>
+<td colspan="4">Código do grupo da peca.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!!!!                                        </td>
+<td>VldAuxCod1("B9_CODGRP","B9_CODITE")</td>
+<td>IniAuxCod(SB9->B9_COD,"B9_CODGRP")</td>
+<td><a href="/tabelas_protheus/f3/sbm.html">SBM</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>Inclui</td>
+<td>IniAuxCod(SB9->B9_COD,"B9_CODGRP")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B9_CODITE</td>
+<td>Cod. Produto</td>
+<td colspan="2">Produto Veiculos/Oficina</td>
+<td colspan="4">Código do item.
+</td>
+<td>C</td>
+<td>27</td>
+<td>0</td>
+<td>                                             </td>
+<td>VldAuxCod2("B9_COD","B9_CODGRP")</td>
+<td>IniAuxCod(SB9->B9_COD,"B9_CODITE")</td>
+<td><a href="/tabelas_protheus/f3/b00.html">B00</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>Inclui</td>
+<td>IniAuxCod(SB9->B9_COD,"B9_CODITE")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B9_CUSTD</td>
+<td>Custo Stand.</td>
+<td colspan="2">Custo Standard</td>
+<td colspan="4">Custo standard ou custo padrão do
+produto. Deve ser informado apenas para
+matérias primas e mão-de-obra.
+</td>
+<td>N</td>
+<td>12</td>
+<td>2</td>
+<td>@E 999,999,999.99                            </td>
+<td>AQtdGr220() .And. Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B9_MCUSTD</td>
+<td>Moeda C.Std</td>
+<td colspan="2">Moeda do Custo Standard</td>
+<td colspan="4">Moeda utilizada no preenchimento do
+valor do Custo Standard (B9_CUSTD)
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("12345")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Moeda1;2=Moeda2;3=Moeda3;4=Moeda4;5=Moeda5</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B9_CM1</td>
+<td>C Unit 1a M</td>
+<td colspan="2">Custo unitario do produto</td>
+<td colspan="4">Custo Medio Historico na Moeda 1
+</td>
+<td>N</td>
+<td>14</td>
+<td>4</td>
+<td>@E 9,999,999.9999                            </td>
+<td>AQtdGr220()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B9_CM2</td>
+<td>C Unit 2a M</td>
+<td colspan="2">Custo unitario do produto</td>
+<td colspan="4">Custo Medio Historico na Moeda 2
+</td>
+<td>N</td>
+<td>14</td>
+<td>4</td>
+<td>@E 9,999,999.9999                            </td>
+<td>AQtdGr220()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B9_CM3</td>
+<td>C Unit 3a M</td>
+<td colspan="2">Custo unitario do produto</td>
+<td colspan="4">Custo Medio Historico na Moeda 3
+</td>
+<td>N</td>
+<td>14</td>
+<td>4</td>
+<td>@E 9,999,999.9999                            </td>
+<td>AQtdGr220()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B9_CM4</td>
+<td>C Unit 4a M</td>
+<td colspan="2">Custo unitario do produto</td>
+<td colspan="4">Custo Medio Historico na Moeda 4
+</td>
+<td>N</td>
+<td>14</td>
+<td>4</td>
+<td>@E 9,999,999.9999                            </td>
+<td>AQtdGr220()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B9_CM5</td>
+<td>C Unit 5a M</td>
+<td colspan="2">Custo unitario do produto</td>
+<td colspan="4">Custo Medio Historico na Moeda 5
+</td>
+<td>N</td>
+<td>14</td>
+<td>4</td>
+<td>@E 9,999,999.9999                            </td>
+<td>AQtdGr220()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B9_CMRP1</td>
+<td>R Unitario</td>
+<td colspan="2">Custo Reposicao Unitario</td>
+<td colspan="4">Custo de Reposicao Unitario na Moeda 1.
+</td>
+<td>N</td>
+<td>14</td>
+<td>4</td>
+<td>@E 999,999,999.9999                          </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B9_VINIRP1</td>
+<td>Rep. Inicial</td>
+<td colspan="2">Vlr Inicial de Reposicao</td>
+<td colspan="4">Custo de Reposicao Inicial na Moeda 1.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B9_CMRP2</td>
+<td>Rep.Uni.2a M</td>
+<td colspan="2">Custo Rep. Unit. 2a.Moeda</td>
+<td colspan="4">Custo de Reposicao Unitario na Moeda 2.
+</td>
+<td>N</td>
+<td>14</td>
+<td>4</td>
+<td>@E 999,999,999.9999                          </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B9_VINIRP2</td>
+<td>Rep.Ini.2a M</td>
+<td colspan="2">Vlr Ini. Reposicao 2a M</td>
+<td colspan="4">Custo de Reposicao Inicial na Moeda 2.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B9_CMRP3</td>
+<td>Rep.Uni.3a M</td>
+<td colspan="2">Custo Rep. Unit. 3a.Moeda</td>
+<td colspan="4">Custo de Reposicao Unitario na Moeda 3.
+</td>
+<td>N</td>
+<td>14</td>
+<td>4</td>
+<td>@E 999,999,999.9999                          </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B9_VINIRP3</td>
+<td>Rep.Ini.3a M</td>
+<td colspan="2">Vlr Ini. Reposicao 3a M</td>
+<td colspan="4">Custo de Reposicao Inicial na Moeda 3.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B9_CMRP4</td>
+<td>Rep.Uni.4a M</td>
+<td colspan="2">Custo Rep. Unit. 4a.Moeda</td>
+<td colspan="4">Custo de Reposicao Unitario na Moeda 4.
+</td>
+<td>N</td>
+<td>14</td>
+<td>4</td>
+<td>@E 999,999,999.9999                          </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B9_VINIRP4</td>
+<td>Rep.Ini.4a M</td>
+<td colspan="2">Vlr Ini. Reposicao 4a M</td>
+<td colspan="4">Custo de Reposicao Inicial na Moeda 4.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B9_CMRP5</td>
+<td>Rep.Uni.5a M</td>
+<td colspan="2">Custo Rep. Unit. 5a.Moeda</td>
+<td colspan="4">Custo de Reposicao Unitario na Moeda 5.
+</td>
+<td>N</td>
+<td>14</td>
+<td>4</td>
+<td>@E 999,999,999.9999                          </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B9_VINIRP5</td>
+<td>Rep.Ini.5a M</td>
+<td colspan="2">Vlr Ini. Reposicao 5a M</td>
+<td colspan="4">Custo de Reposicao Inicial na Moeda 5.
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

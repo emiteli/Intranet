@@ -1,0 +1,1473 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: SYR - Taxas de Frete</title></head>
+<body>
+<font color="orange"><h2 id="SYR">Tabela: SYR - Taxas de Frete</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Taxas de Frete</b></td><td colspan="2"><b>YR_FILIAL+YR_VIA+YR_ORIGEM+YR_DESTINO+YR_TIPTRAN</b></td><td><b>EICCV100</b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">YR_FILIAL+YR_VIA+YR_ORIGEM+YR_DESTINO+YR_TIPTRAN</td><td>Via + Origem + Destino + Tipo Transp.</td><td></td></tr>
+<tr><td>2</td><td colspan="2">YR_FILIAL+YR_VIA+YR_DESTINO+YR_ORIGEM</td><td>Via + Destino + Origem</td><td></td></tr>
+<tr><td>3</td><td colspan="2">YR_FILIAL+YR_ORIGEM</td><td>Origem</td><td></td></tr>
+<tr><td>4</td><td colspan="2">YR_FILIAL+YR_DESTINO</td><td>Destino</td><td></td></tr>
+<tr><td>5</td><td colspan="2">YR_FILIAL+YR_ORIGEM+YR_DESTINO+YR_VIA</td><td>Origem + Destino + Via</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>YR_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Filial do Sistema
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>YR_VIA</td>
+<td>Via</td>
+<td colspan="2">Via</td>
+<td colspan="4">Via
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>YR_ORIGEM</td>
+<td>Origem</td>
+<td colspan="2">Origem</td>
+<td colspan="4">Informe a sigla do porto / aeroporto
+utilizado pelo fornecedor para embarque
+dos itens.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .And. ExistCpo("SY9",M->YR_ORIGEM,2) .And. IF(nModulo<>17,CV100Vld("YR_ORIGEM"),CV100ValidSYR(.T.))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ey9.html">EY9</a></td>
+<td><a href="/tabelas_protheus/gatilhos/yr_origem.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>CV100VERITEM()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>YR_DESTINO</td>
+<td>Destino</td>
+<td colspan="2">Destino</td>
+<td colspan="4">Informe a sigla do porto / aeroporto de
+destino no pais do importador.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .And. ExistCpo("SY9",M->YR_DESTINO,2) .And. IF(nModulo<>17,CV100Vld("YR_DESTINO"),CV100ValidSYR(.F.))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ey9.html">EY9</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>CV100VERITEM()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>YR_MOEDA</td>
+<td>Moeda</td>
+<td colspan="2">Moeda</td>
+<td colspan="4">Informe em que moeda será calculado o
+frete internacional.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SYF",M->YR_MOEDA)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/syf.html">SYF</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>lMoeda</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>YR_TRANS_T</td>
+<td>Transit Time</td>
+<td colspan="2">Transit Time</td>
+<td colspan="4">Informe o tempo de viagem,desde o
+embarque até atracação.
+</td>
+<td>N</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>YR_VALOR_K</td>
+<td>Valor p/ Kg</td>
+<td colspan="2">Valor p/ Kg</td>
+<td colspan="4">Informe o preço previsto a ser cobrado
+por quilo, p/ transporte da mercadoria
+do Porto/Aeroporto de origem até
+destino.
+</td>
+<td>N</td>
+<td>14</td>
+<td>4</td>
+<td>@E 999,999,999.9999                          </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>YR_PAIS_DE</td>
+<td>Pais Destino</td>
+<td colspan="2">Pais Destino</td>
+<td colspan="4">Informe o código do país de destino
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SYA",M->YR_PAIS_DE)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sya.html">SYA</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>YR_CID_DES</td>
+<td>Cidade Dest.</td>
+<td colspan="2">Cidade Destino</td>
+<td colspan="4">Informe a cidade de destino
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>YR_PAIS_OR</td>
+<td>Pais Origem</td>
+<td colspan="2">Pais Origem</td>
+<td colspan="4">Informe o código do pais que será
+utilizado na LI em pais de procedência.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SYA",M->YR_PAIS_OR)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sya.html">SYA</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>YR_CID_ORI</td>
+<td>Cidade Orig.</td>
+<td colspan="2">Cidade Orig.</td>
+<td colspan="4">Informe a cidade de origem.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>YR_INLAND</td>
+<td>% Frt Inland</td>
+<td colspan="2">% Frete Inland</td>
+<td colspan="4">% Frete Inland
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>@E 999.99                                    </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>YR_FRVALOR</td>
+<td>% Fret Valor</td>
+<td colspan="2">% Frete Valor</td>
+<td colspan="4">% Frete Valor
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>@E 999.99                                    </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>YR_CONTEIN</td>
+<td>Conteineres</td>
+<td colspan="2">Conteineres</td>
+<td colspan="4">Conteiners
+</td>
+<td>C</td>
+<td>7</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"<CLICK>"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>CVMANSYR(nTip,"CON")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>YR_FRETE_K</td>
+<td>Frete p/ Kg</td>
+<td colspan="2">Frete por Kg</td>
+<td colspan="4">Frete por Kg
+</td>
+<td>C</td>
+<td>7</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"<CLICK>"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>CVMANSYR(nTip,"FRE")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>YR_VL_MIN</td>
+<td>Valor Minimo</td>
+<td colspan="2">Valor Minimo</td>
+<td colspan="4">Valor minimo para pagamento do frete.
+</td>
+<td>N</td>
+<td>14</td>
+<td>4</td>
+<td>@E 999,999,999.9999                          </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>YR_KILO1</td>
+<td>1) Ate</td>
+<td colspan="2">1) Ate</td>
+<td colspan="4">Indique aqui a primeira faixa de peso,
+caso você so tenha um preco, preencha
+com "99999999999999"
+</td>
+<td>N</td>
+<td>12</td>
+<td>3</td>
+<td>@E 99,999,999.999                            </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>YR_VALOR1</td>
+<td>Valor p/ Kg1</td>
+<td colspan="2">Valor por Kg</td>
+<td colspan="4">Indique o valor da primeira faixa de
+valor.
+</td>
+<td>N</td>
+<td>14</td>
+<td>4</td>
+<td>@E 999,999,999.9999                          </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>YR_KILO2</td>
+<td>2) Ate</td>
+<td colspan="2">2) Ate</td>
+<td colspan="4">Indique aqui a segunda faixa de peso.
+</td>
+<td>N</td>
+<td>12</td>
+<td>3</td>
+<td>@E 99,999,999.999                            </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>YR_VALOR2</td>
+<td>Valor p/ Kg2</td>
+<td colspan="2">Valor por Kg</td>
+<td colspan="4">Indique o valor da segunda faixa de
+valor.
+</td>
+<td>N</td>
+<td>14</td>
+<td>4</td>
+<td>@E 999,999,999.9999                          </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>YR_KILO3</td>
+<td>3) Ate</td>
+<td colspan="2">3) Ate</td>
+<td colspan="4">Indique aqui a terceira faixa de peso.
+</td>
+<td>N</td>
+<td>12</td>
+<td>3</td>
+<td>@E 99,999,999.999                            </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>YR_VALOR3</td>
+<td>Valor p/ Kg3</td>
+<td colspan="2">Valor por Kg</td>
+<td colspan="4">Indique o valor da terceira faixa de
+valor.
+</td>
+<td>N</td>
+<td>14</td>
+<td>4</td>
+<td>@E 999,999,999.9999                          </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>YR_KILO4</td>
+<td>4) Ate</td>
+<td colspan="2">4) Ate</td>
+<td colspan="4">Indique aqui a quarta faixa de peso.
+</td>
+<td>N</td>
+<td>12</td>
+<td>3</td>
+<td>@E 99,999,999.999                            </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>YR_VALOR4</td>
+<td>Valor p/ Kg4</td>
+<td colspan="2">Valor por Kg</td>
+<td colspan="4">Indique o valor da quarta faixa de
+valor.
+</td>
+<td>N</td>
+<td>14</td>
+<td>4</td>
+<td>@E 999,999,999.9999                          </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>YR_KILO5</td>
+<td>5) Ate</td>
+<td colspan="2">5) Ate</td>
+<td colspan="4">Indique aqui a quinta faixa de peso.
+</td>
+<td>N</td>
+<td>12</td>
+<td>3</td>
+<td>@E 99,999,999.999                            </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>YR_VALOR5</td>
+<td>Valor p/ Kg5</td>
+<td colspan="2">Valor por Kg</td>
+<td colspan="4">Indique o valor da quinta faixa de
+valor.
+</td>
+<td>N</td>
+<td>14</td>
+<td>4</td>
+<td>@E 999,999,999.9999                          </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>YR_KILO6</td>
+<td>6) Acima de</td>
+<td colspan="2">6) Acima de</td>
+<td colspan="4">Indique aqui a faixa "Acima de"
+</td>
+<td>N</td>
+<td>12</td>
+<td>3</td>
+<td>@E 99,999,999.999                            </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>YR_VALOR6</td>
+<td>Valor p/ Kg6</td>
+<td colspan="2">Valor por Kg</td>
+<td colspan="4">Indique o valor maximo.
+</td>
+<td>N</td>
+<td>14</td>
+<td>4</td>
+<td>@E 999,999,999.9999                          </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>YR_TIPTRAN</td>
+<td>Tipo Transp.</td>
+<td colspan="2">Tipo de transporte</td>
+<td colspan="4">Indica o tipo de transporte, carga
+soltapicados ou volume cheio, para o
+qual se aplicam as tarifas de frete
+cadastradas nos ícones Fretes por Kg e
+Containers
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>9                                            </td>
+<td>NaoVazio() .And. PERTENCE("123") .And. CV100Vld("YR_TIPTRAN")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Cheio;2=Picados;3=Carga Solta</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>YR_20</td>
+<td>20'</td>
+<td colspan="2">20'</td>
+<td colspan="4">Utilizados para o pre-cálculo do PO,
+quando se faz por quantidade de
+container. No  pre-cálculo o valor
+calculado para frete internacional
+dependerá dos valores de  tarifas de
+frete lançados no cadastro de via.
+</td>
+<td>N</td>
+<td>14</td>
+<td>4</td>
+<td>@E 999,999,999.9999                          </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>YR_20_M3</td>
+<td>M3 Cntr 20'</td>
+<td colspan="2">M3 Ctrn 20'</td>
+<td colspan="4">M3 Ctrn 20'
+</td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>YR_40</td>
+<td>40'</td>
+<td colspan="2">40'</td>
+<td colspan="4">Utilizados para o pre-cálculo do PO,
+quando se faz por quantidade de
+container. No  pre-cálculo o valor
+calculado para frete internacional
+dependerá dos valores de  tarifas de
+frete lançados no cadastro de via.
+</td>
+<td>N</td>
+<td>14</td>
+<td>4</td>
+<td>@E 999,999,999.9999                          </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>YR_40_M3</td>
+<td>M3 Cntr 40'</td>
+<td colspan="2">M3 Ctrn 40'</td>
+<td colspan="4">M3 Ctrn 40'
+</td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>YR_40_HC</td>
+<td>40'HC</td>
+<td colspan="2">40'HC</td>
+<td colspan="4">Utilizados para o pre-cálculo do PO,
+quando se faz por quantidade de
+container. No  pre-cálculo o valor
+calculado para frete internacional
+dependerá dos valores de  tarifas de
+frete lançados no cadastro de via.
+</td>
+<td>N</td>
+<td>14</td>
+<td>4</td>
+<td>@E 999,999,999.9999                          </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>YR_40HC_M3</td>
+<td>M3 40'HC</td>
+<td colspan="2">M3 Ctr 40'HC</td>
+<td colspan="4">M3 Ctr 40'HC
+</td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>YR_CNTR_FR</td>
+<td>Frigorifico</td>
+<td colspan="2">Frigorifico</td>
+<td colspan="4">Frigorifico
+</td>
+<td>N</td>
+<td>14</td>
+<td>4</td>
+<td>@E 999,999,999.9999                          </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>YR_CNFR_M3</td>
+<td>M3 Frigorif.</td>
+<td colspan="2">M3 Frigorif.</td>
+<td colspan="4">M3 Frigorif.
+</td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>YR_CNTR_PE</td>
+<td>Perigosa</td>
+<td colspan="2">Perigosa</td>
+<td colspan="4">Perigosa
+</td>
+<td>N</td>
+<td>14</td>
+<td>4</td>
+<td>@E 999,999,999.9999                          </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>YR_CNPE_M3</td>
+<td>M3 Perigosa</td>
+<td colspan="2">M3 Perigosa</td>
+<td colspan="4">M3 Perigosa
+</td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>YR_CNTR_OP</td>
+<td>Open Top</td>
+<td colspan="2">Open Top</td>
+<td colspan="4">Open Top
+</td>
+<td>N</td>
+<td>14</td>
+<td>4</td>
+<td>@E 999,999,999.9999                          </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>YR_CNOP_M3</td>
+<td>M3 Open Top</td>
+<td colspan="2">M3 Open Top</td>
+<td colspan="4">M3 Open Top
+</td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>YR_OUTROS</td>
+<td>Outros</td>
+<td colspan="2">Outros</td>
+<td colspan="4">Utilizados para o pre-cálculo do PO,
+quando se faz por quantidade de
+container. No  pre-cálculo o valor
+calculado para frete internacional
+dependerá dos valores de  tarifas de
+frete lançados no cadastro de via.
+</td>
+<td>N</td>
+<td>14</td>
+<td>4</td>
+<td>@E 999,999,999.9999                          </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>YR_OUT_M3</td>
+<td>M3 Outros</td>
+<td colspan="2">M3 Outros</td>
+<td colspan="4">M3 Outros
+</td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>SWT</td>
+<td colspan="2">YR_ORIGEM</td>
+<td colspan="2">WT_ORIGEM</td>
+</tr>
+<tr>
+<td>SS2</td>
+<td colspan="2">YR_DESTINO</td>
+<td colspan="2">S2_DEST_1</td>
+</tr>
+<tr>
+<td>SS2</td>
+<td colspan="2">YR_DESTINO</td>
+<td colspan="2">S2_DEST_2</td>
+</tr>
+<tr>
+<td>SS2</td>
+<td colspan="2">YR_DESTINO</td>
+<td colspan="2">S2_DEST_3</td>
+</tr>
+<tr>
+<td>SA1</td>
+<td colspan="2">YR_DESTINO</td>
+<td colspan="2">A1_DEST_1</td>
+</tr>
+<tr>
+<td>SA1</td>
+<td colspan="2">YR_DESTINO</td>
+<td colspan="2">A1_DEST_2</td>
+</tr>
+<tr>
+<td>SA1</td>
+<td colspan="2">YR_DESTINO</td>
+<td colspan="2">A1_DEST_3</td>
+</tr>
+<tr>
+<td>EE7</td>
+<td colspan="2">YR_VIA+YR_ORIGEM+YR_DESTINO+YR_TIPTRAN</td>
+<td colspan="2">EE7_VIA+EE7_ORIGEM+EE7_DEST+EE7_TIPTRA</td>
+</tr>
+<tr>
+<td>SW2</td>
+<td colspan="2">YR_VIA</td>
+<td colspan="2">W2_TIPO_EM</td>
+</tr>
+<tr>
+<td>SW2</td>
+<td colspan="2">YR_ORIGEM</td>
+<td colspan="2">W2_ORIGEM</td>
+</tr>
+<tr>
+<td>SW2</td>
+<td colspan="2">YR_VIA+YR_ORIGEM</td>
+<td colspan="2">W2_TIPO_EM+W2_ORIGEM</td>
+</tr>
+<tr>
+<td>SW2</td>
+<td colspan="2">YR_VIA+YR_ORIGEM+YR_DESTINO</td>
+<td colspan="2">W2_TIPO_EM+W2_ORIGEM+W2_DEST</td>
+</tr>
+<tr>
+<td>EX3</td>
+<td colspan="2">YR_VIA+YR_ORIGEM+YR_DESTINO</td>
+<td colspan="2">EX3_VIA+EX3_ORIGEM+EX3_DEST</td>
+</tr>
+<tr>
+<td>EX4</td>
+<td colspan="2">YR_VIA+YR_ORIGEM+YR_DESTINO</td>
+<td colspan="2">EX4_VIA+EX4_ORIGEM+EX4_DEST</td>
+</tr>
+<tr>
+<td>SW2</td>
+<td colspan="2">YR_DESTINO</td>
+<td colspan="2">W2_DEST</td>
+</tr>
+<tr>
+<td>SS3</td>
+<td colspan="2">YR_ORIGEM</td>
+<td colspan="2">S3_ORIG_1</td>
+</tr>
+<tr>
+<td>SS3</td>
+<td colspan="2">YR_ORIGEM</td>
+<td colspan="2">S3_ORIG_2</td>
+</tr>
+<tr>
+<td>SS3</td>
+<td colspan="2">YR_ORIGEM</td>
+<td colspan="2">S3_ORIG_3</td>
+</tr>
+<tr>
+<td>EXJ</td>
+<td colspan="2">YR_ORIGEM</td>
+<td colspan="2">EXJ_ORI_1</td>
+</tr>
+<tr>
+<td>EXJ</td>
+<td colspan="2">YR_ORIGEM</td>
+<td colspan="2">EXJ_ORI_2</td>
+</tr>
+<tr>
+<td>EXJ</td>
+<td colspan="2">YR_ORIGEM</td>
+<td colspan="2">EXJ_ORI_3</td>
+</tr>
+<tr>
+<td>SA2</td>
+<td colspan="2">YR_ORIGEM</td>
+<td colspan="2">A2_ORIG_1</td>
+</tr>
+<tr>
+<td>SA2</td>
+<td colspan="2">YR_ORIGEM</td>
+<td colspan="2">A2_ORIG_2</td>
+</tr>
+<tr>
+<td>SA2</td>
+<td colspan="2">YR_ORIGEM</td>
+<td colspan="2">A2_ORIG_3</td>
+</tr>
+<tr>
+<td>SWR</td>
+<td colspan="2">YR_DESTINO</td>
+<td colspan="2">WR_DESTINO</td>
+</tr>
+<tr>
+<td>SW6</td>
+<td colspan="2">YR_VIA+YR_ORIGEM+YR_DESTINO</td>
+<td colspan="2">W6_VIA_TRA+W6_ORIGEM+W6_DEST</td>
+</tr>
+<tr>
+<td>SW6</td>
+<td colspan="2">YR_ORIGEM+YR_DESTINO</td>
+<td colspan="2">W6_ORIGEM+W6_DEST</td>
+</tr>
+<tr>
+<td>SW6</td>
+<td colspan="2">YR_DESTINO</td>
+<td colspan="2">W6_DEST</td>
+</tr>
+<tr>
+<td>SW6</td>
+<td colspan="2">YR_VIA+YR_ORIGEM</td>
+<td colspan="2">W6_VIA_TRA+W6_ORIGEM</td>
+</tr>
+<tr>
+<td>EEC</td>
+<td colspan="2">YR_VIA+YR_ORIGEM+YR_DESTINO+YR_TIPTRAN</td>
+<td colspan="2">EEC_VIA+EEC_ORIGEM+EEC_DEST+EEC_TIPTRA</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

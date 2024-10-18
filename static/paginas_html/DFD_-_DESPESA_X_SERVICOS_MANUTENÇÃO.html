@@ -1,0 +1,449 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: DFD - DESPESA X SERVICOS MANUTENÇÃO</title></head>
+<body>
+<font color="orange"><h2 id="DFD">Tabela: DFD - DESPESA X SERVICOS MANUTENÇÃO</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>DESPESA X SERVICOS MANUTENÇÃO</b></td><td colspan="2"><b>DFD_FILIAL+DFD_CODDES+DFD_ITEM</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">DFD_FILIAL+DFD_CODDES+DFD_ITEM</td><td>Cod.Despesa + Item</td><td></td></tr>
+<tr><td>2</td><td colspan="2">DFD_FILIAL+DFD_SERMNT+DFD_CODPRO+DFD_CODDES+DFD_ITEM</td><td>Serviço Mnt + Cod.Produto + Cod.Despesa + Item</td><td></td></tr>
+<tr><td>3</td><td colspan="2">DFD_FILIAL+DFD_SERMNT+DFD_GRUPO</td><td>Serviço Mnt + Grupo</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>DFD_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DFD_CODDES</td>
+<td>Cod.Despesa</td>
+<td colspan="2">Código da Despesa</td>
+<td colspan="4">Informe o código  despesa que gerou o
+custo de transporte
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>TMAF30Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dt7.html">DT7</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DFD_DSCDES</td>
+<td>Desc.Despesa</td>
+<td colspan="2">Descrição da Despesa</td>
+<td colspan="4">Descrição da despesa que gerou o custo
+de transporte
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui,'',Posicione('DT7',1,xFilial('DT7')+DFD->DFD_CODDES,'DT7_DESCRI'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione('DT7',1,xFilial('DT7')+DFD->DFD_CODDES,'DT7_DESCRI')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DFD_ITEM</td>
+<td>Item</td>
+<td colspan="2">Item</td>
+<td colspan="4">Item da despesa que gerou o custo de
+transporte
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DFD_SERMNT</td>
+<td>Serviço Mnt</td>
+<td colspan="2">Serviço Manutenção Ativos</td>
+<td colspan="4">Código do serviço cadastrado na
+manutenção de ativos
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>TMAF30Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/st4.html">ST4</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DFD_NOSMNT</td>
+<td>Nome Serviço</td>
+<td colspan="2">Nome Serviço Mnt</td>
+<td colspan="4">Nome do serviço cadastrado na manutenção
+de ativos
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui, '', Posicione('ST4', 1, xFilial('ST4')+DFD->DFD_SERMNT, 'T4_NOME'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione('ST4', 1, xFilial('ST4')+DFD->DFD_SERMNT, 'T4_NOME')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DFD_CODPRO</td>
+<td>Cod.Produto</td>
+<td colspan="2">Código do Produto</td>
+<td colspan="4">Código do produto que foi utilizado na
+manutenção que gerou a despesa
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>TMAF30Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sb1.html">SB1</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DFD_DESPRO</td>
+<td>Desc.Produto</td>
+<td colspan="2">Descrição do Produto</td>
+<td colspan="4">Descrição do produto que foi utilizado
+na manutenção que gerou a despesa.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>TMAF30Vld()</td>
+<td>Iif(Inclui, '', Posicione('SB1', 1,  xFilial('SB1')+DFD->DFD_CODPRO, 'B1_DESC'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione('SB1', 1, xFilial('SB1')+DFD->DFD_CODPRO, 'B1_DESC')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DFD_VLSATE</td>
+<td>Val.Serv.Até</td>
+<td colspan="2">Valor Serviço Até</td>
+<td colspan="4">Valor limite do serviço para que a
+despesa possa ser incluída no grupo de
+despesas que serão selecionadas para o
+rateio
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td>TMAF30Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DFD_TIPAMZ</td>
+<td>Tp.Amortiza</td>
+<td colspan="2">Tipo de Amortização</td>
+<td colspan="4">Tipo de amortização a ser utilizada na
+despesa
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('012')</td>
+<td>'0'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=N�o Utiliza;1=M�s;2=Contador</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DFD_PERAMZ</td>
+<td>Período</td>
+<td colspan="2">Período Amortização</td>
+<td colspan="4">Período de amortização. Caso o tipo de
+amortização seja selecionado como Mês,
+no período deve conter a quantidade de
+meses que vai durar a amortização. Se
+for selecionado Contador, o período é
+desconsiderado.
+</td>
+<td>N</td>
+<td>6</td>
+<td>0</td>
+<td>@E 999,999                                   </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DFD_GRUPO</td>
+<td>Grupo</td>
+<td colspan="2">Grupo de Estoque</td>
+<td colspan="4">Grupo de estoque do produto utilizado na
+manutenção
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .OR. A010Grupo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sbm.html">SBM</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DFD_DESGRP</td>
+<td>Desc Grupo</td>
+<td colspan="2">Descrição do Grupo</td>
+<td colspan="4">Descrição do grupo de estoque do produto
+utilizado na manutenção
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@S30                                         </td>
+<td></td>
+<td>Iif(Inclui, '', Posicione('SBM', 1, xFilial('SBM')+DFD->DFD_GRUPO, 'BM_DESC'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione('SBM', 1, xFilial('SBM')+DFD_GRUPO, 'BM_DESC')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

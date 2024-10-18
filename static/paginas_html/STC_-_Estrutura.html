@@ -1,0 +1,742 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: STC - Estrutura</title></head>
+<body>
+<font color="orange"><h2 id="STC">Tabela: STC - Estrutura</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Estrutura</b></td><td colspan="2"><b>TC_FILIAL+TC_CODBEM+TC_COMPONE+TC_TIPOEST+TC_LOCALIZ+TC_SEQRELA</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">TC_FILIAL+TC_CODBEM+TC_COMPONE+TC_TIPOEST+TC_LOCALIZ+TC_SEQRELA</td><td>Bem + Componente + Tipo + Localizacao + Sequencia</td><td></td></tr>
+<tr><td>2</td><td colspan="2">TC_FILIAL+TC_CODBEM+TC_SEQRELA</td><td>Bem + Sequencia</td><td></td></tr>
+<tr><td>3</td><td colspan="2">TC_FILIAL+TC_COMPONE+TC_CODBEM</td><td>Componente + Bem</td><td></td></tr>
+<tr><td>4</td><td colspan="2">TC_FILIAL+TC_LOCALIZ+TC_TIPMOD</td><td>Localizacao + Tipo Modelo</td><td></td></tr>
+<tr><td>5</td><td colspan="2">TC_FILIAL+TC_CODBEM+TC_TIPMOD+TC_COMPONE+TC_TIPOEST+TC_LOCALIZ+TC_SEQRELA</td><td>Bem + Tipo Modelo + Componente + Tipo + Localizacao + Sequencia</td><td></td></tr>
+<tr><td>6</td><td colspan="2">TC_FILIAL+TC_CODBEM+TC_TIPMOD+TC_TIPOEST+TC_LOCALIZ</td><td>Bem + Tipo Modelo + Tipo + Localizacao</td><td></td></tr>
+<tr><td>7</td><td colspan="2">TC_FILIAL+TC_SEQSUP+TC_SEQRELA</td><td>Seq.Superior + Sequencia</td><td></td></tr>
+<tr><td>8</td><td colspan="2">TC_FILIAL+TC_CODBEM+STR(TC_SEQUEN,6)+TC_COMPONE</td><td>Bem + Sequencial + Componente</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>TC_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Código da filial da empresa.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TC_CODBEM</td>
+<td>Bem</td>
+<td colspan="2">Codigo do Bem</td>
+<td colspan="4">Código de identificação do Bem da
+estrutura.
+</td>
+<td>C</td>
+<td>16</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO("ST9",M->TC_CODBEM)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/st9.html">ST9</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TC_COMPONE</td>
+<td>Componente</td>
+<td colspan="2">Codigo do componente</td>
+<td colspan="4">Código do Bem que é componente da
+estrutura.
+</td>
+<td>C</td>
+<td>16</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO("ST9",M->TC_COMPONE).AND.CHKFILHO(M->TC_COMPONE) .AND. MOSCENCALE()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/st9.html">ST9</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tc_compone.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>LECOMPONE</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TC_NOMCOMP</td>
+<td>Desc.Compon.</td>
+<td colspan="2">Descricao do Componente</td>
+<td colspan="4">Nome do Bem componente da estrutura.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>ST9->(VDISP(STC->TC_COMPONE,'T9_NOME'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TC_SEQRELA</td>
+<td>Sequencia</td>
+<td colspan="2">Sequencia</td>
+<td colspan="4">Código da sequência da manutenção.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCHAV("STC",M->TC_CODBEM+M->TC_COMPONE+M->TC_SEQRELA)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TC_TIPOEST</td>
+<td>Tipo</td>
+<td colspan="2">Tipo</td>
+<td colspan="4">Indica qual o tipo de estrutura que
+trata o registro.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TC_LOCALIZ</td>
+<td>Localizacao</td>
+<td colspan="2">Localizacao do Bem</td>
+<td colspan="4">Código da localização do Bem filho na
+estrutura.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>IF(EMPTY(M->TC_LOCALIZ),.T.,EXISTCPO('TPS',M->TC_LOCALIZ) .AND. CHKLOCALIZ())</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tps.html">TPS</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tc_localiz.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>LELOCALIZ</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TC_NOMLOCA</td>
+<td>Desc.Localiz</td>
+<td colspan="2">Descricao da Localizacao</td>
+<td colspan="4">Nome da localização do Bem na estrutura.
+</td>
+<td>C</td>
+<td>25</td>
+<td>0</td>
+<td>@S20                                         </td>
+<td></td>
+<td>TPS->(VDISP(STC->TC_LOCALIZ,'TPS_NOME' ))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TC_MANUATI</td>
+<td>Bem ativo</td>
+<td colspan="2">Bem esta ativo</td>
+<td colspan="4">Indica se o Bem da estrutura estará
+ativo quando da informação de contador
+para o Bem pai da estrutura.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TC_OBRIGAT</td>
+<td>Bem Obrigat.</td>
+<td colspan="2">Bem Obrigatorio</td>
+<td colspan="4">Indica se o Bem da localização é
+obrigatório na estrutura.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TC_CONTADO</td>
+<td>Contador</td>
+<td colspan="2">Controlado Por Contador</td>
+<td colspan="4">Indica se o Bem deverá ser controlado
+por contador. Utilizado em estrutura
+padrão.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TC_CCUSTO</td>
+<td>Centro Custo</td>
+<td colspan="2">Centro de Custo</td>
+<td colspan="4">Código do Centro de Custo para onde o
+Bem filho esta sendo transferido, em
+virtude de sua inclusão na estrutura.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>CTB105CC()</td>
+<td>ST9->(VDISP(STC->TC_CODBEM,'T9_CCUSTO'))</td>
+<td><a href="/tabelas_protheus/f3/ctt.html">CTT</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tc_ccusto.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>LECCUSTO</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/004.html">004</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TC_DCUSTO</td>
+<td>Desc.C.Custo</td>
+<td colspan="2">Descricao do Centro Custo</td>
+<td colspan="4">Nome do Centro de Custo do Bem da
+Estrutura.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>SI3->(VDISP(NGSEEK('ST9', STC->TC_CODBEM, 1, 'ST9->T9_CCUSTO') ,'I3_DESC'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TC_CENTRAB</td>
+<td>C.Trabalho</td>
+<td colspan="2">Centro de Trabalho</td>
+<td colspan="4">Código do Centro de Trabalho para onde
+o Bem filho esta sendo transferido, em
+virtude de sua inclusão na estrutura.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>IF(EMPTY(M->TC_CENTRAB),.T.,EXISTCPO('SHB',M->TC_CENTRAB))</td>
+<td>ST9->(VDISP(STC->TC_CODBEM,'T9_CENTRAB'))</td>
+<td><a href="/tabelas_protheus/f3/shb.html">SHB</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tc_centrab.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>LECENTRAB</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TC_DTRAB</td>
+<td>Desc.C.Trab.</td>
+<td colspan="2">Dec.Centro Trabalho</td>
+<td colspan="4">Nome do Centro de Trabalho do Bem da
+Estrutura.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>SHB->(VDISP(NGSEEK('ST9', STC->TC_CODBEM, 1, 'ST9->T9_CENTRAB') ,'HB_NOME'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TC_CALENDA</td>
+<td>Calendario</td>
+<td colspan="2">Calendario</td>
+<td colspan="4">Código do calendário que passará a ser
+adotado para o Bem em virtude de sua
+inclusão na estrutura. Trata-se do
+calendário de utilização.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO('SH7',M->TC_CALENDA)</td>
+<td>ST9->(VDISP(STC->TC_CODBEM,'T9_CALENDA'))</td>
+<td><a href="/tabelas_protheus/f3/sh7.html">SH7</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tc_calenda.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>LECALENDA</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TC_NOMCALE</td>
+<td>Desc.Calend.</td>
+<td colspan="2">Descricao do Calendario</td>
+<td colspan="4">Nome do calendário de utilização do
+componente da estrutura.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>SH7->(VDISP(NGSEEK('ST9', STC->TC_CODBEM, 1, 'ST9->T9_CALENDA'),'H7_DESCRI'))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TC_DATAINI</td>
+<td>Data Implant</td>
+<td colspan="2">Data Implant. Estrutura</td>
+<td colspan="4">Data de inclusão do Bem componente na
+estrutura.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>99/99/9999                                   </td>
+<td></td>
+<td>IF(INCLUI,CTOD(' /  /  '),STC->TC_DATAINI)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>LEDATAINI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TC_SEQUENC</td>
+<td>Sequencia</td>
+<td colspan="2">Sequencia na Estrutura</td>
+<td colspan="4">Número de sequência do componente na
+estrutura do Bem pai.
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td>EXISTCHAV("STC",M->TC_CODBEM+M->TC_COMPONE+STR(M->TC_SEQUENC,3))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TC_TIPMOD</td>
+<td>Tipo Modelo</td>
+<td colspan="2">Tipo do Modelo</td>
+<td colspan="4">Código do tipo de modelo do bens da
+estrutura.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCHAV('TQR',M->TC_TIPMOD)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tqr.html">TQR</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TC_DESMOD</td>
+<td>Descricao</td>
+<td colspan="2">Descricao Tipo do Modelo</td>
+<td colspan="4">Descrição do tipo modelo dos bens da
+estrutura.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TC_SEQSUP</td>
+<td>Seq.Superior</td>
+<td colspan="2">Sequencia Superior</td>
+<td colspan="4">Sequencia do item superior na estrutura
+padrão.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TC_SEQUEN</td>
+<td>Sequencial</td>
+<td colspan="2">Sequencial</td>
+<td colspan="4">"Código sequencial da estrutura de
+bens."
+</td>
+<td>N</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

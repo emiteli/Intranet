@@ -1,0 +1,580 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: JCG - Cabeçalho Apont Faltas Aluno</title></head>
+<body>
+<font color="orange"><h2 id="JCG">Tabela: JCG - Cabeçalho Apont Faltas Aluno</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Cabeçalho Apont Faltas Aluno</b></td><td colspan="2"><b>JCG_FILIAL+JCG_CODCUR+JCG_PERLET+JCG_HABILI+JCG_TURMA+JCG_DATA+JCG_ITEM+JCG_DISCIP+JCG_CODAVA+JCG_SUBTUR+JCG_MATPRF</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">JCG_FILIAL+JCG_CODCUR+JCG_PERLET+JCG_HABILI+JCG_TURMA+DTOS(JCG_DATA)+JCG_ITEM+JCG_DISCIP+JCG_CODAVA+JCG_SUBTUR+JCG_MATPRF</td><td>Curso Vigent + Per. Letivo + Habilitacao + Turma + Data + Aula + Cod.</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>JCG_FILIAL</td>
+<td>FILIAL</td>
+<td colspan="2">Filial</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JCG_CODCUR</td>
+<td>Curso Vigent</td>
+<td colspan="2">Codigo do Curso Vigente</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GEExistCpo("JAH") .and. NaoVazio() .and. ACNivSec(,M->JCG_CODCUR)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/jah.html">JAH</a></td>
+<td><a href="/tabelas_protheus/gatilhos/jcg_codcur.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JCG_DCURSO</td>
+<td>Descricao</td>
+<td colspan="2">Descricao do Curso Vigent</td>
+<td colspan="4">Informa a Descrição do Curso Vigente.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui, " ", Posicione("JAH",1,xFilial("JAH") + JCG->JCG_CODCUR,"JAH_DESC"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JCG_PERLET</td>
+<td>Per. Letivo</td>
+<td colspan="2">Serie</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td>GEExistCpo("JAR",M->JCG_CODCUR+M->JCG_PERLET) .and. NaoVazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JCG_HABILI</td>
+<td>Habilitacao</td>
+<td colspan="2">Codigo da Habilitacao</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Iif(Empty(M->JCG_HABILI), .T., GEExistCpo("JDK",M->JCG_HABILI))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/jdk.html">JDK</a></td>
+<td><a href="/tabelas_protheus/gatilhos/jcg_habili.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JCG_DHABIL</td>
+<td>Descricao</td>
+<td colspan="2">Descricao da Habilitacao</td>
+<td colspan="4">Informa a Descrição da Habilitação
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(INCLUI,"",Posicione("JDK",1,xFilial("JDK")+JBR->JBR_HABILI,"JDK_DESC"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("JDK",1,xFilial("JDK") + JBR->JBR_HABILI,"JDK_DESC")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JCG_TURMA</td>
+<td>Turma</td>
+<td colspan="2">Turma</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GEExistcpo("JBO",M->JCG_CODCUR+M->JCG_PERLET+M->JCG_HABILI+M->JCG_TURMA) .and.NaoVazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/021.html">021</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JCG_DISCIP</td>
+<td>Cod. Discip</td>
+<td colspan="2">Disciplina</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GEExistCpo("JAE") .And. Aca590Alu(.T.) .And. A590ValDat()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/j30.html">J30</a></td>
+<td><a href="/tabelas_protheus/gatilhos/jcg_discip.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JCG_DDISCI</td>
+<td>Descricao</td>
+<td colspan="2">Descricao da Disciplina</td>
+<td colspan="4">Informa a Descrição da Disciplina.
+</td>
+<td>C</td>
+<td>100</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui, " ", Posicione("JAE",1,xFilial("JAE") + JCG->JCG_DISCIP,"JAE_DESC"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/046.html">046</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JCG_TIPO</td>
+<td>Tipo Apontam</td>
+<td colspan="2">Tipo de Apontamento</td>
+<td colspan="4">Tipo do apontamento a ser utilizado.
+Como exemplo podemos ter:
+1-Diario
+2-Mensal
+3-Periodo Letivo
+4-Avaliacao
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Aca590Alu(.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Diario;2=Mensal;3=Periodo Letivo;4=Avaliacao</td>
+<td>.F.</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JCG_CODAVA</td>
+<td>Avaliacao</td>
+<td colspan="2">Codigo da Avaliacao</td>
+<td colspan="4">Informe o código da avaliação para o
+apontamento.
+Pressione F3 para efetuar a consulta.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GEExistCpo("JBQ",M->JCG_CODCUR+M->JCG_PERLET+M->JCG_HABILI+M->JCG_CODAVA,3) .and. Aca590Alu(.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/jbq.html">JBQ</a></td>
+<td><a href="/tabelas_protheus/gatilhos/jcg_codava.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>M->JCG_TIPO="4"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td>JCG_TIPO='4'</td>
+<td>#JCG_CODAVA<>'  '</td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JCG_DCODAV</td>
+<td>Descricao</td>
+<td colspan="2">Descricao da Avaliacao</td>
+<td colspan="4">Informa a Descrição da Avaliação
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui," ",Posicione("JBQ",3,xFilial("JBQ")+JCG->JCG_CODCUR+JCG->JCG_PERLET+JCG->JCG_HABILI+JCG->JCG_CODAVA,"JBQ_DESC"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JCG_DATA</td>
+<td>Data</td>
+<td colspan="2">Data</td>
+<td colspan="4">Data para apontamento.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>Ac590Aula() .AND. A590ValDat()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>M->JCG_TIPO <> "3" .AND. M->JCG_TIPO <> "2" .AND. INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td>JCG_TIPO<>'3'</td>
+<td>#JCG_DATA  <>'        '</td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JCG_SUBTUR</td>
+<td>Sub Turma</td>
+<td colspan="2">Sub Turma</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>AC590Aula() .and. ACA590ALU(.t.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>Inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JCG_HRAULA</td>
+<td>Hor. Aula</td>
+<td colspan="2">Horario da Aula</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui,"",A590HRAULA())</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JCG_NOMEPF</td>
+<td>Nome Prof.</td>
+<td colspan="2">Nome do Professor</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui,"",Posicione("SRA",1,xFilial("SRA")+JCG->JCG_MATPRF, "RA_NOME"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JCG_MATPRF</td>
+<td>Mat. Prof.</td>
+<td colspan="2">Matríula do Professor</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>A590Valid("JCG_MATPRF")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sra002.html">SRA002</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>Ac590When("JCG_MATPRF")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JCG_ITEM</td>
+<td>Aula</td>
+<td colspan="2">Aula</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>A590Valid("JCG_ITEM")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/jbl002.html">JBL002</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>Ac590When("JCG_ITEM")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>JCH</td>
+<td colspan="2">JCG_CODCUR+JCG_PERLET+JCG_HABILI+JCG_TURMA+JCG_DATA+JCG_DISCIP+JCG_CODAVA</td>
+<td colspan="2">JCH_CODCUR+JCH_PERLET+JCH_HABILI+JCH_TURMA+JCH_DATA+JCH_DISCIP+JCH_CODAVA</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

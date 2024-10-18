@@ -1,0 +1,518 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: CEV - Saldos Parte B eLalur/eLacs</title></head>
+<body>
+<font color="orange"><h2 id="CEV">Tabela: CEV - Saldos Parte B eLalur/eLacs</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Saldos Parte B eLalur/eLacs</b></td><td colspan="2"><b>CEV_FILIAL+CEV_ID+CEV_IDCTA+CEV_CODTRI</b></td><td><b>TAFA322</b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">CEV_FILIAL+CEV_ID+CEV_IDCTA+CEV_CODTRI</td><td>ID + ID Cta B + Cód Tributo</td><td></td></tr>
+<tr><td>2</td><td colspan="2">CEV_FILIAL+CEV_IDCTA+CEV_CODTRI</td><td>ID Cta B + Cód Tributo</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>CEV_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Deve representar nesse campo a Filial do
+Sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CEV_ID</td>
+<td>ID</td>
+<td colspan="2">Identificador do Registro</td>
+<td colspan="4">Deve representar o código de
+identificação do registro. Este código é
+controlado internamente pelo sistema de
+forma incremental e único por filial.
+</td>
+<td>C</td>
+<td>36</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/085.html">085</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CEV_CTA</td>
+<td>Cta Parte B</td>
+<td colspan="2">Conta da Parte B</td>
+<td colspan="4">Deve representar nesse campo o Código da
+Conta Contabil.
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>xFunVldCmp("CFR",3)</td>
+<td>Iif(!INCLUI .and. !Empty(CEV->CEV_IDCTA),Posicione("CFR",1,xFilial("CFR")+CEV->CEV_IDCTA,"CFR_CODCTA"),"")</td>
+<td><a href="/tabelas_protheus/f3/cfr.html">CFR</a></td>
+<td><a href="/tabelas_protheus/gatilhos/cev_cta.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("CFR",1,xFilial("CFR")+CEV->CEV_IDCTA,"CFR_CODCTA")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CEV_DCTA</td>
+<td>Descr Cta B</td>
+<td colspan="2">Descr Conta da Parte B</td>
+<td colspan="4">Deve representar nesse campo a descrição
+da Conta Contabil.
+</td>
+<td>C</td>
+<td>220</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(!INCLUI .and. !Empty(CEV->CEV_IDCTA),Posicione("CFR",1,xFilial("CFR")+CEV->CEV_IDCTA,"CFR_DCODCT"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CEV_IDCTA</td>
+<td>ID Cta B</td>
+<td colspan="2">ID Conta da PArte B</td>
+<td colspan="4">Deve representar neste campo o
+identificador do código unívoco
+atribuído pelo contribuinte à conta no
+e-Lalur e no e-Lacs..
+</td>
+<td>C</td>
+<td>36</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/085.html">085</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CEV_CODTRI</td>
+<td>Cód Tributo</td>
+<td colspan="2">Código do Tributo</td>
+<td colspan="4">Deve representar neste campo o código do
+tributo:
+1 – Imposto de Renda;
+2 – Contribuição Social sobre o Lucro
+Líquido.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence(" 12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Imposto de Renda;2=Contribui��o Social sobre o Lucro L�quido</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CEV_VLRSLI</td>
+<td>Vl.Saldo Ini</td>
+<td colspan="2">Valor Saldo Inicial</td>
+<td colspan="4">Deve representar neste campo o saldo
+inicial da conta no período de apuração.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CEV_SITSLI</td>
+<td>St.Saldo Ini</td>
+<td colspan="2">Situação Saldo Inicial</td>
+<td colspan="4">Deve representar neste campo o indicador
+de saldo inicial:
+1 – Para prejuízos ou valores que serão
+excluído do lucro real ou da base de
+cálculo da contribuição social em
+períodos subsequentes
+2 – Para valores que serão adicionados
+ao lucro real ou à base de cálculo da
+contribuição social em períodos
+subsequentes
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence(" 12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Prejuizo ou Reduz Lucro Real;2=Aumenta Lucro Real</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CEV_VLRPTA</td>
+<td>Vl. B Refl A</td>
+<td colspan="2">Vl.Parte B Reflex em A</td>
+<td colspan="4">Deve representar neste campo o somatório
+dos lançamentos da parte B com reflexo
+na parte A no período.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CEV_STVLPA</td>
+<td>St.Parte A</td>
+<td colspan="2">Situação Lcto Parte A</td>
+<td colspan="4">Deve representar neste campo o indicador
+do somatório dos lançamentos da parte B
+com reflexo na parte A no período:
+1 – Para prejuízos ou valores que serão
+excluído do lucro real ou da base de
+cálculo da contribuição social em
+períodos subsequentes
+2 – Para valores que serão adicionados
+ao lucro real ou à base de cálculo da
+contribuição social em períodos
+subsequentes
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence(" 12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Preju�zo ou Reduz Lucro Real;2=Aumenta Lucro Real</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CEV_VLRPTB</td>
+<td>Vl.B S RefA</td>
+<td colspan="2">Vl.Parte B Sem Reflex A</td>
+<td colspan="4">Deve representar neste campo o somatório
+dos lançamentos da parte B sem reflexo
+na parte A no período (entre contas da
+parte B).
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CEV_STVLPB</td>
+<td>St B SRefl A</td>
+<td colspan="2">Sit Parte B sem Refl A</td>
+<td colspan="4">Deve representar neste campo o indicador
+do lançamento da parte B sem reflexo na
+parte A no período (entre contas da
+parte B):
+1 – Para prejuízos ou valores que serão
+excluído do lucro real ou da base de
+cálculo da contribuição social em
+períodos subsequentes
+2 – Para valores que serão adicionados
+ao lucro real ou à base de cálculo da
+contribuição social em períodos
+subsequentes
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence(" 12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Prejuizo ou Reduz Lucro Real;2=Aumenta Lucro Real</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CEV_VLRFIN</td>
+<td>Vl.Saldo Fin</td>
+<td colspan="2">Valor Saldo Final</td>
+<td colspan="4">Deve representar neste campo o saldo
+final da conta no período de apuração.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CEV_SITFIN</td>
+<td>St.Saldo Fin</td>
+<td colspan="2">Situação Saldo Final</td>
+<td colspan="4">Deve representar neste campo o indicador
+de saldo final:
+1 – para prejuízos ou valores que serão
+excluído do lucro real ou da base de
+cálculo da contribuição social em
+períodos subsequentes
+2 – para valores que serão adicionados
+ao lucro real ou à base de cálculo da
+contribuição social em períodos
+subsequentes
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence(" 12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Prejuizo ou Reduz Lucro Real;2=Aumenta Lucro Real</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

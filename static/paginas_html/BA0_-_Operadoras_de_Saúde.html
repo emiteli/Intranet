@@ -1,0 +1,3787 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: BA0 - Operadoras de Saúde</title></head>
+<body>
+<font color="orange"><h2 id="BA0">Tabela: BA0 - Operadoras de Saúde</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Operadoras de Saúde</b></td><td colspan="2"><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">BA0_FILIAL+BA0_CODIDE+BA0_CODINT</td><td>Ident. Emp. + Cd Operadora</td><td></td></tr>
+<tr><td>2</td><td colspan="2">BA0_FILIAL+BA0_NOMINT</td><td>Operadora</td><td></td></tr>
+<tr><td>3</td><td colspan="2">BA0_FILIAL+BA0_CODCLI+BA0_LOJCLI</td><td>Cód.Cliente + Loja</td><td></td></tr>
+<tr><td>4</td><td colspan="2">BA0_FILIAL+BA0_CGC</td><td>CNPJ</td><td></td></tr>
+<tr><td>5</td><td colspan="2">BA0_FILIAL+BA0_SUSEP</td><td>Num Reg ANS</td><td></td></tr>
+<tr><td>6</td><td colspan="2">BA0_FILIAL+BA0_CODRDA</td><td>Código RDA</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="6" align="center"><b><i>Abas(SXA)</i></b></td></tr><tr><td><b>XA_ALIAS</b></td><td><b>XA_ORDEM</b></td><td colspan="2"><b>XA_DESCRIC</b></td><td><b>XA_AGRUP</b></td><td><b>XA_TIPO</b></td></tr><tr><td><b>BA0</b></td><td><b>1</b></td><td colspan="2"><b>Cadastro</b></td><td><b></b></td><td><b></b></td></tr><tr><td><b>BA0</b></td><td><b>2</b></td><td colspan="2"><b>DIOPS</b></td><td><b></b></td><td><b></b></td></tr><tr><td><b>BA0</b></td><td><b>3</b></td><td colspan="2"><b>Integra��o Carol</b></td><td><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>BA0_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Filial.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_CODIDE</td>
+<td>Ident. Emp.</td>
+<td colspan="2">Codigo Ident. Empresa</td>
+<td colspan="4">Indica o tipo de empresa desta
+instituição de saúde. Este código é
+buscado a partir do cadastro de "Tipos
+de Empresas" (BAB).
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("BAB",M->BA0_CODIDE,1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/b59pls.html">B59PLS</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ba0_codide.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>BA0_DESIDE</td>
+<td>Descr. Emp.</td>
+<td colspan="2">Descricao Ident. Empresa</td>
+<td colspan="4">Descricao da Empresa selecionada no
+cam-po anterior.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",Posicione("BAB",1,xFilial("BAB")+BA0->BA0_CODIDE,"BAB_DESCRI"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("BAB",1,xFilial("BAB")+BA0->BA0_CODIDE,"BAB_DESCRI")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_CODINT</td>
+<td>Cd Operadora</td>
+<td colspan="2">Operadora</td>
+<td colspan="4">Código da Operadora de Saúde.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistChav("BA0",M->BA0_CODIDE+M->BA0_CODINT,1) .And. FreeForUse("BA0",xFilial("BA0")+M->BA0_CODIDE+M->BA0_CODINT)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>BA0_NOMINT</td>
+<td>Operadora</td>
+<td colspan="2">Operadora</td>
+<td colspan="4">Informe o nome da Operadora de Saúde
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>BA0_CLAINT</td>
+<td>Classe Oper.</td>
+<td colspan="2">Operadora</td>
+<td colspan="4">Informe a classe desta Operadora de
+saúde. Este código é buscado a partir do
+cadastro de "Classes de Operadoras"
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("BI7",M->BA0_CLAINT,1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/b58pls.html">B58PLS</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ba0_claint.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>BA0_NOMCLA</td>
+<td>Descrição</td>
+<td colspan="2">Descricao</td>
+<td colspan="4">Descricao da Classe de Operadora
+sele-cionada no campo anterior.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",Posicione("BI7",1,xFilial("BI7")+BA0->BA0_CLAINT,"BI7_DESCRI"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("BI7",1,xFilial("BI7")+BA0->BA0_CLAINT,"BI7_DESCRI")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_GRUOPE</td>
+<td>Gr Operadora</td>
+<td colspan="2">Grupo de Operadora</td>
+<td colspan="4">Informe o código referente ao grupo
+desta Operadora de saúde. Este código é
+buscado a partir do cadastro de "Grupos
+de Operadoras" (BA2).
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>BA2->(ExistCpo("BA2",M->BA0_GRUOPE,1))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ba2pls.html">BA2PLS</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ba0_gruope.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_CAMCOM</td>
+<td>Câmara Comp.</td>
+<td colspan="2">Camara de Compensacao</td>
+<td colspan="4">Indica o código referente à Câmara de
+Compensação. Este código é relacionado
+ao próprio cadastro de Câmaras de
+Compensação.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. BUO->(ExistCpo("BUO"))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/buopls.html">BUOPLS</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_DSGROP</td>
+<td>Descrição</td>
+<td colspan="2">Descricao</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",BA2->(Posicione("BA2",1,xFilial("BA2")+BA0->BA0_GRUOPE,"BA2_DESCRI")))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_SUSEP</td>
+<td>Num Reg ANS</td>
+<td colspan="2">Numero Registro ANS</td>
+<td colspan="4">Informe o código de registro desta
+Operadora de Saúde  junto ao orgão
+regulamentador (ANS).
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_CGC</td>
+<td>CNPJ</td>
+<td colspan="2">CNPJ</td>
+<td colspan="4">Indica um código válido de CGC/CNPJ.
+Observe que tal código possui um dígito
+verificador em seu final, caso este não
+esteja correto o sistema alertará o
+ope-rador, exibindo uma mensagem de
+erro.
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>@R 99.999.999/9999-99                        </td>
+<td>CGC(M->BA0_CGC)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_INCEST</td>
+<td>Inscr.Estad.</td>
+<td colspan="2">Inscricao Estadual</td>
+<td colspan="4">Indica o número da Inscrição Estadual da
+operadora de saúde.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@C                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_EMAIL</td>
+<td>E-Mail</td>
+<td colspan="2">E-Mail</td>
+<td colspan="4">Indica o endereço eletrônico desta
+instituição/pessoa, para fim cadastral.
+Esta informação não possui validação,
+portanto, confira os dados antes da
+confirmação.
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@C                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_SITE</td>
+<td>Home Page</td>
+<td colspan="2">Home Page na Internet</td>
+<td colspan="4">Indica a home page desta
+instituição/pessoa, para fim cadastral.
+Esta informação não possui
+validação,   portanto, confira os dados
+antes da     confirmação.
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@C                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_DATFUN</td>
+<td>Dt. Fundação</td>
+<td colspan="2">Data de Fundacao</td>
+<td colspan="4">Indica a data de fundação desta
+Operadora de saúde.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>@D                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_CEP</td>
+<td>CEP</td>
+<td colspan="2">CEP</td>
+<td colspan="4">Indica o código de endereçamento Postal
+para o endereço abaixo/acima.
+Este código é buscado a partir do
+Cadastro de CEP (BC9).
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>@R !!!!!-!!!                                 </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/b83pls.html">B83PLS</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ba0_cep.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_END</td>
+<td>Endereço</td>
+<td colspan="2">Endereco</td>
+<td colspan="4">Indica uma Avenida/Rua ou outro para
+identificação do código informado
+no campo anterior.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_NUMEND</td>
+<td>Numero</td>
+<td colspan="2">Numero</td>
+<td colspan="4">Incida o Numero do Endereço
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_COMPEN</td>
+<td>Complemento</td>
+<td colspan="2">Complemento</td>
+<td colspan="4">Indica o Complemento do Endereço
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_BAIRRO</td>
+<td>Bairro</td>
+<td colspan="2">Bairro</td>
+<td colspan="4">Indica o bairro em que se localiza o
+endereço informado.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_CODMUN</td>
+<td>Cd Município</td>
+<td colspan="2">Cod Municipio</td>
+<td colspan="4">Indica o código referente ao Município
+em que se situa o endereço informado
+Este código é buscado a partir do
+cadas-tro de Municípios (BID)
+</td>
+<td>C</td>
+<td>7</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>BID->(ExistCpo("BID",M->BA0_CODMUN,1))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/b57pls.html">B57PLS</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ba0_codmun.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_CIDADE</td>
+<td>Cidade</td>
+<td colspan="2">Cidade</td>
+<td colspan="4">Cidade onde se localiza a Operadora de
+Saude
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_EST</td>
+<td>Estado</td>
+<td colspan="2">Estado</td>
+<td colspan="4">Indica o estado (UF) da Operadora de
+Saúde.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SX5","12"+M->BA0_EST)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/12.html">12</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/010.html">010</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_TELEF1</td>
+<td>Telefone 01</td>
+<td colspan="2">Telefone 01</td>
+<td colspan="4">Telefone da Operadora de Saude
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@R (99)99999-9999                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_TELEF2</td>
+<td>Telefone 02</td>
+<td colspan="2">Telefone 02</td>
+<td colspan="4">telefone da Operadora de Saude
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@R (99)99999-9999                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_TELEF3</td>
+<td>Telefone 03</td>
+<td colspan="2">Telefone 03</td>
+<td colspan="4">telefone da Operadora de Saude
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@R (99)99999-9999                            </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_FAX1</td>
+<td>Fax 01</td>
+<td colspan="2">Fax 01</td>
+<td colspan="4">Fone FAX da Operadora de Saude
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_FAX2</td>
+<td>Fax 02</td>
+<td colspan="2">Fax 02</td>
+<td colspan="4">Fone FAX da Operadora de Saude
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_FAX3</td>
+<td>Fax 03</td>
+<td colspan="2">Fax 03</td>
+<td colspan="4">Fone FAX desta Operadora de Saude
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_MATFIL</td>
+<td>Matriz/Fil.</td>
+<td colspan="2">Matriz ou Filial</td>
+<td colspan="4">Informe se esta Operadora e Matriz ou
+Filial
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>00=Matriz;01=Filial</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_MODOPE</td>
+<td>Mod. Oper.</td>
+<td colspan="2">Modalidade Operadora</td>
+<td colspan="4">Indica a Modalidade de Operação desta
+Operadora de saúde. Este código é
+buscado a partir do cadastro de
+"Modalidade de Operadora" (BTZ).
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("BTZ",M->BA0_MODOPE,1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/btzpls.html">BTZPLS</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ba0_modope.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_DESMOD</td>
+<td>Descr.Mod.Op</td>
+<td colspan="2">Desc.Modalidade Operadora</td>
+<td colspan="4">Descricao da Modalidade da Operadora de
+Saude.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",Posicione("BTZ",1,xFilial("BTZ")+M->BA0_MODOPE,"BTZ_DESCRI"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_CODFOR</td>
+<td>Cód.Fornec.</td>
+<td colspan="2">Codigo Fornecedor</td>
+<td colspan="4">Código do fornecedor relacionado à
+Operadora de saúde, normalmente este
+fornecedor é a própria operadora. Este
+registro será útil para fins de
+pagamento em Intercâmbio.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .or. ExistCpo("SA2",M->BA0_CODFOR,1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sa2.html">SA2</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ba0_codfor.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_LOJA</td>
+<td>Loja</td>
+<td colspan="2">Loja</td>
+<td colspan="4">Codigo de identificacao da Loja que esta
+sendo cadastrada
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .or. ExistCpo("SA2",M->BA0_CODFOR+M->BA0_LOJA,1)</td>
+<td>"01"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_NOMFOR</td>
+<td>Nome Fornec.</td>
+<td colspan="2">Nome Fornecedor</td>
+<td colspan="4">Nome do Fornecedor.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",Posicione("SA2",1,xFilial("SA2")+M->BA0_CODFOR,"A2_NOME"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_TBRFRE</td>
+<td>Tab. Reemb.</td>
+<td colspan="2">Tabela Reembolso</td>
+<td colspan="4">Indica a tabela de pagamento a ser
+utilizada para este nível de
+relacionamento, em ocasioes que geram
+reembolso.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. ExistCpo("BF8",M->BA0_CODIDE+M->BA0_CODINT+M->BA0_TBRFRE,1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/b9apls.html">B9APLS</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_CODTAB</td>
+<td>Tab.Pag.RDA</td>
+<td colspan="2">Tabela Pagamento RDA</td>
+<td colspan="4">Indica a Tabela de Pagamento a ser
+utilizada pela instituição de saúde,
+para pagamento dos prestadores a ela
+relacionados.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/b9apls.html">B9APLS</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_DESTAB</td>
+<td>Descr. Tab.</td>
+<td colspan="2">Descricao Tabela</td>
+<td colspan="4">Descricao Tabela
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",Posicione("BF8",1,xFilial("BF8")+BA0->BA0_CODIDE+BA0->BA0_CODINT+BA0->BA0_CODTAB,"BF8_DESCM"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_CODCLI</td>
+<td>Cód.Cliente</td>
+<td colspan="2">Codigo Cliente</td>
+<td colspan="4">Indica o código do cliente relacionado a
+instituição de saúde, normalmente este
+cliente é a própria operadora. Este
+registro será útil para fins de
+recebimento em Intercâmbio.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sa1.html">SA1</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ba0_codcli.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_LOJCLI</td>
+<td>Loja</td>
+<td colspan="2">Loja Cliente</td>
+<td colspan="4">Codigo de identificacao da Loja deste
+Cliente que esta sendo selecionado.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_NOMCLI</td>
+<td>Nome Cliente</td>
+<td colspan="2">Nome Cliente</td>
+<td colspan="4">Descricao do Cliente selecionado no
+cam-po CLIENTE.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",Posicione("SA1",1,xFilial("SA1")+BA0->(BA0_CODCLI+BA0_LOJCLI),"A1_NOME"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_NATURE</td>
+<td>Natureza</td>
+<td colspan="2">Codigo da Nat Financeira</td>
+<td colspan="4">Indica o código da Natureza de Operação
+padrão da operadora de saúde. Esta é
+relacionada ao cadastro de Naturezas do
+ERP para efeito de cálculo de impostos.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>FinVldNat( .F. ) .OR. Vazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sed.html">SED</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_TIPOPE</td>
+<td>Vínculo</td>
+<td colspan="2">Vinculo</td>
+<td colspan="4">Informe, se necessário, o tipo de
+vinculo desta instituição de saúde. Esta
+necessídade é específica de algumas
+operadoras.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Nacional;2=Alianca</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_EXPIDE</td>
+<td>Expr. AdvPl</td>
+<td colspan="2">Exp Rdmake Para Imp/Exp</td>
+<td colspan="4">Infome a expressão ADVPL que será
+utilizada na Importação/Exportação de
+identificações do usuários desta
+instituição de saude.
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_NOMCAR</td>
+<td>Nome Id. Usr</td>
+<td colspan="2">Nome Ident. Usuario</td>
+<td colspan="4">Informar o termo que sera utilizado
+paracaracterizar o documento de
+identifica- cao do Usuario nesta
+Operadora de Saude.
+</td>
+<td>C</td>
+<td>25</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_VL2BOL</td>
+<td>Vlr. 2 Via B</td>
+<td colspan="2">Valor da 2 Via do Boleto</td>
+<td colspan="4">Informe o valor a ser atribuído a se-
+gunda via de boleto, para este nível
+de relacionamento.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_VLCSOP</td>
+<td>% Custo Ope.</td>
+<td colspan="2">% Padrao Custo Operac.</td>
+<td colspan="4">Indica um percentual de custo
+operacional para situações de
+intercâmbio eventual. Este é o nível
+mais alto de parametrização.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_VENCTO</td>
+<td>Vencimento</td>
+<td colspan="2">Vencimento</td>
+<td colspan="4">Indica o dia para vencimento das faturas
+de intercâmbio eventual para esta
+instituição de saúde (Pré-Pagamento).
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td>M->BA0_VENCTO>=1 .And. M->BA0_VENCTO<=31</td>
+<td>1</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_TIPVEN</td>
+<td>Tipo Vencto.</td>
+<td colspan="2">Tipo Vencimento</td>
+<td colspan="4">Indica a forma de vencimento das faturas
+de intercâmbio eventual (Pré-Pagamento).
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Vencimento Fixo;2=Qtd Dias apos a emissao da fatura;3=Dia Util do Mes</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_LIECON</td>
+<td>Li e Concord</td>
+<td colspan="2">Li e Concordo</td>
+<td colspan="4">Texto contendo as regras do Li e
+Concordo que será exibido na solicitação
+de reembolso no portal do beneficiário,
+caso fique em branco, o termo não será
+exigido na pagina e nem será exibido.
+</td>
+<td>M</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_VENCUS</td>
+<td>Venc. C. Op.</td>
+<td colspan="2">Vencto Custo Operacional</td>
+<td colspan="4">Indica o dia para vencimento das faturas
+de intercâmbio eventual para esta
+instituição de saúde (Custo
+Operacional).
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td>M->BA0_VENCUS>=1 .And. M->BA0_VENCUS<=31</td>
+<td>1</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_TIPCUS</td>
+<td>Tipo Cus.Op.</td>
+<td colspan="2">Tp Vencto Cus.Operacional</td>
+<td colspan="4">Indica a forma de vencimento das faturas
+de intercâmbio eventual (Custo
+Operacional).
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Vencimento Fixo;2=Qtd Dias apos a emissao da fatura</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_ENVPTU</td>
+<td>Ver.Env.EDI</td>
+<td colspan="2">Versao Envio EDI</td>
+<td colspan="4">Indica a versão para envio do Protoculo
+para Transações entre UnIMEDS (PTU).
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_RECPTU</td>
+<td>Ver.Rec.EDI</td>
+<td colspan="2">Versao Recebimento EDI</td>
+<td colspan="4">Indica a versão para recebimento do
+Protocolo para Transações entre UnIMEDS
+(PTU).
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_EMAPTU</td>
+<td>E-Mail EDI</td>
+<td colspan="2">E-Mail EDI</td>
+<td colspan="4">Indica o e-mail utilizado pela Operadora
+de saúde para recebimento dos dados
+contidos no PTU.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_RESPTU</td>
+<td>Resp.  EDI</td>
+<td colspan="2">Responsavel pelo EDI</td>
+<td colspan="4">Indica o colaborador responsável pelo
+gerenciamento dos dados referentes aos
+EDIs
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_CODRDA</td>
+<td>Código RDA</td>
+<td colspan="2">Codigo da Rede Atend.</td>
+<td colspan="4">Indica o código da RDA para a qual se-
+rão válidas as informações aqui cadas-
+tradas. Observe que a Rede de
+Atendimen-to está diretamente
+relacionada à opera-dora informada.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("BAU",M->BA0_CODRDA,1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/bmcpls.html">BMCPLS</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_ONLINE</td>
+<td>On Line ?</td>
+<td colspan="2">Operadora On Line ?</td>
+<td colspan="4">Indica se a instituição de saúde
+encontra-se apta para envio/recebimento
+de informações on-line (POS). A
+transação entre operadoras somente
+ocorrerá se ambas estiverem online.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;0=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_DIARET</td>
+<td>D.Lim.Ret.</td>
+<td colspan="2">Dia Limite Retroativos ?</td>
+<td colspan="4">Indica o dia de corte para cobrança do
+retroativo.
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td>Entre(1, 31, M->BA0_DIARET)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_A100</td>
+<td>EDI 100</td>
+<td colspan="2">Controle sequencial A100</td>
+<td colspan="4">Controle sequencial A100
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_A300</td>
+<td>EDI 300</td>
+<td colspan="2">Controle sequencial A300</td>
+<td colspan="4">Controle sequencial A300
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_A600</td>
+<td>EDI 600</td>
+<td colspan="2">Controle sequencial A600</td>
+<td colspan="4">Controle sequencial A600
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_A700</td>
+<td>EDI 700</td>
+<td colspan="2">Controle sequencial A700</td>
+<td colspan="4">Controle sequencial A700
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_LIMCH</td>
+<td>Limite Aut.</td>
+<td colspan="2">Limite Autorização Inter.</td>
+<td colspan="4">Indica o limite permitido para
+atendimento de intercambio desta
+Operadora de Saúde. O conteudo deste
+campo esta ligado ao campo "tipo limite"
+que pode ser em CH ou em Reais.
+</td>
+<td>N</td>
+<td>7</td>
+<td>2</td>
+<td>@E 9,999.99                                  </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_TIPLIM</td>
+<td>Tipo Limite</td>
+<td colspan="2">Tipo Limite Autorização</td>
+<td colspan="4">Tipo de limitação de atendimento de
+intercambio que pode ser em Real ou em
+CH (coeficiente de honorario)
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@C                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Limite em CH;2=Limite em Reais</td>
+<td></td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_NIVVAL</td>
+<td>Nv. Válido?</td>
+<td colspan="2">Nivel Valido?</td>
+<td colspan="4">Informe neste campo se o nível é válido
+ou não. Este campo é utilizado para
+validação do limite do CH.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;0=Nao</td>
+<td>M->BA0_LIMCH==0</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_GNT</td>
+<td>GNT</td>
+<td colspan="2">GNT</td>
+<td colspan="4">Indica GNT
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_BLOINO</td>
+<td>Blq.Atd.Int.</td>
+<td colspan="2">Bloqueia atdmto de interc</td>
+<td colspan="4">Indica se a operadora esta ou não
+bloqueada para atendimentos em
+interâmbio, ou seja, indica se os
+usuários desta operadora podem ser
+atendidos pela operadora padrão.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Nao;1=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_TIPPAG</td>
+<td>Forma Pgto</td>
+<td colspan="2">Forma de pagamento</td>
+<td colspan="4">Forma de pagamento utilizada pelo
+cliente.
+Exemplo:
+01- Boleto bancário.
+02- Débito em conta.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>vazio() .or. ExistCpo("BQL",M->BA0_TIPPAG,1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/bq1pls.html">BQ1PLS</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_BCOCLI</td>
+<td>Banco Cli.</td>
+<td colspan="2">Banco do cliente.</td>
+<td colspan="4">Codigo do banco do cliente. Informação
+utilizada para o debito em conta
+corrente do cliente.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/007.html">007</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_AGECLI</td>
+<td>Agência Cli.</td>
+<td colspan="2">Agencia do cliente.</td>
+<td colspan="4">Código da agencia bancaria do cliente.
+Informação utilizada para o débito
+automático em conta corrente do cliente.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/008.html">008</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_CTACLI</td>
+<td>Conta Cli.</td>
+<td colspan="2">Conta do cliente</td>
+<td colspan="4">Numero da conta corrente do cliente.
+Informação utilizada para o débito
+automático do cliente.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/009.html">009</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_PORTAD</td>
+<td>Banco Oper.</td>
+<td colspan="2">Banco da operadora</td>
+<td colspan="4">Código do portador. Identifica  o agente
+cobrador responsável  pela  cobrança  do
+título.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>vazio() .or. ExistCpo("SA6",M->BA0_PORTAD,1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sa6.html">SA6</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/007.html">007</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_AGEDEP</td>
+<td>Agência Ope.</td>
+<td colspan="2">Agencia da operadora.</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>vazio() .or. ExistCpo("SA6",M->BA0_PORTAD+M->BA0_AGEDEP,1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/008.html">008</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_CTACOR</td>
+<td>Conta Oper.</td>
+<td colspan="2">Conta da operadora.</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>vazio() .or. ExistCpo("SA6",M->BA0_PORTAD+M->BA0_AGEDEP+BA0_CTACOR,1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/009.html">009</a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_EMPORI</td>
+<td>Empresa Orig</td>
+<td colspan="2">Empresa Original</td>
+<td colspan="4">Este campo tem como finalidade indicar a
+qual empresa o usuario esta relacionada.
+Sera utilizado no modulo de callcenter
+para que a empresa seja aberta no
+momento do atendimento.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SM0", M->BA0_EMPORI, 1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ym0.html">YM0</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_BASCOP</td>
+<td>Base Co-part</td>
+<td colspan="2">Base p/ co-participação</td>
+<td colspan="4">Indica se a co-participação será
+calculada com base no valor de cobrança
+ou no valor pago ao prestador.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>'1'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>0=Valor cobran�a;1=Valor pago ao prestador</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_ABRANG</td>
+<td>Abrangencia</td>
+<td colspan="2">Abrangência</td>
+<td colspan="4">Indica o código da área de abrangência
+da Operadora de Saúde.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_DDD</td>
+<td>DDD</td>
+<td colspan="2">DDD</td>
+<td colspan="4">Indica o DDD da operadora.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_NATJUR</td>
+<td>Nat. Juridic</td>
+<td colspan="2">Natureza Juridica</td>
+<td colspan="4">Natureza jurídica da operadora, conforme
+tabela "Lista de Naturezas Juridicas",
+disponível via "F3".
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SX5","B8"+M->BA0_NATJUR)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/b8.html">B8</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_MODALI</td>
+<td>Modalidade</td>
+<td colspan="2">Modalidade</td>
+<td colspan="4">Modadalidade da operadora de saúde,
+identificando conforme tabela 'Lista de
+Modalidades' disponível na consulta
+"F3".
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SX5","BA"+M->BA0_MODALI)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ba.html">BA</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_SEGMEN</td>
+<td>Segmentação</td>
+<td colspan="2">Segmentação</td>
+<td colspan="4">Segmentação da operadora de saúde,
+conforme disponível na tabela 'Lista de
+Segmentação'.
+'
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SX5","BD"+M->BA0_SEGMEN)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/bd.html">BD</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_CODREG</td>
+<td>Região</td>
+<td colspan="2">Região</td>
+<td colspan="4">Codigo da região em que a operadora está
+situada.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/b56pls.html">B56PLS</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_ACOPUL</td>
+<td>Ações Pulv.</td>
+<td colspan="2">Ações Pulv.</td>
+<td colspan="4">Indica se a operadora possui ações
+pulverizadas, ou seja, se todos os
+acionistas possuem menos de 5% das
+ações/quotas. Aplicável somente as
+empresas cuja natureza de constituição
+seja atravéz de ações ou cotas.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>S=Sim;N=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_TOTACO</td>
+<td>Tot. Ações</td>
+<td colspan="2">Tot. Ações</td>
+<td colspan="4">Indica o total de ações distribuídas
+pela empresa em percentual relativo ao
+montante desta.
+Não se aplica quando as ações são
+pulverizadas.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_RAMAL1</td>
+<td>Ramal 1</td>
+<td colspan="2">Ramal 1</td>
+<td colspan="4">Indica o Ramal 1
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_RAMAL2</td>
+<td>Ramal 2</td>
+<td colspan="2">Ramal 2</td>
+<td colspan="4">Indica o Ramal 2
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_RAMAL3</td>
+<td>Ramal 3</td>
+<td colspan="2">Ramal 3</td>
+<td colspan="4">Indica o Ramal 3
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_SENQUI</td>
+<td>Senha Quimio</td>
+<td colspan="2">Gerar Senha p/ Anexo Quim</td>
+<td colspan="4">Indique se deverá ser gerada
+senha na inclusão do anexo
+de quimioterapia
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;0=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_MAXRG</td>
+<td>Max. Rec. Gl</td>
+<td colspan="2">Max. Rec. Glosa</td>
+<td colspan="4">Max. Rec. Glosa.
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_SENRAD</td>
+<td>Senha Radio?</td>
+<td colspan="2">Gerar Senha p/ Anexo Radi</td>
+<td colspan="4">Indique se deverá ser gerada
+senha na inclusão do anexo
+de radioterapia
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;0=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_TPOPED</td>
+<td>Tp.OPE.Edi</td>
+<td colspan="2">Tp.Operadora Edi</td>
+<td colspan="4">Informe o tipo de Operadora de
+acordo com o manual de intercâmbio
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. Pertence('12')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Prestadora;2=Operadora</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_TISVER</td>
+<td>Versao TISS</td>
+<td colspan="2">Versao TISS</td>
+<td colspan="4">Informe a versão da TISS utilizada pela
+operadora
+</td>
+<td>C</td>
+<td>7</td>
+<td>0</td>
+<td>                                             </td>
+<td>ExistCpo("BVV",M->BA0_TISVER,1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/vertis.html">VERTIS</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_SENOPM</td>
+<td>Senha OPME?</td>
+<td colspan="2">Gerar Senha p/ Anexo OPME</td>
+<td colspan="4">Indique se deverá ser gerada
+senha na inclusão do anexo
+de opme
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;0=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_PRZREC</td>
+<td>Prazo Rec Gl</td>
+<td colspan="2">Prazo Rec Glosa</td>
+<td colspan="4">Prazo em dias que o prestador tem para
+realizar a solicitaçao de recurso de
+glosa
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_CRIPRZ</td>
+<td>Glos Prz Rec</td>
+<td colspan="2">Glosa para prazo recurso</td>
+<td colspan="4">Indica o codigo da glosa caso o prazo
+limite para recurso de glosa seja
+atingido.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td>ExistCpo("BTQ","38"+M->BA0_CRIPRZ,1)</td>
+<td>IIF(!INCLUI,ALLTRIM(POSICIONE("BTQ",1,XFILIAL("BTQ")+BA0->BA0_CODTAB+BA0->BA0_CRIPRZ,"BTQ_DESTER")),"")</td>
+<td><a href="/tabelas_protheus/f3/btqba0.html">BTQBA0</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ba0_criprz.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_TPPAG</td>
+<td>Form.Pag.Int</td>
+<td colspan="2">Forma Pagamento Intercâmb</td>
+<td colspan="4">Indica se a fatura de intercâmbio desta
+operadora será paga de maneira Integral
+ou Parcial.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. Pertence("12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Pagamento do Valor da Fatura Integral;2=Pagamento do Valor Contratado(glosado)</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_TABPRZ</td>
+<td>Tab Glos Prz</td>
+<td colspan="2">Tabela da glosa do prazo</td>
+<td colspan="4">Indica a tabela padrão que corresponde
+aglosa escolhida para o prazo limite de
+recurso de glosa
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_DESPRZ</td>
+<td>Des glos prz</td>
+<td colspan="2">Descrição glosa do prazo</td>
+<td colspan="4">Descrição da glosa do prazo do recurso
+</td>
+<td>C</td>
+<td>100</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIF(!INCLUI,ALLTRIM(POSICIONE("BTQ",1,XFILIAL("BTQ")+BA0->BA0_TABPRZ+BA0->BA0_CRIPRZ,"BTQ_DESTER")),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_CRILIM</td>
+<td>Glos Lim Rec</td>
+<td colspan="2">Glosa para limite recurso</td>
+<td colspan="4">Define qual o codigo de glosa será
+exibido quando o limite de recurso de
+glosa for atingido
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td>ExistCpo("BTQ","38"+M->BA0_CRILIM,1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/btqba0.html">BTQBA0</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ba0_crilim.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_TABLIM</td>
+<td>Tab Glos Lim</td>
+<td colspan="2">Tabela da glosa de limite</td>
+<td colspan="4">Tabela da glosa escolhida para quando o
+limite de recurso de glosa é atingido
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_DESLIM</td>
+<td>Des glos lim</td>
+<td colspan="2">Descrição glosa do limite</td>
+<td colspan="4">Descrição da glosa para quando o limite
+de recurso de glosa é atingido.
+</td>
+<td>C</td>
+<td>100</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIF(!INCLUI,ALLTRIM(POSICIONE("BTQ",1,XFILIAL("BTQ")+BA0->BA0_TABLIM+BA0->BA0_CRILIM,"BTQ_DESTER")),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_AUTGES</td>
+<td>Autogestao?</td>
+<td colspan="2">Operadora é  Autogestão?</td>
+<td colspan="4">Autogestão para envio do registro R317
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>'0'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=N�o;1=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_DIGANE</td>
+<td>Sol Anex Cli</td>
+<td colspan="2">Solicita Anexo Clinico</td>
+<td colspan="4">Indica que a operadora pode solicitar
+anexo clínico
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Nao;1=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_VLRAPR</td>
+<td>Valor Apr?</td>
+<td colspan="2">Valor Apresentado?</td>
+<td colspan="4">Quando marcado, indica que o prestador
+visualizará no portal o valor total
+apresentado na PEG ao lado do valor
+calculado
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>0</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;0=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_ENDPOI</td>
+<td>EndPoint Aut</td>
+<td colspan="2">EndPoint Auditoria Autori</td>
+<td colspan="4">Caminho do endpoint do novo autorizador
+para comunicar o parecer da auditoria
+</td>
+<td>C</td>
+<td>254</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_CARDOM</td>
+<td>SubDomain</td>
+<td colspan="2">SubDomain Carol</td>
+<td colspan="4">Informe o Subdomain de acesso na
+integração com a Carol.
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_REFICM</td>
+<td>Ref ICMS EDI</td>
+<td colspan="2">Ref. para ICMS TNUMM</td>
+<td colspan="4">Informe a referência que sera utilizada
+para valoração com base na TNUMM.
+Utilizado somente para cooperativa
+médica
+</td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_REFLCM</td>
+<td>Ref Liv. Com</td>
+<td colspan="2">Ref. Livre comércio TNUMM</td>
+<td colspan="4">Referência sobre criterio Livre
+comércio, para uso na valoração com base
+na TNUMM
+Uso para clientes cooperativa médica
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=N�o;1=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_CARORG</td>
+<td>OrgSubDomain</td>
+<td colspan="2">OrgSubDomain Carol</td>
+<td colspan="4">Informe o OrgSubDomain de acesso na
+integração com a Carol.
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_CARURL</td>
+<td>URL Carol</td>
+<td colspan="2">URL Carol</td>
+<td colspan="4">Informe a URL de acesso na integração
+com a Carol.
+</td>
+<td>C</td>
+<td>100</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_CARCID</td>
+<td>Conector ID</td>
+<td colspan="2">Conector ID Carol</td>
+<td colspan="4">Informe o Connector ID de acesso na
+integração com a Carol.
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_CARSIS</td>
+<td>Usuar. Sist.</td>
+<td colspan="2">Usuario Sistema Carol</td>
+<td colspan="4">Informe o usuário de acesso na
+integração com a Carol.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/bbcpls.html">BBCPLS</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_DEPRET</td>
+<td>Dep. Retorno</td>
+<td colspan="2">Depart. Retorno Carol</td>
+<td colspan="4">Informe o departamento de retorno das
+guias na integração com a Carol.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_CARTOK</td>
+<td>Token Acesso</td>
+<td colspan="2">Token de Acesso Carol</td>
+<td colspan="4">Informe o token de acesso na integração
+com a Carol.
+</td>
+<td>C</td>
+<td>100</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_URLPAC</td>
+<td>UrlSisPacUni</td>
+<td colspan="2">URL SISPAC Unimed Bra</td>
+<td colspan="4">EndPoint Sistema de Pacotes da Unimed
+Brasil de acordo com Protocolo de
+Transações Unimed - PTU Versão 1.0
+MS.104 Rev.01
+</td>
+<td>C</td>
+<td>128</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_STKPAC</td>
+<td>STkSisPacUni</td>
+<td colspan="2">STk SISPAC Unimed Bra</td>
+<td colspan="4">SessionToken Sistema de Pacotes da
+Unimed Brasil de acordo com Protocolo de
+Transações Unimed - PTU Versão 1.0
+MS.104 Rev.01
+</td>
+<td>C</td>
+<td>128</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_USRPAC</td>
+<td>UsrSisPacUni</td>
+<td colspan="2">Usr SISPAC Unimed Bra</td>
+<td colspan="4">Username Sistema de Pacotes da Unimed
+Brasil de acordo com Protocolo de
+Transações Unimed - PTU Versão 1.0
+MS.104 Rev.01
+</td>
+<td>C</td>
+<td>64</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_PWDPAC</td>
+<td>PwdSisPacUni</td>
+<td colspan="2">Pwd SISPAC Unimed Bra</td>
+<td colspan="4">Password Sistema de Pacotes da Unimed
+Brasil de acordo com Protocolo de
+Transações Unimed - PTU Versão 1.0
+MS.104 Rev.01
+</td>
+<td>C</td>
+<td>64</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BA0_TOKPAC</td>
+<td>TokSisPacUni</td>
+<td colspan="2">Tok SISPAC Unimed Bra</td>
+<td colspan="4">Bearer Token do Sistema de Pacotes da
+Unimed Brasil de acordo com Protocolo de
+Transações Unimed - PTU Versão 1.0
+MS.104 Rev.01
+</td>
+<td>M</td>
+<td>50</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>B8S</td>
+<td colspan="2">BA0_SUSEP</td>
+<td colspan="2">B8S_CODOPE</td>
+</tr>
+<tr>
+<td>B3D</td>
+<td colspan="2">BA0_SUSEP</td>
+<td colspan="2">B3D_CODOPE</td>
+</tr>
+<tr>
+<td>B3J</td>
+<td colspan="2">BA0_SUSEP</td>
+<td colspan="2">B3J_CODOPE</td>
+</tr>
+<tr>
+<td>BK6</td>
+<td colspan="2">BA0_CODIDE+BA0_CODINT</td>
+<td colspan="2">BK6_OPEEDI</td>
+</tr>
+<tr>
+<td>B8N</td>
+<td colspan="2">BA0_SUSEP</td>
+<td colspan="2">B8N_CODOPE</td>
+</tr>
+<tr>
+<td>BUW</td>
+<td colspan="2">BA0_SUSEP</td>
+<td colspan="2">BUW_CODOPE</td>
+</tr>
+<tr>
+<td>B84</td>
+<td colspan="2">BA0_CODINT</td>
+<td colspan="2">B84_CODINT</td>
+</tr>
+<tr>
+<td>BOW</td>
+<td colspan="2">BA0_CODIDE</td>
+<td colspan="2">BOW_OPESOL</td>
+</tr>
+<tr>
+<td>B8M</td>
+<td colspan="2">BA0_SUSEP</td>
+<td colspan="2">B8M_CODOPE</td>
+</tr>
+<tr>
+<td>B8T</td>
+<td colspan="2">BA0_SUSEP</td>
+<td colspan="2">B8T_CODOPE</td>
+</tr>
+<tr>
+<td>B8W</td>
+<td colspan="2">BA0_SUSEP</td>
+<td colspan="2">B8W_CODOPE</td>
+</tr>
+<tr>
+<td>BUY</td>
+<td colspan="2">BA0_SUSEP</td>
+<td colspan="2">BUY_CODOPE</td>
+</tr>
+<tr>
+<td>B3C</td>
+<td colspan="2">BA0_SUSEP</td>
+<td colspan="2">B3C_CODOPE</td>
+</tr>
+<tr>
+<td>B5F</td>
+<td colspan="2">BA0_CODIDE+BA0_CODINT</td>
+<td colspan="2">B5F_OPEHAB</td>
+</tr>
+<tr>
+<td>B5F</td>
+<td colspan="2">BA0_CODIDE+BA0_CODINT</td>
+<td colspan="2">B5F_OPEORI</td>
+</tr>
+<tr>
+<td>B8Z</td>
+<td colspan="2">BA0_SUSEP</td>
+<td colspan="2">B8Z_CODOPE</td>
+</tr>
+<tr>
+<td>B4B</td>
+<td colspan="2">BA0_NOMINT</td>
+<td colspan="2">B4B_OPEMOV</td>
+</tr>
+<tr>
+<td>B44</td>
+<td colspan="2">BA0_CODIDE+BA0_CODINT</td>
+<td colspan="2">B44_OPEEXE</td>
+</tr>
+<tr>
+<td>B44</td>
+<td colspan="2">BA0_CODIDE+BA0_CODINT</td>
+<td colspan="2">B44_OPEMOV</td>
+</tr>
+<tr>
+<td>B44</td>
+<td colspan="2">BA0_CODIDE+BA0_CODINT</td>
+<td colspan="2">B44_OPERDA</td>
+</tr>
+<tr>
+<td>B44</td>
+<td colspan="2">BA0_CODIDE+BA0_CODINT</td>
+<td colspan="2">B44_OPESOL</td>
+</tr>
+<tr>
+<td>B44</td>
+<td colspan="2">BA0_CODIDE+BA0_CODINT</td>
+<td colspan="2">B44_OPEUSR</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

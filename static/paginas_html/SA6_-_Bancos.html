@@ -1,0 +1,2928 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: SA6 - Bancos</title></head>
+<body>
+<font color="orange"><h2 id="SA6">Tabela: SA6 - Bancos</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Bancos</b></td><td colspan="2"><b>A6_FILIAL+A6_COD+A6_AGENCIA+A6_NUMCON</b></td><td><b>MATA070</b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">A6_FILIAL+A6_COD+A6_AGENCIA+A6_NUMCON</td><td>Codigo + Nro Agencia + Nro Conta</td><td></td></tr>
+<tr><td>2</td><td colspan="2">A6_FILIAL+A6_NOME</td><td>Nome Banco</td><td></td></tr>
+<tr><td>3</td><td colspan="2">A6_FILIAL+A6_CGC</td><td>CPF/CNPJ</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>A6_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Código que identifica a filial da
+empre-sa usuária do sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_COD</td>
+<td>Codigo</td>
+<td colspan="2">Codigo do Banco</td>
+<td colspan="4">Código que identifica cada um dos
+agentes cobradores que a empresa opera.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>naovazio() .AND. ExistChav("SA6",M->A6_COD+M->A6_AGENCIA+M->A6_NUMCON)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/007.html">007</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>A6_AGENCIA</td>
+<td>Nro Agencia</td>
+<td colspan="2">Agencia do banco</td>
+<td colspan="4">Código que identifica a agência do
+agente cobrador.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .and. A070ALFANUM(M->A6_AGENCIA) .AND. ExistChav("SA6",M->A6_COD+M->A6_AGENCIA+M->A6_NUMCON)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/008.html">008</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>A6_DVAGE</td>
+<td>DV Agencia</td>
+<td colspan="2">Digito Verific. Agencia</td>
+<td colspan="4">Informe o dígito verificador do código
+da agência
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_NOMEAGE</td>
+<td>Nome Agencia</td>
+<td colspan="2">Nome da Agencia</td>
+<td colspan="4">Nome da Agência.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@S20                                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_NUMCON</td>
+<td>Nro Conta</td>
+<td colspan="2">Conta Corrente no Banco</td>
+<td colspan="4">Número da conta-corrente da  empresa  no
+agente cobrador,  caso, seja banco.   A
+chave  de identificação é formada pelo
+código do banco e da agência.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>A070ALFANUM(M->A6_NUMCON) .AND. ExistChav("SA6",M->A6_COD+M->A6_AGENCIA+M->A6_NUMCON)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/009.html">009</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>A6_DVCTA</td>
+<td>DV Conta</td>
+<td colspan="2">Digito Verific. Conta</td>
+<td colspan="4">Informe o dígito verificador do número
+da conta
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_NOME</td>
+<td>Nome Banco</td>
+<td colspan="2">Nome do banco</td>
+<td colspan="4">Nome do agente cobrador.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>A6_NREDUZ</td>
+<td>Nome Red.Bco</td>
+<td colspan="2">Nome reduzido do banco</td>
+<td colspan="4">Nome pelo qual o agente cobrador e
+conhecido na empresa.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_END</td>
+<td>Endereco</td>
+<td colspan="2">Endereco do banco</td>
+<td colspan="4">Endereço do agente cobrador.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_BAIRRO</td>
+<td>Bairro</td>
+<td colspan="2">Bairro do banco</td>
+<td colspan="4">Bairro do agente cobrador.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_MUN</td>
+<td>Municipio</td>
+<td colspan="2">Municipio do banco</td>
+<td colspan="4">Município do agente cobrador.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_CEP</td>
+<td>CEP</td>
+<td colspan="2">Cod Enderacamento Postal</td>
+<td colspan="4">Código do endereçamento postal do banco.
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>@R 99999-999                                 </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_EST</td>
+<td>Estado</td>
+<td colspan="2">Estado do banco</td>
+<td colspan="4">Sigla da unidade da federação do
+estabelecimento do agente cobrador.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>VAZIO() .or. ExistCpo("SX5","12"+M->A6_EST)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/12.html">12</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/010.html">010</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_TEL</td>
+<td>Telefone</td>
+<td colspan="2">Telefone do banco</td>
+<td colspan="4">Telefone do agente cobrador.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_FAX</td>
+<td>Fax</td>
+<td colspan="2">Numero do Fax</td>
+<td colspan="4">Este campo deverá conter o número do fax
+do banco.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_TELEX</td>
+<td>Telex</td>
+<td colspan="2">Telex do banco</td>
+<td colspan="4">Número do telex do agente cobrador.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_CONTATO</td>
+<td>Contato</td>
+<td colspan="2">Contato no banco</td>
+<td colspan="4">Nome do contato da empresa no agente
+cobrador.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_RETENCA</td>
+<td>Dias retenca</td>
+<td colspan="2">Dias de retencao bancaria</td>
+<td colspan="4">Número de dias(D0,D1,D2,etc) que o
+agente cobrador retém o valor cobrado.
+Utilizado para calcular o dia da
+disponibilidade do recebimento para
+fluxo de caixa.
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td>positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_DEPTO</td>
+<td>Depto</td>
+<td colspan="2">Departamento</td>
+<td colspan="4">Departamento
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_CXPOSTA</td>
+<td>Caixa Postal</td>
+<td colspan="2">Caixa Postal</td>
+<td colspan="4">Caixa Postal.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_RETDESC</td>
+<td>Ret.p/Descon</td>
+<td colspan="2">Retencao para desconto</td>
+<td colspan="4">Número de dias que o agente cobrador
+demora para creditar na conta da empresa
+os valores referentes a operação de
+desconto de títulos. É utilizado no
+cálculo do vencimento real.
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td>positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_SALANT</td>
+<td>Saldo Anter.</td>
+<td colspan="2">Saldo anterior</td>
+<td colspan="4">Saldo anterior do agente cobrador.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_SALATU</td>
+<td>Saldo Atual</td>
+<td colspan="2">Saldo atual</td>
+<td colspan="4">Saldo atual em disponibilidade no agen-
+te cobrador.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_TXCOBSI</td>
+<td>Tx cob.simpl</td>
+<td colspan="2">Taxa sobre cobr. simples</td>
+<td colspan="4">Valor cobrado pelo agente cobrador para
+efetuar a cobrança simples de um título.
+</td>
+<td>N</td>
+<td>10</td>
+<td>2</td>
+<td>@E 9,999,999.99                              </td>
+<td>positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_TXCOBDE</td>
+<td>Tx Cob.Desc.</td>
+<td colspan="2">Taxa sobre cobr. desconto</td>
+<td colspan="4">Valor cobrado pelo agente cobrador
+paraefetuar a cobrança de um título na
+car-teira de desconto.
+</td>
+<td>N</td>
+<td>10</td>
+<td>2</td>
+<td>@E 9,999,999.99                              </td>
+<td>positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_TAXADES</td>
+<td>Taxa Descon.</td>
+<td colspan="2">Taxa sobre titulos descon</td>
+<td colspan="4">Percentual a ser aplicado no valor de um
+título para determinar o custo para
+operação desconto.
+</td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td>positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_LAYOUT</td>
+<td>Lay-Out cheq</td>
+<td colspan="2">Lay-Out do cheque</td>
+<td colspan="4">Lay-Out para impressão dos cheques.
+Cam-po atualizado pela opção
+Configuração deimpressora de cheques.
+</td>
+<td>C</td>
+<td>29</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>A6_CONTA</td>
+<td>Conta Contab</td>
+<td colspan="2">Conta Contabil do Banco</td>
+<td colspan="4">Código da conta contábil onde devem ser
+lançadas (via fórmula) as movimentações
+dos agentes cobradores na integração
+contábil, se houver.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>vazio() .or. Ctb105Cta()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ct1.html">CT1</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/003.html">003</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_BOLETO</td>
+<td>L.Out Boleto</td>
+<td colspan="2">Lay-Out Do Boleto</td>
+<td colspan="4">Lay-out  do  boleto  definido  no
+móduloConfigurador .
+</td>
+<td>C</td>
+<td>100</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_MENSAGE</td>
+<td>M.Do Boleto</td>
+<td colspan="2">Mensagens Dos Boletos</td>
+<td colspan="4">Mensagem para impressão nos boletos
+</td>
+<td>C</td>
+<td>240</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_LAYIPMF</td>
+<td>L.Out T.Ban.</td>
+<td colspan="2">Lay-out cheque transf Ban</td>
+<td colspan="4">Configuração de impressão para cheques
+de transferência interbancária (CPMF)
+</td>
+<td>C</td>
+<td>31</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_OK</td>
+<td>OK</td>
+<td colspan="2">OK</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_FLUXCAI</td>
+<td>Fluxo Caixa</td>
+<td colspan="2">Fluxo de Caixa</td>
+<td colspan="4">Informa se o banco será lido pelo fluxo
+de caixa no instante em que se calcula
+o "disponivel".
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>pertence("SN")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>S=Sim;N=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_DIASCOB</td>
+<td>Dias Cobran.</td>
+<td colspan="2">Dias min. p/ cobrança</td>
+<td colspan="4">Número de dias mínimo para disparar a
+cobrança.
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_DATAABR</td>
+<td>Data Abertur</td>
+<td colspan="2">Data da abertura do Caixa</td>
+<td colspan="4">Data da Abertura do Caixa.
+É gravada a DataBase, quando o Caixa é
+aberto.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_DATAFCH</td>
+<td>Data Fechame</td>
+<td colspan="2">Data do Fechamento do Cx</td>
+<td colspan="4">Data do Fechamento do Caixa.
+É gravada a DataBase, quando o Caixa é
+Fechado.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_HORAFCH</td>
+<td>Hora Fechame</td>
+<td colspan="2">Hora do Fechamento do Cx</td>
+<td colspan="4">Hora do Fechamento do Caixa.
+É gravado a hora em que o caixa foi fe-
+chado pela última vez.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_HORAABR</td>
+<td>Hora Abertur</td>
+<td colspan="2">Hora da Abertura do Caixa</td>
+<td colspan="4">Hora da Abertura do Caixa
+É gravada a Hora em que o Caixa foi
+aberto pela última vez.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_LIMCRED</td>
+<td>Lim.Credito</td>
+<td colspan="2">Limite de credito em C/C</td>
+<td colspan="4">Limite de credito bancario.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_UNIDFED</td>
+<td>Unid.Federal</td>
+<td colspan="2">Unidade Fed. no Exterior</td>
+<td colspan="4">Informe a unidade federal do banco, no
+caso de bancos no exterior.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@S18                                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_COD_P</td>
+<td>Cod. do Pais</td>
+<td colspan="2">Cod. do Pais</td>
+<td colspan="4">Código do pais.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. ExistCpo("SYA",M->A6_COD_P)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sya.html">SYA</a></td>
+<td><a href="/tabelas_protheus/gatilhos/a6_cod_p.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_DESCPAI</td>
+<td>Desc.Pais</td>
+<td colspan="2">Descricao Pais</td>
+<td colspan="4">Descrição do pais do domicilio bancario,
+campo preenchido automaticamente com a
+descrição do pais da tabela de paises.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>E_FIELD("A6_COD_P","YA_DESCR",,,1)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_TAXA</td>
+<td>Taxa Adm.</td>
+<td colspan="2">Taxa da Admnistradora</td>
+<td colspan="4">Taxa Adm
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 99,999,999,999.99                         </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_MOEDAP</td>
+<td>Moeda Pag</td>
+<td colspan="2">Moeda Pagamento</td>
+<td colspan="4">Especifica a moeda padrão dos movimentos
+bancários de pagamento para uma
+determinada conta corrente.
+(Localizações)
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td>Pertence("12345")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_MOEDA</td>
+<td>Moeda</td>
+<td colspan="2">Moeda</td>
+<td colspan="4">Tipo da moeda da Nota Fiscal
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td></td>
+<td>1</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_SALANT2</td>
+<td>Sld Anter. 2</td>
+<td colspan="2">Saldo Anterior na moeda 2</td>
+<td colspan="4">Saldo anterior na Moeda 2
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_CONTABI</td>
+<td>C. Contabil</td>
+<td colspan="2">Conta Contabil</td>
+<td colspan="4">Informe a conta contábil do banco.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_SALATU2</td>
+<td>Sld Atual 2</td>
+<td colspan="2">Saldo Atual na moeda 2</td>
+<td colspan="4">Saldo bancário em moeda 2.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_COD_BC</td>
+<td>Codigo B.C.</td>
+<td colspan="2">Codigo B.C.</td>
+<td colspan="4">Informe o código do banco no Banco Cen-
+tral, este código tem 5 digitos.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_MOEEASY</td>
+<td>Moeda</td>
+<td colspan="2">Moeda da Conta</td>
+<td colspan="4">Moeda da Conta.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>                                             </td>
+<td>ExistCPO("SYF")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/syf.html">SYF</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_CONEXP</td>
+<td>Mov. Exp?</td>
+<td colspan="2">Movimenta disp. exp?</td>
+<td colspan="4">Fora de uso
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_CODCLI</td>
+<td>Cliente</td>
+<td colspan="2">Cliente</td>
+<td colspan="4">Código do Cliente
+Preencher este campo somente quando
+este Banco tiver contrato de CDCI.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>vazio() .or. ExistCpo("SA1",M->A6_CODCLI)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sa1.html">SA1</a></td>
+<td><a href="/tabelas_protheus/gatilhos/a6_codcli.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_LOJCLI</td>
+<td>Unid Cliente</td>
+<td colspan="2">Unidade do Cliente</td>
+<td colspan="4">Loja do Cliente
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>empty(M->A6_CODCLI+M->A6_LOJCLI) .or. existcpo("SA1",M->A6_CODCLI+M->A6_LOJCLI)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_PAISBCO</td>
+<td>Pais do Bco</td>
+<td colspan="2">Pais do Banco</td>
+<td colspan="4">Pais do banco de cobrança
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Texto()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_NUMBCO</td>
+<td>Nro.Banco</td>
+<td colspan="2">Numero do Banco (Int/Ext)</td>
+<td colspan="4">Número do Banco.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_CORRENT</td>
+<td>Correntista</td>
+<td colspan="2">Nome do Correntista</td>
+<td colspan="4">Nome do correntista
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Texto()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_BORD</td>
+<td>Gera Bordero</td>
+<td colspan="2">Gera bordero</td>
+<td colspan="4">Indique "0" para que este banco não seja
+considerado para a geração de borderô de
+CDCI ou "1" em caso contrário.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>0=Nao;1=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_CODFOR</td>
+<td>Fornecedor</td>
+<td colspan="2">Fornecedor</td>
+<td colspan="4">Código do Fornecedor
+Preencher este campo somente quando
+este Banco tiver contrato de CDCI.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>IF(cModulo="EIC",EICFI400("VALSA6"),.T.) .AND. ( VAZIO() .OR.  ExistCpo("SA2",M->A6_CODFOR) )</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/for.html">FOR</a></td>
+<td><a href="/tabelas_protheus/gatilhos/a6_codfor.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_LOJFOR</td>
+<td>Loja Fornec</td>
+<td colspan="2">Loja do Fornecedor</td>
+<td colspan="4">Loja do Fornecedor
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>IF(cModulo="EIC",EICFI400("VALSA6"),.T.).AND.(empty(M->A6_CODFOR+M->A6_LOJFOR).or.EXISTCPO("SA2",M->A6_CODFOR+M->A6_LOJFOR))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_CGC</td>
+<td>CPF/CNPJ</td>
+<td colspan="2">CNPJ/CPF do Banco</td>
+<td colspan="4">Código CNPJ do estabelecimento bancário
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>@R 99.999.999/9999-99                        </td>
+<td>Vazio() .or. CGC(M->A6_CGC)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_BLOCKED</td>
+<td>Bloqueada</td>
+<td colspan="2">Conta Bloqueada</td>
+<td colspan="4">Indica se a Conta Corrente se encontra
+bloqueada para novos movimentos. Escolha
+1 (Sim) para bloquear a conta
+2 (Não) para desbloquear
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/a6_blocked.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_DTBLOQ</td>
+<td>Dt. Bloqueio</td>
+<td colspan="2">Data de Bloqueio da C/C</td>
+<td colspan="4">Indica a data do bloqueio da conta
+corrente
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>M->A6_BLOCKED = "1"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_TIPOCTA</td>
+<td>Tipo Conta</td>
+<td colspan="2">Tipo Conta</td>
+<td colspan="4">Tipo de classificação da conta contabil.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('123456')</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Caixa;2=Cta.Movimento;3=Cta.Aplicacao;4=De.Set.Judicial;5=Restos Pagar;6=Nao Enviar</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_CLASCTA</td>
+<td>Classe Conta</td>
+<td colspan="2">Classificacäo Cfe TCE</td>
+<td colspan="4">Código de classificação da conta
+contabil para a gestão de prefeituras.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('1234')</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Poder Executivo;2=Poder Legislativo;3=RPPS;4=Outros</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_RECVIN</td>
+<td>Recurso Vin</td>
+<td colspan="2">Recurso Vinculado</td>
+<td colspan="4">Código do recurso viinculado a essa
+conta corrente.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Existcpo('N1G',M->A6_RECVIN)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/n1g.html">N1G</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_CODCXA</td>
+<td>Conta Caixa</td>
+<td colspan="2">Conta Caixa</td>
+<td colspan="4">Não utilizado
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>iIf(Inclui,M070CodCxa(), M->A6_CODCXA)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>A6_CARTEIR</td>
+<td>Carteira</td>
+<td colspan="2">Carteira</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>A6_TIPOCAR</td>
+<td>Tp.Carteira</td>
+<td colspan="2">Tipo de Carteira</td>
+<td colspan="4"></td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>A6_CODCED</td>
+<td>Cod.Cedente</td>
+<td colspan="2">Cod. Cedente</td>
+<td colspan="4">Código do cedente utilizado para geração
+de boletos.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>A6_MSEXP</td>
+<td>Ident.Export</td>
+<td colspan="2">Ident.Export.Dados</td>
+<td colspan="4">Ident.Export.Dados
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_CLASENT</td>
+<td>Entidade Fin</td>
+<td colspan="2">Entidade Finaceira</td>
+<td colspan="4">Indica a entidade financeira.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/p33.html">P33</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_DADOINT</td>
+<td>Dados Intern</td>
+<td colspan="2">Dados Internacionais</td>
+<td colspan="4">Informações bancárias internacionais.
+</td>
+<td>M</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_PAISCTA</td>
+<td>País Conta</td>
+<td colspan="2">Pais da conta</td>
+<td colspan="4">País no qual a conta é mantida.
+Utilizado na geração do arquivo LCDPR.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SX5","SW"+M->A6_PAISCTA)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sw.html">SW</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_PROPRIA</td>
+<td>Titularidade</td>
+<td colspan="2">Titularidade da conta</td>
+<td colspan="4">Define se a conta é de titularidade
+própria ou de terceiros (Clientes,
+Fornecedores, etc). Utilizado na geração
+do arquivo LCDPR.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence(" 12")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Propria;2=Outra</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6_ISPB</td>
+<td>Cod ISPB</td>
+<td colspan="2">Codigo ISPB</td>
+<td colspan="4">Identificador de Sistema de Pagamentos
+Brasileiro, que identifica os bancos no
+sistema de transferência de reserva do
+Banco Central.
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>SEE</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_DVAGE+A6_NUMCON+A6_DVCTA</td>
+<td colspan="2">EE_CODOFI+EE_AGEOFI+EE_DVAGOFI+EE_CTAOFI+EE_DVCTOFI</td>
+</tr>
+<tr>
+<td>SA1</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">A1_BCO2</td>
+</tr>
+<tr>
+<td>SA1</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">A1_BCO3</td>
+</tr>
+<tr>
+<td>SA1</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">A1_BCO4</td>
+</tr>
+<tr>
+<td>SA1</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">A1_BCO5</td>
+</tr>
+<tr>
+<td>NXP</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">NXP_CBANCO+NXP_CAGENC+NXP_CCONTA</td>
+</tr>
+<tr>
+<td>VRF</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">VRF_CODBCO</td>
+</tr>
+<tr>
+<td>FOZ</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">FOZ_BANCO</td>
+</tr>
+<tr>
+<td>SEQ</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">EQ_BANCO+EQ_AGENCIA+EQ_NUMCON</td>
+</tr>
+<tr>
+<td>SET</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">ET_BANCO+ET_AGEBCO+ET_CTABCO</td>
+</tr>
+<tr>
+<td>VAR</td>
+<td colspan="2">A6_COD+A6_NOME</td>
+<td colspan="2">VAR_AGFINA + VAR_NOMAGF</td>
+</tr>
+<tr>
+<td>VAR</td>
+<td colspan="2">A6_COD+A6_NOME</td>
+<td colspan="2">VAR_CODBCO + VAR_NOMBCO</td>
+</tr>
+<tr>
+<td>VDM</td>
+<td colspan="2">A6_COD+A6_NOME</td>
+<td colspan="2">VDM_CODBCO + VDM_NOMBCO</td>
+</tr>
+<tr>
+<td>VRF</td>
+<td colspan="2">A6_COD+A6_AGENCIA</td>
+<td colspan="2">VRF_CODBCO + VRF_FORPRO</td>
+</tr>
+<tr>
+<td>SS3</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">S3_BANCO+S3_AGENCIA+S3_NUMCON</td>
+</tr>
+<tr>
+<td>SS3</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">S3_REPR_BA</td>
+</tr>
+<tr>
+<td>VS1</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">VS1_CODBCO</td>
+</tr>
+<tr>
+<td>VVF</td>
+<td colspan="2">A6_COD+A6_AGENCIA</td>
+<td colspan="2">VVF_CODBCO+VVF_CODAGE</td>
+</tr>
+<tr>
+<td>VVF</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">VVF_CODBCO</td>
+</tr>
+<tr>
+<td>EF1</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">EF1_BAN_FI+EF1_AGENFI+EF1_NCONFI</td>
+</tr>
+<tr>
+<td>EF1</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">EF1_BAN_MO+EF1_AGENMO+EF1_NCONMO</td>
+</tr>
+<tr>
+<td>SA1</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">A1_BCO1</td>
+</tr>
+<tr>
+<td>SEE</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">EE_CODIGO+EE_AGENCIA+EE_CONTA</td>
+</tr>
+<tr>
+<td>SEF</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">EF_BANCO+EF_AGENCIA+EF_CONTA</td>
+</tr>
+<tr>
+<td>NUH</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">NUH_CBANCO+NUH_CAGENC+NUH_CCONTA</td>
+</tr>
+<tr>
+<td>CX0</td>
+<td colspan="2">A6_NUMCON</td>
+<td colspan="2">CX0_FONREC</td>
+</tr>
+<tr>
+<td>VDM</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">VDM_CODBCO</td>
+</tr>
+<tr>
+<td>NYP</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">NYP_CBANCO+NYP_CAGENC+NYP_CCONTA</td>
+</tr>
+<tr>
+<td>EF1</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">EF1_BAN_MO</td>
+</tr>
+<tr>
+<td>BOW</td>
+<td colspan="2">A6_COD+A6_NOME+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">BOW_NROBCO+BOW_DESBCO+BOW_NROAGE+BOW_NROCTA</td>
+</tr>
+<tr>
+<td>NT2</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">NT2_CBANCO+NT2_CAGENC+NT2_CCONTA</td>
+</tr>
+<tr>
+<td>SEE</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_DVAGE+A6_NUMCON+A6_DVCTA</td>
+<td colspan="2">EE_CODIGO+EE_AGENCIA+EE_DVAGE+EE_CONTA+EE_DVCTA</td>
+</tr>
+<tr>
+<td>SE8</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">E8_BANCO+E8_AGENCIA+E8_CONTA</td>
+</tr>
+<tr>
+<td>FV5</td>
+<td colspan="2">A6_NUMCON</td>
+<td colspan="2">FV5_FONREC</td>
+</tr>
+<tr>
+<td>VAR</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">VAR_CODBCO</td>
+</tr>
+<tr>
+<td>SS3</td>
+<td colspan="2">A6_AGENCIA</td>
+<td colspan="2">S3_REPR_AG</td>
+</tr>
+<tr>
+<td>EF1</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">EF1_BAN_FI</td>
+</tr>
+<tr>
+<td>BOW</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">BOW_NROBCO+BOW_NROAGE+BOW_NROCTA</td>
+</tr>
+<tr>
+<td>SWD</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">WD_BANCO+WD_AGENCIA+WD_CONTA</td>
+</tr>
+<tr>
+<td>SYT</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">YT_BANCO+YT_AGENCIA+YT_CONTA</td>
+</tr>
+<tr>
+<td>SE1</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">E1_PORTADO</td>
+</tr>
+<tr>
+<td>SE1</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">E1_PORTADO</td>
+</tr>
+<tr>
+<td>VAR</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">VAR_AGFINA</td>
+</tr>
+<tr>
+<td>SA2</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">A2_BANCO+A2_AGENCIA+A2_NUMCON</td>
+</tr>
+<tr>
+<td>SL1</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">L1_OPERADO</td>
+</tr>
+<tr>
+<td>SWM</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">WM_BANCO</td>
+</tr>
+<tr>
+<td>SWG</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">WG_BANCO</td>
+</tr>
+<tr>
+<td>NWF</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">NWF_BANCO+NWF_AGENCI+NWF_CONTA</td>
+</tr>
+<tr>
+<td>MB1</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">MB1_OPERAD</td>
+</tr>
+<tr>
+<td>EEQ</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">EEQ_BCOCR+EEQ_AGCR+EEQ_CCCRED</td>
+</tr>
+<tr>
+<td>VZU</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">VZU_CODBCO</td>
+</tr>
+<tr>
+<td>EEQ</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">EEQ_BCOEXT+EEQ_AGCEXT + EEQ_CNTEXT</td>
+</tr>
+<tr>
+<td>SA2</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">A2_BANCO</td>
+</tr>
+<tr>
+<td>G6Y</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">G6Y_BANCO+G6Y_AGEBCO+G6Y_CTABCO</td>
+</tr>
+<tr>
+<td>GZE</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">GZE_CODBCO+GZE_AGEBCO+GZE_CTABCO</td>
+</tr>
+<tr>
+<td>EEQ</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">EEQ_BANC+EEQ_AGEN+EEQ_NCON</td>
+</tr>
+<tr>
+<td>FX1</td>
+<td colspan="2">A6_NUMCON</td>
+<td colspan="2">FX1_FONREC</td>
+</tr>
+<tr>
+<td>FVI</td>
+<td colspan="2">A6_NUMCON</td>
+<td colspan="2">FVI_FONREC</td>
+</tr>
+<tr>
+<td>SC5</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">C5_BANCO</td>
+</tr>
+<tr>
+<td>SK0</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">K0_PORTADO</td>
+</tr>
+<tr>
+<td>JCB</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">JCB_BANCO</td>
+</tr>
+<tr>
+<td>SEH</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">EH_BANCO+EH_AGENCIA+EH_CONTA</td>
+</tr>
+<tr>
+<td>SRQ</td>
+<td colspan="2">A6_COD+A6_AGENCIA</td>
+<td colspan="2">RQ_BCDEPBE</td>
+</tr>
+<tr>
+<td>SEH</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">EH_BCOCONT+EH_AGECONT+EH_CTACONT</td>
+</tr>
+<tr>
+<td>VOO</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">VOO_BANCO</td>
+</tr>
+<tr>
+<td>VO1</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">VO1_CODBCO</td>
+</tr>
+<tr>
+<td>VV0</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">VV0_CBCOAA</td>
+</tr>
+<tr>
+<td>B44</td>
+<td colspan="2">A6_COD+A6_NOME+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">B44_NROBCO+B44_DESBCO+B44_NROAGE+B44_NROCTA</td>
+</tr>
+<tr>
+<td>SED</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">ED_CBANCO+ED_CAGENC+ED_CCONTA</td>
+</tr>
+<tr>
+<td>VD1</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">VD1_CODBCO</td>
+</tr>
+<tr>
+<td>MDU</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">MDU_CODSUP</td>
+</tr>
+<tr>
+<td>FV9</td>
+<td colspan="2">A6_NUMCON</td>
+<td colspan="2">FV9_FONREC</td>
+</tr>
+<tr>
+<td>B44</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">B44_NROBCO+B44_NROAGE+B44_NROCTA</td>
+</tr>
+<tr>
+<td>NXG</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">NXG_CBANCO+NXG_CAGENC+NXG_CCONTA</td>
+</tr>
+<tr>
+<td>N7C</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">N7C_CODBCO</td>
+</tr>
+<tr>
+<td>FO2</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">FO2_BANCO+FO2_AGENCI+FO2_CONTA</td>
+</tr>
+<tr>
+<td>FK5</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">FK5_BANCO+FK5_AGENCI+FK5_CONTA</td>
+</tr>
+<tr>
+<td>SLF</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">LF_COD</td>
+</tr>
+<tr>
+<td>SLJ</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">LJ_CAIXA</td>
+</tr>
+<tr>
+<td>FWI</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">FWI_BCOANT+FWI_AGEANT+FWI_CONANT</td>
+</tr>
+<tr>
+<td>SWB</td>
+<td colspan="2">A6_COD+A6_AGENCIA</td>
+<td colspan="2">WB_BANCO+WB_AGENCIA</td>
+</tr>
+<tr>
+<td>SWB</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">WB_BCO_REC+WB_AGENREC+WB_CON_REC</td>
+</tr>
+<tr>
+<td>SIF</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">IF_BANCO</td>
+</tr>
+<tr>
+<td>FVF</td>
+<td colspan="2">A6_NUMCON</td>
+<td colspan="2">FVF_FONREC</td>
+</tr>
+<tr>
+<td>G8X</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">G8X_BANCO+G8X_AGENCI+G8X_CONTA</td>
+</tr>
+<tr>
+<td>GI6</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">GI6_BANCO+GI6_AGENCI+GI6_CONTA</td>
+</tr>
+<tr>
+<td>SE9</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">E9_BANCO+E9_AGENCIA+E9_CONTA</td>
+</tr>
+<tr>
+<td>SF6</td>
+<td colspan="2">A6_COD+A6_AGENCIA</td>
+<td colspan="2">F6_BANCO+F6_AGENCIA</td>
+</tr>
+<tr>
+<td>JCD</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">JCD_BANCO</td>
+</tr>
+<tr>
+<td>G6Z</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">G6Z_CODBNC+G6Z_AGENCI+G6Z_CONTA</td>
+</tr>
+<tr>
+<td>NXA</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">NXA_CBANCO+NXA_CAGENC+NXA_CCONTA</td>
+</tr>
+<tr>
+<td>VPN</td>
+<td colspan="2">A6_COD+A6_AGENCIA</td>
+<td colspan="2">VPN_CODBCO+VPN_CODAGE</td>
+</tr>
+<tr>
+<td>DEG</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">DEG_BANCO+DEG_AGENCI+DEG_NUMCON</td>
+</tr>
+<tr>
+<td>SWB</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON+A6_NREDUZ</td>
+<td colspan="2">WB_BANCO+WB_AGENCIA+WB_CONTA+WB_BCO_REC</td>
+</tr>
+<tr>
+<td>NW2</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">NW2_CBANCO+NW2_CAGENC+NW2_CCONTA</td>
+</tr>
+<tr>
+<td>SW6</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">W6_BCOPGTO</td>
+</tr>
+<tr>
+<td>EFA</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">EFA_BANC+EFA_AGEN+EFA_NCON</td>
+</tr>
+<tr>
+<td>EXG</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">EXG_BANC+EXG_AGEN+EXG_NCON</td>
+</tr>
+<tr>
+<td>SL5</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">L5_OPERADO</td>
+</tr>
+<tr>
+<td>SF6</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">F6_BANCO</td>
+</tr>
+<tr>
+<td>EF6</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">EF6_BANCO</td>
+</tr>
+<tr>
+<td>SEB</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">EB_BANCO</td>
+</tr>
+<tr>
+<td>SEJ</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">EJ_BANCO</td>
+</tr>
+<tr>
+<td>FWI</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">FWI_BANCO+FWI_AGENCI+FWI_CONTA</td>
+</tr>
+<tr>
+<td>VS9</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">VS9_PORTAD</td>
+</tr>
+<tr>
+<td>SK1</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">K1_PORTADO</td>
+</tr>
+<tr>
+<td>SEL</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">EL_BANCO+EL_AGENCIA+EL_CONTA</td>
+</tr>
+<tr>
+<td>SEL</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">EL_BCOCHQ+EL_AGECHQ+EL_CTACHQ</td>
+</tr>
+<tr>
+<td>SRA</td>
+<td colspan="2">A6_COD+A6_AGENCIA</td>
+<td colspan="2">RA_BCDEPSA</td>
+</tr>
+<tr>
+<td>SEI</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">EI_BANCO+EI_AGENCIA+EI_CONTA</td>
+</tr>
+<tr>
+<td>EF3</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">EF3_BAN_FI+EF3_AGENFI+EF3_NCONFI</td>
+</tr>
+<tr>
+<td>EF3</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">EF3_BANC+EF3_AGEN+EF3_NCON</td>
+</tr>
+<tr>
+<td>EF3</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">EF3_BC_MOV+EF3_AG_MOV+EF3_CC_MOV</td>
+</tr>
+<tr>
+<td>VV0</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">VV0_AGEFIN</td>
+</tr>
+<tr>
+<td>VV0</td>
+<td colspan="2">A6_COD+A6_AGENCIA</td>
+<td colspan="2">VV0_CODBCO+VV0_CODAGE</td>
+</tr>
+<tr>
+<td>VV0</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">VV0_CODBCO</td>
+</tr>
+<tr>
+<td>SLT</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">LT_OPERADO</td>
+</tr>
+<tr>
+<td>FVM</td>
+<td colspan="2">A6_NUMCON</td>
+<td colspan="2">FVM_FONREC</td>
+</tr>
+<tr>
+<td>VAM</td>
+<td colspan="2">A6_COD+A6_AGENCIA</td>
+<td colspan="2">VAM_BANCO+VAM_AGBCO</td>
+</tr>
+<tr>
+<td>CNX</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">CNX_BANCO</td>
+</tr>
+<tr>
+<td>SA3</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">A3_BCO1</td>
+</tr>
+<tr>
+<td>EEJ</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">EEJ_CODIGO+EEJ_AGENCI+EEJ_NUMCON</td>
+</tr>
+<tr>
+<td>GZD</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">GZD_BANCO+GZD_BCOAGE+GZD_CONTA</td>
+</tr>
+<tr>
+<td>SS2</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">S2_BCO1</td>
+</tr>
+<tr>
+<td>SS2</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">S2_BCO2</td>
+</tr>
+<tr>
+<td>SS2</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">S2_BCO3</td>
+</tr>
+<tr>
+<td>SS2</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">S2_BCO4</td>
+</tr>
+<tr>
+<td>SS2</td>
+<td colspan="2">A6_COD</td>
+<td colspan="2">S2_BCO5</td>
+</tr>
+<tr>
+<td>BTS</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">BTS_BANTIT+BTS_AGETIT+BTS_NUMTIT</td>
+</tr>
+<tr>
+<td>VV0</td>
+<td colspan="2">A6_COD+A6_AGENCIA</td>
+<td colspan="2">VV0_CODBCO + VV0_CCUSTO</td>
+</tr>
+<tr>
+<td>F70</td>
+<td colspan="2">A6_COD+A6_AGENCIA+A6_NUMCON</td>
+<td colspan="2">F70_COD+F70_AGENCI+F70_NUMCON</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

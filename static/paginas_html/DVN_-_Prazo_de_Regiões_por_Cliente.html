@@ -1,0 +1,549 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: DVN - Prazo de Regiões por Cliente</title></head>
+<body>
+<font color="orange"><h2 id="DVN">Tabela: DVN - Prazo de Regiões por Cliente</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Prazo de Regiões por Cliente</b></td><td colspan="2"><b></b></td><td><b>TMSA395</b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">DVN_FILIAL+DVN_CODCLI+DVN_LOJCLI+DVN_CDRORI+DVN_CDRDES+DVN_TIPTRA</td><td>Cod.Cliente + Loja Cliente + Cod.Reg.Ori. + Cod.Reg.Des. + Tipo Transp</td><td></td></tr>
+<tr><td>2</td><td colspan="2">DVN_FILIAL+DVN_CDRORI+DVN_CDRDES+DVN_TIPTRA+DVN_CODCLI+DVN_LOJCLI</td><td>Cod.Reg.Ori. + Cod.Reg.Des. + Tipo Transp. + Cod.Cliente + Loja Client</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>DVN_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Filial do Sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DVN_CODCLI</td>
+<td>Cod.Cliente</td>
+<td colspan="2">Codigo do Cliente</td>
+<td colspan="4">Código do Cliente, da rotina cadastro de
+cliente. Para o cliente informado neste
+campo teremos um prazo de regiões
+diferenciado.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SA1",M->DVN_CODCLI)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sa1.html">SA1</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dvn_codcli.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/001.html">001</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DVN_LOJCLI</td>
+<td>Loja Cliente</td>
+<td colspan="2">Loja Cliente</td>
+<td colspan="4">Loja do cliente.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SA1",M->DVN_CODCLI+M->DVN_LOJCLI)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/dvn_lojcli.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/002.html">002</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DVN_NOMCLI</td>
+<td>Nome Cliente</td>
+<td colspan="2">Nome Cliente</td>
+<td colspan="4">Nome do Cliente, este campo é preenchido
+automaticamente ao selecionarmos um
+cliente.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui,"",Posicione("SA1",1,xFilial("SA1")+DVN->(DVN_CODCLI+DVN_LOJCLI),"A1_NOME"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("SA1",1,xFilial("SA1")+DVN->(DVN_CODCLI+DVN_LOJCLI),"A1_NOME")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DVN_CDRORI</td>
+<td>Cod.Reg.Ori.</td>
+<td colspan="2">Codigo Regiao Origem</td>
+<td colspan="4">Código da região origem, da rotina
+estrutura de regiões. Quando o
+transporte originar desta região teremos
+um prazo diferenciado para este cliente.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("DUY",M->DVN_CDRORI,1) .And. TmsTipReg(M->DVN_CDRORI,"1")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/duy.html">DUY</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dvn_cdrori.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DVN_REGORI</td>
+<td>Reg.Origem</td>
+<td colspan="2">Regiao Origem</td>
+<td colspan="4">Descrição da Região Origem, este campo é
+preenchido automaticamente ao
+selecionarmos uma região origem.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>TmsPesqRegiao("DVN_CDRORI","DVN_REGORI")</td>
+<td>Iif(Inclui,"",Posicione("DUY",1,xFilial("DUY")+DVN->DVN_CDRORI,"DUY_DESCRI"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("DUY",1,xFilial("DUY")+DVN->DVN_CDRORI,"DUY_DESCRI")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DVN_CDRDES</td>
+<td>Cod.Reg.Des.</td>
+<td colspan="2">Codigo Regiao Destino</td>
+<td colspan="4">Código da região destino, da rotina
+estrutura de regiões. Quando o
+transporte tiver como destino esta
+região teremos um prazo diferenciado
+para este cliente.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("DUY",M->DVN_CDRDES,1) .And. TmsTipReg(M->DVN_CDRDES,"2")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/duy.html">DUY</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dvn_cdrdes.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DVN_REGDES</td>
+<td>Reg.Destino</td>
+<td colspan="2">Regiao Destino</td>
+<td colspan="4">Descrição da Região Destino, este campo
+é preenchido automaticamente ao
+selecionarmos uma região destino.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>TmsPesqRegiao("DVN_CDRDES","DVN_REGDES")</td>
+<td>Iif(Inclui,"",Posicione("DUY",1,xFilial("DUY")+DVN->DVN_CDRDES,"DUY_DESCRI"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("DUY",1,xFilial("DUY")+DVN->DVN_CDRDES,"DUY_DESCRI")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DVN_TIPTRA</td>
+<td>Tipo Transp.</td>
+<td colspan="2">Tipo Transporte</td>
+<td colspan="4">Tipo de transporte a ser utilizado no
+controle operacional da carga e em
+relatórios estatísticos.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>TmsValField("M->DVN_TIPTRA",.T.,"DVN_DESTPT")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dlc.html">DLC</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>DVN_DESTPT</td>
+<td>Desc.Tp.Tran</td>
+<td colspan="2">Descricao Tipo Transporte</td>
+<td colspan="4">Descrição do Tipo de Transporte, este
+campo é preenchido automaticamente ao
+selecionarmos um tipo de transporte.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(!Inclui,TmsValField("DVN->DVN_TIPTRA",.F.,"DVN_DESTPT"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DVN_TMCLII</td>
+<td>Tempo De</td>
+<td colspan="2">Tempo Minimo de Entrega</td>
+<td colspan="4">Faixa de Tempo De, aqui determinamos o
+tempo inicial para o prazo do cliente
+para as regiões origem e destino.
+</td>
+<td>C</td>
+<td>7</td>
+<td>0</td>
+<td>@R 99999:99                                  </td>
+<td>(Val(Right(M->DVN_TMCLII:=STRTRAN(M->DVN_TMCLII," ","0"),2))<=59) .And. !("-"$M->DVN_TMCLII) .And. TMSA395VLD()</td>
+<td>"0000000"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DVN_TMCLIF</td>
+<td>Tempo Ate</td>
+<td colspan="2">Tempo Ate</td>
+<td colspan="4">Faixa de Tempo Até, aqui determinamos o
+tempo final para o prazo do cliente para
+as regiões origem e destino.
+</td>
+<td>C</td>
+<td>7</td>
+<td>0</td>
+<td>@R 99999:99                                  </td>
+<td>(Val(Right(M->DVN_TMCLIF:=STRTRAN(M->DVN_TMCLIF," ","0"),2))<=59) .And. !("-"$M->DVN_TMCLIF) .And. TMSA395VLD()</td>
+<td>"0000000"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DVN_STATUS</td>
+<td>Status</td>
+<td colspan="2">Status prazo Entrega</td>
+<td colspan="4">Se o status estiver "Bloqueado" foi
+incluído um tempo menor que o permitido
+e o sistema bloqueou, se o status
+estiver "LIberado" o usuário aprovou
+após o bloqueio, com um prazo menor que
+o de regiões padrão do sistema.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence('12')</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=Bloqueado;2=Liberado</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DVN_USRAPV</td>
+<td>Us.Aprovacao</td>
+<td colspan="2">Usuario Aprovador</td>
+<td colspan="4">Código do usuário que realizou a
+aprovação de um prazo de regiões por
+cliente menor que o prazo de regiões
+padrão do sistema.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DVN_DATLIB</td>
+<td>Dt.Liberacao</td>
+<td colspan="2">Data da Liberacao</td>
+<td colspan="4">Data em que o usuário efetuou a
+liberação.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DVN_HORLIB</td>
+<td>Hr.Liberacao</td>
+<td colspan="2">Hora da Liberacao</td>
+<td colspan="4">Hora em que o usuário efetuou a
+liberação.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@R 99:99                                     </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

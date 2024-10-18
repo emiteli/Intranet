@@ -1,0 +1,1285 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: GI2 - Linhas</title></head>
+<body>
+<font color="orange"><h2 id="GI2">Tabela: GI2 - Linhas</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Linhas</b></td><td colspan="2"><b>GI2_FILIAL+GI2_COD+GI2_REVISA</b></td><td><b>GTPA002</b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">GI2_FILIAL+GI2_COD+GI2_VIA</td><td>Cód. Linha + Código Via</td><td></td></tr>
+<tr><td>2</td><td colspan="2">GI2_FILIAL+GI2_ORGAO</td><td>Cód. Órgão</td><td></td></tr>
+<tr><td>3</td><td colspan="2">GI2_FILIAL+GI2_COD+GI2_REVISA</td><td>Cód. Linha + Revisa</td><td></td></tr>
+<tr><td>4</td><td colspan="2">GI2_FILIAL+GI2_COD+GI2_HIST</td><td>Cód. Linha + Histórico</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>GI2_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Preencher com Filial do Sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI2_COD</td>
+<td>Cód. Linha</td>
+<td colspan="2">Código da Linha</td>
+<td colspan="4">Preencher com o Código da Linha Regular
+de Passageiros.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .or. ExistChav("GI2",M->GI2_COD,1)</td>
+<td>IIF(INCLUI,GETSXENUM("GI2","GI2_COD"),GI2->GI2_COD)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GI2_VIA</td>
+<td>Código Via</td>
+<td colspan="2">Cód. Via da Linha</td>
+<td colspan="4">Informe o código da via da linha.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .or. ExistCpo('G9U')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/g9u.html">G9U</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gi2_via.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GI2_DESVIA</td>
+<td>Via da Linha</td>
+<td colspan="2">Descrição da via da linha</td>
+<td colspan="4">Descrição da via da linha.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIF(INCLUI,'', POSICIONE("G9U",1,XFILIAL("G9U") + GI2->GI2_VIA,"G9U_DESCRI"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("G9U",1,xFilial("G9U")+GI2->GI2_VIA,'G9U_DESCRI')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GI2_ORGAO</td>
+<td>Cód. Órgão</td>
+<td colspan="2">Código do Órgão</td>
+<td colspan="4">Preencher com o Código do Órgão
+Responsável pela Concessão do Serviço.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .OR. ExistCpo("GI0")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gi0.html">GI0</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gi2_orgao.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GI2_NORG</td>
+<td>Nom. Órgão</td>
+<td colspan="2">Nome do Órgão</td>
+<td colspan="4">Mostra o nome do órgão responsável pela
+concessão do serviço.
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIF(INCLUI, "", POSICIONE("GI0", 1, XFILIAL("GI0") + GI2->GI2_ORGAO, "GI0_DESCRI"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("GI0",1,XFILIAL("GI0")+GI2->GI2_ORGAO,"GI0_DESCRI")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI2_TIPLIN</td>
+<td>Tipo Linha</td>
+<td colspan="2">Tipo Linha</td>
+<td colspan="4">Digite o Tipo da Linha
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("GQC",FWFldGet("GI2_TIPLIN"))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gqd.html">GQD</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gi2_tiplin.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>!Empty(FWFldGet("GI2_ORGAO")) .or. FwIsInCall('GTPI002')</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GI2_NTIPLI</td>
+<td>Desc Tp Lin</td>
+<td colspan="2">Descrição Tip Linha</td>
+<td colspan="4">Descrição do Tipo de Linha
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIF(INCLUI,'', POSICIONE('GQC',1,XFILIAL('GQC')+GI2->GI2_TIPLIN,'GQC_DESCRI') )</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE('GQC',1,XFILIAL('GQC')+GI2->GI2_TIPLIN,'GQC_DESCRI')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GI2_CATEG</td>
+<td>Categoria</td>
+<td colspan="2">Categoria</td>
+<td colspan="4">Preencher com a Categoria do Código do
+Órgão Responsável pela Concessão do
+Serviço.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .OR. ExistCpo("GYR")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gyr.html">GYR</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gi2_categ.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>!Empty(FWFldGet("GI2_ORGAO")) .And. INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI2_NCATEG</td>
+<td>Desc. Categ.</td>
+<td colspan="2">Desc. Categ.</td>
+<td colspan="4">Mostra a descrição da categoria do orgao
+Responsável pela Concessão do Serviço.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIF(INCLUI, '', POSICIONE("GYR", 1, XFILIAL("GYR") + GI2->GI2_CATEG, "GYR_DESCRI") )</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE('GYR',1,XFILIAL('GYR')+GI2->GI2_CATEG,'GYR_DESCRI')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI2_LOCINI</td>
+<td>Loc. Início</td>
+<td colspan="2">Localidade Início</td>
+<td colspan="4">Preencher com Código da Localidade de
+Início da Linha.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GA002VldLc('GI2_LOCINI')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gi1.html">GI1</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gi2_locini.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>INCLUI .or. FwIsInCallStack('GTPI002')</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GI2_NLOCIN</td>
+<td>Nom.Loc.Ini.</td>
+<td colspan="2">Nome Localidade Inicial</td>
+<td colspan="4">Mostra o nome da Localidade de Início da
+Linha.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIF(INCLUI, "", POSICIONE("GI1", 1, XFILIAL("GI1") + GI2->GI2_LOCINI, "GI1_DESCRI") )</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("GI1",1,XFILIAL("GI1")+GI2->GI2_LOCINI,"GI1_DESCRI")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI2_LOCFIM</td>
+<td>Loc. Final</td>
+<td colspan="2">Localidade Final</td>
+<td colspan="4">Preencher com código da localidade final
+da linha.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>GA002VldLc('GI2_LOCFIM')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gi1.html">GI1</a></td>
+<td><a href="/tabelas_protheus/gatilhos/gi2_locfim.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>INCLUI .or. FwIsInCallStack('GTPI002')</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GI2_NLOCFI</td>
+<td>Nom.Loc.Fim</td>
+<td colspan="2">Nome Localidade Final</td>
+<td colspan="4">Mostra o nome da localidade final da
+linha.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIF(INCLUI, "", POSICIONE("GI1", 1, XFILIAL("GI1") + GI2->GI2_LOCFIM, "GI1_DESCRI") )</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>POSICIONE("GI1",1,XFILIAL("GI1")+GI2->GI2_LOCFIM,"GI1_DESCRI")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI2_PREFIX</td>
+<td>Prefixo</td>
+<td colspan="2">Prefixo da Linha</td>
+<td colspan="4">Prefixo da linha.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GI2_KMIDA</td>
+<td>KM Ida</td>
+<td colspan="2">Quilometragem de Ida</td>
+<td colspan="4">Informe a quilometragem de Ida.
+</td>
+<td>N</td>
+<td>8</td>
+<td>2</td>
+<td>@E 99,999.99                                 </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GI2_HRIDA</td>
+<td>Tempo ida</td>
+<td colspan="2">Tempo de ida</td>
+<td colspan="4">Tempo do precurso de ida da linha (da
+localidade inicial à localidade final).
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@R 99:99                                     </td>
+<td>GtpxValHr()</td>
+<td>'0000'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GI2_KMVOLT</td>
+<td>KM Volta</td>
+<td colspan="2">Quilometragem de Volta</td>
+<td colspan="4">Informe a quilometragem de Volta
+</td>
+<td>N</td>
+<td>8</td>
+<td>2</td>
+<td>@E 99,999.99                                 </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GI2_HRVOLT</td>
+<td>Tempo Volta</td>
+<td colspan="2">Tempo de volta</td>
+<td colspan="4">Tempo do precurso de volta da linha (da
+localidade inicial à localidade final).
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@R 99:99                                     </td>
+<td>GtpxValHr()</td>
+<td>'0000'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI2_KMTOTA</td>
+<td>KM Total</td>
+<td colspan="2">Quilometragem Total</td>
+<td colspan="4">Informe a quilometragem Total
+</td>
+<td>N</td>
+<td>9</td>
+<td>2</td>
+<td>@E 999,999.99                                </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GI2_HRPADR</td>
+<td>Tempo Padrao</td>
+<td colspan="2">Tempo de padrão</td>
+<td colspan="4">Tempo médio do percurso de ida e volta
+da linha.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@R 99:99                                     </td>
+<td>GtpxValHr(.F.)</td>
+<td>'0000'</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI2_PASESC</td>
+<td>Passe Escola</td>
+<td colspan="2">Permite passe escolar</td>
+<td colspan="4">Informe se é permitida a utilização de
+passe escolar na linha.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI2_MSBLQL</td>
+<td>Status</td>
+<td colspan="2">Status do Registro</td>
+<td colspan="4">Define se o registro está ou não ativo.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence('12')</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Inativo;2=Ativo</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GI2_DEL</td>
+<td>Deletado</td>
+<td colspan="2">Registro Deletado</td>
+<td colspan="4">Registro deletado em modo de revisão
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GI2_HIST</td>
+<td>Histórico</td>
+<td colspan="2">Histórico</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td> @!                                          </td>
+<td>Pertence('12')</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GI2_KMMED</td>
+<td>Km Med.</td>
+<td colspan="2">Km Médio</td>
+<td colspan="4">Quilometragem médio, dados sedido pelo
+órgão concedente
+</td>
+<td>N</td>
+<td>8</td>
+<td>2</td>
+<td>@E 99,999.99                                 </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI2_PONPAR</td>
+<td>Ponto Parada</td>
+<td colspan="2">Ponto Paradas</td>
+<td colspan="4">Quantidades de Pontos de Parada, valor
+sedido pelo órgão concedente
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI2_DTVGIN</td>
+<td>Vigência Ini</td>
+<td colspan="2">Data vigência inicial</td>
+<td colspan="4">Data de geração da revisão da linha.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>dDataBase</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI2_QTDLUG</td>
+<td>Qtd. Lugares</td>
+<td colspan="2">Quantidade Lugares</td>
+<td colspan="4">Capacidade de lotação da linha definido
+pelo órgão
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>@E 999                                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI2_QTLUGO</td>
+<td>Qtd Ofertado</td>
+<td colspan="2">Qtd. Lugares Ofertados</td>
+<td colspan="4">Capacidade de lotação ofertada pela pela
+empresa.
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>@E 999                                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI2_DESCRI</td>
+<td>Desc. Linha</td>
+<td colspan="2">Descrição da Linha</td>
+<td colspan="4">Descrição da linha
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI2_LINPRI</td>
+<td>Lin.Princip</td>
+<td colspan="2">Linha Principal</td>
+<td colspan="4">Define a linha principal, ou seja
+vincula uma linha a outra.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI2_PRXFIM</td>
+<td>Prefixo Fim</td>
+<td colspan="2">Prefixo Final da Linha</td>
+<td colspan="4">Prefixo final da linha.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GI2_REVISA</td>
+<td>Revisa</td>
+<td colspan="2">Revisão da linha</td>
+<td colspan="4">Número incremental de revisões da linha.
+A cada atualização/ alteração realizada
+no cadastro de linhas, uma nova revisão
+poderá ser criada.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"0001"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GI2_KMPROD</td>
+<td>KM Real</td>
+<td colspan="2">KM Real do veículo</td>
+<td colspan="4">Preenche com a Km Produtiva do Veículo.
+</td>
+<td>N</td>
+<td>8</td>
+<td>2</td>
+<td>@E 99,999.99                                 </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI2_DTALT</td>
+<td>Data Alt.</td>
+<td colspan="2">Data de Alteracao</td>
+<td colspan="4">Data de alteração da linha.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GI2_DTINC</td>
+<td>Data Inc.</td>
+<td colspan="2">Data de Inclusão</td>
+<td colspan="4">Data de inclusão no sistema.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IIF(INCLUI, DDATABASE, )</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI2_HORAS</td>
+<td>Horas</td>
+<td colspan="2">Horas de viagem</td>
+<td colspan="4">Informe o total de horas da viagem
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>@E 999.99                                    </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI2_NUMLIN</td>
+<td>Nr. Linha</td>
+<td colspan="2">Numero da linha</td>
+<td colspan="4">Informe o numero da linha
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GI2_FRTAPL</td>
+<td>Frota Aplica</td>
+<td colspan="2">Frota Aplicada da Linha</td>
+<td colspan="4">Valor da frota aplicada para a linha
+cadastrada.
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>@E 999.99                                    </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>G9Z</td>
+<td colspan="2">GI2_COD</td>
+<td colspan="2">G9Z_CODLIN</td>
+</tr>
+<tr>
+<td>G52</td>
+<td colspan="2">GI2_COD</td>
+<td colspan="2">G52_LINHA</td>
+</tr>
+<tr>
+<td>GZ1</td>
+<td colspan="2">GI2_COD</td>
+<td colspan="2">GZ1_LINHA</td>
+</tr>
+<tr>
+<td>GQX</td>
+<td colspan="2">GI2_COD</td>
+<td colspan="2">GQX_LINHA</td>
+</tr>
+<tr>
+<td>GII</td>
+<td colspan="2">GI2_COD</td>
+<td colspan="2">GII_LINHA</td>
+</tr>
+<tr>
+<td>GIC</td>
+<td colspan="2">GI2_COD</td>
+<td colspan="2">GIC_LINHA</td>
+</tr>
+<tr>
+<td>GIE</td>
+<td colspan="2">GI2_COD</td>
+<td colspan="2">GIE_LINHA</td>
+</tr>
+<tr>
+<td>G9D</td>
+<td colspan="2">GI2_FILIAL+GI2_COD</td>
+<td colspan="2">G9D_FILIAL+G9D_CODLIN</td>
+</tr>
+<tr>
+<td>G9Q</td>
+<td colspan="2">GI2_COD</td>
+<td colspan="2">G9Q_CODLIN</td>
+</tr>
+<tr>
+<td>GI3</td>
+<td colspan="2">GI2_COD</td>
+<td colspan="2">GI3_LINHA</td>
+</tr>
+<tr>
+<td>GID</td>
+<td colspan="2">GI2_COD</td>
+<td colspan="2">GID_LINHA</td>
+</tr>
+<tr>
+<td>GYP</td>
+<td colspan="2">GI2_COD</td>
+<td colspan="2">GYP_LINCOD</td>
+</tr>
+<tr>
+<td>GYN</td>
+<td colspan="2">GI2_COD</td>
+<td colspan="2">GYN_LINCOD</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

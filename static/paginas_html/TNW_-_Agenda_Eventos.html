@@ -1,0 +1,558 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: TNW - Agenda Eventos</title></head>
+<body>
+<font color="orange"><h2 id="TNW">Tabela: TNW - Agenda Eventos</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Agenda Eventos</b></td><td colspan="2"><b>TNW_FILIAL+TNW_SEQUEN+TNW_CODUSU</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">TNW_FILIAL+TNW_SEQUEN+TNW_CODUSU</td><td>Sequencial + Usuario</td><td></td></tr>
+<tr><td>2</td><td colspan="2">TNW_FILIAL+TNW_CODUSU+TNW_SEQUEN</td><td>Usuario + Sequencial</td><td></td></tr>
+<tr><td>3</td><td colspan="2">TNW_FILIAL+TNW_LOGIN+TNW_SEQUEN</td><td>Login Usuar. + Sequencial</td><td></td></tr>
+<tr><td>4</td><td colspan="2">TNW_FILIAL+TNW_CODIGO+DTOS(TNW_DTINIC)+TNW_HRINIC</td><td>Lembrete + Data Início + Hora Início</td><td></td></tr>
+<tr><td>5</td><td colspan="2">TNW_FILIAL+TNW_TIPO+TNW_CODIGO</td><td>Tipo Mensag. + Lembrete</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>TNW_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Código da filial da empresa. Campo
+alimentado automaticamente pelo módulo
+de Medicina e Segurança do Trabalho com
+base no campo Filial.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TNW_SEQUEN</td>
+<td>Sequencial</td>
+<td colspan="2">Numero Sequencial Mensag.</td>
+<td colspan="4">Número seqüêncial de mensagens já
+cadastrada. Campo alimentado
+automaticamente pelo módulo de Medicina
+e Segurança do Trabalho.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99999                                        </td>
+<td>EXISTCHAV("TNW",M->TNW_SEQUEN)</td>
+<td>GETSXENUM("TNW","TNW_SEQUEN")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TNW_LOGIN</td>
+<td>Login Usuar.</td>
+<td colspan="2">Login do Usuario</td>
+<td colspan="4">Código que identifica o login do usuário
+deve ser o mesmo que ele digita para
+entrar no sistema. O programa
+apresentará a mensagem toda vez que este
+login iniciar seu sistema.
+</td>
+<td>C</td>
+<td>25</td>
+<td>0</td>
+<td>                                             </td>
+<td>MDT175VAL('TNW_LOGIN')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/qus.html">QUS</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TNW_CODUSU</td>
+<td>Usuario</td>
+<td colspan="2">Codigo Usuario</td>
+<td colspan="4">Código do Usuário. Pressione as teclas
+[Enter]+[F3] para selecionar um Usuário.
+</td>
+<td>C</td>
+<td>12</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>EXISTCPO("TMK",M->TNW_CODUSU)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/tmk.html">TMK</a></td>
+<td><a href="/tabelas_protheus/gatilhos/tnw_codusu.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TNW_NOMUSU</td>
+<td>Nome Usuario</td>
+<td colspan="2">Nome do Usuario</td>
+<td colspan="4">Nome da Usuário. Campo alimentado
+automaticamente pelo módulo de Medicina
+e Segurança do Trabalho com base no
+campo Usuário.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>MDT175INI( 1 )</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>If(TMK->(dBSEEK(xFilial("TMK")+TNW->TNW_CODUSU)),TMK->TMK_NOMUSU,"")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TNW_DTINIC</td>
+<td>Data Início</td>
+<td colspan="2">Data Inic.Apres.Mesnagem</td>
+<td colspan="4">Data inicio. Indica para o sistema que a
+mensagem deverá ser apresentada para o
+usuário a partir desta data. Porém o
+usuário poderá, em tempo de execução
+solicitar o seu cancelamento.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>MDT175VAL('TNW_DTINIC')</td>
+<td>IF(INCLUI,dDATABASE,TNY->TNY_DTINIC)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TNW_HRINIC</td>
+<td>Hora Início</td>
+<td colspan="2">Hora de Inicio Mensagem</td>
+<td colspan="4">Hora inicio. Indica para o sistema que a
+mensagem deverá ser apresentada para o
+usuário a partir desta data e desta
+hora. Porém o usuário poderá em tempo de
+execução solicitar o seu cancelamento.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td>MDT175VAL('TNW_HRINIC')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TNW_DTFIM</td>
+<td>Data Fim</td>
+<td colspan="2">Data Fim Apres. Mensagem</td>
+<td colspan="4">Data fim. Indica para o sistema que a
+mensagem deverá ser apresentada para o
+usuário até esta data. Porém o usuário
+poderá em tempo de execução solicitar o
+seu cancelamento.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>MDT175VAL('TNW_DTFIM')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TNW_HRFIM</td>
+<td>Hora Fim</td>
+<td colspan="2">Hora Fim Apres. Mensagem</td>
+<td colspan="4">Hora fim. Indica para o sistema que a
+mensagem não será mais apresentada para
+o usuário a partir desta hora. Porém o
+usuário poderá, em tempo de execução
+solicitar o seu cancelamento.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td>MDT175VAL('TNW_HRFIM')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TNW_MENSAG</td>
+<td>Mensagem</td>
+<td colspan="2">Descricao da Mensagem</td>
+<td colspan="4">Descrição detalhada da mensagem que será
+apresentada para o usuário quando ele
+iniciar o sistema de Medicina e
+Segurança do Trabalho.
+</td>
+<td>M</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TNW_MOSTRA</td>
+<td>Mostrar</td>
+<td colspan="2">Mostrar Mensagem ?</td>
+<td colspan="4">Indica se a mensagem deverá ser
+apresentada para o usuário ou não.
+1= Sim
+2= Não.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("12")</td>
+<td>IF(INCLUI,"1",TNW->TNW_MOSTRA)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TNW_ANTES</td>
+<td>Dias Antes</td>
+<td colspan="2">Avisa quantos dias antes</td>
+<td colspan="4">Avisa quantos dias antes.
+</td>
+<td>N</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TNW_CODIGO</td>
+<td>Lembrete</td>
+<td colspan="2">Codigo Mandato</td>
+<td colspan="4">Código do lembrete.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TNW_TIPO</td>
+<td>Tipo Mensag.</td>
+<td colspan="2">Tipo da Mensagem</td>
+<td colspan="4">Tipo da Mensagem.
+1=A;
+2=B;
+3=C;
+4=D.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=A;2=B;3=C;4=D</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TNW_DESTIP</td>
+<td>Desc. Tipo</td>
+<td colspan="2">Descricao do Tipo</td>
+<td colspan="4">Descrição do Tipo.
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>TNW_USUFIM</td>
+<td>Usuário Fin.</td>
+<td colspan="2">Usuário Finalizador</td>
+<td colspan="4">Usuário finalizador do evento.
+</td>
+<td>C</td>
+<td>25</td>
+<td>0</td>
+<td>                                             </td>
+<td>MDT175VAL('TNW_USUFIM')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/qus.html">QUS</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

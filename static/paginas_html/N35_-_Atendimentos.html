@@ -1,0 +1,846 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: N35 - Atendimentos</title></head>
+<body>
+<font color="orange"><h2 id="N35">Tabela: N35 - Atendimentos</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Atendimentos</b></td><td colspan="2"><b>N35_FILIAL+N35_CODIGO</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">N35_FILIAL+N35_CODIGO+DTOS(N35_BAIXA)+N35_HORA</td><td>Registro + Dt Atendim. + Hora Atend.</td><td></td></tr>
+<tr><td>2</td><td colspan="2">N35_FILIAL+N35_NOME+DTOS(N35_BAIXA)+N35_HORA</td><td>Nome + Dt Atendim. + Hora Atend.</td><td></td></tr>
+<tr><td>3</td><td colspan="2">N35_FILIAL+N35_SAME+N35_NOME+DTOS(N35_BAIXA)</td><td>Prontuario + Nome + Dt Atendim.</td><td></td></tr>
+<tr><td>4</td><td colspan="2">N35_FILIAL+DTOS(N35_BAIXA)+N35_HORA+N35_CODIGO</td><td>Dt Atendim. + Hora Atend. + Registro</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>N35_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N35_CODIGO</td>
+<td>Registro</td>
+<td colspan="2">Registro Eletronico</td>
+<td colspan="4">Registro Eletrônico de Atendimento,
+Número Sequencial sem a opção de
+alterar.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>9999999999                                   </td>
+<td>ExistCpo("N35")</td>
+<td>GSPFNVCOD1("N35","N35_CODIGO",1,"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/n35_codigo.html">S</td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>N35_SAME</td>
+<td>Prontuario</td>
+<td colspan="2">Codigo do Prontuario</td>
+<td colspan="4">Informe o Codigo do Prontuário, em
+duvidas selecione a tecla F3
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td>ExistCpo("N33")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/n33.html">N33</a></td>
+<td><a href="/tabelas_protheus/gatilhos/n35_same.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>N35_NOME</td>
+<td>Nome</td>
+<td colspan="2">Nome do paciente</td>
+<td colspan="4">Informe o Nome do Prontuário
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N35_BAIXA</td>
+<td>Dt Atendim.</td>
+<td colspan="2">Data do Atendimento</td>
+<td colspan="4">Data do Atendimento.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>DDATABASE</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>N35_HORA</td>
+<td>Hora Atend.</td>
+<td colspan="2">Hora do Atendimento</td>
+<td colspan="4">Hora do atendimento.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td></td>
+<td>TIME()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>N35_CRM</td>
+<td>Cod Medico</td>
+<td colspan="2">Codigo do Medico</td>
+<td colspan="4">Informe o Código do Médico no CR,
+conforme tabela selecionada( F3 )
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td>EXISTCPO("N37",M->N35_TIPOCR+M->N35_CRM,1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/n37.html">N37</a></td>
+<td><a href="/tabelas_protheus/gatilhos/n35_crm.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>N35_TIPOCR</td>
+<td>Conselho</td>
+<td colspan="2">Tipo do Conselho</td>
+<td colspan="4">Tipo do Conselho, sugerido qdo da
+selecao do CR
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>N35_NOMED</td>
+<td>Nome Medico</td>
+<td colspan="2">Nome do medico</td>
+<td colspan="4">Nome do Médico, sugerido qdo da selecao
+do Codigo.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>N35_ESPEC</td>
+<td>Especialid.</td>
+<td colspan="2">Codigo Especialidade</td>
+<td colspan="4">Informe o Código da Especialidade,
+conforme tabela selecionada( F3 )
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>                                             </td>
+<td>If(m->N35_espec#Space(04),ExistCpo("N36",M->N35_espec),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/n36.html">N36</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>N35_PREMIN</td>
+<td>Pressao Min.</td>
+<td colspan="2">Pressao Minima</td>
+<td colspan="4">Informe a Pressão Minima do Prontuario
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td>IF( !EMPTY( M->N35_PREMAX ), M->N35_PREMIN <= M->N35_PREMAX , .T. )</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N35_PREMAX</td>
+<td>Pressao Max.</td>
+<td colspan="2">Pressao Maxima</td>
+<td colspan="4">Informe a Pressão Máxima do Prontuario
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td>M->N35_PREMAX >= M->N35_PREMIN</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N35_TEMPER</td>
+<td>Temperatura</td>
+<td colspan="2">Temperatura do Termometro</td>
+<td colspan="4">Informe a Temperatura do Prontuário
+</td>
+<td>N</td>
+<td>4</td>
+<td>1</td>
+<td>@E 99.9                                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N35_PESO</td>
+<td>Peso</td>
+<td colspan="2">Peso em Kg</td>
+<td colspan="4">Informe o Peso do Prontuário em Kg.
+</td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>@E 999.99                                    </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N35_ALTURA</td>
+<td>Altura</td>
+<td colspan="2">Altura em Metros</td>
+<td colspan="4">Informe a Altura do Prontuário em
+Metros(M)
+</td>
+<td>N</td>
+<td>4</td>
+<td>2</td>
+<td>@E 9.99                                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N35_GRUPO</td>
+<td>Grupo Atend.</td>
+<td colspan="2">Grupo de Atendimento</td>
+<td colspan="4">Informe o Grupo de Atendimento, conforme
+tabela de consulta.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td>EXISTCPO("SX5","NJ" + M->N35_GRUPO )</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/nj.html">NJ</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>N35_OBS1</td>
+<td>Observacao 1</td>
+<td colspan="2">Observacao 1</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>200</td>
+<td>0</td>
+<td>@S100                                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N35_OBS2</td>
+<td>Observação 2</td>
+<td colspan="2">Observação 2</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>200</td>
+<td>0</td>
+<td>@S                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N35_RESPON</td>
+<td>Responsavel</td>
+<td colspan="2">Responsavel</td>
+<td colspan="4">Nome do Responsável.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N35_RESEND</td>
+<td>Endereco</td>
+<td colspan="2">Endereco do Responsavel</td>
+<td colspan="4">Informe o Endereco do Responsavel.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N35_RESCID</td>
+<td>Cidade</td>
+<td colspan="2">Cidade do Responsavel</td>
+<td colspan="4">Cidade do Responsável.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>                                             </td>
+<td>EXISTCPO("N31",M->N35_RESCID,2)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/n31.html">N31</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N35_RESUF</td>
+<td>UF</td>
+<td colspan="2">UF do Responsavel</td>
+<td colspan="4">Unidade Federativa do Responsavel
+</td>
+<td>C</td>
+<td>22</td>
+<td>0</td>
+<td>!!                                           </td>
+<td>EXISTCPO("SX5","12" + M->N35_RESUF )</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/12.html">12</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N35_RESCEP</td>
+<td>CEP</td>
+<td colspan="2">CEP do responsavel</td>
+<td colspan="4">CEP do Responsável
+</td>
+<td>C</td>
+<td>23</td>
+<td>0</td>
+<td>99999-999                                    </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N35_RESFON</td>
+<td>Fone</td>
+<td colspan="2">Fone do Responsavel</td>
+<td colspan="4">Fone do Responsável.
+</td>
+<td>C</td>
+<td>24</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N35_RESDOC</td>
+<td>Documento</td>
+<td colspan="2">Documento do Responsavel</td>
+<td colspan="4">Documento do Responsável.
+</td>
+<td>C</td>
+<td>25</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N35_USUARI</td>
+<td>Operador</td>
+<td colspan="2">Operador</td>
+<td colspan="4">Usuário do Sistema
+</td>
+<td>C</td>
+<td>26</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>SUBSTR(cUSUARIO,7,15)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>N35_UNIDAD</td>
+<td>Unidade</td>
+<td colspan="2">Unidade</td>
+<td colspan="4">Codigo do Posto de Saúde amarrado ao
+usuario.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>GSPS030()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>N38</td>
+<td colspan="2">N35_CODIGO</td>
+<td colspan="2">N38_REG</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

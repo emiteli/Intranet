@@ -1,9 +1,9 @@
-from flask import Blueprint, render_template, redirect, url_for, flash, request, current_app, send_file
+from flask import Blueprint, render_template, redirect, url_for, flash, request, current_app, send_file, jsonify
 from flask_login import login_user, logout_user, login_required, current_user
 from extensions import db, login_manager
-from models.models import User, Asset, Funcionario
+from models.models import User, Asset, Funcionario,HtmlFile
 from forms.forms import LoginForm, UploadFileForm, FilterForm, AlterarStatusForm, UpdateProfileForm
-import io, os, base64
+import io, os, base64, re
 import pandas as pd
 from werkzeug.utils import secure_filename
 from ldap3 import Server, Connection, ALL, NTLM
@@ -15,6 +15,79 @@ from typing import Dict, List, Union, Optional
 routes = Blueprint('routes', __name__)
 
 SheetDict = Dict[str, pd.DataFrame]
+
+@routes.route('/totvs')
+@login_required  # Se quiser que apenas usuários autenticados acessem
+def totvs():
+    return render_template('totvs.html')  # Renderiza o template totvs.html
+def init_db():
+    db.create_all()  # Cria as tabelas no banco de dados
+    print("Banco de dados inicializado.")
+
+# Função para carregar os arquivos HTML no banco de dados
+def load_html_files_to_db():
+    html_folder = 'static/paginas_html'
+    print(f"Tentando carregar arquivos da pasta: {html_folder}")
+    
+    if not os.path.exists(html_folder):
+        print(f"Pasta {html_folder} não encontrada.")
+        return
+
+    # Iterar sobre todos os arquivos HTML na pasta
+    for filename in os.listdir(html_folder):
+        if filename.endswith('.html'):
+            filepath = os.path.join(html_folder, filename)
+            print(f"Lendo arquivo: {filepath}")
+            with open(filepath, 'r', encoding='utf-8') as file:
+                content = file.read()
+                try:
+                    # Verificar se o arquivo já existe no banco
+                    existing_file = HtmlFile.query.filter_by(filename=filename).first()
+                    if not existing_file:
+                        new_file = HtmlFile(filename=filename, content=content)
+                        db.session.add(new_file)
+                        db.session.commit()
+                        print(f"Arquivo {filename} carregado no banco de dados.")
+                    else:
+                        print(f"Arquivo {filename} já está no banco de dados. Ignorando.")
+                except Exception as e:
+                    db.session.rollback()
+                    print(f"Erro ao inserir o arquivo {filename}: {e}")
+@routes.route('/admin/load_html_files')
+def admin_load_html_files():
+    load_html_files_to_db()
+    return "Arquivos HTML carregados no banco de dados."
+
+# Função para buscar arquivos com base no termo de pesquisa
+def search_files(search_term):
+    search_results = []
+    pattern = re.compile(r"_-_(.{3})(.*)", re.IGNORECASE)  # Captura os três primeiros caracteres após "_-_"
+
+    search_term = search_term.replace(" ", "_")  # Substitui espaços por underscores para a busca
+
+    files = HtmlFile.query.all()  # Busca todos os arquivos HTML do banco de dados
+    for file in files:
+        filename = file.filename
+        match = pattern.search(filename)  # Verifica se o nome corresponde ao padrão
+        if match:
+            three_char_prefix = match.group(1)  # Três caracteres após "_-_"
+            rest_of_name = match.group(2)  # O restante do nome
+            search_string = three_char_prefix + rest_of_name
+
+            if re.search(search_term, search_string, re.IGNORECASE):
+                search_results.append(filename)  # Adiciona o arquivo completo se houver correspondência
+
+    return search_results
+
+# Rota para a busca
+@routes.route('/search', methods=['POST'])
+def search():
+    search_term = request.json.get('search_term', '').strip()
+    results = []
+    if search_term:
+        results = search_files(search_term)  # Busca usando a função
+
+    return jsonify(results)
 
 @routes.route('/grafico_status')
 def grafico_status() -> str:

@@ -1,0 +1,942 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: EES - Notas Fiscais por Itens</title></head>
+<body>
+<font color="orange"><h2 id="EES">Tabela: EES - Notas Fiscais por Itens</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Notas Fiscais por Itens</b></td><td colspan="2"><b>EES_FILIAL+EES_PREEMB+EES_NRNF+EES_SERIE+EES_PEDIDO+EES_SEQUEN+EES_FATSEQ</b></td><td><b>EECAE100</b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">EES_FILIAL+EES_PREEMB+EES_NRNF+EES_SERIE+EES_PEDIDO+EES_SEQUEN+EES_FATSEQ</td><td>Processo + Nota Fiscal + Serie + Pedido + Sequencia + Seq.It.NF.Fa</td><td></td></tr>
+<tr><td>2</td><td colspan="2">EES_FILIAL+EES_NR_CON</td><td>Nr.Contab.</td><td></td></tr>
+<tr><td>3</td><td colspan="2">EES_FILIAL+EES_CNPJ+EES_NRNF+EES_SERIE</td><td>CNPJ/CPF + Nota Fiscal + Serie</td><td></td></tr>
+<tr><td>4</td><td colspan="2">EES_FILIAL+EES_PEDIDO+EES_SEQUEN+EES_NRNF</td><td>Pedido + Sequencia + Nota Fiscal</td><td></td></tr>
+<tr><td>5</td><td colspan="2">EES_FILIAL+EES_PREEMB+EES_NRNF+EES_SDOC+EES_PEDIDO+EES_SEQUEN</td><td>Processo + Nota Fiscal + Série Doc. + Pedido + Sequencia</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>EES_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Filial do Sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EES_PREEMB</td>
+<td>Processo</td>
+<td colspan="2">Codigo do Embarque</td>
+<td colspan="4">Código do Embarque.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>If(FindFunction('NF400Valid'),(EXISTCHAVE('EES') .And. NF400Valid()),EXISTCHAVE('EES'))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EES_NRNF</td>
+<td>Nota Fiscal</td>
+<td colspan="2">Nota Fiscal</td>
+<td colspan="4">Nota Fiscal.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NAOVAZIO()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/018.html">018</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EES_SERIE</td>
+<td>Serie</td>
+<td colspan="2">Serie</td>
+<td colspan="4">Serie.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>!!!                                          </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/094.html">094</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EES_DTNF</td>
+<td>Dt.N.F.</td>
+<td colspan="2">Dt. Nota Fiscal</td>
+<td colspan="4">Data da Nota Fiscal.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>@d                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EES_VLNF</td>
+<td>Total N.F.</td>
+<td colspan="2">Total N.F.</td>
+<td colspan="4">Valor da Nota Fiscal.
+</td>
+<td>N</td>
+<td>16</td>
+<td>4</td>
+<td>@E 99,999,999,999.9999                       </td>
+<td>If(FindFunction('NF400Valid'),(Positivo() .And. NF400Valid()),Positivo())</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>EES_VLFRET</td>
+<td>Frete</td>
+<td colspan="2">Frete</td>
+<td colspan="4">Frete.
+</td>
+<td>N</td>
+<td>16</td>
+<td>4</td>
+<td>@E 99,999,999,999.9999                       </td>
+<td>POSITIVO()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EES_VLSEGU</td>
+<td>Seguro</td>
+<td colspan="2">Seguro</td>
+<td colspan="4">Valor de Seguro.
+</td>
+<td>N</td>
+<td>16</td>
+<td>4</td>
+<td>@E 99,999,999,999.9999                       </td>
+<td>POSITIVO()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EES_VLMERC</td>
+<td>V.Mercadoria</td>
+<td colspan="2">V.Mercadoria</td>
+<td colspan="4">Valor da Mercadoria.
+</td>
+<td>N</td>
+<td>16</td>
+<td>4</td>
+<td>@E 99,999,999,999.9999                       </td>
+<td>POSITIVO()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>EES_COD_I</td>
+<td>Codigo Item</td>
+<td colspan="2">Codigo do Item</td>
+<td colspan="4">Código do Item.
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sb1.html">SB1</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/030.html">030</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>EES_PEDIDO</td>
+<td>Pedido</td>
+<td colspan="2">Codigo do Pedido</td>
+<td colspan="4">Código do Pedido.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>If(FindFunction('NF400Valid'),NF400Valid(),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ee7.html">EE7</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ees_pedido.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>EES_SEQUEN</td>
+<td>Sequencia</td>
+<td colspan="2">Ordem de Entrega</td>
+<td colspan="4">Ordem de Entrega.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>                                             </td>
+<td>If(FindFunction('NF400Valid'),NF400Valid(),.T.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ee8.html">EE8</a></td>
+<td><a href="/tabelas_protheus/gatilhos/ees_sequen.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>EES_VLOUTR</td>
+<td>Vl Outros</td>
+<td colspan="2">Vl Outros</td>
+<td colspan="4">Outros Valores.
+</td>
+<td>N</td>
+<td>15</td>
+<td>4</td>
+<td>@E 999,999,999.99                            </td>
+<td>POSITIVO()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EES_QTDE</td>
+<td>Quant.Embar.</td>
+<td colspan="2">Quantidade Embarcada</td>
+<td colspan="4">Quantidade Embarcada.
+</td>
+<td>N</td>
+<td>15</td>
+<td>3</td>
+<td>@E 99,999,999,999.999                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/ees_qtde.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>EES_NR_CON</td>
+<td>Nr.Contab.</td>
+<td colspan="2">Numero da contabilizacao</td>
+<td colspan="4">Numero da contabilizacao
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EES_VLNFM</td>
+<td>Tot.NF.Moeda</td>
+<td colspan="2">Total N.F. na Moeda</td>
+<td colspan="4">Valor do item na nota fiscal na moeda.
+</td>
+<td>N</td>
+<td>16</td>
+<td>4</td>
+<td>@E 99,999,999,999.9999                       </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EES_VLFREM</td>
+<td>Frete Moeda</td>
+<td colspan="2">Frete na Moeda</td>
+<td colspan="4">Valor do frete na moeda.
+</td>
+<td>N</td>
+<td>16</td>
+<td>4</td>
+<td>@E 99,999,999,999.9999                       </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EES_VLSEGM</td>
+<td>Seguro Moeda</td>
+<td colspan="2">Seguro na Moeda</td>
+<td colspan="4">Valor do seguro do item da nota fiscal
+na moeda.
+</td>
+<td>N</td>
+<td>16</td>
+<td>4</td>
+<td>@E 99,999,999,999.9999                       </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EES_VLMERM</td>
+<td>V.Merc.Moeda</td>
+<td colspan="2">V.Mercadoria na Moeda</td>
+<td colspan="4">Valor da mercadoria na moeda.
+</td>
+<td>N</td>
+<td>16</td>
+<td>4</td>
+<td>@E 99,999,999,999.9999                       </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EES_VLOUTM</td>
+<td>Out.Vl.Moeda</td>
+<td colspan="2">Vl Outros na Moeda</td>
+<td colspan="4">Valor de outras despesas do item na nota
+fiscal na moeda.
+</td>
+<td>N</td>
+<td>16</td>
+<td>4</td>
+<td>@E 99,999,999,999.9999                       </td>
+<td>Positivo()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EES_CNPJ</td>
+<td>CNPJ/CPF</td>
+<td colspan="2">CNPJ/CPF Emissora</td>
+<td colspan="4">Número do CNPJ.
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>@R 99.999.999/9999-99                        </td>
+<td>Cgc(M->EEM_CNPJ)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EES_FATSEQ</td>
+<td>Seq.It.NF.Fa</td>
+<td colspan="2">Sequen. Item NF Faturamen</td>
+<td colspan="4">Sequencia do item no faturamento.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EES_QTDDEV</td>
+<td>Qtde. Dev.</td>
+<td colspan="2">Quantidade Devolvida</td>
+<td colspan="4">Quantidade devolvida
+</td>
+<td>N</td>
+<td>11</td>
+<td>2</td>
+<td>@E 99,999,999.99                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/ees_qtddev.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EES_VALDEV</td>
+<td>Valor Dev.</td>
+<td colspan="2">Valor Devolvido</td>
+<td colspan="4">Valor devolvido
+</td>
+<td>N</td>
+<td>14</td>
+<td>2</td>
+<td>@E 9,999,999,999.99                          </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EES_DESCON</td>
+<td>Vl.Desconto</td>
+<td colspan="2">Valor do desconto</td>
+<td colspan="4">Valor de Desconto.
+</td>
+<td>N</td>
+<td>16</td>
+<td>4</td>
+<td>@E 99,999,999,999.9999                       </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EES_CCERP</td>
+<td>C. Custo</td>
+<td colspan="2">Centro de Custo</td>
+<td colspan="4">Codigo ERP para o centro de custo na
+integração com sistemas externos.
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EES_QTDORI</td>
+<td>Qtde. Orig.</td>
+<td colspan="2">Quantidade Original</td>
+<td colspan="4">Quantidade Original
+</td>
+<td>N</td>
+<td>15</td>
+<td>3</td>
+<td>@E 99,999,999,999.999                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EES_PEDERP</td>
+<td>Pedido ERP</td>
+<td colspan="2">Pedido de origem ERP</td>
+<td colspan="4">Pedido de origem ERP
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EES_RELACA</td>
+<td>Nr.Relacao</td>
+<td colspan="2">Numero de Relacionamento</td>
+<td colspan="4">Numero de relacionamento do lançamento
+no ERP
+</td>
+<td>C</td>
+<td>15</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EES_LANCAM</td>
+<td>Lancamento</td>
+<td colspan="2">Lancamento</td>
+<td colspan="4">Código do lançamento no ERP
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>EES_SDOC</td>
+<td>Série Doc.</td>
+<td colspan="2">Série do Documento Fiscal</td>
+<td colspan="4">Série do Documento Fiscal.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>!!!                                          </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/095.html">095</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

@@ -1,0 +1,584 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: RBH - Habilidades do Cargo</title></head>
+<body>
+<font color="orange"><h2 id="RBH">Tabela: RBH - Habilidades do Cargo</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Habilidades do Cargo</b></td><td colspan="2"><b>RBH_FILIAL+RBH_GRUPO+RBH_CARGO+RBH_CC+RBH_CODCOM+RBH_ITECOM+RBH_HABIL</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">RBH_FILIAL+RBH_GRUPO+RBH_CARGO+RBH_CODCOM+RBH_ITECOM</td><td>Grupo + Cargo + Competencia + Item Compet.</td><td></td></tr>
+<tr><td>2</td><td colspan="2">RBH_FILIAL+RBH_GRUPO+RBH_CARGO+RBH_CC+RBH_CODCOM+RBH_ITECOM</td><td>Grupo + Cargo + Centro Custo + Competencia + Item Compet.</td><td></td></tr>
+<tr><td>3</td><td colspan="2">RBH_FILIAL+RBH_CODCOM+RBH_ITECOM+RBH_HABIL</td><td>Competencia + Item Compet. + Habilidade</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>RBH_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RBH_GRUPO</td>
+<td>Grupo</td>
+<td colspan="2">Grupo Funcional</td>
+<td colspan="4">Deve conter o código do grupo referente
+esta habilidade.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td>NaoVazio() .And. ExistCpo("SQ0")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sq0.html">SQ0</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RBH_CARGO</td>
+<td>Cargo</td>
+<td colspan="2">Cargo do Funcionario</td>
+<td colspan="4">Deve conter o código do cargo referente
+esta habilidade.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SQ3") .Or. Vazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sq3.html">SQ3</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td>#RBH_CARGO <>'     '</td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RBH_CC</td>
+<td>Centro Custo</td>
+<td colspan="2">Cod. Centro de Custo</td>
+<td colspan="4">Informe Centro de Custo.
+</td>
+<td>C</td>
+<td>9</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .Or. Ctb105CC()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ctt.html">CTT</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/004.html">004</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RBH_CODCOM</td>
+<td>Competencia</td>
+<td colspan="2">Cod. Estrut. Competencia</td>
+<td colspan="4">Neste campo deve ser digitado o Código
+de Competência necessário para o Cargo.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>NaoVazio() .And. ExistCpo("RBM", M->Q3_GRUPO+M->RBH_CODCOM)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/rbm.html">RBM</a></td>
+<td><a href="/tabelas_protheus/gatilhos/rbh_codcom.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td>#RBH_CODCOM<>'      '</td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RBH_DCDCOM</td>
+<td>Desc.Compet.</td>
+<td colspan="2">Descricäo da Competencia</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!Inclui,FDesc("RDM",RBH->RBH_CODCOM,"RDM_DESC"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>FDesc("RDM",RBH->RBH_CODCOM,"RDM_DESC")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RBH_ITECOM</td>
+<td>Item Compet.</td>
+<td colspan="2">Item de Competencia</td>
+<td colspan="4">Neste campo deve ser digitado o Código
+do Item de Competência necessário para
+este Cargo.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>RbhCamposVld("RD2","RBH_ITECOM","RBH_CODCOM")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/rd2001.html">RD2001</a></td>
+<td><a href="/tabelas_protheus/gatilhos/rbh_itecom.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td>#RBH_ITECOM<>'      '</td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RBH_DITCOM</td>
+<td>Desc.It.Comp</td>
+<td colspan="2">Desc. Item Competencia</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!Inclui,FDesc("RD2",RBH->RBH_CODCOM+RBH->RBH_ITECOM,"RD2_DESC"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>FDesc("RD2",RBH->RBH_CODCOM+RBH->RBH_ITECOM,"RD2_DESC")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RBH_HABIL</td>
+<td>Habilidade</td>
+<td colspan="2">Codigo da Habilidade</td>
+<td colspan="4">Neste campo deve ser digitado o Código
+da Habilidade necessária para este
+Cargo.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>RbhHabilVld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/rbg001.html">RBG001</a></td>
+<td><a href="/tabelas_protheus/gatilhos/rbh_habil.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td>#RBH_HABIL <>'      '</td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RBH_DHABIL</td>
+<td>Desc. Habil.</td>
+<td colspan="2">Descricäo da Habilidade</td>
+<td colspan="4">Insira a descrição da habilidade.
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@S20                                         </td>
+<td></td>
+<td>If(!Inclui,FDesc("RBG",RBH->RBH_HABIL,"RBG_DESC"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>FDesc("RBG",RBH->RBH_HABIL,"RBG_DESC")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RBH_ESCALA</td>
+<td>Escala</td>
+<td colspan="2">Codigo da Escala</td>
+<td colspan="4">Neste campo deve ser digitado o Código
+da Escala que identificará o nível da
+Habilidade para este cargo.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td>#RBH_ESCALA<>'  '</td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RBH_DESCAL</td>
+<td>Desc. Escala</td>
+<td colspan="2">Descricao da Escala</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!Inclui, FDesc("RBK",RBH->RBH_ESCALA,"RBK_DESCRI"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RBH_ITESCA</td>
+<td>Item Escala</td>
+<td colspan="2">Item da Escala</td>
+<td colspan="4">Neste campo deve ser digitado o Código
+do Item de Escala que identificará o
+nível da Habilidade para este Cargo.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>RbhCamposVld("RBL","RBH_ITESCA","RBH_ESCALA")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/rbl.html">RBL</a></td>
+<td><a href="/tabelas_protheus/gatilhos/rbh_itesca.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>RbhItEscWhen()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td>#RBH_ITESCA<>'  '</td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RBH_DITESC</td>
+<td>D.Item Esc.</td>
+<td colspan="2">Desc. Item de Escala</td>
+<td colspan="4">Insira descrição de item de escala.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!Inclui, FDesc("RBL",RBH->RBH_ESCALA+RBH->RBH_ITESCA,"RBL_DESCRI"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RBH_IMPORT</td>
+<td>Grau Import.</td>
+<td colspan="2">Grau de Importancia</td>
+<td colspan="4">Neste campo deve ser digitado o Código
+de Grau de Importancia utilizado para
+classificar o grau de importância desta
+Habilidade para este Cargo.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td>#RBH_IMPORT<>'  '</td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RBH_DIMPOR</td>
+<td>Desc.Import.</td>
+<td colspan="2">Desc. Grau de Importancia</td>
+<td colspan="4">Descrição do Grau de Importância.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!Inclui, FDesc("RBK",RBH->RBH_IMPORT,"RBK_DESCRI"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RBH_ITIMPO</td>
+<td>Item Import.</td>
+<td colspan="2">Item do Grau Importancia</td>
+<td colspan="4">Neste campo deve ser digitado o Código
+do Item de Grau de Importancia utilizado
+para classificar o grau de importância
+desta Habilidade para este Cargo.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>RbhCamposVld("RBL","RBH_ITIMPO","RBH_IMPORT")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/rbl.html">RBL</a></td>
+<td><a href="/tabelas_protheus/gatilhos/rbh_itimpo.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>RbhItImpWhen()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td>#RBH_ITIMPO<>'  '</td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>RBH_DITIMP</td>
+<td>D.Item Imp.</td>
+<td colspan="2">Desc. Item Grau Import.</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!Inclui, FDesc("RBL",RBH->RBH_IMPORT+RBH->RBH_ITIMPO,"RBL_DESCRI"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

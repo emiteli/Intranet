@@ -1,0 +1,3198 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: GE7 - Faturamento (Pro/Hon) Paciente</title></head>
+<body>
+<font color="orange"><h2 id="GE7">Tabela: GE7 - Faturamento (Pro/Hon) Paciente</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Faturamento (Pro/Hon) Paciente</b></td><td colspan="2"><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">GE7_FILIAL+GE7_SEQDES</td><td>Seq.Despesa</td><td></td></tr>
+<tr><td>2</td><td colspan="2">GE7_FILIAL+GE7_NRSEQG+DTOS(GE7_DATDES)+GE7_HORDES</td><td>Nro.Seq.Guia + Data + Hora</td><td></td></tr>
+<tr><td>3</td><td colspan="2">GE7_FILIAL+GE7_REGATE</td><td>Reg. Atendim</td><td></td></tr>
+<tr><td>4</td><td colspan="2">GE7_FILIAL+GE7_NREXTC+GE7_NRSEQG+GE7_STATUS</td><td>Ext.Convenio + Nro.Seq.Guia + Status</td><td></td></tr>
+<tr><td>5</td><td colspan="2">GE7_FILIAL+GE7_NREXTM</td><td>Cod. Extrato</td><td></td></tr>
+<tr><td>6</td><td colspan="2">GE7_FILIAL+DTOS(GE7_DATDES)</td><td>Data</td><td></td></tr>
+<tr><td>7</td><td colspan="2">GE7_FILIAL+GE7_SPRINC+GE7_SEQDES</td><td>Seq.Desp.Pr. + Seq.Despesa</td><td></td></tr>
+<tr><td>8</td><td colspan="2">GE7_FILIAL+GE7_CODDES</td><td>Procedimento</td><td></td></tr>
+<tr><td>9</td><td colspan="2">GE7_FILIAL+GE7_CODPRE+GE7_CODCRM+DTOS(GE7_DATDES)+GE7_HORDES</td><td>Cd Prestador + CRM + Data + Hora</td><td></td></tr>
+<tr><td>A</td><td colspan="2">GE7_FILIAL+GE7_CODCRM+GE7_CODLOC+GE7_CODPRE</td><td>CRM + Setor + Cd Prestador</td><td></td></tr>
+<tr><td>B</td><td colspan="2">GE7_FILIAL+GE7_CODCRM+GE7_CODLOC+DTOS(GE7_DATDES)+GE7_HORDES</td><td>CRM + Setor + Data + Hora</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>GE7_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_CODLOC</td>
+<td>Setor</td>
+<td colspan="2">Setor</td>
+<td colspan="4">Campo preenchido com o codigo do Setor
+para que as regras sejam feitas quando
+da efetuação de um atendimento.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>HS_VldP12()</td>
+<td>cLctCodLoc</td>
+<td><a href="/tabelas_protheus/f3/gcs.html">GCS</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GE7_NOMLOC</td>
+<td>Descricao</td>
+<td colspan="2">Descricao do setor</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>HS_INomLoc("GE7")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_DATDES</td>
+<td>Data</td>
+<td colspan="2">Data do lancamento</td>
+<td colspan="4">Data do lançamento de despesa na guia do
+paciente.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>@D                                           </td>
+<td></td>
+<td>HS_DATPAT(.T.)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GE7_HORDES</td>
+<td>Hora</td>
+<td colspan="2">Hora do lancamento</td>
+<td colspan="4">Hora do lançamento da despesa na guia do
+paciente.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td></td>
+<td>HS_DATPAT(.F.)</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GE7_QTDDES</td>
+<td>Quantidade</td>
+<td colspan="2">Quantidade procedimento</td>
+<td colspan="4">Informe a quantidade de procedimentos
+que será lançado.
+</td>
+<td>N</td>
+<td>10</td>
+<td>4</td>
+<td>@E 99,999.9999                               </td>
+<td>HS_VQtdPr(M->GE7_QTDDES)</td>
+<td>1</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GE7_CODDES</td>
+<td>Procedimento</td>
+<td colspan="2">Codigo do procedimento</td>
+<td colspan="4">Informe o código de identificação do
+procedimento a ser lançado.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>HS_VldM24(, 38) .And. HSPBPATRIG("GE7","CODDES")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ga7.html">GA7</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_DDESPE</td>
+<td>Descricao</td>
+<td colspan="2">Descricao do procedimento</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIf(!Inclui,Posicione("GA7", 1, xFilial("GA7") + M->GE7_CODDES, "GA7_DESC"), "")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("GA7",1,xFilial("GA7")+GE7->GE7_CODDES,"GA7_DESC")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_CODCRM</td>
+<td>CRM</td>
+<td colspan="2">CRM do medico</td>
+<td colspan="4">Informe o código do CRM do médico, que
+efetuou o procedimento.
+</td>
+<td>C</td>
+<td>7</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>HS_VldM24(, 17) .And. HSPBPATRIG("GE7","CODCRM")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ghcpro.html">GHCPRO</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>HS_M24WHEN("GE7_CODCRM")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GE7_NOMMED</td>
+<td>Nome</td>
+<td colspan="2">Nome do medico</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIf(!Inclui,Posicione("SRA",11,xFilial("SRA")+GE7->GE7_CODCRM,"RA_NOME"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("SRA",11,xFilial("SRA")+GE7->GE7_CODCRM,"RA_NOME")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_CODATO</td>
+<td>Ato</td>
+<td colspan="2">Cod. Ato</td>
+<td colspan="4">Informe o código do ato, de acordo com o
+cadastro de Ato Médico no Centro
+Cirurgico.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td>HS_VldM24(, 18)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gmc.html">GMC</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_DESATO</td>
+<td>Descricao</td>
+<td colspan="2">Descricao</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIf(!Inclui,Posicione("GMC",1,xFilial("GMC")+GE7->GE7_CODATO,"GMC_DESATO"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("GMC",1,xFilial("GMC")+GE7->GE7_CODATO,"GMC_DESATO")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_CODVIA</td>
+<td>Via acesso</td>
+<td colspan="2">Codigo da via de acesso</td>
+<td colspan="4">Informe o código da via de acesso. A via
+de acesso deve ser informada se o
+procedimento for um procedimento
+cirúrgico.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>HS_VldM24(, 10)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ge4.html">GE4</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_DESVIA</td>
+<td>Descricao</td>
+<td colspan="2">Descricao</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIf(!Inclui,Posicione("GE4",1,xFilial("GE4")+GE7->GE7_CODVIA,"GE4_DESVIA"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("GE4",1,xFilial("GE4")+GD7->GD7_CODVIA,"GE4_DESVIA")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_COEDES</td>
+<td>Coef.Despesa</td>
+<td colspan="2">Coeficiente da despesa</td>
+<td colspan="4"></td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td></td>
+<td>1</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GE7_COEFAM</td>
+<td>Coef.Ato Med</td>
+<td colspan="2">Coeficiente do ato medico</td>
+<td colspan="4"></td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td></td>
+<td>1</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GE7_VALDES</td>
+<td>Preco</td>
+<td colspan="2">Preco do procedimento</td>
+<td colspan="4">Informe o valor do procedimento.
+</td>
+<td>N</td>
+<td>10</td>
+<td>4</td>
+<td>@E 99,999.9999                               </td>
+<td>HS_CalcDsc()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_DESPER</td>
+<td>Desc. Percen</td>
+<td colspan="2">Desconto Percentual</td>
+<td colspan="4">Descrição do percentual de desconto
+concedido ao paciente, no lancamento da
+despesa de Procedimentos.
+</td>
+<td>N</td>
+<td>5</td>
+<td>2</td>
+<td>@E 99.99                                     </td>
+<td>HS_VldM24(, 40)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_DESVAL</td>
+<td>Desc. Valor</td>
+<td colspan="2">Desconto em Valor</td>
+<td colspan="4">Informe o valor de desconto para o item,
+processo somente permitido na auditoria
+de conta.
+</td>
+<td>N</td>
+<td>10</td>
+<td>2</td>
+<td>@E 999,999.99                                </td>
+<td>HS_VldM24(, 40)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_VALTOT</td>
+<td>Valor Total</td>
+<td colspan="2">Valor Total</td>
+<td colspan="4"></td>
+<td>N</td>
+<td>10</td>
+<td>2</td>
+<td>@E 999,999.99                                </td>
+<td></td>
+<td>HS_RTotais('GE7_VALTOT')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_TOTDSC</td>
+<td>Total c/ Dsc</td>
+<td colspan="2">Total com Desconto</td>
+<td colspan="4"></td>
+<td>N</td>
+<td>10</td>
+<td>2</td>
+<td>@E 999,999.99                                </td>
+<td></td>
+<td>HS_RTotais('GE7_TOTDSC')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_DESOBS</td>
+<td>Obs. Descont</td>
+<td colspan="2">Observacao Desconto</td>
+<td colspan="4">Informar neste campo a observação do
+desconto registrado para a despesa do
+atendimento do paciente.
+</td>
+<td>C</td>
+<td>100</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>HS_VldM24(, 41)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_VFILME</td>
+<td>Preco Filme</td>
+<td colspan="2">Preco do filme do proc.</td>
+<td colspan="4">Informe o valor do filme utilizado para
+raio x, caso necessário.
+</td>
+<td>N</td>
+<td>10</td>
+<td>4</td>
+<td>@E 99,999.9999                               </td>
+<td>HS_CalcDsc()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_VCUSOP</td>
+<td>Preco C.Oper</td>
+<td colspan="2">Prc custo operac. do proc</td>
+<td colspan="4">Informe o valor do custo operacional do
+procedimento.
+</td>
+<td>N</td>
+<td>10</td>
+<td>4</td>
+<td>@E 99,999.9999                               </td>
+<td>HS_CalcDsc()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_PCUDES</td>
+<td>Preco Custo</td>
+<td colspan="2">Prc de custo do proc.</td>
+<td colspan="4"></td>
+<td>N</td>
+<td>10</td>
+<td>4</td>
+<td>@E 99,999.9999                               </td>
+<td>HS_CalcDsc()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_URGDES</td>
+<td>Urgencia</td>
+<td colspan="2">Procedimento de urgencia</td>
+<td colspan="4">A informação deste campo é proveniente
+das regras cadastradas no Convenio ou
+Tabela de Procedimento, que informa se é
+Urgencia, Regra ou não urgencia. Este
+campo tambem pode ser alterado de acordo
+com a necessidade da auditoria de conta.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>HS_VldM24(, 43)</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Nao;1=Sim;2=Regra</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GE7_GLODES</td>
+<td>Ind de Glosa</td>
+<td colspan="2">Indicador de glosa</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("012")</td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Normal;1=Indevida;2=Excecao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_COECHP</td>
+<td>Coef. CH Pr.</td>
+<td colspan="2">Coef. CH do procedimento</td>
+<td colspan="4">Coeficiente do Honorario Médico,
+informado de acordo com a Tabela AMB no
+cadastro de Procedimento e/ou Tabela de
+Procedimento.
+</td>
+<td>N</td>
+<td>6</td>
+<td>3</td>
+<td>@E 99.999                                    </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GE7_QTDCHP</td>
+<td>V.R$/Q.CH Pr</td>
+<td colspan="2">Vl.R$/Qt.CH procedimento</td>
+<td colspan="4"></td>
+<td>N</td>
+<td>10</td>
+<td>2</td>
+<td>@E 99,999.99                                 </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GE7_CODESP</td>
+<td>Especialidad</td>
+<td colspan="2">Codigo da especialidade</td>
+<td colspan="4">Especialidade executada no atendimento.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>HSPVLDBPA('GE7','M->GE7_CODESP') .And. HSPBPATRIG('GE7','CODESP',M->GE7_CODESP)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ghcbes.html">GHCBES</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>HSPWheEsp()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GE7_NOMESP</td>
+<td>Descricao</td>
+<td colspan="2">Descricao especialidade</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIf(!Inclui,Posicione("GFR",1,xFilial("GFR")+GE7->GE7_CODESP,"GFR_DSESPE"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("GFR",1,xFilial("GFR")+GE7->GE7_CODESP,"GFR_DSESPE")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_PGTMED</td>
+<td>Tp Rec Med</td>
+<td colspan="2">Tipo recebimento medico</td>
+<td colspan="4">Proveniente do credencimento este campo
+apresenta os tipos de repasse ao
+profissional. Podendo ser alterado em
+nivel de Auditoria de Conta.
+0=Direto;
+1=Repasse Faturamento;
+2=Repasse Acatamento;
+3=Repasse Quitacao
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence('0123') .And. HS_GDAtrib(oGDPR, {{nPRStaReg, 'BR_AMARELO', 'BR_VERDE'}}) .And. HS_CalcDsc()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Direto;1=Repasse Faturamento;2=Repasse Acatamento;3=Repasse Quitacao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GE7_COECHM</td>
+<td>Coef.CH Med.</td>
+<td colspan="2">Coef. CH do medico</td>
+<td colspan="4"></td>
+<td>N</td>
+<td>6</td>
+<td>3</td>
+<td>@E 99.999                                    </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_REPAMB</td>
+<td>Repasse(%)</td>
+<td colspan="2">Repasse (%)</td>
+<td colspan="4"></td>
+<td>N</td>
+<td>6</td>
+<td>2</td>
+<td>@E 999.99                                    </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_VALREP</td>
+<td>Repasse</td>
+<td colspan="2">Valor do repasse medico</td>
+<td colspan="4">Informe o valor do repasse médico.
+</td>
+<td>N</td>
+<td>15</td>
+<td>4</td>
+<td>@E 9,999,999,999.9999                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_VALREB</td>
+<td>Rep. Bruto</td>
+<td colspan="2">Repasse Bruto</td>
+<td colspan="4">Valor do repasse Bruto, de acordo com as
+regras cadastrada para o calculo da
+despesa.
+</td>
+<td>N</td>
+<td>10</td>
+<td>4</td>
+<td>@E 99,999.9999                               </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_CODPCT</td>
+<td>Proc. Padrao</td>
+<td colspan="2">Codigo Proced. Padrao</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>HS_VldM24(, 44)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/hsp008.html">HSP008</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>EMPTY(M->GE7_CODPCT)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_DESPCT</td>
+<td>Descricao</td>
+<td colspan="2">Descricao Proced. Padrao</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIf(!Inclui, Posicione("GA1", 1, xFilial("GA1") + GE7->GE7_CODPCT, "GA1_DESC"), "")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("GA1", 1, xFilial("GA1") + GE7->GE7_CODPCT, "GA1_DESC")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_CODKIT</td>
+<td>Cod do Kit</td>
+<td colspan="2">Codigo do Kit</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_DESKIT</td>
+<td>Descricao</td>
+<td colspan="2">Descricao do Kit</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IIf(!Inclui, Posicione("GAF", 1, xFilial("GAF") + GE7->GE7_CODKIT, "GAF_DESKIT"), "")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("GAF", 1, xFilial("GAF") + GE7->GE7_CODKIT, "GAF_DESKIT")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_NREXTM</td>
+<td>Cod. Extrato</td>
+<td colspan="2">Cod. lcto extrato medico</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_CODCON</td>
+<td>Convenio</td>
+<td colspan="2">Codigo do Convenio</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_CODPRE</td>
+<td>Cd Prestador</td>
+<td colspan="2">Codigo do Prestador</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/za2.html">ZA2</a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_VALPAG</td>
+<td>Pago</td>
+<td colspan="2">Valor Pago</td>
+<td colspan="4"></td>
+<td>N</td>
+<td>10</td>
+<td>4</td>
+<td>@E 99,999.9999                               </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_VALGLO</td>
+<td>Glosa</td>
+<td colspan="2">Valor da Glosa</td>
+<td colspan="4"></td>
+<td>N</td>
+<td>10</td>
+<td>4</td>
+<td>@E 99,999.9999                               </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_VALREC</td>
+<td>Recuperado</td>
+<td colspan="2">Valor recuperado</td>
+<td colspan="4"></td>
+<td>N</td>
+<td>10</td>
+<td>4</td>
+<td>@E 99,999.9999                               </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_VALPER</td>
+<td>Perdido</td>
+<td colspan="2">Valor perdido</td>
+<td colspan="4"></td>
+<td>N</td>
+<td>10</td>
+<td>4</td>
+<td>@E 99,999.9999                               </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_NREXTC</td>
+<td>Ext.Convenio</td>
+<td colspan="2">Codigo do Extr. convenio</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_SEQDES</td>
+<td>Seq.Despesa</td>
+<td colspan="2">Sequencia da despesa</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_SPRINC</td>
+<td>Seq.Desp.Pr.</td>
+<td colspan="2">Seq. da despesa principal</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_NRSEQG</td>
+<td>Nro.Seq.Guia</td>
+<td colspan="2">Numero sequencial da guia</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GE7_VLRGLO</td>
+<td>Rep. Glosa</td>
+<td colspan="2">Vlr Repasse de Glosa</td>
+<td colspan="4"></td>
+<td>N</td>
+<td>10</td>
+<td>4</td>
+<td>@E 99,999.9999                               </td>
+<td></td>
+<td>0</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_VLRREC</td>
+<td>Rep. Recup.</td>
+<td colspan="2">Vlr Repasse Recuperado</td>
+<td colspan="4"></td>
+<td>N</td>
+<td>10</td>
+<td>4</td>
+<td>@E 99,999.9999                               </td>
+<td></td>
+<td>0</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_REGATE</td>
+<td>Reg. Atendim</td>
+<td colspan="2">Registro de Atendimento</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GE7_MARLAN</td>
+<td>Marcador</td>
+<td colspan="2">Marcador</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_IDMARC</td>
+<td>Id. Marca</td>
+<td colspan="2">Identif. Reg. Marcado</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_STATUS</td>
+<td>Status</td>
+<td colspan="2">Status</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("123")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>1=Aberto;2=Associado;3=Encerrado</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_DATSTA</td>
+<td>Dt Status</td>
+<td colspan="2">Dt atualizacao status</td>
+<td colspan="4"></td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_HORSTA</td>
+<td>Hr Status</td>
+<td colspan="2">Hr. atualizacao status</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99:99                                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_INCIDE</td>
+<td>Incidencia</td>
+<td colspan="2">Quantidade de incidencias</td>
+<td colspan="4">Informe a incidência do procedimento.
+Incidência é a quantidade de vezes que
+um procedimento pode ser repetido sem
+acarretar custos ao paciente. No
+cadastro do procedimento, o campo
+"Incidência" limita a quantidade de
+incidências permitida para o
+procedimento.
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>@E 99                                        </td>
+<td>HS_VIncide(M->GE7_INCIDE)</td>
+<td>0</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>lAltIncide</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_ORIDES</td>
+<td>Origem</td>
+<td colspan="2">Origem da despesa</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("012")</td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>0=Normal;1=Cirurgia;2=Incidencia</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_CODPCO</td>
+<td>Cod Pacote</td>
+<td colspan="2">Codigo do Pacote</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_DESCID</td>
+<td>Patologia</td>
+<td colspan="2">Patologia</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>70</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>HS_IniPadr("GAS", 1, GE7->GE7_CODCID, "GAS_PATOLO")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_CODPRT</td>
+<td>Proced Tab</td>
+<td colspan="2">Cod Procedimento Tabela</td>
+<td colspan="4">Informado o código do procedimento.
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_DESPRT</td>
+<td>Descricao</td>
+<td colspan="2">Descricao do Produto</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_TPAPAC</td>
+<td>Tipo APAC</td>
+<td colspan="2">Tipo Atend. APAC</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Inicial;2=Continuacao;3=Unica</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_CODCID</td>
+<td>Codigo CID</td>
+<td colspan="2">Codigo CID</td>
+<td colspan="4">Codigo do CID esta informação é
+proveniente do atendimento, quando
+informado no atendimento ou na alta do
+paciente.
+Codigo Internacional de Doença.
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .OR. HS_VLDM24(,29)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ghh001.html">GHH001</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_CMCPAC</td>
+<td>Motivo Cobr.</td>
+<td colspan="2">Codigo Motv. Cobra. APAC</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>HS_SeekRet("GH7","M->GE7_CMCPAC",1,.F.,"GE7_DMCPAC","GH7_DMCPAC")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/gh7001.html">GH7001</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_CDGATE</td>
+<td>Grupo Atend.</td>
+<td colspan="2">Grupo de Atendimento</td>
+<td colspan="4">Codigo do Grupo de atendimento do SUS.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .OR. HS_VLDM24(,29)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ghf001.html">GHF001</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_DSGATE</td>
+<td>Descricao</td>
+<td colspan="2">Descricao do Grup. Atend</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>HS_IniPadr("GH3", 1, GE7->GE7_CDGATE, "GH3_DSGATE")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_DMCPAC</td>
+<td>Descricao</td>
+<td colspan="2">Desc. Motv. Cobranca APAC</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(!Inclui,Posicione("GH7",1,xFilial("GH7")+GE7->GE7_CMCPAC,"GH7_DMCPAC"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_CGCFOR</td>
+<td>CNPJ Forn.</td>
+<td colspan="2">CNPJ Fornecedor Mat.</td>
+<td colspan="4">Codigo do CNPJ, proveniente do cadastro
+de Prestador.
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>@R 99.999.999/9999-99                        </td>
+<td>Vazio() .Or. Cgc(M->GE7_CGCFOR)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_CDTATE</td>
+<td>Tipo Atend.</td>
+<td colspan="2">Tipo Atendimento</td>
+<td colspan="4">Tipo de atendimento do SUS.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .OR. HS_VLDM24(,29)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ghg001.html">GHG001</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_DSTATE</td>
+<td>Descricao</td>
+<td colspan="2">Descricao do Tipo Atend.</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>HS_IniPadr("GH4", 1, GE7->GE7_CDTATE, "GH4_DSTATE")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_NNFFOR</td>
+<td>Numero NF</td>
+<td colspan="2">Num. Nota Fiscal Forn.</td>
+<td colspan="4">Numero da nota fiscal, quando da geração
+da fatura no modulo Gestão Hospitalar.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_DOPLER</td>
+<td>Dopler</td>
+<td colspan="2">Dopler</td>
+<td colspan="4">Neste campo é informado se o
+procedimento utiliza dopler, esta
+informação é proveniente do cadastro de
+procedimento.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("012")</td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Nao usa;1=Convencional;2=Colorido</td>
+<td>HS_M24When("GE7_DOPLER")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>GE7_LOGARQ</td>
+<td>Log do Arq</td>
+<td colspan="2">Log do arquivo</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>HS_LogArq()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_VLRCOS</td>
+<td>Vlr custo Op</td>
+<td colspan="2">Valor custo operacional</td>
+<td colspan="4">Valor do Custo Operacional do
+procedimento de acordo com a Tabela AMB
+cadastrada no Procedimento ou Tabela de
+Procedimento.
+</td>
+<td>N</td>
+<td>10</td>
+<td>3</td>
+<td>@E 9,999,999.999                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_DOCCIR</td>
+<td>Doc Cirurgia</td>
+<td colspan="2">Documento Gastos Cirirgia</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_DATFIM</td>
+<td>Data Fim Pro</td>
+<td colspan="2">Data Fim do Procedimento</td>
+<td colspan="4">Informe a data final da realização do
+procedimento.
+Tecla <F3> disponível para consulta ao
+Calendário.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>@D                                           </td>
+<td></td>
+<td>DDATABASE</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_HORFIM</td>
+<td>Hora Fim Pro</td>
+<td colspan="2">Hora Fim do Procedimento</td>
+<td colspan="4">Hora final do procedimento na guia do
+paciente.
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>99=99                                        </td>
+<td></td>
+<td>TIME()</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_TPANES</td>
+<td>Tp Anestesia</td>
+<td colspan="2">Tipo de Anestesia</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>HS_SeekRet("SX5", "'CA' + M -> GE7_TPANES" ,1, .F., "GE7_DESANE","X5_DESCRI")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ca.html">CA</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_DESANE</td>
+<td>Anestesia</td>
+<td colspan="2">Descricao Anestesia</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>55</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>HS_INIPADR("SX5",1,"CA" + GE7 -> GE7_TPANES, "X5_DESCRI")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>HS_INIPADR("SX5",1,"CA" + GE7 -> GE7_TPANES , "X5_DESCRI")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_TABELA</td>
+<td>Tabela Calc.</td>
+<td colspan="2">Codigo da Tabela Calculo</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_PAGFIL</td>
+<td>Pago Filme</td>
+<td colspan="2">Valor Pago do Filme</td>
+<td colspan="4">Valor pago pelo convenio referente ao
+valor do Filme.
+</td>
+<td>N</td>
+<td>10</td>
+<td>4</td>
+<td>@E 99,999.9999                               </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_GLOFIL</td>
+<td>Glosa Filme</td>
+<td colspan="2">Valor da Glosa do Filme</td>
+<td colspan="4">Valor glosado pelo convenio referente ao
+valor do Filme.
+</td>
+<td>N</td>
+<td>10</td>
+<td>4</td>
+<td>@E 99,999.9999                               </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_RECFIL</td>
+<td>Recup. Filme</td>
+<td colspan="2">Valor recuperado do Filme</td>
+<td colspan="4">Valor recuperado do convenio referente
+ao valor do Filme.
+</td>
+<td>N</td>
+<td>10</td>
+<td>4</td>
+<td>@E 99,999.9999                               </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_PERFIL</td>
+<td>Perd. Filme</td>
+<td colspan="2">Valor perdido do Filme</td>
+<td colspan="4">Valor perdido para o convenio convenio
+referente ao valor do Filme.
+</td>
+<td>N</td>
+<td>10</td>
+<td>4</td>
+<td>@E 99,999.9999                               </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_VLREPF</td>
+<td>Rep. Filme</td>
+<td colspan="2">Valor do repasse do Filme</td>
+<td colspan="4">Valor do repasse do médico referente ao
+valor do Filme.
+</td>
+<td>N</td>
+<td>10</td>
+<td>4</td>
+<td>@E 99,999.9999                               </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_TECUTI</td>
+<td>Tec utilizad</td>
+<td colspan="2">Tecnica utilizada</td>
+<td colspan="4">Técnica Utilizada
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .or. Pertence('CV')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>C=Convencional;V=Videolaparoscopia;R=Rob�tica</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_CNPJFO</td>
+<td>CNPJ Fornec.</td>
+<td colspan="2">CNPJ Fornecedor</td>
+<td colspan="4">Informe o CNPJ do Fornecedor do
+Material.
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>@R 99.999.999/9999-99                        </td>
+<td>Vazio() .Or. Cgc(M->GE7_CNPJFO)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_NFOPM</td>
+<td>NF OPM</td>
+<td colspan="2">Nota Fiscal OPM</td>
+<td colspan="4">Informe o Numero da Nota Fiscal.
+</td>
+<td>C</td>
+<td>11</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_LOTOPM</td>
+<td>Lote OPM</td>
+<td colspan="2">Numero Lote OPM</td>
+<td colspan="4">Informe o Numero do Lote.
+</td>
+<td>C</td>
+<td>11</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_SEROPM</td>
+<td>Serie OPM</td>
+<td colspan="2">Serie OPM</td>
+<td colspan="4">Informe a Serie da Nota Fiscal.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_CNPJFA</td>
+<td>CNPJ Fabric.</td>
+<td colspan="2">CNPJ Fabricante</td>
+<td colspan="4">Informe o CNPJ do Fabricante Material.
+</td>
+<td>C</td>
+<td>14</td>
+<td>0</td>
+<td>@R 99.999.999/9999-99                        </td>
+<td>Vazio() .Or. Cgc(M->GE7_CNPJFA)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_ANVOPM</td>
+<td>Reg Anvisa</td>
+<td colspan="2">Reg Anvisa OPM</td>
+<td colspan="4">Informe o Registro do Produto na ANVISA.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_COMPD</td>
+<td>Competencia</td>
+<td colspan="2">Competencia</td>
+<td colspan="4">Informe a competencia da diaria.
+</td>
+<td>C</td>
+<td>7</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_QTFILH</td>
+<td>Qtd Filhos</td>
+<td colspan="2">Qtd de Filhos</td>
+<td colspan="4">Informe a Quantidade de Filhos.
+</td>
+<td>N</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_CIDIND</td>
+<td>CID Indic.</td>
+<td colspan="2">CID de Indicação</td>
+<td colspan="4">Informe o CID de Indicação.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_GRINST</td>
+<td>Grau Instr.</td>
+<td colspan="2">Grau de Instrução</td>
+<td colspan="4">Informe o Grau de Instrucao.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_MCONT1</td>
+<td>Met Contra1</td>
+<td colspan="2">Metodo Contraceptivo 1</td>
+<td colspan="4">Informe o Metodo Contraceptivo 1
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_MCONT2</td>
+<td>Met Contra2</td>
+<td colspan="2">Metodo Contraceptivo 2</td>
+<td colspan="4">Informe o Metodo Contraceptivo 2
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_GESTR</td>
+<td>Gest Risco</td>
+<td colspan="2">Gestacao de Risco</td>
+<td colspan="4">Informe se a Gestacao e de Alto Risco.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_TDEAIH</td>
+<td>Tip Doc AIH</td>
+<td colspan="2">Tipo Doc. Executante AIH</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=CPF Prof;2=CNS;3=CNPJ;5=CNES</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_DDEAIH</td>
+<td>Desc Doc AIH</td>
+<td colspan="2">Descricao Doc. Exec. AIH</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_REPPAR</td>
+<td>Repl Parcial</td>
+<td colspan="2">Replica Proc Cnta Parcial</td>
+<td colspan="4">Informe se será replicado o procedimento
+para a proxima guia no momento do
+faturamento parcial.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=N�o;1=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_DENREG</td>
+<td>Dente/Reg.</td>
+<td colspan="2">Dente/Reg.</td>
+<td colspan="4">Informe o dente/região.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>                                             </td>
+<td>Vazio() .OR. HS_SeekRet('B05','M->GE7_DENREG',2, .F., 'GE7_DESREG', 'B05_DESCRI')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/b05hsp.html">B05HSP</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_DESREG</td>
+<td>Descrição</td>
+<td colspan="2">Descrição</td>
+<td colspan="4">Descrição Região/Dente
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>If(!Inclui,HS_INIPADR('B05',2,M->GE7_DENREG,'B05_DESCRI'),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>HS_INIPADR('B05',2,M->GE7_DENREG,'B05_DESCRI')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_FADENT</td>
+<td>Face</td>
+<td colspan="2">Face</td>
+<td colspan="4">Face do Dente
+</td>
+<td>C</td>
+<td>5</td>
+<td>0</td>
+<td>                                             </td>
+<td>Vazio() .OR. HS_SeekRet('BYL','M->GE7_FADENT',3, .F., 'GE7_FACDES', 'BYL_DESFAC')</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/b06hsp.html">B06HSP</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_FACDES</td>
+<td>Descrição</td>
+<td colspan="2">Descrição Face</td>
+<td colspan="4">Descrição da Face.
+</td>
+<td>C</td>
+<td>50</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>If(!Inclui, HS_INIPADR('BYL',3,M->GE7_FADENT,'BYL_DESFAC'),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>HS_INIPADR('BYL',3,M->GE7_FADENT,'BYL_DESFAC')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GE7_STAPLS</td>
+<td>Status PLS</td>
+<td colspan="2">Status de Aut no PLS</td>
+<td colspan="4">Status da Autorização no PLS.
+0=Negado | 1=Autorizado
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>0=Negado;1=Autorizado</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

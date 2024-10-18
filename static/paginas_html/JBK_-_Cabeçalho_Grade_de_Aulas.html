@@ -1,0 +1,607 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: JBK - Cabeçalho Grade de Aulas</title></head>
+<body>
+<font color="orange"><h2 id="JBK">Tabela: JBK - Cabeçalho Grade de Aulas</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Cabeçalho Grade de Aulas</b></td><td colspan="2"><b>JBK_FILIAL+JBK_CODCUR+JBK_PERLET+JBK_HABILI+JBK_TURMA</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">JBK_FILIAL+JBK_CODCUR+JBK_PERLET+JBK_HABILI+JBK_TURMA</td><td>Cod.Curso + Per. Letivo + Habilitacao + Turma</td><td></td></tr>
+<tr><td>2</td><td colspan="2">JBK_FILIAL+JBK_CODCUR+JBK_TURMA</td><td>Cod.Curso + Turma</td><td></td></tr>
+<tr><td>3</td><td colspan="2">JBK_FILIAL+JBK_ATIVO+JBK_CODCUR+JBK_TURMA</td><td>Ativo + Cod.Curso + Turma</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>JBK_FILIAL</td>
+<td>FILIAL</td>
+<td colspan="2">Filial</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JBK_CODCUR</td>
+<td>Cod.Curso</td>
+<td colspan="2">Codigo do Curso</td>
+<td colspan="4">Informe o código do curso. Pressione F3
+para efetuar a consulta de cursos já
+cadastrados.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>AC180PeJBO() .And. AC180VldCh() .And. ACNivSec( , M->JBK_CODCUR )</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/jah.html">JAH</a></td>
+<td><a href="/tabelas_protheus/gatilhos/jbk_codcur.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>AC180AtuE()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JBK_DESC</td>
+<td>Desc. Curso</td>
+<td colspan="2">Desc. Curso</td>
+<td colspan="4">Informa a Descrição do Curso Vigente
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui, " ", Posicione("JAH",1,xFilial("JAH") + JBK->JBK_CODCUR, "JAH_DESC"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("JAH",1,xFilial("JAH") + JBK->JBK_CODCUR, "JAH_DESC")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JBK_PERLET</td>
+<td>Per. Letivo</td>
+<td colspan="2">Serie</td>
+<td colspan="4">Informe o período letivo.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>99                                           </td>
+<td>AC180VldCh()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/jbk_perlet.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>lEdita</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JBK_HABILI</td>
+<td>Habilitacao</td>
+<td colspan="2">Codigo da Habilitacao</td>
+<td colspan="4">Informe o código do habilitação.
+Pressione F3 para efetuar a consulta de
+cursos já cadastrados.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>AC180VldCh()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/jdk.html">JDK</a></td>
+<td><a href="/tabelas_protheus/gatilhos/jbk_habili.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JBK_DHABIL</td>
+<td>Descricao</td>
+<td colspan="2">Descricao da Habilitacao</td>
+<td colspan="4">Informa a Descrição da Habilitação do
+Curso Vigente
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(INCLUI,"",Posicione("JDK",1,xFilial("JDK")+JBK->JBK_HABILI,"JDK_DESC"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("JDK",1,xFilial("JDK") + JBK->JBK_HABILI,"JDK_DESC")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JBK_TURMA</td>
+<td>Turma</td>
+<td colspan="2">Turma</td>
+<td colspan="4">Informe a Turma.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>AC180VldCh()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/jbk_turma.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>lEdita</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/021.html">021</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>JBK_ANOLET</td>
+<td>Ano Letivo</td>
+<td colspan="2">Ano Letivo</td>
+<td colspan="4">Informa o Ano Letivo que sera ministrado
+o curso.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>9999                                         </td>
+<td></td>
+<td>Iif(Inclui, " ", Posicione("JAR",1,xFilial("JAR")+JBK->JBK_CODCUR+JBK->JBK_PERLET+JBK->JBK_HABILI, "JAR_ANOLET"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Ac450InBrw("JBK_ANOLET")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JBK_TURNO</td>
+<td>Turno</td>
+<td colspan="2">Turno</td>
+<td colspan="4">Informa o Turno que serão ministradas as
+aulas.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui, " ", Posicione("JAH",1,xFilial("JAH") + JBK->JBK_CODCUR, "JAH_TURNO"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("JAH",1,xFilial("JAH") + JBK->JBK_CODCUR, "JAH_TURNO")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JBK_DTURNO</td>
+<td>Desc. Turno</td>
+<td colspan="2">Desc. Turno</td>
+<td colspan="4">Informa a descrição do turno do curso
+vigente
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui, " ", Tabela("F5",Posicione("JAH",1,xFilial("JAH") + JBK->JBK_CODCUR, "JAH_TURNO"),.F.))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Tabela("F5",Posicione("JAH",1,xFilial("JAH") + JBK->JBK_CODCUR,"JAH_TURNO"),.F.)</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JBK_CODLOC</td>
+<td>Cod. Local</td>
+<td colspan="2">Codigo Local</td>
+<td colspan="4">Informa o Codigo do Local onde serão
+ministradas as aulas.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui, " ", Posicione("JBO",1,xFilial("JBO")+JBK->JBK_CODCUR+JBK->JBK_PERLET+JBK->JBK_HABILI+JBK->JBK_TURMA, "JBO_CODLOC"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JBK_DLOCAL</td>
+<td>Desc. Local</td>
+<td colspan="2">Desc. Local</td>
+<td colspan="4">Informa a descrição do local
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui, " ", Posicione("JA3",1,xFilial("JA3")+JBO->JBO_CODLOC, "JA3_DESLOC"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JBK_CODPRE</td>
+<td>Cod. Predio</td>
+<td colspan="2">Cod. Predio</td>
+<td colspan="4">Informa o Codigo do Prédio onde serão
+ministrados os cursos
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui, " ", Posicione("JBO",1,xFilial("JBO")+JBK->JBK_CODCUR+JBK->JBK_PERLET+JBK->JBK_HABILI+JBK->JBK_TURMA, "JBO_CODPRE"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JBK_DPREDI</td>
+<td>Desc. Predio</td>
+<td colspan="2">Desc. Predio</td>
+<td colspan="4">Informa a Descrição do Predio informado
+anteriormente
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui, " ", Posicione("JA4",1,xFilial("JA4")+JBO->JBO_CODLOC+JBO->JBO_CODPRE, "JA4_DESPRE"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JBK_ANDAR</td>
+<td>Andar</td>
+<td colspan="2">Andar</td>
+<td colspan="4">Informa o Andar do Prédio da Unidade
+onde serão ministradas as aulas.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui, " ", Posicione("JBO",1,xFilial("JBO")+JBK->JBK_CODCUR+JBK->JBK_PERLET+JBK->JBK_HABILI+JBK->JBK_TURMA,"JBO_ANDAR"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JBK_CODSAL</td>
+<td>Codigo Sala</td>
+<td colspan="2">Codigo Sala</td>
+<td colspan="4">Informa o Codigo da Sala.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui, " ", Posicione("JBO",1,xFilial("JBO")+JBK->JBK_CODCUR+JBK->JBK_PERLET+JBK->JBK_HABILI+JBK->JBK_TURMA,"JBO_CODSAL"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JBK_DSALA</td>
+<td>Desc. Sala</td>
+<td colspan="2">Desc. Sala</td>
+<td colspan="4">Informa a Descrição da Sala onde será
+ministrada as aulas
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(Inclui, " ", Posicione("JA5",1,xFilial("JA5")+JBO->JBO_CODLOC+JBO->JBO_CODPRE+JBO->JBO_ANDAR+JBO->JBO_CODSAL, "JA5_DESCSA"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>JBK_ATIVO</td>
+<td>Ativo</td>
+<td colspan="2">Ativo</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>JCS</td>
+<td colspan="2">JBK_CODCUR+JBK_PERLET+JBK_HABILI+JBK_TURMA</td>
+<td colspan="2">JCS_CURSO+JCS_SERIE+JCS_HABILI+JCS_TURMA</td>
+</tr>
+<tr>
+<td>JBL</td>
+<td colspan="2">JBK_CODCUR+JBK_PERLET+JBK_HABILI+JBK_TURMA</td>
+<td colspan="2">JBL_CODCUR+JBL_PERLET+JBL_HABILI+JBL_TURMA</td>
+</tr>
+<tr>
+<td>JBR</td>
+<td colspan="2">JBK_CODCUR</td>
+<td colspan="2">JBR_CODCUR</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

@@ -1,0 +1,721 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: VSL - Inconvenientes</title></head>
+<body>
+<font color="orange"><h2 id="VSL">Tabela: VSL - Inconvenientes</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Inconvenientes</b></td><td colspan="2"><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">VSL_FILIAL+VSL_CODMAR+VSL_CODGRU+VSL_CODINC</td><td>Marca + Grupo Incon. + Cod. Incon.</td><td></td></tr>
+<tr><td>2</td><td colspan="2">VSL_FILIAL+VSL_CODINC</td><td>Cod. Incon.</td><td></td></tr>
+<tr><td>3</td><td colspan="2">VSL_FILIAL+VSL_CODGRU+VSL_CODINC</td><td>Grupo Incon. + Cod. Incon.</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>VSL_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">FILIAL</td>
+<td colspan="4">Filial
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/vsl_filial.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VSL_CODMAR</td>
+<td>Marca</td>
+<td colspan="2">Codigo da Marca</td>
+<td colspan="4">Informe aqui o código da marca,
+referente a montadora do veiculo,
+exemplo:      GM  = General Motors
+REN = Renault
+HON = Honda
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!S3                                         </td>
+<td>VAZIO() .or. FG_Seek("VE1","M->VSL_CODMAR",1,.F.,"VSL_DESMAR","VE1_DESMAR").and.FG_EK("VSL")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ve1.html">VE1</a></td>
+<td><a href="/tabelas_protheus/gatilhos/vsl_codmar.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>Inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VSL_DESMAR</td>
+<td>Descricao</td>
+<td colspan="2">Descricao da Marca</td>
+<td colspan="4">Descrição da marca, referente a
+montadora do veiculo, exemplo:
+VW  = Volkswagen
+TOY = Toyota
+FIA = Fiat
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!S30                                        </td>
+<td></td>
+<td>if(!Inclui,Posicione("VE1",1,xFilial("VE1")+VSL->VSL_CODMAR,"VE1_DESMAR"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("VE1",1,xFilial("VE1")+VSL->VSL_CODMAR,"VE1_DESMAR")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VSL_CODGRU</td>
+<td>Grupo Incon.</td>
+<td colspan="2">Grupo do Inconveniente</td>
+<td colspan="4">Código do Grupo de Inconvenientes,
+entidade esta que será utilizada para
+agrupar os inconvenientes de mesmo
+interesse.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!S3                                         </td>
+<td>FG_Seek("VSK","M->VSL_CODMAR+M->VSL_CODGRU",1,.f.,"VSL_DESGRU","VSK_DESGRU") .and. FG_EK("VSL")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/vskvsl.html">VSKVSL</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>Inclui</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VSL_DESGRU</td>
+<td>Descricao</td>
+<td colspan="2">Descricao do Grupo</td>
+<td colspan="4">Descrição do Grupo de Inconvenientes.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!S30                                        </td>
+<td></td>
+<td>if(!Inclui,Posicione("VSK",1,xFilial("VSK")+VSL->VSL_CODMAR+VSL->VSL_CODGRU,"VSK_DESGRU"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("VSK",1,xFilial("VSK")+VSL->VSL_CODMAR+VSL->VSL_CODGRU,"VSK_DESGRU")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VSL_CODINC</td>
+<td>Cod. Incon.</td>
+<td colspan="2">Codigo do Inconveniente</td>
+<td colspan="4">Código do Inconveniente.
+</td>
+<td>C</td>
+<td>8</td>
+<td>0</td>
+<td>@!S8                                         </td>
+<td>Existchav("VSL",M->VSL_CODMAR+M->VSL_CODGRU+M->VSL_CODINC) .and. FG_EK("VSL")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>Inclui .or. lAltGruInc</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VSL_DESINC</td>
+<td>Descr Inconv</td>
+<td colspan="2">Descr do Inconveniente</td>
+<td colspan="4">Descrição do Inconveniente.
+</td>
+<td>C</td>
+<td>120</td>
+<td>0</td>
+<td>@!S30                                        </td>
+<td>NaoVazio()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VSL_TIPO</td>
+<td>Tipo Incon.</td>
+<td colspan="2">Tipo do Inconveniente</td>
+<td colspan="4">Define o tipo de inconveniente.
+Opções
+1=Normal
+2=Prim. Revisão
+3=Demais Revisões
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("123")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Normal;2=Prim. Revis�o;3=Demais Revis�es</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VSL_TIPTEM</td>
+<td>TpTempo Peca</td>
+<td colspan="2">Tipo de Tempo</td>
+<td colspan="4">Tipo de tempo que ira ser sugerido na
+requisição de pecas e servicos no
+momento em que o inconveniente for
+informado.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>FG_Seek("VOI","M->VSL_TIPTEM",1,.f.,"VSL_DESTEM","VOI_DESTTE")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/voi.html">VOI</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VSL_DESTEM</td>
+<td>Descricao</td>
+<td colspan="2">Descricao do Tp de Tempo</td>
+<td colspan="4">Descrição do Tipo de Tempo que será
+sugerido na requisição de pecas e
+sernicos no momento em que o conveniente
+for informado.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!S30                                        </td>
+<td></td>
+<td>if(!Inclui,Posicione("VOI",1,xFilial("VOI")+VSL->VSL_TIPTEM,"VOI_DESTTE"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("VOI",1,xFilial("VOI")+VSL->VSL_TIPTEM,"VOI_DESTTE")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VSL_TIPTSV</td>
+<td>TpTempo Serv</td>
+<td colspan="2">Tipo de Tempo de Servico</td>
+<td colspan="4">Define o tipo de tempo para serviços.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCPO("VOI",M->VSL_TIPTSV)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/voi.html">VOI</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VSL_KILOME</td>
+<td>Km Inicial</td>
+<td colspan="2">Km Inicial</td>
+<td colspan="4">Informe  a kilometragem inicial.
+</td>
+<td>N</td>
+<td>8</td>
+<td>0</td>
+<td>@E 99,999,999                                </td>
+<td>M->VSL_KILOME >= 0</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VSL_TEMPAD</td>
+<td>Tp padrão</td>
+<td colspan="2">Tempo padrão</td>
+<td colspan="4">Informe o tempo padrão.
+</td>
+<td>N</td>
+<td>5</td>
+<td>0</td>
+<td>@R 999:99                                    </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VSL_KILFIN</td>
+<td>Km Final</td>
+<td colspan="2">Km Final</td>
+<td colspan="4">Informe a Kilometragem Final.
+</td>
+<td>N</td>
+<td>8</td>
+<td>0</td>
+<td>@E 99,999,999                                </td>
+<td>M->VSL_KILFIN >= 0</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VSL_PERINI</td>
+<td>Dias Inicial</td>
+<td colspan="2">Dias Inicial valid Dt Vda</td>
+<td colspan="4">Informe os Dias  Inicial validade.
+</td>
+<td>N</td>
+<td>5</td>
+<td>0</td>
+<td>99999                                        </td>
+<td>M->VSL_PERINI >= 0</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VSL_PERFIN</td>
+<td>Dias Final</td>
+<td colspan="2">Dias Final valid Dt Venda</td>
+<td colspan="4">Informe os Dias Final validade
+</td>
+<td>N</td>
+<td>5</td>
+<td>0</td>
+<td>99999                                        </td>
+<td>M->VSL_PERFIN >= 0</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VSL_TPCONC</td>
+<td>TpTempo Conc</td>
+<td colspan="2">Tipo Tempo Concessionaria</td>
+<td colspan="4">Tipo de Tempo quando faturar o servico
+para a Concessionaria.
+Somente sera considerado quando o
+inconveniente for de primeira revisão.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>vazio() .or. FG_SEEK("VOI","M->VSL_TPCONC",1,.f.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/voi.html">VOI</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VSL_TPFABR</td>
+<td>TpTempo Fabr</td>
+<td colspan="2">Tipo Tempo Fabrica</td>
+<td colspan="4">Tipo de Tempo quando faturar o servico
+para a Fabrica.
+Somente sera considerado quando o
+inconveniente for de primeira revisão.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>vazio() .or. FG_SEEK("VOI","M->VSL_TPFABR",1,.f.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/voi.html">VOI</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VSL_APROVA</td>
+<td>Aprovado</td>
+<td colspan="2">Aprovado</td>
+<td colspan="4">Informe se aprovado.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("01")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Nao;1=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VSL_TPOUTR</td>
+<td>TpTempo Outr</td>
+<td colspan="2">Tipo Tempo Outros</td>
+<td colspan="4">Tipo de Tempo quando faturar o servico
+para Outros.
+Somente sera considerado quando o
+inconveniente for de primeira revisão.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>vazio() .or. FG_SEEK("VOI","M->VSL_TPOUTR",1,.f.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/voi.html">VOI</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VSL_SPPS1R</td>
+<td>Pc/Sv 1aRev</td>
+<td colspan="2">Separa Pec/Srv 1ª Revisão</td>
+<td colspan="4">Informe se deve-se separar Pecas e
+Servicos quando se tratar de 1a Revisao!
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("01")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Nao;1=Sim</td>
+<td>M->VSL_TIPO=="2"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>VG5</td>
+<td colspan="2">VSL_CODINC</td>
+<td colspan="2">VG5_CODINC</td>
+</tr>
+<tr>
+<td>VSP</td>
+<td colspan="2">VSL_CODINC</td>
+<td colspan="2">VSP_CODINC</td>
+</tr>
+<tr>
+<td>VF1</td>
+<td colspan="2">VSL_CODINC</td>
+<td colspan="2">VF1_CODINC</td>
+</tr>
+<tr>
+<td>VZB</td>
+<td colspan="2">VSL_CODINC</td>
+<td colspan="2">VZB_CODINC</td>
+</tr>
+<tr>
+<td>VST</td>
+<td colspan="2">VSL_CODINC</td>
+<td colspan="2">VST_CODINC</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

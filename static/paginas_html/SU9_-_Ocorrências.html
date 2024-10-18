@@ -1,0 +1,486 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: SU9 - Ocorrências</title></head>
+<body>
+<font color="orange"><h2 id="SU9">Tabela: SU9 - Ocorrências</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Ocorrências</b></td><td colspan="2"><b>U9_FILIAL+U9_ASSUNTO+U9_CODIGO</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">U9_FILIAL+U9_ASSUNTO+U9_CODIGO</td><td>Assunto + Codigo</td><td></td></tr>
+<tr><td>2</td><td colspan="2">U9_FILIAL+U9_CODIGO</td><td>Codigo</td><td></td></tr>
+<tr><td>3</td><td colspan="2">U9_FILIAL+U9_TIPOOCO</td><td>Tipo da Ocor</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>U9_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Código da filial da empresa.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U9_CODIGO</td>
+<td>Codigo</td>
+<td colspan="2">Codigo da Ocorrencia</td>
+<td colspan="4">Código do motivo da ligação.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>!@                                           </td>
+<td>"ExistChav('SU9', M->U9_CODIGO,2)"</td>
+<td>IIF(INCLUI,GetSxENum("SU9","U9_CODIGO"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>U9_ASSUNTO</td>
+<td>Assunto</td>
+<td colspan="2">Codigo do Assunto</td>
+<td colspan="4">Código do assunto em que a ocorrência
+está  relacionada.
+Pressione [F3] para selecionar o
+assuntopara esta ocorrência.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>999999                                       </td>
+<td>ExistCpo("SX5","T1"+M->U9_ASSUNTO)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/t1.html">T1</a></td>
+<td><a href="/tabelas_protheus/gatilhos/u9_assunto.html">S</td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>U9_DESCASS</td>
+<td>Descricao</td>
+<td colspan="2">Descricao do Assunto</td>
+<td colspan="4">Descriç„o do assunto da ocorrência.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@x                                           </td>
+<td></td>
+<td>IIF(!INCLUI,Posicione("SX5",1,xFilial("SX5")+ "T1" + SU9->U9_ASSUNTO,"X5DESCRI()"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("SX5",1,xFilial("SX5")+ "T1" + SU9->U9_ASSUNTO,"X5DESCRI()")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U9_DESC</td>
+<td>Ocorrencia</td>
+<td colspan="2">Descricao da Ocorrencia</td>
+<td colspan="4">Descrição da ocorrencia do atendimento.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@x                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>U9_DISPLAY</td>
+<td>Valido (S/N)</td>
+<td colspan="2">Valido (Sim/Nao)</td>
+<td colspan="4">Indica se a ocorrência poderá ser usada
+no atendimento ou n„o.
+1- Sim
+2- N„o
+</td>
+<td>C</td>
+<td>10</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Tk130Valido()</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U9_VALIDO</td>
+<td>Valido</td>
+<td colspan="2">Valido (Sim/Nao)</td>
+<td colspan="4">Indica se a ocorrência será válida para
+o atendimento.
+1= Sim
+2= Não
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>!                                            </td>
+<td>Pertence("12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=Sim;2=Nao;</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>U9_TIPOATE</td>
+<td>Atendimento</td>
+<td colspan="2">Utilizado no Atendimento</td>
+<td colspan="4">Tipo do atendimento desta ocorrência:
+1-Telemarketing
+2-Televendas
+3-Telecobranca
+4-Ambos
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>!                                            </td>
+<td>Pertence("1234")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td>1=TeleMarketing;2=TeleVendas;3=TeleCobranca;4=Todos</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>U9_ACAOSLA</td>
+<td>Acao SLA</td>
+<td colspan="2">Acao SLA</td>
+<td colspan="4">Indica o tipo de mudança no SLA que esta
+ocorrência devera provocar em um chamado
+Help Desk. (Iniciar/ Atualizar/
+Finalizar)
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Nenhuma;1=Iniciar;2=Finalizar;3=Atualizar;4=Pausar</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U9_PRAZO</td>
+<td>Prazo Resp.</td>
+<td colspan="2">Prazo da resposta (Horas)</td>
+<td colspan="4">Prazo de resposta para o atendimento
+desta ocorrência.
+A unidade de medida é horas.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>999                                          </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U9_VISIVEL</td>
+<td>Visivel?</td>
+<td colspan="2">Visivel ao cliente?</td>
+<td colspan="4">Indica se será visivel ao cliente
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence("12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>U9_TIPOOCO</td>
+<td>Tipo da Ocor</td>
+<td colspan="2">Tipo da Ocorrência</td>
+<td colspan="4">Seleciona o tipo da ocorrência, campo
+utilizado na extração de Indicadores e
+BI.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("SUX")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sux.html">SUX</a></td>
+<td><a href="/tabelas_protheus/gatilhos/u9_tipooco.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>U9_DESTPOC</td>
+<td>Desc.Tp.Oc.</td>
+<td colspan="2">Descricao tp. ocorrencia</td>
+<td colspan="4">Descrição do Tipo da Ocorrência
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("SUX",1,XFILIAL("SUX")+SU9->U9_TIPOOCO,"UX_DESTOC"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("SUX",1,xFilial("SUX")+SU9->U9_TIPOOCO,"UX_DESTOC")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>SUD</td>
+<td colspan="2">U9_CODIGO</td>
+<td colspan="2">UD_OCORREN</td>
+</tr>
+<tr>
+<td>SUF</td>
+<td colspan="2">U9_CODIGO</td>
+<td colspan="2">UF_OCORREN</td>
+</tr>
+<tr>
+<td>ACF</td>
+<td colspan="2">U9_CODIGO</td>
+<td colspan="2">ACF_MOTIVO</td>
+</tr>
+<tr>
+<td>SUA</td>
+<td colspan="2">U9_CODIGO</td>
+<td colspan="2">UA_CODLIG</td>
+</tr>
+<tr>
+<td>SUR</td>
+<td colspan="2">U9_CODIGO</td>
+<td colspan="2">UR_CODREC</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

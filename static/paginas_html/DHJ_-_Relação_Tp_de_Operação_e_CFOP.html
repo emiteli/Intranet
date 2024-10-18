@@ -1,0 +1,265 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: DHJ - Relação Tp de Operação e CFOP</title></head>
+<body>
+<font color="orange"><h2 id="DHJ">Tabela: DHJ - Relação Tp de Operação e CFOP</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Relação Tp de Operação e CFOP</b></td><td colspan="2"><b>DHJ_FILIAL+DHJ_TPOP+DHJ_CFOP</b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">DHJ_FILIAL+DHJ_TPOP+DHJ_CFOP</td><td>Tp.Operação + CFOP</td><td></td></tr>
+<tr><td>2</td><td colspan="2">DHJ_FILIAL+DHJ_CFOP+DHJ_TPOP</td><td>CFOP + Tp.Operação</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>DHJ_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Informar a Filial da Empresa.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DHJ_TPOP</td>
+<td>Tp.Operação</td>
+<td colspan="2">Tipo de Operação</td>
+<td colspan="4">Informar Tipo de Operação
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistChav('DHJ') .And. ExistCpo('SX5','DJ'+FwFldGet('DHJ_TPOP'))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dj.html">DJ</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dhj_tpop.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DHJ_DESCTP</td>
+<td>Descrição</td>
+<td colspan="2">Descricao TP de Operação</td>
+<td colspan="4">Descrição do Tipo de Operação
+</td>
+<td>C</td>
+<td>55</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE('SX5',1,XFILIAL('SX5')+'DJ'+DHJ->DHJ_TPOP,'X5_DESCRI'),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td>POSICIONE('SX5',1,XFILIAL('SX5')+'DJ'+FwFldGet('DHJ_TPOP'),'X5_DESCRI')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DHJ_CFOP</td>
+<td>CFOP</td>
+<td colspan="2">CFOP</td>
+<td colspan="4">Informar o Código Fiscal de Operações e
+Prestações
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistChav('DHJ',FwFldGet('DHJ_CFOP'),2) .And. ExistCpo('SX5','13'+FwFldGet('DHJ_CFOP'))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/13.html">13</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dhj_cfop.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DHJ_DESCCF</td>
+<td>Descrição</td>
+<td colspan="2">Descricao CFOP</td>
+<td colspan="4">Descrição do Código Fiscal de Operações
+e Prestações
+</td>
+<td>C</td>
+<td>55</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE('SX5',1,XFILIAL('SX5')+'13'+DHJ->DHJ_CFOP,'X5_DESCRI'),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td>POSICIONE('SX5',1,XFILIAL('SX5')+'13'+FwFldGet('DHJ_CFOP'),'X5_DESCRI')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DHJ_TPOPSA</td>
+<td>Tp.Op. Saída</td>
+<td colspan="2">Tipo de Operação de Saída</td>
+<td colspan="4">Informar Tipo de Operação de Saída
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistChav('DHJ') .And. ExistCpo('SX5','DJ'+FwFldGet('DHJ_TPOPSA'))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/dj.html">DJ</a></td>
+<td><a href="/tabelas_protheus/gatilhos/dhj_tpopsa.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>DHJ_DESTPS</td>
+<td>Desc. Saída</td>
+<td colspan="2">Desc. TP Operação Saída</td>
+<td colspan="4">Descrição do Tipo de Operação de saída
+</td>
+<td>C</td>
+<td>55</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE('SX5',1,XFILIAL('SX5')+'DJ'+DHJ->DHJ_TPOPSA,'X5_DESCRI'),'')</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td>POSICIONE('SX5',1,XFILIAL('SX5')+'DJ'+FwFldGet('DHJ_TPOPSA'),'X5_DESCRI')</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

@@ -1,0 +1,507 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: CET - Lcto Parte B sem Reflexo A</title></head>
+<body>
+<font color="orange"><h2 id="CET">Tabela: CET - Lcto Parte B sem Reflexo A</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Lcto Parte B sem Reflexo A</b></td><td colspan="2"><b>CET_FILIAL+CET_ID+CET_IDCTA+CET_IDLCTO+CET_IDCTAC+CET_CODTRI</b></td><td><b>TAFA322</b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">CET_FILIAL+CET_ID+CET_IDCTA+CET_IDLCTO+CET_IDCTAC</td><td>ID + ID Cta B + Ind.Lançam. + ID Cta Cont</td><td></td></tr>
+<tr><td>2</td><td colspan="2">CET_FILIAL+CET_IDCTA+CET_IDLCTO+CET_IDCTAC</td><td>ID Cta B + Ind.Lançam. + ID Cta Cont</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>CET_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial do Sistema</td>
+<td colspan="4">Deve representar neste campo a Filial do
+Sistema.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CET_ID</td>
+<td>ID</td>
+<td colspan="2">Identificador do Registro</td>
+<td colspan="4">Deve representar o código de
+identificação do registro. Este código é
+controlado internamente pelo sistema de
+forma incremental e único por filial.
+</td>
+<td>C</td>
+<td>36</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/085.html">085</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CET_CTA</td>
+<td>Conta Lanç.</td>
+<td colspan="2">Conta Lançamento Parte B</td>
+<td colspan="4">Código da conta do lançamento (conta da
+Parte B).
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>xFunVldCmp("CFR",3)</td>
+<td>Iif(!INCLUI .and. !Empty(CET->CET_IDCTA),Posicione("CFR",1,xFilial("CFR")+CET->CET_IDCTA,"CFR_CODCTA"),"")</td>
+<td><a href="/tabelas_protheus/f3/cfr.html">CFR</a></td>
+<td><a href="/tabelas_protheus/gatilhos/cet_cta.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("CFR",1,xFilial("CFR")+CET->CET_IDCTA,"CFR_CODCTA")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CET_DCTA</td>
+<td>Desc Cta Lan</td>
+<td colspan="2">Descr. Conta Lançamento</td>
+<td colspan="4">Descrição da conta do lançamento (conta
+da Parte B).
+</td>
+<td>C</td>
+<td>220</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(!INCLUI .and. !Empty(CET->CET_IDCTA),Posicione("CFR",1,xFilial("CFR")+CET->CET_IDCTA,"CFR_DCODCT"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CET_IDCTA</td>
+<td>ID Cta B</td>
+<td colspan="2">ID Conta da Parte B</td>
+<td colspan="4">Deve representar neste campo o
+identificador do código da conta do
+lançamento ( conta da parte B ).
+</td>
+<td>C</td>
+<td>36</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/085.html">085</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CET_CODTRI</td>
+<td>Cód Tributo</td>
+<td colspan="2">Código do Tributo</td>
+<td colspan="4">Deve representar neste campo o código do
+tributo:
+1 – Imposto de Renda;
+2 – Contribuição Social sobre o Lucro
+Líquido.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence(" 12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Imposto de Renda;2=Contribui��o Social sobre o Lucro L�quido</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CET_VLRLC</td>
+<td>Vl. Lançam.</td>
+<td colspan="2">Valor do Lançamento</td>
+<td colspan="4">Deve representar neste campo o valor do
+lançamento.
+</td>
+<td>N</td>
+<td>16</td>
+<td>2</td>
+<td>@E 9,999,999,999,999.99                      </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CET_IDLCTO</td>
+<td>Ind.Lançam.</td>
+<td colspan="2">Indicador do Lançamento</td>
+<td colspan="4">Deve representar neste campo o indicador
+do lançamento:
+1 = CR - Crédito
+2 = DB - Débito
+3 = PF - Prejuízo do exercício.
+4 = BC - Base de cálculo negativa da
+CSLL
+Obs.: O indicador PF refere-se ao
+prejuízo
+apurado no exercício em curso.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence(" 1234")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=CR � Credito;2=DB � D�bito;3=PF � Prejuizo do exerc�cio;4=BC � Base de C�lculo</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CET_CTACP</td>
+<td>Conta Contra</td>
+<td colspan="2">Conta da Contrapartida</td>
+<td colspan="4">Deve representar neste campo a
+contrapartida (conta da Parte B).
+</td>
+<td>C</td>
+<td>60</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>xFunVldCmp("CFR",3)</td>
+<td>Iif(!INCLUI .and. !Empty(CET->CET_IDCTAC),Posicione("CFR",1,xFilial("CFR")+CET->CET_IDCTAC,"CFR_CODCTA"),"")</td>
+<td><a href="/tabelas_protheus/f3/cfr.html">CFR</a></td>
+<td><a href="/tabelas_protheus/gatilhos/cet_ctacp.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("CFR",1,xFilial("CFR")+CET->CET_IDCTAC,"CFR_CODCTA")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CET_DCTACP</td>
+<td>Desc Cta Con</td>
+<td colspan="2">Descr Conta Contrapartida</td>
+<td colspan="4">Deve representar neste campo a
+contrapartida (conta da Parte B).
+</td>
+<td>C</td>
+<td>220</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Iif(!INCLUI .and. !Empty(CET->CET_IDCTAC),Posicione("CFR",1,xFilial("CFR")+CET->CET_IDCTAC,"CFR_DCODCT"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CET_IDCTAC</td>
+<td>ID Cta Cont</td>
+<td colspan="2">ID Conta da Contrapartida</td>
+<td colspan="4">Deve representar neste campo o
+identificador do código da conta da
+contrapartida ( conta da parte B ).
+</td>
+<td>C</td>
+<td>36</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/085.html">085</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CET_HISTLC</td>
+<td>Hist.Lancam.</td>
+<td colspan="2">Hist. Lançamento</td>
+<td colspan="4">Deve representar neste campo o histórico
+do lançamento.
+</td>
+<td>C</td>
+<td>220</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CET_TRIDIF</td>
+<td>Trib.Difer.</td>
+<td colspan="2">Tributação Diferida</td>
+<td colspan="4">Deve representar neste campo se é um
+lançamento para realização de valores
+cuja tributação tenha sido diferida:
+1 – Sim
+2 – Não
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>                                             </td>
+<td>Pertence(" 12")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Sim;2=N�o</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CET_ORIGEM</td>
+<td>Origem</td>
+<td colspan="2">Origem do Registro</td>
+<td colspan="4">Deve representar neste campo a forma de
+inserção de origem do registro:
+A - Automático
+M - Manual
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("AM ")</td>
+<td>"M"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Vizualiza</td>
+<td>Real</td>
+<td>A=Autom�tico;M=Manual</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="5" align="center"><b><i>Relacionamentos(SX9)</i></b></td>
+</tr>
+<tr>
+<td><b>X9_CDOM - Tabela Destino</b></td>
+<td colspan="2"><b>X9_EXPDOM - Expressão Origem</b></td>
+<td colspan="2"><b>X9_EXPCDOM - Expressão Destino</b></td>
+</tr>
+<tr>
+<td>CEU</td>
+<td colspan="2">CET_ID+CET_IDCTA+CET_IDCTAC+CET_IDLCTO</td>
+<td colspan="2">CEU_ID+CEU_CTA+CEU_CTACP+CEU_IDLCTO</td>
+</tr>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

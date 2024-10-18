@@ -1,0 +1,739 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: VAX - CADASTRO DE TAREFAS</title></head>
+<body>
+<font color="orange"><h2 id="VAX">Tabela: VAX - CADASTRO DE TAREFAS</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>CADASTRO DE TAREFAS</b></td><td colspan="2"><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">VAX_FILIAL+VAX_CODTAR</td><td>Cod Tarefa</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>VAX_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4">Informe a Filial.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAX_CODTAR</td>
+<td>Cod Tarefa</td>
+<td colspan="2">Codigo da Tarefa</td>
+<td colspan="4">Informe o Codigo da Tarefa.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!S6                                         </td>
+<td>EXISTCHAV("VAX",M->VAX_CODTAR,1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VAX_DESTAR</td>
+<td>Desc Tarefa</td>
+<td colspan="2">Descricao da Tarefa</td>
+<td colspan="4">Informe a Descricao da Tarefa.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!S30                                        </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VAX_TIPPAG</td>
+<td>Tipo Pagto</td>
+<td colspan="2">Tipo Pagto Relacionado</td>
+<td colspan="4">Informe o Tipo de Pagamento relacionado
+a Tarefa.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Vazio() .or. ExistCpo("VSA",M->VAX_TIPPAG)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/sav.html">SAV</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAX_DESPAG</td>
+<td>Desc Pagto</td>
+<td colspan="2">Desc Tipo Pagto</td>
+<td colspan="4">Informe a Descricao do Tipo de Pagamento
+relacionado a Tarefa.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF(!INCLUI,POSICIONE("VSA",1,XFILIAL("VSA")+VAX->VAX_TIPPAG,"VSA_DESPAG"),"")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("VSA",1,xFilial("VSA")+VAX->VAX_TIPPAG,"VSA_DESPAG")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAX_REQTAR</td>
+<td>Pre-Requis.</td>
+<td colspan="2">Pre-Requisitos</td>
+<td colspan="4">Informe as Tarefas pre-requisitos a essa
+Tarefa.
+</td>
+<td>C</td>
+<td>70</td>
+<td>0</td>
+<td>!!!!!!/!!!!!!/!!!!!!/!!!!!!/!!!!!!/!!!!!!/   </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAX_CHAMAD</td>
+<td>Mom. Geracao</td>
+<td colspan="2">Momento da Geracao</td>
+<td colspan="4">Informe o momento da geracao da Tarefa.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("123456789").and.VEIVA320VLD()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Gravacao;2=Finalizacao;3=Pelo Usuario;4=Pendente Aprovacao;5=PreAprovado;6=Aprovado;7=Reserva;8=Cancel.Reserva;9=Cancel.Atend.</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VAX_FUNCAO</td>
+<td>Funcao Exec</td>
+<td colspan="2">Funcao a Executar</td>
+<td colspan="4">Informe a funcao a ser executada no
+momento da execucao da Tarefa.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>(Empty(M->VAX_FUNCAO).or.FindFunction(Alltrim(M->VAX_FUNCAO))).and.If(Empty(M->VAX_FUNCAO),M->VAX_EXEPAD:="1",.t.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAX_EXEPAD</td>
+<td>Exec Padrao</td>
+<td colspan="2">Executa Tela Padrao</td>
+<td colspan="4">Informe se a Tela Padrao é' executada
+momento da execucao da Tarefa.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("01")</td>
+<td>"1"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Nao;1=Sim</td>
+<td>!Empty(M->VAX_FUNCAO)</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAX_TARBLQ</td>
+<td>Bloq Finaliz</td>
+<td colspan="2">Tarefa Bloqueia Finalizac</td>
+<td colspan="4">Informe se a Tarefa Bloqueia a
+Finalizacao do Atendimento.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("01")</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Nao;1=Sim</td>
+<td>M->VAX_CHAMAD<>"2"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAX_BLQAPR</td>
+<td>Bloq Aprovac</td>
+<td colspan="2">Tarefa Bloqueia Aprovacao</td>
+<td colspan="4">Informe se a Tarefa Bloqueia a
+Aprovação do Atendimento.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("01")</td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Nao;1=Sim</td>
+<td>!(M->VAX_CHAMAD $ "2/6")</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAX_OBRIGA</td>
+<td>Obrigatoria</td>
+<td colspan="2">Tarefa Obrigatoria?</td>
+<td colspan="4">Informe se a Tarefa é obrigatoria
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Nao;1=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAX_CONDCH</td>
+<td>Cond.Geracao</td>
+<td colspan="2">Condic chamada p/ Geracao</td>
+<td colspan="4">Informe a Condicao de Chamada para
+geracao da Tarefa.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>(Empty(M->VAX_CONDCH).or.FindFunction(Alltrim(M->VAX_CONDCH)))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAX_BLQENT</td>
+<td>Bloq Entreg</td>
+<td colspan="2">Bloqueia Entrega Veiculo?</td>
+<td colspan="4">Informe se a Tarefa bloqueia a entrega
+do Veiculo.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Nao;1=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAX_LIBERA</td>
+<td>Libera</td>
+<td colspan="2">Libera</td>
+<td colspan="4">Informe se a Tarefa libera o Atendimento
+0=Nao Liberar
+1=Liberar para Faturamento
+2=Liberar para Entrega
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("012")</td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Nao Liberar;1=Liberar para Faturamento;2=Liberar para Entrega</td>
+<td>M->VAX_ORIGEM<>"2"</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAX_VOLTAR</td>
+<td>Volta Tarefa</td>
+<td colspan="2">Tarefa permite voltar</td>
+<td colspan="4">Informe se a Tarefa permite voltar
+execucao.
+1=Sim
+0=Nao
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("01")</td>
+<td>"0"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Nao;1=Sim</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAX_FUNVOL</td>
+<td>Funcao Volta</td>
+<td colspan="2">Funcao a Executar Volta</td>
+<td colspan="4">Informe a funcao a ser executada no
+momento da volta da execucao da Tarefa.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Empty(M->VAX_FUNVOL).or.FindFunction(Alltrim(M->VAX_FUNVOL))</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Nao</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAX_ESTVEI</td>
+<td>Estado Veic.</td>
+<td colspan="2">Estado do Veiculo</td>
+<td colspan="4">Informe qual o Estado do Veiculo que
+sera considerado nessa Tarefa.
+0=Novo
+1=Usado
+2=Todos
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PERTENCE("012")</td>
+<td>"2"</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>0=Novo;1=Usado;2=Todos</td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAX_ORIGEM</td>
+<td>Origem</td>
+<td colspan="2">Origem</td>
+<td colspan="4">Informe aqui qual a origem.
+</td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>Pertence("123").and.VEIVA320VLD()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td>1=Atendimento Normal;2=Faturamento Direto;3=Pedido de Venda Montadora</td>
+<td>INCLUI</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAX_TIPVEN</td>
+<td>Tipo Venda</td>
+<td colspan="2">Codigo do Tipo de Venda</td>
+<td colspan="4">Informe aqui qual tipo de venda deverá
+ser considerada como condição para
+geração da tarefa.
+</td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>FG_Seek("VV3","M->VAX_TIPVEN",1,.f.,"VAX_DESTVD","VV3_DESCRI",.t.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/vv3.html">VV3</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAX_DESTVD</td>
+<td>Descr Tp Vda</td>
+<td colspan="2">Descricao Tipo de Venda</td>
+<td colspan="4">Após informar o codigo do tipo de venda
+no campo VAX_TIPVEN, a descrição do tipo
+de venda será preenchido neste campo
+automaticamente.
+</td>
+<td>C</td>
+<td>20</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF( INCLUI , "" , Posicione("VV3", 1, xFilial("VV3")+VAX->VAX_TIPVEN, "VV3_DESCRI") )</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("VV3", 1, xFilial("VV3")+VAX->VAX_TIPVEN, "VV3_DESCRI")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAX_CODMAR</td>
+<td>Código Marca</td>
+<td colspan="2">Código da Marca</td>
+<td colspan="4">Informe aqui qual código de marca deverá
+ser considerado como condição para
+geração da tarefa.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>FG_Seek("VE1","M->VAX_CODMAR",1,.f.,"VAX_DESMAR","VE1_DESMAR",.t.)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/ve1.html">VE1</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Real</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>VAX_DESMAR</td>
+<td>Descr Marca</td>
+<td colspan="2">Descrição da Marca</td>
+<td colspan="4">Após informar o código da marca no campo
+VAX_CODMAR, a descrição da marca será
+preenchida automaticamente neste campo.
+</td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>IF( INCLUI , "" , Posicione("VE1", 1, xFilial("VV3")+VAX->VAX_CODMAR, "VE1_DESMAR") )</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td>Posicione("VE1", 1, xFilial("VV3")+VAX->VAX_CODMAR, "VE1_DESMAR")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>

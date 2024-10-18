@@ -1,0 +1,506 @@
+<html>
+<head><meta charset="UTF-8"><title>Tabela: BS6 - Tabelas de Matériais</title></head>
+<body>
+<font color="orange"><h2 id="BS6">Tabela: BS6 - Tabelas de Matériais</h2><br> Arquivos atualizado em 08/12/2020, com pacotes até 04/12/2020</font>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Tabela(SX2)</i></b></td></tr><tr><td colspan="2"><b>X2_NOME</b></td><td colspan="2"><b>X2_UNICO</b></td><td><b>X2_SYSOBJ</b></td></tr><tr><td colspan="2"><b>Tabelas de Matériais</b></td><td colspan="2"><b></b></td><td><b></b></td></tr></table>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr><td colspan="5" align="center"><b><i>Indices(SIX)</i></b></td></tr><tr><td><b>Ordem</b></td><td colspan="2"><b>Chave</b></td><td><b>Descrição</b></td><td><b>NickName</b></td></tr><tr><td>1</td><td colspan="2">BS6_FILIAL+BS6_CODINT+BS6_CODTAB+BS6_MACODI+dtos(BS6_VIGDE)</td><td>Operadora + Cod.Tab.Mat. + Cod.Material + Vigencia Ini</td><td></td></tr>
+<tr><td>2</td><td colspan="2">BS6_FILIAL+BS6_MADESC</td><td>Descr. Mat.</td><td></td></tr>
+<tr><td>3</td><td colspan="2">BS6_FILIAL+BS6_MATIPO</td><td>Tp. Material</td><td></td></tr>
+<tr><td>4</td><td colspan="2">BS6_FILIAL+BS6_CODINT+BS6_CODTAB+BS6_MACODI+BS6_SEQMAT</td><td>Operadora + Cod.Tab.Mat. + Cod.Material + Seq.Material</td><td></td></tr>
+</table>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br><table border="1">
+<tr>
+<td colspan="24" align="center"><b><i>Campos(SX3)</i></b></td>
+</tr>
+<tr>
+<td><b>X3_CAMPO</b></td>
+<td><b>X3_TITULO</b></td>
+<td colspan="2"><b>X3_DESCRIC</b></td>
+<td colspan="4"><b>HELP Campo</b></td>
+<td><b>X3_TIPO</b></td>
+<td><b>X3_TAMANHO</b></td>
+<td><b>X3_DECIMAL</b></td>
+<td><b>X3_PICTURE</b></td>
+<td><b>X3_VALID</b></td>
+<td><b>X3_RELACAO</b></td>
+<td><b>X3_F3</b></td>
+<td><b>X3_TRIGGER</b></td>
+<td><b>X3_BROWSE</b></td>
+<td><b>X3_VISUAL</b></td>
+<td><b>X3_CONTEXT</b></td>
+<td><b>X3_CBOX</b></td>
+<td><b>X3_WHEN</b></td>
+<td><b>X3_INIBRW</b></td>
+<td><b>X3_GRPSXG</b></td>
+<td><b>X3_FOLDER</b></td>
+<td><b>X3_CONDSQL</b></td>
+<td><b>X3_CHKSQL</b></td>
+<td><b>X3_AGRUP</b></td>
+<td><b>X3_POSLGT</b></td>
+<td><b>X3_MODAL</b></td>
+</tr>
+<tr>
+<td>BS6_FILIAL</td>
+<td>Filial</td>
+<td colspan="2">Filial</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>2</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/033.html">033</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BS6_CODINT</td>
+<td>Operadora</td>
+<td colspan="2">Operadora</td>
+<td colspan="4">Indica o código da Instituição de
+Saúde,para a qual, serão válidas as
+informa-  ções abaixo cadastradas.
+</td>
+<td>C</td>
+<td>4</td>
+<td>0</td>
+<td>@R !.!!!                                     </td>
+<td>PlsZero() .And. PLSVLDINT(M->BP8_CODINT) .And. PLS085Vld()</td>
+<td>PLSINTPAD(RETCODUSR())</td>
+<td><a href="/tabelas_protheus/f3/b89pls.html">B89PLS</a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>PLS085When()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>BS6_CODTAB</td>
+<td>Cod.Tab.Mat.</td>
+<td colspan="2">Codigo Tabela Material</td>
+<td colspan="4">Codigo da Tabela de Materiais que sera
+utilizado por esta Operadora de Saude.
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>PlsZero() .And. ExistCpo("BIS",M->BS6_CODINT+M->BS6_CODTAB,1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/bispls.html">BISPLS</a></td>
+<td><a href="/tabelas_protheus/gatilhos/bs6_codtab.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>PLS085When()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>BS6_DESTAB</td>
+<td>Desc. Tabela</td>
+<td colspan="2">Descricao da Tabela</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",Posicione("BIS",1,xFilial("BIS")+BS6->(BS6_CODINT+BS6_CODTAB),"BIS_DESCRI"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td>PLS085When()</td>
+<td>Posicione("BIS",1,xFilial("BIS")+BS6->(BS6_CODINT+BS6_CODTAB),"BIS_DESCRI")</td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BS6_MACODI</td>
+<td>Cod.Material</td>
+<td colspan="2">Codigo do Material</td>
+<td colspan="4">Codigo do Material que sera utilizado
+por esta Opeadora de Saude.
+</td>
+<td>C</td>
+<td>6</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td><a href="/tabelas_protheus/gatilhos/bs6_macodi.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>PLS085When()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>BS6_SEQMAT</td>
+<td>Seq.Material</td>
+<td colspan="2">Sequencia do Material</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>BS6_MADESC</td>
+<td>Descr. Mat.</td>
+<td colspan="2">Descricao de Material</td>
+<td colspan="4">Descricao do Material que sera utilizado
+por esta Operadora de Saude.
+</td>
+<td>C</td>
+<td>150</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>PLS085When()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BS6_MATIPO</td>
+<td>Tp. Material</td>
+<td colspan="2">Tipo do Material</td>
+<td colspan="4">Tipo de Material que sera utilizado
+paraesta Operadora de Saude
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("BIT",M->BS6_CODINT+M->BS6_MATIPO,1)</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/bitpls.html">BITPLS</a></td>
+<td><a href="/tabelas_protheus/gatilhos/bs6_matipo.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>PLS085When()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BS6_DESTIP</td>
+<td>Desc. Tipo</td>
+<td colspan="2">Descricao da Tipo Mater.</td>
+<td colspan="4">Indica a descrição referente ao código
+anteriormente informado. Esta pode
+conter caracteres alfa-numéricos,
+entretanto, evite a utilização de
+números.
+</td>
+<td>C</td>
+<td>40</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>If(Inclui,"",Posicione("BIT",1,xFilial("BIT")+BS6->(BS6_CODINT+BS6_MATIPO),"BIT_DESCRI"))</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BS6_MAPREC</td>
+<td>Preco Mat.</td>
+<td colspan="2">Preco do Material</td>
+<td colspan="4">Preco do Material que sera utilizado
+pa-ra esta Operadora de Saude.
+</td>
+<td>N</td>
+<td>13</td>
+<td>2</td>
+<td>@E 99,999,999.99                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>PLS085When()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>BS6_CODDOC</td>
+<td>Un.Med.Valor</td>
+<td colspan="2">Unidade Medida Valor</td>
+<td colspan="4">Indica a unidade de medida que
+representa o valor informado. Esta
+unidade é buscada a partir do 'Cadastro
+de Unidade de Medida' (DB3).
+</td>
+<td>C</td>
+<td>3</td>
+<td>0</td>
+<td>@!                                           </td>
+<td>ExistCpo("BD3",M->BS6_CODDOC,1)</td>
+<td>"REA"</td>
+<td><a href="/tabelas_protheus/f3/b87pls.html">B87PLS</a></td>
+<td><a href="/tabelas_protheus/gatilhos/bs6_coddoc.html">S</td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>PLS085When()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>BS6_DESDOC</td>
+<td>Desc.Un.Med.</td>
+<td colspan="2">Descricao Un. Medida Val.</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>30</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td>Posicione("BD3",1,xFilial("BD3")+If(Inclui,"REA",BS6->BS6_CODDOC),"BD3_DESCRI")</td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BS6_VIGDE</td>
+<td>Vigencia Ini</td>
+<td colspan="2">Data de Vigencia Inicial</td>
+<td colspan="4">Indica a data para que as informações
+aqui cadastradas entrem em vigor. No
+momento da utilização destes dados o
+sistema checa: Data Atual >= Data De  Se
+SIM a operação é realizada.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td>PLS085Vld()</td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td>PLS085When()</td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>BS6_VIGATE</td>
+<td>Vigencia Fim</td>
+<td colspan="2">Data de Vigencia Final</td>
+<td colspan="4">Indica a data para que as informações
+aqui cadastradas não mais vigorem. No
+momento da utilização destes dados o
+sistema checa: Data Atual >= Data Até Se
+SIM a operação é abortada.
+</td>
+<td>D</td>
+<td>8</td>
+<td>0</td>
+<td>                                             </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Vizualiza</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>BS6_FLAG</td>
+<td>Flag Uso</td>
+<td colspan="2">Uso do registro</td>
+<td colspan="4"></td>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+<td>@!                                           </td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/f3/.html"></a></td>
+<td> </td>
+<td>Sim</td>
+<td>Altera</td>
+<td>Virtual</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="/tabelas_protheus/grupocampo/.html"></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+</center><br>
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114930107-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); 
+ gtag('config', 'UA-114930107-3'); 
+</script>
+
+</html>
